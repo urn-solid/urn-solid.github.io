@@ -202,6 +202,13 @@
     "status": "stable",
     "path": "/givenName/"
   },
+  "urn:solid:hasEmail": {
+    "label": "hasEmail",
+    "description": "An email address associated with the subject — typically a `mailto:` IRI.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasEmail/"
+  },
   "urn:solid:hasPart": {
     "label": "hasPart",
     "description": "A related resource that is included as a part of the described resource.",

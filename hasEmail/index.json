@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasEmail",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasEmail",
+  "rdfs:comment": "An email address associated with the subject — typically a `mailto:` IRI.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasEmail",
+  "rdfs:seeAlso": [
+    "https://schema.org/email",
+    "urn:solid:mbox"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:mbox"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's general email predicate: not inverse-functional and free of FOAF's strong identity semantics. Use `urn:solid:mbox` when the email uniquely identifies the agent (FOAF tradition). Multiple `hasEmail` values are typical (work, personal, etc.).",
+  "examples": [
+    {
+      "title": "Person with email",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:hasEmail": { "@id": "mailto:alice@example.org" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasEmail"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
