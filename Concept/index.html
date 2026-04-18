@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Concept — urn-solid</title>
+<meta name="description" content="A SKOS concept — a unit of thought (topic, category, term) suitable for use in a controlled vocabulary or thesaurus.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Concept/">
+<link rel="alternate" type="application/ld+json" href="/Concept/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Concept",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Concept",
+  "rdfs:comment": "A SKOS concept — a unit of thought (topic, category, term) suitable for use in a controlled vocabulary or thesaurus.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#Concept",
+  "rdfs:seeAlso": [
+    "urn:solid:ConceptScheme",
+    "urn:solid:prefLabel",
+    "https://schema.org/DefinedTerm"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The atom of SKOS — every entry in a thesaurus, taxonomy, or controlled vocabulary is a Concept. Pair with `urn:solid:prefLabel` (canonical name), `urn:solid:altLabel` (synonyms), `urn:solid:broader`/`urn:solid:narrower` (hierarchy), and `urn:solid:inScheme` (membership in a `ConceptScheme`).",
+  "examples": [
+    {
+      "title": "A concept in a tagging vocabulary",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/tags/category-theory",
+        "@type": "urn:solid:Concept",
+        "urn:solid:prefLabel": "Category theory"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

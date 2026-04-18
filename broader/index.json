@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:broader",
+  "@type": "rdf:Property",
+  "rdfs:label": "broader",
+  "rdfs:comment": "A broader (parent) SKOS Concept in a hierarchy — \"category-theory broader algebra\".",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#broader",
+  "rdfs:seeAlso": [
+    "urn:solid:narrower",
+    "urn:solid:related"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:narrower"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The hierarchical-up relation in a SKOS taxonomy. Inverse of `urn:solid:narrower`. Note: SKOS treats `broader` as transitive only when used inside a single ConceptScheme — for transitive ancestor links, use `skos:broaderTransitive`. For non-hierarchical relatedness, use `urn:solid:related`.",
+  "examples": [
+    {
+      "title": "Concept hierarchy",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/cat-theory",
+        "@type": "urn:solid:Concept",
+        "urn:solid:broader": { "@id": "https://example.org/vocab/topics/algebra" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#broader"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

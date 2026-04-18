@@ -167,6 +167,20 @@
     "status": "stable",
     "path": "/Communication/"
   },
+  "urn:solid:Concept": {
+    "label": "Concept",
+    "description": "A SKOS concept — a unit of thought (topic, category, term) suitable for use in a controlled vocabulary or thesaurus.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Concept/"
+  },
+  "urn:solid:ConceptScheme": {
+    "label": "ConceptScheme",
+    "description": "A SKOS concept scheme — an aggregation of related Concepts, typically a thesaurus, taxonomy, or controlled vocabulary.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/ConceptScheme/"
+  },
   "urn:solid:ContactPoint": {
     "label": "ContactPoint",
     "description": "A contact point for a person or organization — an aggregation of reachable contact channels for a specific purpose or department.",
@@ -804,6 +818,13 @@
     "status": "stable",
     "path": "/age/"
   },
+  "urn:solid:altLabel": {
+    "label": "altLabel",
+    "description": "An alternative lexical label for a SKOS Concept — a synonym, abbreviation, or other equivalent name.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/altLabel/"
+  },
   "urn:solid:alternative": {
     "label": "alternative",
     "description": "An alternative title or name for the resource.",
@@ -915,6 +936,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/birthday/"
+  },
+  "urn:solid:broader": {
+    "label": "broader",
+    "description": "A broader (parent) SKOS Concept in a hierarchy — \"category-theory broader algebra\".",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/broader/"
   },
   "urn:solid:bto": {
     "label": "bto",
@@ -1769,6 +1797,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/postal-code/"
+  },
+  "urn:solid:prefLabel": {
+    "label": "prefLabel",
+    "description": "The preferred lexical label for a SKOS Concept — its canonical name in a given language.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/prefLabel/"
   },
   "urn:solid:preferencesFile": {
     "label": "preferencesFile",

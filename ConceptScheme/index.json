@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:ConceptScheme",
+  "@type": "rdfs:Class",
+  "rdfs:label": "ConceptScheme",
+  "rdfs:comment": "A SKOS concept scheme — an aggregation of related Concepts, typically a thesaurus, taxonomy, or controlled vocabulary.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "rdfs:seeAlso": [
+    "urn:solid:Concept",
+    "urn:solid:hasTopConcept",
+    "urn:solid:inScheme"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The container for a controlled vocabulary. Concepts join via `urn:solid:inScheme`; the entry-point Concepts (no broader concept in this scheme) are listed via `urn:solid:hasTopConcept`. The IRI of the ConceptScheme itself is the canonical reference for the vocabulary as a whole.",
+  "examples": [
+    {
+      "title": "A topic taxonomy",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics",
+        "@type": "urn:solid:ConceptScheme",
+        "urn:solid:name": "Wonderland Topics",
+        "urn:solid:hasTopConcept": [
+          { "@id": "https://example.org/vocab/topics/math" },
+          { "@id": "https://example.org/vocab/topics/cs" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

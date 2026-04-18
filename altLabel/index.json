@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:altLabel",
+  "@type": "rdf:Property",
+  "rdfs:label": "altLabel",
+  "rdfs:comment": "An alternative lexical label for a SKOS Concept — a synonym, abbreviation, or other equivalent name.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#altLabel",
+  "rdfs:seeAlso": [
+    "urn:solid:prefLabel",
+    "urn:solid:hiddenLabel",
+    "https://schema.org/alternateName"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:prefLabel"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use for synonyms, abbreviations, common misspellings users might search for. Repeat for multiple alternates. By SKOS rule, `prefLabel`, `altLabel`, and `hiddenLabel` values for the same Concept must be pairwise disjoint within a language.",
+  "examples": [
+    {
+      "title": "Concept with synonyms",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/cat-theory",
+        "@type": "urn:solid:Concept",
+        "urn:solid:prefLabel": "Category theory",
+        "urn:solid:altLabel": ["categorical algebra", "abstract nonsense"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#altLabel"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:prefLabel — urn-solid</title>
+<meta name="description" content="The preferred lexical label for a SKOS Concept — its canonical name in a given language.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/prefLabel/">
+<link rel="alternate" type="application/ld+json" href="/prefLabel/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:prefLabel",
+  "@type": "rdf:Property",
+  "rdfs:label": "prefLabel",
+  "rdfs:comment": "The preferred lexical label for a SKOS Concept — its canonical name in a given language.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "rdfs:seeAlso": [
+    "urn:solid:altLabel",
+    "urn:solid:hiddenLabel",
+    "http://www.w3.org/2000/01/rdf-schema#label"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:altLabel"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Exactly one `prefLabel` per language tag per Concept (SKOS integrity rule). Use language-tagged literals for multilingual vocabularies. Synonyms go under `urn:solid:altLabel`; non-display strings (typos, misspellings used for search) go under `urn:solid:hiddenLabel`.",
+  "examples": [
+    {
+      "title": "Multilingual concept label",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/cat-theory",
+        "@type": "urn:solid:Concept",
+        "urn:solid:prefLabel": [
+          { "@value": "Category theory", "@language": "en" },
+          { "@value": "Kategorientheorie", "@language": "de" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#prefLabel"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
