@@ -230,6 +230,13 @@
     "status": "stable",
     "path": "/page/"
   },
+  "urn:solid:pastProject": {
+    "label": "pastProject",
+    "description": "A project the person is no longer active on.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/pastProject/"
+  },
   "urn:solid:weblog": {
     "label": "weblog",
     "description": "A weblog (blog) of the subject — the document the agent publishes posts to.",
