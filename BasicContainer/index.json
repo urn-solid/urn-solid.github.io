@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:BasicContainer",
+  "@type": "rdfs:Class",
+  "rdfs:label": "BasicContainer",
+  "rdfs:comment": "An LDP Container whose membership is defined entirely by `ldp:contains` triples.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#BasicContainer",
+  "rdfs:seeAlso": [
+    "urn:solid:Container",
+    "http://www.w3.org/ns/ldp#DirectContainer",
+    "http://www.w3.org/ns/ldp#IndirectContainer"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Container"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Container`. The default container shape used by Solid pods — every directory-like resource is typically a `BasicContainer` whose members are listed via `ldp:contains`. Use `ldp:DirectContainer` or `ldp:IndirectContainer` only when you need server-managed membership semantics.",
+  "examples": [
+    {
+      "title": "A pod root as a BasicContainer",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/",
+        "@type": "urn:solid:BasicContainer",
+        "urn:solid:contains": [
+          { "@id": "https://alice.example.org/profile/" },
+          { "@id": "https://alice.example.org/photos/" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#BasicContainer"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -27,6 +27,13 @@
     "status": "stable",
     "path": "/Article/"
   },
+  "urn:solid:BasicContainer": {
+    "label": "BasicContainer",
+    "description": "An LDP Container whose membership is defined entirely by `ldp:contains` triples.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/BasicContainer/"
+  },
   "urn:solid:Collection": {
     "label": "Collection",
     "description": "An unordered collection of objects.",
