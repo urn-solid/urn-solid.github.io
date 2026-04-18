@@ -41,6 +41,13 @@
     "status": "stable",
     "path": "/Announce/"
   },
+  "urn:solid:Answer": {
+    "label": "Answer",
+    "description": "An answer to a Question — typically posted on Q&A sites or forums.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Answer/"
+  },
   "urn:solid:Application": {
     "label": "Application",
     "description": "An ActivityStreams actor representing a software application — a bot, service, or automated client.",
@@ -153,6 +160,13 @@
     "status": "stable",
     "path": "/Comment/"
   },
+  "urn:solid:Communication": {
+    "label": "Communication",
+    "description": "A qualified PROV communication — the role-aware form of `wasInformedBy` between two Activities.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Communication/"
+  },
   "urn:solid:ContactPoint": {
     "label": "ContactPoint",
     "description": "A contact point for a person or organization — an aggregation of reachable contact channels for a specific purpose or department.",
@@ -216,6 +230,13 @@
     "status": "stable",
     "path": "/Document/"
   },
+  "urn:solid:EducationalOrganization": {
+    "label": "EducationalOrganization",
+    "description": "An educational organization — a school, college, university, or training institute.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/EducationalOrganization/"
+  },
   "urn:solid:Entity": {
     "label": "Entity",
     "description": "Anything in PROV that has provenance — a thing whose existence and history can be tracked.",
@@ -272,6 +293,13 @@
     "status": "stable",
     "path": "/IndirectContainer/"
   },
+  "urn:solid:ItemList": {
+    "label": "ItemList",
+    "description": "An ordered list of items — schema.org's lightweight ordered collection for SEO-rich markup.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/ItemList/"
+  },
   "urn:solid:JobPosting": {
     "label": "JobPosting",
     "description": "A listing for a job — an opportunity to be employed in a specific role.",
@@ -306,6 +334,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Movie/"
+  },
+  "urn:solid:MusicRecording": {
+    "label": "MusicRecording",
+    "description": "A music recording — a song or instrumental track in its recorded form.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/MusicRecording/"
   },
   "urn:solid:NonRDFSource": {
     "label": "NonRDFSource",

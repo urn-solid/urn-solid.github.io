@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Communication — urn-solid</title>
+<meta name="description" content="A qualified PROV communication — the role-aware form of `wasInformedBy` between two Activities.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Communication/">
+<link rel="alternate" type="application/ld+json" href="/Communication/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Communication",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Communication",
+  "rdfs:comment": "A qualified PROV communication — the role-aware form of `wasInformedBy` between two Activities.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#Communication",
+  "rdfs:seeAlso": [
+    "urn:solid:wasInformedBy",
+    "urn:solid:Association"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to qualify a `prov:wasInformedBy` with role and timing. Linked from an Activity via `prov:qualifiedCommunication`. Carries `prov:activity` (the prior Activity) and optional `urn:solid:hadActivity`/`urn:solid:hadRole`. Rare in casual data — most uses of \"this followed that\" stay at the `wasInformedBy` level.",
+  "examples": [
+    {
+      "title": "Communication between two activities",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/communications/build-from-tests",
+        "@type": "urn:solid:Communication",
+        "http://www.w3.org/ns/prov#activity": { "@id": "https://example.org/test-runs/2026-04-18-1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#Communication"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

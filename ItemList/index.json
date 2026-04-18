@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:ItemList",
+  "@type": "rdfs:Class",
+  "rdfs:label": "ItemList",
+  "rdfs:comment": "An ordered list of items — schema.org's lightweight ordered collection for SEO-rich markup.",
+  "owl:sameAs": "https://schema.org/ItemList",
+  "rdfs:seeAlso": [
+    "urn:solid:OrderedCollection",
+    "urn:solid:Collection"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:OrderedCollection"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Schema.org's order-aware list type. Pair with `schema:itemListElement` (each item, optionally wrapped in `schema:ListItem` carrying `schema:position`). For ActivityStreams ordered collections, prefer `urn:solid:OrderedCollection`. Heavily used by SEO for top-N lists, breadcrumbs, FAQ pages.",
+  "examples": [
+    {
+      "title": "Top-3 list",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/lists/top-3",
+        "@type": "urn:solid:ItemList",
+        "https://schema.org/itemListElement": [
+          { "@type": "https://schema.org/ListItem", "https://schema.org/position": 1, "https://schema.org/name": "JSON-LD" },
+          { "@type": "https://schema.org/ListItem", "https://schema.org/position": 2, "https://schema.org/name": "Turtle" },
+          { "@type": "https://schema.org/ListItem", "https://schema.org/position": 3, "https://schema.org/name": "RDF/XML" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/ItemList"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

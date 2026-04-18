@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:MusicRecording",
+  "@type": "rdfs:Class",
+  "rdfs:label": "MusicRecording",
+  "rdfs:comment": "A music recording — a song or instrumental track in its recorded form.",
+  "owl:sameAs": "https://schema.org/MusicRecording",
+  "rdfs:seeAlso": [
+    "urn:solid:AudioObject",
+    "https://schema.org/MusicComposition",
+    "https://schema.org/MusicAlbum"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:AudioObject"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:AudioObject` (the file as bytes) and `schema:MusicComposition` (the abstract work). A MusicRecording is a specific recorded performance. Pair with `schema:byArtist`, `schema:inAlbum`, `schema:duration`, `schema:isrcCode`.",
+  "examples": [
+    {
+      "title": "A music recording",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/music/track-42",
+        "@type": "urn:solid:MusicRecording",
+        "urn:solid:name": "Wonderland Theme",
+        "https://schema.org/byArtist": { "@id": "https://example.org/artists/cheshire" },
+        "urn:solid:duration": "PT3M45S"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/MusicRecording"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

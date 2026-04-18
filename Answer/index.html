@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Answer — urn-solid</title>
+<meta name="description" content="An answer to a Question — typically posted on Q&A sites or forums.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Answer/">
+<link rel="alternate" type="application/ld+json" href="/Answer/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Answer",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Answer",
+  "rdfs:comment": "An answer to a Question — typically posted on Q&A sites or forums.",
+  "owl:sameAs": "https://schema.org/Answer",
+  "rdfs:seeAlso": [
+    "urn:solid:Question",
+    "urn:solid:Comment"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Question",
+    "urn:solid:Comment"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `urn:solid:Comment`. Pair with `schema:parentItem` pointing at the `urn:solid:Question`. Distinct from a generic `Comment` (which can be on anything) and from AS `Note` (microblog post). Use schema's Q&A pair (`Question` + `Answer`) for SEO-rich Q&A markup.",
+  "examples": [
+    {
+      "title": "An answer to a question",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/qa/q1/answers/a1",
+        "@type": "urn:solid:Answer",
+        "https://schema.org/parentItem": { "@id": "https://example.org/qa/q1" },
+        "urn:solid:author": { "@id": "https://example.org/alice#me" },
+        "https://schema.org/text": "Yes, ActivityPub supports it via Like activities."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Answer"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

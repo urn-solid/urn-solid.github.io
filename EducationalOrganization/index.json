@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:EducationalOrganization",
+  "@type": "rdfs:Class",
+  "rdfs:label": "EducationalOrganization",
+  "rdfs:comment": "An educational organization — a school, college, university, or training institute.",
+  "owl:sameAs": "https://schema.org/EducationalOrganization",
+  "rdfs:seeAlso": [
+    "urn:solid:Organization",
+    "urn:solid:alumniOf",
+    "https://schema.org/CollegeOrUniversity"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `urn:solid:Organization`. Use as the value type of `urn:solid:alumniOf` for richer educational-history data than a bare `foaf:schoolHomepage` URL. Schema.org has narrower subclasses (`School`, `CollegeOrUniversity`, `HighSchool`, `MiddleSchool`) for specific levels.",
+  "examples": [
+    {
+      "title": "An educational organization",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/orgs/oxford",
+        "@type": "urn:solid:EducationalOrganization",
+        "urn:solid:name": "University of Oxford",
+        "urn:solid:url": { "@id": "https://www.ox.ac.uk/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/EducationalOrganization"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
