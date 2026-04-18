@@ -1,4 +1,11 @@
 {
+  "urn:solid:Accept": {
+    "label": "Accept",
+    "description": "An indication that the actor accepts the object — typically a Follow request or invitation.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Accept/"
+  },
   "urn:solid:Activity": {
     "label": "Activity",
     "description": "An action taken by an actor — the base for Create, Like, Follow, Announce, etc.",

@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Accept",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Accept",
+  "rdfs:comment": "An indication that the actor accepts the object — typically a Follow request or invitation.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Accept",
+  "rdfs:seeAlso": [
+    "urn:solid:Reject",
+    "https://schema.org/AcceptAction"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Reject"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. The classic ActivityPub use is responding to a `Follow` to confirm the relationship. The `as:object` is what's being accepted (often another Activity). Pair with `Reject` for the negative response.",
+  "examples": [
+    {
+      "title": "Bob accepts Alice's follow request",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/accept-1",
+        "@type": "urn:solid:Accept",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/bob#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://example.org/follows/456" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Accept"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
