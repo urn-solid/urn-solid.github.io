@@ -412,6 +412,13 @@
     "status": "stable",
     "path": "/inReplyTo/"
   },
+  "urn:solid:inbox": {
+    "label": "inbox",
+    "description": "An LDN inbox — a container that accepts notifications about the resource via HTTP POST.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/inbox/"
+  },
   "urn:solid:interest": {
     "label": "interest",
     "description": "A page about a topic of interest to the agent.",

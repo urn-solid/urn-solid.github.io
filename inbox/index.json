@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:inbox",
+  "@type": "rdf:Property",
+  "rdfs:label": "inbox",
+  "rdfs:comment": "An LDN inbox — a container that accepts notifications about the resource via HTTP POST.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#inbox",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#inbox",
+    "https://www.w3.org/TR/ldn/"
+  ],
+  "rdfs:range": "urn:solid:Container",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "From Linked Data Notifications (LDN). The value is a Container that accepts incoming notifications about the subject — anyone can POST to it to leave a notification (subject to access control). ActivityPub re-uses the concept under `as:inbox` (a separate but interoperable IRI).",
+  "examples": [
+    {
+      "title": "Person with an inbox",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:inbox": { "@id": "https://alice.example.org/inbox/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#inbox"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
