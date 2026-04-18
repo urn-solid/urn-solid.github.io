@@ -90,6 +90,13 @@
     "status": "stable",
     "path": "/age/"
   },
+  "urn:solid:birthday": {
+    "label": "birthday",
+    "description": "The birthday of the agent — month and day, formatted as mm-dd.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/birthday/"
+  },
   "urn:solid:depiction": {
     "label": "depiction",
     "description": "An image that depicts the subject.",
