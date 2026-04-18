@@ -237,6 +237,13 @@
     "status": "stable",
     "path": "/hasTelephone/"
   },
+  "urn:solid:hasURL": {
+    "label": "hasURL",
+    "description": "A URL associated with the subject — any web link, not necessarily the canonical homepage.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasURL/"
+  },
   "urn:solid:homepage": {
     "label": "homepage",
     "description": "A homepage for the subject — a top-level page about the agent.",
