@@ -2064,6 +2064,27 @@
     "status": "stable",
     "path": "/publisher/"
   },
+  "urn:solid:qualifiedAssociation": {
+    "label": "qualifiedAssociation",
+    "description": "A qualified PROV Association linked to the activity — adds role and plan to a `wasAssociatedWith` relation.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/qualifiedAssociation/"
+  },
+  "urn:solid:qualifiedAttribution": {
+    "label": "qualifiedAttribution",
+    "description": "A qualified PROV Attribution linked to the entity — adds role and timing to a `wasAttributedTo` relation.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/qualifiedAttribution/"
+  },
+  "urn:solid:qualifiedDerivation": {
+    "label": "qualifiedDerivation",
+    "description": "A qualified PROV Derivation linked to the entity — adds role, activity, and other context to a `wasDerivedFrom` relation.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/qualifiedDerivation/"
+  },
   "urn:solid:references": {
     "label": "references",
     "description": "A related resource that is referenced, cited, or otherwise pointed to by the described resource.",
@@ -2133,6 +2154,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/role/"
+  },
+  "urn:solid:sameAs": {
+    "label": "sameAs",
+    "description": "An external reference URL that unambiguously identifies the subject — typically a profile or canonical page on another site.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/sameAs/"
   },
   "urn:solid:schoolHomepage": {
     "label": "schoolHomepage",
@@ -2259,6 +2287,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/target/"
+  },
+  "urn:solid:telephone": {
+    "label": "telephone",
+    "description": "A telephone number for the subject — typically as a plain string.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/telephone/"
   },
   "urn:solid:temporal": {
     "label": "temporal",

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:qualifiedAssociation — urn-solid</title>
+<meta name="description" content="A qualified PROV Association linked to the activity — adds role and plan to a `wasAssociatedWith` relation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/qualifiedAssociation/">
+<link rel="alternate" type="application/ld+json" href="/qualifiedAssociation/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:qualifiedAssociation",
+  "@type": "rdf:Property",
+  "rdfs:label": "qualifiedAssociation",
+  "rdfs:comment": "A qualified PROV Association linked to the activity — adds role and plan to a `wasAssociatedWith` relation.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#qualifiedAssociation",
+  "rdfs:seeAlso": [
+    "urn:solid:Association",
+    "urn:solid:wasAssociatedWith",
+    "urn:solid:hadRole",
+    "urn:solid:hadPlan"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:range": "urn:solid:Association",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to attach a `urn:solid:Association` that names which Plan an Agent followed and what role they took during an Activity. Pattern: keep both the unqualified `wasAssociatedWith` triple AND the qualified form.",
+  "examples": [
+    {
+      "title": "Build with qualified association",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/builds/2026-04-18-1",
+        "@type": "urn:solid:Activity",
+        "urn:solid:wasAssociatedWith": { "@id": "https://urn-solid.github.io/agents/curate-next" },
+        "urn:solid:qualifiedAssociation": { "@id": "https://example.org/associations/build-2026-04-18" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#qualifiedAssociation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

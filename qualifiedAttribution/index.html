@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:qualifiedAttribution — urn-solid</title>
+<meta name="description" content="A qualified PROV Attribution linked to the entity — adds role and timing to a `wasAttributedTo` relation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/qualifiedAttribution/">
+<link rel="alternate" type="application/ld+json" href="/qualifiedAttribution/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:qualifiedAttribution",
+  "@type": "rdf:Property",
+  "rdfs:label": "qualifiedAttribution",
+  "rdfs:comment": "A qualified PROV Attribution linked to the entity — adds role and timing to a `wasAttributedTo` relation.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#qualifiedAttribution",
+  "rdfs:seeAlso": [
+    "urn:solid:Attribution",
+    "urn:solid:wasAttributedTo"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Attribution",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to attach a `urn:solid:Attribution` resource that qualifies the basic `urn:solid:wasAttributedTo` link with role (author, editor, photographer, contributor). Pattern: keep both the unqualified `wasAttributedTo` triple AND the qualified form for SPARQL convenience.",
+  "examples": [
+    {
+      "title": "Qualified attribution for a photo",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/photos/sunset.jpg",
+        "@type": "urn:solid:Entity",
+        "urn:solid:wasAttributedTo": { "@id": "https://example.org/alice#me" },
+        "urn:solid:qualifiedAttribution": { "@id": "https://example.org/photos/sunset-attribution" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#qualifiedAttribution"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

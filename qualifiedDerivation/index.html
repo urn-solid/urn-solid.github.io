@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:qualifiedDerivation — urn-solid</title>
+<meta name="description" content="A qualified PROV Derivation linked to the entity — adds role, activity, and other context to a `wasDerivedFrom` relation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/qualifiedDerivation/">
+<link rel="alternate" type="application/ld+json" href="/qualifiedDerivation/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:qualifiedDerivation",
+  "@type": "rdf:Property",
+  "rdfs:label": "qualifiedDerivation",
+  "rdfs:comment": "A qualified PROV Derivation linked to the entity — adds role, activity, and other context to a `wasDerivedFrom` relation.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#qualifiedDerivation",
+  "rdfs:seeAlso": [
+    "urn:solid:Derivation",
+    "urn:solid:wasDerivedFrom"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Derivation",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to attach a `urn:solid:Derivation` resource that qualifies the basic `urn:solid:wasDerivedFrom` link with role, plan, or activity. Pattern: when you need richer derivation metadata, keep both the unqualified `wasDerivedFrom` triple (for SPARQL convenience) AND the qualified form.",
+  "examples": [
+    {
+      "title": "Qualified derivation for a translation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello-de",
+        "@type": "urn:solid:Entity",
+        "urn:solid:wasDerivedFrom": { "@id": "https://example.org/posts/hello" },
+        "urn:solid:qualifiedDerivation": { "@id": "https://example.org/derivations/translation-1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#qualifiedDerivation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
