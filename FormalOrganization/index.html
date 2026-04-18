@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:FormalOrganization — urn-solid</title>
+<meta name="description" content="An ORG FormalOrganization — an organization with legal recognition (company, government body, registered nonprofit).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/FormalOrganization/">
+<link rel="alternate" type="application/ld+json" href="/FormalOrganization/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:FormalOrganization",
+  "@type": "rdfs:Class",
+  "rdfs:label": "FormalOrganization",
+  "rdfs:comment": "An ORG FormalOrganization — an organization with legal recognition (company, government body, registered nonprofit).",
+  "owl:sameAs": "http://www.w3.org/ns/org#FormalOrganization",
+  "rdfs:seeAlso": [
+    "urn:solid:Organization",
+    "urn:solid:OrganizationalUnit"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Organization"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `urn:solid:Organization`. Distinguishes legally-recognized entities from informal collectives (which stay at the `Organization` level). Use when legal status matters — contracts, regulatory filings, official records. Pair with `org:identifier` for the registration number.",
+  "examples": [
+    {
+      "title": "A registered company",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/orgs/acme-ltd",
+        "@type": "urn:solid:FormalOrganization",
+        "urn:solid:name": "Acme Ltd",
+        "urn:solid:identifier": "GB-CRN-12345678"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/org#FormalOrganization"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

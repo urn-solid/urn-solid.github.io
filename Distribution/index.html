@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Distribution — urn-solid</title>
+<meta name="description" content="A DCAT Distribution — a specific representation of a Dataset (a downloadable file or accessible API).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Distribution/">
+<link rel="alternate" type="application/ld+json" href="/Distribution/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Distribution",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Distribution",
+  "rdfs:comment": "A DCAT Distribution — a specific representation of a Dataset (a downloadable file or accessible API).",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#Distribution",
+  "rdfs:seeAlso": [
+    "urn:solid:Dataset",
+    "urn:solid:downloadURL",
+    "urn:solid:accessURL"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "One Dataset typically has multiple Distributions — CSV, JSON, RDF, API endpoint, archive. Pair with `urn:solid:downloadURL` (direct file URL), `urn:solid:accessURL` (general access page or API), `urn:solid:format`, `urn:solid:byteSize`. Linked from a Dataset via `dcat:distribution`.",
+  "examples": [
+    {
+      "title": "CSV distribution of a dataset",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/wonderland-2026/csv",
+        "@type": "urn:solid:Distribution",
+        "urn:solid:downloadURL": { "@id": "https://example.org/datasets/wonderland-2026.csv" },
+        "urn:solid:format": "text/csv"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

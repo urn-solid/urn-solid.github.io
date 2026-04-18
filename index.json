@@ -223,6 +223,13 @@
     "status": "stable",
     "path": "/CreativeWork/"
   },
+  "urn:solid:DataService": {
+    "label": "DataService",
+    "description": "A DCAT DataService — a service that gives access to one or more Datasets via an API or query interface.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/DataService/"
+  },
   "urn:solid:Dataset": {
     "label": "Dataset",
     "description": "A DCAT Dataset — a collection of data, published or curated by a single agent and available in one or more representations.",
@@ -257,6 +264,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/DirectContainer/"
+  },
+  "urn:solid:Distribution": {
+    "label": "Distribution",
+    "description": "A DCAT Distribution — a specific representation of a Dataset (a downloadable file or accessible API).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Distribution/"
   },
   "urn:solid:Document": {
     "label": "Document",
@@ -299,6 +313,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Follow/"
+  },
+  "urn:solid:FormalOrganization": {
+    "label": "FormalOrganization",
+    "description": "An ORG FormalOrganization — an organization with legal recognition (company, government body, registered nonprofit).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/FormalOrganization/"
   },
   "urn:solid:Frequency": {
     "label": "Frequency",
@@ -783,6 +804,13 @@
     "status": "stable",
     "path": "/accessRights/"
   },
+  "urn:solid:accessURL": {
+    "label": "accessURL",
+    "description": "A URL where the resources of a DCAT Distribution can be accessed — a landing page, API entry point, or query interface.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/accessURL/"
+  },
   "urn:solid:account": {
     "label": "account",
     "description": "An online account held by the subject.",
@@ -1118,6 +1146,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/description/"
+  },
+  "urn:solid:downloadURL": {
+    "label": "downloadURL",
+    "description": "A direct file URL where a DCAT Distribution can be downloaded.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/downloadURL/"
   },
   "urn:solid:duration": {
     "label": "duration",

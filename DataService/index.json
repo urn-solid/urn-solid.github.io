@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:DataService",
+  "@type": "rdfs:Class",
+  "rdfs:label": "DataService",
+  "rdfs:comment": "A DCAT DataService — a service that gives access to one or more Datasets via an API or query interface.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#DataService",
+  "rdfs:seeAlso": [
+    "urn:solid:Dataset",
+    "urn:solid:Catalog",
+    "urn:solid:Service"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Service"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "DCAT 2's class for SPARQL endpoints, REST APIs, OGC services, and other data-access services. Distinct from `urn:solid:Service` (the AS actor type for ActivityPub services). Pair with `dcat:endpointURL` and `dcat:servesDataset` to link the service to the Datasets it exposes.",
+  "examples": [
+    {
+      "title": "A SPARQL endpoint as a DataService",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/sparql",
+        "@type": "urn:solid:DataService",
+        "http://www.w3.org/ns/dcat#endpointURL": { "@id": "https://example.org/sparql" },
+        "http://www.w3.org/ns/dcat#servesDataset": { "@id": "https://example.org/datasets/wonderland-2026" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#DataService"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:accessURL",
+  "@type": "rdf:Property",
+  "rdfs:label": "accessURL",
+  "rdfs:comment": "A URL where the resources of a DCAT Distribution can be accessed — a landing page, API entry point, or query interface.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#accessURL",
+  "rdfs:seeAlso": [
+    "urn:solid:downloadURL",
+    "urn:solid:landingPage"
+  ],
+  "rdfs:domain": "urn:solid:Distribution",
+  "notToBeConfusedWith": [
+    "urn:solid:downloadURL"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:downloadURL`: `accessURL` is for indirect access — a landing page that explains how to obtain the data, an API root, an OAI-PMH endpoint. A Distribution must have at least one of `accessURL` or `downloadURL` per DCAT spec.",
+  "examples": [
+    {
+      "title": "Distribution with an API access URL",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/wonderland-2026/api",
+        "@type": "urn:solid:Distribution",
+        "urn:solid:accessURL": { "@id": "https://example.org/api/v1/wonderland-2026/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#accessURL"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

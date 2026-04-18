@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:downloadURL",
+  "@type": "rdf:Property",
+  "rdfs:label": "downloadURL",
+  "rdfs:comment": "A direct file URL where a DCAT Distribution can be downloaded.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#downloadURL",
+  "rdfs:seeAlso": [
+    "urn:solid:accessURL",
+    "urn:solid:Distribution"
+  ],
+  "rdfs:domain": "urn:solid:Distribution",
+  "notToBeConfusedWith": [
+    "urn:solid:accessURL"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:accessURL`: `downloadURL` is a *direct* file link (returns the bytes), `accessURL` is any landing page or API entry point. A Distribution typically has one or the other.",
+  "examples": [
+    {
+      "title": "Distribution with a download URL",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/wonderland-2026/csv",
+        "@type": "urn:solid:Distribution",
+        "urn:solid:downloadURL": { "@id": "https://example.org/datasets/wonderland-2026.csv" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#downloadURL"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
