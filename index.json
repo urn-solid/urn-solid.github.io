@@ -6,6 +6,13 @@
     "status": "stable",
     "path": "/Accept/"
   },
+  "urn:solid:Action": {
+    "label": "Action",
+    "description": "An action performed by a direct agent on a direct object — schema.org's analogue of an activity.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Action/"
+  },
   "urn:solid:Activity": {
     "label": "Activity",
     "description": "An action taken by an actor — the base for Create, Like, Follow, Announce, etc.",
@@ -48,6 +55,13 @@
     "status": "stable",
     "path": "/Article/"
   },
+  "urn:solid:AudioObject": {
+    "label": "AudioObject",
+    "description": "An audio file with structured metadata — duration, encoding, transcript.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/AudioObject/"
+  },
   "urn:solid:BasicContainer": {
     "label": "BasicContainer",
     "description": "An LDP Container whose membership is defined entirely by `ldp:contains` triples.",
@@ -68,6 +82,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/BlogPosting/"
+  },
+  "urn:solid:Book": {
+    "label": "Book",
+    "description": "A book — a long-form written work, typically published as a single physical or digital volume.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Book/"
   },
   "urn:solid:City": {
     "label": "City",
@@ -201,6 +222,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Move/"
+  },
+  "urn:solid:Movie": {
+    "label": "Movie",
+    "description": "A movie — a feature-length motion picture released as a single work.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Movie/"
   },
   "urn:solid:Note": {
     "label": "Note",
@@ -376,6 +404,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Update/"
+  },
+  "urn:solid:VideoObject": {
+    "label": "VideoObject",
+    "description": "A video file with structured metadata — duration, resolution, encoding, thumbnail.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/VideoObject/"
   },
   "urn:solid:WebPage": {
     "label": "WebPage",

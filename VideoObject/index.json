@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:VideoObject",
+  "@type": "rdfs:Class",
+  "rdfs:label": "VideoObject",
+  "rdfs:comment": "A video file with structured metadata — duration, resolution, encoding, thumbnail.",
+  "owl:sameAs": "https://schema.org/VideoObject",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#Video",
+    "urn:solid:ImageObject"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's video type, sibling to `urn:solid:ImageObject`. Carries `schema:contentUrl`, `schema:duration`, `schema:width`/`schema:height`, `schema:thumbnailUrl`, `schema:embedUrl`. For ActivityPub-style social video posts, prefer `as:Video`.",
+  "examples": [
+    {
+      "title": "A short video",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/videos/intro.mp4",
+        "@type": "urn:solid:VideoObject",
+        "https://schema.org/contentUrl": { "@id": "https://example.org/videos/intro.mp4" },
+        "urn:solid:duration": "PT2M30S",
+        "https://schema.org/encodingFormat": "video/mp4"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/VideoObject"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Action",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Action",
+  "rdfs:comment": "An action performed by a direct agent on a direct object — schema.org's analogue of an activity.",
+  "owl:sameAs": "https://schema.org/Action",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "http://www.w3.org/ns/prov#Activity"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Activity"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's action vocabulary — used heavily for `schema:potentialAction` declarations on websites (\"this site supports SearchAction with these parameters\"). For ActivityPub-style social actions, `urn:solid:Activity` is the right base; for PROV processes, `prov:Activity`. Pick by domain.",
+  "examples": [
+    {
+      "title": "SearchAction declaration on a website",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/#search",
+        "@type": "https://schema.org/SearchAction",
+        "https://schema.org/target": "https://example.org/?q={search_term_string}",
+        "https://schema.org/query-input": "required name=search_term_string"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Action"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

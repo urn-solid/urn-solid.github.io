@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Movie",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Movie",
+  "rdfs:comment": "A movie — a feature-length motion picture released as a single work.",
+  "owl:sameAs": "https://schema.org/Movie",
+  "rdfs:seeAlso": [
+    "urn:solid:CreativeWork",
+    "urn:solid:VideoObject",
+    "https://schema.org/TVSeries"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:VideoObject"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Distinct from `urn:solid:VideoObject` — `Movie` is the work (the film as art), `VideoObject` is the file (a particular encoding). One Movie can have many VideoObject encodings. Pair with `schema:director`, `schema:actor`, `urn:solid:duration`.",
+  "examples": [
+    {
+      "title": "A movie with director and runtime",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/movies/example",
+        "@type": "urn:solid:Movie",
+        "urn:solid:name": "Wonderland",
+        "https://schema.org/director": { "@id": "https://example.org/people/director" },
+        "urn:solid:duration": "PT1H45M"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Movie"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

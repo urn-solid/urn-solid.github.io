@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:AudioObject — urn-solid</title>
+<meta name="description" content="An audio file with structured metadata — duration, encoding, transcript.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/AudioObject/">
+<link rel="alternate" type="application/ld+json" href="/AudioObject/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:AudioObject",
+  "@type": "rdfs:Class",
+  "rdfs:label": "AudioObject",
+  "rdfs:comment": "An audio file with structured metadata — duration, encoding, transcript.",
+  "owl:sameAs": "https://schema.org/AudioObject",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#Audio",
+    "https://schema.org/MusicRecording"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's audio type — podcasts, voice memos, sound effects. Carries `schema:contentUrl`, `schema:duration`, `schema:encodingFormat`, `schema:transcript`. For music tracks specifically, `schema:MusicRecording` adds artist/album fields.",
+  "examples": [
+    {
+      "title": "A podcast episode",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/podcasts/ep-42.mp3",
+        "@type": "urn:solid:AudioObject",
+        "https://schema.org/contentUrl": { "@id": "https://example.org/podcasts/ep-42.mp3" },
+        "urn:solid:duration": "PT45M",
+        "https://schema.org/encodingFormat": "audio/mpeg"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/AudioObject"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
