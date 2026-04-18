@@ -230,6 +230,13 @@
     "status": "stable",
     "path": "/hasPart/"
   },
+  "urn:solid:hasPhoto": {
+    "label": "hasPhoto",
+    "description": "A photo associated with the subject — typically a portrait.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasPhoto/"
+  },
   "urn:solid:hasTelephone": {
     "label": "hasTelephone",
     "description": "A telephone number associated with the subject — typically a `tel:` IRI.",

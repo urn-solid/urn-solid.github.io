@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasPhoto",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasPhoto",
+  "rdfs:comment": "A photo associated with the subject — typically a portrait.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasPhoto",
+  "rdfs:seeAlso": [
+    "urn:solid:depiction",
+    "urn:solid:img",
+    "https://schema.org/image"
+  ],
+  "rdfs:range": "urn:solid:Image",
+  "notToBeConfusedWith": [
+    "urn:solid:depiction",
+    "urn:solid:img"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's photo predicate. Functionally similar to `urn:solid:img`; pick `hasPhoto` in vCard-flavored data and `img`/`depiction` in FOAF-flavored data. Multiple values are typical (gallery, alternates, sizes).",
+  "examples": [
+    {
+      "title": "Person with a photo",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:hasPhoto": { "@id": "https://example.org/alice/photo.jpg" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasPhoto"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
