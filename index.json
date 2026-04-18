@@ -930,6 +930,13 @@
     "status": "stable",
     "path": "/hasAddress/"
   },
+  "urn:solid:hasCategory": {
+    "label": "hasCategory",
+    "description": "A category or tag for the vCard — describing what kind of contact it is.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasCategory/"
+  },
   "urn:solid:hasEmail": {
     "label": "hasEmail",
     "description": "An email address associated with the subject — typically a `mailto:` IRI.",
@@ -1048,6 +1055,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/homepage/"
+  },
+  "urn:solid:honorific-prefix": {
+    "label": "honorific-prefix",
+    "description": "An honorific prefix preceding the person's name — Mr, Mrs, Dr, Prof, etc.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/honorific-prefix/"
+  },
+  "urn:solid:honorific-suffix": {
+    "label": "honorific-suffix",
+    "description": "An honorific suffix following the person's name — PhD, Esq, Jr, Sr, etc.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/honorific-suffix/"
   },
   "urn:solid:icon": {
     "label": "icon",
@@ -1343,6 +1364,13 @@
     "status": "stable",
     "path": "/openid/"
   },
+  "urn:solid:organization-name": {
+    "label": "organization-name",
+    "description": "The name of the organization the person is affiliated with — typically the employer.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/organization-name/"
+  },
   "urn:solid:owner": {
     "label": "owner",
     "description": "An agent that owns the resource — typically used to declare pod ownership.",
@@ -1482,6 +1510,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/rightsHolder/"
+  },
+  "urn:solid:role": {
+    "label": "role",
+    "description": "The job role or function the person performs within an organization.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/role/"
   },
   "urn:solid:schoolHomepage": {
     "label": "schoolHomepage",

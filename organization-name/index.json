@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:organization-name",
+  "@type": "rdf:Property",
+  "rdfs:label": "organization-name",
+  "rdfs:comment": "The name of the organization the person is affiliated with — typically the employer.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#organization-name",
+  "rdfs:seeAlso": [
+    "urn:solid:worksFor",
+    "urn:solid:Organization"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's quick organization-name string — useful when you only have the company name as text. For a structured affiliation, prefer `urn:solid:worksFor` pointing at a `urn:solid:Organization` resource.",
+  "examples": [
+    {
+      "title": "vCard with an org name",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice-work",
+        "@type": "urn:solid:VCard",
+        "urn:solid:fn": "Alice Liddell",
+        "urn:solid:organization-name": "Acme Corp"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#organization-name"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

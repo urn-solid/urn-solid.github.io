@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:honorific-prefix — urn-solid</title>
+<meta name="description" content="An honorific prefix preceding the person's name — Mr, Mrs, Dr, Prof, etc.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/honorific-prefix/">
+<link rel="alternate" type="application/ld+json" href="/honorific-prefix/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:honorific-prefix",
+  "@type": "rdf:Property",
+  "rdfs:label": "honorific-prefix",
+  "rdfs:comment": "An honorific prefix preceding the person's name — Mr, Mrs, Dr, Prof, etc.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+  "rdfs:seeAlso": [
+    "https://schema.org/honorificPrefix",
+    "urn:solid:honorific-suffix"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's honorific prefix — culture-specific. Pair with `urn:solid:honorific-suffix` for postnominals (PhD, Esq.). Schema.org equivalent is `schema:honorificPrefix`. Note the hyphen in the source name is preserved.",
+  "examples": [
+    {
+      "title": "Person with honorific prefix",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:honorific-prefix": "Dr",
+        "urn:solid:givenName": "Alice",
+        "urn:solid:familyName": "Liddell"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#honorific-prefix"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:hasCategory — urn-solid</title>
+<meta name="description" content="A category or tag for the vCard — describing what kind of contact it is.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/hasCategory/">
+<link rel="alternate" type="application/ld+json" href="/hasCategory/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasCategory",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasCategory",
+  "rdfs:comment": "A category or tag for the vCard — describing what kind of contact it is.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasCategory",
+  "rdfs:seeAlso": [
+    "urn:solid:keywords",
+    "urn:solid:subject"
+  ],
+  "rdfs:domain": "urn:solid:VCard",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's category/tag predicate — typical values are \"work\", \"personal\", \"family\", \"friend\". Repeat for multiple categories. For general-purpose tagging of resources (not specifically vCards), prefer `urn:solid:keywords` or `urn:solid:subject`.",
+  "examples": [
+    {
+      "title": "vCard categorized as a work contact",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice-work",
+        "@type": "urn:solid:VCard",
+        "urn:solid:fn": "Alice Liddell",
+        "urn:solid:hasCategory": ["work", "engineering"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasCategory"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

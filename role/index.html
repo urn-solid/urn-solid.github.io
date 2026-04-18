@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:role — urn-solid</title>
+<meta name="description" content="The job role or function the person performs within an organization.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/role/">
+<link rel="alternate" type="application/ld+json" href="/role/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:role",
+  "@type": "rdf:Property",
+  "rdfs:label": "role",
+  "rdfs:comment": "The job role or function the person performs within an organization.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#role",
+  "rdfs:seeAlso": [
+    "https://schema.org/jobTitle",
+    "urn:solid:worksFor"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's role string — typically a job title or function (\"Senior Engineer\", \"Treasurer\"). For schema.org-flavored data, prefer `schema:jobTitle`. For PROV-grade role-in-Activity attribution, use `prov:hadRole`.",
+  "examples": [
+    {
+      "title": "vCard with a job role",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice-work",
+        "@type": "urn:solid:VCard",
+        "urn:solid:fn": "Alice Liddell",
+        "urn:solid:organization-name": "Acme Corp",
+        "urn:solid:role": "Senior Engineer"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#role"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
