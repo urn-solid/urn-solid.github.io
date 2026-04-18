@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Attribution — urn-solid</title>
+<meta name="description" content="A qualified PROV attribution — the role-aware relation between an Entity and the Agent it is attributed to.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Attribution/">
+<link rel="alternate" type="application/ld+json" href="/Attribution/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Attribution",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Attribution",
+  "rdfs:comment": "A qualified PROV attribution — the role-aware relation between an Entity and the Agent it is attributed to.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#Attribution",
+  "rdfs:seeAlso": [
+    "urn:solid:wasAttributedTo",
+    "urn:solid:Association",
+    "urn:solid:hadRole"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to qualify `prov:wasAttributedTo` with a role and timing. Linked from an Entity via `prov:qualifiedAttribution`. Carries `prov:agent` (the responsible Agent) and `urn:solid:hadRole` (the role they took — author, photographer, contributor).",
+  "examples": [
+    {
+      "title": "Photo attributed to a photographer",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/photos/sunset-attribution",
+        "@type": "urn:solid:Attribution",
+        "http://www.w3.org/ns/prov#agent": { "@id": "https://example.org/alice#me" },
+        "urn:solid:hadRole": { "@id": "https://example.org/roles/photographer" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#Attribution"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

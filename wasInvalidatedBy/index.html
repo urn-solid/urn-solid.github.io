@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:wasInvalidatedBy — urn-solid</title>
+<meta name="description" content="The PROV Activity that invalidated (deleted, retracted, expired) the Entity.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/wasInvalidatedBy/">
+<link rel="alternate" type="application/ld+json" href="/wasInvalidatedBy/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasInvalidatedBy",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasInvalidatedBy",
+  "rdfs:comment": "The PROV Activity that invalidated (deleted, retracted, expired) the Entity.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasInvalidatedBy",
+  "rdfs:seeAlso": [
+    "urn:solid:wasGeneratedBy",
+    "urn:solid:Tombstone"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Activity",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "PROV's invalidation pointer — the inverse-in-time of `prov:wasGeneratedBy`. Records that an Entity ceased to exist at a particular Activity. Pair with `prov:invalidatedAtTime` for the timestamp. ActivityStreams' lighter equivalent for social data is `as:Tombstone`.",
+  "examples": [
+    {
+      "title": "Document invalidated by a deletion",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/abc",
+        "@type": "urn:solid:Entity",
+        "urn:solid:wasInvalidatedBy": { "@id": "https://example.org/activities/delete-1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasInvalidatedBy"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

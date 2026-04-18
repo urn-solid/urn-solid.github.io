@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:SocialMediaPosting — urn-solid</title>
+<meta name="description" content="A post to a social-media platform — tweet, toot, status update, microblog entry.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/SocialMediaPosting/">
+<link rel="alternate" type="application/ld+json" href="/SocialMediaPosting/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:SocialMediaPosting",
+  "@type": "rdfs:Class",
+  "rdfs:label": "SocialMediaPosting",
+  "rdfs:comment": "A post to a social-media platform — tweet, toot, status update, microblog entry.",
+  "owl:sameAs": "https://schema.org/SocialMediaPosting",
+  "rdfs:seeAlso": [
+    "urn:solid:Note",
+    "urn:solid:BlogPosting",
+    "urn:solid:Article"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Note"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `urn:solid:Article`. Schema.org's social-post type — the SEO-flavored counterpart of ActivityStreams `urn:solid:Note`. For ActivityPub-flavored data, prefer `Note`; for SEO/microdata on web pages, `SocialMediaPosting`.",
+  "examples": [
+    {
+      "title": "A schema.org social media post",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/social-1",
+        "@type": "urn:solid:SocialMediaPosting",
+        "urn:solid:author": { "@id": "https://example.org/alice#me" },
+        "urn:solid:articleBody": "Just shipped urn-solid v1!",
+        "urn:solid:datePublished": "2026-04-18T18:00:00Z"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/SocialMediaPosting"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -55,6 +55,20 @@
     "status": "stable",
     "path": "/Article/"
   },
+  "urn:solid:Association": {
+    "label": "Association",
+    "description": "A qualified PROV association — the role-aware participation of an Agent in an Activity.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Association/"
+  },
+  "urn:solid:Attribution": {
+    "label": "Attribution",
+    "description": "A qualified PROV attribution — the role-aware relation between an Entity and the Agent it is attributed to.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Attribution/"
+  },
   "urn:solid:Audio": {
     "label": "Audio",
     "description": "An audio resource — used in ActivityPub for audio attachments and stand-alone audio posts.",
@@ -474,6 +488,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Service/"
+  },
+  "urn:solid:SocialMediaPosting": {
+    "label": "SocialMediaPosting",
+    "description": "A post to a social-media platform — tweet, toot, status update, microblog entry.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/SocialMediaPosting/"
   },
   "urn:solid:SoftwareAgent": {
     "label": "SoftwareAgent",
@@ -943,6 +964,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hadActivity/"
+  },
+  "urn:solid:hadPlan": {
+    "label": "hadPlan",
+    "description": "The Plan that an Activity followed — used inside a qualified PROV Association.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hadPlan/"
   },
   "urn:solid:hadPrimarySource": {
     "label": "hadPrimarySource",
@@ -1741,6 +1769,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/wasInformedBy/"
+  },
+  "urn:solid:wasInvalidatedBy": {
+    "label": "wasInvalidatedBy",
+    "description": "The PROV Activity that invalidated (deleted, retracted, expired) the Entity.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/wasInvalidatedBy/"
   },
   "urn:solid:weblog": {
     "label": "weblog",

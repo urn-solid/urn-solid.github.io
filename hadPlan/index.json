@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hadPlan",
+  "@type": "rdf:Property",
+  "rdfs:label": "hadPlan",
+  "rdfs:comment": "The Plan that an Activity followed — used inside a qualified PROV Association.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#hadPlan",
+  "rdfs:seeAlso": [
+    "urn:solid:Plan",
+    "http://www.w3.org/ns/prov#qualifiedAssociation"
+  ],
+  "rdfs:range": "urn:solid:Plan",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Used inside a `prov:Association` to point at the `urn:solid:Plan` the Agent followed when participating in the Activity. Lets PROV record \"who acted, with what role, following which plan\" — a build run executes a build plan; a paper review follows a review checklist.",
+  "examples": [
+    {
+      "title": "Association with a plan",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/associations/build-2026-04-18",
+        "@type": "http://www.w3.org/ns/prov#Association",
+        "http://www.w3.org/ns/prov#agent": { "@id": "https://urn-solid.github.io/agents/curate-next" },
+        "urn:solid:hadPlan": { "@id": "https://example.org/plans/curation-loop-v1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#hadPlan"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
