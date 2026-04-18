@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:openid",
+  "@type": "rdf:Property",
+  "rdfs:label": "openid",
+  "rdfs:comment": "An OpenID identifier for the Agent — a document used to verify the Agent's identity.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/openid",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/solid/terms#oidcIssuer"
+  ],
+  "rdfs:domain": "urn:solid:Agent",
+  "rdfs:range": "http://xmlns.com/foaf/0.1/Document",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Inverse-functional in FOAF — an OpenID document uniquely identifies its Agent. Predates Solid OIDC; for modern Solid pods use `solid:oidcIssuer` instead, which points at the OpenID Connect issuer URL.",
+  "examples": [
+    {
+      "title": "Person with an OpenID document",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:openid": { "@id": "https://alice.example.org/openid" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/openid"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

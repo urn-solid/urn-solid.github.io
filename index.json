@@ -76,6 +76,13 @@
     "status": "stable",
     "path": "/nick/"
   },
+  "urn:solid:openid": {
+    "label": "openid",
+    "description": "An OpenID identifier for the Agent — a document used to verify the Agent's identity.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/openid/"
+  },
   "urn:solid:weblog": {
     "label": "weblog",
     "description": "A weblog (blog) of the subject — the document the agent publishes posts to.",
