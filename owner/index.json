@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:owner",
+  "@type": "rdf:Property",
+  "rdfs:label": "owner",
+  "rdfs:comment": "An agent that owns the resource — typically used to declare pod ownership.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#owner",
+  "rdfs:seeAlso": [
+    "urn:solid:storage",
+    "urn:solid:Account"
+  ],
+  "rdfs:range": "urn:solid:Person",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Solid-specific ownership predicate — declares the WebID(s) that own a pod or resource. Pod operators can read this to determine who has full control. Distinct from `dcterms:rightsHolder` (broader copyright/IP ownership) and `urn:solid:creator` (who made it).",
+  "examples": [
+    {
+      "title": "Pod root with declared owner",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/",
+        "@type": "urn:solid:BasicContainer",
+        "urn:solid:owner": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#owner"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:profileSubject",
+  "@type": "rdf:Property",
+  "rdfs:label": "profileSubject",
+  "rdfs:comment": "The subject (Person) that a profile document is about.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#profileSubject",
+  "rdfs:seeAlso": [
+    "urn:solid:primaryTopic",
+    "urn:solid:isPrimaryTopicOf"
+  ],
+  "rdfs:domain": "urn:solid:PersonalProfileDocument",
+  "rdfs:range": "urn:solid:Person",
+  "notToBeConfusedWith": [
+    "urn:solid:primaryTopic"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Solid-specific name for the relation FOAF expresses as `foaf:primaryTopic`. Use on a profile document to point at the Person it describes. Most existing data uses `foaf:primaryTopic`; this is the modern Solid-namespaced equivalent.",
+  "examples": [
+    {
+      "title": "Profile document with subject",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card",
+        "@type": "urn:solid:PersonalProfileDocument",
+        "urn:solid:profileSubject": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#profileSubject"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

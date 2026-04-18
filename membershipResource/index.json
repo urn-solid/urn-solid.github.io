@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:membershipResource",
+  "@type": "rdf:Property",
+  "rdfs:label": "membershipResource",
+  "rdfs:comment": "The resource that membership triples for a DirectContainer or IndirectContainer are added to.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#membershipResource",
+  "rdfs:seeAlso": [
+    "urn:solid:DirectContainer",
+    "urn:solid:IndirectContainer"
+  ],
+  "rdfs:domain": "urn:solid:Container",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Used on `urn:solid:DirectContainer` and `urn:solid:IndirectContainer` to identify *where* membership triples land. Pair with `ldp:hasMemberRelation` (the predicate to use) and `ldp:isMemberOfRelation` (the inverse). Not used on plain `BasicContainer`s.",
+  "examples": [
+    {
+      "title": "DirectContainer pointing at a membership resource",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/abc/comments/",
+        "@type": "urn:solid:DirectContainer",
+        "urn:solid:membershipResource": { "@id": "https://example.org/posts/abc" },
+        "http://www.w3.org/ns/ldp#hasMemberRelation": { "@id": "https://schema.org/comment" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#membershipResource"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -272,6 +272,13 @@
     "status": "stable",
     "path": "/Note/"
   },
+  "urn:solid:Notification": {
+    "label": "Notification",
+    "description": "A Linked Data Notification — a message POSTed to an inbox to inform the receiver about something.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Notification/"
+  },
   "urn:solid:Object": {
     "label": "Object",
     "description": "The base class for all ActivityStreams objects — anything that can be the subject or target of an Activity.",
@@ -1084,6 +1091,13 @@
     "status": "stable",
     "path": "/location/"
   },
+  "urn:solid:loginEndpoint": {
+    "label": "loginEndpoint",
+    "description": "The login endpoint URL for a Solid OIDC provider.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/loginEndpoint/"
+  },
   "urn:solid:longitude": {
     "label": "longitude",
     "description": "The longitude of a location, in decimal degrees (WGS-84).",
@@ -1126,6 +1140,13 @@
     "status": "stable",
     "path": "/member/"
   },
+  "urn:solid:membershipResource": {
+    "label": "membershipResource",
+    "description": "The resource that membership triples for a DirectContainer or IndirectContainer are added to.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/membershipResource/"
+  },
   "urn:solid:modified": {
     "label": "modified",
     "description": "The date the resource was last modified.",
@@ -1160,6 +1181,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/openid/"
+  },
+  "urn:solid:owner": {
+    "label": "owner",
+    "description": "An agent that owns the resource — typically used to declare pod ownership.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/owner/"
   },
   "urn:solid:page": {
     "label": "page",
@@ -1209,6 +1237,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/privateTypeIndex/"
+  },
+  "urn:solid:profileSubject": {
+    "label": "profileSubject",
+    "description": "The subject (Person) that a profile document is about.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/profileSubject/"
   },
   "urn:solid:publicTypeIndex": {
     "label": "publicTypeIndex",

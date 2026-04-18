@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:membershipResource — urn-solid</title>
+<meta name="description" content="The resource that membership triples for a DirectContainer or IndirectContainer are added to.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/membershipResource/">
+<link rel="alternate" type="application/ld+json" href="/membershipResource/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:membershipResource",
+  "@type": "rdf:Property",
+  "rdfs:label": "membershipResource",
+  "rdfs:comment": "The resource that membership triples for a DirectContainer or IndirectContainer are added to.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#membershipResource",
+  "rdfs:seeAlso": [
+    "urn:solid:DirectContainer",
+    "urn:solid:IndirectContainer"
+  ],
+  "rdfs:domain": "urn:solid:Container",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Used on `urn:solid:DirectContainer` and `urn:solid:IndirectContainer` to identify *where* membership triples land. Pair with `ldp:hasMemberRelation` (the predicate to use) and `ldp:isMemberOfRelation` (the inverse). Not used on plain `BasicContainer`s.",
+  "examples": [
+    {
+      "title": "DirectContainer pointing at a membership resource",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/abc/comments/",
+        "@type": "urn:solid:DirectContainer",
+        "urn:solid:membershipResource": { "@id": "https://example.org/posts/abc" },
+        "http://www.w3.org/ns/ldp#hasMemberRelation": { "@id": "https://schema.org/comment" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#membershipResource"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
