@@ -237,6 +237,13 @@
     "status": "stable",
     "path": "/birthday/"
   },
+  "urn:solid:contains": {
+    "label": "contains",
+    "description": "A resource contained by the LDP Container — i.e., a member created via HTTP POST to the container.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/contains/"
+  },
   "urn:solid:contributor": {
     "label": "contributor",
     "description": "An entity responsible for making contributions to the resource — secondary to the principal creator.",

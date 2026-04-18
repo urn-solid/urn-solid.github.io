@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:contains — urn-solid</title>
+<meta name="description" content="A resource contained by the LDP Container — i.e., a member created via HTTP POST to the container.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/contains/">
+<link rel="alternate" type="application/ld+json" href="/contains/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:contains",
+  "@type": "rdf:Property",
+  "rdfs:label": "contains",
+  "rdfs:comment": "A resource contained by the LDP Container — i.e., a member created via HTTP POST to the container.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#contains",
+  "rdfs:seeAlso": [
+    "urn:solid:hasPart"
+  ],
+  "rdfs:domain": "urn:solid:Container",
+  "notToBeConfusedWith": [
+    "urn:solid:hasPart"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "LDP-specific containment with HTTP semantics: POSTing to the container creates a resource that's automatically a `ldp:contains` member. Unlike `urn:solid:hasPart` (a logical part-of), `contains` reflects actual server-side parent-child storage.",
+  "examples": [
+    {
+      "title": "Container listing its members",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/",
+        "@type": "urn:solid:Container",
+        "urn:solid:contains": [
+          { "@id": "https://alice.example.org/notes/2026-04-18.ttl" },
+          { "@id": "https://alice.example.org/notes/2026-04-17.ttl" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#contains"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
