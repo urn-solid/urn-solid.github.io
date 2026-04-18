@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasLanguage",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasLanguage",
+  "rdfs:comment": "A language the subject communicates in — typically a BCP 47 language tag.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasLanguage",
+  "rdfs:seeAlso": [
+    "urn:solid:knowsLanguage",
+    "urn:solid:language"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:knowsLanguage",
+    "urn:solid:language"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's communicates-in-language predicate. Functionally similar to schema's `urn:solid:knowsLanguage`; pick whichever matches your data flavor. Distinct from `urn:solid:language` (the language a *resource* is in). Value is typically a BCP 47 tag.",
+  "examples": [
+    {
+      "title": "vCard with preferred languages",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasLanguage": ["en", "fr"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasLanguage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

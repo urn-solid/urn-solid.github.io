@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasInstantMessage",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasInstantMessage",
+  "rdfs:comment": "An instant-messaging address for the subject — typically an `xmpp:`, `matrix:`, or other chat URI.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasInstantMessage",
+  "rdfs:seeAlso": [
+    "urn:solid:jabberID"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:jabberID"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's general IM-address slot — covers any chat protocol via URI scheme (`xmpp:`, `matrix:`, `irc:`). Distinct from FOAF's `urn:solid:jabberID` which is XMPP-specific and a bare string. Repeat for multiple IM identities.",
+  "examples": [
+    {
+      "title": "vCard with a Matrix handle",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasInstantMessage": { "@id": "matrix:u/alice:example.org" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasInstantMessage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

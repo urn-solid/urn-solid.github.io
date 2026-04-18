@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:workplaceHomepage",
+  "@type": "rdf:Property",
+  "rdfs:label": "workplaceHomepage",
+  "rdfs:comment": "A homepage of an organization the person works for.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/workplaceHomepage",
+  "rdfs:seeAlso": [
+    "urn:solid:worksFor",
+    "urn:solid:schoolHomepage"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:Document",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "FOAF's lightweight \"I work at that place\" pointer — the value is the employer's homepage URL, not a structured Organization resource. For richer employment metadata, prefer `urn:solid:worksFor` pointing at a `urn:solid:Organization`. Repeat for multiple workplaces.",
+  "examples": [
+    {
+      "title": "Person with a workplace homepage",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:workplaceHomepage": { "@id": "https://acme.example.org/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/workplaceHomepage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

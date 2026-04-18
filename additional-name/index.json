@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:additional-name",
+  "@type": "rdf:Property",
+  "rdfs:label": "additional-name",
+  "rdfs:comment": "An additional or middle name of the person.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#additional-name",
+  "rdfs:seeAlso": [
+    "urn:solid:givenName",
+    "urn:solid:familyName",
+    "https://schema.org/additionalName"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's middle-name field — separate from `urn:solid:givenName` and `urn:solid:familyName`. Repeat for multiple middle names. Note the hyphen in the source name is preserved. Schema.org equivalent is `schema:additionalName`.",
+  "examples": [
+    {
+      "title": "Person with first, middle, and last names",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:givenName": "Alice",
+        "urn:solid:additional-name": "Pleasance",
+        "urn:solid:familyName": "Liddell"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#additional-name"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

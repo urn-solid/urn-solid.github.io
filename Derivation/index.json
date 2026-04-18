@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Derivation",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Derivation",
+  "rdfs:comment": "A typed PROV derivation event — a relation between a derived entity and the entity it was derived from.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#Derivation",
+  "rdfs:seeAlso": [
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:Revision",
+    "urn:solid:Quotation"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to qualify a `prov:wasDerivedFrom` with role, generation, usage, or activity context (via `prov:qualifiedDerivation`). Specialized subclasses include `urn:solid:Revision` (substantive change), `urn:solid:Quotation` (excerpt), and `prov:PrimarySource` (first-hand origin).",
+  "examples": [
+    {
+      "title": "A qualified derivation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/derivations/translation-1",
+        "@type": "urn:solid:Derivation",
+        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/posts/hello" },
+        "http://www.w3.org/ns/prov#hadActivity": { "@id": "https://example.org/translations/de-job-42" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#Derivation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
