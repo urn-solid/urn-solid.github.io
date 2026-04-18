@@ -342,6 +342,13 @@
     "status": "stable",
     "path": "/rights/"
   },
+  "urn:solid:source": {
+    "label": "source",
+    "description": "A related resource from which the described resource is derived.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/source/"
+  },
   "urn:solid:subject": {
     "label": "subject",
     "description": "A topic of the resource — typically expressed as keywords, key phrases, or controlled-vocabulary terms.",

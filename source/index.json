@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:source",
+  "@type": "rdf:Property",
+  "rdfs:label": "source",
+  "rdfs:comment": "A related resource from which the described resource is derived.",
+  "owl:sameAs": "http://purl.org/dc/terms/source",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/prov#wasDerivedFrom",
+    "https://schema.org/isBasedOn"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to record the upstream origin of derived works (translations, adaptations, summaries, scraped data). For PROV-grade derivation chains with role and timing, prefer `prov:wasDerivedFrom`. Repeat to list multiple sources.",
+  "examples": [
+    {
+      "title": "Translation pointing at its source",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello-de",
+        "@type": "urn:solid:Document",
+        "urn:solid:language": "de",
+        "urn:solid:source": { "@id": "https://example.org/posts/hello" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/source"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
