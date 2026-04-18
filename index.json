@@ -1077,6 +1077,13 @@
     "status": "stable",
     "path": "/extent/"
   },
+  "urn:solid:family-name": {
+    "label": "family-name",
+    "description": "The vCard family name (surname) of a person.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/family-name/"
+  },
   "urn:solid:familyName": {
     "label": "familyName",
     "description": "The family name (surname) of the person.",
@@ -1139,6 +1146,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/generator/"
+  },
+  "urn:solid:given-name": {
+    "label": "given-name",
+    "description": "The vCard given name (first name) of a person.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/given-name/"
   },
   "urn:solid:givenName": {
     "label": "givenName",
@@ -1252,6 +1266,13 @@
     "status": "stable",
     "path": "/hasMemberRelation/"
   },
+  "urn:solid:hasName": {
+    "label": "hasName",
+    "description": "A structured Name resource for the subject — separates given/family/additional/prefix/suffix into a Name object.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasName/"
+  },
   "urn:solid:hasNickname": {
     "label": "hasNickname",
     "description": "A nickname for the subject.",
@@ -1272,6 +1293,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasPhoto/"
+  },
+  "urn:solid:hasSource": {
+    "label": "hasSource",
+    "description": "A source document for the vCard's information — typically a website or directory the data came from.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasSource/"
   },
   "urn:solid:hasTelephone": {
     "label": "hasTelephone",
@@ -1713,6 +1741,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/preferencesFile/"
+  },
+  "urn:solid:preview": {
+    "label": "preview",
+    "description": "An object that provides a preview of the subject — typically a thumbnail image or a snippet.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/preview/"
   },
   "urn:solid:primaryTopic": {
     "label": "primaryTopic",

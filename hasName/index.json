@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasName",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasName",
+  "rdfs:comment": "A structured Name resource for the subject — separates given/family/additional/prefix/suffix into a Name object.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasName",
+  "rdfs:seeAlso": [
+    "urn:solid:fn",
+    "urn:solid:given-name",
+    "urn:solid:family-name"
+  ],
+  "rdfs:domain": "urn:solid:VCard",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use when name parts need to live on a separate Name resource (e.g. for multi-script names or when the parts have their own metadata). Most data instead attaches `given-name`/`family-name`/etc. directly to the VCard. The flat-string form is `urn:solid:fn`.",
+  "examples": [
+    {
+      "title": "vCard with a structured Name",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasName": {
+          "@type": "http://www.w3.org/2006/vcard/ns#Name",
+          "urn:solid:given-name": "Alice",
+          "urn:solid:family-name": "Liddell"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasName"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

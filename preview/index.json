@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:preview",
+  "@type": "rdf:Property",
+  "rdfs:label": "preview",
+  "rdfs:comment": "An object that provides a preview of the subject — typically a thumbnail image or a snippet.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#preview",
+  "rdfs:seeAlso": [
+    "urn:solid:thumbnail",
+    "urn:solid:icon"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:thumbnail",
+    "urn:solid:icon"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "ActivityStreams' general-purpose preview slot — useful for link unfurling, video posters, document covers. Distinct from `urn:solid:thumbnail` (specifically a smaller image of an Image) and `urn:solid:icon` (small avatar). The value can be any AS Object with a `urn:solid:url`.",
+  "examples": [
+    {
+      "title": "Video with a preview poster",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/videos/intro.mp4",
+        "@type": "urn:solid:Video",
+        "urn:solid:preview": {
+          "@type": "urn:solid:Image",
+          "https://www.w3.org/ns/activitystreams#url": { "@id": "https://example.org/videos/intro-poster.jpg" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#preview"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

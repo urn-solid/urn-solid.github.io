@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:family-name",
+  "@type": "rdf:Property",
+  "rdfs:label": "family-name",
+  "rdfs:comment": "The vCard family name (surname) of a person.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#family-name",
+  "rdfs:seeAlso": [
+    "urn:solid:familyName",
+    "urn:solid:given-name"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:familyName"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "vCard's hyphenated form of the family name — distinct from FOAF's `urn:solid:familyName` (camelCase) only by namespace. Pick `family-name` in vCard-flavored data, `familyName` in FOAF/schema-flavored data. Functionally equivalent.",
+  "examples": [
+    {
+      "title": "vCard with family name",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:given-name": "Alice",
+        "urn:solid:family-name": "Liddell"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#family-name"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:preview — urn-solid</title>
+<meta name="description" content="An object that provides a preview of the subject — typically a thumbnail image or a snippet.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/preview/">
+<link rel="alternate" type="application/ld+json" href="/preview/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:preview",
+  "@type": "rdf:Property",
+  "rdfs:label": "preview",
+  "rdfs:comment": "An object that provides a preview of the subject — typically a thumbnail image or a snippet.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#preview",
+  "rdfs:seeAlso": [
+    "urn:solid:thumbnail",
+    "urn:solid:icon"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:thumbnail",
+    "urn:solid:icon"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "ActivityStreams' general-purpose preview slot — useful for link unfurling, video posters, document covers. Distinct from `urn:solid:thumbnail` (specifically a smaller image of an Image) and `urn:solid:icon` (small avatar). The value can be any AS Object with a `urn:solid:url`.",
+  "examples": [
+    {
+      "title": "Video with a preview poster",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/videos/intro.mp4",
+        "@type": "urn:solid:Video",
+        "urn:solid:preview": {
+          "@type": "urn:solid:Image",
+          "https://www.w3.org/ns/activitystreams#url": { "@id": "https://example.org/videos/intro-poster.jpg" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#preview"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
