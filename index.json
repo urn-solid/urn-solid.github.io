@@ -573,6 +573,13 @@
     "status": "stable",
     "path": "/pastProject/"
   },
+  "urn:solid:preferencesFile": {
+    "label": "preferencesFile",
+    "description": "A document containing the subject's private preferences.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/preferencesFile/"
+  },
   "urn:solid:primaryTopic": {
     "label": "primaryTopic",
     "description": "The primary topic of a document — the thing the document is principally about.",

@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:preferencesFile",
+  "@type": "rdf:Property",
+  "rdfs:label": "preferencesFile",
+  "rdfs:comment": "A document containing the subject's private preferences.",
+  "owl:sameAs": "http://www.w3.org/ns/pim/space#preferencesFile",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/solid/terms#privateTypeIndex"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:Document",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Conventionally a private document linked from the WebID profile, holding application preferences and other personal settings. Should be access-controlled (only the user can read/write). Apps discover it via the WebID and follow links from it (e.g. to the private TypeIndex).",
+  "examples": [
+    {
+      "title": "WebID with a preferences file",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:preferencesFile": { "@id": "https://alice.example.org/settings/prefs.ttl" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/pim/space#preferencesFile"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
