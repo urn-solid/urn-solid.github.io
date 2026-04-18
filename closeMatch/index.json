@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:closeMatch",
+  "@type": "rdf:Property",
+  "rdfs:label": "closeMatch",
+  "rdfs:comment": "A SKOS mapping asserting that two Concepts in different ConceptSchemes are similar enough to be used interchangeably in some applications.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#closeMatch",
+  "rdfs:seeAlso": [
+    "urn:solid:exactMatch",
+    "urn:solid:broadMatch",
+    "urn:solid:narrowMatch"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:exactMatch"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Symmetric but NOT transitive (unlike `exactMatch`) — that's the whole point: chains of close matches don't preserve enough meaning. Use when concepts overlap meaningfully but you wouldn't claim full equivalence.",
+  "examples": [
+    {
+      "title": "Similar but distinct concepts",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/fp",
+        "@type": "urn:solid:Concept",
+        "urn:solid:closeMatch": { "@id": "https://other.example.org/vocab/declarative-programming" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#closeMatch"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

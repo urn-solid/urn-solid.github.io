@@ -965,6 +965,13 @@
     "status": "stable",
     "path": "/children/"
   },
+  "urn:solid:closeMatch": {
+    "label": "closeMatch",
+    "description": "A SKOS mapping asserting that two Concepts in different ConceptSchemes are similar enough to be used interchangeably in some applications.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/closeMatch/"
+  },
   "urn:solid:conformsTo": {
     "label": "conformsTo",
     "description": "An established standard or specification to which the resource conforms.",
@@ -1125,6 +1132,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/endedAtTime/"
+  },
+  "urn:solid:exactMatch": {
+    "label": "exactMatch",
+    "description": "A SKOS mapping asserting that two Concepts in different ConceptSchemes are equivalent for retrieval purposes.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/exactMatch/"
+  },
+  "urn:solid:example": {
+    "label": "example",
+    "description": "An example illustrating the use of a SKOS Concept.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/example/"
   },
   "urn:solid:extent": {
     "label": "extent",
@@ -1412,6 +1433,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/headline/"
+  },
+  "urn:solid:hiddenLabel": {
+    "label": "hiddenLabel",
+    "description": "A non-display label for a SKOS Concept — used to support search but not shown in UIs.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hiddenLabel/"
   },
   "urn:solid:homepage": {
     "label": "homepage",
@@ -1965,6 +1993,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/schoolHomepage/"
+  },
+  "urn:solid:scopeNote": {
+    "label": "scopeNote",
+    "description": "A SKOS note clarifying the intended scope or usage of a Concept — \"use this for X but not Y\".",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/scopeNote/"
   },
   "urn:solid:sha1": {
     "label": "sha1",

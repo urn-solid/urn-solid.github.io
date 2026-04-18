@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hiddenLabel",
+  "@type": "rdf:Property",
+  "rdfs:label": "hiddenLabel",
+  "rdfs:comment": "A non-display label for a SKOS Concept — used to support search but not shown in UIs.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#hiddenLabel",
+  "rdfs:seeAlso": [
+    "urn:solid:prefLabel",
+    "urn:solid:altLabel"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:prefLabel",
+    "urn:solid:altLabel"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use for misspellings, deprecated names, slang — strings users might search for that you don't want to surface in the UI. SKOS rule: `prefLabel`, `altLabel`, and `hiddenLabel` values must be pairwise disjoint within a language for the same Concept.",
+  "examples": [
+    {
+      "title": "Concept with searchable misspellings",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/cat-theory",
+        "@type": "urn:solid:Concept",
+        "urn:solid:prefLabel": "Category theory",
+        "urn:solid:hiddenLabel": ["catagory theory", "categry theory"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#hiddenLabel"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

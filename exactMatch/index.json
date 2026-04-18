@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:exactMatch",
+  "@type": "rdf:Property",
+  "rdfs:label": "exactMatch",
+  "rdfs:comment": "A SKOS mapping asserting that two Concepts in different ConceptSchemes are equivalent for retrieval purposes.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#exactMatch",
+  "rdfs:seeAlso": [
+    "urn:solid:closeMatch",
+    "urn:solid:broadMatch",
+    "urn:solid:narrowMatch"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:closeMatch"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Symmetric and transitive — assert sparingly because chains can produce surprising equivalences across vocabularies. For weaker similarity that doesn't claim full equivalence, prefer `urn:solid:closeMatch`. Use across SKOS schemes; within one scheme, use `urn:solid:broader`/`narrower`/`related` instead.",
+  "examples": [
+    {
+      "title": "Concept matching across vocabularies",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/cat-theory",
+        "@type": "urn:solid:Concept",
+        "urn:solid:exactMatch": { "@id": "https://other.example.org/vocab/categorical-algebra" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#exactMatch"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
