@@ -153,6 +153,13 @@
     "status": "stable",
     "path": "/img/"
   },
+  "urn:solid:isPrimaryTopicOf": {
+    "label": "isPrimaryTopicOf",
+    "description": "A document of which the subject is the primary topic — the inverse of `primaryTopic`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/isPrimaryTopicOf/"
+  },
   "urn:solid:jabberID": {
     "label": "jabberID",
     "description": "A Jabber/XMPP identifier for the Agent.",
