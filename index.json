@@ -160,6 +160,13 @@
     "status": "stable",
     "path": "/knows/"
   },
+  "urn:solid:lastName": {
+    "label": "lastName",
+    "description": "The last name of a person.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/lastName/"
+  },
   "urn:solid:mbox": {
     "label": "mbox",
     "description": "A personal mailbox — typically a mailto: IRI.",
