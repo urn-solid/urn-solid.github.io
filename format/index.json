@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:format",
+  "@type": "rdf:Property",
+  "rdfs:label": "format",
+  "rdfs:comment": "The file format, physical medium, or dimensions of the resource.",
+  "owl:sameAs": "http://purl.org/dc/terms/format",
+  "rdfs:seeAlso": [
+    "https://schema.org/encodingFormat",
+    "https://www.w3.org/ns/activitystreams#mediaType"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use an IANA media type string (`text/html`, `application/ld+json`, `image/png`) for digital resources. For physical media or non-MIME formats, free-form descriptive text is acceptable. Range can also be a `dcterms:MediaType` resource for richer modelling.",
+  "examples": [
+    {
+      "title": "JSON-LD document with a format",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://urn-solid.github.io/Person/index.json",
+        "@type": "urn:solid:Document",
+        "urn:solid:format": "application/ld+json"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/format"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

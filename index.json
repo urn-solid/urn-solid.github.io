@@ -181,6 +181,13 @@
     "status": "stable",
     "path": "/firstName/"
   },
+  "urn:solid:format": {
+    "label": "format",
+    "description": "The file format, physical medium, or dimensions of the resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/format/"
+  },
   "urn:solid:gender": {
     "label": "gender",
     "description": "The gender of the agent — a free-form string in FOAF tradition.",
