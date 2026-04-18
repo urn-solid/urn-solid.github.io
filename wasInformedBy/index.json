@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasInformedBy",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasInformedBy",
+  "rdfs:comment": "An activity exchanged information with the prior activity — without naming the entity that flowed between them.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasInformedBy",
+  "rdfs:seeAlso": [
+    "urn:solid:wasGeneratedBy",
+    "urn:solid:used"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:range": "urn:solid:Activity",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "PROV's lightweight \"this activity follows that one\" relation — used when you want to record temporal/causal ordering between activities without modelling the intermediate Entity. For full traceability, prefer chaining `urn:solid:used` and `urn:solid:wasGeneratedBy` through explicit Entities.",
+  "examples": [
+    {
+      "title": "Build informed by previous test run",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/builds/2026-04-18-2",
+        "@type": "urn:solid:Activity",
+        "urn:solid:wasInformedBy": { "@id": "https://example.org/test-runs/2026-04-18-1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasInformedBy"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

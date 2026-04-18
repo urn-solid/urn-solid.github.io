@@ -216,6 +216,13 @@
     "status": "stable",
     "path": "/Place/"
   },
+  "urn:solid:Plan": {
+    "label": "Plan",
+    "description": "An entity describing a plan — a set of intended actions to achieve some goal.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Plan/"
+  },
   "urn:solid:PostalAddress": {
     "label": "PostalAddress",
     "description": "A structured postal address — street, locality, region, postal code, country.",
@@ -257,6 +264,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Service/"
+  },
+  "urn:solid:SoftwareAgent": {
+    "label": "SoftwareAgent",
+    "description": "A piece of software acting as an agent — a script, build tool, bot, or service.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/SoftwareAgent/"
   },
   "urn:solid:Tombstone": {
     "label": "Tombstone",
@@ -334,6 +348,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/accountServiceHomepage/"
+  },
+  "urn:solid:actedOnBehalfOf": {
+    "label": "actedOnBehalfOf",
+    "description": "An agent acted on behalf of another — delegation between agents.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/actedOnBehalfOf/"
   },
   "urn:solid:address": {
     "label": "address",
@@ -965,6 +986,13 @@
     "status": "stable",
     "path": "/used/"
   },
+  "urn:solid:wasAssociatedWith": {
+    "label": "wasAssociatedWith",
+    "description": "An agent that had a role or responsibility in the activity — performed it, oversaw it, or was implicated in it.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/wasAssociatedWith/"
+  },
   "urn:solid:wasAttributedTo": {
     "label": "wasAttributedTo",
     "description": "An agent to which the entity is attributed — without claiming the agent performed any specific action.",
@@ -985,6 +1013,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/wasGeneratedBy/"
+  },
+  "urn:solid:wasInformedBy": {
+    "label": "wasInformedBy",
+    "description": "An activity exchanged information with the prior activity — without naming the entity that flowed between them.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/wasInformedBy/"
   },
   "urn:solid:weblog": {
     "label": "weblog",

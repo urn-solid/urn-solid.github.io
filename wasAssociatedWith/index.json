@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasAssociatedWith",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasAssociatedWith",
+  "rdfs:comment": "An agent that had a role or responsibility in the activity — performed it, oversaw it, or was implicated in it.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasAssociatedWith",
+  "rdfs:seeAlso": [
+    "urn:solid:wasAttributedTo",
+    "http://www.w3.org/ns/prov#qualifiedAssociation"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:range": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:wasAttributedTo"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "PROV agent-to-Activity relation — distinct from `wasAttributedTo` (which links an Entity to its responsible Agent). Use `wasAssociatedWith` for who ran the build, who reviewed the change, who triggered the pipeline. Qualify via `prov:qualifiedAssociation` to add a role and a Plan.",
+  "examples": [
+    {
+      "title": "Build associated with a software agent",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/builds/2026-04-18-1",
+        "@type": "urn:solid:Activity",
+        "urn:solid:wasAssociatedWith": { "@id": "https://urn-solid.github.io/agents/curate-next" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasAssociatedWith"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
