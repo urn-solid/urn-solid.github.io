@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:parent",
+  "@type": "rdf:Property",
+  "rdfs:label": "parent",
+  "rdfs:comment": "A parent of the person.",
+  "owl:sameAs": "https://schema.org/parent",
+  "rdfs:seeAlso": [
+    "urn:solid:children",
+    "urn:solid:sibling"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:Person",
+  "notToBeConfusedWith": [
+    "urn:solid:children"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Inverse of `urn:solid:children`. Repeat for multiple parents (biological, adoptive, step-). Sensitive personal data; consider access control. Distinct from `dcterms:isPartOf`/`hasPart` which encode whole-part composition rather than family relations.",
+  "examples": [
+    {
+      "title": "Person with a parent",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:parent": { "@id": "https://example.org/carol#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/parent"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

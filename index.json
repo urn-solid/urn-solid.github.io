@@ -503,6 +503,13 @@
     "status": "stable",
     "path": "/alternative/"
   },
+  "urn:solid:alumniOf": {
+    "label": "alumniOf",
+    "description": "An organization the person previously attended or worked for.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/alumniOf/"
+  },
   "urn:solid:attachment": {
     "label": "attachment",
     "description": "An object attached to or associated with the subject — typically images, files, or media.",
@@ -565,6 +572,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/cc/"
+  },
+  "urn:solid:children": {
+    "label": "children",
+    "description": "A child of the person.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/children/"
   },
   "urn:solid:conformsTo": {
     "label": "conformsTo",
@@ -986,6 +1000,13 @@
     "status": "stable",
     "path": "/page/"
   },
+  "urn:solid:parent": {
+    "label": "parent",
+    "description": "A parent of the person.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/parent/"
+  },
   "urn:solid:pastProject": {
     "label": "pastProject",
     "description": "A project the person is no longer active on.",
@@ -1056,12 +1077,26 @@
     "status": "stable",
     "path": "/rights/"
   },
+  "urn:solid:sibling": {
+    "label": "sibling",
+    "description": "A sibling of the person — sharing at least one parent.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/sibling/"
+  },
   "urn:solid:source": {
     "label": "source",
     "description": "A related resource from which the described resource is derived.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/source/"
+  },
+  "urn:solid:spouse": {
+    "label": "spouse",
+    "description": "The person to whom the subject is married.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/spouse/"
   },
   "urn:solid:startTime": {
     "label": "startTime",
