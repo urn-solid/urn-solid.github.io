@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:maker",
+  "@type": "rdf:Property",
+  "rdfs:label": "maker",
+  "rdfs:comment": "An agent that made the subject — the inverse of `made`.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/maker",
+  "rdfs:seeAlso": [
+    "https://schema.org/creator",
+    "http://purl.org/dc/terms/creator",
+    "http://xmlns.com/foaf/0.1/made"
+  ],
+  "rdfs:range": "urn:solid:Agent",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use on a document or work to point at the agent that made it. The inverse `foaf:made` goes the other direction (agent → work). For richer creator semantics with role and contribution type, prefer `dcterms:creator` or `prov:wasAttributedTo`.",
+  "examples": [
+    {
+      "title": "Document with a maker",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Document",
+        "urn:solid:maker": { "@id": "https://example.org/alice#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/maker"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

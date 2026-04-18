@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:maker — urn-solid</title>
+<meta name="description" content="An agent that made the subject — the inverse of `made`.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/maker/">
+<link rel="alternate" type="application/ld+json" href="/maker/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:maker",
+  "@type": "rdf:Property",
+  "rdfs:label": "maker",
+  "rdfs:comment": "An agent that made the subject — the inverse of `made`.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/maker",
+  "rdfs:seeAlso": [
+    "https://schema.org/creator",
+    "http://purl.org/dc/terms/creator",
+    "http://xmlns.com/foaf/0.1/made"
+  ],
+  "rdfs:range": "urn:solid:Agent",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use on a document or work to point at the agent that made it. The inverse `foaf:made` goes the other direction (agent → work). For richer creator semantics with role and contribution type, prefer `dcterms:creator` or `prov:wasAttributedTo`.",
+  "examples": [
+    {
+      "title": "Document with a maker",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Document",
+        "urn:solid:maker": { "@id": "https://example.org/alice#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/maker"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
