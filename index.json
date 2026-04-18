@@ -216,6 +216,13 @@
     "status": "stable",
     "path": "/TypeRegistration/"
   },
+  "urn:solid:Undo": {
+    "label": "Undo",
+    "description": "An indication that the actor is undoing a previous activity — typically used to retract a Like or Follow.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Undo/"
+  },
   "urn:solid:Update": {
     "label": "Update",
     "description": "An activity in which the actor has updated the object.",

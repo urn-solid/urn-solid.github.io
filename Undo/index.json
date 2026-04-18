@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Undo",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Undo",
+  "rdfs:comment": "An indication that the actor is undoing a previous activity — typically used to retract a Like or Follow.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Undo",
+  "rdfs:seeAlso": [
+    "urn:solid:Like",
+    "urn:solid:Follow",
+    "urn:solid:Delete"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Delete"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. The `as:object` is the prior Activity being reversed (a Like to unlike, a Follow to unfollow). Distinct from `Delete`, which retires a target Object rather than reversing an Activity. The original activity remains in the historical record; Undo signals it no longer applies.",
+  "examples": [
+    {
+      "title": "Alice unlikes a note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/undo-1",
+        "@type": "urn:solid:Undo",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://example.org/likes/789" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Undo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
