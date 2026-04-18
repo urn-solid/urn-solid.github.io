@@ -27,6 +27,13 @@
     "status": "stable",
     "path": "/Announce/"
   },
+  "urn:solid:Application": {
+    "label": "Application",
+    "description": "An ActivityStreams actor representing a software application — a bot, service, or automated client.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Application/"
+  },
   "urn:solid:Article": {
     "label": "Article",
     "description": "An article — a written work, typically published as part of a larger publication.",

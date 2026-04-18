@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Application",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Application",
+  "rdfs:comment": "An ActivityStreams actor representing a software application — a bot, service, or automated client.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Application",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#Service",
+    "http://www.w3.org/ns/prov#SoftwareAgent",
+    "urn:solid:Agent"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Agent"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "One of the AS actor types alongside `as:Person`, `as:Group`, `as:Organization`, `as:Service`. Use for non-human actors that are software (clients, bots, automation). For PROV-grade software-agent attribution, see `prov:SoftwareAgent`.",
+  "examples": [
+    {
+      "title": "A bot as an Application",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/bots/curator",
+        "@type": "urn:solid:Application",
+        "urn:solid:name": "Curator Bot",
+        "urn:solid:inbox": { "@id": "https://example.org/bots/curator/inbox" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Application"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
