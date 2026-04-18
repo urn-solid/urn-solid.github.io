@@ -1,0 +1,45 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:PersonalProfileDocument",
+  "@type": "rdfs:Class",
+  "rdfs:label": "PersonalProfileDocument",
+  "rdfs:comment": "A document that describes a person — typically a FOAF or WebID profile.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/PersonalProfileDocument",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/solid/terms#preferencesFile"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Document`. The document's `foaf:primaryTopic` is the Person it describes. WebID profile documents are typically of this type. The relationship between the document and its subject Person is asymmetric: one document, one primary topic.",
+  "examples": [
+    {
+      "title": "A WebID profile document",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card",
+        "@type": "urn:solid:PersonalProfileDocument",
+        "http://xmlns.com/foaf/0.1/primaryTopic": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/PersonalProfileDocument"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -48,6 +48,13 @@
     "status": "stable",
     "path": "/Person/"
   },
+  "urn:solid:PersonalProfileDocument": {
+    "label": "PersonalProfileDocument",
+    "description": "A document that describes a person — typically a FOAF or WebID profile.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/PersonalProfileDocument/"
+  },
   "urn:solid:Project": {
     "label": "Project",
     "description": "A project — a collaborative undertaking with a goal.",
