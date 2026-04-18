@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Catalog",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Catalog",
+  "rdfs:comment": "A DCAT Catalog — a curated collection of metadata about Datasets and DataServices.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#Catalog",
+  "rdfs:seeAlso": [
+    "urn:solid:Dataset",
+    "urn:solid:DataService",
+    "https://schema.org/DataCatalog"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The container for an open-data portal or research-data repository. Members listed via `dcat:dataset` (datasets) and `dcat:service` (services). Pair with `dcterms:publisher`, `urn:solid:license`. The W3C DCAT 3 spec is the current normative reference.",
+  "examples": [
+    {
+      "title": "A simple catalog",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/data/",
+        "@type": "urn:solid:Catalog",
+        "urn:solid:name": "Wonderland Open Data",
+        "http://www.w3.org/ns/dcat#dataset": [
+          { "@id": "https://example.org/datasets/wonderland-2026" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#Catalog"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

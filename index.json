@@ -139,6 +139,13 @@
     "status": "stable",
     "path": "/Bundle/"
   },
+  "urn:solid:Catalog": {
+    "label": "Catalog",
+    "description": "A DCAT Catalog — a curated collection of metadata about Datasets and DataServices.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Catalog/"
+  },
   "urn:solid:City": {
     "label": "City",
     "description": "A city — a permanent settlement of significant size.",
@@ -215,6 +222,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/CreativeWork/"
+  },
+  "urn:solid:Dataset": {
+    "label": "Dataset",
+    "description": "A DCAT Dataset — a collection of data, published or curated by a single agent and available in one or more representations.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Dataset/"
   },
   "urn:solid:Delegation": {
     "label": "Delegation",
@@ -936,6 +950,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/birthday/"
+  },
+  "urn:solid:broadMatch": {
+    "label": "broadMatch",
+    "description": "A SKOS mapping asserting that a Concept in another scheme is broader than this Concept.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/broadMatch/"
   },
   "urn:solid:broader": {
     "label": "broader",
@@ -1777,6 +1798,13 @@
     "status": "stable",
     "path": "/name/"
   },
+  "urn:solid:narrowMatch": {
+    "label": "narrowMatch",
+    "description": "A SKOS mapping asserting that a Concept in another scheme is narrower than this Concept.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/narrowMatch/"
+  },
   "urn:solid:narrower": {
     "label": "narrower",
     "description": "A narrower (child) SKOS Concept in a hierarchy — the inverse of `broader`.",
@@ -2119,6 +2147,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/to/"
+  },
+  "urn:solid:topConceptOf": {
+    "label": "topConceptOf",
+    "description": "The SKOS ConceptScheme of which the Concept is a top-level entry-point — the inverse of `hasTopConcept`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/topConceptOf/"
   },
   "urn:solid:topic": {
     "label": "topic",

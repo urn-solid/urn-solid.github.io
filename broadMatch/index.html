@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:broadMatch — urn-solid</title>
+<meta name="description" content="A SKOS mapping asserting that a Concept in another scheme is broader than this Concept.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/broadMatch/">
+<link rel="alternate" type="application/ld+json" href="/broadMatch/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:broadMatch",
+  "@type": "rdf:Property",
+  "rdfs:label": "broadMatch",
+  "rdfs:comment": "A SKOS mapping asserting that a Concept in another scheme is broader than this Concept.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#broadMatch",
+  "rdfs:seeAlso": [
+    "urn:solid:narrowMatch",
+    "urn:solid:exactMatch",
+    "urn:solid:broader"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:broader",
+    "urn:solid:narrowMatch"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Cross-scheme version of `urn:solid:broader`. Use across SKOS schemes when you want to say \"the closest broader concept in *that* vocabulary is this one\". Inverse of `urn:solid:narrowMatch`.",
+  "examples": [
+    {
+      "title": "Cross-scheme broader mapping",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/cat-theory",
+        "@type": "urn:solid:Concept",
+        "urn:solid:broadMatch": { "@id": "https://other.example.org/vocab/mathematics" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#broadMatch"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

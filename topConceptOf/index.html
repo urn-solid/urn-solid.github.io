@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:topConceptOf — urn-solid</title>
+<meta name="description" content="The SKOS ConceptScheme of which the Concept is a top-level entry-point — the inverse of `hasTopConcept`.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/topConceptOf/">
+<link rel="alternate" type="application/ld+json" href="/topConceptOf/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:topConceptOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "topConceptOf",
+  "rdfs:comment": "The SKOS ConceptScheme of which the Concept is a top-level entry-point — the inverse of `hasTopConcept`.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#topConceptOf",
+  "rdfs:seeAlso": [
+    "urn:solid:hasTopConcept",
+    "urn:solid:inScheme",
+    "urn:solid:ConceptScheme"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:ConceptScheme",
+  "notToBeConfusedWith": [
+    "urn:solid:hasTopConcept",
+    "urn:solid:inScheme"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Inverse of `urn:solid:hasTopConcept`. Use on the Concept side when you want top-concept membership declared without editing the ConceptScheme. Implies `inScheme` membership for the same scheme.",
+  "examples": [
+    {
+      "title": "Top concept declaring its scheme",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/math",
+        "@type": "urn:solid:Concept",
+        "urn:solid:topConceptOf": { "@id": "https://example.org/vocab/topics" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#topConceptOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

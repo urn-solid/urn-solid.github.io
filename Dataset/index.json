@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Dataset",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Dataset",
+  "rdfs:comment": "A DCAT Dataset — a collection of data, published or curated by a single agent and available in one or more representations.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#Dataset",
+  "rdfs:seeAlso": [
+    "urn:solid:Catalog",
+    "urn:solid:Distribution",
+    "https://schema.org/Dataset"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "DCAT's central class for data publication. Represents the abstract dataset; concrete files/APIs serving its content are `urn:solid:Distribution`s. Pair with `dcterms:title`, `dcterms:description`, `dcterms:publisher`, `urn:solid:keywords`, `dcat:theme`. Schema.org's `schema:Dataset` is the SEO-flavored equivalent.",
+  "examples": [
+    {
+      "title": "A simple dataset",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/wonderland-2026",
+        "@type": "urn:solid:Dataset",
+        "urn:solid:name": "Wonderland Climate Data 2026",
+        "urn:solid:publisher": { "@id": "https://example.org/orgs/wonderland-climate" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

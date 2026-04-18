@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:narrowMatch",
+  "@type": "rdf:Property",
+  "rdfs:label": "narrowMatch",
+  "rdfs:comment": "A SKOS mapping asserting that a Concept in another scheme is narrower than this Concept.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#narrowMatch",
+  "rdfs:seeAlso": [
+    "urn:solid:broadMatch",
+    "urn:solid:exactMatch",
+    "urn:solid:narrower"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:narrower",
+    "urn:solid:broadMatch"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Cross-scheme version of `urn:solid:narrower`. Inverse of `urn:solid:broadMatch`. Use across SKOS schemes when you want to say \"the closest narrower concept in *that* vocabulary is this one\".",
+  "examples": [
+    {
+      "title": "Cross-scheme narrower mapping",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/algebra",
+        "@type": "urn:solid:Concept",
+        "urn:solid:narrowMatch": { "@id": "https://other.example.org/vocab/group-theory" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#narrowMatch"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
