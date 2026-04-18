@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:email",
+  "@type": "rdf:Property",
+  "rdfs:label": "email",
+  "rdfs:comment": "An email address for the subject, as a plain string.",
+  "owl:sameAs": "https://schema.org/email",
+  "rdfs:seeAlso": [
+    "urn:solid:mbox",
+    "urn:solid:hasEmail"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:mbox",
+    "urn:solid:hasEmail"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's simple string-valued email predicate (`\"alice@example.org\"`). Distinct from `urn:solid:mbox` (FOAF, uses a `mailto:` IRI and is inverse-functional) and `urn:solid:hasEmail` (vCard, typically points at a structured vcard:Email). Use whichever matches your data source.",
+  "examples": [
+    {
+      "title": "Person with an email string",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:email": "alice@example.org"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/email"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

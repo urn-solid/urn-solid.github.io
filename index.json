@@ -384,6 +384,13 @@
     "status": "stable",
     "path": "/description/"
   },
+  "urn:solid:email": {
+    "label": "email",
+    "description": "An email address for the subject, as a plain string.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/email/"
+  },
   "urn:solid:familyName": {
     "label": "familyName",
     "description": "The family name (surname) of the person.",
