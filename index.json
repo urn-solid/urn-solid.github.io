@@ -13,6 +13,13 @@
     "status": "stable",
     "path": "/Person/"
   },
+  "urn:solid:homepage": {
+    "label": "homepage",
+    "description": "A homepage for the subject — a top-level page about the agent.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/homepage/"
+  },
   "urn:solid:knows": {
     "label": "knows",
     "description": "A person known by the subject — a directed acquaintance relationship.",
