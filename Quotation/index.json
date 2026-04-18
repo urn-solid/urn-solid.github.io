@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Quotation",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Quotation",
+  "rdfs:comment": "A PROV Derivation that represents a quoted excerpt from another entity, with attribution.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#Quotation",
+  "rdfs:seeAlso": [
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:Revision",
+    "http://www.w3.org/ns/prov#Derivation"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Revision"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `prov:Derivation`. Use when the new entity contains content directly lifted from another (excerpts, citations, screenshots). Distinct from `urn:solid:Revision` (substantive change to the same identity) and `prov:PrimarySource` (first-hand origin attribution).",
+  "examples": [
+    {
+      "title": "A quote in a review",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/reviews/widget-1/quote",
+        "@type": "urn:solid:Quotation",
+        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/reviews/widget-1" },
+        "urn:solid:wasDerivedFrom": { "@id": "https://example.org/products/widget/manual" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#Quotation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

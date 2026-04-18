@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:mbox_sha1sum",
+  "@type": "rdf:Property",
+  "rdfs:label": "mbox_sha1sum",
+  "rdfs:comment": "The SHA-1 hash of the agent's mailbox URI — a privacy-preserving inverse-functional identifier.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/mbox_sha1sum",
+  "rdfs:seeAlso": [
+    "urn:solid:mbox"
+  ],
+  "rdfs:domain": "urn:solid:Agent",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:mbox"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Inverse-functional like `foaf:mbox` but doesn't reveal the actual email address. Compute the SHA-1 of the lowercased `mailto:` URI (e.g. SHA-1 of `\"mailto:alice@example.org\"`). Two agents with the same `mbox_sha1sum` are the same agent. Modern profiles often skip both this and `mbox` for privacy.",
+  "examples": [
+    {
+      "title": "Person identified by mbox hash",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:mbox_sha1sum": "f4dc1c9c54f24d8b2c8b5d1c4d3e8f9a0b1c2d3e"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/mbox_sha1sum"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:sha1",
+  "@type": "rdf:Property",
+  "rdfs:label": "sha1",
+  "rdfs:comment": "The SHA-1 cryptographic hash of the resource's content.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/sha1",
+  "rdfs:seeAlso": [
+    "https://schema.org/sha256"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to record content integrity for files, datasets, or releases. SHA-1 is cryptographically weakened — for new data, prefer SHA-256 (`schema:sha256` or a custom predicate). Value is the lowercase hex digest of the bytes.",
+  "examples": [
+    {
+      "title": "Document with content hash",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://urn-solid.github.io/corpus.jsonl",
+        "@type": "urn:solid:Document",
+        "urn:solid:sha1": "abc1234567890def1234567890abcdef12345678"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/sha1"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -97,6 +97,13 @@
     "status": "stable",
     "path": "/Brand/"
   },
+  "urn:solid:Bundle": {
+    "label": "Bundle",
+    "description": "A named bundle of PROV provenance descriptions — a way to attribute provenance to provenance.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Bundle/"
+  },
   "urn:solid:City": {
     "label": "City",
     "description": "A city — a permanent settlement of significant size.",
@@ -369,6 +376,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Question/"
+  },
+  "urn:solid:Quotation": {
+    "label": "Quotation",
+    "description": "A PROV Derivation that represents a quoted excerpt from another entity, with attribution.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Quotation/"
   },
   "urn:solid:RDFSource": {
     "label": "RDFSource",
@@ -1161,6 +1175,13 @@
     "status": "stable",
     "path": "/mbox/"
   },
+  "urn:solid:mbox_sha1sum": {
+    "label": "mbox_sha1sum",
+    "description": "The SHA-1 hash of the agent's mailbox URI — a privacy-preserving inverse-functional identifier.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/mbox_sha1sum/"
+  },
   "urn:solid:mediaType": {
     "label": "mediaType",
     "description": "The MIME media type of the object — `image/png`, `text/html`, etc.",
@@ -1350,6 +1371,13 @@
     "status": "stable",
     "path": "/rights/"
   },
+  "urn:solid:sha1": {
+    "label": "sha1",
+    "description": "The SHA-1 cryptographic hash of the resource's content.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/sha1/"
+  },
   "urn:solid:sibling": {
     "label": "sibling",
     "description": "A sibling of the person — sharing at least one parent.",
@@ -1384,6 +1412,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/startedAtTime/"
+  },
+  "urn:solid:status": {
+    "label": "status",
+    "description": "A free-form status string for the agent — e.g. \"online\", \"away\", or a custom message.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/status/"
   },
   "urn:solid:storage": {
     "label": "storage",

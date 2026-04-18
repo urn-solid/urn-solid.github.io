@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:status",
+  "@type": "rdf:Property",
+  "rdfs:label": "status",
+  "rdfs:comment": "A free-form status string for the agent — e.g. \"online\", \"away\", or a custom message.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/status",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#summary"
+  ],
+  "rdfs:domain": "urn:solid:Agent",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "FOAF's lightweight presence/status field — IM-style \"away\", \"busy\", or a free-form message (\"writing the registry\"). For ActivityPub-style profile bios, `as:summary` on the actor is more common today.",
+  "examples": [
+    {
+      "title": "Person with a current status",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:status": "deep in the urn-solid registry"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/status"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
