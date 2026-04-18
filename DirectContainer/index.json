@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:DirectContainer",
+  "@type": "rdfs:Class",
+  "rdfs:label": "DirectContainer",
+  "rdfs:comment": "An LDP Container that adds membership triples on a separate `membershipResource` rather than carrying them itself.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#DirectContainer",
+  "rdfs:seeAlso": [
+    "urn:solid:Container",
+    "urn:solid:BasicContainer",
+    "urn:solid:IndirectContainer"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:BasicContainer",
+    "urn:solid:IndirectContainer"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Container`. Use when membership of new resources should be reflected on a *different* resource — e.g. a comments container whose POSTs add triples to the parent article. Carries `ldp:membershipResource` and `ldp:hasMemberRelation` to define the relation. Most Solid pods use `urn:solid:BasicContainer` instead.",
+  "examples": [
+    {
+      "title": "A direct container reflecting members on its parent",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/abc/comments/",
+        "@type": "urn:solid:DirectContainer",
+        "http://www.w3.org/ns/ldp#membershipResource": { "@id": "https://example.org/posts/abc" },
+        "http://www.w3.org/ns/ldp#hasMemberRelation": { "@id": "https://schema.org/comment" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#DirectContainer"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

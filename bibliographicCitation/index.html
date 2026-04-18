@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:bibliographicCitation — urn-solid</title>
+<meta name="description" content="A bibliographic reference for the resource — a formatted citation string.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/bibliographicCitation/">
+<link rel="alternate" type="application/ld+json" href="/bibliographicCitation/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:bibliographicCitation",
+  "@type": "rdf:Property",
+  "rdfs:label": "bibliographicCitation",
+  "rdfs:comment": "A bibliographic reference for the resource — a formatted citation string.",
+  "owl:sameAs": "http://purl.org/dc/terms/bibliographicCitation",
+  "rdfs:seeAlso": [
+    "https://schema.org/citation",
+    "urn:solid:references"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "A formatted citation string as you'd see in a reference list (\"Author, A. (2026). Title. Journal, vol(issue), pages.\"). For machine-actionable citations with structured metadata, prefer linking to a `dcterms:BibliographicResource` via `urn:solid:references` instead.",
+  "examples": [
+    {
+      "title": "Article with a citation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/papers/42",
+        "@type": "urn:solid:Document",
+        "urn:solid:bibliographicCitation": "Liddell, A. (2026). On Wonderlands. Solid Journal, 1(1), 1-10."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/bibliographicCitation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

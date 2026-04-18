@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:IndirectContainer",
+  "@type": "rdfs:Class",
+  "rdfs:label": "IndirectContainer",
+  "rdfs:comment": "An LDP Container whose membership triples reference an indirected member resource via `insertedContentRelation`.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#IndirectContainer",
+  "rdfs:seeAlso": [
+    "urn:solid:Container",
+    "urn:solid:BasicContainer",
+    "urn:solid:DirectContainer"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:DirectContainer",
+    "urn:solid:BasicContainer"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Container`. The most flexible LDP container type — when a new resource is POSTed, the server uses `ldp:insertedContentRelation` to extract the value to use as the actual membership target. Useful for federated data where the resource POSTed isn't itself the subject of the membership triple. Rarely needed; most Solid pods use `urn:solid:BasicContainer`.",
+  "examples": [
+    {
+      "title": "An indirect container",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/likes/",
+        "@type": "urn:solid:IndirectContainer",
+        "http://www.w3.org/ns/ldp#membershipResource": { "@id": "https://example.org/posts/abc" },
+        "http://www.w3.org/ns/ldp#hasMemberRelation": { "@id": "https://schema.org/likedBy" },
+        "http://www.w3.org/ns/ldp#insertedContentRelation": { "@id": "https://www.w3.org/ns/activitystreams#actor" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#IndirectContainer"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

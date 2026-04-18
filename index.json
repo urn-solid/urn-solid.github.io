@@ -160,6 +160,13 @@
     "status": "stable",
     "path": "/Delete/"
   },
+  "urn:solid:DirectContainer": {
+    "label": "DirectContainer",
+    "description": "An LDP Container that adds membership triples on a separate `membershipResource` rather than carrying them itself.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/DirectContainer/"
+  },
   "urn:solid:Document": {
     "label": "Document",
     "description": "A document of any kind — typically a web resource.",
@@ -215,6 +222,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/ImageObject/"
+  },
+  "urn:solid:IndirectContainer": {
+    "label": "IndirectContainer",
+    "description": "An LDP Container whose membership triples reference an indirected member resource via `insertedContentRelation`.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/IndirectContainer/"
   },
   "urn:solid:JobPosting": {
     "label": "JobPosting",
@@ -482,6 +496,13 @@
     "status": "stable",
     "path": "/abstract/"
   },
+  "urn:solid:accessRights": {
+    "label": "accessRights",
+    "description": "Information about who can access the resource — a free-text or `dcterms:RightsStatement` description of access policy.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/accessRights/"
+  },
   "urn:solid:account": {
     "label": "account",
     "description": "An online account held by the subject.",
@@ -600,6 +621,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/bday/"
+  },
+  "urn:solid:bibliographicCitation": {
+    "label": "bibliographicCitation",
+    "description": "A bibliographic reference for the resource — a formatted citation string.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/bibliographicCitation/"
   },
   "urn:solid:birthday": {
     "label": "birthday",
@@ -1216,6 +1244,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/region/"
+  },
+  "urn:solid:relation": {
+    "label": "relation",
+    "description": "A related resource — generic relation when more specific predicates don't apply.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/relation/"
   },
   "urn:solid:replaces": {
     "label": "replaces",

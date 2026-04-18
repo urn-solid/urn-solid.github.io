@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:accessRights",
+  "@type": "rdf:Property",
+  "rdfs:label": "accessRights",
+  "rdfs:comment": "Information about who can access the resource — a free-text or `dcterms:RightsStatement` description of access policy.",
+  "owl:sameAs": "http://purl.org/dc/terms/accessRights",
+  "rdfs:seeAlso": [
+    "urn:solid:rights",
+    "urn:solid:license"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:rights",
+    "urn:solid:license"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Distinct from `urn:solid:rights` (general copyright/IP) and `urn:solid:license` (legal permissions): `accessRights` is specifically about WHO can access (members-only, embargoed, public, restricted to authenticated users). For Solid pod access control specifically, use the WAC vocabulary (`acl:`).",
+  "examples": [
+    {
+      "title": "Document with restricted access",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/2026-Q1",
+        "@type": "urn:solid:Document",
+        "urn:solid:accessRights": "Restricted to members of the engineering team."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/accessRights"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
