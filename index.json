@@ -384,6 +384,13 @@
     "status": "stable",
     "path": "/firstName/"
   },
+  "urn:solid:fn": {
+    "label": "fn",
+    "description": "Formatted name — the display name of the subject as a single string.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/fn/"
+  },
   "urn:solid:forClass": {
     "label": "forClass",
     "description": "The RDF class that a TypeRegistration is for — what type of resources live at the registered location.",

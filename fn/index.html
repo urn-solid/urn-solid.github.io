@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:fn — urn-solid</title>
+<meta name="description" content="Formatted name — the display name of the subject as a single string.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/fn/">
+<link rel="alternate" type="application/ld+json" href="/fn/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:fn",
+  "@type": "rdf:Property",
+  "rdfs:label": "fn",
+  "rdfs:comment": "Formatted name — the display name of the subject as a single string.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#fn",
+  "rdfs:seeAlso": [
+    "urn:solid:name",
+    "https://schema.org/name"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:name"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's canonical display-name property — carries the full formatted form (\"Alice Liddell\"), not the structured given/family fields. `urn:solid:name` is FOAF's equivalent; prefer it for non-vCard data. For structured names, use `urn:solid:givenName` + `urn:solid:familyName`.",
+  "examples": [
+    {
+      "title": "vCard with a formatted name",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "http://www.w3.org/2006/vcard/ns#VCard",
+        "urn:solid:fn": "Alice Liddell"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#fn"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
