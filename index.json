@@ -335,6 +335,13 @@
     "status": "stable",
     "path": "/firstName/"
   },
+  "urn:solid:forClass": {
+    "label": "forClass",
+    "description": "The RDF class that a TypeRegistration is for — what type of resources live at the registered location.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/forClass/"
+  },
   "urn:solid:format": {
     "label": "format",
     "description": "The file format, physical medium, or dimensions of the resource.",

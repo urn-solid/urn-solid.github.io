@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:forClass",
+  "@type": "rdf:Property",
+  "rdfs:label": "forClass",
+  "rdfs:comment": "The RDF class that a TypeRegistration is for — what type of resources live at the registered location.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#forClass",
+  "rdfs:seeAlso": [
+    "urn:solid:TypeRegistration",
+    "urn:solid:TypeIndex"
+  ],
+  "rdfs:domain": "urn:solid:TypeRegistration",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The discriminator for TypeIndex lookups: when an app wants to know \"where do this user's photos live?\", it scans the TypeIndex for a registration whose `forClass` matches the relevant class IRI (e.g. `foaf:Image`).",
+  "examples": [
+    {
+      "title": "Registration matched by forClass",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/settings/publicTypeIndex.ttl#photos",
+        "@type": "urn:solid:TypeRegistration",
+        "urn:solid:forClass": { "@id": "http://xmlns.com/foaf/0.1/Image" },
+        "http://www.w3.org/ns/solid/terms#instanceContainer": { "@id": "https://alice.example.org/photos/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#forClass"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
