@@ -223,6 +223,13 @@
     "status": "stable",
     "path": "/isPrimaryTopicOf/"
   },
+  "urn:solid:issued": {
+    "label": "issued",
+    "description": "The date the resource was formally issued or published.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/issued/"
+  },
   "urn:solid:jabberID": {
     "label": "jabberID",
     "description": "A Jabber/XMPP identifier for the Agent.",

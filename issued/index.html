@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:issued — urn-solid</title>
+<meta name="description" content="The date the resource was formally issued or published.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/issued/">
+<link rel="alternate" type="application/ld+json" href="/issued/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:issued",
+  "@type": "rdf:Property",
+  "rdfs:label": "issued",
+  "rdfs:comment": "The date the resource was formally issued or published.",
+  "owl:sameAs": "http://purl.org/dc/terms/issued",
+  "rdfs:seeAlso": [
+    "https://schema.org/datePublished",
+    "urn:solid:created"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "notToBeConfusedWith": [
+    "urn:solid:created",
+    "urn:solid:date"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Distinct from `urn:solid:created` (which is when the resource itself was made) — `issued` is when it was made publicly available. For an article drafted in private and published later, the two diverge. ISO 8601 values.",
+  "examples": [
+    {
+      "title": "Specification with a publication date",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/specs/v1",
+        "@type": "urn:solid:Document",
+        "urn:solid:created": "2026-03-12",
+        "urn:solid:issued": "2026-04-18"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/issued"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
