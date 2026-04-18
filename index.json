@@ -132,6 +132,13 @@
     "status": "stable",
     "path": "/currentProject/"
   },
+  "urn:solid:date": {
+    "label": "date",
+    "description": "A point or period of time associated with the resource — generic when more specific date predicates don't apply.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/date/"
+  },
   "urn:solid:depiction": {
     "label": "depiction",
     "description": "An image that depicts the subject.",
