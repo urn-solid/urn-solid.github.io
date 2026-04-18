@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Review",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Review",
+  "rdfs:comment": "A review of an item — typically a Product or CreativeWork — by an author.",
+  "owl:sameAs": "https://schema.org/Review",
+  "rdfs:seeAlso": [
+    "urn:solid:Rating",
+    "urn:solid:Product"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Rating"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:CreativeWork`. A Review carries an opinion (`schema:reviewBody`), a `urn:solid:Rating`, and a pointer to the reviewed item via `schema:itemReviewed`. Distinct from `Rating`, which is the bare numeric/star value without prose.",
+  "examples": [
+    {
+      "title": "A product review",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/reviews/widget-1",
+        "@type": "urn:solid:Review",
+        "https://schema.org/itemReviewed": { "@id": "https://example.org/products/widget" },
+        "urn:solid:author": { "@id": "https://example.org/alice#me" },
+        "https://schema.org/reviewRating": { "@type": "urn:solid:Rating", "https://schema.org/ratingValue": "5" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Review"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

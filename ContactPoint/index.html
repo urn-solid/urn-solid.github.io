@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:ContactPoint — urn-solid</title>
+<meta name="description" content="A contact point for a person or organization — an aggregation of reachable contact channels for a specific purpose or department.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/ContactPoint/">
+<link rel="alternate" type="application/ld+json" href="/ContactPoint/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:ContactPoint",
+  "@type": "rdfs:Class",
+  "rdfs:label": "ContactPoint",
+  "rdfs:comment": "A contact point for a person or organization — an aggregation of reachable contact channels for a specific purpose or department.",
+  "owl:sameAs": "https://schema.org/ContactPoint",
+  "rdfs:seeAlso": [
+    "urn:solid:hasEmail",
+    "urn:solid:hasTelephone",
+    "urn:solid:hasAddress"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to bundle multiple contact channels (email + phone + hours + language) under a single descriptive label like \"customer support\" or \"press inquiries\". For a vCard-style structured contact, the equivalent base is `vcard:VCard`.",
+  "examples": [
+    {
+      "title": "Customer support contact point",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/acme/contact/support",
+        "@type": "urn:solid:ContactPoint",
+        "https://schema.org/contactType": "customer support",
+        "https://schema.org/email": "support@example.org",
+        "https://schema.org/telephone": "+1-555-0123"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/ContactPoint"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

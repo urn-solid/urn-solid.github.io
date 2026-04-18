@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Product",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Product",
+  "rdfs:comment": "Anything that is made available for sale — a physical good, a service, or a digital item.",
+  "owl:sameAs": "https://schema.org/Product",
+  "rdfs:seeAlso": [
+    "https://schema.org/Offer",
+    "https://schema.org/Service"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's commerce-anchor class. Pair with `urn:solid:Offer` (the price/availability) and `urn:solid:Review` / `urn:solid:Rating`. For non-commercial creative works, `urn:solid:CreativeWork` is the better base; Product specifically implies a market context.",
+  "examples": [
+    {
+      "title": "A simple product",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/products/widget",
+        "@type": "urn:solid:Product",
+        "urn:solid:name": "Wonderland Widget",
+        "urn:solid:description": "A small useful thing."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Product"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

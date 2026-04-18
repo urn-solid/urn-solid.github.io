@@ -76,6 +76,13 @@
     "status": "stable",
     "path": "/Comment/"
   },
+  "urn:solid:ContactPoint": {
+    "label": "ContactPoint",
+    "description": "A contact point for a person or organization — an aggregation of reachable contact channels for a specific purpose or department.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/ContactPoint/"
+  },
   "urn:solid:Container": {
     "label": "Container",
     "description": "A Linked Data Platform Container — an LDP resource that contains other resources, the LDP analogue of a directory.",
@@ -174,6 +181,13 @@
     "status": "stable",
     "path": "/Object/"
   },
+  "urn:solid:Offer": {
+    "label": "Offer",
+    "description": "An offer to transfer some rights to an item or to provide a service — typically a price for a Product.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Offer/"
+  },
   "urn:solid:OnlineAccount": {
     "label": "OnlineAccount",
     "description": "An account held by an Agent on some online service.",
@@ -230,6 +244,13 @@
     "status": "stable",
     "path": "/PostalAddress/"
   },
+  "urn:solid:Product": {
+    "label": "Product",
+    "description": "Anything that is made available for sale — a physical good, a service, or a digital item.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Product/"
+  },
   "urn:solid:Project": {
     "label": "Project",
     "description": "A project — a collaborative undertaking with a goal.",
@@ -244,6 +265,13 @@
     "status": "stable",
     "path": "/Question/"
   },
+  "urn:solid:Rating": {
+    "label": "Rating",
+    "description": "A numeric or symbolic value expressing assessment quality — typically a star rating.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Rating/"
+  },
   "urn:solid:Reject": {
     "label": "Reject",
     "description": "An indication that the actor rejects the object — typically a Follow request or invitation.",
@@ -257,6 +285,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Remove/"
+  },
+  "urn:solid:Review": {
+    "label": "Review",
+    "description": "A review of an item — typically a Product or CreativeWork — by an author.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Review/"
   },
   "urn:solid:Service": {
     "label": "Service",

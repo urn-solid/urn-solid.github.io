@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Rating",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Rating",
+  "rdfs:comment": "A numeric or symbolic value expressing assessment quality — typically a star rating.",
+  "owl:sameAs": "https://schema.org/Rating",
+  "rdfs:seeAlso": [
+    "urn:solid:Review",
+    "https://schema.org/AggregateRating"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Review"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Bare assessment with `schema:ratingValue` (the score), `schema:bestRating` and `schema:worstRating` (the scale). For an aggregate (\"4.3 stars from 217 reviews\") use `schema:AggregateRating`. Embed inside a `urn:solid:Review` via `schema:reviewRating`.",
+  "examples": [
+    {
+      "title": "A 5-star rating",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/reviews/widget-1#rating",
+        "@type": "urn:solid:Rating",
+        "https://schema.org/ratingValue": "5",
+        "https://schema.org/bestRating": "5",
+        "https://schema.org/worstRating": "1"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Rating"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

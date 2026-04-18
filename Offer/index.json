@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Offer",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Offer",
+  "rdfs:comment": "An offer to transfer some rights to an item or to provide a service — typically a price for a Product.",
+  "owl:sameAs": "https://schema.org/Offer",
+  "rdfs:seeAlso": [
+    "urn:solid:Product",
+    "https://schema.org/PriceSpecification"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Product"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Distinct from `urn:solid:Product`: an Offer is the *availability and terms* of obtaining the Product (price, currency, seller, validity window). One Product can have many Offers (different sellers, different prices, sales). Pair via `schema:itemOffered`.",
+  "examples": [
+    {
+      "title": "Offer for a product",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/products/widget/offer-1",
+        "@type": "urn:solid:Offer",
+        "https://schema.org/itemOffered": { "@id": "https://example.org/products/widget" },
+        "https://schema.org/price": "9.99",
+        "https://schema.org/priceCurrency": "USD"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Offer"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
