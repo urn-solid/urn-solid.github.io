@@ -6,6 +6,13 @@
     "status": "stable",
     "path": "/Agent/"
   },
+  "urn:solid:OnlineAccount": {
+    "label": "OnlineAccount",
+    "description": "An account held by an Agent on some online service.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/OnlineAccount/"
+  },
   "urn:solid:Person": {
     "label": "Person",
     "description": "A human being.",

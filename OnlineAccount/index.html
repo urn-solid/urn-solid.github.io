@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:OnlineAccount — urn-solid</title>
+<meta name="description" content="An account held by an Agent on some online service.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/OnlineAccount/">
+<link rel="alternate" type="application/ld+json" href="/OnlineAccount/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:OnlineAccount",
+  "@type": "rdfs:Class",
+  "rdfs:label": "OnlineAccount",
+  "rdfs:comment": "An account held by an Agent on some online service.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/OnlineAccount",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/solid/terms#Account"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use as the value type of `urn:solid:account`. Typically described with `foaf:accountName` (the username) and `foaf:accountServiceHomepage` (the service's homepage). For a Solid pod account specifically, see `solid:Account`.",
+  "examples": [
+    {
+      "title": "An OnlineAccount on a service",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice/accounts/github",
+        "@type": "urn:solid:OnlineAccount",
+        "http://xmlns.com/foaf/0.1/accountName": "alice",
+        "http://xmlns.com/foaf/0.1/accountServiceHomepage": { "@id": "https://github.com/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/OnlineAccount"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
