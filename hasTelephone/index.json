@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasTelephone",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasTelephone",
+  "rdfs:comment": "A telephone number associated with the subject — typically a `tel:` IRI.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasTelephone",
+  "rdfs:seeAlso": [
+    "https://schema.org/telephone",
+    "http://xmlns.com/foaf/0.1/phone"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use a `tel:` URI (e.g. `tel:+44-20-1234-5678`) for the value, not a bare string. Repeat for multiple numbers. For typed numbers (work/home/mobile), the value can be a `vcard:Tel` resource carrying `vcard:hasValue` and `rdf:type` of one of the work/home/cell sub-types.",
+  "examples": [
+    {
+      "title": "Person with a phone",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:hasTelephone": { "@id": "tel:+44-20-1234-5678" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasTelephone"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

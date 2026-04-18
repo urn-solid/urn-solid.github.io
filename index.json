@@ -216,6 +216,13 @@
     "status": "stable",
     "path": "/hasPart/"
   },
+  "urn:solid:hasTelephone": {
+    "label": "hasTelephone",
+    "description": "A telephone number associated with the subject — typically a `tel:` IRI.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasTelephone/"
+  },
   "urn:solid:homepage": {
     "label": "homepage",
     "description": "A homepage for the subject — a top-level page about the agent.",
