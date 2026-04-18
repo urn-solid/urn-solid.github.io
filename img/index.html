@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:img — urn-solid</title>
+<meta name="description" content="An image that represents the person — typically a headshot or portrait.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/img/">
+<link rel="alternate" type="application/ld+json" href="/img/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:img",
+  "@type": "rdf:Property",
+  "rdfs:label": "img",
+  "rdfs:comment": "An image that represents the person — typically a headshot or portrait.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/img",
+  "rdfs:seeAlso": [
+    "urn:solid:depiction",
+    "http://www.w3.org/2006/vcard/ns#hasPhoto",
+    "https://schema.org/image"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "http://xmlns.com/foaf/0.1/Image",
+  "notToBeConfusedWith": [
+    "urn:solid:depiction"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "A sub-property of `foaf:depiction` specifically for a portrait of a person. Prefer `urn:solid:depiction` when the subject is any kind of thing or the image is not a portrait. A person may have at most one primary `img` but multiple `depiction` values.",
+  "examples": [
+    {
+      "title": "Person with a portrait",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:img": { "@id": "https://example.org/alice/portrait.jpg" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/img"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
