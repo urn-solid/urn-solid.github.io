@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:bday",
+  "@type": "rdf:Property",
+  "rdfs:label": "bday",
+  "rdfs:comment": "The full date of birth of the subject (year-month-day).",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#bday",
+  "rdfs:seeAlso": [
+    "urn:solid:birthday",
+    "https://schema.org/birthDate"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#date",
+  "notToBeConfusedWith": [
+    "urn:solid:birthday"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's full birth date — `xsd:date` with year (\"1990-03-14\"), distinct from FOAF's `urn:solid:birthday` which is just `mm-dd` (no year). Use `bday` when you need the actual year for age calculation; use `birthday` for anniversary semantics without revealing age.",
+  "examples": [
+    {
+      "title": "vCard with a full birth date",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:fn": "Alice Liddell",
+        "urn:solid:bday": "1990-03-14"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#bday"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

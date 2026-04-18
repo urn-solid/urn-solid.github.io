@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:hasMember — urn-solid</title>
+<meta name="description" content="A member of the vCard Group.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/hasMember/">
+<link rel="alternate" type="application/ld+json" href="/hasMember/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasMember",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasMember",
+  "rdfs:comment": "A member of the vCard Group.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasMember",
+  "rdfs:seeAlso": [
+    "urn:solid:member",
+    "https://schema.org/member"
+  ],
+  "rdfs:domain": "http://www.w3.org/2006/vcard/ns#Group",
+  "notToBeConfusedWith": [
+    "urn:solid:member"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's group-membership predicate. Distinct from `urn:solid:member` (FOAF) only by namespace; functionally the same. Use `hasMember` in vCard-flavored data, `member` in FOAF-flavored data. Repeat for multiple members.",
+  "examples": [
+    {
+      "title": "vCard Group with members",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/groups/admins-vcard",
+        "@type": "http://www.w3.org/2006/vcard/ns#Group",
+        "urn:solid:hasMember": [
+          { "@id": "https://example.org/cards/alice" },
+          { "@id": "https://example.org/cards/bob" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasMember"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

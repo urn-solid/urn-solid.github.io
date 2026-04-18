@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasNickname",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasNickname",
+  "rdfs:comment": "A nickname for the subject.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasNickname",
+  "rdfs:seeAlso": [
+    "urn:solid:nick",
+    "https://schema.org/alternateName"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:nick"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's nickname predicate — the structured equivalent of FOAF's `urn:solid:nick`. Pick `hasNickname` in vCard-flavored data, `nick` in FOAF-flavored data. Repeat for multiple nicknames.",
+  "examples": [
+    {
+      "title": "vCard with a nickname",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:fn": "Alice Liddell",
+        "urn:solid:hasNickname": "ali"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasNickname"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

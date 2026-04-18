@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:region",
+  "@type": "rdf:Property",
+  "rdfs:label": "region",
+  "rdfs:comment": "The region (state, province, prefecture) of an Address.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#region",
+  "rdfs:seeAlso": [
+    "https://schema.org/addressRegion"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's sub-national administrative region — US states, UK counties, Indian states, Japanese prefectures. Often a 2-letter code (\"CA\", \"NY\") for US data. Schema.org equivalent is `schema:addressRegion`.",
+  "examples": [
+    {
+      "title": "Address with region",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/addresses/sf-office",
+        "@type": "http://www.w3.org/2006/vcard/ns#Address",
+        "urn:solid:locality": "San Francisco",
+        "urn:solid:region": "CA",
+        "urn:solid:country-name": "USA"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#region"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

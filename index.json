@@ -517,6 +517,13 @@
     "status": "stable",
     "path": "/alumniOf/"
   },
+  "urn:solid:anniversary": {
+    "label": "anniversary",
+    "description": "An anniversary date associated with the subject — typically a wedding anniversary or other recurring date.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/anniversary/"
+  },
   "urn:solid:articleBody": {
     "label": "articleBody",
     "description": "The actual body of the article — its full text content.",
@@ -565,6 +572,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/bcc/"
+  },
+  "urn:solid:bday": {
+    "label": "bday",
+    "description": "The full date of birth of the subject (year-month-day).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/bday/"
   },
   "urn:solid:birthday": {
     "label": "birthday",
@@ -817,6 +831,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasGeo/"
+  },
+  "urn:solid:hasMember": {
+    "label": "hasMember",
+    "description": "A member of the vCard Group.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasMember/"
+  },
+  "urn:solid:hasNickname": {
+    "label": "hasNickname",
+    "description": "A nickname for the subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasNickname/"
   },
   "urn:solid:hasPart": {
     "label": "hasPart",
@@ -1146,6 +1174,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/references/"
+  },
+  "urn:solid:region": {
+    "label": "region",
+    "description": "The region (state, province, prefecture) of an Address.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/region/"
   },
   "urn:solid:replaces": {
     "label": "replaces",
