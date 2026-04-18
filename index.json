@@ -734,6 +734,13 @@
     "status": "stable",
     "path": "/topic_interest/"
   },
+  "urn:solid:used": {
+    "label": "used",
+    "description": "An entity used by the activity — an input or dependency that existed before the activity started.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/used/"
+  },
   "urn:solid:wasAttributedTo": {
     "label": "wasAttributedTo",
     "description": "An agent to which the entity is attributed — without claiming the agent performed any specific action.",
