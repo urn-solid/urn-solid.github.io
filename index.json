@@ -34,6 +34,13 @@
     "status": "stable",
     "path": "/Event/"
   },
+  "urn:solid:Follow": {
+    "label": "Follow",
+    "description": "An indication that the actor wants to follow the object — typically another Actor.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Follow/"
+  },
   "urn:solid:Group": {
     "label": "Group",
     "description": "A collection of agents — informal or ad-hoc, not necessarily a formal organization.",
