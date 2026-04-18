@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:PostalAddress",
+  "@type": "rdfs:Class",
+  "rdfs:label": "PostalAddress",
+  "rdfs:comment": "A structured postal address — street, locality, region, postal code, country.",
+  "owl:sameAs": "https://schema.org/PostalAddress",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/2006/vcard/ns#Address"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use for snail-mail addresses with structured fields (`schema:streetAddress`, `schema:addressLocality`, `schema:postalCode`, `schema:addressCountry`). For vCard-flavored data, the equivalent is `vcard:Address`.",
+  "examples": [
+    {
+      "title": "A postal address",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/places/wonderland-hq",
+        "@type": "urn:solid:PostalAddress",
+        "https://schema.org/streetAddress": "1 Wonderland Way",
+        "https://schema.org/addressLocality": "London",
+        "https://schema.org/postalCode": "SW1A 1AA",
+        "https://schema.org/addressCountry": "UK"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/PostalAddress"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

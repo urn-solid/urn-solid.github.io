@@ -62,6 +62,13 @@
     "status": "stable",
     "path": "/Place/"
   },
+  "urn:solid:PostalAddress": {
+    "label": "PostalAddress",
+    "description": "A structured postal address — street, locality, region, postal code, country.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/PostalAddress/"
+  },
   "urn:solid:Project": {
     "label": "Project",
     "description": "A project — a collaborative undertaking with a goal.",
