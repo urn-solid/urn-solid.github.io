@@ -90,6 +90,13 @@
     "status": "stable",
     "path": "/age/"
   },
+  "urn:solid:basedNear": {
+    "label": "basedNear",
+    "description": "A geographic location near where the subject is based.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/basedNear/"
+  },
   "urn:solid:birthday": {
     "label": "birthday",
     "description": "The birthday of the agent — month and day, formatted as mm-dd.",

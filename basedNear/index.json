@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:basedNear",
+  "@type": "rdf:Property",
+  "rdfs:label": "basedNear",
+  "rdfs:comment": "A geographic location near where the subject is based.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/basedNear",
+  "rdfs:seeAlso": [
+    "https://schema.org/location",
+    "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Intentionally fuzzy — \"near\", not \"at\" — so people can share a city or region without revealing a precise address. Value is typically a geo:SpatialThing or `schema:Place`. For a precise postal address, prefer `vcard:hasAddress` or `schema:address`.",
+  "examples": [
+    {
+      "title": "Person based near a city",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:basedNear": { "@id": "https://www.geonames.org/2643743/london.html" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/basedNear"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
