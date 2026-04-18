@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:bcc",
+  "@type": "rdf:Property",
+  "rdfs:label": "bcc",
+  "rdfs:comment": "Blind carbon-copy recipients of the object — recipients hidden from other receivers.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#bcc",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#bto",
+    "urn:solid:cc",
+    "urn:solid:to"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:cc"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Email-style bcc: recipients receive the activity but their addresses MUST be stripped from the object before it's seen by other receivers. Use sparingly — `bcc` semantics are easily mishandled by misbehaving servers, leaking what was meant to be private.",
+  "examples": [
+    {
+      "title": "Note privately delivered alongside public one",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/quiet-mention",
+        "@type": "urn:solid:Note",
+        "urn:solid:content": "Heads-up.",
+        "urn:solid:to": [{ "@id": "https://example.org/alice#me" }],
+        "urn:solid:bcc": [{ "@id": "https://example.org/admin#me" }]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#bcc"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

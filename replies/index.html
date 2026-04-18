@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:replies — urn-solid</title>
+<meta name="description" content="A Collection of objects that are responses to the subject — the reverse of `inReplyTo`.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/replies/">
+<link rel="alternate" type="application/ld+json" href="/replies/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:replies",
+  "@type": "rdf:Property",
+  "rdfs:label": "replies",
+  "rdfs:comment": "A Collection of objects that are responses to the subject — the reverse of `inReplyTo`.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#replies",
+  "rdfs:seeAlso": [
+    "urn:solid:inReplyTo",
+    "urn:solid:Collection"
+  ],
+  "rdfs:range": "urn:solid:Collection",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The inverse of `urn:solid:inReplyTo`. Lives on the parent object and points at a `urn:solid:Collection` (or `OrderedCollection`) of replies. ActivityPub servers compute this by aggregating inbound `inReplyTo` from across the network.",
+  "examples": [
+    {
+      "title": "Note with a replies collection",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/abc",
+        "@type": "urn:solid:Note",
+        "urn:solid:replies": { "@id": "https://example.org/notes/abc/replies" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#replies"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

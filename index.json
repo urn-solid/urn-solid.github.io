@@ -384,12 +384,26 @@
     "status": "stable",
     "path": "/basedNear/"
   },
+  "urn:solid:bcc": {
+    "label": "bcc",
+    "description": "Blind carbon-copy recipients of the object — recipients hidden from other receivers.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/bcc/"
+  },
   "urn:solid:birthday": {
     "label": "birthday",
     "description": "The birthday of the agent — month and day, formatted as mm-dd.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/birthday/"
+  },
+  "urn:solid:bto": {
+    "label": "bto",
+    "description": "Private primary recipients of the object — \"to\" addresses hidden from other receivers.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/bto/"
   },
   "urn:solid:cc": {
     "label": "cc",
@@ -411,6 +425,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/content/"
+  },
+  "urn:solid:context": {
+    "label": "context",
+    "description": "The context within which the object exists or to which it relates — typically a conversation thread.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/context/"
   },
   "urn:solid:contributor": {
     "label": "contributor",
@@ -811,6 +832,13 @@
     "status": "stable",
     "path": "/references/"
   },
+  "urn:solid:replies": {
+    "label": "replies",
+    "description": "A Collection of objects that are responses to the subject — the reverse of `inReplyTo`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/replies/"
+  },
   "urn:solid:rights": {
     "label": "rights",
     "description": "Information about rights held in and over the resource — copyright, IP, access restrictions.",
@@ -887,6 +915,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/topic_interest/"
+  },
+  "urn:solid:updated": {
+    "label": "updated",
+    "description": "The date and time the object was last updated.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/updated/"
   },
   "urn:solid:used": {
     "label": "used",

@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:context",
+  "@type": "rdf:Property",
+  "rdfs:label": "context",
+  "rdfs:comment": "The context within which the object exists or to which it relates — typically a conversation thread.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#context",
+  "rdfs:seeAlso": [
+    "urn:solid:inReplyTo",
+    "urn:solid:replies"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:inReplyTo"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "ActivityPub uses `as:context` to group all messages in one conversation under a shared identifier — every reply in a thread carries the same `context` IRI, regardless of `inReplyTo` chains. Distinct from JSON-LD's `@context` (a syntactic keyword). The value is typically the IRI of the root post or a synthetic conversation resource.",
+  "examples": [
+    {
+      "title": "Reply tagged with conversation context",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/reply-2",
+        "@type": "urn:solid:Note",
+        "urn:solid:inReplyTo": { "@id": "https://example.org/notes/reply-1" },
+        "urn:solid:context": { "@id": "https://example.org/notes/abc" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#context"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
