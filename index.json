@@ -188,6 +188,13 @@
     "status": "stable",
     "path": "/Project/"
   },
+  "urn:solid:Reject": {
+    "label": "Reject",
+    "description": "An indication that the actor rejects the object — typically a Follow request or invitation.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Reject/"
+  },
   "urn:solid:Tombstone": {
     "label": "Tombstone",
     "description": "A marker for an Object that previously existed but has been deleted.",
