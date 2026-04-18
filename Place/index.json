@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Place",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Place",
+  "rdfs:comment": "An entity that has a somewhat fixed physical extension — a city, building, landmark, room.",
+  "owl:sameAs": "https://schema.org/Place",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#Place",
+    "http://www.w3.org/ns/dcat#Location",
+    "http://purl.org/dc/terms/Location"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use for any geographic feature with a roughly stable footprint. Pair with `urn:solid:hasGeo` (or `schema:geo`) for coordinates and `urn:solid:hasAddress` for postal info. For dynamic event locations, use ActivityStreams `as:Place`.",
+  "examples": [
+    {
+      "title": "A landmark",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/places/big-ben",
+        "@type": "urn:solid:Place",
+        "urn:solid:name": "Big Ben",
+        "urn:solid:hasGeo": { "@id": "geo:51.5007,-0.1246" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Place"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

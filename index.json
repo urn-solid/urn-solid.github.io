@@ -55,6 +55,13 @@
     "status": "stable",
     "path": "/PersonalProfileDocument/"
   },
+  "urn:solid:Place": {
+    "label": "Place",
+    "description": "An entity that has a somewhat fixed physical extension — a city, building, landmark, room.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Place/"
+  },
   "urn:solid:Project": {
     "label": "Project",
     "description": "A project — a collaborative undertaking with a goal.",
