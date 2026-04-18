@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:contributor",
+  "@type": "rdf:Property",
+  "rdfs:label": "contributor",
+  "rdfs:comment": "An entity responsible for making contributions to the resource — secondary to the principal creator.",
+  "owl:sameAs": "http://purl.org/dc/terms/contributor",
+  "rdfs:seeAlso": [
+    "https://schema.org/contributor"
+  ],
+  "rdfs:range": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:creator",
+    "urn:solid:publisher"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use for editors, reviewers, translators, co-authors of secondary weight. Repeat for multiple contributors. The principal author goes under `urn:solid:creator` instead. For a richer role-aware contribution model, prefer `prov:wasAttributedTo` paired with a `prov:Role`.",
+  "examples": [
+    {
+      "title": "Document with creator and contributor",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Document",
+        "urn:solid:creator": { "@id": "https://example.org/alice#me" },
+        "urn:solid:contributor": { "@id": "https://example.org/bob#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/contributor"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

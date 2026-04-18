@@ -104,6 +104,13 @@
     "status": "stable",
     "path": "/birthday/"
   },
+  "urn:solid:contributor": {
+    "label": "contributor",
+    "description": "An entity responsible for making contributions to the resource — secondary to the principal creator.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/contributor/"
+  },
   "urn:solid:created": {
     "label": "created",
     "description": "The date the resource was created.",
