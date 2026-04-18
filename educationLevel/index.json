@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:educationLevel",
+  "@type": "rdf:Property",
+  "rdfs:label": "educationLevel",
+  "rdfs:comment": "The general education level the resource targets — primary, secondary, undergraduate, professional, etc.",
+  "owl:sameAs": "http://purl.org/dc/terms/educationLevel",
+  "rdfs:seeAlso": [
+    "https://schema.org/educationalLevel",
+    "urn:solid:audience"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Used in educational-resources metadata to declare what level of learner the resource is suitable for. Value is typically a controlled-vocabulary term (e.g. from a `schema:DefinedTerm` set) or a free-form string when no controlled vocab applies.",
+  "examples": [
+    {
+      "title": "Course material targeting undergraduates",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/courses/jsonld-101",
+        "@type": "urn:solid:Document",
+        "urn:solid:educationLevel": "undergraduate"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/educationLevel"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -258,6 +258,13 @@
     "status": "stable",
     "path": "/Follow/"
   },
+  "urn:solid:Frequency": {
+    "label": "Frequency",
+    "description": "A rate at which something recurs — daily, weekly, monthly, etc.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Frequency/"
+  },
   "urn:solid:GeoCoordinates": {
     "label": "GeoCoordinates",
     "description": "The geographic coordinates of a place — a latitude/longitude pair, optionally with elevation.",
@@ -398,6 +405,13 @@
     "status": "stable",
     "path": "/Organization/"
   },
+  "urn:solid:PeriodOfTime": {
+    "label": "PeriodOfTime",
+    "description": "A named or bounded interval of time — a year, an era, a meeting window, a coverage period.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/PeriodOfTime/"
+  },
   "urn:solid:Person": {
     "label": "Person",
     "description": "A human being.",
@@ -425,6 +439,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Plan/"
+  },
+  "urn:solid:Policy": {
+    "label": "Policy",
+    "description": "A statement of policy applicable to the resource — terms of use, retention rules, access guidelines.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Policy/"
   },
   "urn:solid:PostalAddress": {
     "label": "PostalAddress",
@@ -930,6 +951,13 @@
     "status": "stable",
     "path": "/duration/"
   },
+  "urn:solid:educationLevel": {
+    "label": "educationLevel",
+    "description": "The general education level the resource targets — primary, secondary, undergraduate, professional, etc.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/educationLevel/"
+  },
   "urn:solid:email": {
     "label": "email",
     "description": "An email address for the subject, as a plain string.",
@@ -950,6 +978,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/endedAtTime/"
+  },
+  "urn:solid:extent": {
+    "label": "extent",
+    "description": "The size or duration of the resource — pages, bytes, runtime length.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/extent/"
   },
   "urn:solid:familyName": {
     "label": "familyName",

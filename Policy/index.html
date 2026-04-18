@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Policy — urn-solid</title>
+<meta name="description" content="A statement of policy applicable to the resource — terms of use, retention rules, access guidelines.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Policy/">
+<link rel="alternate" type="application/ld+json" href="/Policy/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Policy",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Policy",
+  "rdfs:comment": "A statement of policy applicable to the resource — terms of use, retention rules, access guidelines.",
+  "owl:sameAs": "http://purl.org/dc/terms/Policy",
+  "rdfs:seeAlso": [
+    "urn:solid:LicenseDocument",
+    "urn:solid:rights"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:LicenseDocument"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Broader than `urn:solid:LicenseDocument` (which is specifically a legal grant of permissions): a Policy can be any normative document — privacy policy, retention policy, code of conduct. For machine-actionable access control on Solid pods, use the WAC vocabulary instead.",
+  "examples": [
+    {
+      "title": "A privacy policy",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/policies/privacy-v3",
+        "@type": "urn:solid:Policy",
+        "urn:solid:name": "Privacy Policy v3"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/Policy"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

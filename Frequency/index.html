@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Frequency — urn-solid</title>
+<meta name="description" content="A rate at which something recurs — daily, weekly, monthly, etc.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Frequency/">
+<link rel="alternate" type="application/ld+json" href="/Frequency/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Frequency",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Frequency",
+  "rdfs:comment": "A rate at which something recurs — daily, weekly, monthly, etc.",
+  "owl:sameAs": "http://purl.org/dc/terms/Frequency",
+  "rdfs:seeAlso": [
+    "https://schema.org/Frequency"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Used to type Frequency values referenced by `dcterms:accrualPeriodicity` (the frequency at which a dataset is updated). Common controlled-vocabulary values come from the EU Publications Office Frequency vocabulary. For ad-hoc use, free-form strings are acceptable.",
+  "examples": [
+    {
+      "title": "A frequency value",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "http://publications.europa.eu/resource/authority/frequency/MONTHLY",
+        "@type": "urn:solid:Frequency",
+        "urn:solid:name": "monthly"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/Frequency"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

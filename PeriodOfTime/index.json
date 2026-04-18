@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:PeriodOfTime",
+  "@type": "rdfs:Class",
+  "rdfs:label": "PeriodOfTime",
+  "rdfs:comment": "A named or bounded interval of time — a year, an era, a meeting window, a coverage period.",
+  "owl:sameAs": "http://purl.org/dc/terms/PeriodOfTime",
+  "rdfs:seeAlso": [
+    "urn:solid:temporal",
+    "https://www.w3.org/TR/owl-time/"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as the value type of `urn:solid:temporal` for richer time-coverage metadata than a plain ISO 8601 interval string. For full temporal logic with intervals, instants, and Allen relations, use the OWL-Time vocabulary instead.",
+  "examples": [
+    {
+      "title": "A named period of time",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/periods/q1-2026",
+        "@type": "urn:solid:PeriodOfTime",
+        "urn:solid:name": "Q1 2026",
+        "urn:solid:startTime": "2026-01-01T00:00:00Z",
+        "urn:solid:endTime": "2026-03-31T23:59:59Z"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/PeriodOfTime"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
