@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Event — urn-solid</title>
+<meta name="description" content="An event happening at a certain time and (often) location.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Event/">
+<link rel="alternate" type="application/ld+json" href="/Event/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Event",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Event",
+  "rdfs:comment": "An event happening at a certain time and (often) location.",
+  "owl:sameAs": "https://schema.org/Event",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#Event",
+    "http://www.w3.org/2002/12/cal/ical#Vevent"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use for scheduled occurrences — meetings, conferences, releases, performances. Pair with `schema:startDate`, `schema:endDate`, `schema:location`. For ActivityStreams-style social events (with attendees as actors), `as:Event` carries actor-friendly semantics.",
+  "examples": [
+    {
+      "title": "A simple event",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/events/launch",
+        "@type": "urn:solid:Event",
+        "urn:solid:name": "urn-solid launch",
+        "https://schema.org/startDate": "2026-04-18T18:00:00Z",
+        "https://schema.org/location": { "@id": "https://example.org/places/wonderland-hq" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Event"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

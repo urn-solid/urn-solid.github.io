@@ -20,6 +20,13 @@
     "status": "stable",
     "path": "/Document/"
   },
+  "urn:solid:Event": {
+    "label": "Event",
+    "description": "An event happening at a certain time and (often) location.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Event/"
+  },
   "urn:solid:Group": {
     "label": "Group",
     "description": "A collection of agents — informal or ad-hoc, not necessarily a formal organization.",
