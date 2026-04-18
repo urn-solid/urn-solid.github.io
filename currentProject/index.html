@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:currentProject — urn-solid</title>
+<meta name="description" content="A project the person is currently active on.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/currentProject/">
+<link rel="alternate" type="application/ld+json" href="/currentProject/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:currentProject",
+  "@type": "rdf:Property",
+  "rdfs:label": "currentProject",
+  "rdfs:comment": "A project the person is currently active on.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/currentProject",
+  "rdfs:seeAlso": [
+    "http://xmlns.com/foaf/0.1/pastProject"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Repeat to list multiple active projects. Move to `foaf:pastProject` when the person stops being involved. The value can be any resource — typically a `urn:solid:Project` or a `urn:solid:Document` describing the project.",
+  "examples": [
+    {
+      "title": "Person actively working on a project",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:currentProject": { "@id": "https://example.org/projects/urn-solid" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/currentProject"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -97,6 +97,13 @@
     "status": "stable",
     "path": "/birthday/"
   },
+  "urn:solid:currentProject": {
+    "label": "currentProject",
+    "description": "A project the person is currently active on.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/currentProject/"
+  },
   "urn:solid:depiction": {
     "label": "depiction",
     "description": "An image that depicts the subject.",
