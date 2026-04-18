@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:instanceContainer",
+  "@type": "rdf:Property",
+  "rdfs:label": "instanceContainer",
+  "rdfs:comment": "A Container holding instances of the class declared by a TypeRegistration.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#instanceContainer",
+  "rdfs:seeAlso": [
+    "urn:solid:instance",
+    "urn:solid:TypeRegistration"
+  ],
+  "rdfs:domain": "urn:solid:TypeRegistration",
+  "rdfs:range": "urn:solid:Container",
+  "notToBeConfusedWith": [
+    "urn:solid:instance"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use when the user's data of a given type lives in a directory that may hold many resources (photos in `/photos/`, notes in `/notes/`). Distinct from `urn:solid:instance`, which points at a single resource. A TypeRegistration uses one or the other, not both.",
+  "examples": [
+    {
+      "title": "Registration pointing at a container",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/settings/publicTypeIndex.ttl#photos",
+        "@type": "urn:solid:TypeRegistration",
+        "urn:solid:forClass": { "@id": "http://xmlns.com/foaf/0.1/Image" },
+        "urn:solid:instanceContainer": { "@id": "https://alice.example.org/photos/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#instanceContainer"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -811,6 +811,13 @@
     "status": "stable",
     "path": "/articleBody/"
   },
+  "urn:solid:atLocation": {
+    "label": "atLocation",
+    "description": "The Location at which an Activity, Entity, or Agent occurred or was situated.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/atLocation/"
+  },
   "urn:solid:atTime": {
     "label": "atTime",
     "description": "The time at which an InstantaneousEvent occurred — for PROV Generation, Usage, Invalidation, etc.",
@@ -1147,6 +1154,13 @@
     "status": "stable",
     "path": "/hadActivity/"
   },
+  "urn:solid:hadMember": {
+    "label": "hadMember",
+    "description": "An entity that was a member of a PROV Collection.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hadMember/"
+  },
   "urn:solid:hadPlan": {
     "label": "hadPlan",
     "description": "The Plan that an Activity followed — used inside a qualified PROV Association.",
@@ -1364,12 +1378,26 @@
     "status": "stable",
     "path": "/instance/"
   },
+  "urn:solid:instanceContainer": {
+    "label": "instanceContainer",
+    "description": "A Container holding instances of the class declared by a TypeRegistration.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/instanceContainer/"
+  },
   "urn:solid:interest": {
     "label": "interest",
     "description": "A page about a topic of interest to the agent.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/interest/"
+  },
+  "urn:solid:invalidatedAtTime": {
+    "label": "invalidatedAtTime",
+    "description": "The time at which an Entity ceased to exist.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/invalidatedAtTime/"
   },
   "urn:solid:isFormatOf": {
     "label": "isFormatOf",
@@ -1517,6 +1545,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/loginEndpoint/"
+  },
+  "urn:solid:logoutEndpoint": {
+    "label": "logoutEndpoint",
+    "description": "The logout endpoint URL for a Solid OIDC provider.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/logoutEndpoint/"
   },
   "urn:solid:longitude": {
     "label": "longitude",

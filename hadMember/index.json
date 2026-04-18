@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hadMember",
+  "@type": "rdf:Property",
+  "rdfs:label": "hadMember",
+  "rdfs:comment": "An entity that was a member of a PROV Collection.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#hadMember",
+  "rdfs:seeAlso": [
+    "urn:solid:member",
+    "urn:solid:hasMember",
+    "urn:solid:contains"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:member",
+    "urn:solid:hasMember"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "PROV's collection-membership predicate (`prov:Collection` is distinct from `as:Collection` and `ldp:Container`). Use only in PROV-flavored contexts; for FOAF Group membership use `urn:solid:member`, for vCard Group use `urn:solid:hasMember`, for LDP containers use `urn:solid:contains`.",
+  "examples": [
+    {
+      "title": "PROV Collection with members",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/2026-batch",
+        "@type": "http://www.w3.org/ns/prov#Collection",
+        "urn:solid:hadMember": [
+          { "@id": "https://example.org/datasets/2026-Q1" },
+          { "@id": "https://example.org/datasets/2026-Q2" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#hadMember"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:logoutEndpoint — urn-solid</title>
+<meta name="description" content="The logout endpoint URL for a Solid OIDC provider.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/logoutEndpoint/">
+<link rel="alternate" type="application/ld+json" href="/logoutEndpoint/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:logoutEndpoint",
+  "@type": "rdf:Property",
+  "rdfs:label": "logoutEndpoint",
+  "rdfs:comment": "The logout endpoint URL for a Solid OIDC provider.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#logoutEndpoint",
+  "rdfs:seeAlso": [
+    "urn:solid:loginEndpoint",
+    "urn:solid:oidcIssuer"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:loginEndpoint"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Counterpart to `urn:solid:loginEndpoint`. Advertised by a Solid OIDC provider as the URL where users can sign out. Most modern Solid OIDC implementations expose this via OIDC discovery (`/.well-known/openid-configuration`'s `end_session_endpoint`) rather than via this predicate.",
+  "examples": [
+    {
+      "title": "OIDC issuer with login and logout endpoints",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://login.example.org/",
+        "urn:solid:loginEndpoint": { "@id": "https://login.example.org/login" },
+        "urn:solid:logoutEndpoint": { "@id": "https://login.example.org/logout" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#logoutEndpoint"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:atLocation",
+  "@type": "rdf:Property",
+  "rdfs:label": "atLocation",
+  "rdfs:comment": "The Location at which an Activity, Entity, or Agent occurred or was situated.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#atLocation",
+  "rdfs:seeAlso": [
+    "urn:solid:location",
+    "urn:solid:Place"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:location"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "PROV's location-stamp predicate. Used inside qualified PROV relations (e.g. `prov:Generation`, `prov:Usage`) or directly on Activities/Agents. The value is typically a `prov:Location` (PROV's general location class) or a `urn:solid:Place`. For schema.org-flavored data, prefer `urn:solid:location`.",
+  "examples": [
+    {
+      "title": "Activity tagged with a location",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/builds/2026-04-18-1",
+        "@type": "urn:solid:Activity",
+        "urn:solid:atLocation": { "@id": "https://example.org/places/datacenter-eu1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#atLocation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
