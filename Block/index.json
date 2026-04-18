@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Block",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Block",
+  "rdfs:comment": "An indication that the actor is blocking the object — typically another actor.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Block",
+  "rdfs:seeAlso": [
+    "urn:solid:Reject",
+    "urn:solid:Undo"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. The `as:object` is the actor being blocked. By ActivityPub convention, Block activities should NOT be delivered to the blocked actor — receivers process them locally to filter out interactions. To unblock, send an `as:Undo` of the Block.",
+  "examples": [
+    {
+      "title": "Alice blocks a spammer",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/block-1",
+        "@type": "urn:solid:Block",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://spam.example/spammer#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Block"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

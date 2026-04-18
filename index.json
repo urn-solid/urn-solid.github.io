@@ -41,6 +41,13 @@
     "status": "stable",
     "path": "/BasicContainer/"
   },
+  "urn:solid:Block": {
+    "label": "Block",
+    "description": "An indication that the actor is blocking the object — typically another actor.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Block/"
+  },
   "urn:solid:Collection": {
     "label": "Collection",
     "description": "An unordered collection of objects.",
