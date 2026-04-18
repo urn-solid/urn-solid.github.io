@@ -48,6 +48,13 @@
     "status": "stable",
     "path": "/Person/"
   },
+  "urn:solid:Project": {
+    "label": "Project",
+    "description": "A project — a collaborative undertaking with a goal.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Project/"
+  },
   "urn:solid:account": {
     "label": "account",
     "description": "An online account held by the subject.",
