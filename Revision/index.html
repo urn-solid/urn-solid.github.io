@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Revision — urn-solid</title>
+<meta name="description" content="A PROV Derivation that represents a revised version of an entity — a substantive change without breaking identity continuity.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Revision/">
+<link rel="alternate" type="application/ld+json" href="/Revision/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Revision",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Revision",
+  "rdfs:comment": "A PROV Derivation that represents a revised version of an entity — a substantive change without breaking identity continuity.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#Revision",
+  "rdfs:seeAlso": [
+    "urn:solid:wasDerivedFrom",
+    "http://www.w3.org/ns/prov#Quotation",
+    "http://www.w3.org/ns/prov#PrimarySource"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `prov:Derivation`. Use to type a derivation specifically as a revision — a v2 of a spec, a corrected dataset, an edited document. Distinct from `prov:Quotation` (excerpting) and `prov:PrimarySource` (original-source attribution).",
+  "examples": [
+    {
+      "title": "Revised spec",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/specs/v2/derivation",
+        "@type": "urn:solid:Revision",
+        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/specs/v2" },
+        "http://www.w3.org/ns/prov#hadGeneration": { "@id": "https://example.org/builds/v2-publish" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#Revision"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

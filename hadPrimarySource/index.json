@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hadPrimarySource",
+  "@type": "rdf:Property",
+  "rdfs:label": "hadPrimarySource",
+  "rdfs:comment": "An entity that is the primary source — the original first-hand source — for the subject entity.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#hadPrimarySource",
+  "rdfs:seeAlso": [
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:source"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Entity",
+  "notToBeConfusedWith": [
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:source"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "PROV's primary-source predicate, a specialization of `prov:wasDerivedFrom`. \"Primary source\" means original/first-hand — the eyewitness account, the raw measurement, the canonical document. For derivations more generally (translations, summaries, transformed datasets), `urn:solid:wasDerivedFrom` is broader.",
+  "examples": [
+    {
+      "title": "News article with a primary source",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/news/leak-summary",
+        "@type": "urn:solid:Entity",
+        "urn:solid:hadPrimarySource": { "@id": "https://example.org/leaks/raw-document" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#hadPrimarySource"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

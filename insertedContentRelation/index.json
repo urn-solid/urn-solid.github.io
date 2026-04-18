@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:insertedContentRelation",
+  "@type": "rdf:Property",
+  "rdfs:label": "insertedContentRelation",
+  "rdfs:comment": "On an IndirectContainer, the predicate the server uses to look up the actual member from the POSTed content.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#insertedContentRelation",
+  "rdfs:seeAlso": [
+    "urn:solid:IndirectContainer",
+    "urn:solid:hasMemberRelation"
+  ],
+  "rdfs:domain": "urn:solid:IndirectContainer",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Used only on `urn:solid:IndirectContainer`. Tells the server: \"when a resource is POSTed, look up the value of *this* predicate inside it, and use *that* as the actual member.\" Common pattern: an IndirectContainer for likes uses `as:actor` so the membership target is the liker, not the Like activity itself.",
+  "examples": [
+    {
+      "title": "IndirectContainer using insertedContentRelation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/abc/likes/",
+        "@type": "urn:solid:IndirectContainer",
+        "urn:solid:membershipResource": { "@id": "https://example.org/posts/abc" },
+        "urn:solid:hasMemberRelation": { "@id": "https://schema.org/likedBy" },
+        "urn:solid:insertedContentRelation": { "@id": "https://www.w3.org/ns/activitystreams#actor" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#insertedContentRelation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

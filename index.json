@@ -419,6 +419,13 @@
     "status": "stable",
     "path": "/Review/"
   },
+  "urn:solid:Revision": {
+    "label": "Revision",
+    "description": "A PROV Derivation that represents a revised version of an entity — a substantive change without breaking identity continuity.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Revision/"
+  },
   "urn:solid:Service": {
     "label": "Service",
     "description": "An ActivityStreams actor representing a service — an automated, headless software offering.",
@@ -867,6 +874,13 @@
     "status": "stable",
     "path": "/givenName/"
   },
+  "urn:solid:hadPrimarySource": {
+    "label": "hadPrimarySource",
+    "description": "An entity that is the primary source — the original first-hand source — for the subject entity.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hadPrimarySource/"
+  },
   "urn:solid:hasAddress": {
     "label": "hasAddress",
     "description": "A postal address associated with the subject.",
@@ -894,6 +908,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasMember/"
+  },
+  "urn:solid:hasMemberRelation": {
+    "label": "hasMemberRelation",
+    "description": "The predicate that should be used to express membership in a DirectContainer or IndirectContainer.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasMemberRelation/"
   },
   "urn:solid:hasNickname": {
     "label": "hasNickname",
@@ -979,6 +1000,13 @@
     "status": "stable",
     "path": "/inbox/"
   },
+  "urn:solid:insertedContentRelation": {
+    "label": "insertedContentRelation",
+    "description": "On an IndirectContainer, the predicate the server uses to look up the actual member from the POSTed content.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/insertedContentRelation/"
+  },
   "urn:solid:instance": {
     "label": "instance",
     "description": "A single resource that's an instance of the class declared by the TypeRegistration.",
@@ -992,6 +1020,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/interest/"
+  },
+  "urn:solid:isMemberOfRelation": {
+    "label": "isMemberOfRelation",
+    "description": "The predicate the server adds in the *inverse* direction when a new resource is POSTed to a DirectContainer or IndirectContainer.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/isMemberOfRelation/"
   },
   "urn:solid:isPartOf": {
     "label": "isPartOf",

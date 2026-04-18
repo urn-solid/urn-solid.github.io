@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasMemberRelation",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasMemberRelation",
+  "rdfs:comment": "The predicate that should be used to express membership in a DirectContainer or IndirectContainer.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#hasMemberRelation",
+  "rdfs:seeAlso": [
+    "urn:solid:DirectContainer",
+    "urn:solid:IndirectContainer",
+    "urn:solid:membershipResource",
+    "http://www.w3.org/ns/ldp#isMemberOfRelation"
+  ],
+  "rdfs:domain": "urn:solid:Container",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Used on a `DirectContainer` or `IndirectContainer` to declare which predicate the server should add when a new resource is POSTed — e.g. `schema:comment` so a new POST to a comments container produces `<post> schema:comment <new-comment>`. Alternative: `ldp:isMemberOfRelation` for the inverse direction.",
+  "examples": [
+    {
+      "title": "Comments container declaring its member relation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/abc/comments/",
+        "@type": "urn:solid:DirectContainer",
+        "urn:solid:membershipResource": { "@id": "https://example.org/posts/abc" },
+        "urn:solid:hasMemberRelation": { "@id": "https://schema.org/comment" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#hasMemberRelation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
