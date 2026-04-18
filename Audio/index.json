@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Audio",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Audio",
+  "rdfs:comment": "An audio resource — used in ActivityPub for audio attachments and stand-alone audio posts.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Audio",
+  "rdfs:seeAlso": [
+    "urn:solid:AudioObject"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:AudioObject"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "ActivityStreams audio type — use for fediverse audio posts and attachments. Distinct from `urn:solid:AudioObject` (schema.org) which carries richer media metadata. Pick by data flavor: AS for ActivityPub-style social data, schema for SEO/structured-data web pages.",
+  "examples": [
+    {
+      "title": "Note with an audio attachment",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/voice-1",
+        "@type": "urn:solid:Note",
+        "urn:solid:attachment": {
+          "@type": "urn:solid:Audio",
+          "https://www.w3.org/ns/activitystreams#url": { "@id": "https://example.org/audio/voice.mp3" },
+          "urn:solid:mediaType": "audio/mpeg"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Audio"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

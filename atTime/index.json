@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:atTime",
+  "@type": "rdf:Property",
+  "rdfs:label": "atTime",
+  "rdfs:comment": "The time at which an InstantaneousEvent occurred — for PROV Generation, Usage, Invalidation, etc.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#atTime",
+  "rdfs:seeAlso": [
+    "urn:solid:generatedAtTime",
+    "urn:solid:startedAtTime",
+    "urn:solid:endedAtTime"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "PROV's instant-event timestamp — used inside qualified PROV relations like `prov:Generation`, `prov:Usage`, `prov:Invalidation`. For activity start/end specifically, prefer `urn:solid:startedAtTime` / `urn:solid:endedAtTime`. ISO 8601.",
+  "examples": [
+    {
+      "title": "Qualified generation with a timestamp",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/generations/release-v2",
+        "@type": "http://www.w3.org/ns/prov#Generation",
+        "urn:solid:atTime": "2026-04-18T18:00:00Z"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#atTime"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

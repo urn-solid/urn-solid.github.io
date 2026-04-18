@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:hadActivity — urn-solid</title>
+<meta name="description" content="An activity that contributed to a qualified PROV relation — typically attached to a qualified usage, generation, or derivation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/hadActivity/">
+<link rel="alternate" type="application/ld+json" href="/hadActivity/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hadActivity",
+  "@type": "rdf:Property",
+  "rdfs:label": "hadActivity",
+  "rdfs:comment": "An activity that contributed to a qualified PROV relation — typically attached to a qualified usage, generation, or derivation.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#hadActivity",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:Derivation",
+    "http://www.w3.org/ns/prov#qualifiedDerivation"
+  ],
+  "rdfs:range": "urn:solid:Activity",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Used inside qualified PROV relations (`prov:qualifiedDerivation`, `prov:qualifiedUsage`, `prov:qualifiedGeneration`) to name the specific Activity that mediated the relation. Lets you attach a Plan, Role, or timing to the connection.",
+  "examples": [
+    {
+      "title": "Derivation referencing the activity that produced it",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/derivations/translation-1",
+        "@type": "urn:solid:Derivation",
+        "urn:solid:hadActivity": { "@id": "https://example.org/translations/de-job-42" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#hadActivity"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -55,6 +55,13 @@
     "status": "stable",
     "path": "/Article/"
   },
+  "urn:solid:Audio": {
+    "label": "Audio",
+    "description": "An audio resource — used in ActivityPub for audio attachments and stand-alone audio posts.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Audio/"
+  },
   "urn:solid:AudioObject": {
     "label": "AudioObject",
     "description": "An audio file with structured metadata — duration, encoding, transcript.",
@@ -517,6 +524,13 @@
     "status": "stable",
     "path": "/VCard/"
   },
+  "urn:solid:Video": {
+    "label": "Video",
+    "description": "A video resource — used in ActivityPub for video attachments and stand-alone video posts.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Video/"
+  },
   "urn:solid:VideoObject": {
     "label": "VideoObject",
     "description": "A video file with structured metadata — duration, resolution, encoding, thumbnail.",
@@ -628,6 +642,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/articleBody/"
+  },
+  "urn:solid:atTime": {
+    "label": "atTime",
+    "description": "The time at which an InstantaneousEvent occurred — for PROV Generation, Usage, Invalidation, etc.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/atTime/"
   },
   "urn:solid:attachment": {
     "label": "attachment",
@@ -916,12 +937,26 @@
     "status": "stable",
     "path": "/givenName/"
   },
+  "urn:solid:hadActivity": {
+    "label": "hadActivity",
+    "description": "An activity that contributed to a qualified PROV relation — typically attached to a qualified usage, generation, or derivation.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hadActivity/"
+  },
   "urn:solid:hadPrimarySource": {
     "label": "hadPrimarySource",
     "description": "An entity that is the primary source — the original first-hand source — for the subject entity.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hadPrimarySource/"
+  },
+  "urn:solid:hadRole": {
+    "label": "hadRole",
+    "description": "The role an Agent or Entity played in a qualified PROV relation — \"author\", \"editor\", \"raw input\", etc.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hadRole/"
   },
   "urn:solid:hasAddress": {
     "label": "hasAddress",
