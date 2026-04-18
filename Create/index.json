@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Create",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Create",
+  "rdfs:comment": "An activity in which the actor has created the object.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Create",
+  "rdfs:seeAlso": [
+    "https://schema.org/CreateAction",
+    "http://www.w3.org/ns/prov#wasGeneratedBy"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Update"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. The canonical ActivityPub side-effect for publishing a new object — when an actor posts a Note, the wire-level activity is `Create` whose `as:object` is that Note. For PROV-grade generation events with timing, prefer `prov:wasGeneratedBy`.",
+  "examples": [
+    {
+      "title": "Alice creates a note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/789",
+        "@type": "urn:solid:Create",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": {
+          "@id": "https://example.org/notes/abc",
+          "@type": "urn:solid:Note",
+          "https://www.w3.org/ns/activitystreams#content": "Hello, fediverse!"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Create"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

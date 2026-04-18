@@ -20,6 +20,13 @@
     "status": "stable",
     "path": "/Article/"
   },
+  "urn:solid:Create": {
+    "label": "Create",
+    "description": "An activity in which the actor has created the object.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Create/"
+  },
   "urn:solid:Document": {
     "label": "Document",
     "description": "A document of any kind — typically a web resource.",
