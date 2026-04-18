@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:byteSize",
+  "@type": "rdf:Property",
+  "rdfs:label": "byteSize",
+  "rdfs:comment": "The size in bytes of a DCAT Distribution.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#byteSize",
+  "rdfs:seeAlso": [
+    "urn:solid:Distribution",
+    "https://schema.org/contentSize"
+  ],
+  "rdfs:domain": "urn:solid:Distribution",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to declare the file size of a Distribution so consumers can plan downloads. Integer bytes (no \"MB\"/\"GB\" suffix — use the raw number). Schema.org's `schema:contentSize` accepts free-form strings; `dcat:byteSize` is stricter.",
+  "examples": [
+    {
+      "title": "Distribution with byte size",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/wonderland-2026/csv",
+        "@type": "urn:solid:Distribution",
+        "urn:solid:byteSize": 2415616
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#byteSize"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

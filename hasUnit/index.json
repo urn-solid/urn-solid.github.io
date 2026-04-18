@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasUnit",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasUnit",
+  "rdfs:comment": "An OrganizationalUnit that is part of the parent Organization — narrower than `hasSubOrganization`.",
+  "owl:sameAs": "http://www.w3.org/ns/org#hasUnit",
+  "rdfs:seeAlso": [
+    "urn:solid:unitOf",
+    "urn:solid:hasSubOrganization",
+    "urn:solid:OrganizationalUnit"
+  ],
+  "rdfs:range": "urn:solid:OrganizationalUnit",
+  "notToBeConfusedWith": [
+    "urn:solid:hasSubOrganization",
+    "urn:solid:unitOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Sub-property of `urn:solid:hasSubOrganization` constrained to OrganizationalUnits (so the value is always an internal unit, not another formal organization). Use when you want type-checking on the structure.",
+  "examples": [
+    {
+      "title": "Company with internal units",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/orgs/acme-ltd",
+        "@type": "urn:solid:FormalOrganization",
+        "urn:solid:hasUnit": { "@id": "https://example.org/orgs/acme/eng" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/org#hasUnit"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

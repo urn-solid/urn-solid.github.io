@@ -1014,6 +1014,13 @@
     "status": "stable",
     "path": "/bto/"
   },
+  "urn:solid:byteSize": {
+    "label": "byteSize",
+    "description": "The size in bytes of a DCAT Distribution.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/byteSize/"
+  },
   "urn:solid:cc": {
     "label": "cc",
     "description": "Secondary public recipients of the object — visible carbon-copy addresses.",
@@ -1497,6 +1504,13 @@
     "status": "stable",
     "path": "/hasURL/"
   },
+  "urn:solid:hasUnit": {
+    "label": "hasUnit",
+    "description": "An OrganizationalUnit that is part of the parent Organization — narrower than `hasSubOrganization`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasUnit/"
+  },
   "urn:solid:hasVersion": {
     "label": "hasVersion",
     "description": "A related resource that is a version, edition, or adaptation of the described resource.",
@@ -1686,6 +1700,13 @@
     "status": "stable",
     "path": "/jabberID/"
   },
+  "urn:solid:keyword": {
+    "label": "keyword",
+    "description": "A keyword or tag describing a DCAT Dataset or Catalog — repeated for multiple keywords.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/keyword/"
+  },
   "urn:solid:keywords": {
     "label": "keywords",
     "description": "Keywords or tags describing the resource — typically as a comma-separated string or a list.",
@@ -1713,6 +1734,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/knowsLanguage/"
+  },
+  "urn:solid:landingPage": {
+    "label": "landingPage",
+    "description": "A web page that gives access to a DCAT Dataset, its Distributions, and additional information.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/landingPage/"
   },
   "urn:solid:language": {
     "label": "language",
@@ -2238,6 +2266,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/topic_interest/"
+  },
+  "urn:solid:unitOf": {
+    "label": "unitOf",
+    "description": "The parent Organization that this OrganizationalUnit belongs to — inverse of `hasUnit`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/unitOf/"
   },
   "urn:solid:updated": {
     "label": "updated",

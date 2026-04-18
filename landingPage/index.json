@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:landingPage",
+  "@type": "rdf:Property",
+  "rdfs:label": "landingPage",
+  "rdfs:comment": "A web page that gives access to a DCAT Dataset, its Distributions, and additional information.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#landingPage",
+  "rdfs:seeAlso": [
+    "urn:solid:accessURL",
+    "urn:solid:homepage"
+  ],
+  "rdfs:domain": "urn:solid:Dataset",
+  "rdfs:range": "urn:solid:Document",
+  "notToBeConfusedWith": [
+    "urn:solid:accessURL",
+    "urn:solid:homepage"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:accessURL` (a Distribution-level access link): `landingPage` is the human-facing introduction page for the whole Dataset, where browsers go for context. Distinct from FOAF `urn:solid:homepage` which is for Agent homepages.",
+  "examples": [
+    {
+      "title": "Dataset with landing page",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/wonderland-2026",
+        "@type": "urn:solid:Dataset",
+        "urn:solid:landingPage": { "@id": "https://example.org/data/wonderland-2026/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#landingPage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

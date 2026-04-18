@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:unitOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "unitOf",
+  "rdfs:comment": "The parent Organization that this OrganizationalUnit belongs to — inverse of `hasUnit`.",
+  "owl:sameAs": "http://www.w3.org/ns/org#unitOf",
+  "rdfs:seeAlso": [
+    "urn:solid:hasUnit",
+    "urn:solid:subOrganizationOf"
+  ],
+  "rdfs:domain": "urn:solid:OrganizationalUnit",
+  "notToBeConfusedWith": [
+    "urn:solid:hasUnit",
+    "urn:solid:subOrganizationOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Sub-property of `urn:solid:subOrganizationOf` constrained to point at the parent of an OrganizationalUnit. Inverse of `urn:solid:hasUnit`. Functionally equivalent to `subOrganizationOf` for OrganizationalUnit subjects.",
+  "examples": [
+    {
+      "title": "Engineering team pointing at parent",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/orgs/acme/eng",
+        "@type": "urn:solid:OrganizationalUnit",
+        "urn:solid:unitOf": { "@id": "https://example.org/orgs/acme-ltd" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/org#unitOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
