@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:topic_interest",
+  "@type": "rdf:Property",
+  "rdfs:label": "topic_interest",
+  "rdfs:comment": "A thing the agent is interested in — points at the resource itself, not at a page about it.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/topic_interest",
+  "rdfs:seeAlso": [
+    "http://xmlns.com/foaf/0.1/interest",
+    "https://schema.org/knowsAbout"
+  ],
+  "rdfs:domain": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:interest"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use when the interest target is itself a resource (a Person, Organization, Project, concept). For \"a page about something I'm interested in\", use `urn:solid:interest`. Note the underscore in the source name is preserved.",
+  "examples": [
+    {
+      "title": "Person interested in a project",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:topic_interest": { "@id": "https://example.org/projects/urn-solid" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/topic_interest"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

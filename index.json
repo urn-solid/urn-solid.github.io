@@ -265,6 +265,13 @@
     "status": "stable",
     "path": "/topic/"
   },
+  "urn:solid:topic_interest": {
+    "label": "topic_interest",
+    "description": "A thing the agent is interested in — points at the resource itself, not at a page about it.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/topic_interest/"
+  },
   "urn:solid:weblog": {
     "label": "weblog",
     "description": "A weblog (blog) of the subject — the document the agent publishes posts to.",
