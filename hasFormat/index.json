@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasFormat",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasFormat",
+  "rdfs:comment": "A related resource that is the same intellectual content but in a different format — e.g. a PDF version of an HTML article.",
+  "owl:sameAs": "http://purl.org/dc/terms/hasFormat",
+  "rdfs:seeAlso": [
+    "urn:solid:isFormatOf",
+    "urn:solid:format"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:isFormatOf",
+    "urn:solid:hasVersion"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Distinct from `urn:solid:hasVersion`: same content, different file format (PDF vs HTML, MP3 vs FLAC, JSON-LD vs Turtle). Inverse is `dcterms:isFormatOf`. The format itself is described by `urn:solid:format`.",
+  "examples": [
+    {
+      "title": "Article available in PDF and HTML",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/papers/42",
+        "@type": "urn:solid:Document",
+        "urn:solid:hasFormat": { "@id": "https://example.org/papers/42.pdf" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/hasFormat"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

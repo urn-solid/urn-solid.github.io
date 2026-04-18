@@ -909,6 +909,13 @@
     "status": "stable",
     "path": "/hasEmail/"
   },
+  "urn:solid:hasFormat": {
+    "label": "hasFormat",
+    "description": "A related resource that is the same intellectual content but in a different format — e.g. a PDF version of an HTML article.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasFormat/"
+  },
   "urn:solid:hasGeo": {
     "label": "hasGeo",
     "description": "Geographic coordinates associated with the subject — typically a `geo:` IRI carrying lat/long.",
@@ -964,6 +971,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasURL/"
+  },
+  "urn:solid:hasVersion": {
+    "label": "hasVersion",
+    "description": "A related resource that is a version, edition, or adaptation of the described resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasVersion/"
   },
   "urn:solid:headline": {
     "label": "headline",
@@ -1035,6 +1049,13 @@
     "status": "stable",
     "path": "/interest/"
   },
+  "urn:solid:isFormatOf": {
+    "label": "isFormatOf",
+    "description": "A related resource that is the same intellectual content of which the described resource is a different-format rendition.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/isFormatOf/"
+  },
   "urn:solid:isMemberOfRelation": {
     "label": "isMemberOfRelation",
     "description": "The predicate the server adds in the *inverse* direction when a new resource is POSTed to a DirectContainer or IndirectContainer.",
@@ -1055,6 +1076,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/isPrimaryTopicOf/"
+  },
+  "urn:solid:isReferencedBy": {
+    "label": "isReferencedBy",
+    "description": "A related resource that references, cites, or otherwise points to the described resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/isReferencedBy/"
+  },
+  "urn:solid:isVersionOf": {
+    "label": "isVersionOf",
+    "description": "A related resource of which the described resource is a version, edition, or adaptation.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/isVersionOf/"
   },
   "urn:solid:issued": {
     "label": "issued",

@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:isVersionOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "isVersionOf",
+  "rdfs:comment": "A related resource of which the described resource is a version, edition, or adaptation.",
+  "owl:sameAs": "http://purl.org/dc/terms/isVersionOf",
+  "rdfs:seeAlso": [
+    "http://purl.org/dc/terms/hasVersion",
+    "urn:solid:replaces"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:replaces"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to point at the abstract \"work\" the current resource is one version of. Distinct from `urn:solid:replaces` (which says \"this supersedes that\"); `isVersionOf` allows multiple concurrent versions of the same work without one displacing another.",
+  "examples": [
+    {
+      "title": "v2 spec is a version of the spec series",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/specs/v2",
+        "@type": "urn:solid:Document",
+        "urn:solid:isVersionOf": { "@id": "https://example.org/specs/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/isVersionOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
