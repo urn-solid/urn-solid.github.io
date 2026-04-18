@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:LinguisticSystem",
+  "@type": "rdfs:Class",
+  "rdfs:label": "LinguisticSystem",
+  "rdfs:comment": "A system of communication including written, spoken, signed, or symbolic languages.",
+  "owl:sameAs": "http://purl.org/dc/terms/LinguisticSystem",
+  "rdfs:seeAlso": [
+    "urn:solid:language",
+    "urn:solid:hasLanguage"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as @type for resources representing languages — typically referenced from `urn:solid:language` when you need a structured Language resource rather than a bare BCP 47 tag. The IANA language subtag registry serves as the canonical LinguisticSystem namespace.",
+  "examples": [
+    {
+      "title": "A LinguisticSystem resource",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "http://id.loc.gov/vocabulary/iso639-2/eng",
+        "@type": "urn:solid:LinguisticSystem",
+        "urn:solid:name": "English"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/LinguisticSystem"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

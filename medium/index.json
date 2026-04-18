@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:medium",
+  "@type": "rdf:Property",
+  "rdfs:label": "medium",
+  "rdfs:comment": "The material or physical carrier of the resource.",
+  "owl:sameAs": "http://purl.org/dc/terms/medium",
+  "rdfs:seeAlso": [
+    "urn:solid:PhysicalMedium",
+    "urn:solid:format"
+  ],
+  "rdfs:range": "urn:solid:PhysicalMedium",
+  "notToBeConfusedWith": [
+    "urn:solid:format"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:format`: `medium` is the physical/material carrier (paper, vinyl, parchment), `format` is the file format or media type. A book may have format `application/pdf` and medium \"paperback\". Library and archive metadata uses both fields when both apply.",
+  "examples": [
+    {
+      "title": "Book in paperback medium",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/books/wonderland-pb",
+        "@type": "urn:solid:Book",
+        "urn:solid:medium": "paperback"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/medium"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

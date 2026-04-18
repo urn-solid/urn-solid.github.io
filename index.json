@@ -202,6 +202,13 @@
     "status": "stable",
     "path": "/CreativeWork/"
   },
+  "urn:solid:Delegation": {
+    "label": "Delegation",
+    "description": "A qualified PROV delegation — the role-aware form of `actedOnBehalfOf` between two Agents.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Delegation/"
+  },
   "urn:solid:Delete": {
     "label": "Delete",
     "description": "An activity in which the actor has deleted the object.",
@@ -349,6 +356,13 @@
     "status": "stable",
     "path": "/Like/"
   },
+  "urn:solid:LinguisticSystem": {
+    "label": "LinguisticSystem",
+    "description": "A system of communication including written, spoken, signed, or symbolic languages.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/LinguisticSystem/"
+  },
   "urn:solid:Move": {
     "label": "Move",
     "description": "An activity in which the actor moves the object from one location (origin) to another (target).",
@@ -447,6 +461,13 @@
     "status": "stable",
     "path": "/PersonalProfileDocument/"
   },
+  "urn:solid:PhysicalMedium": {
+    "label": "PhysicalMedium",
+    "description": "A material or physical carrier of a resource — paper, vinyl, magnetic tape, stone tablet.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/PhysicalMedium/"
+  },
   "urn:solid:Place": {
     "label": "Place",
     "description": "An entity that has a somewhat fixed physical extension — a city, building, landmark, room.",
@@ -474,6 +495,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/PostalAddress/"
+  },
+  "urn:solid:PrimarySource": {
+    "label": "PrimarySource",
+    "description": "A qualified PROV derivation typing the relation as a primary-source attribution — first-hand origin.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/PrimarySource/"
   },
   "urn:solid:Product": {
     "label": "Product",
@@ -1510,6 +1538,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/mediator/"
+  },
+  "urn:solid:medium": {
+    "label": "medium",
+    "description": "The material or physical carrier of the resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/medium/"
   },
   "urn:solid:member": {
     "label": "member",

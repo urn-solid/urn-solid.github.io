@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:PrimarySource",
+  "@type": "rdfs:Class",
+  "rdfs:label": "PrimarySource",
+  "rdfs:comment": "A qualified PROV derivation typing the relation as a primary-source attribution — first-hand origin.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#PrimarySource",
+  "rdfs:seeAlso": [
+    "urn:solid:hadPrimarySource",
+    "urn:solid:Quotation",
+    "urn:solid:Revision"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Quotation",
+    "urn:solid:Revision"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `prov:Derivation` typing it as primary-source attribution — eyewitness account, raw measurement, canonical document. Use the `urn:solid:hadPrimarySource` shortcut when you don't need the qualified form.",
+  "examples": [
+    {
+      "title": "Article based on a primary source",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/derivations/news-from-leak",
+        "@type": "urn:solid:PrimarySource",
+        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/leaks/raw-document" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#PrimarySource"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:PhysicalMedium",
+  "@type": "rdfs:Class",
+  "rdfs:label": "PhysicalMedium",
+  "rdfs:comment": "A material or physical carrier of a resource — paper, vinyl, magnetic tape, stone tablet.",
+  "owl:sameAs": "http://purl.org/dc/terms/PhysicalMedium",
+  "rdfs:seeAlso": [
+    "urn:solid:medium",
+    "urn:solid:format"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as @type for resources representing physical media — typically referenced from `dcterms:medium`. Library and archive contexts use this to record the carrier separately from the digital format. For digital file formats, use `urn:solid:FileFormat` instead.",
+  "examples": [
+    {
+      "title": "Vinyl record as a PhysicalMedium",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/media/vinyl-12in",
+        "@type": "urn:solid:PhysicalMedium",
+        "urn:solid:name": "12-inch vinyl record"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/PhysicalMedium"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
