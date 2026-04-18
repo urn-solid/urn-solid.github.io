@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:knowsLanguage — urn-solid</title>
+<meta name="description" content="A language the person speaks, writes, or otherwise communicates in.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/knowsLanguage/">
+<link rel="alternate" type="application/ld+json" href="/knowsLanguage/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:knowsLanguage",
+  "@type": "rdf:Property",
+  "rdfs:label": "knowsLanguage",
+  "rdfs:comment": "A language the person speaks, writes, or otherwise communicates in.",
+  "owl:sameAs": "https://schema.org/knowsLanguage",
+  "rdfs:seeAlso": [
+    "urn:solid:language",
+    "http://www.w3.org/2006/vcard/ns#hasLanguage"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "notToBeConfusedWith": [
+    "urn:solid:language"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Distinct from `urn:solid:language` (which is the language of a *resource*) — `knowsLanguage` is the languages an *agent* communicates in. Value is typically a BCP 47 tag (`\"en\"`, `\"de-CH\"`) or a `schema:Language` resource. Repeat for multiple languages.",
+  "examples": [
+    {
+      "title": "Person fluent in two languages",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:knowsLanguage": ["en", "fr"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/knowsLanguage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

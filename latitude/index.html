@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:latitude — urn-solid</title>
+<meta name="description" content="The latitude of a location, in decimal degrees (WGS-84).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/latitude/">
+<link rel="alternate" type="application/ld+json" href="/latitude/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:latitude",
+  "@type": "rdf:Property",
+  "rdfs:label": "latitude",
+  "rdfs:comment": "The latitude of a location, in decimal degrees (WGS-84).",
+  "owl:sameAs": "https://schema.org/latitude",
+  "rdfs:seeAlso": [
+    "urn:solid:longitude",
+    "urn:solid:GeoCoordinates",
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+  ],
+  "rdfs:domain": "urn:solid:GeoCoordinates",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#decimal",
+  "notToBeConfusedWith": [
+    "urn:solid:longitude"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Decimal degrees, positive north of the equator. Pair with `urn:solid:longitude` on a `urn:solid:GeoCoordinates` resource. For a single shorthand `geo:` URI carrying both, use `urn:solid:hasGeo`.",
+  "examples": [
+    {
+      "title": "Coordinates with latitude",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/places/big-ben/geo",
+        "@type": "urn:solid:GeoCoordinates",
+        "urn:solid:latitude": "51.5007",
+        "urn:solid:longitude": "-0.1246"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/latitude"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

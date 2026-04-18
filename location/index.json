@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:location",
+  "@type": "rdf:Property",
+  "rdfs:label": "location",
+  "rdfs:comment": "The location associated with the subject — typically a Place, address, or geographic coordinates.",
+  "owl:sameAs": "https://schema.org/location",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#location",
+    "urn:solid:basedNear",
+    "urn:solid:hasAddress"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:basedNear",
+    "urn:solid:hasAddress"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Generic location predicate used on Events, Actions, Organizations. The value is typically a `urn:solid:Place`, `urn:solid:PostalAddress`, or `urn:solid:GeoCoordinates`. For a person's home region (intentionally fuzzy), use `urn:solid:basedNear` (FOAF). For structured postal addresses, `urn:solid:hasAddress` (vCard).",
+  "examples": [
+    {
+      "title": "Event at a location",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/events/launch",
+        "@type": "urn:solid:Event",
+        "urn:solid:location": { "@id": "https://example.org/places/wonderland-hq" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/location"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

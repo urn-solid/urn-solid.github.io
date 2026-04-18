@@ -706,6 +706,13 @@
     "status": "stable",
     "path": "/fn/"
   },
+  "urn:solid:follower": {
+    "label": "follower",
+    "description": "An agent that follows the subject — receiving updates from them.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/follower/"
+  },
   "urn:solid:forClass": {
     "label": "forClass",
     "description": "The RDF class that a TypeRegistration is for — what type of resources live at the registered location.",
@@ -902,6 +909,13 @@
     "status": "stable",
     "path": "/knowsAbout/"
   },
+  "urn:solid:knowsLanguage": {
+    "label": "knowsLanguage",
+    "description": "A language the person speaks, writes, or otherwise communicates in.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/knowsLanguage/"
+  },
   "urn:solid:language": {
     "label": "language",
     "description": "A language of the resource — typically a BCP 47 tag.",
@@ -916,12 +930,33 @@
     "status": "stable",
     "path": "/lastName/"
   },
+  "urn:solid:latitude": {
+    "label": "latitude",
+    "description": "The latitude of a location, in decimal degrees (WGS-84).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/latitude/"
+  },
   "urn:solid:license": {
     "label": "license",
     "description": "A legal document giving official permission to do something with the resource.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/license/"
+  },
+  "urn:solid:location": {
+    "label": "location",
+    "description": "The location associated with the subject — typically a Place, address, or geographic coordinates.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/location/"
+  },
+  "urn:solid:longitude": {
+    "label": "longitude",
+    "description": "The longitude of a location, in decimal degrees (WGS-84).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/longitude/"
   },
   "urn:solid:made": {
     "label": "made",
