@@ -111,6 +111,13 @@
     "status": "stable",
     "path": "/OnlineAccount/"
   },
+  "urn:solid:OrderedCollection": {
+    "label": "OrderedCollection",
+    "description": "An ordered collection of objects — most-recent-first by convention in ActivityPub.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/OrderedCollection/"
+  },
   "urn:solid:Organization": {
     "label": "Organization",
     "description": "A formal organization — a company, society, institution, or other collective with structure.",
