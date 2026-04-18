@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:thumbnail",
+  "@type": "rdf:Property",
+  "rdfs:label": "thumbnail",
+  "rdfs:comment": "A thumbnail rendering of the image — a smaller version for previews.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/thumbnail",
+  "rdfs:seeAlso": [
+    "https://schema.org/thumbnailUrl"
+  ],
+  "rdfs:domain": "urn:solid:Image",
+  "rdfs:range": "urn:solid:Image",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use on a full-size image to point at a smaller preview rendition. Both subject and object should be `urn:solid:Image`. For richer image-object metadata (width, height, content URL), schema:ImageObject + schema:thumbnail carry more fields.",
+  "examples": [
+    {
+      "title": "Image with a thumbnail",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/photos/sunset.jpg",
+        "@type": "urn:solid:Image",
+        "urn:solid:thumbnail": { "@id": "https://example.org/photos/sunset-thumb.jpg" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/thumbnail"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
