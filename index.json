@@ -216,6 +216,13 @@
     "status": "stable",
     "path": "/hasEmail/"
   },
+  "urn:solid:hasGeo": {
+    "label": "hasGeo",
+    "description": "Geographic coordinates associated with the subject — typically a `geo:` IRI carrying lat/long.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasGeo/"
+  },
   "urn:solid:hasPart": {
     "label": "hasPart",
     "description": "A related resource that is included as a part of the described resource.",

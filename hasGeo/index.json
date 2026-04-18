@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasGeo",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasGeo",
+  "rdfs:comment": "Geographic coordinates associated with the subject — typically a `geo:` IRI carrying lat/long.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasGeo",
+  "rdfs:seeAlso": [
+    "https://schema.org/geo",
+    "http://www.w3.org/2003/01/geo/wgs84_pos#location"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use a `geo:` URI (e.g. `geo:51.5074,-0.1278`) for the value. For richer coordinate modelling with separate lat/long predicates, use `schema:GeoCoordinates` or the WGS84 `geo:` ontology.",
+  "examples": [
+    {
+      "title": "Address with geo coordinates",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/places/wonderland",
+        "@type": "http://www.w3.org/2006/vcard/ns#Address",
+        "urn:solid:hasGeo": { "@id": "geo:51.5074,-0.1278" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasGeo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
