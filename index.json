@@ -335,6 +335,13 @@
     "status": "stable",
     "path": "/publisher/"
   },
+  "urn:solid:rights": {
+    "label": "rights",
+    "description": "Information about rights held in and over the resource — copyright, IP, access restrictions.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/rights/"
+  },
   "urn:solid:subject": {
     "label": "subject",
     "description": "A topic of the resource — typically expressed as keywords, key phrases, or controlled-vocabulary terms.",
