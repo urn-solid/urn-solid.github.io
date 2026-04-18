@@ -160,6 +160,13 @@
     "status": "stable",
     "path": "/Collection/"
   },
+  "urn:solid:CollegeOrUniversity": {
+    "label": "CollegeOrUniversity",
+    "description": "A college, university, or other institution of higher education.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/CollegeOrUniversity/"
+  },
   "urn:solid:Comment": {
     "label": "Comment",
     "description": "A comment on the parent CreativeWork — a reader's response or annotation.",
@@ -307,6 +314,13 @@
     "status": "stable",
     "path": "/Event/"
   },
+  "urn:solid:FAQPage": {
+    "label": "FAQPage",
+    "description": "A web page that answers commonly-asked questions on a particular topic.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/FAQPage/"
+  },
   "urn:solid:FileFormat": {
     "label": "FileFormat",
     "description": "A digital file format — typically referenced as the type of a `dcterms:format` value.",
@@ -355,6 +369,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Group/"
+  },
+  "urn:solid:HowTo": {
+    "label": "HowTo",
+    "description": "Instructions for performing a task — a tutorial or how-to guide.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/HowTo/"
   },
   "urn:solid:Image": {
     "label": "Image",
@@ -474,6 +495,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/MusicRecording/"
+  },
+  "urn:solid:NewsArticle": {
+    "label": "NewsArticle",
+    "description": "A news article — a journalistic article published as part of news media coverage.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/NewsArticle/"
   },
   "urn:solid:NonRDFSource": {
     "label": "NonRDFSource",
@@ -1601,6 +1629,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/img/"
+  },
+  "urn:solid:inLanguage": {
+    "label": "inLanguage",
+    "description": "The language a CreativeWork is written in — typically a BCP 47 language tag.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/inLanguage/"
   },
   "urn:solid:inReplyTo": {
     "label": "inReplyTo",

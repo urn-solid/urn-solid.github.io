@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:inLanguage — urn-solid</title>
+<meta name="description" content="The language a CreativeWork is written in — typically a BCP 47 language tag.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/inLanguage/">
+<link rel="alternate" type="application/ld+json" href="/inLanguage/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:inLanguage",
+  "@type": "rdf:Property",
+  "rdfs:label": "inLanguage",
+  "rdfs:comment": "The language a CreativeWork is written in — typically a BCP 47 language tag.",
+  "owl:sameAs": "https://schema.org/inLanguage",
+  "rdfs:seeAlso": [
+    "urn:solid:language",
+    "urn:solid:hasLanguage"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:language",
+    "urn:solid:knowsLanguage"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Schema.org's resource-language predicate. Functionally equivalent to dcterms `urn:solid:language` — pick by namespace flavor (schema for SEO, dcterms for bibliographic). Distinct from `urn:solid:knowsLanguage` (an Agent's languages).",
+  "examples": [
+    {
+      "title": "Article in English",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Article",
+        "urn:solid:inLanguage": "en"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/inLanguage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

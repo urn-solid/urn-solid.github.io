@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:HowTo",
+  "@type": "rdfs:Class",
+  "rdfs:label": "HowTo",
+  "rdfs:comment": "Instructions for performing a task — a tutorial or how-to guide.",
+  "owl:sameAs": "https://schema.org/HowTo",
+  "rdfs:seeAlso": [
+    "urn:solid:Recipe",
+    "urn:solid:CreativeWork"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Recipe"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Use for any step-by-step tutorial. `urn:solid:Recipe` is the cooking-specific subclass. Pair with `schema:step` (an `ItemList` of `schema:HowToStep`s), `schema:totalTime`, `schema:estimatedCost`, `schema:tool`. Heavily used by Google for SEO rich results.",
+  "examples": [
+    {
+      "title": "A how-to guide",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/howto/setup-pod",
+        "@type": "urn:solid:HowTo",
+        "urn:solid:name": "Set up a Solid pod",
+        "https://schema.org/totalTime": "PT15M"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/HowTo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

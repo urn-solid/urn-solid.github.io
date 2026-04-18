@@ -1,0 +1,56 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:FAQPage",
+  "@type": "rdfs:Class",
+  "rdfs:label": "FAQPage",
+  "rdfs:comment": "A web page that answers commonly-asked questions on a particular topic.",
+  "owl:sameAs": "https://schema.org/FAQPage",
+  "rdfs:seeAlso": [
+    "urn:solid:WebPage",
+    "urn:solid:Question",
+    "urn:solid:Answer"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `urn:solid:WebPage`. Pair with `schema:mainEntity` listing `urn:solid:Question` resources, each carrying its own `Answer`. Heavily used by Google for FAQ rich results. The page itself models multiple Q&As, distinct from a forum where each Question is a separate page.",
+  "examples": [
+    {
+      "title": "An FAQ page",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/faq",
+        "@type": "urn:solid:FAQPage",
+        "https://schema.org/mainEntity": [
+          {
+            "@type": "urn:solid:Question",
+            "urn:solid:name": "What is urn-solid?",
+            "https://schema.org/acceptedAnswer": {
+              "@type": "urn:solid:Answer",
+              "https://schema.org/text": "A canonical RDF term registry for Solid."
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/FAQPage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

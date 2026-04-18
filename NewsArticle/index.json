@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:NewsArticle",
+  "@type": "rdfs:Class",
+  "rdfs:label": "NewsArticle",
+  "rdfs:comment": "A news article — a journalistic article published as part of news media coverage.",
+  "owl:sameAs": "https://schema.org/NewsArticle",
+  "rdfs:seeAlso": [
+    "urn:solid:Article",
+    "urn:solid:BlogPosting"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Article",
+    "urn:solid:BlogPosting"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `urn:solid:Article`. Use specifically for journalism — distinguishes from `BlogPosting` (personal/informal) and generic `Article`. Heavily used by Google News and AMP for SEO rich results. Pair with `schema:dateline`, `schema:printPage`, `schema:articleSection`.",
+  "examples": [
+    {
+      "title": "A news article",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/news/2026-04-18/registry-launch",
+        "@type": "urn:solid:NewsArticle",
+        "urn:solid:headline": "urn-solid registry crosses 300 terms",
+        "urn:solid:datePublished": "2026-04-18"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/NewsArticle"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
