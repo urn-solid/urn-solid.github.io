@@ -1,4 +1,11 @@
 {
+  "urn:solid:Activity": {
+    "label": "Activity",
+    "description": "An action taken by an actor — the base for Create, Like, Follow, Announce, etc.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Activity/"
+  },
   "urn:solid:Agent": {
     "label": "Agent",
     "description": "A thing that acts — person, organization, group, or software.",

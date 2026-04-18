@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Activity",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Activity",
+  "rdfs:comment": "An action taken by an actor — the base for Create, Like, Follow, Announce, etc.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Activity",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/prov#Activity",
+    "https://schema.org/Action"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Object"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Object`. Pair with `as:actor` (the agent performing it), `as:object` (what it's done to), `as:target`, `as:published`. Rarely typed directly — pick a subclass like `urn:solid:Like`, `urn:solid:Follow`, `urn:solid:Create`. For PROV-grade activity tracking with start/end times, use `prov:Activity`.",
+  "examples": [
+    {
+      "title": "A generic activity",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/123",
+        "@type": "urn:solid:Activity",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://example.org/notes/abc" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Activity"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
