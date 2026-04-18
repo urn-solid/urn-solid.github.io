@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:WebSite",
+  "@type": "rdfs:Class",
+  "rdfs:label": "WebSite",
+  "rdfs:comment": "A website — a set of related web pages and resources at a common origin.",
+  "owl:sameAs": "https://schema.org/WebSite",
+  "rdfs:seeAlso": [
+    "urn:solid:WebPage",
+    "urn:solid:CreativeWork"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:WebPage"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Represents the whole site as a single resource (the value of `dcterms:isPartOf` from individual pages). Pair with `schema:potentialAction` to declare site-wide actions like search.",
+  "examples": [
+    {
+      "title": "A website hosting many pages",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://urn-solid.github.io/",
+        "@type": "urn:solid:WebSite",
+        "urn:solid:name": "urn-solid",
+        "urn:solid:url": { "@id": "https://urn-solid.github.io/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/WebSite"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

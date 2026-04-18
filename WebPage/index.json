@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:WebPage",
+  "@type": "rdfs:Class",
+  "rdfs:label": "WebPage",
+  "rdfs:comment": "A web page — a single page on a website, identified by its URL.",
+  "owl:sameAs": "https://schema.org/WebPage",
+  "rdfs:seeAlso": [
+    "urn:solid:Document",
+    "https://schema.org/WebSite"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Document"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:CreativeWork` (and effectively of `urn:solid:Document`). Use when you want web-specific semantics — pair with `schema:isPartOf` pointing at the containing `WebSite`, plus `urn:solid:headline` and `urn:solid:datePublished` for SEO-friendly markup.",
+  "examples": [
+    {
+      "title": "A simple web page",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/about",
+        "@type": "urn:solid:WebPage",
+        "urn:solid:name": "About us",
+        "urn:solid:isPartOf": { "@id": "https://example.org/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/WebPage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

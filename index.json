@@ -62,6 +62,13 @@
     "status": "stable",
     "path": "/Collection/"
   },
+  "urn:solid:Comment": {
+    "label": "Comment",
+    "description": "A comment on the parent CreativeWork — a reader's response or annotation.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Comment/"
+  },
   "urn:solid:Container": {
     "label": "Container",
     "description": "A Linked Data Platform Container — an LDP resource that contains other resources, the LDP analogue of a directory.",
@@ -251,6 +258,20 @@
     "status": "stable",
     "path": "/Update/"
   },
+  "urn:solid:WebPage": {
+    "label": "WebPage",
+    "description": "A web page — a single page on a website, identified by its URL.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/WebPage/"
+  },
+  "urn:solid:WebSite": {
+    "label": "WebSite",
+    "description": "A website — a set of related web pages and resources at a common origin.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/WebSite/"
+  },
   "urn:solid:abstract": {
     "label": "abstract",
     "description": "A summary of the resource — typically one paragraph.",
@@ -299,6 +320,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/alternative/"
+  },
+  "urn:solid:attachment": {
+    "label": "attachment",
+    "description": "An object attached to or associated with the subject — typically images, files, or media.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/attachment/"
   },
   "urn:solid:attributedTo": {
     "label": "attributedTo",
@@ -446,6 +474,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/generatedAtTime/"
+  },
+  "urn:solid:generator": {
+    "label": "generator",
+    "description": "The application that generated the object — typically a software client or service.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/generator/"
   },
   "urn:solid:givenName": {
     "label": "givenName",

@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:attachment",
+  "@type": "rdf:Property",
+  "rdfs:label": "attachment",
+  "rdfs:comment": "An object attached to or associated with the subject — typically images, files, or media.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#attachment",
+  "rdfs:seeAlso": [
+    "https://schema.org/encoding",
+    "urn:solid:tag"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "ActivityStreams' attachment slot — used by ActivityPub posts to carry media (images, video, polls). Repeat for multiple attachments. Each value is typically a typed object like `urn:solid:Image` or `as:Document` with a `url` and `mediaType`.",
+  "examples": [
+    {
+      "title": "Note with an image attachment",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/with-pic",
+        "@type": "urn:solid:Note",
+        "urn:solid:content": "Sunset.",
+        "urn:solid:attachment": {
+          "@type": "urn:solid:Image",
+          "https://www.w3.org/ns/activitystreams#url": { "@id": "https://example.org/photos/sunset.jpg" },
+          "https://www.w3.org/ns/activitystreams#mediaType": "image/jpeg"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#attachment"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
