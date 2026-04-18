@@ -1,0 +1,45 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:accountServiceHomepage",
+  "@type": "rdf:Property",
+  "rdfs:label": "accountServiceHomepage",
+  "rdfs:comment": "The homepage of the online service that hosts the account.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/accountServiceHomepage",
+  "rdfs:domain": "urn:solid:OnlineAccount",
+  "rdfs:range": "urn:solid:Document",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Pair with `urn:solid:accountName` so the combination uniquely identifies the account: the value here is the service's root URL (e.g. `https://github.com/`), not the account-specific URL (`https://github.com/alice`).",
+  "examples": [
+    {
+      "title": "GitHub account",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice/accounts/github",
+        "@type": "urn:solid:OnlineAccount",
+        "urn:solid:accountName": "alice",
+        "urn:solid:accountServiceHomepage": { "@id": "https://github.com/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/accountServiceHomepage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

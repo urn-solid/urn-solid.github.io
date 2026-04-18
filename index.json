@@ -76,6 +76,13 @@
     "status": "stable",
     "path": "/accountName/"
   },
+  "urn:solid:accountServiceHomepage": {
+    "label": "accountServiceHomepage",
+    "description": "The homepage of the online service that hosts the account.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/accountServiceHomepage/"
+  },
   "urn:solid:depiction": {
     "label": "depiction",
     "description": "An image that depicts the subject.",
