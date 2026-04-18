@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:street-address",
+  "@type": "rdf:Property",
+  "rdfs:label": "street-address",
+  "rdfs:comment": "The street address of an Address — number, street name, unit.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#street-address",
+  "rdfs:seeAlso": [
+    "https://schema.org/streetAddress"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's street-address line. Note the hyphen in the source name is preserved. Pair with `urn:solid:locality`, `urn:solid:region`, `urn:solid:postal-code`, `urn:solid:country-name` on a `vcard:Address`. For a schema.org-flavored address, use `schema:streetAddress` on a `urn:solid:PostalAddress`.",
+  "examples": [
+    {
+      "title": "Address with street",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/addresses/wonderland-hq",
+        "@type": "http://www.w3.org/2006/vcard/ns#Address",
+        "urn:solid:street-address": "1 Wonderland Way"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#street-address"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

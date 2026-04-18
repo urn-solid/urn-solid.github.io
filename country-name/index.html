@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:country-name — urn-solid</title>
+<meta name="description" content="The country name of an Address — typically as a string.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/country-name/">
+<link rel="alternate" type="application/ld+json" href="/country-name/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:country-name",
+  "@type": "rdf:Property",
+  "rdfs:label": "country-name",
+  "rdfs:comment": "The country name of an Address — typically as a string.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#country-name",
+  "rdfs:seeAlso": [
+    "https://schema.org/addressCountry",
+    "urn:solid:Country"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's country line on an Address — typically a country name string (\"United Kingdom\") or an ISO 3166-1 country code (\"GB\"). Schema.org equivalent is `schema:addressCountry`. For a full structured country resource, use `urn:solid:Country`.",
+  "examples": [
+    {
+      "title": "Address with country",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/addresses/wonderland-hq",
+        "@type": "http://www.w3.org/2006/vcard/ns#Address",
+        "urn:solid:locality": "London",
+        "urn:solid:country-name": "United Kingdom"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#country-name"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

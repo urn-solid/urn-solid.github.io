@@ -426,6 +426,13 @@
     "status": "stable",
     "path": "/Update/"
   },
+  "urn:solid:VCard": {
+    "label": "VCard",
+    "description": "A vCard — a structured contact card holding name, email, phone, address, and other contact details.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/VCard/"
+  },
   "urn:solid:VideoObject": {
     "label": "VideoObject",
     "description": "A video file with structured metadata — duration, resolution, encoding, thumbnail.",
@@ -621,6 +628,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/contributor/"
+  },
+  "urn:solid:country-name": {
+    "label": "country-name",
+    "description": "The country name of an Address — typically as a string.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/country-name/"
   },
   "urn:solid:created": {
     "label": "created",
@@ -979,6 +993,13 @@
     "status": "stable",
     "path": "/license/"
   },
+  "urn:solid:locality": {
+    "label": "locality",
+    "description": "The locality (city, town, village) of an Address.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/locality/"
+  },
   "urn:solid:location": {
     "label": "location",
     "description": "The location associated with the subject — typically a Place, address, or geographic coordinates.",
@@ -1084,6 +1105,13 @@
     "status": "stable",
     "path": "/pastProject/"
   },
+  "urn:solid:postal-code": {
+    "label": "postal-code",
+    "description": "The postal code (ZIP code) of an Address.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/postal-code/"
+  },
   "urn:solid:preferencesFile": {
     "label": "preferencesFile",
     "description": "A document containing the subject's private preferences.",
@@ -1188,6 +1216,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/storage/"
+  },
+  "urn:solid:street-address": {
+    "label": "street-address",
+    "description": "The street address of an Address — number, street name, unit.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/street-address/"
   },
   "urn:solid:subject": {
     "label": "subject",

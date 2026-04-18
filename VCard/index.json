@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:VCard",
+  "@type": "rdfs:Class",
+  "rdfs:label": "VCard",
+  "rdfs:comment": "A vCard — a structured contact card holding name, email, phone, address, and other contact details.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#VCard",
+  "rdfs:seeAlso": [
+    "https://schema.org/ContactPoint",
+    "urn:solid:Person"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Person"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Distinct from `urn:solid:Person`: a VCard is the *contact record* (the data), while a Person is the *human*. One Person can have many VCards (work, personal). Pair with `urn:solid:fn`, `urn:solid:hasEmail`, `urn:solid:hasTelephone`, `urn:solid:hasAddress`.",
+  "examples": [
+    {
+      "title": "A VCard",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice-work",
+        "@type": "urn:solid:VCard",
+        "urn:solid:fn": "Alice Liddell",
+        "urn:solid:hasEmail": { "@id": "mailto:alice@work.example.org" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#VCard"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

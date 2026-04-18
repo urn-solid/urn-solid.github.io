@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:locality — urn-solid</title>
+<meta name="description" content="The locality (city, town, village) of an Address.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/locality/">
+<link rel="alternate" type="application/ld+json" href="/locality/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:locality",
+  "@type": "rdf:Property",
+  "rdfs:label": "locality",
+  "rdfs:comment": "The locality (city, town, village) of an Address.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#locality",
+  "rdfs:seeAlso": [
+    "https://schema.org/addressLocality"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "City/town field of a vCard Address. Pair with `urn:solid:region`, `urn:solid:postal-code`, `urn:solid:country-name`. The schema.org equivalent is `schema:addressLocality` on a `urn:solid:PostalAddress`.",
+  "examples": [
+    {
+      "title": "Address with locality",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/addresses/wonderland-hq",
+        "@type": "http://www.w3.org/2006/vcard/ns#Address",
+        "urn:solid:street-address": "1 Wonderland Way",
+        "urn:solid:locality": "London"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#locality"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
