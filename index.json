@@ -111,6 +111,13 @@
     "status": "stable",
     "path": "/depiction/"
   },
+  "urn:solid:familyName": {
+    "label": "familyName",
+    "description": "The family name (surname) of the person.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/familyName/"
+  },
   "urn:solid:homepage": {
     "label": "homepage",
     "description": "A homepage for the subject — a top-level page about the agent.",
