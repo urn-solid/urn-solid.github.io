@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:language",
+  "@type": "rdf:Property",
+  "rdfs:label": "language",
+  "rdfs:comment": "A language of the resource — typically a BCP 47 tag.",
+  "owl:sameAs": "http://purl.org/dc/terms/language",
+  "rdfs:seeAlso": [
+    "https://schema.org/inLanguage",
+    "http://www.w3.org/2006/vcard/ns#hasLanguage"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use BCP 47 language tags as values (`\"en\"`, `\"en-US\"`, `\"de-CH\"`). For multilingual resources, repeat. JSON-LD documents can also express language directly on string literals via `@language` — this property is for declaring the resource's overall language(s).",
+  "examples": [
+    {
+      "title": "Document in English",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Document",
+        "urn:solid:language": "en"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/language"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

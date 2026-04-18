@@ -230,6 +230,13 @@
     "status": "stable",
     "path": "/knows/"
   },
+  "urn:solid:language": {
+    "label": "language",
+    "description": "A language of the resource — typically a BCP 47 tag.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/language/"
+  },
   "urn:solid:lastName": {
     "label": "lastName",
     "description": "The last name of a person.",
