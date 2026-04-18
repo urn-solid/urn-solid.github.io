@@ -68,5 +68,12 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/nick/"
+  },
+  "urn:solid:weblog": {
+    "label": "weblog",
+    "description": "A weblog (blog) of the subject — the document the agent publishes posts to.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/weblog/"
   }
 }
