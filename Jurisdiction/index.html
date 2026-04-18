@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Jurisdiction — urn-solid</title>
+<meta name="description" content="A legal, political, or administrative jurisdiction — a country, state, or governing region.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Jurisdiction/">
+<link rel="alternate" type="application/ld+json" href="/Jurisdiction/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Jurisdiction",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Jurisdiction",
+  "rdfs:comment": "A legal, political, or administrative jurisdiction — a country, state, or governing region.",
+  "owl:sameAs": "http://purl.org/dc/terms/Jurisdiction",
+  "rdfs:seeAlso": [
+    "urn:solid:Country",
+    "urn:solid:Place"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Country"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:Country`: a Jurisdiction can be sub-national (US state, EU directive area), supra-national (UN, EU), or non-geographic (corporate by-laws). Used in legal/regulatory metadata to scope which laws or rules apply.",
+  "examples": [
+    {
+      "title": "A jurisdiction",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/jurisdictions/eu",
+        "@type": "urn:solid:Jurisdiction",
+        "urn:solid:name": "European Union"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/Jurisdiction"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

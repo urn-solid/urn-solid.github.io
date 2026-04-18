@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:SizeOrDuration",
+  "@type": "rdfs:Class",
+  "rdfs:label": "SizeOrDuration",
+  "rdfs:comment": "A measured size or duration of a resource — pages, bytes, runtime, dimensions.",
+  "owl:sameAs": "http://purl.org/dc/terms/SizeOrDuration",
+  "rdfs:seeAlso": [
+    "urn:solid:extent",
+    "urn:solid:duration"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as @type when modelling extent/duration as a structured resource rather than a free-form string. Typically referenced from `dcterms:extent`. For simple cases, the string form on `urn:solid:extent` or `urn:solid:duration` is sufficient.",
+  "examples": [
+    {
+      "title": "A SizeOrDuration resource",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/extents/wonderland-runtime",
+        "@type": "urn:solid:SizeOrDuration",
+        "urn:solid:name": "1h 45min"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/SizeOrDuration"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

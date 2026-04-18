@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:RightsStatement",
+  "@type": "rdfs:Class",
+  "rdfs:label": "RightsStatement",
+  "rdfs:comment": "A statement about the intellectual property rights held in or over a resource.",
+  "owl:sameAs": "http://purl.org/dc/terms/RightsStatement",
+  "rdfs:seeAlso": [
+    "urn:solid:rights",
+    "urn:solid:LicenseDocument",
+    "urn:solid:Policy"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:LicenseDocument",
+    "urn:solid:Policy"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as @type for documents stating rights — copyright notices, restriction declarations, public-domain dedications. Distinct from `urn:solid:LicenseDocument` (specifically a permission grant) and `urn:solid:Policy` (broader normative documents). The Rights Statements consortium (rightsstatements.org) provides a standardized set.",
+  "examples": [
+    {
+      "title": "A rights statement",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://rightsstatements.org/page/InC/1.0/",
+        "@type": "urn:solid:RightsStatement",
+        "urn:solid:name": "In Copyright"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/RightsStatement"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

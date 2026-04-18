@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:ProvenanceStatement — urn-solid</title>
+<meta name="description" content="A statement about the provenance of a resource — its origin, custody history, transformations.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/ProvenanceStatement/">
+<link rel="alternate" type="application/ld+json" href="/ProvenanceStatement/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:ProvenanceStatement",
+  "@type": "rdfs:Class",
+  "rdfs:label": "ProvenanceStatement",
+  "rdfs:comment": "A statement about the provenance of a resource — its origin, custody history, transformations.",
+  "owl:sameAs": "http://purl.org/dc/terms/ProvenanceStatement",
+  "rdfs:seeAlso": [
+    "urn:solid:Entity",
+    "urn:solid:Bundle"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as @type for free-form provenance documents — narrative descriptions of where a resource came from. For machine-actionable provenance graphs, prefer the PROV vocabulary (`urn:solid:Entity`, `urn:solid:Bundle`, etc.).",
+  "examples": [
+    {
+      "title": "A provenance statement",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/provenance/dataset-2026",
+        "@type": "urn:solid:ProvenanceStatement",
+        "urn:solid:description": "Compiled from sensor readings collected by Wonderland Climate, validated against the 2026 baseline."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/ProvenanceStatement"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

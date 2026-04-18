@@ -342,6 +342,13 @@
     "status": "stable",
     "path": "/JobPosting/"
   },
+  "urn:solid:Jurisdiction": {
+    "label": "Jurisdiction",
+    "description": "A legal, political, or administrative jurisdiction — a country, state, or governing region.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Jurisdiction/"
+  },
   "urn:solid:LicenseDocument": {
     "label": "LicenseDocument",
     "description": "A legal document giving permission to do something with a resource — typically referenced by the `license` predicate.",
@@ -517,6 +524,13 @@
     "status": "stable",
     "path": "/Project/"
   },
+  "urn:solid:ProvenanceStatement": {
+    "label": "ProvenanceStatement",
+    "description": "A statement about the provenance of a resource — its origin, custody history, transformations.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/ProvenanceStatement/"
+  },
   "urn:solid:Question": {
     "label": "Question",
     "description": "A question being asked — typically with one or more proposed answers (a poll).",
@@ -587,12 +601,26 @@
     "status": "stable",
     "path": "/Revision/"
   },
+  "urn:solid:RightsStatement": {
+    "label": "RightsStatement",
+    "description": "A statement about the intellectual property rights held in or over a resource.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/RightsStatement/"
+  },
   "urn:solid:Service": {
     "label": "Service",
     "description": "An ActivityStreams actor representing a service — an automated, headless software offering.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Service/"
+  },
+  "urn:solid:SizeOrDuration": {
+    "label": "SizeOrDuration",
+    "description": "A measured size or duration of a resource — pages, bytes, runtime, dimensions.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/SizeOrDuration/"
   },
   "urn:solid:SocialMediaPosting": {
     "label": "SocialMediaPosting",
@@ -1608,6 +1636,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/owner/"
+  },
+  "urn:solid:ownerOf": {
+    "label": "ownerOf",
+    "description": "A pod or resource the agent owns — the inverse of `owner`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/ownerOf/"
   },
   "urn:solid:page": {
     "label": "page",

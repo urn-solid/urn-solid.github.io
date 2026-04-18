@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:ownerOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "ownerOf",
+  "rdfs:comment": "A pod or resource the agent owns — the inverse of `owner`.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#ownerOf",
+  "rdfs:seeAlso": [
+    "urn:solid:owner",
+    "urn:solid:storage"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "notToBeConfusedWith": [
+    "urn:solid:owner"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Inverse of `urn:solid:owner` — declared on a WebID to enumerate the pods/resources the user owns. Useful for cross-pod ownership claims and discovery. Often co-asserted with `urn:solid:storage`.",
+  "examples": [
+    {
+      "title": "WebID claiming pod ownership",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:ownerOf": [
+          { "@id": "https://alice.example.org/" },
+          { "@id": "https://alice.work.example.org/" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#ownerOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
