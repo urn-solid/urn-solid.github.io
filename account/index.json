@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:account",
+  "@type": "rdf:Property",
+  "rdfs:label": "account",
+  "rdfs:comment": "An online account held by the subject.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/account",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/solid/terms#account"
+  ],
+  "rdfs:domain": "urn:solid:Agent",
+  "rdfs:range": "http://xmlns.com/foaf/0.1/OnlineAccount",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The value is an `OnlineAccount` resource describing the account (the service it lives on, the account name, etc.), not the bare account URL. For a Solid pod-specific notion of account ownership, see `solid:account`.",
+  "examples": [
+    {
+      "title": "Person with a GitHub account",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:account": {
+          "@type": "http://xmlns.com/foaf/0.1/OnlineAccount",
+          "http://xmlns.com/foaf/0.1/accountName": "alice",
+          "http://xmlns.com/foaf/0.1/accountServiceHomepage": { "@id": "https://github.com/" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/account"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
