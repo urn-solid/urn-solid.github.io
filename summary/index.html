@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:summary — urn-solid</title>
+<meta name="description" content="A natural-language summary of the object — typically shorter than its `content`.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/summary/">
+<link rel="alternate" type="application/ld+json" href="/summary/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:summary",
+  "@type": "rdf:Property",
+  "rdfs:label": "summary",
+  "rdfs:comment": "A natural-language summary of the object — typically shorter than its `content`.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#summary",
+  "rdfs:seeAlso": [
+    "urn:solid:abstract",
+    "urn:solid:description"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:description",
+    "urn:solid:abstract"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "ActivityStreams' short-form digest — in Mastodon and other fediverse clients this is the content-warning / spoiler-text field. Pair with `urn:solid:content` for the full body. For long-form bibliographic abstracts, prefer `urn:solid:abstract`; for generic resource descriptions, `urn:solid:description`.",
+  "examples": [
+    {
+      "title": "Note with a content-warning summary",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/spoiler-1",
+        "@type": "urn:solid:Note",
+        "urn:solid:summary": "Spoilers for season 3",
+        "urn:solid:content": "<p>...</p>"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#summary"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
