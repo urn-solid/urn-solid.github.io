@@ -41,6 +41,13 @@
     "status": "stable",
     "path": "/Image/"
   },
+  "urn:solid:Note": {
+    "label": "Note",
+    "description": "A short written work — typically a microblog post, comment, or reply.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Note/"
+  },
   "urn:solid:OnlineAccount": {
     "label": "OnlineAccount",
     "description": "An account held by an Agent on some online service.",

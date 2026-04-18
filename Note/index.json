@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Note",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Note",
+  "rdfs:comment": "A short written work — typically a microblog post, comment, or reply.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Note",
+  "rdfs:seeAlso": [
+    "https://schema.org/SocialMediaPosting",
+    "urn:solid:Article"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Article"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "ActivityStreams short-form post: a tweet, toot, comment, status update. Use `urn:solid:Article` for longer-form essays. Pair with `urn:solid:content` (the body) and `urn:solid:attributedTo` (the author).",
+  "examples": [
+    {
+      "title": "A microblog post",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/abc",
+        "@type": "urn:solid:Note",
+        "https://www.w3.org/ns/activitystreams#content": "Hello, fediverse!",
+        "https://www.w3.org/ns/activitystreams#attributedTo": { "@id": "https://example.org/alice#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Note"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
