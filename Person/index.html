@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Person — urn-solid</title>
+<meta name="description" content="A human being.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Person/">
+<link rel="alternate" type="application/ld+json" href="/Person/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Person",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Person",
+  "rdfs:comment": "A human being.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/Person",
+  "rdfs:seeAlso": [
+    "https://schema.org/Person",
+    "http://www.w3.org/2006/vcard/ns#Individual"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Agent"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use for any human individual. Prefer this over `vcard:Individual` unless vCard-specific properties are needed, and over `schema:Person` when interoperating with FOAF-based Solid data.",
+  "examples": [
+    {
+      "title": "Minimal JSON-LD",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "foaf:name": "Alice"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/Person",
+      "https://www.w3.org/TR/vocab-solid/"
+    ],
+    "curatedBy": "bootstrap"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "bootstrap",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

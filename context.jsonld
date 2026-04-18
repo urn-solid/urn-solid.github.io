@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "schema": "https://schema.org/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "as": "https://www.w3.org/ns/activitystreams#",
+    "solid": "http://www.w3.org/ns/solid/terms#",
+    "ldp": "http://www.w3.org/ns/ldp#",
+    "urns": "urn:solid:vocab/",
+
+    "notToBeConfusedWith": { "@id": "urns:notToBeConfusedWith", "@type": "@id" },
+    "status": "urns:status",
+    "added": { "@id": "urns:added", "@type": "xsd:date" },
+    "updated": { "@id": "dcterms:modified", "@type": "xsd:date" },
+    "supersededBy": { "@id": "dcterms:isReplacedBy", "@type": "@id" },
+    "notes": "urns:notes",
+    "examples": "urns:examples",
+    "provenance": "prov:wasDerivedFrom",
+    "history": "urns:history",
+    "see_also": "urns:seeAlsoIndex"
+  }
+}

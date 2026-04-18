@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Agent",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Agent",
+  "rdfs:comment": "A thing that acts — person, organization, group, or software.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/Agent",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/prov#Agent",
+    "https://www.w3.org/ns/activitystreams#Object"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Person"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use when the actor could be non-human (a bot, a group, a service). Prefer `urn:solid:Person` when you know the actor is specifically a human.",
+  "examples": [
+    {
+      "title": "Software agent",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/bots/curator",
+        "@type": "urn:solid:Agent",
+        "foaf:name": "Curator Bot"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "curatedBy": "bootstrap"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "bootstrap",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

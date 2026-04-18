@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Person",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Person",
+  "rdfs:comment": "A human being.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/Person",
+  "rdfs:seeAlso": [
+    "https://schema.org/Person",
+    "http://www.w3.org/2006/vcard/ns#Individual"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Agent"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use for any human individual. Prefer this over `vcard:Individual` unless vCard-specific properties are needed, and over `schema:Person` when interoperating with FOAF-based Solid data.",
+  "examples": [
+    {
+      "title": "Minimal JSON-LD",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "foaf:name": "Alice"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/Person",
+      "https://www.w3.org/TR/vocab-solid/"
+    ],
+    "curatedBy": "bootstrap"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "bootstrap",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

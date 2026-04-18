@@ -1,0 +1,15 @@
+{
+  "name": "urn-solid-site",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Build scripts and schema for the urn-solid.github.io registry.",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "build": "node scripts/build.js",
+    "all": "npm run validate && npm run build"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

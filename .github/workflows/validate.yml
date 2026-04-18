@@ -1,0 +1,25 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [gh-pages, main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm ci || npm install
+      - run: npm run validate
+      - name: Verify built artifacts are up to date
+        run: |
+          npm run build
+          if ! git diff --quiet; then
+            echo "::error::Built artifacts are stale. Run 'npm run build' locally and commit the result."
+            git diff --stat
+            exit 1
+          fi

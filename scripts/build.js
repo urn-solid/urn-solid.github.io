@@ -1,0 +1,125 @@
+#!/usr/bin/env node
+// Build step: read <Name>/index.json at repo root, validate structure, emit HTML wrappers + index.json + corpus.jsonl.
+// Idempotent: only writes a file if its content actually changed (avoids commit noise).
+
+const fs = require("node:fs");
+const path = require("node:path");
+
+const ROOT = path.resolve(__dirname, "..");
+
+// Root-level names that are NOT terms.
+const RESERVED = new Set([
+  "schema", "scripts", "node_modules", ".github", ".git", ".claude",
+  "assets", "vendor",
+]);
+
+const isTermDir = (name) => {
+  if (RESERVED.has(name)) return false;
+  if (name.startsWith(".")) return false;
+  if (!/^[A-Za-z][A-Za-z0-9_-]*$/.test(name)) return false;
+  return fs.existsSync(path.join(ROOT, name, "index.json"));
+};
+
+const writeIfChanged = (file, content) => {
+  if (fs.existsSync(file) && fs.readFileSync(file, "utf8") === content) return false;
+  fs.writeFileSync(file, content);
+  return true;
+};
+
+const escapeForScriptTag = (json) => json.replace(/<\/script/gi, "<\\/script");
+
+const htmlShell = (term, jsonText) => {
+  const id = term["@id"];
+  const name = id.replace(/^urn:solid:/, "");
+  const comment = (term["rdfs:comment"] || "").replace(/"/g, "&quot;");
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>${id} — urn-solid</title>
+<meta name="description" content="${comment}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/${name}/">
+<link rel="alternate" type="application/ld+json" href="/${name}/index.json">
+<script type="application/ld+json">
+${escapeForScriptTag(jsonText)}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
+`;
+};
+
+const assertNoCaseCollisions = (names) => {
+  const lower = new Map();
+  for (const n of names) {
+    const key = n.toLowerCase();
+    if (lower.has(key) && lower.get(key) !== n) {
+      throw new Error(`Case collision: "${lower.get(key)}" and "${n}" differ only in case.`);
+    }
+    lower.set(key, n);
+  }
+};
+
+const main = () => {
+  const names = fs.readdirSync(ROOT, { withFileTypes: true })
+    .filter(d => d.isDirectory())
+    .map(d => d.name)
+    .filter(isTermDir)
+    .sort();
+
+  assertNoCaseCollisions(names);
+
+  const index = {};
+  const corpusLines = [];
+  let htmlChanged = 0;
+
+  for (const name of names) {
+    const srcPath = path.join(ROOT, name, "index.json");
+    const jsonText = fs.readFileSync(srcPath, "utf8");
+
+    let term;
+    try { term = JSON.parse(jsonText); }
+    catch (e) {
+      console.error(`[build] ${srcPath}: malformed JSON — ${e.message}`);
+      process.exit(1);
+    }
+
+    const expectedId = `urn:solid:${name}`;
+    if (term["@id"] !== expectedId) {
+      console.error(`[build] ${srcPath}: @id "${term["@id"]}" does not match directory name (expected "${expectedId}").`);
+      process.exit(1);
+    }
+
+    if (writeIfChanged(path.join(ROOT, name, "index.html"), htmlShell(term, jsonText))) htmlChanged++;
+
+    index[term["@id"]] = {
+      label: term["rdfs:label"],
+      description: term["rdfs:comment"],
+      type: term["@type"],
+      status: term.status,
+      path: `/${name}/`,
+    };
+
+    corpusLines.push(JSON.stringify(term));
+  }
+
+  const indexChanged = writeIfChanged(path.join(ROOT, "index.json"), JSON.stringify(index, null, 2) + "\n");
+  const corpusChanged = writeIfChanged(path.join(ROOT, "corpus.jsonl"), corpusLines.join("\n") + "\n");
+
+  console.log(`[build] ${names.length} terms — ${htmlChanged} html updated, index.json ${indexChanged ? "updated" : "unchanged"}, corpus.jsonl ${corpusChanged ? "updated" : "unchanged"}`);
+};
+
+main();

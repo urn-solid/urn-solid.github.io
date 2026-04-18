@@ -1,0 +1,23 @@
+{
+  "urn:solid:Agent": {
+    "label": "Agent",
+    "description": "A thing that acts — person, organization, group, or software.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Agent/"
+  },
+  "urn:solid:Person": {
+    "label": "Person",
+    "description": "A human being.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Person/"
+  },
+  "urn:solid:name": {
+    "label": "name",
+    "description": "A name for the subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/name/"
+  }
+}

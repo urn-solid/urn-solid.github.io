@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://urn-solid.github.io/schema/term.schema.json",
+  "title": "urn:solid term",
+  "description": "Canonical shape of a single urn:solid term file. Source of truth lives in terms/<Name>/index.json.",
+  "type": "object",
+  "required": ["@context", "@id", "@type", "rdfs:label", "rdfs:comment", "status", "added"],
+  "additionalProperties": false,
+  "properties": {
+    "@context": {
+      "description": "JSON-LD context. Must reference the canonical urn-solid context.",
+      "type": "string",
+      "const": "https://urn-solid.github.io/context.jsonld"
+    },
+    "@id": {
+      "description": "The urn:solid: identifier for this term.",
+      "type": "string",
+      "pattern": "^urn:solid:[A-Za-z][A-Za-z0-9_-]*$"
+    },
+    "@type": {
+      "description": "RDF type: rdfs:Class for classes, rdf:Property for properties.",
+      "type": "string",
+      "enum": ["rdfs:Class", "rdf:Property"]
+    },
+    "rdfs:label": {
+      "description": "Short human-readable label.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "rdfs:comment": {
+      "description": "One-sentence definition.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 280
+    },
+    "owl:sameAs": {
+      "description": "Canonical equivalent URI in an existing vocabulary (strong equivalence).",
+      "type": "string",
+      "format": "uri"
+    },
+    "rdfs:seeAlso": {
+      "description": "Related URIs — aliases, loosely equivalent terms, or useful references.",
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "uniqueItems": true
+    },
+    "rdfs:domain": {
+      "description": "For properties: the class this property applies to.",
+      "type": "string",
+      "format": "uri"
+    },
+    "rdfs:range": {
+      "description": "For properties: the class of the value.",
+      "type": "string",
+      "format": "uri"
+    },
+    "notToBeConfusedWith": {
+      "description": "Similar urn:solid terms that are semantically distinct — helps LLMs disambiguate.",
+      "type": "array",
+      "items": { "type": "string", "pattern": "^urn:solid:[A-Za-z][A-Za-z0-9_-]*$" },
+      "uniqueItems": true
+    },
+    "status": {
+      "description": "Lifecycle status of the term.",
+      "type": "string",
+      "enum": ["stable", "experimental", "deprecated", "needs-review"]
+    },
+    "added": {
+      "description": "ISO date this term was introduced.",
+      "type": "string",
+      "format": "date"
+    },
+    "updated": {
+      "description": "ISO date of the most recent substantive change.",
+      "type": "string",
+      "format": "date"
+    },
+    "supersededBy": {
+      "description": "If deprecated, the urn:solid term that replaces this one.",
+      "type": "string",
+      "pattern": "^urn:solid:[A-Za-z][A-Za-z0-9_-]*$"
+    },
+    "notes": {
+      "description": "Longer prose (markdown). Include usage guidance and examples.",
+      "type": "string"
+    },
+    "examples": {
+      "description": "Idiomatic usage snippets. Each is a JSON-LD fragment showing the term in context.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "jsonld"],
+        "properties": {
+          "title": { "type": "string" },
+          "jsonld": {}
+        }
+      }
+    },
+    "provenance": {
+      "description": "Where this term was curated from and by whom.",
+      "type": "object",
+      "properties": {
+        "sources": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "curatedBy": { "type": "string" }
+      }
+    },
+    "history": {
+      "description": "Signed change events. Append-only. Each event is self-contained so the audit trail survives file copies.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["event", "at"],
+        "properties": {
+          "event": { "type": "string", "enum": ["added", "updated", "aligned", "deprecated", "renamed"] },
+          "at": { "type": "string", "format": "date-time" },
+          "by": { "type": "string" },
+          "note": { "type": "string" },
+          "signature": { "type": "string" }
+        }
+      }
+    },
+    "see_also": {
+      "description": "Discoverability pointers so an LLM dropped into this file can find the rest of the system.",
+      "type": "object",
+      "properties": {
+        "corpus": { "type": "string" },
+        "schema": { "type": "string" },
+        "index": { "type": "string" },
+        "llms": { "type": "string" }
+      }
+    }
+  }
+}

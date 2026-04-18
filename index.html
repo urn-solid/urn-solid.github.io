@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn-solid — canonical RDF term registry for Solid</title>
+<meta name="description" content="A curated, LLM-native registry of urn:solid: terms mapped to common RDF vocabularies — foaf, schema.org, dcterms, vcard, activitystreams, prov, ldp, solid.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/ld+json" href="/corpus.jsonl">
+</head>
+<body>
+
+<header class="hero">
+  <h1>urn-solid</h1>
+  <div class="subtitle">Canonical RDF term registry for Solid</div>
+  <nav style="margin-top: 0.75rem; font-size: 0.9rem;">
+    <a href="/corpus.jsonl" style="margin-right: 1.2rem; color: #888;">corpus</a>
+    <a href="/schema/term.schema.json" style="margin-right: 1.2rem; color: #888;">schema</a>
+    <a href="/llms.txt" style="margin-right: 1.2rem; color: #888;">llms.txt</a>
+    <a href="https://github.com/urn-solid/urn-solid.github.io" style="color: #888;">github</a>
+  </nav>
+</header>
+
+<section>
+  <h2>What this is</h2>
+  <p>A curated registry of <code>urn:solid:</code> identifiers mapped to the common RDF vocabularies — foaf, schema.org, dcterms, vcard, activitystreams, prov, ldp, solid. Every term is JSON-LD; the registry is designed to be efficient for LLMs and agents.</p>
+</section>
+
+<section>
+  <h2>For LLMs &amp; agents</h2>
+  <p>One fetch gets you the entire vocabulary: <a href="/corpus.jsonl"><code>/corpus.jsonl</code></a> — one JSON-LD record per line. Discovery and integration are at <a href="/llms.txt"><code>llms.txt</code></a> and <a href="https://github.com/urn-solid/urn-solid.github.io/blob/gh-pages/SKILL.md"><code>SKILL.md</code></a>.</p>
+</section>
+
+<section>
+  <h2>For humans</h2>
+  <p>Each term lives at <code>/&lt;Name&gt;/</code> — e.g. <a href="/Person/"><code>/Person/</code></a>, <a href="/Agent/"><code>/Agent/</code></a>, <a href="/name/"><code>/name/</code></a>. Every page inlines its JSON-LD as a <code>&lt;script type="application/ld+json"&gt;</code> data island, so view-source is the spec.</p>
+</section>
+
+<section>
+  <h2>Shape of a term</h2>
+  <p>JSON-LD with a canonical mapping (<code>owl:sameAs</code>), related URIs (<code>rdfs:seeAlso</code>), disambiguation (<code>notToBeConfusedWith</code>), examples, provenance, and an append-only change history. Full schema at <a href="/schema/term.schema.json"><code>/schema/term.schema.json</code></a>.</p>
+</section>
+
+<section>
+  <h2>Browse</h2>
+  <ul id="all-terms"><li><em>Loading…</em></li></ul>
+</section>
+
+<footer>
+  <p><a href="https://github.com/urn-solid/urn-solid.github.io">github.com/urn-solid/urn-solid.github.io</a></p>
+</footer>
+
+<script>
+(async () => {
+  const list = document.getElementById("all-terms");
+  try {
+    const res = await fetch("/index.json");
+    const idx = await res.json();
+    const entries = Object.entries(idx).sort(([a], [b]) => a.localeCompare(b));
+    list.innerHTML = "";
+    for (const [urn, info] of entries) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = info.path;
+      a.textContent = urn;
+      a.className = "urn";
+      li.append(a, " — ", info.label, ": ", info.description);
+      list.append(li);
+    }
+    if (!entries.length) list.innerHTML = "<li><em>No terms yet.</em></li>";
+  } catch (e) {
+    list.innerHTML = "<li><em>Failed to load index.</em></li>";
+  }
+})();
+</script>
+</body>
+</html>

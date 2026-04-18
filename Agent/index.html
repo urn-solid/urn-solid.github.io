@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Agent — urn-solid</title>
+<meta name="description" content="A thing that acts — person, organization, group, or software.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Agent/">
+<link rel="alternate" type="application/ld+json" href="/Agent/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Agent",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Agent",
+  "rdfs:comment": "A thing that acts — person, organization, group, or software.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/Agent",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/prov#Agent",
+    "https://www.w3.org/ns/activitystreams#Object"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Person"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use when the actor could be non-human (a bot, a group, a service). Prefer `urn:solid:Person` when you know the actor is specifically a human.",
+  "examples": [
+    {
+      "title": "Software agent",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/bots/curator",
+        "@type": "urn:solid:Agent",
+        "foaf:name": "Curator Bot"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "curatedBy": "bootstrap"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "bootstrap",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
