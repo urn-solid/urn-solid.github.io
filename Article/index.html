@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Article — urn-solid</title>
+<meta name="description" content="An article — a written work, typically published as part of a larger publication.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Article/">
+<link rel="alternate" type="application/ld+json" href="/Article/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Article",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Article",
+  "rdfs:comment": "An article — a written work, typically published as part of a larger publication.",
+  "owl:sameAs": "https://schema.org/Article",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#Article",
+    "https://schema.org/BlogPosting",
+    "https://schema.org/NewsArticle"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Document` (and schema:CreativeWork). Use for blog posts, news articles, papers. Pair with `urn:solid:headline`, `urn:solid:articleBody`, `urn:solid:author` for full schema.org-style modelling. For ActivityPub-style social posts, see `as:Article` or `as:Note`.",
+  "examples": [
+    {
+      "title": "A blog post as an Article",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/jsonld-intro",
+        "@type": "urn:solid:Article",
+        "urn:solid:name": "An Introduction to JSON-LD",
+        "urn:solid:creator": { "@id": "https://example.org/alice#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Article"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
