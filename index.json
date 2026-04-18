@@ -104,6 +104,13 @@
     "status": "stable",
     "path": "/birthday/"
   },
+  "urn:solid:created": {
+    "label": "created",
+    "description": "The date the resource was created.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/created/"
+  },
   "urn:solid:currentProject": {
     "label": "currentProject",
     "description": "A project the person is currently active on.",
