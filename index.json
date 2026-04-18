@@ -237,6 +237,13 @@
     "status": "stable",
     "path": "/interest/"
   },
+  "urn:solid:isPartOf": {
+    "label": "isPartOf",
+    "description": "A related resource of which the described resource is a part.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/isPartOf/"
+  },
   "urn:solid:isPrimaryTopicOf": {
     "label": "isPrimaryTopicOf",
     "description": "A document of which the subject is the primary topic — the inverse of `primaryTopic`.",
