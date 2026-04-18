@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasPart",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasPart",
+  "rdfs:comment": "A related resource that is included as a part of the described resource.",
+  "owl:sameAs": "http://purl.org/dc/terms/hasPart",
+  "rdfs:seeAlso": [
+    "https://schema.org/hasPart",
+    "urn:solid:isPartOf"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:isPartOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Inverse of `urn:solid:isPartOf`. Use to enumerate the constituent parts of a compound resource (chapters of a book, articles in a journal issue, photos in an album). Repeat for multiple parts.",
+  "examples": [
+    {
+      "title": "Book with chapters",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/books/wonderland",
+        "@type": "urn:solid:Document",
+        "urn:solid:hasPart": [
+          { "@id": "https://example.org/books/wonderland/ch1" },
+          { "@id": "https://example.org/books/wonderland/ch2" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/hasPart"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
