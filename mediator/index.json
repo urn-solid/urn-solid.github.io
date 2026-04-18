@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:mediator",
+  "@type": "rdf:Property",
+  "rdfs:label": "mediator",
+  "rdfs:comment": "An intermediary that mediates access to or use of the resource — typically for educational or curated content.",
+  "owl:sameAs": "http://purl.org/dc/terms/mediator",
+  "rdfs:seeAlso": [
+    "urn:solid:audience"
+  ],
+  "rdfs:range": "urn:solid:Agent",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "From the educational-resources tradition: a teacher who selects and uses a textbook is a `mediator`. Used to express that the resource was filtered or curated by an intermediary before reaching its `urn:solid:audience`. Niche outside library/edu contexts.",
+  "examples": [
+    {
+      "title": "Course material with a teacher mediator",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/courses/jsonld-101/materials",
+        "@type": "urn:solid:Document",
+        "urn:solid:mediator": { "@id": "https://example.org/teachers/alice" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/mediator"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

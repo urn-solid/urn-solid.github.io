@@ -538,6 +538,13 @@
     "status": "stable",
     "path": "/SoftwareAgent/"
   },
+  "urn:solid:Standard": {
+    "label": "Standard",
+    "description": "A reference point against which other resources can be evaluated or compared — a specification, schema, or policy.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Standard/"
+  },
   "urn:solid:Tombstone": {
     "label": "Tombstone",
     "description": "A marker for an Object that previously existed but has been deleted.",
@@ -734,6 +741,13 @@
     "status": "stable",
     "path": "/author/"
   },
+  "urn:solid:available": {
+    "label": "available",
+    "description": "The date or period when the resource became (or will become) available.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/available/"
+  },
   "urn:solid:basedNear": {
     "label": "basedNear",
     "description": "A geographic location near where the subject is based.",
@@ -860,6 +874,13 @@
     "status": "stable",
     "path": "/date/"
   },
+  "urn:solid:dateAccepted": {
+    "label": "dateAccepted",
+    "description": "The date the resource was formally accepted — typically by a publisher, peer reviewer, or governing body.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/dateAccepted/"
+  },
   "urn:solid:dateCreated": {
     "label": "dateCreated",
     "description": "The date the resource was created.",
@@ -880,6 +901,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/datePublished/"
+  },
+  "urn:solid:dateSubmitted": {
+    "label": "dateSubmitted",
+    "description": "The date the resource was formally submitted — typically to a publisher, conference, or review process.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/dateSubmitted/"
   },
   "urn:solid:depiction": {
     "label": "depiction",
@@ -1412,6 +1440,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/mediaType/"
+  },
+  "urn:solid:mediator": {
+    "label": "mediator",
+    "description": "An intermediary that mediates access to or use of the resource — typically for educational or curated content.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/mediator/"
   },
   "urn:solid:member": {
     "label": "member",

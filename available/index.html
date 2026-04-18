@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:available — urn-solid</title>
+<meta name="description" content="The date or period when the resource became (or will become) available.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/available/">
+<link rel="alternate" type="application/ld+json" href="/available/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:available",
+  "@type": "rdf:Property",
+  "rdfs:label": "available",
+  "rdfs:comment": "The date or period when the resource became (or will become) available.",
+  "owl:sameAs": "http://purl.org/dc/terms/available",
+  "rdfs:seeAlso": [
+    "urn:solid:issued",
+    "urn:solid:datePublished"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "notToBeConfusedWith": [
+    "urn:solid:issued",
+    "urn:solid:datePublished"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:issued` (formal publication): `available` is when the resource starts to be obtainable, which can differ from publication for embargoed papers, scheduled releases, or pre-orders. Can be a single date or an ISO 8601 interval.",
+  "examples": [
+    {
+      "title": "Embargoed paper with availability date",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/papers/embargoed-42",
+        "@type": "urn:solid:Document",
+        "urn:solid:created": "2026-03-01",
+        "urn:solid:available": "2026-09-01"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/available"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

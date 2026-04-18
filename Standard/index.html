@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Standard — urn-solid</title>
+<meta name="description" content="A reference point against which other resources can be evaluated or compared — a specification, schema, or policy.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Standard/">
+<link rel="alternate" type="application/ld+json" href="/Standard/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Standard",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Standard",
+  "rdfs:comment": "A reference point against which other resources can be evaluated or compared — a specification, schema, or policy.",
+  "owl:sameAs": "http://purl.org/dc/terms/Standard",
+  "rdfs:seeAlso": [
+    "urn:solid:conformsTo"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as the @type for specs, schemas, normative documents — anything resources can `dcterms:conformsTo`. RFCs, W3C Recommendations, ISO standards, JSON Schemas all qualify. Pair with `urn:solid:identifier` for a stable reference (RFC number, spec ID).",
+  "examples": [
+    {
+      "title": "JSON Schema declared as a Standard",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://urn-solid.github.io/schema/term.schema.json",
+        "@type": "urn:solid:Standard",
+        "urn:solid:name": "urn-solid term schema"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/Standard"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

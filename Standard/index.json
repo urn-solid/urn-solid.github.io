@@ -1,0 +1,45 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Standard",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Standard",
+  "rdfs:comment": "A reference point against which other resources can be evaluated or compared — a specification, schema, or policy.",
+  "owl:sameAs": "http://purl.org/dc/terms/Standard",
+  "rdfs:seeAlso": [
+    "urn:solid:conformsTo"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as the @type for specs, schemas, normative documents — anything resources can `dcterms:conformsTo`. RFCs, W3C Recommendations, ISO standards, JSON Schemas all qualify. Pair with `urn:solid:identifier` for a stable reference (RFC number, spec ID).",
+  "examples": [
+    {
+      "title": "JSON Schema declared as a Standard",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://urn-solid.github.io/schema/term.schema.json",
+        "@type": "urn:solid:Standard",
+        "urn:solid:name": "urn-solid term schema"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/Standard"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

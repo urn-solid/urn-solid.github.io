@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:dateAccepted",
+  "@type": "rdf:Property",
+  "rdfs:label": "dateAccepted",
+  "rdfs:comment": "The date the resource was formally accepted — typically by a publisher, peer reviewer, or governing body.",
+  "owl:sameAs": "http://purl.org/dc/terms/dateAccepted",
+  "rdfs:seeAlso": [
+    "urn:solid:issued",
+    "urn:solid:dateSubmitted"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#date",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Common in academic publishing — captures the gap between submission, acceptance, and publication. Pair with `dcterms:dateSubmitted` and `urn:solid:issued`. ISO 8601 date.",
+  "examples": [
+    {
+      "title": "Paper with submit/accept/publish dates",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/papers/42",
+        "@type": "urn:solid:Document",
+        "http://purl.org/dc/terms/dateSubmitted": "2026-01-15",
+        "urn:solid:dateAccepted": "2026-03-04",
+        "urn:solid:issued": "2026-04-18"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/dateAccepted"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
