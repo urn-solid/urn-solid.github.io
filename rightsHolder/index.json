@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:rightsHolder",
+  "@type": "rdf:Property",
+  "rdfs:label": "rightsHolder",
+  "rdfs:comment": "An agent owning or managing rights over the resource — the copyright holder, IP owner, or licensing controller.",
+  "owl:sameAs": "http://purl.org/dc/terms/rightsHolder",
+  "rdfs:seeAlso": [
+    "urn:solid:rights",
+    "urn:solid:license",
+    "urn:solid:creator",
+    "https://schema.org/copyrightHolder"
+  ],
+  "rdfs:range": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:creator",
+    "urn:solid:owner"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Distinct from `urn:solid:creator` (who made it) and `urn:solid:owner` (Solid pod ownership): `rightsHolder` is specifically about IP/copyright control. A work-for-hire has a creator (the worker) and a separate rightsHolder (the employer).",
+  "examples": [
+    {
+      "title": "Document with a rights holder",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/works/widget-manual",
+        "@type": "urn:solid:Document",
+        "urn:solid:rightsHolder": { "@id": "https://example.org/acme" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/rightsHolder"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

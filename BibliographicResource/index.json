@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:BibliographicResource",
+  "@type": "rdfs:Class",
+  "rdfs:label": "BibliographicResource",
+  "rdfs:comment": "A book, article, or other documentary resource — typically with structured citation metadata.",
+  "owl:sameAs": "http://purl.org/dc/terms/BibliographicResource",
+  "rdfs:seeAlso": [
+    "urn:solid:Document",
+    "urn:solid:Article",
+    "urn:solid:Book"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Library/archive-flavored class for the things a bibliography indexes — books, journal articles, conference papers, datasets. Pair with `urn:solid:bibliographicCitation`, `urn:solid:isPartOf` (linking article→issue→journal), and `urn:solid:identifier` (DOI, ISBN). For schema.org-flavored data, prefer specific subclasses like `urn:solid:Book` or `urn:solid:Article`.",
+  "examples": [
+    {
+      "title": "A bibliographic resource",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/papers/42",
+        "@type": "urn:solid:BibliographicResource",
+        "urn:solid:bibliographicCitation": "Liddell, A. (2026). On Wonderlands. Solid Journal, 1(1), 1-10."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/BibliographicResource"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

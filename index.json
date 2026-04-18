@@ -69,6 +69,13 @@
     "status": "stable",
     "path": "/BasicContainer/"
   },
+  "urn:solid:BibliographicResource": {
+    "label": "BibliographicResource",
+    "description": "A book, article, or other documentary resource — typically with structured citation metadata.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/BibliographicResource/"
+  },
   "urn:solid:Block": {
     "label": "Block",
     "description": "An indication that the actor is blocking the object — typically another actor.",
@@ -923,6 +930,13 @@
     "status": "stable",
     "path": "/hasFormat/"
   },
+  "urn:solid:hasGender": {
+    "label": "hasGender",
+    "description": "The gender of the agent — typically referencing one of vCard's enumerated Gender values.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasGender/"
+  },
   "urn:solid:hasGeo": {
     "label": "hasGeo",
     "description": "Geographic coordinates associated with the subject — typically a `geo:` IRI carrying lat/long.",
@@ -971,6 +985,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasTelephone/"
+  },
+  "urn:solid:hasUID": {
+    "label": "hasUID",
+    "description": "A globally unique identifier for the vCard — typically a UUID or other long-lived ID.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasUID/"
   },
   "urn:solid:hasURL": {
     "label": "hasURL",
@@ -1426,6 +1447,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/rights/"
+  },
+  "urn:solid:rightsHolder": {
+    "label": "rightsHolder",
+    "description": "An agent owning or managing rights over the resource — the copyright holder, IP owner, or licensing controller.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/rightsHolder/"
+  },
+  "urn:solid:schoolHomepage": {
+    "label": "schoolHomepage",
+    "description": "A homepage of a school (or other educational institution) the person attended.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/schoolHomepage/"
   },
   "urn:solid:sha1": {
     "label": "sha1",

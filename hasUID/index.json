@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasUID",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasUID",
+  "rdfs:comment": "A globally unique identifier for the vCard — typically a UUID or other long-lived ID.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasUID",
+  "rdfs:seeAlso": [
+    "urn:solid:identifier"
+  ],
+  "rdfs:domain": "urn:solid:VCard",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "vCard's persistent identifier — the value remains stable across edits, lets clients dedupe two card revisions for the same person. Often a `urn:uuid:`. Distinct from `urn:solid:identifier` (general-purpose secondary identifier); `hasUID` is specifically the vCard tradition's stable ID.",
+  "examples": [
+    {
+      "title": "vCard with a UID",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasUID": { "@id": "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasUID"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

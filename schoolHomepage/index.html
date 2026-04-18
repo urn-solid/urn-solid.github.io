@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:schoolHomepage — urn-solid</title>
+<meta name="description" content="A homepage of a school (or other educational institution) the person attended.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/schoolHomepage/">
+<link rel="alternate" type="application/ld+json" href="/schoolHomepage/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:schoolHomepage",
+  "@type": "rdf:Property",
+  "rdfs:label": "schoolHomepage",
+  "rdfs:comment": "A homepage of a school (or other educational institution) the person attended.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/schoolHomepage",
+  "rdfs:seeAlso": [
+    "urn:solid:alumniOf",
+    "urn:solid:workplaceHomepage"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:Document",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "FOAF's lightweight \"I went to that school\" pointer — the value is the school's homepage URL, not a structured Organization resource. For richer educational-history data, prefer `urn:solid:alumniOf` pointing at a `schema:EducationalOrganization`. Repeat for multiple schools.",
+  "examples": [
+    {
+      "title": "Person with a school homepage",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:schoolHomepage": { "@id": "https://www.ox.ac.uk/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/schoolHomepage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
