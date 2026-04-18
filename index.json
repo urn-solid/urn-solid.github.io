@@ -300,6 +300,13 @@
     "status": "stable",
     "path": "/publisher/"
   },
+  "urn:solid:subject": {
+    "label": "subject",
+    "description": "A topic of the resource — typically expressed as keywords, key phrases, or controlled-vocabulary terms.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/subject/"
+  },
   "urn:solid:thumbnail": {
     "label": "thumbnail",
     "description": "A thumbnail rendering of the image — a smaller version for previews.",

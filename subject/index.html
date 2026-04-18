@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:subject — urn-solid</title>
+<meta name="description" content="A topic of the resource — typically expressed as keywords, key phrases, or controlled-vocabulary terms.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/subject/">
+<link rel="alternate" type="application/ld+json" href="/subject/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:subject",
+  "@type": "rdf:Property",
+  "rdfs:label": "subject",
+  "rdfs:comment": "A topic of the resource — typically expressed as keywords, key phrases, or controlled-vocabulary terms.",
+  "owl:sameAs": "http://purl.org/dc/terms/subject",
+  "rdfs:seeAlso": [
+    "https://schema.org/about",
+    "urn:solid:topic"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:topic",
+    "urn:solid:primaryTopic"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use repeatedly to enumerate subjects. Values can be string keywords, but a SKOS Concept or controlled-vocabulary term is preferred for interoperability. For \"the principal thing this document is about\", `urn:solid:primaryTopic` is more specific.",
+  "examples": [
+    {
+      "title": "Article tagged with subjects",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/jsonld-intro",
+        "@type": "urn:solid:Document",
+        "urn:solid:subject": ["JSON-LD", "RDF", "linked data"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/subject"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
