@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:givenName",
+  "@type": "rdf:Property",
+  "rdfs:label": "givenName",
+  "rdfs:comment": "The given name of a person — the personal name distinct from the family name.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/givenName",
+  "rdfs:seeAlso": [
+    "https://schema.org/givenName",
+    "http://www.w3.org/2006/vcard/ns#given-name",
+    "http://xmlns.com/foaf/0.1/firstName"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:familyName",
+    "urn:solid:firstName"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Modern preferred form for the personal/first name component. Pair with `urn:solid:familyName` for structured names. The older `foaf:firstName` is treated as equivalent in most consumers; prefer `givenName` for new data.",
+  "examples": [
+    {
+      "title": "Person with structured name",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:givenName": "Alice",
+        "urn:solid:familyName": "Liddell"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/givenName"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
