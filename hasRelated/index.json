@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasRelated",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasRelated",
+  "rdfs:comment": "A related contact for the vCard — typically another person (spouse, child, colleague) connected to the subject.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasRelated",
+  "rdfs:seeAlso": [
+    "urn:solid:related",
+    "urn:solid:knows",
+    "urn:solid:spouse"
+  ],
+  "rdfs:domain": "urn:solid:VCard",
+  "notToBeConfusedWith": [
+    "urn:solid:related"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "vCard's general inter-contact relation. Pair with `vcard:hasRelatedType` (work-colleague, family, etc.) for typed relations. Distinct from SKOS `urn:solid:related` (between Concepts) and from FOAF `urn:solid:knows` (between Persons in a social-graph sense).",
+  "examples": [
+    {
+      "title": "vCard pointing at a related contact",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasRelated": { "@id": "https://example.org/cards/bob" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasRelated"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

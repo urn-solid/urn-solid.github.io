@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:MediaTypeOrExtent",
+  "@type": "rdfs:Class",
+  "rdfs:label": "MediaTypeOrExtent",
+  "rdfs:comment": "A union class for `dcterms:MediaType` and `dcterms:SizeOrDuration` — the range of `dcterms:format`.",
+  "owl:sameAs": "http://purl.org/dc/terms/MediaTypeOrExtent",
+  "rdfs:seeAlso": [
+    "urn:solid:format",
+    "urn:solid:FileFormat",
+    "urn:solid:SizeOrDuration"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Type of values for `dcterms:format`: either a media type (IANA registry, file format) or a size/duration. Rarely typed directly — usually you pick a more specific subclass (`FileFormat`, `MediaType`, `SizeOrDuration`).",
+  "examples": [
+    {
+      "title": "A MediaTypeOrExtent value",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://www.iana.org/assignments/media-types/application/pdf",
+        "@type": "urn:solid:MediaTypeOrExtent",
+        "urn:solid:name": "application/pdf"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/MediaTypeOrExtent"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

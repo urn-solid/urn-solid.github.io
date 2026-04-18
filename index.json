@@ -461,6 +461,13 @@
     "status": "stable",
     "path": "/Logo/"
   },
+  "urn:solid:MediaTypeOrExtent": {
+    "label": "MediaTypeOrExtent",
+    "description": "A union class for `dcterms:MediaType` and `dcterms:SizeOrDuration` — the range of `dcterms:format`.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/MediaTypeOrExtent/"
+  },
   "urn:solid:MemberSubject": {
     "label": "MemberSubject",
     "description": "An LDP marker class for the special predicate value used by IndirectContainers when membership is computed from the inserted resource itself.",
@@ -1413,6 +1420,20 @@
     "status": "stable",
     "path": "/hasAddress/"
   },
+  "urn:solid:hasCalendarBusy": {
+    "label": "hasCalendarBusy",
+    "description": "A URL of the subject's free/busy calendar — shows availability without exposing event details.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasCalendarBusy/"
+  },
+  "urn:solid:hasCalendarLink": {
+    "label": "hasCalendarLink",
+    "description": "A URL of the subject's calendar — typically an iCalendar (.ics) feed or web calendar.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasCalendarLink/"
+  },
   "urn:solid:hasCategory": {
     "label": "hasCategory",
     "description": "A category or tag for the vCard — describing what kind of contact it is.",
@@ -1517,6 +1538,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasPhoto/"
+  },
+  "urn:solid:hasRelated": {
+    "label": "hasRelated",
+    "description": "A related contact for the vCard — typically another person (spouse, child, colleague) connected to the subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasRelated/"
   },
   "urn:solid:hasSource": {
     "label": "hasSource",
@@ -1685,6 +1713,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/instanceContainer/"
+  },
+  "urn:solid:instructionalMethod": {
+    "label": "instructionalMethod",
+    "description": "A process used to engender knowledge, attitudes, or skills using the resource — pedagogy.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/instructionalMethod/"
   },
   "urn:solid:interest": {
     "label": "interest",

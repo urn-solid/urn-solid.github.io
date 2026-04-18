@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasCalendarBusy",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasCalendarBusy",
+  "rdfs:comment": "A URL of the subject's free/busy calendar — shows availability without exposing event details.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasCalendarBusy",
+  "rdfs:seeAlso": [
+    "urn:solid:hasCalendarLink",
+    "urn:solid:hasCalendarRequest"
+  ],
+  "rdfs:domain": "urn:solid:VCard",
+  "rdfs:range": "urn:solid:Document",
+  "notToBeConfusedWith": [
+    "urn:solid:hasCalendarLink"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:hasCalendarLink` (full calendar with event details). Use for a privacy-preserving free/busy feed — schedulers can find open slots without seeing what's on. Typically a CalDAV free-busy URL or .ifb file.",
+  "examples": [
+    {
+      "title": "vCard with a free/busy URL",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasCalendarBusy": { "@id": "https://example.org/alice/freebusy.ifb" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasCalendarBusy"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

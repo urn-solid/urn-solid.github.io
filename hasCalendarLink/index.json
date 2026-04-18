@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasCalendarLink",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasCalendarLink",
+  "rdfs:comment": "A URL of the subject's calendar — typically an iCalendar (.ics) feed or web calendar.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasCalendarLink",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/2002/12/cal/ical#"
+  ],
+  "rdfs:domain": "urn:solid:VCard",
+  "rdfs:range": "urn:solid:Document",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to point at a public calendar — an .ics URL, a CalDAV endpoint, or a calendar page. For subscriber-friendly links, use a `webcal:` URI; for plain HTTPS, the consumer must know how to subscribe. Distinct from `urn:solid:hasCalendarBusy` (free/busy availability only).",
+  "examples": [
+    {
+      "title": "vCard with a public calendar",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasCalendarLink": { "@id": "https://example.org/alice/calendar.ics" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasCalendarLink"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

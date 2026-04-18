@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:instructionalMethod",
+  "@type": "rdf:Property",
+  "rdfs:label": "instructionalMethod",
+  "rdfs:comment": "A process used to engender knowledge, attitudes, or skills using the resource — pedagogy.",
+  "owl:sameAs": "http://purl.org/dc/terms/instructionalMethod",
+  "rdfs:seeAlso": [
+    "urn:solid:educationLevel",
+    "urn:solid:audience"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Used in educational-resources metadata to describe the teaching method (lecture, problem-set, workshop, MOOC video). Value is typically a controlled-vocabulary term or free-form string. Pair with `urn:solid:educationLevel`.",
+  "examples": [
+    {
+      "title": "A workshop's instructional method",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/courses/jsonld-workshop",
+        "@type": "urn:solid:Document",
+        "urn:solid:instructionalMethod": "Hands-on workshop with paired exercises"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/instructionalMethod"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
