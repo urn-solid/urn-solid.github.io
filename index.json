@@ -300,6 +300,13 @@
     "status": "stable",
     "path": "/attributedTo/"
   },
+  "urn:solid:author": {
+    "label": "author",
+    "description": "The author of the creative work.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/author/"
+  },
   "urn:solid:basedNear": {
     "label": "basedNear",
     "description": "A geographic location near where the subject is based.",

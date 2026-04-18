@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:author",
+  "@type": "rdf:Property",
+  "rdfs:label": "author",
+  "rdfs:comment": "The author of the creative work.",
+  "owl:sameAs": "https://schema.org/author",
+  "rdfs:seeAlso": [
+    "urn:solid:creator",
+    "urn:solid:attributedTo",
+    "urn:solid:wasAttributedTo"
+  ],
+  "rdfs:range": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:creator",
+    "urn:solid:contributor"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's narrow authorship predicate, meant for the author of a CreativeWork. For general authorship/creation attribution use `urn:solid:creator` (dcterms); for ActivityStreams social content use `urn:solid:attributedTo`. Repeat for co-authors.",
+  "examples": [
+    {
+      "title": "Article with an author",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Article",
+        "urn:solid:author": { "@id": "https://example.org/alice#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/author"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
