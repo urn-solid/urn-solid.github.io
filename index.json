@@ -286,6 +286,13 @@
     "status": "stable",
     "path": "/EducationalOrganization/"
   },
+  "urn:solid:EmptyCollection": {
+    "label": "EmptyCollection",
+    "description": "A PROV Collection with no members — the explicit empty case.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/EmptyCollection/"
+  },
   "urn:solid:Entity": {
     "label": "Entity",
     "description": "Anything in PROV that has provenance — a thing whose existence and history can be tracked.",
@@ -370,6 +377,13 @@
     "status": "stable",
     "path": "/IndirectContainer/"
   },
+  "urn:solid:Influence": {
+    "label": "Influence",
+    "description": "PROV's most general qualified-relation superclass — any role-aware connection between an Activity, Entity, or Agent.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Influence/"
+  },
   "urn:solid:Invalidation": {
     "label": "Invalidation",
     "description": "A qualified PROV invalidation event — the moment an Entity ceased to exist.",
@@ -425,6 +439,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Logo/"
+  },
+  "urn:solid:MemberSubject": {
+    "label": "MemberSubject",
+    "description": "An LDP marker class for the special predicate value used by IndirectContainers when membership is computed from the inserted resource itself.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/MemberSubject/"
   },
   "urn:solid:Membership": {
     "label": "Membership",
@@ -1532,6 +1553,13 @@
     "status": "stable",
     "path": "/hiddenLabel/"
   },
+  "urn:solid:holds": {
+    "label": "holds",
+    "description": "An ORG Post (position) that an Agent currently holds within an Organization.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/holds/"
+  },
   "urn:solid:homepage": {
     "label": "homepage",
     "description": "A homepage for the subject — a top-level page about the agent.",
@@ -2210,6 +2238,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/summary/"
+  },
+  "urn:solid:tableOfContents": {
+    "label": "tableOfContents",
+    "description": "A list of subunits of the resource — chapters, sections, parts.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/tableOfContents/"
   },
   "urn:solid:tag": {
     "label": "tag",

@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:tableOfContents",
+  "@type": "rdf:Property",
+  "rdfs:label": "tableOfContents",
+  "rdfs:comment": "A list of subunits of the resource — chapters, sections, parts.",
+  "owl:sameAs": "http://purl.org/dc/terms/tableOfContents",
+  "rdfs:seeAlso": [
+    "urn:solid:hasPart",
+    "https://schema.org/hasPart"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:hasPart"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Free-form text or list — typically a serialized TOC. For a structured part-of relation pointing at separate resources for each subunit, prefer `urn:solid:hasPart` (then each part has its own resource and metadata).",
+  "examples": [
+    {
+      "title": "Book with a table of contents",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/books/wonderland",
+        "@type": "urn:solid:Book",
+        "urn:solid:tableOfContents": "Ch 1: Down the Rabbit-Hole; Ch 2: The Pool of Tears; Ch 3: A Caucus-Race; ..."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/tableOfContents"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

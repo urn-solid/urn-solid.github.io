@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:MemberSubject",
+  "@type": "rdfs:Class",
+  "rdfs:label": "MemberSubject",
+  "rdfs:comment": "An LDP marker class for the special predicate value used by IndirectContainers when membership is computed from the inserted resource itself.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#MemberSubject",
+  "rdfs:seeAlso": [
+    "urn:solid:IndirectContainer",
+    "urn:solid:insertedContentRelation"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Used as the value of `ldp:insertedContentRelation` to indicate \"use the new resource itself as the membership target, not a property inside it\". Niche LDP escape hatch — most use cases are better served by ldp:BasicContainer or by naming a specific predicate.",
+  "examples": [
+    {
+      "title": "IndirectContainer using MemberSubject",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/abc/likes/",
+        "@type": "urn:solid:IndirectContainer",
+        "urn:solid:insertedContentRelation": { "@id": "http://www.w3.org/ns/ldp#MemberSubject" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#MemberSubject"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

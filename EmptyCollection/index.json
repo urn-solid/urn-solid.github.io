@@ -1,0 +1,44 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:EmptyCollection",
+  "@type": "rdfs:Class",
+  "rdfs:label": "EmptyCollection",
+  "rdfs:comment": "A PROV Collection with no members — the explicit empty case.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#EmptyCollection",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/prov#Collection"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Useful when you need to assert \"this collection is definitively empty\" rather than \"the membership is unknown\". Often the first state of a collection in a build pipeline before items are added; subsequent versions then `prov:wasDerivedFrom` the EmptyCollection.",
+  "examples": [
+    {
+      "title": "Initial empty bundle",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/bundles/initial",
+        "@type": "urn:solid:EmptyCollection"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#EmptyCollection"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

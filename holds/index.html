@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:holds — urn-solid</title>
+<meta name="description" content="An ORG Post (position) that an Agent currently holds within an Organization.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/holds/">
+<link rel="alternate" type="application/ld+json" href="/holds/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:holds",
+  "@type": "rdf:Property",
+  "rdfs:label": "holds",
+  "rdfs:comment": "An ORG Post (position) that an Agent currently holds within an Organization.",
+  "owl:sameAs": "http://www.w3.org/ns/org#holds",
+  "rdfs:seeAlso": [
+    "urn:solid:Membership",
+    "urn:solid:hadRole"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to declare that a Person currently occupies a named Post (org:Post) — \"holds the position of CTO\". A Post is a stable, identified position that may be held by different people over time, distinct from Membership (which is the participation event itself).",
+  "examples": [
+    {
+      "title": "Person holding a position",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:holds": { "@id": "https://example.org/orgs/acme/posts/cto" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/org#holds"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

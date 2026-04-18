@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Influence — urn-solid</title>
+<meta name="description" content="PROV's most general qualified-relation superclass — any role-aware connection between an Activity, Entity, or Agent.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Influence/">
+<link rel="alternate" type="application/ld+json" href="/Influence/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Influence",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Influence",
+  "rdfs:comment": "PROV's most general qualified-relation superclass — any role-aware connection between an Activity, Entity, or Agent.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#Influence",
+  "rdfs:seeAlso": [
+    "urn:solid:Generation",
+    "urn:solid:Usage",
+    "urn:solid:Attribution",
+    "urn:solid:Association",
+    "urn:solid:Derivation",
+    "urn:solid:Communication",
+    "urn:solid:Delegation"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Superclass of all PROV qualified relations (`Generation`, `Usage`, `Attribution`, `Association`, `Derivation`, `Communication`, `Delegation`, `Invalidation`, `End`, `Start`). Rarely typed directly — pick a specific subclass for clarity. Useful when reasoning generically over PROV qualifications.",
+  "examples": [
+    {
+      "title": "An influence relation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/influences/build-input",
+        "@type": "urn:solid:Influence",
+        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/sources/term.schema.json" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#Influence"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
