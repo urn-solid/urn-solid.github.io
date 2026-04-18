@@ -181,6 +181,13 @@
     "status": "stable",
     "path": "/Project/"
   },
+  "urn:solid:TypeIndex": {
+    "label": "TypeIndex",
+    "description": "A registry that maps RDF classes to the locations in a Solid pod where instances of those classes are stored.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/TypeIndex/"
+  },
   "urn:solid:Update": {
     "label": "Update",
     "description": "An activity in which the actor has updated the object.",

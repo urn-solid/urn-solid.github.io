@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:TypeIndex",
+  "@type": "rdfs:Class",
+  "rdfs:label": "TypeIndex",
+  "rdfs:comment": "A registry that maps RDF classes to the locations in a Solid pod where instances of those classes are stored.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#TypeIndex",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/solid/terms#TypeRegistration",
+    "http://www.w3.org/ns/solid/terms#publicTypeIndex",
+    "http://www.w3.org/ns/solid/terms#privateTypeIndex"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The discovery mechanism Solid apps use to find where a user's data of a given type lives. A WebID typically links to one public TypeIndex (`solid:publicTypeIndex`) and one private TypeIndex (`solid:privateTypeIndex`). Each holds a set of `solid:TypeRegistration`s.",
+  "examples": [
+    {
+      "title": "WebID pointing at type indexes",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "http://www.w3.org/ns/solid/terms#publicTypeIndex": { "@id": "https://alice.example.org/settings/publicTypeIndex.ttl" },
+        "http://www.w3.org/ns/solid/terms#privateTypeIndex": { "@id": "https://alice.example.org/settings/privateTypeIndex.ttl" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#TypeIndex"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
