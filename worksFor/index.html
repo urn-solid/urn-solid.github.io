@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:worksFor — urn-solid</title>
+<meta name="description" content="An organization the person currently works for.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/worksFor/">
+<link rel="alternate" type="application/ld+json" href="/worksFor/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:worksFor",
+  "@type": "rdf:Property",
+  "rdfs:label": "worksFor",
+  "rdfs:comment": "An organization the person currently works for.",
+  "owl:sameAs": "https://schema.org/worksFor",
+  "rdfs:seeAlso": [
+    "https://schema.org/alumniOf",
+    "urn:solid:member"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:Organization",
+  "notToBeConfusedWith": [
+    "urn:solid:member"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use for current employment relationships. For past employers, use `schema:alumniOf`. For looser group affiliations (clubs, mailing lists, project contributors), `urn:solid:member` is more apt — `worksFor` implies an employment-like commitment.",
+  "examples": [
+    {
+      "title": "Person employed by an organization",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:worksFor": { "@id": "https://example.org/acme" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/worksFor"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

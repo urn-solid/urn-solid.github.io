@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:JobPosting",
+  "@type": "rdfs:Class",
+  "rdfs:label": "JobPosting",
+  "rdfs:comment": "A listing for a job — an opportunity to be employed in a specific role.",
+  "owl:sameAs": "https://schema.org/JobPosting",
+  "rdfs:seeAlso": [
+    "https://schema.org/Occupation",
+    "urn:solid:Organization"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Pair with `schema:hiringOrganization`, `schema:jobLocation`, `schema:datePosted`, `schema:baseSalary`, `schema:employmentType`. Heavily used by job boards for SEO rich results — Google specifically rewards correct JobPosting markup.",
+  "examples": [
+    {
+      "title": "A job posting",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/jobs/eng-42",
+        "@type": "urn:solid:JobPosting",
+        "https://schema.org/title": "Senior Engineer",
+        "https://schema.org/hiringOrganization": { "@id": "https://example.org/acme" },
+        "https://schema.org/datePosted": "2026-04-18"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/JobPosting"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

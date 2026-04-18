@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Recipe — urn-solid</title>
+<meta name="description" content="A recipe — instructions for preparing a dish, with ingredients, steps, and yield.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Recipe/">
+<link rel="alternate" type="application/ld+json" href="/Recipe/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Recipe",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Recipe",
+  "rdfs:comment": "A recipe — instructions for preparing a dish, with ingredients, steps, and yield.",
+  "owl:sameAs": "https://schema.org/Recipe",
+  "rdfs:seeAlso": [
+    "urn:solid:CreativeWork",
+    "https://schema.org/HowTo"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `schema:HowTo` (and indirectly of `urn:solid:CreativeWork`). Pair with `schema:recipeIngredient`, `schema:recipeInstructions`, `schema:recipeYield`, `schema:cookTime`, `schema:nutrition`. Heavily used by recipe sites for SEO rich results.",
+  "examples": [
+    {
+      "title": "A simple recipe",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/recipes/pancakes",
+        "@type": "urn:solid:Recipe",
+        "urn:solid:name": "Pancakes",
+        "https://schema.org/recipeIngredient": ["1 cup flour", "1 egg", "1 cup milk"],
+        "https://schema.org/recipeYield": "4 servings"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Recipe"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -90,6 +90,13 @@
     "status": "stable",
     "path": "/Book/"
   },
+  "urn:solid:Brand": {
+    "label": "Brand",
+    "description": "A brand — a distinctive identity associated with a product, service, or organization.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Brand/"
+  },
   "urn:solid:City": {
     "label": "City",
     "description": "A city — a permanent settlement of significant size.",
@@ -208,6 +215,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/ImageObject/"
+  },
+  "urn:solid:JobPosting": {
+    "label": "JobPosting",
+    "description": "A listing for a job — an opportunity to be employed in a specific role.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/JobPosting/"
   },
   "urn:solid:Like": {
     "label": "Like",
@@ -334,6 +348,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Rating/"
+  },
+  "urn:solid:Recipe": {
+    "label": "Recipe",
+    "description": "A recipe — instructions for preparing a dish, with ingredients, steps, and yield.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Recipe/"
   },
   "urn:solid:Reject": {
     "label": "Reject",
@@ -860,6 +881,13 @@
     "status": "stable",
     "path": "/knows/"
   },
+  "urn:solid:knowsAbout": {
+    "label": "knowsAbout",
+    "description": "A topic the agent has expertise in or knowledge of.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/knowsAbout/"
+  },
   "urn:solid:language": {
     "label": "language",
     "description": "A language of the resource — typically a BCP 47 tag.",
@@ -1167,5 +1195,12 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/weblog/"
+  },
+  "urn:solid:worksFor": {
+    "label": "worksFor",
+    "description": "An organization the person currently works for.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/worksFor/"
   }
 }
