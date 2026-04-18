@@ -27,6 +27,13 @@
     "status": "stable",
     "path": "/Create/"
   },
+  "urn:solid:Delete": {
+    "label": "Delete",
+    "description": "An activity in which the actor has deleted the object.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Delete/"
+  },
   "urn:solid:Document": {
     "label": "Document",
     "description": "A document of any kind — typically a web resource.",

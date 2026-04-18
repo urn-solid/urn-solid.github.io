@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Delete",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Delete",
+  "rdfs:comment": "An activity in which the actor has deleted the object.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Delete",
+  "rdfs:seeAlso": [
+    "https://schema.org/DeleteAction",
+    "https://www.w3.org/ns/activitystreams#Tombstone"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. The wire-level signal that an object has been removed. Receivers typically replace their cached object with an `as:Tombstone` rather than dropping the record entirely, preserving links from elsewhere.",
+  "examples": [
+    {
+      "title": "Alice deletes a note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/del-1",
+        "@type": "urn:solid:Delete",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://example.org/notes/abc" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Delete"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
