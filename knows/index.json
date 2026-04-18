@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:knows",
+  "@type": "rdf:Property",
+  "rdfs:label": "knows",
+  "rdfs:comment": "A person known by the subject — a directed acquaintance relationship.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/knows",
+  "rdfs:seeAlso": [
+    "https://schema.org/knows"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:Person",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Asymmetric by default: A knows B does not imply B knows A. Use repeatedly to enumerate the social graph. The FOAF tradition treats this loosely — any acknowledged acquaintance counts.",
+  "examples": [
+    {
+      "title": "Alice knows Bob",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:knows": { "@id": "https://example.org/bob#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/knows"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

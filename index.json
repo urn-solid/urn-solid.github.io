@@ -13,6 +13,13 @@
     "status": "stable",
     "path": "/Person/"
   },
+  "urn:solid:knows": {
+    "label": "knows",
+    "description": "A person known by the subject — a directed acquaintance relationship.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/knows/"
+  },
   "urn:solid:name": {
     "label": "name",
     "description": "A name for the subject.",
