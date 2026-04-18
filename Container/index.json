@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Container",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Container",
+  "rdfs:comment": "A Linked Data Platform Container — an LDP resource that contains other resources, the LDP analogue of a directory.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#Container",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/ldp#BasicContainer",
+    "urn:solid:Collection"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Collection"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The base LDP container type. Solid pods organise data into Containers (typically `ldp:BasicContainer`); members are listed via `urn:solid:contains`. Distinct from `as:Collection`, which is a logical grouping at the data layer rather than an HTTP-level resource container.",
+  "examples": [
+    {
+      "title": "An LDP container with two members",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/photos/",
+        "@type": "urn:solid:Container",
+        "urn:solid:contains": [
+          { "@id": "https://alice.example.org/photos/sunset.jpg" },
+          { "@id": "https://alice.example.org/photos/mountains.jpg" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#Container"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

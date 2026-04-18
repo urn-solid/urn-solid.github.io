@@ -34,6 +34,13 @@
     "status": "stable",
     "path": "/Collection/"
   },
+  "urn:solid:Container": {
+    "label": "Container",
+    "description": "A Linked Data Platform Container — an LDP resource that contains other resources, the LDP analogue of a directory.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Container/"
+  },
   "urn:solid:Create": {
     "label": "Create",
     "description": "An activity in which the actor has created the object.",
