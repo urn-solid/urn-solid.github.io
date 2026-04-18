@@ -20,6 +20,13 @@
     "status": "stable",
     "path": "/Group/"
   },
+  "urn:solid:Image": {
+    "label": "Image",
+    "description": "An image — a document that is a still picture (PNG, JPEG, SVG, etc.).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Image/"
+  },
   "urn:solid:OnlineAccount": {
     "label": "OnlineAccount",
     "description": "An account held by an Agent on some online service.",

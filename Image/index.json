@@ -1,0 +1,45 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Image",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Image",
+  "rdfs:comment": "An image — a document that is a still picture (PNG, JPEG, SVG, etc.).",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/Image",
+  "rdfs:seeAlso": [
+    "https://schema.org/ImageObject",
+    "https://www.w3.org/ns/activitystreams#Image"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Document`. Use as the value type of `urn:solid:depiction` / `urn:solid:img`. For rich image metadata (dimensions, encoding, captions), `schema:ImageObject` carries more fields.",
+  "examples": [
+    {
+      "title": "An image",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice/portrait.jpg",
+        "@type": "urn:solid:Image"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/Image"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
