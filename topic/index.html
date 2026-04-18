@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:topic — urn-solid</title>
+<meta name="description" content="A thing the document is about — the inverse of `page`.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/topic/">
+<link rel="alternate" type="application/ld+json" href="/topic/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:topic",
+  "@type": "rdf:Property",
+  "rdfs:label": "topic",
+  "rdfs:comment": "A thing the document is about — the inverse of `page`.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/topic",
+  "rdfs:seeAlso": [
+    "https://schema.org/about",
+    "urn:solid:page",
+    "urn:solid:primaryTopic"
+  ],
+  "rdfs:domain": "urn:solid:Document",
+  "notToBeConfusedWith": [
+    "urn:solid:primaryTopic"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "A document can have many `topic`s with no implied primacy. Use `urn:solid:primaryTopic` when one topic is the principal subject (one per document). The inverse `urn:solid:page` goes from subject → document.",
+  "examples": [
+    {
+      "title": "Document about two people",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/conversation",
+        "@type": "urn:solid:Document",
+        "urn:solid:topic": [
+          { "@id": "https://example.org/alice#me" },
+          { "@id": "https://example.org/bob#me" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/topic"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

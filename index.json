@@ -251,6 +251,13 @@
     "status": "stable",
     "path": "/primaryTopic/"
   },
+  "urn:solid:topic": {
+    "label": "topic",
+    "description": "A thing the document is about — the inverse of `page`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/topic/"
+  },
   "urn:solid:weblog": {
     "label": "weblog",
     "description": "A weblog (blog) of the subject — the document the agent publishes posts to.",
