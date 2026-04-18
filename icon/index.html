@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:icon — urn-solid</title>
+<meta name="description" content="A small image representing the object — typically a square avatar or favicon.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/icon/">
+<link rel="alternate" type="application/ld+json" href="/icon/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:icon",
+  "@type": "rdf:Property",
+  "rdfs:label": "icon",
+  "rdfs:comment": "A small image representing the object — typically a square avatar or favicon.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#icon",
+  "rdfs:seeAlso": [
+    "urn:solid:img",
+    "urn:solid:depiction",
+    "https://schema.org/image"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:img",
+    "urn:solid:depiction"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "ActivityStreams' small-avatar slot — typically square, low-resolution, used as the visual identifier for an actor or object in lists. The value is an Image or a URL. For a full-size portrait, prefer `urn:solid:img` (FOAF) or `urn:solid:depiction`.",
+  "examples": [
+    {
+      "title": "Person with an avatar icon",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:icon": { "@id": "https://example.org/alice/avatar-64.png" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#icon"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

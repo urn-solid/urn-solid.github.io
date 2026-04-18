@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:duration — urn-solid</title>
+<meta name="description" content="How long the object lasts — for time-bounded objects like events, audio, or video.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/duration/">
+<link rel="alternate" type="application/ld+json" href="/duration/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:duration",
+  "@type": "rdf:Property",
+  "rdfs:label": "duration",
+  "rdfs:comment": "How long the object lasts — for time-bounded objects like events, audio, or video.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#duration",
+  "rdfs:seeAlso": [
+    "https://schema.org/duration"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#duration",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "An `xsd:duration` value (ISO 8601 — e.g. `\"PT3M30S\"` for 3 minutes 30 seconds). Used on Events, audio/video objects, and any time-bounded thing. For start/end points, use `urn:solid:startTime` and `urn:solid:endTime` instead.",
+  "examples": [
+    {
+      "title": "Audio object with a duration",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/audio/podcast-42",
+        "@type": "https://www.w3.org/ns/activitystreams#Audio",
+        "urn:solid:duration": "PT45M"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#duration"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

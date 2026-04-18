@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:endTime",
+  "@type": "rdf:Property",
+  "rdfs:label": "endTime",
+  "rdfs:comment": "The date and time the object ends.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#endTime",
+  "rdfs:seeAlso": [
+    "urn:solid:startTime",
+    "https://schema.org/endDate",
+    "http://www.w3.org/ns/prov#endedAtTime"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "notToBeConfusedWith": [
+    "urn:solid:startTime"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "ISO 8601 datetime marking when an Event, Activity, or other time-bounded object ends. Pair with `urn:solid:startTime`. May be omitted for ongoing or open-ended objects. For PROV-grade activity timing, prefer `prov:endedAtTime`.",
+  "examples": [
+    {
+      "title": "Conference session with end time",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/events/keynote",
+        "@type": "urn:solid:Event",
+        "urn:solid:startTime": "2026-04-18T09:00:00Z",
+        "urn:solid:endTime": "2026-04-18T10:00:00Z"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#endTime"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

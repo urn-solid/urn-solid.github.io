@@ -153,6 +153,13 @@
     "status": "stable",
     "path": "/Like/"
   },
+  "urn:solid:Move": {
+    "label": "Move",
+    "description": "An activity in which the actor moves the object from one location (origin) to another (target).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Move/"
+  },
   "urn:solid:Note": {
     "label": "Note",
     "description": "A short written work — typically a microblog post, comment, or reply.",
@@ -482,12 +489,26 @@
     "status": "stable",
     "path": "/description/"
   },
+  "urn:solid:duration": {
+    "label": "duration",
+    "description": "How long the object lasts — for time-bounded objects like events, audio, or video.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/duration/"
+  },
   "urn:solid:email": {
     "label": "email",
     "description": "An email address for the subject, as a plain string.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/email/"
+  },
+  "urn:solid:endTime": {
+    "label": "endTime",
+    "description": "The date and time the object ends.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/endTime/"
   },
   "urn:solid:familyName": {
     "label": "familyName",
@@ -614,6 +635,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/homepage/"
+  },
+  "urn:solid:icon": {
+    "label": "icon",
+    "description": "A small image representing the object — typically a square avatar or favicon.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/icon/"
   },
   "urn:solid:identifier": {
     "label": "identifier",
@@ -852,6 +880,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/source/"
+  },
+  "urn:solid:startTime": {
+    "label": "startTime",
+    "description": "The date and time the object begins.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/startTime/"
   },
   "urn:solid:storage": {
     "label": "storage",

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Move — urn-solid</title>
+<meta name="description" content="An activity in which the actor moves the object from one location (origin) to another (target).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Move/">
+<link rel="alternate" type="application/ld+json" href="/Move/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Move",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Move",
+  "rdfs:comment": "An activity in which the actor moves the object from one location (origin) to another (target).",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Move",
+  "rdfs:seeAlso": [
+    "urn:solid:Add",
+    "urn:solid:Remove"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. Combines `Add` + `Remove` semantics: `as:object` is what's being moved, `as:origin` names the source location, `as:target` names the destination. Common use in ActivityPub is account migration (moving an actor from one server to another).",
+  "examples": [
+    {
+      "title": "Account migration",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://old.example.org/activities/move-1",
+        "@type": "urn:solid:Move",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://old.example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://old.example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#target": { "@id": "https://new.example.org/alice#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Move"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
