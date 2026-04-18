@@ -13,6 +13,13 @@
     "status": "stable",
     "path": "/Agent/"
   },
+  "urn:solid:Announce": {
+    "label": "Announce",
+    "description": "An activity in which the actor is calling the audience's attention to the object — a boost or repost.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Announce/"
+  },
   "urn:solid:Article": {
     "label": "Article",
     "description": "An article — a written work, typically published as part of a larger publication.",

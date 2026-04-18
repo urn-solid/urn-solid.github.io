@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Announce",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Announce",
+  "rdfs:comment": "An activity in which the actor is calling the audience's attention to the object — a boost or repost.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Announce",
+  "rdfs:seeAlso": [
+    "urn:solid:Like",
+    "urn:solid:Create"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Like",
+    "urn:solid:Create"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. The ActivityPub primitive for boost / repost / share — distinct from `Like` (favorite without redistribution) and `Create` (publishing a new object). The `as:object` is the resource being amplified to the actor's audience.",
+  "examples": [
+    {
+      "title": "Alice boosts Bob's note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/boost-1",
+        "@type": "urn:solid:Announce",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://bob.example.org/notes/xyz" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Announce"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
