@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Update — urn-solid</title>
+<meta name="description" content="An activity in which the actor has updated the object.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Update/">
+<link rel="alternate" type="application/ld+json" href="/Update/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Update",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Update",
+  "rdfs:comment": "An activity in which the actor has updated the object.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Update",
+  "rdfs:seeAlso": [
+    "https://schema.org/UpdateAction",
+    "urn:solid:Create"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Create"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. The wire-level signal that an actor edited an existing object — receivers should replace their cached copy with the updated payload in `as:object`. Pair with `as:published` for when the edit happened.",
+  "examples": [
+    {
+      "title": "Alice updates a note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/910",
+        "@type": "urn:solid:Update",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": {
+          "@id": "https://example.org/notes/abc",
+          "https://www.w3.org/ns/activitystreams#content": "Hello, fediverse! (edited)"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Update"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

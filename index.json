@@ -132,6 +132,13 @@
     "status": "stable",
     "path": "/Project/"
   },
+  "urn:solid:Update": {
+    "label": "Update",
+    "description": "An activity in which the actor has updated the object.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Update/"
+  },
   "urn:solid:abstract": {
     "label": "abstract",
     "description": "A summary of the resource — typically one paragraph.",
