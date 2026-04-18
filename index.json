@@ -377,6 +377,13 @@
     "status": "stable",
     "path": "/img/"
   },
+  "urn:solid:inReplyTo": {
+    "label": "inReplyTo",
+    "description": "An object the current object is a reply to.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/inReplyTo/"
+  },
   "urn:solid:interest": {
     "label": "interest",
     "description": "A page about a topic of interest to the agent.",

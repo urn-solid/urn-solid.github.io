@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:inReplyTo",
+  "@type": "rdf:Property",
+  "rdfs:label": "inReplyTo",
+  "rdfs:comment": "An object the current object is a reply to.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#inReplyTo",
+  "rdfs:seeAlso": [
+    "https://schema.org/replyToUrl",
+    "https://www.w3.org/ns/activitystreams#replies"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to link a reply Note (or other object) back at its parent. Forms reply threads in ActivityPub. Repeat for replies addressing multiple parents (rare). The inverse `as:replies` lives on the parent and points at a Collection of replies.",
+  "examples": [
+    {
+      "title": "Reply pointing at its parent note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/reply-1",
+        "@type": "urn:solid:Note",
+        "https://www.w3.org/ns/activitystreams#content": "Agreed!",
+        "urn:solid:inReplyTo": { "@id": "https://example.org/notes/abc" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#inReplyTo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

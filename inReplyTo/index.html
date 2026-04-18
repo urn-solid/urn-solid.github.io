@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:inReplyTo — urn-solid</title>
+<meta name="description" content="An object the current object is a reply to.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/inReplyTo/">
+<link rel="alternate" type="application/ld+json" href="/inReplyTo/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:inReplyTo",
+  "@type": "rdf:Property",
+  "rdfs:label": "inReplyTo",
+  "rdfs:comment": "An object the current object is a reply to.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#inReplyTo",
+  "rdfs:seeAlso": [
+    "https://schema.org/replyToUrl",
+    "https://www.w3.org/ns/activitystreams#replies"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to link a reply Note (or other object) back at its parent. Forms reply threads in ActivityPub. Repeat for replies addressing multiple parents (rare). The inverse `as:replies` lives on the parent and points at a Collection of replies.",
+  "examples": [
+    {
+      "title": "Reply pointing at its parent note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/reply-1",
+        "@type": "urn:solid:Note",
+        "https://www.w3.org/ns/activitystreams#content": "Agreed!",
+        "urn:solid:inReplyTo": { "@id": "https://example.org/notes/abc" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#inReplyTo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
