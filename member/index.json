@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:member",
+  "@type": "rdf:Property",
+  "rdfs:label": "member",
+  "rdfs:comment": "An agent that is a member of the group.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/member",
+  "rdfs:seeAlso": [
+    "https://schema.org/member",
+    "http://www.w3.org/2006/vcard/ns#hasMember"
+  ],
+  "rdfs:domain": "http://xmlns.com/foaf/0.1/Group",
+  "rdfs:range": "urn:solid:Agent",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to enumerate the agents that belong to a group. Repeated to list multiple members. The subject should typically be a `foaf:Group`; the value can be any Agent (Person, Organization, Group, software).",
+  "examples": [
+    {
+      "title": "Group with two members",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/groups/admins",
+        "@type": "http://xmlns.com/foaf/0.1/Group",
+        "urn:solid:member": [
+          { "@id": "https://example.org/alice#me" },
+          { "@id": "https://example.org/bob#me" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/member"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

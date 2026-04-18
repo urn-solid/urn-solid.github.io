@@ -48,6 +48,13 @@
     "status": "stable",
     "path": "/mbox/"
   },
+  "urn:solid:member": {
+    "label": "member",
+    "description": "An agent that is a member of the group.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/member/"
+  },
   "urn:solid:name": {
     "label": "name",
     "description": "A name for the subject.",
