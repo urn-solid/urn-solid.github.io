@@ -244,6 +244,13 @@
     "status": "stable",
     "path": "/lastName/"
   },
+  "urn:solid:license": {
+    "label": "license",
+    "description": "A legal document giving official permission to do something with the resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/license/"
+  },
   "urn:solid:made": {
     "label": "made",
     "description": "A thing the agent made — the inverse of `maker`.",

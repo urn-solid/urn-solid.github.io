@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:license",
+  "@type": "rdf:Property",
+  "rdfs:label": "license",
+  "rdfs:comment": "A legal document giving official permission to do something with the resource.",
+  "owl:sameAs": "http://purl.org/dc/terms/license",
+  "rdfs:seeAlso": [
+    "https://schema.org/license",
+    "http://creativecommons.org/ns#license"
+  ],
+  "rdfs:range": "http://purl.org/dc/terms/LicenseDocument",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Value should be the license document's IRI (e.g. an SPDX URL or a Creative Commons license page), not free text. For unstructured rights statements use `urn:solid:rights` instead. SPDX (`https://spdx.org/licenses/MIT`) and Creative Commons URLs are the most interoperable choices.",
+  "examples": [
+    {
+      "title": "Document under MIT license",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/code/lib",
+        "@type": "urn:solid:Document",
+        "urn:solid:license": { "@id": "https://spdx.org/licenses/MIT" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/license"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
