@@ -678,6 +678,13 @@
     "status": "stable",
     "path": "/primaryTopic/"
   },
+  "urn:solid:published": {
+    "label": "published",
+    "description": "The date and time the object was published — when it went public.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/published/"
+  },
   "urn:solid:publisher": {
     "label": "publisher",
     "description": "An entity responsible for making the resource available.",
