@@ -370,6 +370,13 @@
     "status": "stable",
     "path": "/LinguisticSystem/"
   },
+  "urn:solid:Logo": {
+    "label": "Logo",
+    "description": "A vCard Logo resource — the logo image associated with a vCard (typically for an Organization).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Logo/"
+  },
   "urn:solid:Move": {
     "label": "Move",
     "description": "An activity in which the actor moves the object from one location (origin) to another (target).",
@@ -467,6 +474,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/PersonalProfileDocument/"
+  },
+  "urn:solid:Photo": {
+    "label": "Photo",
+    "description": "A vCard Photo resource — a photographic image associated with a vCard.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Photo/"
   },
   "urn:solid:PhysicalMedium": {
     "label": "PhysicalMedium",
@@ -642,6 +656,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Standard/"
+  },
+  "urn:solid:Tel": {
+    "label": "Tel",
+    "description": "A vCard Tel resource — a structured telephone-number entry with type tags and value.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Tel/"
   },
   "urn:solid:Tombstone": {
     "label": "Tombstone",
@@ -1245,12 +1266,26 @@
     "status": "stable",
     "path": "/hasInstantMessage/"
   },
+  "urn:solid:hasKey": {
+    "label": "hasKey",
+    "description": "A cryptographic public key associated with the vCard's owner — for encryption or signature verification.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasKey/"
+  },
   "urn:solid:hasLanguage": {
     "label": "hasLanguage",
     "description": "A language the subject communicates in — typically a BCP 47 language tag.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasLanguage/"
+  },
+  "urn:solid:hasLogo": {
+    "label": "hasLogo",
+    "description": "A logo image associated with the vCard — typically the brand mark of an Organization.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasLogo/"
   },
   "urn:solid:hasMember": {
     "label": "hasMember",

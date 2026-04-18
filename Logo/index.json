@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Logo",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Logo",
+  "rdfs:comment": "A vCard Logo resource — the logo image associated with a vCard (typically for an Organization).",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#Logo",
+  "rdfs:seeAlso": [
+    "urn:solid:hasLogo",
+    "urn:solid:Image",
+    "https://schema.org/logo"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Image",
+    "urn:solid:Photo"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:Photo` (typically a person's portrait) and generic `urn:solid:Image`: a Logo specifically represents a brand or organizational mark. Used as the value of `urn:solid:hasLogo`.",
+  "examples": [
+    {
+      "title": "Organization vCard with a logo",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/acme",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasLogo": {
+          "@type": "urn:solid:Logo",
+          "https://www.w3.org/ns/activitystreams#url": { "@id": "https://acme.example.org/logo.svg" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#Logo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

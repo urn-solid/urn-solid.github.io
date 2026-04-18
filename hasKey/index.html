@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:hasKey — urn-solid</title>
+<meta name="description" content="A cryptographic public key associated with the vCard's owner — for encryption or signature verification.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/hasKey/">
+<link rel="alternate" type="application/ld+json" href="/hasKey/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasKey",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasKey",
+  "rdfs:comment": "A cryptographic public key associated with the vCard's owner — for encryption or signature verification.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasKey",
+  "rdfs:seeAlso": [
+    "https://w3c-ccg.github.io/security-vocab/"
+  ],
+  "rdfs:domain": "urn:solid:VCard",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "vCard's lightweight public-key pointer. Value is typically a URL of the key file (PGP, SSH, X.509). For richer key metadata (algorithm, usage, controllers), use the W3C Security Vocabulary. Repeat for multiple keys (encryption, signing, etc.).",
+  "examples": [
+    {
+      "title": "vCard with a PGP key URL",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/alice",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasKey": { "@id": "https://alice.example.org/pgp.asc" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasKey"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

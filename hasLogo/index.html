@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:hasLogo — urn-solid</title>
+<meta name="description" content="A logo image associated with the vCard — typically the brand mark of an Organization.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/hasLogo/">
+<link rel="alternate" type="application/ld+json" href="/hasLogo/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasLogo",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasLogo",
+  "rdfs:comment": "A logo image associated with the vCard — typically the brand mark of an Organization.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasLogo",
+  "rdfs:seeAlso": [
+    "urn:solid:Logo",
+    "urn:solid:hasPhoto",
+    "https://schema.org/logo"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:hasPhoto"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use on Organization vCards for the brand mark. Distinct from `urn:solid:hasPhoto` (typically a person's portrait). Schema.org's equivalent is `schema:logo`. Value can be a URL or a `urn:solid:Logo` resource.",
+  "examples": [
+    {
+      "title": "Organization with a logo URL",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/cards/acme",
+        "@type": "urn:solid:VCard",
+        "urn:solid:organization-name": "Acme Corp",
+        "urn:solid:hasLogo": { "@id": "https://acme.example.org/logo.svg" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasLogo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
