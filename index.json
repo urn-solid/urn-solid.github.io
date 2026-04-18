@@ -20,6 +20,13 @@
     "status": "stable",
     "path": "/knows/"
   },
+  "urn:solid:mbox": {
+    "label": "mbox",
+    "description": "A personal mailbox — typically a mailto: IRI.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/mbox/"
+  },
   "urn:solid:name": {
     "label": "name",
     "description": "A name for the subject.",
