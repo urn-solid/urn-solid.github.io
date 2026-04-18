@@ -13,6 +13,13 @@
     "status": "stable",
     "path": "/Person/"
   },
+  "urn:solid:depiction": {
+    "label": "depiction",
+    "description": "An image that depicts the subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/depiction/"
+  },
   "urn:solid:homepage": {
     "label": "homepage",
     "description": "A homepage for the subject — a top-level page about the agent.",
