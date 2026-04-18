@@ -13,6 +13,13 @@
     "status": "stable",
     "path": "/OnlineAccount/"
   },
+  "urn:solid:Organization": {
+    "label": "Organization",
+    "description": "A formal organization — a company, society, institution, or other collective with structure.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Organization/"
+  },
   "urn:solid:Person": {
     "label": "Person",
     "description": "A human being.",
