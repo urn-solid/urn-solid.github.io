@@ -426,6 +426,13 @@
     "status": "stable",
     "path": "/Logo/"
   },
+  "urn:solid:Membership": {
+    "label": "Membership",
+    "description": "An ORG Membership — a role-and-time-aware participation of an Agent in an Organization.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Membership/"
+  },
   "urn:solid:Move": {
     "label": "Move",
     "description": "An activity in which the actor moves the object from one location (origin) to another (target).",
@@ -502,6 +509,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Organization/"
+  },
+  "urn:solid:OrganizationalUnit": {
+    "label": "OrganizationalUnit",
+    "description": "An ORG OrganizationalUnit — a part of a larger Organization (department, team, division) without independent legal status.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/OrganizationalUnit/"
   },
   "urn:solid:PeriodOfTime": {
     "label": "PeriodOfTime",
@@ -1448,6 +1462,13 @@
     "status": "stable",
     "path": "/hasSource/"
   },
+  "urn:solid:hasSubOrganization": {
+    "label": "hasSubOrganization",
+    "description": "An OrganizationalUnit (department, team, division) that is part of the parent Organization.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasSubOrganization/"
+  },
   "urn:solid:hasTelephone": {
     "label": "hasTelephone",
     "description": "A telephone number associated with the subject — typically a `tel:` IRI.",
@@ -1812,6 +1833,13 @@
     "status": "stable",
     "path": "/member/"
   },
+  "urn:solid:memberOf": {
+    "label": "memberOf",
+    "description": "An Organization (or Group) the Agent is a member of — the inverse of `member`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/memberOf/"
+  },
   "urn:solid:membershipResource": {
     "label": "membershipResource",
     "description": "The resource that membership triples for a DirectContainer or IndirectContainer are added to.",
@@ -2133,6 +2161,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/street-address/"
+  },
+  "urn:solid:subOrganizationOf": {
+    "label": "subOrganizationOf",
+    "description": "The parent Organization that this OrganizationalUnit is part of — the inverse of `hasSubOrganization`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/subOrganizationOf/"
   },
   "urn:solid:subject": {
     "label": "subject",

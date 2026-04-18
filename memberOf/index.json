@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:memberOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "memberOf",
+  "rdfs:comment": "An Organization (or Group) the Agent is a member of — the inverse of `member`.",
+  "owl:sameAs": "http://www.w3.org/ns/org#memberOf",
+  "rdfs:seeAlso": [
+    "urn:solid:member",
+    "urn:solid:Membership",
+    "https://schema.org/memberOf"
+  ],
+  "rdfs:domain": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:member"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Inverse of `urn:solid:member` (the FOAF group → member relation, also re-used by ORG). Use on the Agent to enumerate the Organizations they belong to. For role-aware membership with start/end times, attach a `urn:solid:Membership` resource instead.",
+  "examples": [
+    {
+      "title": "Person belonging to multiple orgs",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:memberOf": [
+          { "@id": "https://example.org/orgs/acme-ltd" },
+          { "@id": "https://example.org/groups/admins" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/org#memberOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

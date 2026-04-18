@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:OrganizationalUnit — urn-solid</title>
+<meta name="description" content="An ORG OrganizationalUnit — a part of a larger Organization (department, team, division) without independent legal status.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/OrganizationalUnit/">
+<link rel="alternate" type="application/ld+json" href="/OrganizationalUnit/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:OrganizationalUnit",
+  "@type": "rdfs:Class",
+  "rdfs:label": "OrganizationalUnit",
+  "rdfs:comment": "An ORG OrganizationalUnit — a part of a larger Organization (department, team, division) without independent legal status.",
+  "owl:sameAs": "http://www.w3.org/ns/org#OrganizationalUnit",
+  "rdfs:seeAlso": [
+    "urn:solid:Organization",
+    "urn:solid:FormalOrganization",
+    "urn:solid:subOrganizationOf"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:FormalOrganization"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `urn:solid:Organization`. Distinguishes internal divisions from legally-recognized entities (which use `urn:solid:FormalOrganization`). Pair with `urn:solid:subOrganizationOf` to point at the parent.",
+  "examples": [
+    {
+      "title": "An engineering team within a company",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/orgs/acme/eng",
+        "@type": "urn:solid:OrganizationalUnit",
+        "urn:solid:name": "Engineering",
+        "urn:solid:subOrganizationOf": { "@id": "https://example.org/orgs/acme-ltd" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/org#OrganizationalUnit"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
