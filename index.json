@@ -531,6 +531,13 @@
     "status": "stable",
     "path": "/nick/"
   },
+  "urn:solid:oidcIssuer": {
+    "label": "oidcIssuer",
+    "description": "The OpenID Connect issuer that this WebID trusts to authenticate it.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/oidcIssuer/"
+  },
   "urn:solid:openid": {
     "label": "openid",
     "description": "An OpenID identifier for the Agent — a document used to verify the Agent's identity.",
