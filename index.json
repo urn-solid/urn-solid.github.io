@@ -48,6 +48,13 @@
     "status": "stable",
     "path": "/Image/"
   },
+  "urn:solid:Like": {
+    "label": "Like",
+    "description": "An indication that the actor likes, recommends, or favorites the object.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Like/"
+  },
   "urn:solid:Note": {
     "label": "Note",
     "description": "A short written work — typically a microblog post, comment, or reply.",

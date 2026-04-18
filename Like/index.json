@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Like",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Like",
+  "rdfs:comment": "An indication that the actor likes, recommends, or favorites the object.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Like",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#Dislike",
+    "https://schema.org/LikeAction"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. The classic ActivityPub favourite/like. The `as:object` is the thing being liked; `as:actor` is the liker; `as:published` records when. To unlike, send an `as:Undo` of the original Like.",
+  "examples": [
+    {
+      "title": "Alice likes a note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/likes/789",
+        "@type": "urn:solid:Like",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://example.org/notes/abc" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Like"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
