@@ -83,6 +83,13 @@
     "status": "stable",
     "path": "/accountServiceHomepage/"
   },
+  "urn:solid:age": {
+    "label": "age",
+    "description": "The age in years of the agent.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/age/"
+  },
   "urn:solid:depiction": {
     "label": "depiction",
     "description": "An image that depicts the subject.",
