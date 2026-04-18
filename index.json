@@ -377,6 +377,13 @@
     "status": "stable",
     "path": "/publisher/"
   },
+  "urn:solid:references": {
+    "label": "references",
+    "description": "A related resource that is referenced, cited, or otherwise pointed to by the described resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/references/"
+  },
   "urn:solid:rights": {
     "label": "rights",
     "description": "Information about rights held in and over the resource — copyright, IP, access restrictions.",
