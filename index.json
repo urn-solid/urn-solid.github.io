@@ -447,6 +447,13 @@
     "status": "stable",
     "path": "/inbox/"
   },
+  "urn:solid:instance": {
+    "label": "instance",
+    "description": "A single resource that's an instance of the class declared by the TypeRegistration.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/instance/"
+  },
   "urn:solid:interest": {
     "label": "interest",
     "description": "A page about a topic of interest to the agent.",

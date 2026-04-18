@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:instance — urn-solid</title>
+<meta name="description" content="A single resource that's an instance of the class declared by the TypeRegistration.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/instance/">
+<link rel="alternate" type="application/ld+json" href="/instance/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:instance",
+  "@type": "rdf:Property",
+  "rdfs:label": "instance",
+  "rdfs:comment": "A single resource that's an instance of the class declared by the TypeRegistration.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#instance",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/solid/terms#instanceContainer",
+    "urn:solid:TypeRegistration"
+  ],
+  "rdfs:domain": "urn:solid:TypeRegistration",
+  "notToBeConfusedWith": [],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use when the user has exactly one instance — typically a settings document or singleton. For collections of instances under a directory, use `solid:instanceContainer` instead. A single TypeRegistration may carry multiple `solid:instance` values.",
+  "examples": [
+    {
+      "title": "Registration for a single preferences file",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/settings/privateTypeIndex.ttl#prefs",
+        "@type": "urn:solid:TypeRegistration",
+        "urn:solid:forClass": { "@id": "http://www.w3.org/ns/pim/space#ConfigurationFile" },
+        "urn:solid:instance": { "@id": "https://alice.example.org/settings/prefs.ttl" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#instance"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
