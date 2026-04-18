@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Generation",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Generation",
+  "rdfs:comment": "A qualified PROV generation event — the moment an Activity produced an Entity.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#Generation",
+  "rdfs:seeAlso": [
+    "urn:solid:wasGeneratedBy",
+    "urn:solid:atTime"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to qualify `prov:wasGeneratedBy` with timing, role, or location. Linked from an Entity via `prov:qualifiedGeneration`. Carries `prov:activity`, `urn:solid:atTime`, and `urn:solid:hadRole`.",
+  "examples": [
+    {
+      "title": "Qualified generation of an artifact",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/generations/release-v2",
+        "@type": "urn:solid:Generation",
+        "http://www.w3.org/ns/prov#activity": { "@id": "https://example.org/builds/v2-publish" },
+        "urn:solid:atTime": "2026-04-18T18:00:00Z"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#Generation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

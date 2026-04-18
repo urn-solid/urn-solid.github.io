@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:FileFormat",
+  "@type": "rdfs:Class",
+  "rdfs:label": "FileFormat",
+  "rdfs:comment": "A digital file format — typically referenced as the type of a `dcterms:format` value.",
+  "owl:sameAs": "http://purl.org/dc/terms/FileFormat",
+  "rdfs:seeAlso": [
+    "urn:solid:format",
+    "http://purl.org/dc/terms/MediaType"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as @type for FileFormat resources referenced from `urn:solid:format`. The IANA media type registry serves as the canonical FileFormat namespace; values typically come from there. For the broader \"this is a media type\" class, see `dcterms:MediaType`.",
+  "examples": [
+    {
+      "title": "PDF as a FileFormat resource",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://www.iana.org/assignments/media-types/application/pdf",
+        "@type": "urn:solid:FileFormat",
+        "urn:solid:name": "application/pdf"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/FileFormat"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

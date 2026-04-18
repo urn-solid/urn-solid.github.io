@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Usage",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Usage",
+  "rdfs:comment": "A qualified PROV usage event — the moment an Activity used an Entity as input.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#Usage",
+  "rdfs:seeAlso": [
+    "urn:solid:used",
+    "urn:solid:Generation"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Generation"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Inverse-direction sibling of `urn:solid:Generation`: where Generation is \"Activity → Entity\" (output), Usage is \"Entity → Activity\" (input). Use to qualify `prov:used` with `urn:solid:atTime` and `urn:solid:hadRole`. Linked from an Activity via `prov:qualifiedUsage`.",
+  "examples": [
+    {
+      "title": "Qualified usage of a source file",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/usages/build-input-1",
+        "@type": "urn:solid:Usage",
+        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/sources/term.schema.json" },
+        "urn:solid:atTime": "2026-04-18T18:00:00Z"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#Usage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

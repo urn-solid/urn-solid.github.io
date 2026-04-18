@@ -251,6 +251,13 @@
     "status": "stable",
     "path": "/Event/"
   },
+  "urn:solid:FileFormat": {
+    "label": "FileFormat",
+    "description": "A digital file format — typically referenced as the type of a `dcterms:format` value.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/FileFormat/"
+  },
   "urn:solid:Follow": {
     "label": "Follow",
     "description": "An indication that the actor wants to follow the object — typically another Actor.",
@@ -264,6 +271,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Frequency/"
+  },
+  "urn:solid:Generation": {
+    "label": "Generation",
+    "description": "A qualified PROV generation event — the moment an Activity produced an Entity.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Generation/"
   },
   "urn:solid:GeoCoordinates": {
     "label": "GeoCoordinates",
@@ -299,6 +313,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/IndirectContainer/"
+  },
+  "urn:solid:Invalidation": {
+    "label": "Invalidation",
+    "description": "A qualified PROV invalidation event — the moment an Entity ceased to exist.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Invalidation/"
   },
   "urn:solid:ItemList": {
     "label": "ItemList",
@@ -600,6 +621,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Update/"
+  },
+  "urn:solid:Usage": {
+    "label": "Usage",
+    "description": "A qualified PROV usage event — the moment an Activity used an Entity as input.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Usage/"
   },
   "urn:solid:VCard": {
     "label": "VCard",
@@ -1839,6 +1867,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/used/"
+  },
+  "urn:solid:valid": {
+    "label": "valid",
+    "description": "The date or period of validity of the resource — when it should be considered current and applicable.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/valid/"
   },
   "urn:solid:wasAssociatedWith": {
     "label": "wasAssociatedWith",
