@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:creator",
+  "@type": "rdf:Property",
+  "rdfs:label": "creator",
+  "rdfs:comment": "An entity primarily responsible for making the resource.",
+  "owl:sameAs": "http://purl.org/dc/terms/creator",
+  "rdfs:seeAlso": [
+    "https://schema.org/creator",
+    "https://schema.org/author",
+    "urn:solid:maker",
+    "http://www.w3.org/ns/prov#wasAttributedTo"
+  ],
+  "rdfs:range": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:contributor",
+    "urn:solid:publisher"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use for the principal author or maker. Repeat to list multiple co-creators of equal weight; use `dcterms:contributor` for secondary contributors and `dcterms:publisher` for the entity that issued/distributed the resource.",
+  "examples": [
+    {
+      "title": "Article with a creator",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Document",
+        "urn:solid:creator": { "@id": "https://example.org/alice#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/creator"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

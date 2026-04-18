@@ -111,6 +111,13 @@
     "status": "stable",
     "path": "/created/"
   },
+  "urn:solid:creator": {
+    "label": "creator",
+    "description": "An entity primarily responsible for making the resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/creator/"
+  },
   "urn:solid:currentProject": {
     "label": "currentProject",
     "description": "A project the person is currently active on.",
