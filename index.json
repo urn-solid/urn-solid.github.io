@@ -76,6 +76,13 @@
     "status": "stable",
     "path": "/Create/"
   },
+  "urn:solid:CreativeWork": {
+    "label": "CreativeWork",
+    "description": "The most generic kind of creative work — written, photographic, artistic, or otherwise.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/CreativeWork/"
+  },
   "urn:solid:Delete": {
     "label": "Delete",
     "description": "An activity in which the actor has deleted the object.",

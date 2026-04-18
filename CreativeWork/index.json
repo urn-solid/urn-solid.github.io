@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:CreativeWork",
+  "@type": "rdfs:Class",
+  "rdfs:label": "CreativeWork",
+  "rdfs:comment": "The most generic kind of creative work — written, photographic, artistic, or otherwise.",
+  "owl:sameAs": "https://schema.org/CreativeWork",
+  "rdfs:seeAlso": [
+    "urn:solid:Document",
+    "urn:solid:Article"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Document"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's catch-all for authored content — books, movies, articles, photos, software, datasets. Subclasses include `urn:solid:Article`, `schema:Book`, `schema:Movie`. Pair with `urn:solid:creator`, `urn:solid:license`, `urn:solid:datePublished` for typical attribution metadata.",
+  "examples": [
+    {
+      "title": "A generic creative work",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/works/42",
+        "@type": "urn:solid:CreativeWork",
+        "urn:solid:name": "Untitled",
+        "urn:solid:creator": { "@id": "https://example.org/alice#me" },
+        "urn:solid:license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/CreativeWork"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
