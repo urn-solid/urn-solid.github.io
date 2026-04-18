@@ -1,0 +1,55 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasTopConcept",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasTopConcept",
+  "rdfs:comment": "A top-level (root) Concept of the SKOS ConceptScheme — has no broader concept within the scheme.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+  "rdfs:seeAlso": [
+    "urn:solid:topConceptOf",
+    "urn:solid:ConceptScheme",
+    "urn:solid:inScheme"
+  ],
+  "rdfs:domain": "urn:solid:ConceptScheme",
+  "rdfs:range": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:topConceptOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use on a ConceptScheme to enumerate its entry-point Concepts — those with no `broader` parent in the scheme. Inverse is `urn:solid:topConceptOf`. A scheme typically has a small handful of top concepts; repeat for each.",
+  "examples": [
+    {
+      "title": "Scheme with two top concepts",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics",
+        "@type": "urn:solid:ConceptScheme",
+        "urn:solid:hasTopConcept": [
+          { "@id": "https://example.org/vocab/topics/math" },
+          { "@id": "https://example.org/vocab/topics/cs" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#hasTopConcept"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

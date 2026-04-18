@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:narrower",
+  "@type": "rdf:Property",
+  "rdfs:label": "narrower",
+  "rdfs:comment": "A narrower (child) SKOS Concept in a hierarchy — the inverse of `broader`.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#narrower",
+  "rdfs:seeAlso": [
+    "urn:solid:broader",
+    "urn:solid:related"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:broader"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Inverse of `urn:solid:broader`. Use to enumerate child concepts in a hierarchy. SKOS treats the relation as transitive only inside one ConceptScheme — for transitive descendants use `skos:narrowerTransitive`. Repeat for multiple children.",
+  "examples": [
+    {
+      "title": "Concept with narrower children",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/algebra",
+        "@type": "urn:solid:Concept",
+        "urn:solid:narrower": [
+          { "@id": "https://example.org/vocab/topics/cat-theory" },
+          { "@id": "https://example.org/vocab/topics/group-theory" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#narrower"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

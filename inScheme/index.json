@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:inScheme",
+  "@type": "rdf:Property",
+  "rdfs:label": "inScheme",
+  "rdfs:comment": "The SKOS ConceptScheme that the Concept is a member of.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#inScheme",
+  "rdfs:seeAlso": [
+    "urn:solid:ConceptScheme",
+    "urn:solid:hasTopConcept",
+    "urn:solid:topConceptOf"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:ConceptScheme",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Declares membership of a Concept in a ConceptScheme. A Concept may belong to multiple schemes — repeat for each. The transitive scope of `broader`/`narrower` is bounded by `inScheme` membership.",
+  "examples": [
+    {
+      "title": "Concept belonging to a topic taxonomy",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/topics/cat-theory",
+        "@type": "urn:solid:Concept",
+        "urn:solid:inScheme": { "@id": "https://example.org/vocab/topics" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#inScheme"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

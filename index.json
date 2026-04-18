@@ -1070,6 +1070,13 @@
     "status": "stable",
     "path": "/dateSubmitted/"
   },
+  "urn:solid:definition": {
+    "label": "definition",
+    "description": "A complete explanation of the intended meaning of a SKOS Concept.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/definition/"
+  },
   "urn:solid:depiction": {
     "label": "depiction",
     "description": "An image that depicts the subject.",
@@ -1371,6 +1378,13 @@
     "status": "stable",
     "path": "/hasTelephone/"
   },
+  "urn:solid:hasTopConcept": {
+    "label": "hasTopConcept",
+    "description": "A top-level (root) Concept of the SKOS ConceptScheme — has no broader concept within the scheme.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasTopConcept/"
+  },
   "urn:solid:hasUID": {
     "label": "hasUID",
     "description": "A globally unique identifier for the vCard — typically a UUID or other long-lived ID.",
@@ -1447,6 +1461,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/inReplyTo/"
+  },
+  "urn:solid:inScheme": {
+    "label": "inScheme",
+    "description": "The SKOS ConceptScheme that the Concept is a member of.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/inScheme/"
   },
   "urn:solid:inbox": {
     "label": "inbox",
@@ -1728,6 +1749,13 @@
     "status": "stable",
     "path": "/name/"
   },
+  "urn:solid:narrower": {
+    "label": "narrower",
+    "description": "A narrower (child) SKOS Concept in a hierarchy — the inverse of `broader`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/narrower/"
+  },
   "urn:solid:nick": {
     "label": "nick",
     "description": "A short informal nickname for the subject — typically a chat handle or screen name.",
@@ -1874,6 +1902,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/region/"
+  },
+  "urn:solid:related": {
+    "label": "related",
+    "description": "A SKOS Concept that is associatively (non-hierarchically) related to the subject Concept.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/related/"
   },
   "urn:solid:relation": {
     "label": "relation",
