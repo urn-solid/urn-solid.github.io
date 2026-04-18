@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:keywords — urn-solid</title>
+<meta name="description" content="Keywords or tags describing the resource — typically as a comma-separated string or a list.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/keywords/">
+<link rel="alternate" type="application/ld+json" href="/keywords/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:keywords",
+  "@type": "rdf:Property",
+  "rdfs:label": "keywords",
+  "rdfs:comment": "Keywords or tags describing the resource — typically as a comma-separated string or a list.",
+  "owl:sameAs": "https://schema.org/keywords",
+  "rdfs:seeAlso": [
+    "urn:solid:tag",
+    "urn:solid:subject"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:tag",
+    "urn:solid:subject"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org accepts comma-separated text, an array of strings, or `schema:DefinedTerm` references. For ActivityStreams-style hashtag/mention attachments, use `urn:solid:tag`. For broader topical metadata, `urn:solid:subject` (dcterms).",
+  "examples": [
+    {
+      "title": "Article tagged with keywords",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/jsonld-intro",
+        "@type": "urn:solid:Article",
+        "urn:solid:keywords": ["JSON-LD", "RDF", "linked data"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/keywords"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

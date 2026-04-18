@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:articleBody",
+  "@type": "rdf:Property",
+  "rdfs:label": "articleBody",
+  "rdfs:comment": "The actual body of the article — its full text content.",
+  "owl:sameAs": "https://schema.org/articleBody",
+  "rdfs:seeAlso": [
+    "urn:solid:content"
+  ],
+  "rdfs:domain": "urn:solid:Article",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:content"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's narrow article-text predicate, distinct from `urn:solid:headline` (the title) and `urn:solid:abstract` (the summary). For ActivityStreams Notes/Articles, `urn:solid:content` is the equivalent. May contain HTML or plain text — declare with `urn:solid:mediaType` if not HTML.",
+  "examples": [
+    {
+      "title": "Article with body text",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Article",
+        "urn:solid:headline": "Hello",
+        "urn:solid:articleBody": "<p>Welcome to the urn-solid registry.</p>"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/articleBody"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

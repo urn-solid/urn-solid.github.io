@@ -510,6 +510,13 @@
     "status": "stable",
     "path": "/alumniOf/"
   },
+  "urn:solid:articleBody": {
+    "label": "articleBody",
+    "description": "The actual body of the article — its full text content.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/articleBody/"
+  },
   "urn:solid:attachment": {
     "label": "attachment",
     "description": "An object attached to or associated with the subject — typically images, files, or media.",
@@ -642,6 +649,27 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/date/"
+  },
+  "urn:solid:dateCreated": {
+    "label": "dateCreated",
+    "description": "The date the resource was created.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/dateCreated/"
+  },
+  "urn:solid:dateModified": {
+    "label": "dateModified",
+    "description": "The date the resource was last modified.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/dateModified/"
+  },
+  "urn:solid:datePublished": {
+    "label": "datePublished",
+    "description": "The date the resource was published — when it became publicly available.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/datePublished/"
   },
   "urn:solid:depiction": {
     "label": "depiction",
@@ -894,6 +922,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/jabberID/"
+  },
+  "urn:solid:keywords": {
+    "label": "keywords",
+    "description": "Keywords or tags describing the resource — typically as a comma-separated string or a list.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/keywords/"
   },
   "urn:solid:knows": {
     "label": "knows",

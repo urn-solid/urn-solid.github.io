@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:dateModified",
+  "@type": "rdf:Property",
+  "rdfs:label": "dateModified",
+  "rdfs:comment": "The date the resource was last modified.",
+  "owl:sameAs": "https://schema.org/dateModified",
+  "rdfs:seeAlso": [
+    "urn:solid:modified",
+    "urn:solid:updated"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "notToBeConfusedWith": [
+    "urn:solid:dateCreated"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's modification timestamp — equivalent to `dcterms:modified` (`urn:solid:modified`) and `as:updated` (`urn:solid:updated`). ISO 8601. Pair with `urn:solid:dateCreated` for the create-then-edit lifecycle.",
+  "examples": [
+    {
+      "title": "Article with creation and modification dates",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Article",
+        "urn:solid:dateCreated": "2026-04-18T10:00:00Z",
+        "urn:solid:dateModified": "2026-04-18T11:30:00Z"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/dateModified"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
