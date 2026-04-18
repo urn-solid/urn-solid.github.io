@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Object",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Object",
+  "rdfs:comment": "The base class for all ActivityStreams objects — anything that can be the subject or target of an Activity.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Object",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/2002/07/owl#Thing",
+    "https://schema.org/Thing"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Almost everything in ActivityStreams ultimately specializes Object — Note, Article, Image, Activity, etc. Rarely typed directly; you'll usually pick a subclass. Pair with `urn:solid:content`, `urn:solid:name`, `urn:solid:attributedTo`, and the various AS predicates.",
+  "examples": [
+    {
+      "title": "A bare AS Object",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/things/foo",
+        "@type": "urn:solid:Object",
+        "https://www.w3.org/ns/activitystreams#name": "Foo"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Object"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -48,6 +48,13 @@
     "status": "stable",
     "path": "/Note/"
   },
+  "urn:solid:Object": {
+    "label": "Object",
+    "description": "The base class for all ActivityStreams objects — anything that can be the subject or target of an Activity.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Object/"
+  },
   "urn:solid:OnlineAccount": {
     "label": "OnlineAccount",
     "description": "An account held by an Agent on some online service.",
