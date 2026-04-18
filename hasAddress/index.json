@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasAddress",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasAddress",
+  "rdfs:comment": "A postal address associated with the subject.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasAddress",
+  "rdfs:seeAlso": [
+    "https://schema.org/address",
+    "https://schema.org/PostalAddress"
+  ],
+  "rdfs:range": "http://www.w3.org/2006/vcard/ns#Address",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The value should be a `vcard:Address` (or `schema:PostalAddress`) resource carrying structured fields — `vcard:street-address`, `vcard:locality`, `vcard:postal-code`, `vcard:country-name`. For an approximate \"based near\" location, use `urn:solid:basedNear` instead.",
+  "examples": [
+    {
+      "title": "Person with a postal address",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:hasAddress": {
+          "@type": "http://www.w3.org/2006/vcard/ns#Address",
+          "http://www.w3.org/2006/vcard/ns#street-address": "1 Wonderland Way",
+          "http://www.w3.org/2006/vcard/ns#locality": "London",
+          "http://www.w3.org/2006/vcard/ns#country-name": "UK"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasAddress"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

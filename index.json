@@ -202,6 +202,13 @@
     "status": "stable",
     "path": "/givenName/"
   },
+  "urn:solid:hasAddress": {
+    "label": "hasAddress",
+    "description": "A postal address associated with the subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasAddress/"
+  },
   "urn:solid:hasEmail": {
     "label": "hasEmail",
     "description": "An email address associated with the subject — typically a `mailto:` IRI.",
