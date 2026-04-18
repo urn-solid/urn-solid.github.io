@@ -69,6 +69,13 @@
     "status": "stable",
     "path": "/Document/"
   },
+  "urn:solid:Entity": {
+    "label": "Entity",
+    "description": "Anything in PROV that has provenance — a thing whose existence and history can be tracked.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Entity/"
+  },
   "urn:solid:Event": {
     "label": "Event",
     "description": "An event happening at a certain time and (often) location.",
