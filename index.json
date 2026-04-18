@@ -62,6 +62,13 @@
     "status": "stable",
     "path": "/Project/"
   },
+  "urn:solid:abstract": {
+    "label": "abstract",
+    "description": "A summary of the resource — typically one paragraph.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/abstract/"
+  },
   "urn:solid:account": {
     "label": "account",
     "description": "An online account held by the subject.",
