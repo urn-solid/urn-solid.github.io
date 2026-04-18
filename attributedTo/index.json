@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:attributedTo",
+  "@type": "rdf:Property",
+  "rdfs:label": "attributedTo",
+  "rdfs:comment": "An entity to which the object is attributed — typically the author or creator.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#attributedTo",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/prov#wasAttributedTo",
+    "urn:solid:creator"
+  ],
+  "rdfs:range": "urn:solid:Object",
+  "notToBeConfusedWith": [
+    "urn:solid:creator"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "ActivityStreams' general-purpose author/origin pointer — works for Notes, Articles, Activities, Images. The value is typically an Actor (Person, Application, Group, Service). For dcterms-style bibliographic authorship use `urn:solid:creator`; for PROV-grade attribution use `prov:wasAttributedTo`.",
+  "examples": [
+    {
+      "title": "Note attributed to a Person",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/abc",
+        "@type": "urn:solid:Note",
+        "urn:solid:attributedTo": { "@id": "https://example.org/alice#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#attributedTo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

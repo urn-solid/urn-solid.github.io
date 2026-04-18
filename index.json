@@ -202,6 +202,13 @@
     "status": "stable",
     "path": "/alternative/"
   },
+  "urn:solid:attributedTo": {
+    "label": "attributedTo",
+    "description": "An entity to which the object is attributed — typically the author or creator.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/attributedTo/"
+  },
   "urn:solid:basedNear": {
     "label": "basedNear",
     "description": "A geographic location near where the subject is based.",
