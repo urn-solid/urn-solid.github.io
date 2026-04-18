@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:publicTypeIndex",
+  "@type": "rdf:Property",
+  "rdfs:label": "publicTypeIndex",
+  "rdfs:comment": "The public TypeIndex for a WebID — a world-readable registry of where public data of each type lives.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#publicTypeIndex",
+  "rdfs:seeAlso": [
+    "urn:solid:privateTypeIndex",
+    "urn:solid:TypeIndex"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:TypeIndex",
+  "notToBeConfusedWith": [
+    "urn:solid:privateTypeIndex"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Linked from a WebID, points at the user's publicly-readable TypeIndex. Distinct from `urn:solid:privateTypeIndex` (access-controlled, only readable by the user and their authorized apps). Public type registrations are typically for data the user intends to share (public contact info, published content).",
+  "examples": [
+    {
+      "title": "WebID pointing at its public TypeIndex",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:publicTypeIndex": { "@id": "https://alice.example.org/settings/publicTypeIndex.ttl" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#publicTypeIndex"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

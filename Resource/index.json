@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Resource",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Resource",
+  "rdfs:comment": "An LDP Resource — any HTTP-addressable resource managed by an LDP server.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#Resource",
+  "rdfs:seeAlso": [
+    "urn:solid:RDFSource",
+    "urn:solid:NonRDFSource",
+    "urn:solid:Container"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The root LDP class — every Solid pod resource (file, container, RDF document) is an `ldp:Resource`. Use the more specific subclasses `urn:solid:RDFSource` (RDF documents), `urn:solid:NonRDFSource` (binary files like images), and `urn:solid:Container` (directories) when you can.",
+  "examples": [
+    {
+      "title": "An LDP resource",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/photos/sunset.jpg",
+        "@type": "urn:solid:Resource"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#Resource"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

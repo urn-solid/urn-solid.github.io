@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:privateTypeIndex — urn-solid</title>
+<meta name="description" content="The private TypeIndex for a WebID — an access-controlled registry of where personal data of each type lives.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/privateTypeIndex/">
+<link rel="alternate" type="application/ld+json" href="/privateTypeIndex/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:privateTypeIndex",
+  "@type": "rdf:Property",
+  "rdfs:label": "privateTypeIndex",
+  "rdfs:comment": "The private TypeIndex for a WebID — an access-controlled registry of where personal data of each type lives.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#privateTypeIndex",
+  "rdfs:seeAlso": [
+    "urn:solid:publicTypeIndex",
+    "urn:solid:TypeIndex"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:TypeIndex",
+  "notToBeConfusedWith": [
+    "urn:solid:publicTypeIndex"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Linked from a WebID, points at the user's access-controlled TypeIndex. Used by trusted apps (after auth) to discover where personal data is stored. Pair with `urn:solid:publicTypeIndex` for the world-readable counterpart.",
+  "examples": [
+    {
+      "title": "WebID pointing at its private TypeIndex",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:privateTypeIndex": { "@id": "https://alice.example.org/settings/privateTypeIndex.ttl" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#privateTypeIndex"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

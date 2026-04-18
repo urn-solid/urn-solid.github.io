@@ -244,6 +244,13 @@
     "status": "stable",
     "path": "/Movie/"
   },
+  "urn:solid:NonRDFSource": {
+    "label": "NonRDFSource",
+    "description": "An LDP Resource whose state is NOT RDF — typically a binary file like an image, audio, or PDF.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/NonRDFSource/"
+  },
   "urn:solid:Note": {
     "label": "Note",
     "description": "A short written work — typically a microblog post, comment, or reply.",
@@ -342,6 +349,13 @@
     "status": "stable",
     "path": "/Question/"
   },
+  "urn:solid:RDFSource": {
+    "label": "RDFSource",
+    "description": "An LDP Resource whose state is represented as RDF — a Turtle, JSON-LD, or other RDF document.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/RDFSource/"
+  },
   "urn:solid:Rating": {
     "label": "Rating",
     "description": "A numeric or symbolic value expressing assessment quality — typically a star rating.",
@@ -369,6 +383,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Remove/"
+  },
+  "urn:solid:Resource": {
+    "label": "Resource",
+    "description": "An LDP Resource — any HTTP-addressable resource managed by an LDP server.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Resource/"
   },
   "urn:solid:Review": {
     "label": "Review",
@@ -1153,6 +1174,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/primaryTopic/"
+  },
+  "urn:solid:privateTypeIndex": {
+    "label": "privateTypeIndex",
+    "description": "The private TypeIndex for a WebID — an access-controlled registry of where personal data of each type lives.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/privateTypeIndex/"
+  },
+  "urn:solid:publicTypeIndex": {
+    "label": "publicTypeIndex",
+    "description": "The public TypeIndex for a WebID — a world-readable registry of where public data of each type lives.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/publicTypeIndex/"
   },
   "urn:solid:published": {
     "label": "published",

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:RDFSource — urn-solid</title>
+<meta name="description" content="An LDP Resource whose state is represented as RDF — a Turtle, JSON-LD, or other RDF document.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/RDFSource/">
+<link rel="alternate" type="application/ld+json" href="/RDFSource/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:RDFSource",
+  "@type": "rdfs:Class",
+  "rdfs:label": "RDFSource",
+  "rdfs:comment": "An LDP Resource whose state is represented as RDF — a Turtle, JSON-LD, or other RDF document.",
+  "owl:sameAs": "http://www.w3.org/ns/ldp#RDFSource",
+  "rdfs:seeAlso": [
+    "urn:solid:Resource",
+    "urn:solid:NonRDFSource",
+    "urn:solid:Container"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:NonRDFSource"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Resource`. Use for any resource an LDP server returns as RDF — profile cards, Type Indexes, RDF data files. Containers are also `RDFSource`s (their state-as-RDF lists members). For binary files (images, videos), use `urn:solid:NonRDFSource` instead.",
+  "examples": [
+    {
+      "title": "A profile document",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card",
+        "@type": "urn:solid:RDFSource"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/ldp#RDFSource"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
