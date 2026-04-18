@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:description — urn-solid</title>
+<meta name="description" content="An account of the resource — a free-text description.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/description/">
+<link rel="alternate" type="application/ld+json" href="/description/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:description",
+  "@type": "rdf:Property",
+  "rdfs:label": "description",
+  "rdfs:comment": "An account of the resource — a free-text description.",
+  "owl:sameAs": "http://purl.org/dc/terms/description",
+  "rdfs:seeAlso": [
+    "https://schema.org/description",
+    "http://www.w3.org/2000/01/rdf-schema#comment"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Multi-sentence prose describing what the resource is or contains. For a one-line summary, prefer `rdfs:comment` (which is what RDF tooling usually surfaces); for a tagline, `dcterms:abstract`. Repeat with language tags for translations.",
+  "examples": [
+    {
+      "title": "Document with description",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Document",
+        "urn:solid:description": "An introduction to the urn-solid registry and how to use it."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/description"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

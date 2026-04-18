@@ -132,6 +132,13 @@
     "status": "stable",
     "path": "/depiction/"
   },
+  "urn:solid:description": {
+    "label": "description",
+    "description": "An account of the resource — a free-text description.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/description/"
+  },
   "urn:solid:familyName": {
     "label": "familyName",
     "description": "The family name (surname) of the person.",
