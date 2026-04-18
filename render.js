@@ -43,11 +43,12 @@
   root.append(el("div", { class: "hero" }, [
     el("div", { class: "urn-id" }, term["@id"]),
     el("h1", {}, term["rdfs:label"]),
-    el("div", { class: "kind" }, term["@type"]),
-    term.status ? el("span", { class: "status status-" + term.status }, term.status) : null,
+    el("div", { class: "meta" }, [
+      el("span", { class: "kind" }, term["@type"]),
+      term.status ? el("span", { class: "status status-" + term.status }, term.status) : null,
+    ]),
+    el("p", { class: "comment" }, term["rdfs:comment"]),
   ]));
-
-  root.append(el("p", { class: "comment" }, term["rdfs:comment"]));
 
   // Canonical mapping
   if (term["owl:sameAs"]) {

@@ -85,7 +85,10 @@ pre code { background: none; padding: 0; font-size: inherit; }
   margin-bottom: 0.25rem;
 }
 
+.meta { margin: 0.5rem 0 0.75rem; }
+
 .kind, .status {
+  display: inline-block;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.8rem;
   color: #888;
@@ -99,7 +102,7 @@ pre code { background: none; padding: 0; font-size: inherit; }
   font-size: 1.1rem;
   color: #555;
   font-style: italic;
-  margin: 0.5rem 0 1.5rem;
+  margin: 0.25rem 0 0;
 }
 
 a.urn { font-family: "Courier New", Courier, monospace; }
