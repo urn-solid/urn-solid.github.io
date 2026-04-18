@@ -69,6 +69,13 @@
     "status": "stable",
     "path": "/account/"
   },
+  "urn:solid:accountName": {
+    "label": "accountName",
+    "description": "The name (username, handle) of an OnlineAccount on the service that hosts it.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/accountName/"
+  },
   "urn:solid:depiction": {
     "label": "depiction",
     "description": "An image that depicts the subject.",

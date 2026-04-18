@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:accountName",
+  "@type": "rdf:Property",
+  "rdfs:label": "accountName",
+  "rdfs:comment": "The name (username, handle) of an OnlineAccount on the service that hosts it.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/accountName",
+  "rdfs:seeAlso": [
+    "https://schema.org/identifier"
+  ],
+  "rdfs:domain": "urn:solid:OnlineAccount",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The bare username on the hosting service — `\"alice\"`, not `\"@alice\"` or a full URL. Pair with `foaf:accountServiceHomepage` so the value is unambiguous across services.",
+  "examples": [
+    {
+      "title": "GitHub account",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice/accounts/github",
+        "@type": "urn:solid:OnlineAccount",
+        "urn:solid:accountName": "alice",
+        "http://xmlns.com/foaf/0.1/accountServiceHomepage": { "@id": "https://github.com/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/accountName"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
