@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:interest — urn-solid</title>
+<meta name="description" content="A page about a topic of interest to the agent.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/interest/">
+<link rel="alternate" type="application/ld+json" href="/interest/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:interest",
+  "@type": "rdf:Property",
+  "rdfs:label": "interest",
+  "rdfs:comment": "A page about a topic of interest to the agent.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/interest",
+  "rdfs:seeAlso": [
+    "http://xmlns.com/foaf/0.1/topic_interest",
+    "https://schema.org/knowsAbout"
+  ],
+  "rdfs:domain": "urn:solid:Agent",
+  "rdfs:range": "urn:solid:Document",
+  "notToBeConfusedWith": [
+    "urn:solid:topic_interest"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The value is a page (document) representing the topic of interest, not the topic itself. For the topic resource directly (any Thing, not necessarily a Document), use `foaf:topic_interest`. Repeat to list multiple interests.",
+  "examples": [
+    {
+      "title": "Person interested in a Wikipedia topic",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:interest": { "@id": "https://en.wikipedia.org/wiki/Category_theory" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/interest"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

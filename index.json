@@ -153,6 +153,13 @@
     "status": "stable",
     "path": "/img/"
   },
+  "urn:solid:interest": {
+    "label": "interest",
+    "description": "A page about a topic of interest to the agent.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/interest/"
+  },
   "urn:solid:isPrimaryTopicOf": {
     "label": "isPrimaryTopicOf",
     "description": "A document of which the subject is the primary topic — the inverse of `primaryTopic`.",
