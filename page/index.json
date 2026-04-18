@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:page",
+  "@type": "rdf:Property",
+  "rdfs:label": "page",
+  "rdfs:comment": "A document about the subject — any page that describes or discusses it.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/page",
+  "rdfs:seeAlso": [
+    "https://schema.org/mainEntityOfPage",
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "urn:solid:isPrimaryTopicOf"
+  ],
+  "rdfs:range": "urn:solid:Document",
+  "notToBeConfusedWith": [
+    "urn:solid:homepage"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "More general than `urn:solid:homepage` — any page about the subject, not just the canonical one. Repeat to list multiple. For the inverse \"this page is about\", see `foaf:topic` (page → subject).",
+  "examples": [
+    {
+      "title": "Person with a page about them",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:page": { "@id": "https://en.wikipedia.org/wiki/Alice_Liddell" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/page"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
