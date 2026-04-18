@@ -6,6 +6,13 @@
     "status": "stable",
     "path": "/Agent/"
   },
+  "urn:solid:Document": {
+    "label": "Document",
+    "description": "A document of any kind — typically a web resource.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Document/"
+  },
   "urn:solid:Group": {
     "label": "Group",
     "description": "A collection of agents — informal or ad-hoc, not necessarily a formal organization.",

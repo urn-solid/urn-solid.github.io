@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Document",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Document",
+  "rdfs:comment": "A document of any kind — typically a web resource.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/Document",
+  "rdfs:seeAlso": [
+    "https://schema.org/CreativeWork",
+    "https://www.w3.org/ns/activitystreams#Document"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use as the type of any document-like resource (web page, file, blog post home). For richer creative-work modeling with authorship, dates, and licensing, `schema:CreativeWork` carries more fields. Note that `urn:solid:Image` is a subclass of Document.",
+  "examples": [
+    {
+      "title": "A document",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Document",
+        "urn:solid:name": "Hello"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/Document"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
