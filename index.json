@@ -244,6 +244,13 @@
     "status": "stable",
     "path": "/JobPosting/"
   },
+  "urn:solid:LicenseDocument": {
+    "label": "LicenseDocument",
+    "description": "A legal document giving permission to do something with a resource — typically referenced by the `license` predicate.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/LicenseDocument/"
+  },
   "urn:solid:Like": {
     "label": "Like",
     "description": "An indication that the actor likes, recommends, or favorites the object.",
@@ -1084,6 +1091,20 @@
     "status": "stable",
     "path": "/isReferencedBy/"
   },
+  "urn:solid:isReplacedBy": {
+    "label": "isReplacedBy",
+    "description": "A related resource that supplants, displaces, or supersedes the described resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/isReplacedBy/"
+  },
+  "urn:solid:isRequiredBy": {
+    "label": "isRequiredBy",
+    "description": "A related resource that requires the described resource to support its function or coherence.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/isRequiredBy/"
+  },
   "urn:solid:isVersionOf": {
     "label": "isVersionOf",
     "description": "A related resource of which the described resource is a version, edition, or adaptation.",
@@ -1427,6 +1448,13 @@
     "status": "stable",
     "path": "/source/"
   },
+  "urn:solid:spatial": {
+    "label": "spatial",
+    "description": "The spatial coverage of the resource — what places it is about or applies to.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/spatial/"
+  },
   "urn:solid:spouse": {
     "label": "spouse",
     "description": "The person to whom the subject is married.",
@@ -1496,6 +1524,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/target/"
+  },
+  "urn:solid:temporal": {
+    "label": "temporal",
+    "description": "The temporal coverage of the resource — what time period it is about or applies to.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/temporal/"
   },
   "urn:solid:thumbnail": {
     "label": "thumbnail",

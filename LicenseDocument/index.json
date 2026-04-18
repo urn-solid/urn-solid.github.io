@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:LicenseDocument",
+  "@type": "rdfs:Class",
+  "rdfs:label": "LicenseDocument",
+  "rdfs:comment": "A legal document giving permission to do something with a resource — typically referenced by the `license` predicate.",
+  "owl:sameAs": "http://purl.org/dc/terms/LicenseDocument",
+  "rdfs:seeAlso": [
+    "urn:solid:license",
+    "http://purl.org/dc/terms/RightsStatement"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "The class for license documents themselves — Creative Commons license pages, SPDX license texts, custom EULAs. Use as the `@type` of the resource pointed to by `urn:solid:license`. Existing well-known licenses (Creative Commons, SPDX) usually don't carry this type explicitly, but it's the formal class.",
+  "examples": [
+    {
+      "title": "A custom license document",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/legal/eula-v3",
+        "@type": "urn:solid:LicenseDocument",
+        "urn:solid:name": "Acme EULA v3"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/LicenseDocument"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

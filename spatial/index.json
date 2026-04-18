@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:spatial",
+  "@type": "rdf:Property",
+  "rdfs:label": "spatial",
+  "rdfs:comment": "The spatial coverage of the resource — what places it is about or applies to.",
+  "owl:sameAs": "http://purl.org/dc/terms/spatial",
+  "rdfs:seeAlso": [
+    "urn:solid:location",
+    "urn:solid:basedNear",
+    "http://purl.org/dc/terms/Location"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:location"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Distinct from `urn:solid:location` (where the resource itself *is*) — `spatial` is the geographic *subject* of the resource (a study about Wales, a dataset covering the Pacific). Value is typically a `dcterms:Location` or a `urn:solid:Place`. Pair with `urn:solid:temporal` for the time dimension.",
+  "examples": [
+    {
+      "title": "Dataset with spatial coverage",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/london-traffic-2026",
+        "@type": "urn:solid:Document",
+        "urn:solid:spatial": { "@id": "https://example.org/places/london" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/spatial"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

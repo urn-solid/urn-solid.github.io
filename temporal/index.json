@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:temporal",
+  "@type": "rdf:Property",
+  "rdfs:label": "temporal",
+  "rdfs:comment": "The temporal coverage of the resource — what time period it is about or applies to.",
+  "owl:sameAs": "http://purl.org/dc/terms/temporal",
+  "rdfs:seeAlso": [
+    "urn:solid:spatial",
+    "http://purl.org/dc/terms/PeriodOfTime"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:date",
+    "urn:solid:created"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Distinct from `urn:solid:date`/`urn:solid:created` (when the resource was made) — `temporal` is the time period the resource is *about* (a 19th-century history dataset, a Q1-2026 financial report). Value is typically a `dcterms:PeriodOfTime` or an ISO 8601 interval string. Pair with `urn:solid:spatial`.",
+  "examples": [
+    {
+      "title": "Dataset covering 2026 Q1",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/q1-2026",
+        "@type": "urn:solid:Document",
+        "urn:solid:temporal": "2026-01-01/2026-03-31"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/temporal"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
