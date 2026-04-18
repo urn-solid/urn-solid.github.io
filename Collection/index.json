@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Collection",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Collection",
+  "rdfs:comment": "An unordered collection of objects.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Collection",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#OrderedCollection",
+    "http://www.w3.org/ns/ldp#Container",
+    "http://www.w3.org/ns/prov#Collection"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Object`. Use `as:items` (or paginate via `as:first`/`as:next`) to enumerate members. For ordered membership (timelines, replies, outboxes), use `as:OrderedCollection`. For Linked Data Platform containers with HTTP-level membership semantics, use `ldp:Container`.",
+  "examples": [
+    {
+      "title": "A collection with two items",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/collections/favorites",
+        "@type": "urn:solid:Collection",
+        "https://www.w3.org/ns/activitystreams#totalItems": 2,
+        "https://www.w3.org/ns/activitystreams#items": [
+          { "@id": "https://example.org/notes/a" },
+          { "@id": "https://example.org/notes/b" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Collection"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

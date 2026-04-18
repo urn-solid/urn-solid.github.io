@@ -20,6 +20,13 @@
     "status": "stable",
     "path": "/Article/"
   },
+  "urn:solid:Collection": {
+    "label": "Collection",
+    "description": "An unordered collection of objects.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Collection/"
+  },
   "urn:solid:Create": {
     "label": "Create",
     "description": "An activity in which the actor has created the object.",
