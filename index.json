@@ -47,5 +47,12 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/name/"
+  },
+  "urn:solid:nick": {
+    "label": "nick",
+    "description": "A short informal nickname for the subject — typically a chat handle or screen name.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/nick/"
   }
 }
