@@ -636,6 +636,13 @@
     "status": "stable",
     "path": "/topic_interest/"
   },
+  "urn:solid:wasAttributedTo": {
+    "label": "wasAttributedTo",
+    "description": "An agent to which the entity is attributed — without claiming the agent performed any specific action.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/wasAttributedTo/"
+  },
   "urn:solid:wasGeneratedBy": {
     "label": "wasGeneratedBy",
     "description": "The PROV activity that generated the entity — the production event responsible for its existence.",

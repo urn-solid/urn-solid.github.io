@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasAttributedTo",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasAttributedTo",
+  "rdfs:comment": "An agent to which the entity is attributed — without claiming the agent performed any specific action.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasAttributedTo",
+  "rdfs:seeAlso": [
+    "urn:solid:attributedTo",
+    "urn:solid:creator"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:attributedTo",
+    "urn:solid:creator"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "PROV's lightweight \"this is associated with that agent\" relation — weaker than `prov:wasGeneratedBy` (which requires a specific Activity). For richer attribution with a role, qualify via `prov:qualifiedAttribution` and a `prov:Attribution` resource.",
+  "examples": [
+    {
+      "title": "Document attributed to a person",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/papers/42",
+        "@type": "urn:solid:Entity",
+        "urn:solid:wasAttributedTo": { "@id": "https://example.org/alice#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasAttributedTo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
