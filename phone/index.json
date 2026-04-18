@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:phone",
+  "@type": "rdf:Property",
+  "rdfs:label": "phone",
+  "rdfs:comment": "A phone number for the agent — typically a `tel:` IRI.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/phone",
+  "rdfs:seeAlso": [
+    "urn:solid:hasTelephone",
+    "urn:solid:telephone"
+  ],
+  "rdfs:domain": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:hasTelephone",
+    "urn:solid:telephone"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "FOAF's lightweight phone predicate. The value is conventionally a `tel:` URI, mirroring `foaf:mbox`'s `mailto:` style. For typed numbers (work/home/cell) prefer `urn:solid:hasTelephone` (vCard); for plain string values prefer `urn:solid:telephone` (schema.org).",
+  "examples": [
+    {
+      "title": "Person with a phone",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:phone": { "@id": "tel:+44-20-1234-5678" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/phone"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

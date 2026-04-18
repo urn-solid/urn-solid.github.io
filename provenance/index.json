@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:provenance",
+  "@type": "rdf:Property",
+  "rdfs:label": "provenance",
+  "rdfs:comment": "A statement of any changes in ownership and custody of the resource since its creation — its provenance trail.",
+  "owl:sameAs": "http://purl.org/dc/terms/provenance",
+  "rdfs:seeAlso": [
+    "urn:solid:ProvenanceStatement",
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:Bundle"
+  ],
+  "rdfs:range": "urn:solid:ProvenanceStatement",
+  "notToBeConfusedWith": [
+    "urn:solid:wasDerivedFrom"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "dcterms's narrative provenance pointer — for human-readable custody/transformation history. For machine-actionable provenance graphs, use the PROV vocabulary (`urn:solid:wasDerivedFrom`, `urn:solid:wasGeneratedBy`, `urn:solid:Bundle`). Both can coexist: dcterms:provenance gives the headline, PROV gives the audit trail.",
+  "examples": [
+    {
+      "title": "Document with a provenance statement",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/wonderland-2026",
+        "@type": "urn:solid:Document",
+        "urn:solid:provenance": { "@id": "https://example.org/provenance/dataset-2026" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/provenance"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

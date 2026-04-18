@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:publications",
+  "@type": "rdf:Property",
+  "rdfs:label": "publications",
+  "rdfs:comment": "A document listing the publications of the person.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/publications",
+  "rdfs:seeAlso": [
+    "urn:solid:made",
+    "urn:solid:weblog"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:Document",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Points at a publications-list document (CV-style, ORCID page, etc.) — not at the publications themselves. For the works directly, use `urn:solid:made` (FOAF) or `dcterms:creator` on each work.",
+  "examples": [
+    {
+      "title": "Person pointing at their publication list",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:publications": { "@id": "https://orcid.org/0000-0000-0000-0001" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/publications"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1168,6 +1168,13 @@
     "status": "stable",
     "path": "/dateAccepted/"
   },
+  "urn:solid:dateCopyrighted": {
+    "label": "dateCopyrighted",
+    "description": "The date of a statement of copyright over the resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/dateCopyrighted/"
+  },
   "urn:solid:dateCreated": {
     "label": "dateCreated",
     "description": "The date the resource was created.",
@@ -2029,6 +2036,13 @@
     "status": "stable",
     "path": "/pastProject/"
   },
+  "urn:solid:phone": {
+    "label": "phone",
+    "description": "A phone number for the agent — typically a `tel:` IRI.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/phone/"
+  },
   "urn:solid:postal-code": {
     "label": "postal-code",
     "description": "The postal code (ZIP code) of an Address.",
@@ -2078,12 +2092,26 @@
     "status": "stable",
     "path": "/profileSubject/"
   },
+  "urn:solid:provenance": {
+    "label": "provenance",
+    "description": "A statement of any changes in ownership and custody of the resource since its creation — its provenance trail.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/provenance/"
+  },
   "urn:solid:publicTypeIndex": {
     "label": "publicTypeIndex",
     "description": "The public TypeIndex for a WebID — a world-readable registry of where public data of each type lives.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/publicTypeIndex/"
+  },
+  "urn:solid:publications": {
+    "label": "publications",
+    "description": "A document listing the publications of the person.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/publications/"
   },
   "urn:solid:published": {
     "label": "published",
@@ -2210,6 +2238,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/scopeNote/"
+  },
+  "urn:solid:semanticRelation": {
+    "label": "semanticRelation",
+    "description": "The SKOS superproperty for any conceptual relation between Concepts — `broader`, `narrower`, `related`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/semanticRelation/"
   },
   "urn:solid:sha1": {
     "label": "sha1",
