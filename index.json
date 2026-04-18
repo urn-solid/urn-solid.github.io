@@ -188,6 +188,13 @@
     "status": "stable",
     "path": "/TypeIndex/"
   },
+  "urn:solid:TypeRegistration": {
+    "label": "TypeRegistration",
+    "description": "An entry in a TypeIndex declaring where instances of a particular RDF class live in a Solid pod.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/TypeRegistration/"
+  },
   "urn:solid:Update": {
     "label": "Update",
     "description": "An activity in which the actor has updated the object.",
