@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:requires",
+  "@type": "rdf:Property",
+  "rdfs:label": "requires",
+  "rdfs:comment": "A related resource that is required by the described resource to support its function or coherence.",
+  "owl:sameAs": "http://purl.org/dc/terms/requires",
+  "rdfs:seeAlso": [
+    "http://purl.org/dc/terms/isRequiredBy",
+    "https://schema.org/requirements"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use for hard dependencies — software that needs another library, a document that requires its referenced datasets, an API spec requiring an auth scheme. Repeat for multiple dependencies. The inverse is `dcterms:isRequiredBy`.",
+  "examples": [
+    {
+      "title": "Document requiring another resource",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://urn-solid.github.io/Person/index.html",
+        "@type": "urn:solid:Document",
+        "urn:solid:requires": { "@id": "https://urn-solid.github.io/render.js" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/requires"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

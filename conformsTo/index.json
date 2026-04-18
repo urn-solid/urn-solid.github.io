@@ -1,0 +1,45 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:conformsTo",
+  "@type": "rdf:Property",
+  "rdfs:label": "conformsTo",
+  "rdfs:comment": "An established standard or specification to which the resource conforms.",
+  "owl:sameAs": "http://purl.org/dc/terms/conformsTo",
+  "rdfs:seeAlso": [
+    "http://purl.org/dc/terms/Standard"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to declare specification compliance — e.g. a JSON-LD document conforming to a profile, an HTML page conforming to a WCAG level, a dataset conforming to a schema. Value should be the IRI of the standard, not free text. For shape conformance specifically, see SHACL/ShEx vocabularies.",
+  "examples": [
+    {
+      "title": "Term file conforming to the urn-solid schema",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://urn-solid.github.io/Person/index.json",
+        "@type": "urn:solid:Document",
+        "urn:solid:conformsTo": { "@id": "https://urn-solid.github.io/schema/term.schema.json" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/conformsTo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:replaces",
+  "@type": "rdf:Property",
+  "rdfs:label": "replaces",
+  "rdfs:comment": "A related resource that the described resource supplants, displaces, or supersedes.",
+  "owl:sameAs": "http://purl.org/dc/terms/replaces",
+  "rdfs:seeAlso": [
+    "http://purl.org/dc/terms/isReplacedBy",
+    "urn:solid:supersededBy"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to record that this resource is the new official version of an older one (a v2 spec replacing v1, a new policy replacing the prior one). The inverse is `dcterms:isReplacedBy`. For term-level supersession inside the urn-solid registry itself, the schema's `supersededBy` field on a term file is the right place.",
+  "examples": [
+    {
+      "title": "v2 spec replacing v1",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/specs/v2",
+        "@type": "urn:solid:Document",
+        "urn:solid:replaces": { "@id": "https://example.org/specs/v1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/replaces"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

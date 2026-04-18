@@ -440,6 +440,13 @@
     "status": "stable",
     "path": "/cc/"
   },
+  "urn:solid:conformsTo": {
+    "label": "conformsTo",
+    "description": "An established standard or specification to which the resource conforms.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/conformsTo/"
+  },
   "urn:solid:contains": {
     "label": "contains",
     "description": "A resource contained by the LDP Container — i.e., a member created via HTTP POST to the container.",
@@ -530,6 +537,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/endTime/"
+  },
+  "urn:solid:endedAtTime": {
+    "label": "endedAtTime",
+    "description": "The time at which the activity ended.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/endedAtTime/"
   },
   "urn:solid:familyName": {
     "label": "familyName",
@@ -881,12 +895,26 @@
     "status": "stable",
     "path": "/references/"
   },
+  "urn:solid:replaces": {
+    "label": "replaces",
+    "description": "A related resource that the described resource supplants, displaces, or supersedes.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/replaces/"
+  },
   "urn:solid:replies": {
     "label": "replies",
     "description": "A Collection of objects that are responses to the subject — the reverse of `inReplyTo`.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/replies/"
+  },
+  "urn:solid:requires": {
+    "label": "requires",
+    "description": "A related resource that is required by the described resource to support its function or coherence.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/requires/"
   },
   "urn:solid:rights": {
     "label": "rights",
@@ -908,6 +936,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/startTime/"
+  },
+  "urn:solid:startedAtTime": {
+    "label": "startedAtTime",
+    "description": "The time at which the activity started.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/startedAtTime/"
   },
   "urn:solid:storage": {
     "label": "storage",
