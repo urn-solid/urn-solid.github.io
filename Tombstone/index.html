@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Tombstone — urn-solid</title>
+<meta name="description" content="A marker for an Object that previously existed but has been deleted.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Tombstone/">
+<link rel="alternate" type="application/ld+json" href="/Tombstone/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Tombstone",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Tombstone",
+  "rdfs:comment": "A marker for an Object that previously existed but has been deleted.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Tombstone",
+  "rdfs:seeAlso": [
+    "urn:solid:Delete"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Object`. After receiving an `as:Delete`, ActivityPub servers replace the deleted object with a Tombstone — preserving the IRI so inbound references don't break, but signalling the resource is gone. Carries `as:formerType` (what it used to be) and `as:deleted` (when).",
+  "examples": [
+    {
+      "title": "Deleted note as a Tombstone",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/abc",
+        "@type": "urn:solid:Tombstone",
+        "https://www.w3.org/ns/activitystreams#formerType": { "@id": "https://www.w3.org/ns/activitystreams#Note" },
+        "https://www.w3.org/ns/activitystreams#deleted": "2026-04-18T12:00:00Z"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Tombstone"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
