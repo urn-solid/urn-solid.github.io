@@ -335,6 +335,13 @@
     "status": "stable",
     "path": "/contains/"
   },
+  "urn:solid:content": {
+    "label": "content",
+    "description": "The textual body of the object — its content in a natural-language string (often HTML).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/content/"
+  },
   "urn:solid:contributor": {
     "label": "contributor",
     "description": "An entity responsible for making contributions to the resource — secondary to the principal creator.",

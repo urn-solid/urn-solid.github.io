@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:content — urn-solid</title>
+<meta name="description" content="The textual body of the object — its content in a natural-language string (often HTML).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/content/">
+<link rel="alternate" type="application/ld+json" href="/content/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:content",
+  "@type": "rdf:Property",
+  "rdfs:label": "content",
+  "rdfs:comment": "The textual body of the object — its content in a natural-language string (often HTML).",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#content",
+  "rdfs:seeAlso": [
+    "https://schema.org/articleBody",
+    "https://www.w3.org/ns/activitystreams#mediaType"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "ActivityStreams' body field. Value is a natural-language string — by convention HTML in ActivityPub, though plain text is allowed. Accompany with `as:mediaType` if not HTML. Repeat with language tags for translations.",
+  "examples": [
+    {
+      "title": "Note with HTML content",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/abc",
+        "@type": "urn:solid:Note",
+        "urn:solid:content": "<p>Hello, <em>fediverse</em>!</p>"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#content"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
