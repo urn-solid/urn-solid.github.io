@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasDerivedFrom",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasDerivedFrom",
+  "rdfs:comment": "An entity from which the subject entity was derived — a precursor or input.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasDerivedFrom",
+  "rdfs:seeAlso": [
+    "urn:solid:source",
+    "https://schema.org/isBasedOn"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Entity",
+  "notToBeConfusedWith": [
+    "urn:solid:source"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Use to record the upstream entity a derived work descends from — translations, summaries, transformed datasets. Repeat to list multiple sources. For typed derivation (revision, quotation, primary-source), pair with `prov:qualifiedDerivation` and a `prov:Derivation` resource.",
+  "examples": [
+    {
+      "title": "Translation derived from an original",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello-de",
+        "@type": "urn:solid:Entity",
+        "urn:solid:wasDerivedFrom": { "@id": "https://example.org/posts/hello" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasDerivedFrom"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
