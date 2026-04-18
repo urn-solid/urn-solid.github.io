@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:primaryTopic",
+  "@type": "rdf:Property",
+  "rdfs:label": "primaryTopic",
+  "rdfs:comment": "The primary topic of a document — the thing the document is principally about.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/primaryTopic",
+  "rdfs:seeAlso": [
+    "https://schema.org/about",
+    "urn:solid:isPrimaryTopicOf"
+  ],
+  "rdfs:domain": "urn:solid:Document",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "A document has at most one primary topic. WebID profile documents canonically have their subject Person as `foaf:primaryTopic`. The inverse is `foaf:isPrimaryTopicOf`. For documents about multiple things at equal weight, use `foaf:topic` (no primacy) instead.",
+  "examples": [
+    {
+      "title": "WebID profile document",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card",
+        "@type": "urn:solid:PersonalProfileDocument",
+        "urn:solid:primaryTopic": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/primaryTopic"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

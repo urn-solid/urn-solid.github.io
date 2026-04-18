@@ -237,6 +237,13 @@
     "status": "stable",
     "path": "/pastProject/"
   },
+  "urn:solid:primaryTopic": {
+    "label": "primaryTopic",
+    "description": "The primary topic of a document — the thing the document is principally about.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/primaryTopic/"
+  },
   "urn:solid:weblog": {
     "label": "weblog",
     "description": "A weblog (blog) of the subject — the document the agent publishes posts to.",
