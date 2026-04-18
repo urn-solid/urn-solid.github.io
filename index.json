@@ -279,6 +279,13 @@
     "status": "stable",
     "path": "/accountServiceHomepage/"
   },
+  "urn:solid:address": {
+    "label": "address",
+    "description": "The postal address of the subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/address/"
+  },
   "urn:solid:age": {
     "label": "age",
     "description": "The age in years of the agent.",
