@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:storage",
+  "@type": "rdf:Property",
+  "rdfs:label": "storage",
+  "rdfs:comment": "The root of a personal data store (Solid pod) for the subject.",
+  "owl:sameAs": "http://www.w3.org/ns/pim/space#storage",
+  "rdfs:seeAlso": [
+    "http://www.w3.org/ns/solid/terms#account"
+  ],
+  "rdfs:domain": "urn:solid:Person",
+  "rdfs:range": "urn:solid:Container",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "From the PIM space vocabulary. The value is the root URL of the user's pod (a Container). A WebID may list multiple `pim:storage` values when the user has multiple pods. Apps use this to discover where to read/write data on behalf of the user.",
+  "examples": [
+    {
+      "title": "WebID with a pod storage root",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:storage": { "@id": "https://alice.example.org/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/pim/space#storage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -594,6 +594,13 @@
     "status": "stable",
     "path": "/source/"
   },
+  "urn:solid:storage": {
+    "label": "storage",
+    "description": "The root of a personal data store (Solid pod) for the subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/storage/"
+  },
   "urn:solid:subject": {
     "label": "subject",
     "description": "A topic of the resource — typically expressed as keywords, key phrases, or controlled-vocabulary terms.",
