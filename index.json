@@ -97,6 +97,13 @@
     "status": "stable",
     "path": "/age/"
   },
+  "urn:solid:alternative": {
+    "label": "alternative",
+    "description": "An alternative title or name for the resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/alternative/"
+  },
   "urn:solid:basedNear": {
     "label": "basedNear",
     "description": "A geographic location near where the subject is based.",
