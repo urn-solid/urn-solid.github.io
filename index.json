@@ -41,6 +41,13 @@
     "status": "stable",
     "path": "/img/"
   },
+  "urn:solid:jabberID": {
+    "label": "jabberID",
+    "description": "A Jabber/XMPP identifier for the Agent.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/jabberID/"
+  },
   "urn:solid:knows": {
     "label": "knows",
     "description": "A person known by the subject — a directed acquaintance relationship.",
