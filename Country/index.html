@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Country — urn-solid</title>
+<meta name="description" content="A country — a sovereign nation-state or territory.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Country/">
+<link rel="alternate" type="application/ld+json" href="/Country/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Country",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Country",
+  "rdfs:comment": "A country — a sovereign nation-state or territory.",
+  "owl:sameAs": "https://schema.org/Country",
+  "rdfs:seeAlso": [
+    "urn:solid:Place",
+    "https://schema.org/AdministrativeArea"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Place"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Place` (via `schema:AdministrativeArea`). Pair with an ISO 3166-1 country code via `schema:identifier` for machine-readability. For US states, EU countries, and other administrative regions, use `schema:City`, `schema:State`, or `schema:AdministrativeArea` accordingly.",
+  "examples": [
+    {
+      "title": "A country with an ISO code",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/places/uk",
+        "@type": "urn:solid:Country",
+        "urn:solid:name": "United Kingdom",
+        "urn:solid:identifier": "GB"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Country"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:City — urn-solid</title>
+<meta name="description" content="A city — a permanent settlement of significant size.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/City/">
+<link rel="alternate" type="application/ld+json" href="/City/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:City",
+  "@type": "rdfs:Class",
+  "rdfs:label": "City",
+  "rdfs:comment": "A city — a permanent settlement of significant size.",
+  "owl:sameAs": "https://schema.org/City",
+  "rdfs:seeAlso": [
+    "urn:solid:Place",
+    "urn:solid:Country"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Place"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Place` (via `schema:AdministrativeArea`). Pair with `schema:containedInPlace` pointing at the containing `urn:solid:Country` to anchor it in the geographic hierarchy. For coordinates, attach `urn:solid:hasGeo`.",
+  "examples": [
+    {
+      "title": "London as a City",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/places/london",
+        "@type": "urn:solid:City",
+        "urn:solid:name": "London",
+        "https://schema.org/containedInPlace": { "@id": "https://example.org/places/uk" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/City"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:ImageObject",
+  "@type": "rdfs:Class",
+  "rdfs:label": "ImageObject",
+  "rdfs:comment": "A rich image object — an image with structured metadata like dimensions, encoding, and caption.",
+  "owl:sameAs": "https://schema.org/ImageObject",
+  "rdfs:seeAlso": [
+    "urn:solid:Image",
+    "https://schema.org/MediaObject"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Image"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Schema.org's metadata-rich image type. Use when you need fields like `schema:width`, `schema:height`, `schema:contentUrl`, `schema:caption`, `schema:encodingFormat`. For a bare image resource without those fields, `urn:solid:Image` (FOAF) is enough.",
+  "examples": [
+    {
+      "title": "A photo with rich metadata",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/photos/sunset.jpg",
+        "@type": "urn:solid:ImageObject",
+        "https://schema.org/width": "1920",
+        "https://schema.org/height": "1080",
+        "https://schema.org/encodingFormat": "image/jpeg",
+        "https://schema.org/caption": "Sunset over the harbour."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/ImageObject"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:BlogPosting",
+  "@type": "rdfs:Class",
+  "rdfs:label": "BlogPosting",
+  "rdfs:comment": "A single blog post — an entry in a weblog, typically with a date and an author.",
+  "owl:sameAs": "https://schema.org/BlogPosting",
+  "rdfs:seeAlso": [
+    "urn:solid:Article",
+    "https://schema.org/Blog",
+    "https://www.w3.org/ns/activitystreams#Article"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Article"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Article`. Use specifically for blog entries when you want SEO/syndication semantics that distinguish them from news or scholarly articles. Pair with `schema:isPartOf` pointing at the parent `schema:Blog`.",
+  "examples": [
+    {
+      "title": "A blog post",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/blog/hello",
+        "@type": "urn:solid:BlogPosting",
+        "urn:solid:headline": "Hello, blog!",
+        "urn:solid:author": { "@id": "https://example.org/alice#me" },
+        "urn:solid:datePublished": "2026-04-18"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/BlogPosting"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

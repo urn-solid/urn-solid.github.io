@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:BlogPosting — urn-solid</title>
+<meta name="description" content="A single blog post — an entry in a weblog, typically with a date and an author.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/BlogPosting/">
+<link rel="alternate" type="application/ld+json" href="/BlogPosting/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:BlogPosting",
+  "@type": "rdfs:Class",
+  "rdfs:label": "BlogPosting",
+  "rdfs:comment": "A single blog post — an entry in a weblog, typically with a date and an author.",
+  "owl:sameAs": "https://schema.org/BlogPosting",
+  "rdfs:seeAlso": [
+    "urn:solid:Article",
+    "https://schema.org/Blog",
+    "https://www.w3.org/ns/activitystreams#Article"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Article"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Article`. Use specifically for blog entries when you want SEO/syndication semantics that distinguish them from news or scholarly articles. Pair with `schema:isPartOf` pointing at the parent `schema:Blog`.",
+  "examples": [
+    {
+      "title": "A blog post",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/blog/hello",
+        "@type": "urn:solid:BlogPosting",
+        "urn:solid:headline": "Hello, blog!",
+        "urn:solid:author": { "@id": "https://example.org/alice#me" },
+        "urn:solid:datePublished": "2026-04-18"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/BlogPosting"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

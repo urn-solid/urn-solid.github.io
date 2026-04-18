@@ -62,6 +62,20 @@
     "status": "stable",
     "path": "/Block/"
   },
+  "urn:solid:BlogPosting": {
+    "label": "BlogPosting",
+    "description": "A single blog post — an entry in a weblog, typically with a date and an author.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/BlogPosting/"
+  },
+  "urn:solid:City": {
+    "label": "City",
+    "description": "A city — a permanent settlement of significant size.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/City/"
+  },
   "urn:solid:Collection": {
     "label": "Collection",
     "description": "An unordered collection of objects.",
@@ -89,6 +103,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Container/"
+  },
+  "urn:solid:Country": {
+    "label": "Country",
+    "description": "A country — a sovereign nation-state or territory.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Country/"
   },
   "urn:solid:Create": {
     "label": "Create",
@@ -139,6 +160,13 @@
     "status": "stable",
     "path": "/Follow/"
   },
+  "urn:solid:GeoCoordinates": {
+    "label": "GeoCoordinates",
+    "description": "The geographic coordinates of a place — a latitude/longitude pair, optionally with elevation.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/GeoCoordinates/"
+  },
   "urn:solid:Group": {
     "label": "Group",
     "description": "A collection of agents — informal or ad-hoc, not necessarily a formal organization.",
@@ -152,6 +180,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Image/"
+  },
+  "urn:solid:ImageObject": {
+    "label": "ImageObject",
+    "description": "A rich image object — an image with structured metadata like dimensions, encoding, and caption.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/ImageObject/"
   },
   "urn:solid:Like": {
     "label": "Like",
