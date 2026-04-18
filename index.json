@@ -489,6 +489,13 @@
     "status": "stable",
     "path": "/hasURL/"
   },
+  "urn:solid:headline": {
+    "label": "headline",
+    "description": "The headline of the article — a short, attention-grabbing title line.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/headline/"
+  },
   "urn:solid:homepage": {
     "label": "homepage",
     "description": "A homepage for the subject — a top-level page about the agent.",
