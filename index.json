@@ -216,12 +216,26 @@
     "status": "stable",
     "path": "/Project/"
   },
+  "urn:solid:Question": {
+    "label": "Question",
+    "description": "A question being asked — typically with one or more proposed answers (a poll).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Question/"
+  },
   "urn:solid:Reject": {
     "label": "Reject",
     "description": "An indication that the actor rejects the object — typically a Follow request or invitation.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Reject/"
+  },
+  "urn:solid:Service": {
+    "label": "Service",
+    "description": "An ActivityStreams actor representing a service — an automated, headless software offering.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Service/"
   },
   "urn:solid:Tombstone": {
     "label": "Tombstone",
@@ -671,6 +685,13 @@
     "status": "stable",
     "path": "/mbox/"
   },
+  "urn:solid:mediaType": {
+    "label": "mediaType",
+    "description": "The MIME media type of the object — `image/png`, `text/html`, etc.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/mediaType/"
+  },
   "urn:solid:member": {
     "label": "member",
     "description": "An agent that is a member of the group.",
@@ -796,6 +817,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/summary/"
+  },
+  "urn:solid:tag": {
+    "label": "tag",
+    "description": "An object that is part of the private secondary audience of the subject — typically a hashtag or @mention.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/tag/"
+  },
+  "urn:solid:target": {
+    "label": "target",
+    "description": "The target of the activity — the indirect object of the action.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/target/"
   },
   "urn:solid:thumbnail": {
     "label": "thumbnail",

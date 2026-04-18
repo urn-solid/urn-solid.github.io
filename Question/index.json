@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Question",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Question",
+  "rdfs:comment": "A question being asked — typically with one or more proposed answers (a poll).",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Question",
+  "rdfs:seeAlso": [
+    "https://schema.org/Question",
+    "urn:solid:Note"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "AS Question is both an `as:IntransitiveActivity` and an Object — it represents a poll or survey. Pair with `as:oneOf` (single-choice options) or `as:anyOf` (multi-choice). For straight Q&A without polling semantics, schema:Question + schema:Answer is more general.",
+  "examples": [
+    {
+      "title": "A simple poll",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/polls/lunch",
+        "@type": "urn:solid:Question",
+        "urn:solid:name": "Where for lunch?",
+        "https://www.w3.org/ns/activitystreams#oneOf": [
+          { "@type": "urn:solid:Note", "urn:solid:name": "Tacos" },
+          { "@type": "urn:solid:Note", "urn:solid:name": "Pizza" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Question"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Service",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Service",
+  "rdfs:comment": "An ActivityStreams actor representing a service — an automated, headless software offering.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Service",
+  "rdfs:seeAlso": [
+    "urn:solid:Application",
+    "http://www.w3.org/ns/prov#SoftwareAgent",
+    "https://schema.org/Service"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Application"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "AS actor type for non-interactive automated services (relays, search engines, archive bots) — distinct from `urn:solid:Application` which implies a user-facing client. Both subclass `as:Object` indirectly. The choice is descriptive, not enforced.",
+  "examples": [
+    {
+      "title": "An archive relay as a Service",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://archive.example.org/relay",
+        "@type": "urn:solid:Service",
+        "urn:solid:name": "Wonderland Archive Relay",
+        "urn:solid:inbox": { "@id": "https://archive.example.org/relay/inbox" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Service"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:tag",
+  "@type": "rdf:Property",
+  "rdfs:label": "tag",
+  "rdfs:comment": "An object that is part of the private secondary audience of the subject — typically a hashtag or @mention.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#tag",
+  "rdfs:seeAlso": [
+    "https://schema.org/keywords",
+    "urn:solid:subject"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "ActivityStreams' inline-mention slot — used by ActivityPub posts to attach `as:Hashtag` or `as:Mention` references that surface in the body. Repeat to list multiple tags. Distinct from `urn:solid:subject` (broader topical metadata) and `urn:solid:audience` (intended recipients).",
+  "examples": [
+    {
+      "title": "Note tagging another actor",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/with-mention",
+        "@type": "urn:solid:Note",
+        "urn:solid:content": "<p>Hi @bob!</p>",
+        "urn:solid:tag": {
+          "@type": "https://www.w3.org/ns/activitystreams#Mention",
+          "https://www.w3.org/ns/activitystreams#href": { "@id": "https://example.org/bob#me" },
+          "https://www.w3.org/ns/activitystreams#name": "@bob"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#tag"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

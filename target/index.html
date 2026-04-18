@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:target — urn-solid</title>
+<meta name="description" content="The target of the activity — the indirect object of the action.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/target/">
+<link rel="alternate" type="application/ld+json" href="/target/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:target",
+  "@type": "rdf:Property",
+  "rdfs:label": "target",
+  "rdfs:comment": "The target of the activity — the indirect object of the action.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#target",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#object"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Where `as:object` is the direct object of an Activity, `as:target` is the indirect object — the destination, recipient, or container. For `as:Add`, `as:Move`, `as:Remove`: the collection items are added to / moved into / removed from. For `as:Like`: rarely used (object is enough).",
+  "examples": [
+    {
+      "title": "Add a note to a collection",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/add-1",
+        "@type": "https://www.w3.org/ns/activitystreams#Add",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://example.org/notes/abc" },
+        "urn:solid:target": { "@id": "https://example.org/collections/favorites" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#target"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
