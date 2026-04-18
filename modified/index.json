@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:modified",
+  "@type": "rdf:Property",
+  "rdfs:label": "modified",
+  "rdfs:comment": "The date the resource was last modified.",
+  "owl:sameAs": "http://purl.org/dc/terms/modified",
+  "rdfs:seeAlso": [
+    "https://schema.org/dateModified"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "notToBeConfusedWith": [
+    "urn:solid:created"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Updated on every substantive edit; pair with `urn:solid:created` (set once). ISO 8601 (`xsd:dateTime` or `xsd:date`). For RDF Patch / streaming-update systems, the value typically reflects the most recent committed change.",
+  "examples": [
+    {
+      "title": "Document with creation and modification dates",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "urn:solid:Document",
+        "urn:solid:created": "2026-04-18T10:00:00Z",
+        "urn:solid:modified": "2026-04-18T11:30:00Z"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://purl.org/dc/terms/modified"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

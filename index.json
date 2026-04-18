@@ -230,6 +230,13 @@
     "status": "stable",
     "path": "/member/"
   },
+  "urn:solid:modified": {
+    "label": "modified",
+    "description": "The date the resource was last modified.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/modified/"
+  },
   "urn:solid:name": {
     "label": "name",
     "description": "A name for the subject.",
