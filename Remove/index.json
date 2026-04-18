@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Remove",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Remove",
+  "rdfs:comment": "An activity in which the actor is removing the object from the target.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Remove",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#Add",
+    "https://www.w3.org/ns/activitystreams#Move"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Delete"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. Inverse of `urn:solid:Add` — `as:object` is the thing being removed, `as:target` is the collection or container it's being removed from. The object continues to exist; only its membership in the target ends. Distinct from `Delete`, which retires the object itself.",
+  "examples": [
+    {
+      "title": "Remove a note from a collection",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/remove-1",
+        "@type": "urn:solid:Remove",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://example.org/notes/abc" },
+        "urn:solid:target": { "@id": "https://example.org/collections/favorites" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Remove"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

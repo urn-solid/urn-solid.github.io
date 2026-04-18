@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:audience",
+  "@type": "rdf:Property",
+  "rdfs:label": "audience",
+  "rdfs:comment": "The intended audience of the object — who it is targeted at, regardless of who actually receives it.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#audience",
+  "rdfs:seeAlso": [
+    "https://schema.org/audience",
+    "http://purl.org/dc/terms/audience"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Used to declare semantic targeting (e.g. \"this is for friends\", \"this is for the engineering team\") independently of `as:to`/`as:cc` (which are wire-level addressing). The value can be an Actor, Collection, or symbolic IRI like `as:Public`.",
+  "examples": [
+    {
+      "title": "Note targeted at a group",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/team-update",
+        "@type": "urn:solid:Note",
+        "urn:solid:audience": { "@id": "https://example.org/groups/engineering" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#audience"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

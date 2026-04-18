@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:cc",
+  "@type": "rdf:Property",
+  "rdfs:label": "cc",
+  "rdfs:comment": "Secondary public recipients of the object — visible carbon-copy addresses.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#cc",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#to",
+    "https://www.w3.org/ns/activitystreams#bcc"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:to"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Email-style cc: secondary visible recipients. ActivityPub clients typically use `cc` to add a follower collection alongside a primary `to` of `as:Public`, so a post is publicly visible AND fans out to followers' home timelines. Use `as:bcc` to reach recipients privately (not visible in the rendered object).",
+  "examples": [
+    {
+      "title": "Public note delivered to followers",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/notes/abc",
+        "@type": "urn:solid:Note",
+        "urn:solid:content": "Hello!",
+        "urn:solid:to": [{ "@id": "https://www.w3.org/ns/activitystreams#Public" }],
+        "urn:solid:cc": [{ "@id": "https://example.org/alice/followers" }]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#cc"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -13,6 +13,13 @@
     "status": "stable",
     "path": "/Activity/"
   },
+  "urn:solid:Add": {
+    "label": "Add",
+    "description": "An activity in which the actor is adding the object to the target.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Add/"
+  },
   "urn:solid:Agent": {
     "label": "Agent",
     "description": "A thing that acts — person, organization, group, or software.",
@@ -230,6 +237,13 @@
     "status": "stable",
     "path": "/Reject/"
   },
+  "urn:solid:Remove": {
+    "label": "Remove",
+    "description": "An activity in which the actor is removing the object from the target.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Remove/"
+  },
   "urn:solid:Service": {
     "label": "Service",
     "description": "An ActivityStreams actor representing a service — an automated, headless software offering.",
@@ -349,6 +363,13 @@
     "status": "stable",
     "path": "/attributedTo/"
   },
+  "urn:solid:audience": {
+    "label": "audience",
+    "description": "The intended audience of the object — who it is targeted at, regardless of who actually receives it.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/audience/"
+  },
   "urn:solid:author": {
     "label": "author",
     "description": "The author of the creative work.",
@@ -369,6 +390,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/birthday/"
+  },
+  "urn:solid:cc": {
+    "label": "cc",
+    "description": "Secondary public recipients of the object — visible carbon-copy addresses.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/cc/"
   },
   "urn:solid:contains": {
     "label": "contains",
@@ -838,6 +866,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/thumbnail/"
+  },
+  "urn:solid:to": {
+    "label": "to",
+    "description": "The primary recipients of the object — the wire-level \"send to\" addresses.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/to/"
   },
   "urn:solid:topic": {
     "label": "topic",

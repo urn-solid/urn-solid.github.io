@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Add",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Add",
+  "rdfs:comment": "An activity in which the actor is adding the object to the target.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Add",
+  "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#Remove",
+    "https://www.w3.org/ns/activitystreams#Move"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Create"
+  ],
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Subclass of `urn:solid:Activity`. The `as:object` is the thing being added; `as:target` is the collection or container it's being added to. Distinct from `Create` (which brings a new object into existence) — `Add` references an existing object and places it somewhere.",
+  "examples": [
+    {
+      "title": "Add a note to a favorites collection",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activities/add-1",
+        "@type": "urn:solid:Add",
+        "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },
+        "https://www.w3.org/ns/activitystreams#object": { "@id": "https://example.org/notes/abc" },
+        "urn:solid:target": { "@id": "https://example.org/collections/favorites" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Add"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
