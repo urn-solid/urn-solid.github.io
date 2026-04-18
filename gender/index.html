@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:gender — urn-solid</title>
+<meta name="description" content="The gender of the agent — a free-form string in FOAF tradition.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/gender/">
+<link rel="alternate" type="application/ld+json" href="/gender/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:gender",
+  "@type": "rdf:Property",
+  "rdfs:label": "gender",
+  "rdfs:comment": "The gender of the agent — a free-form string in FOAF tradition.",
+  "owl:sameAs": "http://xmlns.com/foaf/0.1/gender",
+  "rdfs:seeAlso": [
+    "https://schema.org/gender",
+    "http://www.w3.org/2006/vcard/ns#hasGender"
+  ],
+  "rdfs:domain": "urn:solid:Agent",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "status": "stable",
+  "added": "2026-04-18",
+  "notes": "Privacy-sensitive. FOAF intentionally uses a free-form string rather than an enumerated type so identity can be self-described. `schema:gender` accepts either a `GenderType` (enum) or a string; `vcard:hasGender` uses an enumerated controlled vocabulary. Use whichever matches the consumer.",
+  "examples": [
+    {
+      "title": "Person with self-described gender",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:gender": "female"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://xmlns.com/foaf/0.1/gender"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-18T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

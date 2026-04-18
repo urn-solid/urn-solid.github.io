@@ -125,6 +125,13 @@
     "status": "stable",
     "path": "/firstName/"
   },
+  "urn:solid:gender": {
+    "label": "gender",
+    "description": "The gender of the agent — a free-form string in FOAF tradition.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/gender/"
+  },
   "urn:solid:givenName": {
     "label": "givenName",
     "description": "The given name of a person — the personal name distinct from the family name.",
