@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Vevent",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Vevent",
+  "rdfs:comment": "An iCalendar event — a scheduled occurrence with a start and end time, defined in RFC 5545 and mapped to RDF by the W3C iCal vocabulary.",
+  "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#Vevent",
+  "rdfs:seeAlso": [
+    "urn:solid:Event",
+    "urn:solid:Vtodo",
+    "urn:solid:Vcalendar",
+    "urn:solid:dtstart",
+    "urn:solid:dtend"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Event"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "RFC 5545 / iCal — the format every calendar app speaks. Distinct from `as:Event` (ActivityStreams, fediverse calendar posts) and `schema:Event` (schema.org, semantic-web event markup). Pick `Vevent` when you need iCalendar interoperability (importing/exporting `.ics`, syncing with CalDAV, native calendar UI integration).",
+  "examples": [
+    {
+      "title": "A team meeting",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/calendar/team-sync-2026-04-19",
+        "@type": "urn:solid:Vevent",
+        "urn:solid:dtstart": { "@value": "2026-04-19T15:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+        "urn:solid:dtend": { "@value": "2026-04-19T16:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/12/cal/ical#Vevent"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

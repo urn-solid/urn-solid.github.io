@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:dtstart",
+  "@type": "rdf:Property",
+  "rdfs:label": "dtstart",
+  "rdfs:comment": "The start date-time of an iCalendar Vevent or Vtodo — when the event begins or when the task becomes actionable.",
+  "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#dtstart",
+  "rdfs:seeAlso": [
+    "urn:solid:Vevent",
+    "urn:solid:Vtodo",
+    "urn:solid:dtend",
+    "urn:solid:startTime"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "notToBeConfusedWith": [
+    "urn:solid:startTime"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "iCalendar's date-time form, distinct from `as:startTime` (ActivityStreams). Use `dtstart` when you need iCal/CalDAV interop. May carry timezone via XSD typed values or a separate property — full RFC 5545 timezone handling is more nuanced than basic `xsd:dateTime`.",
+  "examples": [
+    {
+      "title": "Event start time",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Vevent",
+        "urn:solid:dtstart": { "@value": "2026-04-19T15:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/12/cal/ical#dtstart"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

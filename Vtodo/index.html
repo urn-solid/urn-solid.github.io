@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Vtodo — urn-solid</title>
+<meta name="description" content="An iCalendar to-do item — a task that can be in progress, completed, or cancelled, with optional due dates.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Vtodo/">
+<link rel="alternate" type="application/ld+json" href="/Vtodo/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Vtodo",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Vtodo",
+  "rdfs:comment": "An iCalendar to-do item — a task that can be in progress, completed, or cancelled, with optional due dates.",
+  "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#Vtodo",
+  "rdfs:seeAlso": [
+    "urn:solid:Vevent",
+    "urn:solid:Vcalendar",
+    "urn:solid:dtstart"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The iCal task primitive — every native to-do/reminder app on macOS, iOS, Windows, and Linux understands this. Pairs with CalDAV for sync. Already used by LOSOS: the default registry maps `ical:Vtodo` to the todo pane, so urn:solid:Vtodo is the cross-vocab canonical form for that pane.",
+  "examples": [
+    {
+      "title": "A simple to-do item",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/todos/buy-milk",
+        "@type": "urn:solid:Vtodo",
+        "urn:solid:dtstart": { "@value": "2026-04-19T17:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/12/cal/ical#Vtodo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

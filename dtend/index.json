@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:dtend",
+  "@type": "rdf:Property",
+  "rdfs:label": "dtend",
+  "rdfs:comment": "The end date-time of an iCalendar Vevent — when the event finishes.",
+  "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#dtend",
+  "rdfs:seeAlso": [
+    "urn:solid:Vevent",
+    "urn:solid:dtstart",
+    "urn:solid:endTime"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "notToBeConfusedWith": [
+    "urn:solid:endTime"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Mirrors `dtstart`. RFC 5545 treats `dtend` as exclusive — an event from 15:00 to 16:00 has `dtend = 16:00` even though no event occurs at 16:00:00 itself. Distinct from `as:endTime` (ActivityStreams equivalent).",
+  "examples": [
+    {
+      "title": "Event end time",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Vevent",
+        "urn:solid:dtstart": { "@value": "2026-04-19T15:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+        "urn:solid:dtend": { "@value": "2026-04-19T16:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/12/cal/ical#dtend"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

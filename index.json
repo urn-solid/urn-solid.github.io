@@ -1112,6 +1112,13 @@
     "status": "stable",
     "path": "/VCard/"
   },
+  "urn:solid:Vcalendar": {
+    "label": "Vcalendar",
+    "description": "An iCalendar container — the top-level wrapper holding a collection of Vevents, Vtodos, and other calendar components.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Vcalendar/"
+  },
   "urn:solid:VerifiableCredential": {
     "label": "VerifiableCredential",
     "description": "A W3C Verifiable Credential — a tamper-evident, cryptographically-signed claim made by an issuer about a subject.",
@@ -1125,6 +1132,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/VerifiablePresentation/"
+  },
+  "urn:solid:Vevent": {
+    "label": "Vevent",
+    "description": "An iCalendar event — a scheduled occurrence with a start and end time, defined in RFC 5545 and mapped to RDF by the W3C iCal vocabulary.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Vevent/"
   },
   "urn:solid:Video": {
     "label": "Video",
@@ -1146,6 +1160,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/View/"
+  },
+  "urn:solid:Vtodo": {
+    "label": "Vtodo",
+    "description": "An iCalendar to-do item — a task that can be in progress, completed, or cancelled, with optional due dates.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Vtodo/"
   },
   "urn:solid:WebPage": {
     "label": "WebPage",
@@ -1741,6 +1762,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/downloadURL/"
+  },
+  "urn:solid:dtend": {
+    "label": "dtend",
+    "description": "The end date-time of an iCalendar Vevent — when the event finishes.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/dtend/"
+  },
+  "urn:solid:dtstart": {
+    "label": "dtstart",
+    "description": "The start date-time of an iCalendar Vevent or Vtodo — when the event begins or when the task becomes actionable.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/dtstart/"
   },
   "urn:solid:duration": {
     "label": "duration",
