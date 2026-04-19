@@ -902,6 +902,13 @@
     "status": "stable",
     "path": "/TentativeAccept/"
   },
+  "urn:solid:TentativeReject": {
+    "label": "TentativeReject",
+    "description": "An ActivityStreams Activity indicating that the actor declines the object provisionally — a soft \"probably no\" rather than a firm refusal.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/TentativeReject/"
+  },
   "urn:solid:Tombstone": {
     "label": "Tombstone",
     "description": "A marker for an Object that previously existed but has been deleted.",
@@ -1504,6 +1511,13 @@
     "status": "stable",
     "path": "/familyName/"
   },
+  "urn:solid:first": {
+    "label": "first",
+    "description": "The first page of a paginated ActivityStreams Collection — the entry point a client uses to start walking the pagination chain.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/first/"
+  },
   "urn:solid:firstName": {
     "label": "firstName",
     "description": "The first name of a person.",
@@ -2043,6 +2057,13 @@
     "status": "stable",
     "path": "/issued/"
   },
+  "urn:solid:items": {
+    "label": "items",
+    "description": "The members of an ActivityStreams Collection (or a CollectionPage), in no specified order.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/items/"
+  },
   "urn:solid:jabberID": {
     "label": "jabberID",
     "description": "A Jabber/XMPP identifier for the Agent.",
@@ -2329,6 +2350,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/parent/"
+  },
+  "urn:solid:partOf": {
+    "label": "partOf",
+    "description": "Identifies the parent Collection that an ActivityStreams CollectionPage is a slice of — lets the client jump from a page back to the whole.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/partOf/"
   },
   "urn:solid:pastProject": {
     "label": "pastProject",
@@ -2784,6 +2812,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/topic_interest/"
+  },
+  "urn:solid:totalItems": {
+    "label": "totalItems",
+    "description": "The total number of members in an ActivityStreams Collection — the size the client would see if all pages were concatenated.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/totalItems/"
   },
   "urn:solid:unitOf": {
     "label": "unitOf",

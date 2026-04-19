@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:TentativeReject",
+  "@type": "rdfs:Class",
+  "rdfs:label": "TentativeReject",
+  "rdfs:comment": "An ActivityStreams Activity indicating that the actor declines the object provisionally — a soft \"probably no\" rather than a firm refusal.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#TentativeReject",
+  "rdfs:seeAlso": [
+    "urn:solid:Reject",
+    "urn:solid:Accept",
+    "urn:solid:TentativeAccept"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Reject"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Mirror of `as:TentativeAccept`; specialises `as:Reject`. Common in calendaring and RSVP flows where the actor is unlikely to attend but hasn't ruled it out. Consumers that don't recognise the tentative variant degrade gracefully to treating it as Reject.",
+  "examples": [
+    {
+      "title": "Tentatively declining an invitation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/activities/probably-no",
+        "@type": "urn:solid:TentativeReject",
+        "urn:solid:actor": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:object": { "@id": "https://example.org/events/team-sync" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#TentativeReject"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

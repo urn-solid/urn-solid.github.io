@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:totalItems — urn-solid</title>
+<meta name="description" content="The total number of members in an ActivityStreams Collection — the size the client would see if all pages were concatenated.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/totalItems/">
+<link rel="alternate" type="application/ld+json" href="/totalItems/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:totalItems",
+  "@type": "rdf:Property",
+  "rdfs:label": "totalItems",
+  "rdfs:comment": "The total number of members in an ActivityStreams Collection — the size the client would see if all pages were concatenated.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#totalItems",
+  "rdfs:seeAlso": [
+    "urn:solid:Collection",
+    "urn:solid:items",
+    "urn:solid:first",
+    "urn:solid:partOf"
+  ],
+  "rdfs:domain": "urn:solid:Collection",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Authoritative count even when the Collection is paginated and only a subset of `items` is materialised in any given response. Drives \"42 likes\" / \"123 followers\" UI without forcing the client to walk the entire pagination chain.",
+  "examples": [
+    {
+      "title": "Followers Collection summary",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/followers",
+        "@type": "urn:solid:Collection",
+        "urn:solid:totalItems": 1247,
+        "urn:solid:first": { "@id": "https://alice.example.org/followers?page=1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#totalItems"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

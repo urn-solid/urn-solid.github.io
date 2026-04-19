@@ -1,0 +1,56 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:items",
+  "@type": "rdf:Property",
+  "rdfs:label": "items",
+  "rdfs:comment": "The members of an ActivityStreams Collection (or a CollectionPage), in no specified order.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#items",
+  "rdfs:seeAlso": [
+    "urn:solid:Collection",
+    "urn:solid:orderedItems",
+    "urn:solid:totalItems",
+    "urn:solid:first"
+  ],
+  "rdfs:domain": "urn:solid:Collection",
+  "notToBeConfusedWith": [
+    "urn:solid:orderedItems"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use on a `Collection`/`CollectionPage`; for `OrderedCollection`/`OrderedCollectionPage`, prefer `as:orderedItems`. Either form may inline objects or list `@id` references; servers commonly paginate via `first`/`next` rather than returning all items in one document.",
+  "examples": [
+    {
+      "title": "A small Collection with inline items",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/1/likes",
+        "@type": "urn:solid:Collection",
+        "urn:solid:totalItems": 2,
+        "urn:solid:items": [
+          { "@id": "https://bob.example.org/activities/like-1" },
+          { "@id": "https://carol.example.org/activities/like-7" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#items"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

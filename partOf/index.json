@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:partOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "partOf",
+  "rdfs:comment": "Identifies the parent Collection that an ActivityStreams CollectionPage is a slice of — lets the client jump from a page back to the whole.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#partOf",
+  "rdfs:seeAlso": [
+    "urn:solid:Collection",
+    "urn:solid:first",
+    "urn:solid:next",
+    "urn:solid:prev"
+  ],
+  "rdfs:domain": "http://www.w3.org/ns/activitystreams#CollectionPage",
+  "rdfs:range": "urn:solid:Collection",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Required on every CollectionPage so consumers can recover context — \"this page belongs to which Collection?\" Without `partOf`, a client that lands on a page mid-pagination has no way to know what whole it's a slice of, which breaks deep-linking and resume-from-here flows.",
+  "examples": [
+    {
+      "title": "A CollectionPage referencing its parent Collection",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/outbox?page=2",
+        "@type": "http://www.w3.org/ns/activitystreams#OrderedCollectionPage",
+        "urn:solid:partOf": { "@id": "https://alice.example.org/outbox" },
+        "urn:solid:next": { "@id": "https://alice.example.org/outbox?page=3" },
+        "urn:solid:prev": { "@id": "https://alice.example.org/outbox?page=1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#partOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
