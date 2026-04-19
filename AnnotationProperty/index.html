@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:AnnotationProperty — urn-solid</title>
+<meta name="description" content="An OWL property used purely for human-readable metadata — labels, comments, version notes — with no formal semantic implications.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/AnnotationProperty/">
+<link rel="alternate" type="application/ld+json" href="/AnnotationProperty/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:AnnotationProperty",
+  "@type": "rdfs:Class",
+  "rdfs:label": "AnnotationProperty",
+  "rdfs:comment": "An OWL property used purely for human-readable metadata — labels, comments, version notes — with no formal semantic implications.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:ObjectProperty",
+    "urn:solid:DatatypeProperty",
+    "urn:solid:label",
+    "urn:solid:comment"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Examples: `rdfs:label`, `rdfs:comment`, `rdfs:seeAlso`, `dcterms:creator`. Reasoners explicitly *don't* use AnnotationProperty triples for inference — they're metadata for humans and tooling, not part of the formal model. Distinct from `ObjectProperty`/`DatatypeProperty` which carry semantic weight.",
+  "examples": [
+    {
+      "title": "Declaring rdfs:label as an AnnotationProperty",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+        "@type": "urn:solid:AnnotationProperty"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

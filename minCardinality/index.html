@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:minCardinality — urn-solid</title>
+<meta name="description" content="On an OWL Restriction, asserts that the constrained property must have *at least* this many values.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/minCardinality/">
+<link rel="alternate" type="application/ld+json" href="/minCardinality/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:minCardinality",
+  "@type": "rdf:Property",
+  "rdfs:label": "minCardinality",
+  "rdfs:comment": "On an OWL Restriction, asserts that the constrained property must have *at least* this many values.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#minCardinality",
+  "rdfs:seeAlso": [
+    "urn:solid:Restriction",
+    "urn:solid:cardinality",
+    "urn:solid:maxCardinality",
+    "urn:solid:onProperty"
+  ],
+  "rdfs:domain": "urn:solid:Restriction",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use to express \"at least\" requirements without an upper bound (`minCardinality 1` = the property is required; `minCardinality 2` = at least two values). Combine with `maxCardinality` for ranges. `minCardinality 0` is meaningless (every property satisfies it).",
+  "examples": [
+    {
+      "title": "Class requiring at least one author",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Restriction",
+        "urn:solid:onProperty": { "@id": "urn:solid:author" },
+        "urn:solid:minCardinality": 1
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#minCardinality"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

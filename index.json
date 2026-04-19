@@ -34,6 +34,13 @@
     "status": "stable",
     "path": "/Agent/"
   },
+  "urn:solid:AnnotationProperty": {
+    "label": "AnnotationProperty",
+    "description": "An OWL property used purely for human-readable metadata — labels, comments, version notes — with no formal semantic implications.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/AnnotationProperty/"
+  },
   "urn:solid:Announce": {
     "label": "Announce",
     "description": "An activity in which the actor is calling the audience's attention to the object — a boost or repost.",
@@ -1469,6 +1476,13 @@
     "status": "stable",
     "path": "/byteSize/"
   },
+  "urn:solid:cardinality": {
+    "label": "cardinality",
+    "description": "On an OWL Restriction, asserts that the constrained property must have *exactly* this many values.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/cardinality/"
+  },
   "urn:solid:cc": {
     "label": "cc",
     "description": "Secondary public recipients of the object — visible carbon-copy addresses.",
@@ -2204,6 +2218,13 @@
     "status": "stable",
     "path": "/hasUnit/"
   },
+  "urn:solid:hasValue": {
+    "label": "hasValue",
+    "description": "On an OWL Restriction, asserts that the constrained property must have one specific value — the most precise form of class definition.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasValue/"
+  },
   "urn:solid:hasVersion": {
     "label": "hasVersion",
     "description": "A related resource that is a version, edition, or adaptation of the described resource.",
@@ -2666,6 +2687,13 @@
     "status": "stable",
     "path": "/mappingRelation/"
   },
+  "urn:solid:maxCardinality": {
+    "label": "maxCardinality",
+    "description": "On an OWL Restriction, asserts that the constrained property must have *at most* this many values.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/maxCardinality/"
+  },
   "urn:solid:mbox": {
     "label": "mbox",
     "description": "A personal mailbox — typically a mailto: IRI.",
@@ -2728,6 +2756,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/membershipResource/"
+  },
+  "urn:solid:minCardinality": {
+    "label": "minCardinality",
+    "description": "On an OWL Restriction, asserts that the constrained property must have *at least* this many values.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/minCardinality/"
   },
   "urn:solid:mode": {
     "label": "mode",

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:cardinality — urn-solid</title>
+<meta name="description" content="On an OWL Restriction, asserts that the constrained property must have *exactly* this many values.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/cardinality/">
+<link rel="alternate" type="application/ld+json" href="/cardinality/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:cardinality",
+  "@type": "rdf:Property",
+  "rdfs:label": "cardinality",
+  "rdfs:comment": "On an OWL Restriction, asserts that the constrained property must have *exactly* this many values.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#cardinality",
+  "rdfs:seeAlso": [
+    "urn:solid:Restriction",
+    "urn:solid:minCardinality",
+    "urn:solid:maxCardinality",
+    "urn:solid:onProperty"
+  ],
+  "rdfs:domain": "urn:solid:Restriction",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+  "notToBeConfusedWith": [
+    "urn:solid:minCardinality",
+    "urn:solid:maxCardinality"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Equivalent to `minCardinality` and `maxCardinality` both set to the same value. Use when the count is fixed (every Triangle has exactly 3 sides). For ranges, prefer the min/max forms — they're more flexible and the same expressivity.",
+  "examples": [
+    {
+      "title": "Class requiring exactly one issuer",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Restriction",
+        "urn:solid:onProperty": { "@id": "urn:solid:issuer" },
+        "urn:solid:cardinality": 1
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#cardinality"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

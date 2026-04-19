@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:hasValue — urn-solid</title>
+<meta name="description" content="On an OWL Restriction, asserts that the constrained property must have one specific value — the most precise form of class definition.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/hasValue/">
+<link rel="alternate" type="application/ld+json" href="/hasValue/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasValue",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasValue",
+  "rdfs:comment": "On an OWL Restriction, asserts that the constrained property must have one specific value — the most precise form of class definition.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#hasValue",
+  "rdfs:seeAlso": [
+    "urn:solid:Restriction",
+    "urn:solid:onProperty",
+    "urn:solid:allValuesFrom",
+    "urn:solid:someValuesFrom"
+  ],
+  "rdfs:domain": "urn:solid:Restriction",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "\"On property X, the value must be exactly this.\" Use to define classes like \"Things whose `acl:mode` includes `acl:Read`.\" Value can be any individual or literal. Stronger than `someValuesFrom` (which only constrains the type, not the specific value).",
+  "examples": [
+    {
+      "title": "A class of resources granting public read",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Restriction",
+        "urn:solid:onProperty": { "@id": "urn:solid:agentClass" },
+        "urn:solid:hasValue": { "@id": "http://xmlns.com/foaf/0.1/Agent" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#hasValue"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
