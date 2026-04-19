@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:url",
+  "@type": "rdf:Property",
+  "rdfs:label": "url",
+  "rdfs:comment": "An ActivityStreams Object's primary URL — the human-facing page where the Object can be viewed in a browser, distinct from its `@id` (the AP-facing identifier).",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#url",
+  "rdfs:seeAlso": [
+    "urn:solid:Object",
+    "urn:solid:Link",
+    "urn:solid:href"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:href"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "On Mastodon-style fediverse content, `@id` is `https://mastodon.example/users/alice/statuses/123` (server-to-server) while `as:url` is `https://mastodon.example/@alice/123` (the user-facing permalink). Clients render `url` to readers and use `@id` for federation. May be a string or an `as:Link` — the Link form lets you supply rel/type/hreflang.",
+  "examples": [
+    {
+      "title": "A Note with a separate user-facing URL",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://mastodon.example/users/alice/statuses/123",
+        "@type": "urn:solid:Note",
+        "urn:solid:url": { "@id": "https://mastodon.example/@alice/123" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#url"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

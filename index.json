@@ -1343,6 +1343,13 @@
     "status": "stable",
     "path": "/content/"
   },
+  "urn:solid:contentMap": {
+    "label": "contentMap",
+    "description": "Language-tagged variants of an ActivityStreams Object's `content` — keys are BCP 47 language tags, values are the localised content (often HTML).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/contentMap/"
+  },
   "urn:solid:context": {
     "label": "context",
     "description": "The context within which the object exists or to which it relates — typically a conversation thread.",
@@ -1762,6 +1769,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasCalendarLink/"
+  },
+  "urn:solid:hasCalendarRequest": {
+    "label": "hasCalendarRequest",
+    "description": "A vCard's URL for accepting calendar requests — the endpoint where meeting requests, scheduling proposals, or iCalendar invitations should be sent.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasCalendarRequest/"
   },
   "urn:solid:hasCategory": {
     "label": "hasCategory",
@@ -2407,6 +2421,13 @@
     "status": "stable",
     "path": "/name/"
   },
+  "urn:solid:nameMap": {
+    "label": "nameMap",
+    "description": "Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/nameMap/"
+  },
   "urn:solid:narrowMatch": {
     "label": "narrowMatch",
     "description": "A SKOS mapping asserting that a Concept in another scheme is narrower than this Concept.",
@@ -2918,6 +2939,13 @@
     "status": "stable",
     "path": "/summary/"
   },
+  "urn:solid:summaryMap": {
+    "label": "summaryMap",
+    "description": "Language-tagged variants of an ActivityStreams Object's `summary` — keys are BCP 47 language tags, values are the localised summary strings.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/summaryMap/"
+  },
   "urn:solid:tableOfContents": {
     "label": "tableOfContents",
     "description": "A list of subunits of the resource — chapters, sections, parts.",
@@ -3036,6 +3064,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/updated/"
+  },
+  "urn:solid:url": {
+    "label": "url",
+    "description": "An ActivityStreams Object's primary URL — the human-facing page where the Object can be viewed in a browser, distinct from its `@id` (the AP-facing identifier).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/url/"
   },
   "urn:solid:used": {
     "label": "used",

@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:nameMap",
+  "@type": "rdf:Property",
+  "rdfs:label": "nameMap",
+  "rdfs:comment": "Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#nameMap",
+  "rdfs:seeAlso": [
+    "urn:solid:name",
+    "urn:solid:contentMap",
+    "urn:solid:summaryMap"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Provide alongside (or instead of) `as:name` when the Object has translations. Standard fediverse pattern for multilingual content. Clients SHOULD pick the best match for the user's locale; servers MAY mirror one entry into `as:name` as a fallback for non-aware consumers.",
+  "examples": [
+    {
+      "title": "A Note with localised names",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/articles/1",
+        "@type": "urn:solid:Article",
+        "urn:solid:nameMap": {
+          "en": "How it works",
+          "fr": "Comment ça marche",
+          "ja": "使い方"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#nameMap"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

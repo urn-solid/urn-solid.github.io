@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasCalendarRequest",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasCalendarRequest",
+  "rdfs:comment": "A vCard's URL for accepting calendar requests — the endpoint where meeting requests, scheduling proposals, or iCalendar invitations should be sent.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasCalendarRequest",
+  "rdfs:seeAlso": [
+    "urn:solid:hasCalendarBusy",
+    "urn:solid:hasCalendarLink",
+    "urn:solid:VCard"
+  ],
+  "rdfs:domain": "urn:solid:VCard",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "vCard analogue of the iCalendar CALADRURI property. Distinct from `vcard:hasCalendarLink` (a public calendar URL to *view*) and `vcard:hasCalendarBusy` (free/busy lookup) — `hasCalendarRequest` is specifically the *write* endpoint for inbound scheduling.",
+  "examples": [
+    {
+      "title": "A VCard exposing a scheduling endpoint",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/vcard",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasCalendarRequest": { "@id": "https://alice.example.org/calendar/request" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasCalendarRequest"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

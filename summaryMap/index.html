@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:summaryMap — urn-solid</title>
+<meta name="description" content="Language-tagged variants of an ActivityStreams Object's `summary` — keys are BCP 47 language tags, values are the localised summary strings.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/summaryMap/">
+<link rel="alternate" type="application/ld+json" href="/summaryMap/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:summaryMap",
+  "@type": "rdf:Property",
+  "rdfs:label": "summaryMap",
+  "rdfs:comment": "Language-tagged variants of an ActivityStreams Object's `summary` — keys are BCP 47 language tags, values are the localised summary strings.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#summaryMap",
+  "rdfs:seeAlso": [
+    "urn:solid:summary",
+    "urn:solid:nameMap",
+    "urn:solid:contentMap"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "On the fediverse, `summary` is also used as the content warning / spoiler text — `summaryMap` lets that warning be translated alongside the post body. Pair with `contentMap` so the visible warning matches the language of the content the user will reveal.",
+  "examples": [
+    {
+      "title": "A Note with localised content warning",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/4",
+        "@type": "urn:solid:Note",
+        "urn:solid:summaryMap": {
+          "en": "spoilers for season 2",
+          "fr": "spoilers pour la saison 2"
+        },
+        "urn:solid:contentMap": {
+          "en": "I cannot believe what just happened…",
+          "fr": "Je n'arrive pas à croire ce qui vient de se passer…"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#summaryMap"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
