@@ -27,6 +27,13 @@
     "status": "stable",
     "path": "/Add/"
   },
+  "urn:solid:AddressBook": {
+    "label": "AddressBook",
+    "description": "A collection of contacts — a personal or shared address book.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/AddressBook/"
+  },
   "urn:solid:Agent": {
     "label": "Agent",
     "description": "A thing that acts — person, organization, group, or software.",

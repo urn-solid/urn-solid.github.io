@@ -3,6 +3,7 @@
   "https://schema.org/Action": "urn:solid:Action",
   "https://www.w3.org/ns/activitystreams#Activity": "urn:solid:Activity",
   "https://www.w3.org/ns/activitystreams#Add": "urn:solid:Add",
+  "http://www.w3.org/2006/vcard/ns#AddressBook": "urn:solid:AddressBook",
   "http://xmlns.com/foaf/0.1/Agent": "urn:solid:Agent",
   "http://www.w3.org/2002/07/owl#AnnotationProperty": "urn:solid:AnnotationProperty",
   "https://www.w3.org/ns/activitystreams#Announce": "urn:solid:Announce",

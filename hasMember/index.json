@@ -7,6 +7,7 @@
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasMember",
   "rdfs:seeAlso": [
     "urn:solid:member",
+    "urn:solid:AddressBook",
     "https://schema.org/member"
   ],
   "rdfs:domain": "http://www.w3.org/2006/vcard/ns#Group",
