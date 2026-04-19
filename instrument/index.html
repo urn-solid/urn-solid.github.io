@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:instrument — urn-solid</title>
+<meta name="description" content="An entity used by an ActivityStreams Activity to perform its action — e.g. a tool, a client application, or a means by which the Activity was carried out.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/instrument/">
+<link rel="alternate" type="application/ld+json" href="/instrument/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:instrument",
+  "@type": "rdf:Property",
+  "rdfs:label": "instrument",
+  "rdfs:comment": "An entity used by an ActivityStreams Activity to perform its action — e.g. a tool, a client application, or a means by which the Activity was carried out.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#instrument",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:object",
+    "urn:solid:result",
+    "urn:solid:target"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Captures the *means* used (a microphone for a Listen, a camera for a View, a client app for a Create). Distinct from `as:object` (what was acted on) and `as:target` (where the action was directed). Often left implicit — populate when the instrument is itself a first-class entity worth referencing.",
+  "examples": [
+    {
+      "title": "A Listen activity with an instrument",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/activities/listen-3",
+        "@type": "http://www.w3.org/ns/activitystreams#Listen",
+        "urn:solid:object": { "@id": "https://example.org/podcasts/episode/12" },
+        "urn:solid:instrument": { "@id": "https://example.org/apps/podcatcher" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#instrument"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:qualifiedInvalidation",
+  "@type": "rdf:Property",
+  "rdfs:label": "qualifiedInvalidation",
+  "rdfs:comment": "Links an Entity to a `prov:Invalidation` instance describing the activity, time, and circumstances in which the Entity ceased to exist.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#qualifiedInvalidation",
+  "rdfs:seeAlso": [
+    "urn:solid:Entity",
+    "urn:solid:invalidated",
+    "urn:solid:qualifiedGeneration",
+    "urn:solid:qualifiedUsage"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The qualified counterpart to `prov:wasInvalidatedBy`. Use when a plain triple is insufficient — to record the time of invalidation, the role the Entity played, or to attach further provenance to the invalidation event itself (deletion log, retention policy reference).",
+  "examples": [
+    {
+      "title": "Entity with a qualified Invalidation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/records/2020-archive",
+        "@type": "urn:solid:Entity",
+        "urn:solid:qualifiedInvalidation": {
+          "@id": "https://example.org/invalidation/2020-archive",
+          "@type": "http://www.w3.org/ns/prov#Invalidation",
+          "http://www.w3.org/ns/prov#activity": { "@id": "https://example.org/activity/delete-old-records" },
+          "http://www.w3.org/ns/prov#atTime": { "@value": "2026-04-19T12:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#qualifiedInvalidation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

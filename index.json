@@ -419,6 +419,13 @@
     "status": "stable",
     "path": "/Group/"
   },
+  "urn:solid:Hashtag": {
+    "label": "Hashtag",
+    "description": "An ActivityStreams Link representing a hashtag — a topical keyword, conventionally prefixed with `#`, attached to an Object as a tag.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Hashtag/"
+  },
   "urn:solid:HowTo": {
     "label": "HowTo",
     "description": "Instructions for performing a task — a tutorial or how-to guide.",
@@ -537,6 +544,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Membership/"
+  },
+  "urn:solid:Mention": {
+    "label": "Mention",
+    "description": "An ActivityStreams Link representing a mention of an Actor — typically authored as `@user@host` and attached to an Object so the mentioned party is notified.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Mention/"
   },
   "urn:solid:Move": {
     "label": "Move",
@@ -1917,6 +1931,13 @@
     "status": "stable",
     "path": "/instructionalMethod/"
   },
+  "urn:solid:instrument": {
+    "label": "instrument",
+    "description": "An entity used by an ActivityStreams Activity to perform its action — e.g. a tool, a client application, or a means by which the Activity was carried out.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/instrument/"
+  },
   "urn:solid:interest": {
     "label": "interest",
     "description": "A page about a topic of interest to the agent.",
@@ -2421,6 +2442,13 @@
     "status": "stable",
     "path": "/qualifiedGeneration/"
   },
+  "urn:solid:qualifiedInvalidation": {
+    "label": "qualifiedInvalidation",
+    "description": "Links an Entity to a `prov:Invalidation` instance describing the activity, time, and circumstances in which the Entity ceased to exist.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/qualifiedInvalidation/"
+  },
   "urn:solid:qualifiedUsage": {
     "label": "qualifiedUsage",
     "description": "Links an Activity to a `prov:Usage` instance that adds detail (which entity, when, in what role) to a plain `prov:used` link.",
@@ -2476,6 +2504,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/requires/"
+  },
+  "urn:solid:result": {
+    "label": "result",
+    "description": "Describes the result produced by an ActivityStreams Activity — for example, the booking returned by a Reservation.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/result/"
   },
   "urn:solid:rights": {
     "label": "rights",

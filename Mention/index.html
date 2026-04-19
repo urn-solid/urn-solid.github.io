@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Mention — urn-solid</title>
+<meta name="description" content="An ActivityStreams Link representing a mention of an Actor — typically authored as `@user@host` and attached to an Object so the mentioned party is notified.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Mention/">
+<link rel="alternate" type="application/ld+json" href="/Mention/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Mention",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Mention",
+  "rdfs:comment": "An ActivityStreams Link representing a mention of an Actor — typically authored as `@user@host` and attached to an Object so the mentioned party is notified.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Mention",
+  "rdfs:seeAlso": [
+    "urn:solid:Hashtag",
+    "urn:solid:tag",
+    "urn:solid:Link",
+    "urn:solid:Actor"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Hashtag"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use as a value of `as:tag` alongside the actor's URI in `href`. ActivityPub servers use Mentions to drive notification delivery — including a Mention is *the* mechanism by which a remote user learns they were addressed in a post. Distinct from `as:to`/`as:cc` (delivery audience) and from a Hashtag (topical, not addressed).",
+  "examples": [
+    {
+      "title": "A Note mentioning another actor",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/2",
+        "@type": "urn:solid:Note",
+        "urn:solid:content": "Thanks @bob@example.org!",
+        "urn:solid:tag": {
+          "@type": "urn:solid:Mention",
+          "urn:solid:name": "@bob@example.org",
+          "urn:solid:href": { "@id": "https://example.org/users/bob" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#Mention"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
