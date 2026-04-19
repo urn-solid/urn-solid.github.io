@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:deleted — urn-solid</title>
+<meta name="description" content="On an ActivityStreams Tombstone, the date-time at which the original Object was deleted.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/deleted/">
+<link rel="alternate" type="application/ld+json" href="/deleted/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:deleted",
+  "@type": "rdf:Property",
+  "rdfs:label": "deleted",
+  "rdfs:comment": "On an ActivityStreams Tombstone, the date-time at which the original Object was deleted.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#deleted",
+  "rdfs:seeAlso": [
+    "urn:solid:Tombstone",
+    "urn:solid:formerType"
+  ],
+  "rdfs:domain": "urn:solid:Tombstone",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Always an `xsd:dateTime`. Pair with `as:formerType` so consumers know both *when* and *what* was deleted. Together they let UIs render \"Note deleted at 14:32\" instead of an opaque error when a previously-cached link points to a removed Object.",
+  "examples": [
+    {
+      "title": "Tombstone with deletion timestamp",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/old",
+        "@type": "urn:solid:Tombstone",
+        "urn:solid:formerType": { "@id": "http://www.w3.org/ns/activitystreams#Note" },
+        "urn:solid:deleted": { "@value": "2026-04-15T14:32:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#deleted"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

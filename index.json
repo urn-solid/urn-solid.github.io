@@ -517,6 +517,13 @@
     "status": "stable",
     "path": "/ListItem/"
   },
+  "urn:solid:Listen": {
+    "label": "Listen",
+    "description": "An ActivityStreams Activity indicating that the actor listened to the object — typically audio content (a song, podcast episode, broadcast).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Listen/"
+  },
   "urn:solid:Logo": {
     "label": "Logo",
     "description": "A vCard Logo resource — the logo image associated with a vCard (typically for an Organization).",
@@ -972,6 +979,13 @@
     "status": "stable",
     "path": "/VideoObject/"
   },
+  "urn:solid:View": {
+    "label": "View",
+    "description": "An ActivityStreams Activity indicating that the actor viewed the object — typically visual content (an image, a video, a page).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/View/"
+  },
   "urn:solid:WebPage": {
     "label": "WebPage",
     "description": "A web page — a single page on a website, identified by its URL.",
@@ -1419,6 +1433,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/definition/"
+  },
+  "urn:solid:deleted": {
+    "label": "deleted",
+    "description": "On an ActivityStreams Tombstone, the date-time at which the original Object was deleted.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/deleted/"
   },
   "urn:solid:depiction": {
     "label": "depiction",
@@ -1874,6 +1895,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/headline/"
+  },
+  "urn:solid:height": {
+    "label": "height",
+    "description": "The height in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/height/"
   },
   "urn:solid:heldBy": {
     "label": "heldBy",
@@ -3008,6 +3036,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/weblog/"
+  },
+  "urn:solid:width": {
+    "label": "width",
+    "description": "The width in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/width/"
   },
   "urn:solid:workplaceHomepage": {
     "label": "workplaceHomepage",

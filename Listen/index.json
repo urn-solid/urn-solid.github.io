@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Listen",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Listen",
+  "rdfs:comment": "An ActivityStreams Activity indicating that the actor listened to the object — typically audio content (a song, podcast episode, broadcast).",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Listen",
+  "rdfs:seeAlso": [
+    "urn:solid:View",
+    "urn:solid:Read",
+    "urn:solid:Audio"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Records consumption of audio content as a first-class event — useful for scrobbling, recommendations, listening history, and reading-progress analogues. Pair with `as:instrument` to record the client/device used.",
+  "examples": [
+    {
+      "title": "Listened to a podcast episode",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/activities/listen-3",
+        "@type": "urn:solid:Listen",
+        "urn:solid:actor": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:object": { "@id": "https://example.org/podcasts/episode/12" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#Listen"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
