@@ -1,18 +1,29 @@
-DATA LICENSE — CC0 1.0 Universal (Public Domain Dedication)
-============================================================
+DATA LICENSE — CC BY 4.0 (Creative Commons Attribution 4.0 International)
+==========================================================================
 
-The data files in this repository are dedicated to the public domain
-under CC0 1.0 Universal. To the extent possible under law, Melvin
-Carvalho has waived all copyright and related or neighboring rights
-to these files. Anyone may copy, modify, distribute, and perform them,
-even for commercial purposes, all without asking permission.
+The data files in this repository are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0). You are free to:
 
-Full legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material for any purpose,
+    even commercially
+
+Under the following terms:
+
+  - Attribution — You must give appropriate credit (suggested form below),
+    provide a link to the license, and indicate if changes were made. You
+    may do so in any reasonable manner, but not in any way that suggests
+    the licensor endorses you or your use.
+
+Suggested attribution: "urn-solid registry, https://urn-solid.github.io/,
+licensed under CC BY 4.0."
+
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
 
 What this covers
 ----------------
 
-CC0 applies to the urn:solid term registry contents:
+CC BY 4.0 applies to the urn:solid term registry contents:
 
   - <Name>/index.json   — each term's source-of-truth JSON-LD record
   - context.jsonld      — the canonical urn-solid JSON-LD context
@@ -31,14 +42,6 @@ Build scripts and other code remain licensed under AGPL-3.0 (see LICENSE):
   - style.css
   - generated <Name>/index.html, top-level index.html, etc.
 
-The split keeps the *vocabulary* a true commons (citable and reusable
-in any product, proprietary or open) while the *implementation* of
-the registry stays copyleft-protected.
-
-Why
----
-
-Vocabularies are infrastructure. The W3C/IANA convention is to license
-vocabulary content permissively so the world can adopt the terms
-without inheriting the registry's code license. CC0 matches what
-Wikidata and many W3C vocabularies do.
+The split keeps the *vocabulary* widely reusable (in proprietary or open
+products, with credit) while the *implementation* of the registry stays
+copyleft-protected.
