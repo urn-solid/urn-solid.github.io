@@ -972,6 +972,13 @@
     "status": "stable",
     "path": "/accessRights/"
   },
+  "urn:solid:accessService": {
+    "label": "accessService",
+    "description": "A DCAT DataService through which a particular Distribution can be accessed — e.g. a SPARQL endpoint that exposes a downloadable dataset.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/accessService/"
+  },
   "urn:solid:accessTo": {
     "label": "accessTo",
     "description": "The resource that an Authorization grants access to.",
@@ -1539,6 +1546,13 @@
     "status": "stable",
     "path": "/hadActivity/"
   },
+  "urn:solid:hadGeneration": {
+    "label": "hadGeneration",
+    "description": "Links a use of an Entity to the qualified Generation event in which that Entity was created — letting consumers reason about which version was used.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hadGeneration/"
+  },
   "urn:solid:hadMember": {
     "label": "hadMember",
     "description": "An entity that was a member of a PROV Collection.",
@@ -1762,6 +1776,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/headline/"
+  },
+  "urn:solid:heldBy": {
+    "label": "heldBy",
+    "description": "Inverse of `org:holds` — names the Agent currently filling an organizational Post.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/heldBy/"
   },
   "urn:solid:hiddenLabel": {
     "label": "hiddenLabel",
@@ -2119,6 +2140,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/member/"
+  },
+  "urn:solid:memberList": {
+    "label": "memberList",
+    "description": "An ordered list of members of a SKOS OrderedCollection — preserves sequence in a way that the unordered `skos:member` cannot.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/memberList/"
   },
   "urn:solid:memberOf": {
     "label": "memberOf",
@@ -2700,6 +2728,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/wasGeneratedBy/"
+  },
+  "urn:solid:wasInfluencedBy": {
+    "label": "wasInfluencedBy",
+    "description": "The most general PROV influence relation — asserts that one Entity, Activity, or Agent had some effect on another, without specifying the kind of influence.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/wasInfluencedBy/"
   },
   "urn:solid:wasInformedBy": {
     "label": "wasInformedBy",

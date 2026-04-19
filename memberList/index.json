@@ -1,0 +1,59 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:memberList",
+  "@type": "rdf:Property",
+  "rdfs:label": "memberList",
+  "rdfs:comment": "An ordered list of members of a SKOS OrderedCollection — preserves sequence in a way that the unordered `skos:member` cannot.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#memberList",
+  "rdfs:seeAlso": [
+    "urn:solid:Collection",
+    "urn:solid:Concept",
+    "urn:solid:inScheme"
+  ],
+  "rdfs:domain": "http://www.w3.org/2004/02/skos/core#OrderedCollection",
+  "rdfs:range": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
+  "notToBeConfusedWith": [
+    "urn:solid:hasMember"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Functional and required on a `skos:OrderedCollection`: exactly one `rdf:List` of Concepts, encoding their canonical order (chapter sequence, taxonomic ranking, presentation order). Use plain `skos:member` for unordered groups.",
+  "examples": [
+    {
+      "title": "An OrderedCollection of Concepts",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/scheme/seasons-ordered",
+        "@type": "http://www.w3.org/2004/02/skos/core#OrderedCollection",
+        "urn:solid:memberList": {
+          "@list": [
+            { "@id": "https://example.org/scheme/spring" },
+            { "@id": "https://example.org/scheme/summer" },
+            { "@id": "https://example.org/scheme/autumn" },
+            { "@id": "https://example.org/scheme/winter" }
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#memberList"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

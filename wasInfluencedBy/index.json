@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasInfluencedBy",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasInfluencedBy",
+  "rdfs:comment": "The most general PROV influence relation — asserts that one Entity, Activity, or Agent had some effect on another, without specifying the kind of influence.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasInfluencedBy",
+  "rdfs:seeAlso": [
+    "urn:solid:Influence",
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:wasGeneratedBy",
+    "urn:solid:used",
+    "urn:solid:wasAssociatedWith"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The supertype of every PROV influence link (`wasDerivedFrom`, `wasGeneratedBy`, `used`, `wasAssociatedWith`, `actedOnBehalfOf`, etc.). Use only when the kind of influence is unknown or deliberately unspecified — otherwise the more specific subproperty carries more meaning to consumers.",
+  "examples": [
+    {
+      "title": "Generic influence between two entities",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/report/v2",
+        "@type": "urn:solid:Entity",
+        "urn:solid:wasInfluencedBy": { "@id": "https://example.org/feedback-thread" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasInfluencedBy"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:accessService",
+  "@type": "rdf:Property",
+  "rdfs:label": "accessService",
+  "rdfs:comment": "A DCAT DataService through which a particular Distribution can be accessed — e.g. a SPARQL endpoint that exposes a downloadable dataset.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#accessService",
+  "rdfs:seeAlso": [
+    "urn:solid:Distribution",
+    "urn:solid:DataService",
+    "urn:solid:downloadURL",
+    "urn:solid:accessURL"
+  ],
+  "rdfs:domain": "urn:solid:Distribution",
+  "rdfs:range": "urn:solid:DataService",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use when a Distribution is reachable via a service (queryable, paginated, parameterised) rather than a single static file. A Distribution may carry both `dcat:downloadURL` (bulk file) and `dcat:accessService` (live query interface) — they describe two ways to obtain the same data.",
+  "examples": [
+    {
+      "title": "Distribution accessible via a SPARQL service",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://data.example.org/dataset/main/dist/sparql",
+        "@type": "urn:solid:Distribution",
+        "urn:solid:accessService": { "@id": "https://data.example.org/services/sparql" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#accessService"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
