@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:href — urn-solid</title>
+<meta name="description" content="The target URL of an ActivityStreams Link — the resource the Link points at.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/href/">
+<link rel="alternate" type="application/ld+json" href="/href/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:href",
+  "@type": "rdf:Property",
+  "rdfs:label": "href",
+  "rdfs:comment": "The target URL of an ActivityStreams Link — the resource the Link points at.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#href",
+  "rdfs:seeAlso": [
+    "urn:solid:Link",
+    "urn:solid:Mention",
+    "urn:solid:Hashtag",
+    "urn:solid:rel"
+  ],
+  "rdfs:domain": "urn:solid:Link",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The defining property of a Link — without `href` a Link has no destination. Distinct from `@id` (the Link object's own identifier, often omitted): `@id` identifies the Link, `href` identifies what it links to. Used heavily by `Mention` and `Hashtag` to point at the mentioned actor or topic feed.",
+  "examples": [
+    {
+      "title": "A Link with href and rel",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Link",
+        "urn:solid:href": { "@id": "https://example.org/article/42" },
+        "urn:solid:rel": "canonical"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#href"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

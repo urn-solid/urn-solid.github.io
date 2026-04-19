@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:following",
+  "@type": "rdf:Property",
+  "rdfs:label": "following",
+  "rdfs:comment": "The Collection of Actors that an ActivityPub Actor follows — the source side of the social graph.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#following",
+  "rdfs:seeAlso": [
+    "urn:solid:Actor",
+    "urn:solid:followers",
+    "urn:solid:Follow"
+  ],
+  "rdfs:domain": "urn:solid:Actor",
+  "notToBeConfusedWith": [
+    "urn:solid:followers"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Mirror of `as:followers`. Each entry is an Actor whose Activities the subject has subscribed to via a `Follow` activity. May be private (just a count) for privacy-sensitive deployments.",
+  "examples": [
+    {
+      "title": "An Actor exposing a following Collection",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:following": { "@id": "https://alice.example.org/following" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#following"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

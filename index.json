@@ -1588,6 +1588,20 @@
     "status": "stable",
     "path": "/follower/"
   },
+  "urn:solid:followers": {
+    "label": "followers",
+    "description": "The Collection of Actors who follow an ActivityPub Actor — used both for delivery (servers fan Activities out to followers) and for display.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/followers/"
+  },
+  "urn:solid:following": {
+    "label": "following",
+    "description": "The Collection of Actors that an ActivityPub Actor follows — the source side of the social graph.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/following/"
+  },
   "urn:solid:forClass": {
     "label": "forClass",
     "description": "The RDF class that a TypeRegistration is for — what type of resources live at the registered location.",
@@ -1944,6 +1958,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/honorific-suffix/"
+  },
+  "urn:solid:href": {
+    "label": "href",
+    "description": "The target URL of an ActivityStreams Link — the resource the Link points at.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/href/"
   },
   "urn:solid:icon": {
     "label": "icon",
@@ -2414,6 +2435,13 @@
     "status": "stable",
     "path": "/organization-name/"
   },
+  "urn:solid:outbox": {
+    "label": "outbox",
+    "description": "The OrderedCollection of Activities an ActivityPub Actor has published — POSTing to it is how the Actor sends new Activities to the network.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/outbox/"
+  },
   "urn:solid:owner": {
     "label": "owner",
     "description": "An agent that owns the resource — typically used to declare pod ownership.",
@@ -2490,6 +2518,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/preferencesFile/"
+  },
+  "urn:solid:preferredUsername": {
+    "label": "preferredUsername",
+    "description": "An ActivityPub Actor's preferred short username — the local part used in `@user@host` mention syntax.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/preferredUsername/"
   },
   "urn:solid:prev": {
     "label": "prev",

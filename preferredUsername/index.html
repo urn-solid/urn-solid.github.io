@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:preferredUsername — urn-solid</title>
+<meta name="description" content="An ActivityPub Actor's preferred short username — the local part used in `@user@host` mention syntax.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/preferredUsername/">
+<link rel="alternate" type="application/ld+json" href="/preferredUsername/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:preferredUsername",
+  "@type": "rdf:Property",
+  "rdfs:label": "preferredUsername",
+  "rdfs:comment": "An ActivityPub Actor's preferred short username — the local part used in `@user@host` mention syntax.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#preferredUsername",
+  "rdfs:seeAlso": [
+    "urn:solid:Actor",
+    "urn:solid:name",
+    "urn:solid:Mention"
+  ],
+  "rdfs:domain": "urn:solid:Actor",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:name"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The handle, not the display name: `as:preferredUsername` is `alice` (used in webfinger and `@alice@host` mentions); `as:name` is \"Alice Smith\" (the human-readable display string). Lowercase, alphanumeric, no spaces — meant for routing and addressing, not presentation.",
+  "examples": [
+    {
+      "title": "An Actor with a handle and display name",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:preferredUsername": "alice",
+        "urn:solid:name": "Alice Smith"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#preferredUsername"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
