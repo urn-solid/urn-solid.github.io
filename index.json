@@ -678,6 +678,13 @@
     "status": "stable",
     "path": "/Policy/"
   },
+  "urn:solid:Post": {
+    "label": "Post",
+    "description": "A position within an organization that may be filled by an Agent — independent of who currently holds it.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Post/"
+  },
   "urn:solid:PostalAddress": {
     "label": "PostalAddress",
     "description": "A structured postal address — street, locality, region, postal code, country.",
@@ -1384,6 +1391,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/endedAtTime/"
+  },
+  "urn:solid:endpointURL": {
+    "label": "endpointURL",
+    "description": "The root URL of a DCAT DataService — the address a client connects to to invoke the service.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/endpointURL/"
   },
   "urn:solid:exactMatch": {
     "label": "exactMatch",
@@ -2134,6 +2148,13 @@
     "status": "stable",
     "path": "/nick/"
   },
+  "urn:solid:notation": {
+    "label": "notation",
+    "description": "A symbolic identifier for a SKOS Concept within a particular notation system (Dewey numbers, ISBN-style codes, taxonomy IDs).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/notation/"
+  },
   "urn:solid:oidcIssuer": {
     "label": "oidcIssuer",
     "description": "The OpenID Connect issuer that this WebID trusts to authenticate it.",
@@ -2400,6 +2421,13 @@
     "status": "stable",
     "path": "/semanticRelation/"
   },
+  "urn:solid:servesDataset": {
+    "label": "servesDataset",
+    "description": "A Dataset that a DCAT DataService makes available.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/servesDataset/"
+  },
   "urn:solid:sha1": {
     "label": "sha1",
     "description": "The SHA-1 cryptographic hash of the resource's content.",
@@ -2427,6 +2455,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/spatial/"
+  },
+  "urn:solid:specializationOf": {
+    "label": "specializationOf",
+    "description": "Asserts that one PROV Entity is a more constrained version of another — same identity, narrower aspect (e.g. a single revision of a document is a specialization of the document as a whole).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/specializationOf/"
   },
   "urn:solid:spouse": {
     "label": "spouse",

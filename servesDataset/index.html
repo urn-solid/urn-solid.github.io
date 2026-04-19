@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:servesDataset — urn-solid</title>
+<meta name="description" content="A Dataset that a DCAT DataService makes available.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/servesDataset/">
+<link rel="alternate" type="application/ld+json" href="/servesDataset/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:servesDataset",
+  "@type": "rdf:Property",
+  "rdfs:label": "servesDataset",
+  "rdfs:comment": "A Dataset that a DCAT DataService makes available.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#servesDataset",
+  "rdfs:seeAlso": [
+    "urn:solid:DataService",
+    "urn:solid:Dataset",
+    "urn:solid:endpointURL"
+  ],
+  "rdfs:domain": "urn:solid:DataService",
+  "rdfs:range": "urn:solid:Dataset",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Repeat once per Dataset the service exposes — a single SPARQL endpoint or API may publish many. The inverse direction (`dcat:Dataset` → service) is not standard; lookups go through the service.",
+  "examples": [
+    {
+      "title": "Service serving two datasets",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://data.example.org/services/sparql",
+        "@type": "urn:solid:DataService",
+        "urn:solid:servesDataset": [
+          { "@id": "https://data.example.org/dataset/people" },
+          { "@id": "https://data.example.org/dataset/places" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#servesDataset"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Post",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Post",
+  "rdfs:comment": "A position within an organization that may be filled by an Agent — independent of who currently holds it.",
+  "owl:sameAs": "http://www.w3.org/ns/org#Post",
+  "rdfs:seeAlso": [
+    "urn:solid:Organization",
+    "urn:solid:Membership",
+    "urn:solid:role",
+    "urn:solid:holds"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Membership",
+    "urn:solid:role"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "A Post is a *seat* (e.g. \"CTO of ACME\"); the Agent who fills it changes over time. Compare with `org:Membership` (a time-bound link between Agent, Organization, and Role) and `org:Role` (the abstract role itself). Use Post when the position has an identity independent of its current holder.",
+  "examples": [
+    {
+      "title": "A named position in an organization",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/acme/posts/cto",
+        "@type": "urn:solid:Post",
+        "urn:solid:label": "Chief Technology Officer",
+        "urn:solid:postIn": { "@id": "https://example.org/acme#org" },
+        "urn:solid:role": { "@id": "https://example.org/roles/cto" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/org#Post"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

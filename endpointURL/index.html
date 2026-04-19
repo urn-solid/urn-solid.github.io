@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:endpointURL — urn-solid</title>
+<meta name="description" content="The root URL of a DCAT DataService — the address a client connects to to invoke the service.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/endpointURL/">
+<link rel="alternate" type="application/ld+json" href="/endpointURL/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:endpointURL",
+  "@type": "rdf:Property",
+  "rdfs:label": "endpointURL",
+  "rdfs:comment": "The root URL of a DCAT DataService — the address a client connects to to invoke the service.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#endpointURL",
+  "rdfs:seeAlso": [
+    "urn:solid:DataService",
+    "urn:solid:endpointDescription",
+    "urn:solid:servesDataset"
+  ],
+  "rdfs:domain": "urn:solid:DataService",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Names the operational entry point. For a SPARQL endpoint, the query URL; for a REST API, the base URI. Pair with `dcat:endpointDescription` (a machine-readable description of how to talk to it — OpenAPI doc, SPARQL service description) when the service is non-trivial.",
+  "examples": [
+    {
+      "title": "DataService exposing a SPARQL endpoint",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://data.example.org/services/sparql",
+        "@type": "urn:solid:DataService",
+        "urn:solid:endpointURL": { "@id": "https://data.example.org/sparql" },
+        "urn:solid:servesDataset": { "@id": "https://data.example.org/dataset/main" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#endpointURL"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
