@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasStartedBy",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasStartedBy",
+  "rdfs:comment": "An Entity that started a PROV Activity — the trigger or input whose existence caused the Activity to begin.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasStartedBy",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:wasEndedBy",
+    "urn:solid:wasInformedBy",
+    "urn:solid:startedAtTime"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:range": "urn:solid:Entity",
+  "notToBeConfusedWith": [
+    "urn:solid:wasInformedBy",
+    "urn:solid:wasAssociatedWith"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Identifies the *triggering* Entity (a request, a sensor reading, a message). Not the agent who acted (`wasAssociatedWith`) and not an upstream activity that handed off (`wasInformedBy`). For wall-clock time, use `prov:startedAtTime`.",
+  "examples": [
+    {
+      "title": "Build activity started by a webhook payload",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activity/build-42",
+        "@type": "urn:solid:Activity",
+        "urn:solid:wasStartedBy": { "@id": "https://example.org/webhooks/push-abc" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasStartedBy"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

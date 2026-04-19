@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:generated — urn-solid</title>
+<meta name="description" content="Inverse of `prov:wasGeneratedBy` — the Entity that this Activity produced.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/generated/">
+<link rel="alternate" type="application/ld+json" href="/generated/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:generated",
+  "@type": "rdf:Property",
+  "rdfs:label": "generated",
+  "rdfs:comment": "Inverse of `prov:wasGeneratedBy` — the Entity that this Activity produced.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#generated",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:wasGeneratedBy",
+    "urn:solid:used",
+    "urn:solid:invalidated"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:range": "urn:solid:Entity",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Convenient when describing the world from the Activity's perspective (\"what did this run produce?\"). Either direction is valid; pick whichever makes the focal entity the subject. Pair with `prov:used` (inputs) and `prov:invalidated` (entities the Activity consumed/destroyed).",
+  "examples": [
+    {
+      "title": "Activity that generated a dataset",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activity/build-42",
+        "@type": "urn:solid:Activity",
+        "urn:solid:generated": { "@id": "https://example.org/dataset/v3" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#generated"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

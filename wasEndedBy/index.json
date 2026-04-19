@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasEndedBy",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasEndedBy",
+  "rdfs:comment": "An Entity that ended a PROV Activity — the signal, completion event, or termination input that caused the Activity to stop.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasEndedBy",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:wasStartedBy",
+    "urn:solid:endedAtTime"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:range": "urn:solid:Entity",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The mirror of `prov:wasStartedBy`. Use when termination has an identifiable trigger (a stop signal, a deadline document, a downstream consumer indicating completion). For plain wall-clock time, use `prov:endedAtTime`.",
+  "examples": [
+    {
+      "title": "Build activity ended by a cancel signal",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activity/build-42",
+        "@type": "urn:solid:Activity",
+        "urn:solid:wasEndedBy": { "@id": "https://example.org/signals/cancel-build-42" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasEndedBy"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

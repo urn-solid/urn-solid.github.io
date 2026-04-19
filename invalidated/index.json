@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:invalidated",
+  "@type": "rdf:Property",
+  "rdfs:label": "invalidated",
+  "rdfs:comment": "An Entity that this PROV Activity destroyed, consumed, or rendered unusable — after invalidation the Entity is no longer available for further use.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#invalidated",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:Entity",
+    "urn:solid:generated",
+    "urn:solid:used"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:range": "urn:solid:Entity",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Models destruction or consumption explicitly: a delete operation invalidates a record, a publish step invalidates a draft. Distinct from `prov:used` (read without altering) and `prov:generated` (created). Useful in audit trails and data lifecycle tracking.",
+  "examples": [
+    {
+      "title": "Deletion activity invalidating a record",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/activity/delete-old-records",
+        "@type": "urn:solid:Activity",
+        "urn:solid:invalidated": { "@id": "https://example.org/records/2020-archive" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#invalidated"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:qualifiedGeneration",
+  "@type": "rdf:Property",
+  "rdfs:label": "qualifiedGeneration",
+  "rdfs:comment": "Links an Entity to the `prov:Generation` instance describing the activity, time, and role in which the Entity was created.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#qualifiedGeneration",
+  "rdfs:seeAlso": [
+    "urn:solid:Entity",
+    "urn:solid:wasGeneratedBy",
+    "urn:solid:qualifiedUsage",
+    "urn:solid:hadGeneration"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The qualified counterpart to `prov:wasGeneratedBy`. Use when a plain `wasGeneratedBy` triple isn't enough — to record the time of generation, the role the Entity played in the activity, or to attach further provenance to the generation event itself.",
+  "examples": [
+    {
+      "title": "Entity with a qualified Generation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/dataset/v3",
+        "@type": "urn:solid:Entity",
+        "urn:solid:qualifiedGeneration": {
+          "@id": "https://example.org/generation/dataset-v3",
+          "@type": "http://www.w3.org/ns/prov#Generation",
+          "http://www.w3.org/ns/prov#activity": { "@id": "https://example.org/activity/build-42" },
+          "http://www.w3.org/ns/prov#atTime": { "@value": "2026-04-19T12:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#qualifiedGeneration"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
