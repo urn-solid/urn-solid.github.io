@@ -279,6 +279,13 @@
     "status": "stable",
     "path": "/CreativeWork/"
   },
+  "urn:solid:DIDDocument": {
+    "label": "DIDDocument",
+    "description": "The descriptor for a Decentralized Identifier — carries the DID's verification keys, service endpoints, and controller relationships.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/DIDDocument/"
+  },
   "urn:solid:DataService": {
     "label": "DataService",
     "description": "A DCAT DataService — a service that gives access to one or more Datasets via an API or query interface.",
@@ -1329,6 +1336,13 @@
     "status": "stable",
     "path": "/articleBody/"
   },
+  "urn:solid:assertionMethod": {
+    "label": "assertionMethod",
+    "description": "On a DID Document, verification methods authorised for asserting claims (issuing or signing VerifiableCredentials on behalf of the DID).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/assertionMethod/"
+  },
   "urn:solid:atLocation": {
     "label": "atLocation",
     "description": "The Location at which an Activity, Entity, or Agent occurred or was situated.",
@@ -1363,6 +1377,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/audience/"
+  },
+  "urn:solid:authentication": {
+    "label": "authentication",
+    "description": "On a DID Document, the verification methods authorised for proving control of the DID — used during login, challenge-response, and other identity-assertion flows.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/authentication/"
   },
   "urn:solid:author": {
     "label": "author",
@@ -1517,6 +1538,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/contributor/"
+  },
+  "urn:solid:controller": {
+    "label": "controller",
+    "description": "The Actor authorised to make changes to a DID Document or verification method — the entity holding the private key behind the public material.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/controller/"
   },
   "urn:solid:country-name": {
     "label": "country-name",
@@ -3155,6 +3183,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/servesDataset/"
+  },
+  "urn:solid:serviceEndpoint": {
+    "label": "serviceEndpoint",
+    "description": "On a DID Document service entry, the URL where the service is reachable.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/serviceEndpoint/"
   },
   "urn:solid:sha1": {
     "label": "sha1",

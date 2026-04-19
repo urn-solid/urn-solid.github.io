@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:controller",
+  "@type": "rdf:Property",
+  "rdfs:label": "controller",
+  "rdfs:comment": "The Actor authorised to make changes to a DID Document or verification method — the entity holding the private key behind the public material.",
+  "owl:sameAs": "https://w3id.org/security#controller",
+  "rdfs:seeAlso": [
+    "urn:solid:DIDDocument",
+    "urn:solid:verificationMethod",
+    "urn:solid:authentication"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Often the DID itself controls its own Document (self-sovereign). Multi-party setups (custodial wallets, organisational DIDs) point `controller` at a different entity. Verifiers consult `controller` to know who's authoritative for the document, e.g. when validating updates or rotation events.",
+  "examples": [
+    {
+      "title": "Self-controlled DID",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "did:example:abc",
+        "@type": "urn:solid:DIDDocument",
+        "urn:solid:controller": { "@id": "did:example:abc" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://w3id.org/security#controller"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

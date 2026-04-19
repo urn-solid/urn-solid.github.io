@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:serviceEndpoint",
+  "@type": "rdf:Property",
+  "rdfs:label": "serviceEndpoint",
+  "rdfs:comment": "On a DID Document service entry, the URL where the service is reachable.",
+  "owl:sameAs": "https://www.w3.org/ns/did#serviceEndpoint",
+  "rdfs:seeAlso": [
+    "urn:solid:DIDDocument",
+    "urn:solid:endpointURL"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "A DID Document carries `service` entries (messaging endpoints, profile servers, credential exchange endpoints); each one carries one or more `serviceEndpoint` URLs. Distinct from DCAT's `dcat:endpointURL` (data-service flavour) — same general idea, different domain vocabulary.",
+  "examples": [
+    {
+      "title": "A messaging endpoint on a DID",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "did:example:abc",
+        "@type": "urn:solid:DIDDocument",
+        "https://www.w3.org/ns/did#service": {
+          "@type": "https://www.w3.org/ns/did#DIDCommMessaging",
+          "urn:solid:serviceEndpoint": { "@id": "https://example.org/didcomm" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/did#serviceEndpoint"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

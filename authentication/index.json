@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:authentication",
+  "@type": "rdf:Property",
+  "rdfs:label": "authentication",
+  "rdfs:comment": "On a DID Document, the verification methods authorised for proving control of the DID — used during login, challenge-response, and other identity-assertion flows.",
+  "owl:sameAs": "https://w3id.org/security#authenticationMethod",
+  "rdfs:seeAlso": [
+    "urn:solid:DIDDocument",
+    "urn:solid:verificationMethod",
+    "urn:solid:assertionMethod",
+    "urn:solid:keyAgreement"
+  ],
+  "rdfs:domain": "urn:solid:DIDDocument",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "One of several *verification relationships* in DID Core (alongside `assertionMethod`, `keyAgreement`, `capabilityInvocation`, `capabilityDelegation`). Distinguishing them lets a DID controller use a hardware key for authentication while delegating signing to a software key — the same Document, different keys for different purposes.",
+  "examples": [
+    {
+      "title": "DID Document declaring an authentication key",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "did:example:abc",
+        "@type": "urn:solid:DIDDocument",
+        "urn:solid:authentication": [{ "@id": "did:example:abc#key-1" }]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://w3id.org/security#authenticationMethod"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
