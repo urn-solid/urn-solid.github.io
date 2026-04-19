@@ -48,6 +48,13 @@
     "status": "stable",
     "path": "/Answer/"
   },
+  "urn:solid:Append": {
+    "label": "Append",
+    "description": "The WAC Append access mode — permission to add new content to a resource without modifying existing content.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Append/"
+  },
   "urn:solid:Application": {
     "label": "Application",
     "description": "An ActivityStreams actor representing a software application — a bot, service, or automated client.",
@@ -89,6 +96,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/AudioObject/"
+  },
+  "urn:solid:Authorization": {
+    "label": "Authorization",
+    "description": "A Web Access Control (WAC) authorization — grants one or more access modes on a resource to one or more agents.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Authorization/"
   },
   "urn:solid:BasicContainer": {
     "label": "BasicContainer",
@@ -720,6 +734,13 @@
     "status": "stable",
     "path": "/Rating/"
   },
+  "urn:solid:Read": {
+    "label": "Read",
+    "description": "The WAC Read access mode — permission to fetch the contents of a resource.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Read/"
+  },
   "urn:solid:Recipe": {
     "label": "Recipe",
     "description": "A recipe — instructions for preparing a dish, with ingredients, steps, and yield.",
@@ -894,6 +915,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/WebSite/"
+  },
+  "urn:solid:Write": {
+    "label": "Write",
+    "description": "The WAC Write access mode — permission to modify or delete the contents of a resource.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Write/"
   },
   "urn:solid:about": {
     "label": "about",
@@ -2028,6 +2056,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/membershipResource/"
+  },
+  "urn:solid:mode": {
+    "label": "mode",
+    "description": "An access mode granted by a Web Access Control Authorization — Read, Write, Append, or Control.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/mode/"
   },
   "urn:solid:modified": {
     "label": "modified",

@@ -1,0 +1,55 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Write",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Write",
+  "rdfs:comment": "The WAC Write access mode — permission to modify or delete the contents of a resource.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#Write",
+  "rdfs:seeAlso": [
+    "urn:solid:Read",
+    "urn:solid:Append",
+    "urn:solid:Control",
+    "urn:solid:mode"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Append"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Implies `urn:solid:Append` — anyone with Write can add. Stronger than Append: includes overwrite and delete. On a Container, Write covers creating, modifying, and deleting members.",
+  "examples": [
+    {
+      "title": "Authorization granting Write to the owner",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/.acl#alice",
+        "@type": "urn:solid:Authorization",
+        "http://www.w3.org/ns/auth/acl#agent": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:mode": [
+          { "@id": "http://www.w3.org/ns/auth/acl#Read" },
+          { "@id": "http://www.w3.org/ns/auth/acl#Write" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#Write"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

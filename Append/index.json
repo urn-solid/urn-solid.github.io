@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Append",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Append",
+  "rdfs:comment": "The WAC Append access mode — permission to add new content to a resource without modifying existing content.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#Append",
+  "rdfs:seeAlso": [
+    "urn:solid:Read",
+    "urn:solid:Write",
+    "urn:solid:Control",
+    "urn:solid:mode"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Write"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Weaker than `urn:solid:Write`: lets the agent add (POST a new member to a Container, append a triple to an RDF resource) but not modify or delete existing content. Standard pattern for inboxes — anyone can drop in a notification, only the owner can read or remove them.",
+  "examples": [
+    {
+      "title": "Inbox accepting public Append",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/inbox/.acl#anyone-append",
+        "@type": "urn:solid:Authorization",
+        "http://www.w3.org/ns/auth/acl#agentClass": { "@id": "http://xmlns.com/foaf/0.1/Agent" },
+        "http://www.w3.org/ns/auth/acl#accessTo": { "@id": "https://alice.example.org/inbox/" },
+        "urn:solid:mode": { "@id": "http://www.w3.org/ns/auth/acl#Append" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#Append"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

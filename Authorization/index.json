@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Authorization",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Authorization",
+  "rdfs:comment": "A Web Access Control (WAC) authorization — grants one or more access modes on a resource to one or more agents.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#Authorization",
+  "rdfs:seeAlso": [
+    "urn:solid:mode",
+    "urn:solid:Read",
+    "urn:solid:Write",
+    "urn:solid:Append",
+    "urn:solid:Control"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The atom of Solid pod access control. Each Authorization carries `acl:agent` / `acl:agentClass` / `acl:agentGroup` (who), `acl:accessTo` / `acl:default` (what), and one or more `acl:mode` (what kind of access). Authorizations live in `.acl` resources on a Solid pod.",
+  "examples": [
+    {
+      "title": "An ACL Authorization granting Read",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/photos/.acl#public-read",
+        "@type": "urn:solid:Authorization",
+        "http://www.w3.org/ns/auth/acl#agentClass": { "@id": "http://xmlns.com/foaf/0.1/Agent" },
+        "http://www.w3.org/ns/auth/acl#accessTo": { "@id": "https://alice.example.org/photos/" },
+        "urn:solid:mode": { "@id": "http://www.w3.org/ns/auth/acl#Read" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#Authorization"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

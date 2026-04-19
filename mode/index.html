@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:mode — urn-solid</title>
+<meta name="description" content="An access mode granted by a Web Access Control Authorization — Read, Write, Append, or Control.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/mode/">
+<link rel="alternate" type="application/ld+json" href="/mode/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:mode",
+  "@type": "rdf:Property",
+  "rdfs:label": "mode",
+  "rdfs:comment": "An access mode granted by a Web Access Control Authorization — Read, Write, Append, or Control.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#mode",
+  "rdfs:seeAlso": [
+    "urn:solid:Authorization",
+    "urn:solid:Read",
+    "urn:solid:Write",
+    "urn:solid:Append",
+    "urn:solid:Control"
+  ],
+  "rdfs:domain": "urn:solid:Authorization",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Repeat to grant multiple modes in one Authorization. Standard values are `acl:Read`, `acl:Write`, `acl:Append`, `acl:Control`. `Write` implies `Append`; `Control` is the meta-mode that lets the holder edit the .acl file itself.",
+  "examples": [
+    {
+      "title": "Authorization granting Read+Write",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/.acl#alice-edit",
+        "@type": "urn:solid:Authorization",
+        "http://www.w3.org/ns/auth/acl#agent": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:mode": [
+          { "@id": "http://www.w3.org/ns/auth/acl#Read" },
+          { "@id": "http://www.w3.org/ns/auth/acl#Write" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#mode"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
