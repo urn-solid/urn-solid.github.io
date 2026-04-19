@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:SoftwareApplication",
+  "@type": "rdfs:Class",
+  "rdfs:label": "SoftwareApplication",
+  "rdfs:comment": "A software application — desktop, mobile, web, or server software.",
+  "owl:sameAs": "https://schema.org/SoftwareApplication",
+  "rdfs:seeAlso": [
+    "urn:solid:Application",
+    "urn:solid:SoftwareAgent",
+    "https://schema.org/MobileApplication",
+    "https://schema.org/WebApplication"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Application",
+    "urn:solid:SoftwareAgent"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Distinct from AS `urn:solid:Application` (the actor type) and PROV `urn:solid:SoftwareAgent` (process-attribution): SoftwareApplication is the *product* — what's published, downloaded, reviewed. Pair with `schema:applicationCategory`, `schema:operatingSystem`, `schema:downloadUrl`.",
+  "examples": [
+    {
+      "title": "A simple software application",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/apps/wonderland-editor",
+        "@type": "urn:solid:SoftwareApplication",
+        "urn:solid:name": "Wonderland Editor",
+        "urn:solid:version": "1.2.0",
+        "https://schema.org/operatingSystem": "macOS, Linux"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/SoftwareApplication"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

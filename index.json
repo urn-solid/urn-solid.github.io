@@ -146,6 +146,13 @@
     "status": "stable",
     "path": "/Catalog/"
   },
+  "urn:solid:ChatMessage": {
+    "label": "ChatMessage",
+    "description": "A chat message — a single message exchanged in a chat conversation.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/ChatMessage/"
+  },
   "urn:solid:City": {
     "label": "City",
     "description": "A city — a permanent settlement of significant size.",
@@ -265,6 +272,13 @@
     "status": "stable",
     "path": "/Derivation/"
   },
+  "urn:solid:DigitalDocument": {
+    "label": "DigitalDocument",
+    "description": "An electronic document — typically a file (PDF, spreadsheet, presentation, text file).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/DigitalDocument/"
+  },
   "urn:solid:DirectContainer": {
     "label": "DirectContainer",
     "description": "An LDP Container that adds membership triples on a separate `membershipResource` rather than carrying them itself.",
@@ -292,6 +306,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/EducationalOrganization/"
+  },
+  "urn:solid:EmailMessage": {
+    "label": "EmailMessage",
+    "description": "An email message — represents a single sent or received email as RDF.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/EmailMessage/"
   },
   "urn:solid:EmptyCollection": {
     "label": "EmptyCollection",
@@ -453,6 +474,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/LinguisticSystem/"
+  },
+  "urn:solid:ListItem": {
+    "label": "ListItem",
+    "description": "An entry in a schema.org ItemList — wraps the item with positional metadata.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/ListItem/"
   },
   "urn:solid:Logo": {
     "label": "Logo",
@@ -768,6 +796,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/SoftwareAgent/"
+  },
+  "urn:solid:SoftwareApplication": {
+    "label": "SoftwareApplication",
+    "description": "A software application — desktop, mobile, web, or server software.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/SoftwareApplication/"
   },
   "urn:solid:Standard": {
     "label": "Standard",

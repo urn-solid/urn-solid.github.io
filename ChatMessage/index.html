@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:ChatMessage — urn-solid</title>
+<meta name="description" content="A chat message — a single message exchanged in a chat conversation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/ChatMessage/">
+<link rel="alternate" type="application/ld+json" href="/ChatMessage/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:ChatMessage",
+  "@type": "rdfs:Class",
+  "rdfs:label": "ChatMessage",
+  "rdfs:comment": "A chat message — a single message exchanged in a chat conversation.",
+  "owl:sameAs": "https://schema.org/Message",
+  "rdfs:seeAlso": [
+    "urn:solid:Note",
+    "urn:solid:EmailMessage"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Note",
+    "urn:solid:EmailMessage"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Schema.org's general `schema:Message` type — covers chat, IM, and similar real-time communication. Distinct from AS `urn:solid:Note` (microblog post) and `urn:solid:EmailMessage` (asynchronous email). Pair with `schema:sender`, `schema:recipient`, `schema:dateSent`.",
+  "examples": [
+    {
+      "title": "A chat message",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/chat/msg-42",
+        "@type": "urn:solid:ChatMessage",
+        "https://schema.org/sender": { "@id": "https://example.org/alice#me" },
+        "urn:solid:text": "Anyone around for a quick sync?"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/Message"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

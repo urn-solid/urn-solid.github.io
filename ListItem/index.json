@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:ListItem",
+  "@type": "rdfs:Class",
+  "rdfs:label": "ListItem",
+  "rdfs:comment": "An entry in a schema.org ItemList — wraps the item with positional metadata.",
+  "owl:sameAs": "https://schema.org/ListItem",
+  "rdfs:seeAlso": [
+    "urn:solid:ItemList"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Used inside `urn:solid:ItemList` to declare each item with its position. Carries `schema:position` (integer) and `schema:item` (the wrapped resource). For breadcrumbs and ranked lists, `schema:position` is what consumers (Google, etc.) use for ordering.",
+  "examples": [
+    {
+      "title": "List item with position",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/lists/top-3#1",
+        "@type": "urn:solid:ListItem",
+        "https://schema.org/position": 1,
+        "https://schema.org/item": { "@id": "https://urn-solid.github.io/Person/" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/ListItem"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

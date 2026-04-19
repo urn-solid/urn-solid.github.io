@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:EmailMessage",
+  "@type": "rdfs:Class",
+  "rdfs:label": "EmailMessage",
+  "rdfs:comment": "An email message — represents a single sent or received email as RDF.",
+  "owl:sameAs": "https://schema.org/EmailMessage",
+  "rdfs:seeAlso": [
+    "urn:solid:mbox",
+    "urn:solid:hasEmail",
+    "https://schema.org/Message"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subclass of `schema:Message` and `urn:solid:CreativeWork`. Pair with `schema:sender`, `schema:recipient`, `schema:about`, `schema:dateSent`, `schema:dateReceived`. Useful for archival/threading systems that index email as RDF rather than treating each message as opaque text.",
+  "examples": [
+    {
+      "title": "An email message",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/messages/email-42",
+        "@type": "urn:solid:EmailMessage",
+        "https://schema.org/sender": { "@id": "https://example.org/alice#me" },
+        "https://schema.org/recipient": { "@id": "https://example.org/bob#me" },
+        "urn:solid:headline": "About the v2 spec"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/EmailMessage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
