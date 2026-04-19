@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:accuracy",
+  "@type": "rdf:Property",
+  "rdfs:label": "accuracy",
+  "rdfs:comment": "The accuracy of an ActivityStreams Place's coordinates, expressed as a percentage (0–100).",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#accuracy",
+  "rdfs:seeAlso": [
+    "urn:solid:Place",
+    "urn:solid:latitude",
+    "urn:solid:longitude",
+    "urn:solid:radius"
+  ],
+  "rdfs:domain": "urn:solid:Place",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#float",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "0 means the position is essentially a guess; 100 is exact. Useful when the Place comes from GPS, IP geolocation, or any source whose precision varies. Distinct from `as:radius` (the size of the area covered) — accuracy describes the *uncertainty* of the centre point.",
+  "examples": [
+    {
+      "title": "A Place with GPS-grade accuracy",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/places/london-eye",
+        "@type": "urn:solid:Place",
+        "urn:solid:latitude": 51.5033,
+        "urn:solid:longitude": -0.1196,
+        "urn:solid:accuracy": 95
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#accuracy"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

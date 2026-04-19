@@ -1070,6 +1070,13 @@
     "status": "stable",
     "path": "/accountServiceHomepage/"
   },
+  "urn:solid:accuracy": {
+    "label": "accuracy",
+    "description": "The accuracy of an ActivityStreams Place's coordinates, expressed as a percentage (0–100).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/accuracy/"
+  },
   "urn:solid:actedOnBehalfOf": {
     "label": "actedOnBehalfOf",
     "description": "An agent acted on behalf of another — delegation between agents.",
@@ -1132,6 +1139,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/alternative/"
+  },
+  "urn:solid:altitude": {
+    "label": "altitude",
+    "description": "The altitude of an ActivityStreams Place above sea level, expressed in metres unless `as:units` says otherwise.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/altitude/"
   },
   "urn:solid:alumniOf": {
     "label": "alumniOf",
@@ -1524,6 +1538,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/endpointURL/"
+  },
+  "urn:solid:endpoints": {
+    "label": "endpoints",
+    "description": "Container for additional service endpoints exposed by an ActivityPub Actor — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/endpoints/"
   },
   "urn:solid:exactMatch": {
     "label": "exactMatch",
@@ -2232,6 +2253,13 @@
     "status": "stable",
     "path": "/license/"
   },
+  "urn:solid:liked": {
+    "label": "liked",
+    "description": "The Collection of Objects an ActivityPub Actor has liked — the Actor's history of `Like` activities, presented as a queryable list.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/liked/"
+  },
   "urn:solid:locality": {
     "label": "locality",
     "description": "The locality (city, town, village) of an Address.",
@@ -2826,6 +2854,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/storage/"
+  },
+  "urn:solid:streams": {
+    "label": "streams",
+    "description": "Additional Collections an ActivityPub Actor exposes beyond the standard inbox/outbox/followers/following — extension points for application-specific feeds.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/streams/"
   },
   "urn:solid:street-address": {
     "label": "street-address",

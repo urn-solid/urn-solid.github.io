@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:streams",
+  "@type": "rdf:Property",
+  "rdfs:label": "streams",
+  "rdfs:comment": "Additional Collections an ActivityPub Actor exposes beyond the standard inbox/outbox/followers/following — extension points for application-specific feeds.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#streams",
+  "rdfs:seeAlso": [
+    "urn:solid:Actor",
+    "urn:solid:inbox",
+    "urn:solid:outbox"
+  ],
+  "rdfs:domain": "urn:solid:Actor",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "An open-ended list of named or anonymous Collections — bookmarks, drafts, an alternate-channel outbox, anything the application needs. Clients SHOULD discover and label these from the Actor's published metadata; servers SHOULD treat them as fully addressable like the standard endpoints.",
+  "examples": [
+    {
+      "title": "An Actor exposing custom streams",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:streams": [
+          { "@id": "https://alice.example.org/bookmarks" },
+          { "@id": "https://alice.example.org/drafts" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#streams"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
