@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid namespace — specification</title>
+<meta name="description" content="Specification of the urn:solid namespace: location-independent identifiers for vocabulary terms and logical resources in Solid applications.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/spec/">
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+
+<main>
+  <h1>The <code>urn:solid</code> namespace</h1>
+  <p class="subtitle">Draft specification — for review by the W3C Solid Community Group.</p>
+
+  <section>
+    <h2>Summary</h2>
+    <p>The <code>urn:solid</code> namespace provides location-independent identifiers for use in Solid-based applications where stable naming across protocols, storage locations, or offline contexts is required. It complements HTTP URIs rather than replacing them: HTTP remains the primary mechanism for dereferencing resources on the Web.</p>
+  </section>
+
+  <section>
+    <h2>Scope</h2>
+    <p>Identifiers in this namespace fall into two broad categories.</p>
+    <p><strong>Vocabulary terms</strong> — stable names for classes and properties that map to existing RDF predicates (e.g. <a href="/Person/"><code>urn:solid:Person</code></a> &rarr; <code>foaf:Person</code>), giving agents and LLMs a single, predictable surface that survives vocabulary churn and registry drift.</p>
+    <p><strong>Logical resources, agents, and application-level objects</strong> whose identity should persist independently of any particular origin or transport.</p>
+  </section>
+
+  <section>
+    <h2>Resolution</h2>
+    <p>Resolution, where needed, is handled by application-level mechanisms — typically a mapping to an HTTP URI, a WebID, or another concrete identifier. The namespace itself does not prescribe a single resolution protocol; an identifier may resolve differently in different deployments without changing identity.</p>
+  </section>
+
+  <section>
+    <h2>Use cases</h2>
+    <ul>
+      <li><strong>Signed data</strong> — content whose identity must outlive its current hosting URL.</li>
+      <li><strong>Cross-protocol references</strong> — identifiers cited from non-HTTP transports (Nostr, Matrix, IPFS, local filesystems).</li>
+      <li><strong>Agent-to-agent messaging</strong> — stable subject lines for messages that may be relayed or stored without an authoritative origin.</li>
+      <li><strong>Local-first systems</strong> — applications that operate offline or with intermittent connectivity, where binding identity directly to a URL is insufficient or undesirable.</li>
+      <li><strong>Vocabulary indirection</strong> — a single name (<code>urn:solid:Person</code>) that an agent can rely on even as upstream registries reorganise or deprecate terms.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Relationship to HTTP URIs</h2>
+    <p><code>urn:solid</code> is not a replacement for HTTP URIs. Where a resource has a stable HTTP identity and dereferencing is the primary need, an HTTP URI remains the right choice. <code>urn:solid</code> is intended for the cases where it is not — and to give vocabulary terms one canonical name across the multiple HTTP URIs that, today, identify them in different upstream registries.</p>
+  </section>
+
+  <section>
+    <h2>Status</h2>
+    <p>This is an early draft. The companion registry at <a href="/">urn-solid.github.io</a> is the operational implementation of the vocabulary-term portion of the namespace. Comments and proposals are welcome via the <a href="https://github.com/urn-solid/urn-solid.github.io/issues">issue tracker</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <p><a href="https://github.com/urn-solid/urn-solid.github.io">github.com/urn-solid/urn-solid.github.io</a></p>
+</footer>
+</body>
+</html>

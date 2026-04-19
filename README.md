@@ -1,8 +1,10 @@
 # urn-solid
 
-A curated, LLM-native registry of `urn:solid:` terms mapped to common RDF vocabularies — foaf, schema.org, dcterms, vcard, activitystreams, prov, ldp, solid.
+The `urn:solid` namespace provides location-independent identifiers for Solid applications — both stable names for vocabulary terms (e.g. `urn:solid:Person` → `foaf:Person`) and persistent identifiers for logical resources, agents, and messages. It complements HTTP URIs rather than replacing them, supporting signed data, cross-protocol references, agent-to-agent messaging, and local-first systems where binding identity to a URL is insufficient.
 
-Canonical site: **https://urn-solid.github.io/**
+This repo is the canonical registry for the vocabulary-term portion of that namespace — curated, LLM-native, JSON-LD throughout.
+
+Canonical site: **https://urn-solid.github.io/** · Spec: **https://urn-solid.github.io/spec/**
 
 ## What this is
 

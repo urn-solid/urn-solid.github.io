@@ -10,7 +10,7 @@ const ROOT = path.resolve(__dirname, "..");
 // Root-level names that are NOT terms.
 const RESERVED = new Set([
   "schema", "scripts", "node_modules", ".github", ".git", ".claude",
-  "assets", "vendor",
+  "assets", "vendor", "spec",
 ]);
 
 const isTermDir = (name) => {
