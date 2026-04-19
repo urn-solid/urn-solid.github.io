@@ -79,3 +79,11 @@ Every term carries `notToBeConfusedWith`. Read it before picking between similar
 - Context: https://urn-solid.github.io/context.jsonld
 - Site: https://urn-solid.github.io/
 - Repo: https://github.com/urn-solid/urn-solid.github.io
+
+## Related skills
+
+- `solid-schema` — JSON Schemas per type. https://solid-schema.github.io/SKILL.md
+- `solid-panes` — pane registry mapping urn:solid types to LOSOS panes + schemas. https://solid-panes.github.io/SKILL.md
+- `solid-apps` — catalog of working apps composing the stack. https://solid-apps.github.io/SKILL.md
+- `losos` — the runtime. https://losos.org/SKILL.md
+- `xlogin` — auth (Nostr + Solid). https://github.com/melvincarvalho/xlogin/blob/gh-pages/SKILL.md
