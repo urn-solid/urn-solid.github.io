@@ -1,0 +1,44 @@
+DATA LICENSE — CC0 1.0 Universal (Public Domain Dedication)
+============================================================
+
+The data files in this repository are dedicated to the public domain
+under CC0 1.0 Universal. To the extent possible under law, Melvin
+Carvalho has waived all copyright and related or neighboring rights
+to these files. Anyone may copy, modify, distribute, and perform them,
+even for commercial purposes, all without asking permission.
+
+Full legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+What this covers
+----------------
+
+CC0 applies to the urn:solid term registry contents:
+
+  - <Name>/index.json   — each term's source-of-truth JSON-LD record
+  - context.jsonld      — the canonical urn-solid JSON-LD context
+  - corpus.jsonl        — generated: every term as one JSON-LD record per line
+  - index.json          — generated: name → term lookup
+  - reverse-index.json  — generated: upstream IRI → urn:solid term
+  - schema/term.schema.json — meta-schema describing a term file
+
+What this does NOT cover
+------------------------
+
+Build scripts and other code remain licensed under AGPL-3.0 (see LICENSE):
+
+  - scripts/*.js
+  - render.js
+  - style.css
+  - generated <Name>/index.html, top-level index.html, etc.
+
+The split keeps the *vocabulary* a true commons (citable and reusable
+in any product, proprietary or open) while the *implementation* of
+the registry stays copyleft-protected.
+
+Why
+---
+
+Vocabularies are infrastructure. The W3C/IANA convention is to license
+vocabulary content permissively so the world can adopt the terms
+without inheriting the registry's code license. CC0 matches what
+Wikidata and many W3C vocabularies do.
