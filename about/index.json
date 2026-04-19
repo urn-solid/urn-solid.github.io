@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:about",
+  "@type": "rdf:Property",
+  "rdfs:label": "about",
+  "rdfs:comment": "The subject matter of the resource — what it is about.",
+  "owl:sameAs": "https://schema.org/about",
+  "rdfs:seeAlso": [
+    "urn:solid:topic",
+    "urn:solid:subject",
+    "urn:solid:primaryTopic"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:topic",
+    "urn:solid:subject"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Schema.org's primary subject-matter predicate, heavily used in JSON-LD on web pages for SEO. Functionally similar to `urn:solid:topic` (FOAF) and `urn:solid:subject` (dcterms); pick by namespace flavor. For the *single* primary subject, prefer `urn:solid:primaryTopic`.",
+  "examples": [
+    {
+      "title": "Article about a topic",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/jsonld-intro",
+        "@type": "urn:solid:Article",
+        "urn:solid:about": { "@id": "https://example.org/topics/json-ld" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/about"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

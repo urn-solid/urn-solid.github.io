@@ -860,6 +860,13 @@
     "status": "stable",
     "path": "/WebSite/"
   },
+  "urn:solid:about": {
+    "label": "about",
+    "description": "The subject matter of the resource — what it is about.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/about/"
+  },
   "urn:solid:abstract": {
     "label": "abstract",
     "description": "A summary of the resource — typically one paragraph.",
@@ -1244,6 +1251,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/duration/"
+  },
+  "urn:solid:editor": {
+    "label": "editor",
+    "description": "The editor of a CreativeWork — typically a Person who supervised, revised, or curated the content.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/editor/"
   },
   "urn:solid:educationLevel": {
     "label": "educationLevel",
@@ -2407,6 +2421,20 @@
     "status": "stable",
     "path": "/temporal/"
   },
+  "urn:solid:text": {
+    "label": "text",
+    "description": "The textual content of the resource — used by Comments, Answers, Questions, and other text-bearing schema.org types.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/text/"
+  },
+  "urn:solid:theme": {
+    "label": "theme",
+    "description": "A main category of a DCAT Dataset — typically a SKOS Concept from a controlled-vocabulary theme list.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/theme/"
+  },
   "urn:solid:thumbnail": {
     "label": "thumbnail",
     "description": "A thumbnail rendering of the image — a smaller version for previews.",
@@ -2469,6 +2497,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/valid/"
+  },
+  "urn:solid:version": {
+    "label": "version",
+    "description": "The version designation of the resource — typically a string like \"2.0\" or \"v3.1.4\".",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/version/"
   },
   "urn:solid:wasAssociatedWith": {
     "label": "wasAssociatedWith",

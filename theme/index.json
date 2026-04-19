@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:theme",
+  "@type": "rdf:Property",
+  "rdfs:label": "theme",
+  "rdfs:comment": "A main category of a DCAT Dataset — typically a SKOS Concept from a controlled-vocabulary theme list.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#theme",
+  "rdfs:seeAlso": [
+    "urn:solid:keyword",
+    "urn:solid:Concept",
+    "urn:solid:subject"
+  ],
+  "rdfs:domain": "urn:solid:Dataset",
+  "rdfs:range": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:keyword"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:keyword` (free-text tags): `dcat:theme` points at structured `urn:solid:Concept`s from a published theme vocabulary. The EU Data Theme vocabulary (`http://publications.europa.eu/resource/authority/data-theme/`) is the canonical example. The ConceptScheme is declared via `dcat:themeTaxonomy` on the parent Catalog.",
+  "examples": [
+    {
+      "title": "Dataset with a theme",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datasets/wonderland-2026",
+        "@type": "urn:solid:Dataset",
+        "urn:solid:theme": { "@id": "http://publications.europa.eu/resource/authority/data-theme/ENVI" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#theme"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

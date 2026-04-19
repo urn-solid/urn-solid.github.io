@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:editor",
+  "@type": "rdf:Property",
+  "rdfs:label": "editor",
+  "rdfs:comment": "The editor of a CreativeWork — typically a Person who supervised, revised, or curated the content.",
+  "owl:sameAs": "https://schema.org/editor",
+  "rdfs:seeAlso": [
+    "urn:solid:author",
+    "urn:solid:contributor"
+  ],
+  "rdfs:range": "urn:solid:Person",
+  "notToBeConfusedWith": [
+    "urn:solid:author",
+    "urn:solid:contributor"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `urn:solid:author` (the writer) and `urn:solid:contributor` (general secondary participants): `editor` specifically names the editorial responsibility — the person who shaped, reviewed, or curated the work. Repeat for multiple editors.",
+  "examples": [
+    {
+      "title": "Anthology with author and editor",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/books/anthology-2026",
+        "@type": "urn:solid:Book",
+        "urn:solid:author": { "@id": "https://example.org/alice#me" },
+        "urn:solid:editor": { "@id": "https://example.org/bob#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/editor"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

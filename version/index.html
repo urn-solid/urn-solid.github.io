@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:version — urn-solid</title>
+<meta name="description" content="The version designation of the resource — typically a string like &quot;2.0&quot; or &quot;v3.1.4&quot;.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/version/">
+<link rel="alternate" type="application/ld+json" href="/version/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:version",
+  "@type": "rdf:Property",
+  "rdfs:label": "version",
+  "rdfs:comment": "The version designation of the resource — typically a string like \"2.0\" or \"v3.1.4\".",
+  "owl:sameAs": "https://schema.org/version",
+  "rdfs:seeAlso": [
+    "urn:solid:hasVersion",
+    "urn:solid:isVersionOf",
+    "http://www.w3.org/2002/07/owl#versionInfo"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:hasVersion"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Schema.org's version-string predicate. Distinct from `urn:solid:hasVersion` (which points at *another resource* that's a version) and `urn:solid:isVersionOf` (the inverse). Use `version` for the bare string identifier of *this* resource's version.",
+  "examples": [
+    {
+      "title": "Spec with a version string",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/specs/v2",
+        "@type": "urn:solid:Document",
+        "urn:solid:version": "2.0"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/version"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:text",
+  "@type": "rdf:Property",
+  "rdfs:label": "text",
+  "rdfs:comment": "The textual content of the resource — used by Comments, Answers, Questions, and other text-bearing schema.org types.",
+  "owl:sameAs": "https://schema.org/text",
+  "rdfs:seeAlso": [
+    "urn:solid:content",
+    "urn:solid:articleBody"
+  ],
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:content",
+    "urn:solid:articleBody"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Schema.org's general-purpose text-body predicate. Distinct from `urn:solid:articleBody` (Article-specific) and `urn:solid:content` (ActivityStreams). Use on `urn:solid:Comment`, `urn:solid:Answer`, `urn:solid:Question`, or any schema.org type that bears prose.",
+  "examples": [
+    {
+      "title": "Comment with text",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/abc/comments/1",
+        "@type": "urn:solid:Comment",
+        "urn:solid:text": "Great post — I'd add that..."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/text"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
