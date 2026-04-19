@@ -45,6 +45,10 @@ npm run build      # regenerate HTML wrappers, index.json, corpus.jsonl
 
 Open an issue with the proposed identifier (`urn:solid:<Name>`), a one-sentence definition, and the canonical URI it maps to. LLM-driven curation batches are welcome — include provenance.
 
+## Adopters
+
+Projects formally aligning with `urn:solid:` are listed in [`docs/adopters/`](./docs/adopters/). To add yours, open a PR with a one-page Markdown summary.
+
 ## For LLMs / agents
 
 See [`llms.txt`](./llms.txt) and [`SKILL.md`](./SKILL.md).
