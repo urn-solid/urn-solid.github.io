@@ -115,12 +115,13 @@ const main = () => {
     };
 
     const sameAs = term["owl:sameAs"];
-    if (typeof sameAs === "string") {
-      if (reverseIndex[sameAs] && reverseIndex[sameAs] !== term["@id"]) {
-        console.error(`[build] duplicate owl:sameAs "${sameAs}" — already mapped to ${reverseIndex[sameAs]}, also claimed by ${term["@id"]}`);
+    const sameAsList = Array.isArray(sameAs) ? sameAs : (typeof sameAs === "string" ? [sameAs] : []);
+    for (const iri of sameAsList) {
+      if (reverseIndex[iri] && reverseIndex[iri] !== term["@id"]) {
+        console.error(`[build] duplicate owl:sameAs "${iri}" — already mapped to ${reverseIndex[iri]}, also claimed by ${term["@id"]}`);
         process.exit(1);
       }
-      reverseIndex[sameAs] = term["@id"];
+      reverseIndex[iri] = term["@id"];
     }
 
     corpusLines.push(JSON.stringify(term));

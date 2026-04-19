@@ -4,14 +4,18 @@
   "@type": "rdf:Property",
   "rdfs:label": "description",
   "rdfs:comment": "An account of the resource — a free-text description.",
-  "owl:sameAs": "http://purl.org/dc/terms/description",
-  "rdfs:seeAlso": [
+  "owl:sameAs": [
+    "http://purl.org/dc/terms/description",
     "https://schema.org/description",
+    "http://www.w3.org/2002/12/cal/ical#description"
+  ],
+  "rdfs:seeAlso": [
     "http://www.w3.org/2000/01/rdf-schema#comment"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "status": "stable",
   "added": "2026-04-18",
+  "updated": "2026-04-19",
   "notes": "Multi-sentence prose describing what the resource is or contains. For a one-line summary, prefer `rdfs:comment` (which is what RDF tooling usually surfaces); for a tagline, `dcterms:abstract`. Repeat with language tags for translations.",
   "examples": [
     {
@@ -26,7 +30,9 @@
   ],
   "provenance": {
     "sources": [
-      "http://purl.org/dc/terms/description"
+      "http://purl.org/dc/terms/description",
+      "https://schema.org/description",
+      "http://www.w3.org/2002/12/cal/ical#description"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -36,6 +42,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "aligned",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Promoted schema:description from seeAlso to owl:sameAs and added ical:description — same free-text-description predicate across all three vocabularies."
     }
   ],
   "see_also": {

@@ -15,9 +15,12 @@
   "@type": "rdf:Property",
   "rdfs:label": "location",
   "rdfs:comment": "The location associated with the subject — typically a Place, address, or geographic coordinates.",
-  "owl:sameAs": "https://schema.org/location",
-  "rdfs:seeAlso": [
+  "owl:sameAs": [
+    "https://schema.org/location",
     "https://www.w3.org/ns/activitystreams#location",
+    "http://www.w3.org/2002/12/cal/ical#location"
+  ],
+  "rdfs:seeAlso": [
     "urn:solid:basedNear",
     "urn:solid:hasAddress"
   ],
@@ -27,6 +30,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
+  "updated": "2026-04-19",
   "notes": "Generic location predicate used on Events, Actions, Organizations. The value is typically a `urn:solid:Place`, `urn:solid:PostalAddress`, or `urn:solid:GeoCoordinates`. For a person's home region (intentionally fuzzy), use `urn:solid:basedNear` (FOAF). For structured postal addresses, `urn:solid:hasAddress` (vCard).",
   "examples": [
     {
@@ -41,7 +45,9 @@
   ],
   "provenance": {
     "sources": [
-      "https://schema.org/location"
+      "https://schema.org/location",
+      "https://www.w3.org/ns/activitystreams#location",
+      "http://www.w3.org/2002/12/cal/ical#location"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -51,6 +57,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "aligned",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Promoted as:location and ical:location to owl:sameAs alongside schema:location — same predicate intent across all three. Note: ical:location values are conventionally strings rather than Place objects; consumers should accept either form."
     }
   ],
   "see_also": {
