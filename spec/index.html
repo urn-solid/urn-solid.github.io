@@ -24,40 +24,68 @@
 
   <section>
     <h2>Summary</h2>
-    <p>The <code>urn:solid</code> namespace provides location-independent identifiers for use in Solid-based applications where stable naming across protocols, storage locations, or offline contexts is required. It complements HTTP URIs rather than replacing them: HTTP remains the primary mechanism for dereferencing resources on the Web.</p>
+    <p>The <code>urn:solid</code> namespace provides location-independent identifiers for use in Solid-based applications where stable naming across protocols, storage locations, or offline contexts is required. It complements HTTP URIs rather than replacing them. HTTP URIs remain the primary mechanism for dereferencing resources on the Web.</p>
+  </section>
+
+  <section>
+    <h2>Namespace structure</h2>
+    <p>Identifiers conform to the URN syntax defined in <a href="https://www.rfc-editor.org/rfc/rfc8141">RFC 8141</a> and have the form:</p>
+    <pre><code>urn:solid:&lt;namespace-specific-string&gt;</code></pre>
+    <p>Identifiers are opaque and must not be assumed to be dereferenceable without an appropriate resolution mechanism (see <a href="#resolution">Resolution</a>).</p>
+    <p>The namespace-specific string is partitioned into two surfaces:</p>
+    <ul>
+      <li><strong>Bare form</strong> (<code>urn:solid:&lt;Name&gt;</code>) is reserved for <em>vocabulary terms</em>. <code>urn:solid:Person</code>, <code>urn:solid:knows</code>, <code>urn:solid:Authorization</code> are all of this form. The bare form is, by convention, the implicit <code>term</code> subspace.</li>
+      <li><strong>Subspaced form</strong> (<code>urn:solid:&lt;subspace&gt;:&lt;identifier&gt;</code>) is used for everything else. Examples a deployment might define: <code>urn:solid:agent:&lt;id&gt;</code> for an agent identifier, <code>urn:solid:msg:&lt;id&gt;</code> for a message, <code>urn:solid:resource:&lt;id&gt;</code> for an application-level object.</li>
+    </ul>
+    <p>Subspace names are reserved by the same process used to assign vocabulary terms. The set of registered subspaces is part of this specification.</p>
   </section>
 
   <section>
     <h2>Scope</h2>
-    <p>Identifiers in this namespace fall into two broad categories.</p>
-    <p><strong>Vocabulary terms</strong> — stable names for classes and properties that map to existing RDF predicates (e.g. <a href="/Person/"><code>urn:solid:Person</code></a> &rarr; <code>foaf:Person</code>), giving agents and LLMs a single, predictable surface that survives vocabulary churn and registry drift.</p>
-    <p><strong>Logical resources, agents, and application-level objects</strong> whose identity should persist independently of any particular origin or transport.</p>
+    <p>Identifiers in this namespace are used for:</p>
+    <ul>
+      <li><strong>Vocabulary terms</strong> — stable names that reference existing RDF classes and properties (e.g. <a href="/Person/"><code>urn:solid:Person</code></a> &rarr; <code>foaf:Person</code>), providing a uniform naming surface across heterogeneous upstream vocabularies. Such identifiers do not assert canonical equivalence or replace existing vocabulary IRIs, but may be used by applications as stable references to them.</li>
+      <li><strong>Logical resources, agents, and application-level objects</strong> whose identity should persist independently of any particular origin or transport.</li>
+    </ul>
+    <p>This namespace does not require all Solid resources or vocabularies to use <code>urn:solid</code>.</p>
+  </section>
+
+  <section id="resolution">
+    <h2>Resolution</h2>
+    <p>Resolution is application-defined. A <code>urn:solid</code> identifier may be mapped to one or more concrete identifiers, such as HTTP URIs, WebIDs, or other schemes.</p>
+    <p>The namespace does not define a global resolution protocol. Resolution behaviour may vary by deployment without affecting the identity of the URN.</p>
   </section>
 
   <section>
-    <h2>Resolution</h2>
-    <p>Resolution, where needed, is handled by application-level mechanisms — typically a mapping to an HTTP URI, a WebID, or another concrete identifier. The namespace itself does not prescribe a single resolution protocol; an identifier may resolve differently in different deployments without changing identity.</p>
+    <h2>Persistence and assignment</h2>
+    <p>Identifiers in the <code>urn:solid</code> namespace are intended to remain stable once accepted and are not expected to be reassigned. Assignment is managed through an open process with public documentation and review.</p>
+    <p>The namespace may distinguish between provisional and stable identifiers as part of its assignment process. The current vocabulary-term registry tracks this with a per-term <code>status</code> field.</p>
+  </section>
+
+  <section>
+    <h2>Governance</h2>
+    <p>The namespace is maintained through open community processes, with specification, discussion, and change tracking conducted in public repositories and forums associated with the W3C Solid Community Group.</p>
   </section>
 
   <section>
     <h2>Use cases</h2>
     <ul>
       <li><strong>Signed data</strong> — content whose identity must outlive its current hosting URL.</li>
-      <li><strong>Cross-protocol references</strong> — identifiers cited from non-HTTP transports (Nostr, Matrix, IPFS, local filesystems).</li>
-      <li><strong>Agent-to-agent messaging</strong> — stable subject lines for messages that may be relayed or stored without an authoritative origin.</li>
-      <li><strong>Local-first systems</strong> — applications that operate offline or with intermittent connectivity, where binding identity directly to a URL is insufficient or undesirable.</li>
-      <li><strong>Vocabulary indirection</strong> — a single name (<code>urn:solid:Person</code>) that an agent can rely on even as upstream registries reorganise or deprecate terms.</li>
+      <li><strong>Cross-protocol references</strong> — identifiers cited from non-HTTP transports (Nostr, Matrix, IPFS, local storage).</li>
+      <li><strong>Agent-based systems</strong> — stable identifiers independent of transport, suitable for relayed or stored-and-forwarded messages.</li>
+      <li><strong>Local-first applications</strong> — software that operates offline or with intermittent connectivity, where binding identity directly to a URL is insufficient.</li>
+      <li><strong>Agent and LLM interoperability</strong> — providing a stable naming surface that remains consistent despite vocabulary churn, multiple registries, or changing HTTP identifiers.</li>
     </ul>
   </section>
 
   <section>
     <h2>Relationship to HTTP URIs</h2>
-    <p><code>urn:solid</code> is not a replacement for HTTP URIs. Where a resource has a stable HTTP identity and dereferencing is the primary need, an HTTP URI remains the right choice. <code>urn:solid</code> is intended for the cases where it is not — and to give vocabulary terms one canonical name across the multiple HTTP URIs that, today, identify them in different upstream registries.</p>
+    <p><code>urn:solid</code> is not a replacement for HTTP URIs. Where dereferencing via HTTP is required, HTTP URIs remain the appropriate choice. The <code>urn:solid</code> namespace is intended for cases where identifier stability across contexts is required independently of any specific location.</p>
   </section>
 
   <section>
     <h2>Status</h2>
-    <p>This is an early draft. The companion registry at <a href="/">urn-solid.github.io</a> is the operational implementation of the vocabulary-term portion of the namespace. Comments and proposals are welcome via the <a href="https://github.com/urn-solid/urn-solid.github.io/issues">issue tracker</a>.</p>
+    <p>This is an early draft. Implementations may experiment with the namespace. The companion registry at <a href="/">urn-solid.github.io</a> is the operational implementation of the vocabulary-term portion of the namespace. Feedback and proposals are welcome via the <a href="https://github.com/urn-solid/urn-solid.github.io/issues">issue tracker</a>.</p>
   </section>
 </main>
 
