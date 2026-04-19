@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:relatedMatch — urn-solid</title>
+<meta name="description" content="Asserts an associative (non-hierarchical) link between two SKOS Concepts in different schemes — the cross-scheme analogue of `skos:related`.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/relatedMatch/">
+<link rel="alternate" type="application/ld+json" href="/relatedMatch/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:relatedMatch",
+  "@type": "rdf:Property",
+  "rdfs:label": "relatedMatch",
+  "rdfs:comment": "Asserts an associative (non-hierarchical) link between two SKOS Concepts in different schemes — the cross-scheme analogue of `skos:related`.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#relatedMatch",
+  "rdfs:seeAlso": [
+    "urn:solid:Concept",
+    "urn:solid:related",
+    "urn:solid:exactMatch",
+    "urn:solid:closeMatch",
+    "urn:solid:mappingRelation"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:Concept",
+  "notToBeConfusedWith": [
+    "urn:solid:related",
+    "urn:solid:closeMatch"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use when two Concepts are *meaningfully associated* but neither narrower nor broader than the other — e.g. \"Birds\" in one taxonomy associated with \"Aviation\" in another. Distinct from `closeMatch` (similar meaning) and `exactMatch` (interchangeable); a `relatedMatch` is a see-also, not a substitute.",
+  "examples": [
+    {
+      "title": "Cross-scheme associative mapping",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/scheme-a/birds",
+        "@type": "urn:solid:Concept",
+        "urn:solid:relatedMatch": { "@id": "https://example.org/scheme-b/aviation" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#relatedMatch"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1329,6 +1329,13 @@
     "status": "stable",
     "path": "/cc/"
   },
+  "urn:solid:changeNote": {
+    "label": "changeNote",
+    "description": "A SKOS note recording a change made to a Concept — typical use is the curator's log of edits to the term over time.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/changeNote/"
+  },
   "urn:solid:children": {
     "label": "children",
     "description": "A child of the person.",
@@ -1538,6 +1545,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/editor/"
+  },
+  "urn:solid:editorialNote": {
+    "label": "editorialNote",
+    "description": "A SKOS note for vocabulary maintainers — internal guidance, open questions, things to revisit later. Not intended for end users.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/editorialNote/"
   },
   "urn:solid:educationLevel": {
     "label": "educationLevel",
@@ -2001,6 +2015,13 @@
     "status": "stable",
     "path": "/hiddenLabel/"
   },
+  "urn:solid:historyNote": {
+    "label": "historyNote",
+    "description": "A SKOS note describing the history of a Concept — its origin, evolution, and how its meaning has shifted over time.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/historyNote/"
+  },
   "urn:solid:holds": {
     "label": "holds",
     "description": "An ORG Post (position) that an Agent currently holds within an Organization.",
@@ -2449,6 +2470,13 @@
     "status": "stable",
     "path": "/modified/"
   },
+  "urn:solid:movedTo": {
+    "label": "movedTo",
+    "description": "On an ActivityStreams Actor, the new identity URI the Actor has migrated to — the forwarding address left behind on the old account.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/movedTo/"
+  },
   "urn:solid:name": {
     "label": "name",
     "description": "A name for the subject.",
@@ -2770,6 +2798,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/related/"
+  },
+  "urn:solid:relatedMatch": {
+    "label": "relatedMatch",
+    "description": "Asserts an associative (non-hierarchical) link between two SKOS Concepts in different schemes — the cross-scheme analogue of `skos:related`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/relatedMatch/"
   },
   "urn:solid:relation": {
     "label": "relation",

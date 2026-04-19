@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:movedTo — urn-solid</title>
+<meta name="description" content="On an ActivityStreams Actor, the new identity URI the Actor has migrated to — the forwarding address left behind on the old account.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/movedTo/">
+<link rel="alternate" type="application/ld+json" href="/movedTo/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:movedTo",
+  "@type": "rdf:Property",
+  "rdfs:label": "movedTo",
+  "rdfs:comment": "On an ActivityStreams Actor, the new identity URI the Actor has migrated to — the forwarding address left behind on the old account.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#movedTo",
+  "rdfs:seeAlso": [
+    "urn:solid:Actor",
+    "urn:solid:alsoKnownAs",
+    "urn:solid:Move"
+  ],
+  "rdfs:domain": "urn:solid:Actor",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Forms the second half of the fediverse account-migration handshake. The *old* Actor sets `as:movedTo` pointing at the new identity; the *new* Actor lists the old in `as:alsoKnownAs`. Servers that see both sides confirmed automatically migrate followers; clients render the old account as redirected.",
+  "examples": [
+    {
+      "title": "An Actor that has migrated to a new server",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://oldserver.example.org/users/alice",
+        "@type": "urn:solid:Person",
+        "urn:solid:movedTo": { "@id": "https://newserver.example.org/users/alice" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#movedTo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
