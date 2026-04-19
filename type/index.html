@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:type — urn-solid</title>
+<meta name="description" content="Asserts that a resource is an instance of a class — the predicate behind JSON-LD's `@type` keyword.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/type/">
+<link rel="alternate" type="application/ld+json" href="/type/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:type",
+  "@type": "rdf:Property",
+  "rdfs:label": "type",
+  "rdfs:comment": "Asserts that a resource is an instance of a class — the predicate behind JSON-LD's `@type` keyword.",
+  "owl:sameAs": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+  "rdfs:seeAlso": [
+    "urn:solid:Class",
+    "urn:solid:subClassOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The most-used predicate in all of RDF. JSON-LD authors usually write `@type: \"Person\"`; the underlying triple is `<subject> rdf:type urn:solid:Person`. A subject can have many types simultaneously (multi-typing is normal in RDF, unlike most class-based languages).",
+  "examples": [
+    {
+      "title": "An instance of multiple classes",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "urn:solid:type": [
+          { "@id": "urn:solid:Person" },
+          { "@id": "urn:solid:Agent" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

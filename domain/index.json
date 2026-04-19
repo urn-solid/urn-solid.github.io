@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:domain",
+  "@type": "rdf:Property",
+  "rdfs:label": "domain",
+  "rdfs:comment": "Declares which class an RDF property is meant to be applied to — its subject type.",
+  "owl:sameAs": "http://www.w3.org/2000/01/rdf-schema#domain",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:range",
+    "urn:solid:Class"
+  ],
+  "rdfs:domain": "urn:solid:Property",
+  "rdfs:range": "urn:solid:Class",
+  "notToBeConfusedWith": [
+    "urn:solid:range"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Subject-side constraint: `acl:agent` has domain `acl:Authorization` because authorisations are what carry it. Multiple domain triples mean the property applies to instances of *all* the listed classes (intersection), not any of them — a common trap.",
+  "examples": [
+    {
+      "title": "Property declaring its subject type",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "urn:solid:agent",
+        "@type": "urn:solid:Property",
+        "urn:solid:domain": { "@id": "urn:solid:Authorization" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2000/01/rdf-schema#domain"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1553,6 +1553,13 @@
     "status": "stable",
     "path": "/description/"
   },
+  "urn:solid:domain": {
+    "label": "domain",
+    "description": "Declares which class an RDF property is meant to be applied to — its subject type.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/domain/"
+  },
   "urn:solid:downloadURL": {
     "label": "downloadURL",
     "description": "A direct file URL where a DCAT Distribution can be downloaded.",
@@ -2211,6 +2218,13 @@
     "status": "stable",
     "path": "/invalidatedAtTime/"
   },
+  "urn:solid:isDefinedBy": {
+    "label": "isDefinedBy",
+    "description": "Points at the resource that *defines* a term — typically the vocabulary document the term was minted in.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/isDefinedBy/"
+  },
   "urn:solid:isFormatOf": {
     "label": "isFormatOf",
     "description": "A related resource that is the same intellectual content of which the described resource is a different-format rendition.",
@@ -2820,6 +2834,13 @@
     "status": "stable",
     "path": "/radius/"
   },
+  "urn:solid:range": {
+    "label": "range",
+    "description": "Declares the type of values an RDF property is meant to take — its object type.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/range/"
+  },
   "urn:solid:references": {
     "label": "references",
     "description": "A related resource that is referenced, cited, or otherwise pointed to by the described resource.",
@@ -2931,6 +2952,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/scopeNote/"
+  },
+  "urn:solid:seeAlso": {
+    "label": "seeAlso",
+    "description": "Points at a related resource that may carry additional information about the subject — a generic \"more about this here\" link.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/seeAlso/"
   },
   "urn:solid:semanticRelation": {
     "label": "semanticRelation",
@@ -3183,6 +3211,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/trustedApp/"
+  },
+  "urn:solid:type": {
+    "label": "type",
+    "description": "Asserts that a resource is an instance of a class — the predicate behind JSON-LD's `@type` keyword.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/type/"
   },
   "urn:solid:unitOf": {
     "label": "unitOf",

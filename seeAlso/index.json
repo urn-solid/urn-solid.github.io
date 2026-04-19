@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:seeAlso",
+  "@type": "rdf:Property",
+  "rdfs:label": "seeAlso",
+  "rdfs:comment": "Points at a related resource that may carry additional information about the subject — a generic \"more about this here\" link.",
+  "owl:sameAs": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+  "rdfs:seeAlso": [
+    "urn:solid:isDefinedBy"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:isDefinedBy"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Weakest of the cross-reference predicates: makes no claim about authority or canonicality, just relevance. Use when you want to surface a related resource without asserting it's a definition or an equivalence. `isDefinedBy` and `owl:sameAs` are stronger statements when those apply.",
+  "examples": [
+    {
+      "title": "A resource pointing at related material",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/articles/quantum-computing",
+        "urn:solid:seeAlso": { "@id": "https://en.wikipedia.org/wiki/Quantum_computing" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

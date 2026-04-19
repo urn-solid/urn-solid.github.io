@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:range",
+  "@type": "rdf:Property",
+  "rdfs:label": "range",
+  "rdfs:comment": "Declares the type of values an RDF property is meant to take — its object type.",
+  "owl:sameAs": "http://www.w3.org/2000/01/rdf-schema#range",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:domain",
+    "urn:solid:Class"
+  ],
+  "rdfs:domain": "urn:solid:Property",
+  "rdfs:range": "urn:solid:Class",
+  "notToBeConfusedWith": [
+    "urn:solid:domain"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Object-side constraint. `foaf:knows` has range `foaf:Person`. May also point at an XSD datatype (`xsd:string`, `xsd:dateTime`) for literal-valued properties. Like `domain`, multiple range declarations mean intersection — the value must be an instance of all listed types.",
+  "examples": [
+    {
+      "title": "Property declaring its value type",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "urn:solid:knows",
+        "@type": "urn:solid:Property",
+        "urn:solid:range": { "@id": "urn:solid:Person" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2000/01/rdf-schema#range"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
