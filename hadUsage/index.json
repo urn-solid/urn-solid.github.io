@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hadUsage",
+  "@type": "rdf:Property",
+  "rdfs:label": "hadUsage",
+  "rdfs:comment": "Inside a qualified PROV pattern, links to the `prov:Usage` event whose entity participated in this relationship — typically used on a `prov:Derivation` to record the use that supplied its input.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#hadUsage",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:hadGeneration",
+    "urn:solid:qualifiedUsage",
+    "urn:solid:qualifiedDerivation"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "A connector between qualified PROV events. On a `prov:Derivation`, `prov:hadUsage` points at the `prov:Usage` of the input entity by the activity, and `prov:hadGeneration` points at the `prov:Generation` of the output. Together they reconstruct the precise link between two entities through an activity.",
+  "examples": [
+    {
+      "title": "Derivation citing the Usage of its source",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/derivation/d1",
+        "@type": "http://www.w3.org/ns/prov#Derivation",
+        "urn:solid:hadUsage": { "@id": "https://example.org/usage/u1" },
+        "urn:solid:hadGeneration": { "@id": "https://example.org/generation/g1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#hadUsage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

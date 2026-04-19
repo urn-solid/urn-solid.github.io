@@ -1581,6 +1581,13 @@
     "status": "stable",
     "path": "/hadRole/"
   },
+  "urn:solid:hadUsage": {
+    "label": "hadUsage",
+    "description": "Inside a qualified PROV pattern, links to the `prov:Usage` event whose entity participated in this relationship — typically used on a `prov:Derivation` to record the use that supplied its input.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hadUsage/"
+  },
   "urn:solid:hasAddress": {
     "label": "hasAddress",
     "description": "A postal address associated with the subject.",
@@ -1839,6 +1846,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/img/"
+  },
+  "urn:solid:inDataset": {
+    "label": "inDataset",
+    "description": "Links a DCAT Distribution to the Dataset it represents — inverse of `dcat:distribution`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/inDataset/"
   },
   "urn:solid:inLanguage": {
     "label": "inLanguage",
@@ -2274,6 +2288,13 @@
     "status": "stable",
     "path": "/phone/"
   },
+  "urn:solid:postIn": {
+    "label": "postIn",
+    "description": "Links a Post to the Organization in which it sits.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/postIn/"
+  },
   "urn:solid:postal-code": {
     "label": "postal-code",
     "description": "The postal code (ZIP code) of an Address.",
@@ -2378,6 +2399,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/qualifiedDerivation/"
+  },
+  "urn:solid:qualifiedUsage": {
+    "label": "qualifiedUsage",
+    "description": "Links an Activity to a `prov:Usage` instance that adds detail (which entity, when, in what role) to a plain `prov:used` link.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/qualifiedUsage/"
   },
   "urn:solid:references": {
     "label": "references",
@@ -2749,6 +2777,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/wasInvalidatedBy/"
+  },
+  "urn:solid:wasQuotedFrom": {
+    "label": "wasQuotedFrom",
+    "description": "An Entity is a quotation, excerpt, or reproduction of part of another Entity — the source remains identifiable and authoritative.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/wasQuotedFrom/"
   },
   "urn:solid:wasRevisionOf": {
     "label": "wasRevisionOf",

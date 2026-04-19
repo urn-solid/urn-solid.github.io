@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasQuotedFrom",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasQuotedFrom",
+  "rdfs:comment": "An Entity is a quotation, excerpt, or reproduction of part of another Entity — the source remains identifiable and authoritative.",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasQuotedFrom",
+  "rdfs:seeAlso": [
+    "urn:solid:Entity",
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:hadPrimarySource"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Entity",
+  "notToBeConfusedWith": [
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:hadPrimarySource"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "A subproperty of `prov:wasDerivedFrom`. Use when content is *literally* lifted from the source (a pull-quote in an article, an excerpted paragraph, a re-shared image) rather than transformed. The source is generally expected to be cite-able and verifiable.",
+  "examples": [
+    {
+      "title": "An article quoting a tweet",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/article/123",
+        "@type": "urn:solid:Entity",
+        "urn:solid:wasQuotedFrom": { "@id": "https://twitter.com/example/status/456" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasQuotedFrom"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
