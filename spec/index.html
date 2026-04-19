@@ -84,6 +84,16 @@
   </section>
 
   <section>
+    <h2>Compatibility</h2>
+    <p><code>urn:solid</code> identifiers are valid <a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1</a> IRIs and may appear in any position a JSON-LD IRI is permitted (<code>@id</code>, <code>@type</code>, predicates, values).</p>
+    <p>The bare-form vocabulary terms are intended to function as a default vocabulary surface for JSON-LD documents and JSON-LD subsets such as <a href="https://linkedobjects.org/">Linked Objects (LION)</a>. Specifically:</p>
+    <blockquote>
+      <p>Processors requiring RDF compatibility — that is, processors that emit or consume JSON-LD, RDF/Turtle, or any other RDF serialisation — <strong>SHOULD</strong> assume <code>@vocab: "urn:solid:"</code> as the default vocabulary unless an explicit <code>@context</code> is supplied.</p>
+    </blockquote>
+    <p>This gives JSON-shaped data formats a stable, vocabulary-agnostic surface for RDF interoperability without forcing any single upstream vocabulary on document authors. Each <code>urn:solid</code> term carries an <code>owl:sameAs</code> mapping to its canonical upstream IRI (<code>foaf:</code>, <code>schema:</code>, <code>dcterms:</code>, etc.), which RDF consumers resolve via this registry.</p>
+  </section>
+
+  <section>
     <h2>Status</h2>
     <p>This is an early draft. Implementations may experiment with the namespace. The companion registry at <a href="/">urn-solid.github.io</a> is the operational implementation of the vocabulary-term portion of the namespace. Feedback and proposals are welcome via the <a href="https://github.com/urn-solid/urn-solid.github.io/issues">issue tracker</a>.</p>
   </section>
