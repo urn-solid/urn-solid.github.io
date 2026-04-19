@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:alternateOf — urn-solid</title>
+<meta name="description" content="Two Entities are alternates when they are different specializations of a common general Entity (same underlying thing, different views).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/alternateOf/">
+<link rel="alternate" type="application/ld+json" href="/alternateOf/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:alternateOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "alternateOf",
+  "rdfs:comment": "Two Entities are alternates when they are different specializations of a common general Entity (same underlying thing, different views).",
+  "owl:sameAs": "http://www.w3.org/ns/prov#alternateOf",
+  "rdfs:seeAlso": [
+    "urn:solid:Entity",
+    "urn:solid:specializationOf",
+    "urn:solid:wasRevisionOf"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Entity",
+  "notToBeConfusedWith": [
+    "urn:solid:specializationOf",
+    "urn:solid:wasRevisionOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Symmetric — `A alternateOf B` implies `B alternateOf A`. Typical use: HTML and PDF renderings of the same report; English and French translations; two snapshots of the same dataset taken at different times. Compare with `prov:specializationOf` (one entity narrows another) and `prov:wasRevisionOf` (one supersedes another).",
+  "examples": [
+    {
+      "title": "PDF and HTML renderings as alternates",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/report.pdf",
+        "@type": "urn:solid:Entity",
+        "urn:solid:alternateOf": { "@id": "https://example.org/report.html" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#alternateOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

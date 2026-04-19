@@ -160,6 +160,13 @@
     "status": "stable",
     "path": "/Catalog/"
   },
+  "urn:solid:ChangeEvent": {
+    "label": "ChangeEvent",
+    "description": "A reorganisation event in which one set of Organizations was transformed into another — a merger, split, rename, or restructuring.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/ChangeEvent/"
+  },
   "urn:solid:ChatMessage": {
     "label": "ChatMessage",
     "description": "A chat message — a single message exchanged in a chat conversation.",
@@ -811,6 +818,13 @@
     "status": "stable",
     "path": "/Service/"
   },
+  "urn:solid:Site": {
+    "label": "Site",
+    "description": "A physical location at which an Organization operates — an office, factory, branch, or campus.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Site/"
+  },
   "urn:solid:SizeOrDuration": {
     "label": "SizeOrDuration",
     "description": "A measured size or duration of a resource — pages, bytes, runtime, dimensions.",
@@ -1041,6 +1055,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/altLabel/"
+  },
+  "urn:solid:alternateOf": {
+    "label": "alternateOf",
+    "description": "Two Entities are alternates when they are different specializations of a common general Entity (same underlying thing, different views).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/alternateOf/"
   },
   "urn:solid:alternative": {
     "label": "alternative",
@@ -1391,6 +1412,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/endedAtTime/"
+  },
+  "urn:solid:endpointDescription": {
+    "label": "endpointDescription",
+    "description": "A machine-readable description of how to interact with a DCAT DataService — e.g. an OpenAPI document or SPARQL Service Description.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/endpointDescription/"
   },
   "urn:solid:endpointURL": {
     "label": "endpointURL",
@@ -2686,6 +2714,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/wasInvalidatedBy/"
+  },
+  "urn:solid:wasRevisionOf": {
+    "label": "wasRevisionOf",
+    "description": "An Entity that this Entity is a revision of — same nominal identity, updated content (a v2 of a document, a re-issued dataset).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/wasRevisionOf/"
   },
   "urn:solid:weblog": {
     "label": "weblog",

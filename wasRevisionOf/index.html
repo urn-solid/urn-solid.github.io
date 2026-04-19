@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:wasRevisionOf — urn-solid</title>
+<meta name="description" content="An Entity that this Entity is a revision of — same nominal identity, updated content (a v2 of a document, a re-issued dataset).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/wasRevisionOf/">
+<link rel="alternate" type="application/ld+json" href="/wasRevisionOf/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:wasRevisionOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "wasRevisionOf",
+  "rdfs:comment": "An Entity that this Entity is a revision of — same nominal identity, updated content (a v2 of a document, a re-issued dataset).",
+  "owl:sameAs": "http://www.w3.org/ns/prov#wasRevisionOf",
+  "rdfs:seeAlso": [
+    "urn:solid:Entity",
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:specializationOf",
+    "urn:solid:alternateOf"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Entity",
+  "notToBeConfusedWith": [
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:specializationOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "A subproperty of `prov:wasDerivedFrom` — every revision is a derivation, but a revision specifically replaces the prior version while keeping the same name/role. Use for explicit version chains (v1 → v2 → v3); use plain `wasDerivedFrom` when the new entity is a transformation rather than an update.",
+  "examples": [
+    {
+      "title": "v2 of a report",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/report/v2",
+        "@type": "urn:solid:Entity",
+        "urn:solid:wasRevisionOf": { "@id": "https://example.org/report/v1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/prov#wasRevisionOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

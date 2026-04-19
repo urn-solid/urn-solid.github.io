@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:ChangeEvent",
+  "@type": "rdfs:Class",
+  "rdfs:label": "ChangeEvent",
+  "rdfs:comment": "A reorganisation event in which one set of Organizations was transformed into another — a merger, split, rename, or restructuring.",
+  "owl:sameAs": "http://www.w3.org/ns/org#ChangeEvent",
+  "rdfs:seeAlso": [
+    "urn:solid:Organization",
+    "urn:solid:resultedFrom",
+    "urn:solid:resultingOrganization",
+    "urn:solid:originalOrganization"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Captures organisational discontinuities cleanly: link the *before* state with `org:originalOrganization` and the *after* with `org:resultingOrganization`. Use this rather than mutating an Organization in place when downstream agreements need to know whether a partner is a continuation or a successor of an earlier entity.",
+  "examples": [
+    {
+      "title": "A merger as a ChangeEvent",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/events/2026-merger",
+        "@type": "urn:solid:ChangeEvent",
+        "urn:solid:originalOrganization": [
+          { "@id": "https://example.org/acme#org" },
+          { "@id": "https://example.org/widgetco#org" }
+        ],
+        "urn:solid:resultingOrganization": { "@id": "https://example.org/acmewidget#org" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/org#ChangeEvent"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

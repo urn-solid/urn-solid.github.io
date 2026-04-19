@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:endpointDescription",
+  "@type": "rdf:Property",
+  "rdfs:label": "endpointDescription",
+  "rdfs:comment": "A machine-readable description of how to interact with a DCAT DataService — e.g. an OpenAPI document or SPARQL Service Description.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#endpointDescription",
+  "rdfs:seeAlso": [
+    "urn:solid:DataService",
+    "urn:solid:endpointURL",
+    "urn:solid:servesDataset"
+  ],
+  "rdfs:domain": "urn:solid:DataService",
+  "notToBeConfusedWith": [
+    "urn:solid:endpointURL"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "`endpointURL` is *where* to call; `endpointDescription` is *how* to call it. Common values: a SPARQL 1.1 Service Description graph, an OpenAPI/Swagger JSON document, a Hydra ApiDocumentation. Without a description, clients must rely on out-of-band knowledge of the protocol.",
+  "examples": [
+    {
+      "title": "Service with a SPARQL service description",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://data.example.org/services/sparql",
+        "@type": "urn:solid:DataService",
+        "urn:solid:endpointURL": { "@id": "https://data.example.org/sparql" },
+        "urn:solid:endpointDescription": { "@id": "https://data.example.org/sparql/service-description" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#endpointDescription"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

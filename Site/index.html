@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Site — urn-solid</title>
+<meta name="description" content="A physical location at which an Organization operates — an office, factory, branch, or campus.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Site/">
+<link rel="alternate" type="application/ld+json" href="/Site/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Site",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Site",
+  "rdfs:comment": "A physical location at which an Organization operates — an office, factory, branch, or campus.",
+  "owl:sameAs": "http://www.w3.org/ns/org#Site",
+  "rdfs:seeAlso": [
+    "urn:solid:Organization",
+    "urn:solid:basedNear",
+    "urn:solid:Place"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Sites are *where* the Organization is, distinct from the Organization itself (which is the legal/social entity) or its OrganizationalUnits (the structural divisions). One Organization may have many Sites; one Site may host parts of several Organizations.",
+  "examples": [
+    {
+      "title": "An office site of a company",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/acme/sites/london",
+        "@type": "urn:solid:Site",
+        "urn:solid:label": "ACME London Office",
+        "urn:solid:siteAddress": { "@id": "https://example.org/addresses/london-hq" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/org#Site"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
