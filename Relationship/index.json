@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Relationship",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Relationship",
+  "rdfs:comment": "An ActivityStreams Object representing a typed relationship between two other Objects — typically two Actors connected by a relationship type (friend, colleague, follower).",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Relationship",
+  "rdfs:seeAlso": [
+    "urn:solid:Actor",
+    "urn:solid:subject",
+    "urn:solid:object",
+    "urn:solid:relationship"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Carries `as:subject`, `as:object`, and `as:relationship` (the kind of link). Reify a connection as a first-class entity when you need to attach metadata to it (when it started, who asserted it, whether it's reciprocated) — otherwise a direct property like `foaf:knows` is simpler.",
+  "examples": [
+    {
+      "title": "A reified friendship between two actors",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/relationships/alice-bob-friends",
+        "@type": "urn:solid:Relationship",
+        "urn:solid:subject": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:relationship": { "@id": "http://purl.org/vocab/relationship/friendOf" },
+        "urn:solid:object": { "@id": "https://bob.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#Relationship"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

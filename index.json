@@ -727,6 +727,13 @@
     "status": "stable",
     "path": "/Product/"
   },
+  "urn:solid:Profile": {
+    "label": "Profile",
+    "description": "An ActivityStreams Object that describes another Object — typically supplemental information about an Actor (a richer biography, alternate display data) layered on top of the actor's primary record.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Profile/"
+  },
   "urn:solid:Project": {
     "label": "Project",
     "description": "A project — a collaborative undertaking with a goal.",
@@ -789,6 +796,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Reject/"
+  },
+  "urn:solid:Relationship": {
+    "label": "Relationship",
+    "description": "An ActivityStreams Object representing a typed relationship between two other Objects — typically two Actors connected by a relationship type (friend, colleague, follower).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Relationship/"
   },
   "urn:solid:Remove": {
     "label": "Remove",
@@ -880,6 +894,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Tel/"
+  },
+  "urn:solid:TentativeAccept": {
+    "label": "TentativeAccept",
+    "description": "An ActivityStreams Activity indicating that the actor accepts the object provisionally — a soft \"yes, probably\" rather than a firm commitment.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/TentativeAccept/"
   },
   "urn:solid:Tombstone": {
     "label": "Tombstone",
@@ -2575,6 +2596,13 @@
     "status": "stable",
     "path": "/sha1/"
   },
+  "urn:solid:shares": {
+    "label": "shares",
+    "description": "A Collection of `Announce` activities (shares / boosts / reposts) directed at an Object — discoverable from the Object itself.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/shares/"
+  },
   "urn:solid:sibling": {
     "label": "sibling",
     "description": "A sibling of the person — sharing at least one parent.",
@@ -2700,6 +2728,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/temporal/"
+  },
+  "urn:solid:temporalResolution": {
+    "label": "temporalResolution",
+    "description": "The minimum time between samples in a DCAT Dataset or Distribution — the granularity of the time axis.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/temporalResolution/"
   },
   "urn:solid:text": {
     "label": "text",

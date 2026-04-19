@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:temporalResolution — urn-solid</title>
+<meta name="description" content="The minimum time between samples in a DCAT Dataset or Distribution — the granularity of the time axis.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/temporalResolution/">
+<link rel="alternate" type="application/ld+json" href="/temporalResolution/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:temporalResolution",
+  "@type": "rdf:Property",
+  "rdfs:label": "temporalResolution",
+  "rdfs:comment": "The minimum time between samples in a DCAT Dataset or Distribution — the granularity of the time axis.",
+  "owl:sameAs": "http://www.w3.org/ns/dcat#temporalResolution",
+  "rdfs:seeAlso": [
+    "urn:solid:Dataset",
+    "urn:solid:Distribution",
+    "urn:solid:temporal"
+  ],
+  "rdfs:domain": "urn:solid:Dataset",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Encoded as an `xsd:duration` (`PT1H` = hourly samples, `P1D` = daily, `PT15M` = 15-minute). Crucial when the same dataset is published at multiple cadences — clients pick the right Distribution based on the resolution they need, not just the format.",
+  "examples": [
+    {
+      "title": "A dataset with hourly temporal resolution",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://data.example.org/sensors/temperature",
+        "@type": "urn:solid:Dataset",
+        "urn:solid:temporalResolution": { "@value": "PT1H", "@type": "http://www.w3.org/2001/XMLSchema#duration" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/dcat#temporalResolution"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Profile",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Profile",
+  "rdfs:comment": "An ActivityStreams Object that describes another Object — typically supplemental information about an Actor (a richer biography, alternate display data) layered on top of the actor's primary record.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Profile",
+  "rdfs:seeAlso": [
+    "urn:solid:Object",
+    "urn:solid:Actor",
+    "urn:solid:describes",
+    "urn:solid:Person"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "A Profile uses `as:describes` to point at the Object it documents. Useful when the descriptive payload is large or evolves independently of the actor's identity record (e.g. a long bio with media attachments) — the Profile is fetched separately and may be cached, signed, or replicated apart from the Actor.",
+  "examples": [
+    {
+      "title": "A Profile that describes an Actor",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/about",
+        "@type": "urn:solid:Profile",
+        "urn:solid:describes": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:summary": "Software engineer interested in decentralised systems."
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#Profile"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

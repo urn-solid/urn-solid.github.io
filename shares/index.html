@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:shares — urn-solid</title>
+<meta name="description" content="A Collection of `Announce` activities (shares / boosts / reposts) directed at an Object — discoverable from the Object itself.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/shares/">
+<link rel="alternate" type="application/ld+json" href="/shares/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:shares",
+  "@type": "rdf:Property",
+  "rdfs:label": "shares",
+  "rdfs:comment": "A Collection of `Announce` activities (shares / boosts / reposts) directed at an Object — discoverable from the Object itself.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#shares",
+  "rdfs:seeAlso": [
+    "urn:solid:Object",
+    "urn:solid:Announce",
+    "urn:solid:likes",
+    "urn:solid:replies"
+  ],
+  "rdfs:domain": "urn:solid:Object",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The standard ActivityPub way to expose \"who reshared this?\" without mailing every share to every reader. Servers append each `Announce` of an Object to its `shares` Collection; clients dereference the Collection to count and display shares. Mirrors `as:likes` for like activities.",
+  "examples": [
+    {
+      "title": "A Note exposing its shares Collection",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/1",
+        "@type": "urn:solid:Note",
+        "urn:solid:shares": { "@id": "https://alice.example.org/notes/1/shares" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#shares"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

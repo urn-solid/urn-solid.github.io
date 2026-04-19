@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:TentativeAccept",
+  "@type": "rdfs:Class",
+  "rdfs:label": "TentativeAccept",
+  "rdfs:comment": "An ActivityStreams Activity indicating that the actor accepts the object provisionally — a soft \"yes, probably\" rather than a firm commitment.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#TentativeAccept",
+  "rdfs:seeAlso": [
+    "urn:solid:Accept",
+    "urn:solid:Reject",
+    "urn:solid:TentativeReject"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Accept"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Common in calendaring: an event invitation gets a `TentativeAccept` when the recipient is interested but not certain. Specialises `as:Accept` — a consumer that doesn't recognise the tentative variant can fall back to treating it as Accept and lose only the nuance.",
+  "examples": [
+    {
+      "title": "Tentatively accepting an event invitation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/activities/maybe-meeting",
+        "@type": "urn:solid:TentativeAccept",
+        "urn:solid:actor": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:object": { "@id": "https://example.org/events/team-sync" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#TentativeAccept"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
