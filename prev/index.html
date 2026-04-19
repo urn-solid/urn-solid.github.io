@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:prev — urn-solid</title>
+<meta name="description" content="The previous page in an ActivityStreams CollectionPage chain — the URL the client follows to scroll back through pagination.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/prev/">
+<link rel="alternate" type="application/ld+json" href="/prev/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:prev",
+  "@type": "rdf:Property",
+  "rdfs:label": "prev",
+  "rdfs:comment": "The previous page in an ActivityStreams CollectionPage chain — the URL the client follows to scroll back through pagination.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#prev",
+  "rdfs:seeAlso": [
+    "urn:solid:Collection",
+    "urn:solid:next",
+    "urn:solid:first",
+    "urn:solid:partOf"
+  ],
+  "rdfs:domain": "http://www.w3.org/ns/activitystreams#CollectionPage",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Mirror of `as:next`. Optional but recommended — without `prev`, a client that lands on a deep page can only walk forward, never back. Servers commonly omit on the first page (where it would have no value).",
+  "examples": [
+    {
+      "title": "A middle page exposing both next and prev",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/outbox?page=2",
+        "@type": "http://www.w3.org/ns/activitystreams#OrderedCollectionPage",
+        "urn:solid:partOf": { "@id": "https://alice.example.org/outbox" },
+        "urn:solid:prev": { "@id": "https://alice.example.org/outbox?page=1" },
+        "urn:solid:next": { "@id": "https://alice.example.org/outbox?page=3" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#prev"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

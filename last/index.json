@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:last",
+  "@type": "rdf:Property",
+  "rdfs:label": "last",
+  "rdfs:comment": "The final page of a paginated ActivityStreams Collection — the entry point for clients that want to start at the end (oldest activities, most recent post for chronologically reversed orderings).",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#last",
+  "rdfs:seeAlso": [
+    "urn:solid:Collection",
+    "urn:solid:first",
+    "urn:solid:next",
+    "urn:solid:prev"
+  ],
+  "rdfs:domain": "urn:solid:Collection",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Optional companion to `as:first`. Useful when the Collection has stable bounds (an outbox with finite history, an archived event log) so clients can deep-link to the end without walking the whole chain. Servers may omit it for unbounded or live-growing Collections.",
+  "examples": [
+    {
+      "title": "Paginated outbox with first and last",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/outbox",
+        "@type": "http://www.w3.org/ns/activitystreams#OrderedCollection",
+        "urn:solid:totalItems": 5320,
+        "urn:solid:first": { "@id": "https://alice.example.org/outbox?page=1" },
+        "urn:solid:last": { "@id": "https://alice.example.org/outbox?page=266" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#last"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

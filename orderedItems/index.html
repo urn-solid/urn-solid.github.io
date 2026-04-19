@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:orderedItems — urn-solid</title>
+<meta name="description" content="The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/orderedItems/">
+<link rel="alternate" type="application/ld+json" href="/orderedItems/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:orderedItems",
+  "@type": "rdf:Property",
+  "rdfs:label": "orderedItems",
+  "rdfs:comment": "The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#orderedItems",
+  "rdfs:seeAlso": [
+    "urn:solid:Collection",
+    "urn:solid:items",
+    "urn:solid:totalItems",
+    "urn:solid:first"
+  ],
+  "rdfs:domain": "http://www.w3.org/ns/activitystreams#OrderedCollection",
+  "notToBeConfusedWith": [
+    "urn:solid:items"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use on `OrderedCollection`/`OrderedCollectionPage`; for unordered collections use `as:items`. The JSON array order is the canonical order — for a chronologically sorted outbox, that's typically newest-first. Servers paginate ordered collections via `first`/`next` just like unordered ones.",
+  "examples": [
+    {
+      "title": "An OrderedCollectionPage with three items",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/outbox?page=1",
+        "@type": "http://www.w3.org/ns/activitystreams#OrderedCollectionPage",
+        "urn:solid:partOf": { "@id": "https://alice.example.org/outbox" },
+        "urn:solid:orderedItems": [
+          { "@id": "https://alice.example.org/activities/3" },
+          { "@id": "https://alice.example.org/activities/2" },
+          { "@id": "https://alice.example.org/activities/1" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#orderedItems"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

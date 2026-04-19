@@ -1329,6 +1329,13 @@
     "status": "stable",
     "path": "/creator/"
   },
+  "urn:solid:current": {
+    "label": "current",
+    "description": "The page of an ActivityStreams Collection that contains the most recent items — clients seeking \"what's new\" start here rather than at `first`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/current/"
+  },
   "urn:solid:currentProject": {
     "label": "currentProject",
     "description": "A project the person is currently active on.",
@@ -2120,6 +2127,13 @@
     "status": "stable",
     "path": "/language/"
   },
+  "urn:solid:last": {
+    "label": "last",
+    "description": "The final page of a paginated ActivityStreams Collection — the entry point for clients that want to start at the end (oldest activities, most recent post for chronologically reversed orderings).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/last/"
+  },
   "urn:solid:lastName": {
     "label": "lastName",
     "description": "The last name of a person.",
@@ -2288,6 +2302,13 @@
     "status": "stable",
     "path": "/narrower/"
   },
+  "urn:solid:next": {
+    "label": "next",
+    "description": "The next page in an ActivityStreams CollectionPage chain — the URL the client follows to advance through pagination.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/next/"
+  },
   "urn:solid:nick": {
     "label": "nick",
     "description": "A short informal nickname for the subject — typically a chat handle or screen name.",
@@ -2315,6 +2336,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/openid/"
+  },
+  "urn:solid:orderedItems": {
+    "label": "orderedItems",
+    "description": "The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/orderedItems/"
   },
   "urn:solid:organization-name": {
     "label": "organization-name",
@@ -2399,6 +2427,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/preferencesFile/"
+  },
+  "urn:solid:prev": {
+    "label": "prev",
+    "description": "The previous page in an ActivityStreams CollectionPage chain — the URL the client follows to scroll back through pagination.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/prev/"
   },
   "urn:solid:preview": {
     "label": "preview",
