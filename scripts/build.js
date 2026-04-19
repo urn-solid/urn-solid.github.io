@@ -83,6 +83,7 @@ const main = () => {
   assertNoCaseCollisions(names);
 
   const index = {};
+  const reverseIndex = {};
   const corpusLines = [];
   let htmlChanged = 0;
 
@@ -113,13 +114,23 @@ const main = () => {
       path: `/${name}/`,
     };
 
+    const sameAs = term["owl:sameAs"];
+    if (typeof sameAs === "string") {
+      if (reverseIndex[sameAs] && reverseIndex[sameAs] !== term["@id"]) {
+        console.error(`[build] duplicate owl:sameAs "${sameAs}" — already mapped to ${reverseIndex[sameAs]}, also claimed by ${term["@id"]}`);
+        process.exit(1);
+      }
+      reverseIndex[sameAs] = term["@id"];
+    }
+
     corpusLines.push(JSON.stringify(term));
   }
 
   const indexChanged = writeIfChanged(path.join(ROOT, "index.json"), JSON.stringify(index, null, 2) + "\n");
+  const reverseChanged = writeIfChanged(path.join(ROOT, "reverse-index.json"), JSON.stringify(reverseIndex, null, 2) + "\n");
   const corpusChanged = writeIfChanged(path.join(ROOT, "corpus.jsonl"), corpusLines.join("\n") + "\n");
 
-  console.log(`[build] ${names.length} terms — ${htmlChanged} html updated, index.json ${indexChanged ? "updated" : "unchanged"}, corpus.jsonl ${corpusChanged ? "updated" : "unchanged"}`);
+  console.log(`[build] ${names.length} terms — ${htmlChanged} html updated, index.json ${indexChanged ? "updated" : "unchanged"}, reverse-index.json ${reverseChanged ? "updated" : "unchanged"}, corpus.jsonl ${corpusChanged ? "updated" : "unchanged"}`);
 };
 
 main();
