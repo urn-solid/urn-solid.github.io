@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:allValuesFrom — urn-solid</title>
+<meta name="description" content="On an OWL Restriction, asserts that every value of the constrained property must be an instance of a given class — a universal quantifier.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/allValuesFrom/">
+<link rel="alternate" type="application/ld+json" href="/allValuesFrom/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:allValuesFrom",
+  "@type": "rdf:Property",
+  "rdfs:label": "allValuesFrom",
+  "rdfs:comment": "On an OWL Restriction, asserts that every value of the constrained property must be an instance of a given class — a universal quantifier.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#allValuesFrom",
+  "rdfs:seeAlso": [
+    "urn:solid:Restriction",
+    "urn:solid:onProperty",
+    "urn:solid:someValuesFrom"
+  ],
+  "rdfs:domain": "urn:solid:Restriction",
+  "rdfs:range": "urn:solid:Class",
+  "notToBeConfusedWith": [
+    "urn:solid:someValuesFrom"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Reads as \"for all values on this property, the value is in this class.\" Common pattern: defining a class of `Person`s whose `knows` relations are *only* with other `Person`s. Pairs with `someValuesFrom` (existential — at least one value is in the class).",
+  "examples": [
+    {
+      "title": "A class restricting knows-targets to People",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Restriction",
+        "urn:solid:onProperty": { "@id": "urn:solid:knows" },
+        "urn:solid:allValuesFrom": { "@id": "urn:solid:Person" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#allValuesFrom"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

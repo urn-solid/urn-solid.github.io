@@ -1245,6 +1245,13 @@
     "status": "stable",
     "path": "/agentGroup/"
   },
+  "urn:solid:allValuesFrom": {
+    "label": "allValuesFrom",
+    "description": "On an OWL Restriction, asserts that every value of the constrained property must be an instance of a given class — a universal quantifier.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/allValuesFrom/"
+  },
   "urn:solid:alsoKnownAs": {
     "label": "alsoKnownAs",
     "description": "An alternate identifier for an ActivityStreams Object — typically a previous identity an Actor used before migrating servers, kept as a back-reference so old followers can find them.",
@@ -1622,6 +1629,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/description/"
+  },
+  "urn:solid:differentFrom": {
+    "label": "differentFrom",
+    "description": "Asserts that two OWL individuals are *not* the same — explicit negation, useful in worlds where the open-world assumption would otherwise leave identity ambiguous.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/differentFrom/"
   },
   "urn:solid:disjointWith": {
     "label": "disjointWith",
@@ -3099,6 +3113,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/sibling/"
+  },
+  "urn:solid:someValuesFrom": {
+    "label": "someValuesFrom",
+    "description": "On an OWL Restriction, asserts that at least one value of the constrained property must be an instance of a given class — an existential quantifier.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/someValuesFrom/"
   },
   "urn:solid:source": {
     "label": "source",

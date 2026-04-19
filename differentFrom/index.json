@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:differentFrom",
+  "@type": "rdf:Property",
+  "rdfs:label": "differentFrom",
+  "rdfs:comment": "Asserts that two OWL individuals are *not* the same — explicit negation, useful in worlds where the open-world assumption would otherwise leave identity ambiguous.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#differentFrom",
+  "rdfs:seeAlso": [
+    "urn:solid:sameAs",
+    "urn:solid:disjointWith"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:sameAs",
+    "urn:solid:disjointWith"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Symmetric — `A differentFrom B` implies `B differentFrom A`. Distinct from `owl:disjointWith` (which separates *classes*); `differentFrom` separates *individuals*. Necessary because RDF doesn't assume Unique Name Assumption: without `differentFrom`, two distinctly-named resources might still be merged by reasoners.",
+  "examples": [
+    {
+      "title": "Two people explicitly marked as different",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "urn:solid:differentFrom": { "@id": "https://bob.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#differentFrom"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
