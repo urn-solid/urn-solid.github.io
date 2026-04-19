@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:proof",
+  "@type": "rdf:Property",
+  "rdfs:label": "proof",
+  "rdfs:comment": "A cryptographic proof attached to a VerifiableCredential or VerifiablePresentation — what verifiers check to confirm the document hasn't been tampered with and was signed by the claimed party.",
+  "owl:sameAs": "https://w3id.org/security#proof",
+  "rdfs:seeAlso": [
+    "urn:solid:VerifiableCredential",
+    "urn:solid:VerifiablePresentation",
+    "urn:solid:verificationMethod",
+    "urn:solid:proofPurpose"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "An Object carrying the proof type (e.g. `Ed25519Signature2020`, `DataIntegrityProof`), the signature value, and metadata: when, by which key (`verificationMethod`), and for what purpose (`proofPurpose`). Defined in the W3C Security Vocabulary; used unchanged by VC, DID Document signing, and ActivityPub HTTP Signatures.",
+  "examples": [
+    {
+      "title": "A credential with a proof block",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/credentials/3732",
+        "@type": "urn:solid:VerifiableCredential",
+        "urn:solid:proof": {
+          "@type": "https://w3id.org/security#Ed25519Signature2020",
+          "urn:solid:created": { "@value": "2026-04-19T10:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+          "urn:solid:verificationMethod": { "@id": "https://example.edu/issuers/14#key-1" },
+          "urn:solid:proofPurpose": "assertionMethod"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://w3id.org/security#proof"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

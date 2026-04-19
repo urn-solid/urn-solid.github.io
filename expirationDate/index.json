@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:expirationDate",
+  "@type": "rdf:Property",
+  "rdfs:label": "expirationDate",
+  "rdfs:comment": "The date-time at which a VerifiableCredential ceases to be valid — verifiers SHOULD reject it after this instant.",
+  "owl:sameAs": "https://www.w3.org/2018/credentials#expirationDate",
+  "rdfs:seeAlso": [
+    "urn:solid:VerifiableCredential",
+    "urn:solid:issuanceDate"
+  ],
+  "rdfs:domain": "urn:solid:VerifiableCredential",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "notToBeConfusedWith": [
+    "urn:solid:issuanceDate"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Optional — credentials without an expiration are open-ended. VC 2.0 renames this to `validUntil`; both are seen in the wild. Distinct from revocation: expiration is set at issuance and absolute; revocation is dynamic and consulted via `credentialStatus`.",
+  "examples": [
+    {
+      "title": "A credential valid for one year",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/credentials/3732",
+        "@type": "urn:solid:VerifiableCredential",
+        "urn:solid:issuanceDate": { "@value": "2026-04-19T10:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+        "urn:solid:expirationDate": { "@value": "2027-04-19T10:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/2018/credentials#expirationDate"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1539,6 +1539,13 @@
     "status": "stable",
     "path": "/creator/"
   },
+  "urn:solid:credentialStatus": {
+    "label": "credentialStatus",
+    "description": "A reference to a status mechanism for a VerifiableCredential — e.g. a revocation list — that verifiers consult to check whether the credential is still active.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/credentialStatus/"
+  },
   "urn:solid:credentialSubject": {
     "label": "credentialSubject",
     "description": "The entity that a VerifiableCredential makes claims about — most often an Actor identified by a DID or WebID.",
@@ -1776,6 +1783,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/example/"
+  },
+  "urn:solid:expirationDate": {
+    "label": "expirationDate",
+    "description": "The date-time at which a VerifiableCredential ceases to be valid — verifiers SHOULD reject it after this instant.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/expirationDate/"
   },
   "urn:solid:extent": {
     "label": "extent",
@@ -2189,6 +2203,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/historyNote/"
+  },
+  "urn:solid:holder": {
+    "label": "holder",
+    "description": "On a VerifiablePresentation, the Actor presenting the credentials — typically (but not always) also the credentialSubject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/holder/"
   },
   "urn:solid:holds": {
     "label": "holds",
@@ -2904,6 +2925,13 @@
     "status": "stable",
     "path": "/profileSubject/"
   },
+  "urn:solid:proof": {
+    "label": "proof",
+    "description": "A cryptographic proof attached to a VerifiableCredential or VerifiablePresentation — what verifiers check to confirm the document hasn't been tampered with and was signed by the claimed party.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/proof/"
+  },
   "urn:solid:provenance": {
     "label": "provenance",
     "description": "A statement of any changes in ownership and custody of the resource since its creation — its provenance trail.",
@@ -3421,6 +3449,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/valid/"
+  },
+  "urn:solid:verificationMethod": {
+    "label": "verificationMethod",
+    "description": "The cryptographic key (or other verification material) the verifier should use to check a proof — typically a fragment of a DID Document.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/verificationMethod/"
   },
   "urn:solid:version": {
     "label": "version",

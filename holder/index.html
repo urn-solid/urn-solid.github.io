@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:holder — urn-solid</title>
+<meta name="description" content="On a VerifiablePresentation, the Actor presenting the credentials — typically (but not always) also the credentialSubject.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/holder/">
+<link rel="alternate" type="application/ld+json" href="/holder/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:holder",
+  "@type": "rdf:Property",
+  "rdfs:label": "holder",
+  "rdfs:comment": "On a VerifiablePresentation, the Actor presenting the credentials — typically (but not always) also the credentialSubject.",
+  "owl:sameAs": "https://www.w3.org/2018/credentials#holder",
+  "rdfs:seeAlso": [
+    "urn:solid:VerifiablePresentation",
+    "urn:solid:credentialSubject",
+    "urn:solid:issuer"
+  ],
+  "rdfs:domain": "urn:solid:VerifiablePresentation",
+  "notToBeConfusedWith": [
+    "urn:solid:credentialSubject"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Three roles in a typical VC flow: `issuer` (signs the credential), `credentialSubject` (the entity it makes claims about), `holder` (the entity presenting it now). They're often the same Actor but can diverge — a parent holding a credential about their child, an organisation holding one about an employee.",
+  "examples": [
+    {
+      "title": "A presentation with an explicit holder",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:VerifiablePresentation",
+        "urn:solid:holder": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/2018/credentials#holder"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
