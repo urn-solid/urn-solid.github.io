@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Bookmark",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Bookmark",
+  "rdfs:comment": "A saved reference to a web resource — title, URL, optional tags and notes.",
+  "owl:sameAs": "http://www.w3.org/2002/01/bookmark#Bookmark",
+  "rdfs:seeAlso": [
+    "urn:solid:recalls",
+    "urn:solid:hasTopic",
+    "https://schema.org/BookmarkAction"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The W3C bookmark vocabulary class used by Tabulator/SolidOS. A Bookmark uses `urn:solid:recalls` for the URL it points at and `urn:solid:hasTopic` for tags. Pair with `urn:solid:title` for the headline and `urn:solid:created` for the save date.",
+  "examples": [
+    {
+      "title": "A bookmark with tags",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/bookmarks/solid",
+        "@type": "urn:solid:Bookmark",
+        "http://purl.org/dc/terms/title": "Solid Project",
+        "http://www.w3.org/2002/01/bookmark#recalls": { "@id": "https://solidproject.org/" },
+        "http://www.w3.org/2002/01/bookmark#hasTopic": ["solid", "decentralization"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/01/bookmark#Bookmark"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

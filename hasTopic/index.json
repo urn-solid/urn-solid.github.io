@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasTopic",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasTopic",
+  "rdfs:comment": "A topic or tag — used by Bookmarks (and other resources) for free-form classification.",
+  "owl:sameAs": "http://www.w3.org/2002/01/bookmark#hasTopic",
+  "rdfs:seeAlso": [
+    "urn:solid:Bookmark",
+    "https://schema.org/keywords",
+    "http://www.w3.org/ns/activitystreams#tag"
+  ],
+  "rdfs:domain": "urn:solid:Bookmark",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Originally defined for Bookmarks but reusable wherever free-form tagging is needed. Values can be plain strings (folksonomy tags) or NamedNode references to Topic/Concept resources (controlled vocabularies). For ActivityPub-style hashtag references prefer `as:tag`; for schema.org-style keywords prefer `schema:keywords`.",
+  "examples": [
+    {
+      "title": "Bookmark tagged with topics",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/bookmarks/solid",
+        "@type": "urn:solid:Bookmark",
+        "urn:solid:hasTopic": ["solid", "decentralization", "rdf"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/01/bookmark#hasTopic"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

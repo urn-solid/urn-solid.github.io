@@ -146,6 +146,13 @@
     "status": "stable",
     "path": "/Book/"
   },
+  "urn:solid:Bookmark": {
+    "label": "Bookmark",
+    "description": "A saved reference to a web resource — title, URL, optional tags and notes.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Bookmark/"
+  },
   "urn:solid:Brand": {
     "label": "Brand",
     "description": "A brand — a distinctive identity associated with a product, service, or organization.",
@@ -2260,6 +2267,13 @@
     "status": "stable",
     "path": "/hasTopConcept/"
   },
+  "urn:solid:hasTopic": {
+    "label": "hasTopic",
+    "description": "A topic or tag — used by Bookmarks (and other resources) for free-form classification.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasTopic/"
+  },
   "urn:solid:hasUID": {
     "label": "hasUID",
     "description": "A globally unique identifier for the vCard — typically a UUID or other long-lived ID.",
@@ -3177,6 +3191,13 @@
     "status": "stable",
     "path": "/range/"
   },
+  "urn:solid:recalls": {
+    "label": "recalls",
+    "description": "The web resource a Bookmark points at — the URL being bookmarked.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/recalls/"
+  },
   "urn:solid:references": {
     "label": "references",
     "description": "A related resource that is referenced, cited, or otherwise pointed to by the described resource.",
@@ -3533,6 +3554,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/thumbnail/"
+  },
+  "urn:solid:title": {
+    "label": "title",
+    "description": "A name given to the resource — the headline or short identifier.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/title/"
   },
   "urn:solid:to": {
     "label": "to",
