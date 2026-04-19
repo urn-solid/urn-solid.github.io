@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Datatype",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Datatype",
+  "rdfs:comment": "The class of RDF datatypes — XSD types (`xsd:string`, `xsd:dateTime`, `xsd:integer`) and any custom datatypes defined for an RDF graph.",
+  "owl:sameAs": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+  "rdfs:seeAlso": [
+    "urn:solid:Class",
+    "urn:solid:range"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "A subclass of `rdfs:Class` whose instances are themselves datatypes. Most apps never declare new ones — the XSD set covers nearly every literal need. Use as the value of `@type` when minting a custom literal datatype (e.g. a regulated identifier format).",
+  "examples": [
+    {
+      "title": "Declaring a custom datatype",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/datatypes/IBAN",
+        "@type": "urn:solid:Datatype",
+        "urn:solid:label": "IBAN account number"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

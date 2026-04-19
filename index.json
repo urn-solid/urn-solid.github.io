@@ -293,6 +293,13 @@
     "status": "stable",
     "path": "/Dataset/"
   },
+  "urn:solid:Datatype": {
+    "label": "Datatype",
+    "description": "The class of RDF datatypes — XSD types (`xsd:string`, `xsd:dateTime`, `xsd:integer`) and any custom datatypes defined for an RDF graph.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Datatype/"
+  },
   "urn:solid:Delegation": {
     "label": "Delegation",
     "description": "A qualified PROV delegation — the role-aware form of `actedOnBehalfOf` between two Agents.",
@@ -488,6 +495,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Influence/"
+  },
+  "urn:solid:IntransitiveActivity": {
+    "label": "IntransitiveActivity",
+    "description": "An ActivityStreams Activity that has no direct object — the actor performs the verb without acting upon a specific thing (Travel, Move, Arrive).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/IntransitiveActivity/"
   },
   "urn:solid:Invalidation": {
     "label": "Invalidation",
@@ -964,6 +978,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/TentativeReject/"
+  },
+  "urn:solid:Thing": {
+    "label": "Thing",
+    "description": "The OWL top class — every other class is a subclass of `owl:Thing`. Schema.org also uses a class called `Thing` as its root; both are aligned in this term.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Thing/"
   },
   "urn:solid:Tombstone": {
     "label": "Tombstone",
@@ -1636,6 +1657,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/endpoints/"
+  },
+  "urn:solid:equivalentClass": {
+    "label": "equivalentClass",
+    "description": "Asserts that two OWL classes have identical extensions — every instance of one is also an instance of the other and vice versa.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/equivalentClass/"
+  },
+  "urn:solid:equivalentProperty": {
+    "label": "equivalentProperty",
+    "description": "Asserts that two OWL properties always relate the same subjects to the same objects — interchangeable in any triple.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/equivalentProperty/"
   },
   "urn:solid:exactMatch": {
     "label": "exactMatch",

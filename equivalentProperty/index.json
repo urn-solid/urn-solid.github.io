@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:equivalentProperty",
+  "@type": "rdf:Property",
+  "rdfs:label": "equivalentProperty",
+  "rdfs:comment": "Asserts that two OWL properties always relate the same subjects to the same objects — interchangeable in any triple.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#equivalentProperty",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:subPropertyOf",
+    "urn:solid:equivalentClass"
+  ],
+  "rdfs:domain": "urn:solid:Property",
+  "rdfs:range": "urn:solid:Property",
+  "notToBeConfusedWith": [
+    "urn:solid:subPropertyOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Property analogue of `owl:equivalentClass`. Stronger than mutual `subPropertyOf`. Use to bridge identical predicates across vocabularies — `foaf:name` and `schema:name` are commonly equated this way for cross-vocab interop.",
+  "examples": [
+    {
+      "title": "Equating two upstream name predicates",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "http://xmlns.com/foaf/0.1/name",
+        "urn:solid:equivalentProperty": { "@id": "https://schema.org/name" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#equivalentProperty"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

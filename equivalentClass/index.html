@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:equivalentClass — urn-solid</title>
+<meta name="description" content="Asserts that two OWL classes have identical extensions — every instance of one is also an instance of the other and vice versa.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/equivalentClass/">
+<link rel="alternate" type="application/ld+json" href="/equivalentClass/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:equivalentClass",
+  "@type": "rdf:Property",
+  "rdfs:label": "equivalentClass",
+  "rdfs:comment": "Asserts that two OWL classes have identical extensions — every instance of one is also an instance of the other and vice versa.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#equivalentClass",
+  "rdfs:seeAlso": [
+    "urn:solid:Class",
+    "urn:solid:subClassOf",
+    "urn:solid:sameAs",
+    "urn:solid:equivalentProperty"
+  ],
+  "rdfs:domain": "urn:solid:Class",
+  "rdfs:range": "urn:solid:Class",
+  "notToBeConfusedWith": [
+    "urn:solid:sameAs",
+    "urn:solid:subClassOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Stronger than mutual `subClassOf` — `equivalentClass` is two-way subclass, but as a single assertion it makes the equivalence explicit for reasoners. Distinct from `owl:sameAs`, which equates *individuals*. Use to bridge two parallel class hierarchies (e.g. `foaf:Person` and `schema:Person`).",
+  "examples": [
+    {
+      "title": "Two upstream Person classes equated",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "http://xmlns.com/foaf/0.1/Person",
+        "urn:solid:equivalentClass": { "@id": "https://schema.org/Person" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#equivalentClass"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

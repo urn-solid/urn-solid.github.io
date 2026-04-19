@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:IntransitiveActivity",
+  "@type": "rdfs:Class",
+  "rdfs:label": "IntransitiveActivity",
+  "rdfs:comment": "An ActivityStreams Activity that has no direct object — the actor performs the verb without acting upon a specific thing (Travel, Move, Arrive).",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#IntransitiveActivity",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:Travel",
+    "urn:solid:Move",
+    "urn:solid:Arrive"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The grammatical analogue of intransitive verbs in language: \"Alice walked\" doesn't take an object the way \"Alice liked X\" does. AS supplies subclasses (`Travel`, `Move`, `Arrive`); custom intransitive activities subclass this directly. `as:object` is omitted; `as:origin` and `as:target` typically substitute.",
+  "examples": [
+    {
+      "title": "A simple Travel activity (no @object)",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/activities/walk-1",
+        "@type": "urn:solid:IntransitiveActivity",
+        "urn:solid:actor": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#IntransitiveActivity"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
