@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:describes",
+  "@type": "rdf:Property",
+  "rdfs:label": "describes",
+  "rdfs:comment": "The Object that an ActivityStreams Profile is about — links a profile-style description to its subject.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#describes",
+  "rdfs:seeAlso": [
+    "urn:solid:Profile",
+    "urn:solid:Object",
+    "urn:solid:Actor"
+  ],
+  "rdfs:domain": "urn:solid:Profile",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Reciprocal of the conceptual \"profile of\" relationship: a Profile uses `as:describes` to point at the entity it documents. Lets descriptive payloads (long bios, alternate display variants) live as separate, fetchable Objects without polluting the subject's primary record.",
+  "examples": [
+    {
+      "title": "A Profile describing an Actor",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/about",
+        "@type": "urn:solid:Profile",
+        "urn:solid:describes": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#describes"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

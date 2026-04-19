@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:formerType — urn-solid</title>
+<meta name="description" content="On an ActivityStreams Tombstone, the type the deleted Object had before it was removed — preserves enough metadata for clients to know what they lost.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/formerType/">
+<link rel="alternate" type="application/ld+json" href="/formerType/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:formerType",
+  "@type": "rdf:Property",
+  "rdfs:label": "formerType",
+  "rdfs:comment": "On an ActivityStreams Tombstone, the type the deleted Object had before it was removed — preserves enough metadata for clients to know what they lost.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#formerType",
+  "rdfs:seeAlso": [
+    "urn:solid:Tombstone",
+    "urn:solid:deleted"
+  ],
+  "rdfs:domain": "urn:solid:Tombstone",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "After deletion, the Tombstone replaces the original Object at its URL. `as:formerType` records what `@type` it used to have (a `Note`, an `Image`, an `Article`); `as:deleted` records when. Together they let renderers display \"a deleted Note\" rather than just an opaque hole.",
+  "examples": [
+    {
+      "title": "A Tombstone for a deleted Note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/old",
+        "@type": "urn:solid:Tombstone",
+        "urn:solid:formerType": { "@id": "http://www.w3.org/ns/activitystreams#Note" },
+        "urn:solid:deleted": { "@value": "2026-04-15T00:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#formerType"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

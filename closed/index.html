@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:closed — urn-solid</title>
+<meta name="description" content="Indicates that an ActivityStreams Question is closed — no further responses are accepted. The value may be a date-time, a boolean, or an Object describing how it was closed.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/closed/">
+<link rel="alternate" type="application/ld+json" href="/closed/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:closed",
+  "@type": "rdf:Property",
+  "rdfs:label": "closed",
+  "rdfs:comment": "Indicates that an ActivityStreams Question is closed — no further responses are accepted. The value may be a date-time, a boolean, or an Object describing how it was closed.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#closed",
+  "rdfs:seeAlso": [
+    "urn:solid:Question",
+    "urn:solid:oneOf",
+    "urn:solid:anyOf",
+    "urn:solid:endTime"
+  ],
+  "rdfs:domain": "urn:solid:Question",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Most often a `xsd:dateTime` carrying the close timestamp — clients render \"poll ended at …\" and stop accepting votes. The boolean form simply marks the Question closed without a time. Some servers also accept an Object value pointing at the activity that closed the poll.",
+  "examples": [
+    {
+      "title": "A Question with an explicit close time",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/polls/1",
+        "@type": "urn:solid:Question",
+        "urn:solid:content": "Tea or coffee?",
+        "urn:solid:closed": { "@value": "2026-04-19T18:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#closed"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

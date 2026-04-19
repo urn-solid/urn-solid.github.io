@@ -1,0 +1,55 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:oneOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "oneOf",
+  "rdfs:comment": "On an ActivityStreams Question, the exclusive set of answer choices — voters pick exactly one.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#oneOf",
+  "rdfs:seeAlso": [
+    "urn:solid:Question",
+    "urn:solid:anyOf",
+    "urn:solid:closed"
+  ],
+  "rdfs:domain": "urn:solid:Question",
+  "notToBeConfusedWith": [
+    "urn:solid:anyOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use exactly one of `oneOf` (single-choice poll) or `anyOf` (multiple-select poll) on a Question — never both. Each option is typically a `Note` whose `name` carries the displayed text; `replies.totalItems` is then the vote count for that option.",
+  "examples": [
+    {
+      "title": "Single-choice Question",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/polls/1",
+        "@type": "urn:solid:Question",
+        "urn:solid:content": "Pick one:",
+        "urn:solid:oneOf": [
+          { "@type": "urn:solid:Note", "urn:solid:name": "Tea" },
+          { "@type": "urn:solid:Note", "urn:solid:name": "Coffee" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#oneOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

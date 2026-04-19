@@ -1133,6 +1133,13 @@
     "status": "stable",
     "path": "/anniversary/"
   },
+  "urn:solid:anyOf": {
+    "label": "anyOf",
+    "description": "On an ActivityStreams Question, the inclusive set of answer choices — voters may pick any number.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/anyOf/"
+  },
   "urn:solid:articleBody": {
     "label": "articleBody",
     "description": "The actual body of the article — its full text content.",
@@ -1273,6 +1280,13 @@
     "status": "stable",
     "path": "/closeMatch/"
   },
+  "urn:solid:closed": {
+    "label": "closed",
+    "description": "Indicates that an ActivityStreams Question is closed — no further responses are accepted. The value may be a date-time, a boolean, or an Object describing how it was closed.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/closed/"
+  },
   "urn:solid:conformsTo": {
     "label": "conformsTo",
     "description": "An established standard or specification to which the resource conforms.",
@@ -1412,6 +1426,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/depiction/"
+  },
+  "urn:solid:describes": {
+    "label": "describes",
+    "description": "The Object that an ActivityStreams Profile is about — links a profile-style description to its subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/describes/"
   },
   "urn:solid:description": {
     "label": "description",
@@ -1559,6 +1580,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/format/"
+  },
+  "urn:solid:formerType": {
+    "label": "formerType",
+    "description": "On an ActivityStreams Tombstone, the type the deleted Object had before it was removed — preserves enough metadata for clients to know what they lost.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/formerType/"
   },
   "urn:solid:gender": {
     "label": "gender",
@@ -2329,6 +2357,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/oidcIssuer/"
+  },
+  "urn:solid:oneOf": {
+    "label": "oneOf",
+    "description": "On an ActivityStreams Question, the exclusive set of answer choices — voters pick exactly one.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/oneOf/"
   },
   "urn:solid:openid": {
     "label": "openid",
