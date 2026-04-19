@@ -1056,6 +1056,13 @@
     "status": "stable",
     "path": "/Tombstone/"
   },
+  "urn:solid:Tracker": {
+    "label": "Tracker",
+    "description": "A container for tracking work items — typically a list of iCalendar Vtodos. The list-level counterpart to single-task Vtodo.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Tracker/"
+  },
   "urn:solid:TransitiveProperty": {
     "label": "TransitiveProperty",
     "description": "An OWL property whose closure is the property itself — if `A p B` and `B p C`, then `A p C`.",

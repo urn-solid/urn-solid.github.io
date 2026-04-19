@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Tracker",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Tracker",
+  "rdfs:comment": "A container for tracking work items — typically a list of iCalendar Vtodos. The list-level counterpart to single-task Vtodo.",
+  "owl:sameAs": "http://www.w3.org/2005/01/wf/flow#Tracker",
+  "rdfs:seeAlso": [
+    "urn:solid:Vtodo",
+    "urn:solid:Vcalendar"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Vtodo"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "From the W3C Workflow vocabulary (`wf:`). A Tracker bundles many Vtodos (issues) into a single addressable resource — the right level for list views (\"my tasks\", \"team backlog\") whereas Vtodo is the right level for editing a single task. LOSOS's bespoke `todo-pane.js` is registered against Tracker, not Vtodo, for exactly this reason.",
+  "examples": [
+    {
+      "title": "A Tracker with two tasks",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/today",
+        "@type": "urn:solid:Tracker",
+        "urn:solid:title": "Today",
+        "urn:solid:initialState": "NEEDS-ACTION",
+        "http://www.w3.org/2005/01/wf/flow#issue": [
+          { "@id": "#1", "@type": "urn:solid:Vtodo", "urn:solid:summary": "Ship the demo" },
+          { "@id": "#2", "@type": "urn:solid:Vtodo", "urn:solid:summary": "Email Tim" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2005/01/wf/flow#Tracker"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term — added so a Tracker resource can register a bespoke pane (LOSOS todo-pane) at the right granularity."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

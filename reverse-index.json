@@ -150,6 +150,7 @@
   "http://www.w3.org/ns/activitystreams#TentativeReject": "urn:solid:TentativeReject",
   "http://www.w3.org/2002/07/owl#Thing": "urn:solid:Thing",
   "https://www.w3.org/ns/activitystreams#Tombstone": "urn:solid:Tombstone",
+  "http://www.w3.org/2005/01/wf/flow#Tracker": "urn:solid:Tracker",
   "http://www.w3.org/2002/07/owl#TransitiveProperty": "urn:solid:TransitiveProperty",
   "http://www.w3.org/ns/activitystreams#Travel": "urn:solid:Travel",
   "http://www.w3.org/ns/solid/terms#TypeIndex": "urn:solid:TypeIndex",
