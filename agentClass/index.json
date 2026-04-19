@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:agentClass",
+  "@type": "rdf:Property",
+  "rdfs:label": "agentClass",
+  "rdfs:comment": "A class of agents (e.g. `foaf:Agent` for everyone, `acl:AuthenticatedAgent` for any logged-in user) granted access by an Authorization.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#agentClass",
+  "rdfs:seeAlso": [
+    "urn:solid:Authorization",
+    "urn:solid:agent",
+    "urn:solid:agentGroup",
+    "urn:solid:mode"
+  ],
+  "rdfs:domain": "urn:solid:Authorization",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Two well-known values: `foaf:Agent` makes the resource public (anyone, even unauthenticated); `acl:AuthenticatedAgent` requires the requester to be logged in but accepts any WebID. Use sparingly — public Read on `foaf:Agent` is a common, intentional pattern; public Write almost never is.",
+  "examples": [
+    {
+      "title": "Public-read Authorization via agentClass",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/blog/.acl#public",
+        "@type": "urn:solid:Authorization",
+        "http://www.w3.org/ns/auth/acl#agentClass": { "@id": "http://xmlns.com/foaf/0.1/Agent" },
+        "http://www.w3.org/ns/auth/acl#accessTo": { "@id": "https://alice.example.org/blog/" },
+        "urn:solid:mode": { "@id": "http://www.w3.org/ns/auth/acl#Read" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#agentClass"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

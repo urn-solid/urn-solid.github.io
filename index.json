@@ -230,6 +230,13 @@
     "status": "stable",
     "path": "/Container/"
   },
+  "urn:solid:Control": {
+    "label": "Control",
+    "description": "The WAC Control access mode — meta-permission to read and modify the Authorization (`.acl`) file itself.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Control/"
+  },
   "urn:solid:Country": {
     "label": "Country",
     "description": "A country — a sovereign nation-state or territory.",
@@ -944,6 +951,13 @@
     "status": "stable",
     "path": "/accessRights/"
   },
+  "urn:solid:accessTo": {
+    "label": "accessTo",
+    "description": "The resource that an Authorization grants access to.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/accessTo/"
+  },
   "urn:solid:accessURL": {
     "label": "accessURL",
     "description": "A URL where the resources of a DCAT Distribution can be accessed — a landing page, API entry point, or query interface.",
@@ -999,6 +1013,20 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/age/"
+  },
+  "urn:solid:agentClass": {
+    "label": "agentClass",
+    "description": "A class of agents (e.g. `foaf:Agent` for everyone, `acl:AuthenticatedAgent` for any logged-in user) granted access by an Authorization.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/agentClass/"
+  },
+  "urn:solid:agentGroup": {
+    "label": "agentGroup",
+    "description": "A group of agents (a `vcard:Group` resource listing members by WebID) granted access by an Authorization.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/agentGroup/"
   },
   "urn:solid:altLabel": {
     "label": "altLabel",
@@ -1279,6 +1307,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/dateSubmitted/"
+  },
+  "urn:solid:default": {
+    "label": "default",
+    "description": "Marks an Authorization as the default access policy inherited by descendants of a Container.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/default/"
   },
   "urn:solid:definition": {
     "label": "definition",

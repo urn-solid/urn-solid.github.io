@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:default — urn-solid</title>
+<meta name="description" content="Marks an Authorization as the default access policy inherited by descendants of a Container.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/default/">
+<link rel="alternate" type="application/ld+json" href="/default/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:default",
+  "@type": "rdf:Property",
+  "rdfs:label": "default",
+  "rdfs:comment": "Marks an Authorization as the default access policy inherited by descendants of a Container.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#default",
+  "rdfs:seeAlso": [
+    "urn:solid:Authorization",
+    "urn:solid:accessTo",
+    "urn:solid:Container",
+    "urn:solid:mode"
+  ],
+  "rdfs:domain": "urn:solid:Authorization",
+  "notToBeConfusedWith": [
+    "urn:solid:accessTo"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Value is a Container URI. The Authorization then applies — by inheritance — to every resource inside that Container (recursively) which does not have its own ACL. Replaces the older `acl:defaultForNew`. Without `default`, an Authorization on a Container governs only the Container resource itself, not its members.",
+  "examples": [
+    {
+      "title": "Authorization that grants Read by default to a subtree",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/photos/.acl#public-default",
+        "@type": "urn:solid:Authorization",
+        "http://www.w3.org/ns/auth/acl#agentClass": { "@id": "http://xmlns.com/foaf/0.1/Agent" },
+        "http://www.w3.org/ns/auth/acl#default": { "@id": "https://alice.example.org/photos/" },
+        "urn:solid:mode": { "@id": "http://www.w3.org/ns/auth/acl#Read" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#default"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

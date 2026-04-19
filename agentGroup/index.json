@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:agentGroup",
+  "@type": "rdf:Property",
+  "rdfs:label": "agentGroup",
+  "rdfs:comment": "A group of agents (a `vcard:Group` resource listing members by WebID) granted access by an Authorization.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#agentGroup",
+  "rdfs:seeAlso": [
+    "urn:solid:Authorization",
+    "urn:solid:agent",
+    "urn:solid:agentClass",
+    "urn:solid:mode"
+  ],
+  "rdfs:domain": "urn:solid:Authorization",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The value points to a Group resource — typically a `vcard:Group` with `vcard:hasMember` triples listing WebIDs. The server dereferences the group to evaluate membership at request time. Lets you manage access by editing the group rather than every .acl file.",
+  "examples": [
+    {
+      "title": "Authorization granting access to a friends group",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/photos/.acl#friends",
+        "@type": "urn:solid:Authorization",
+        "http://www.w3.org/ns/auth/acl#agentGroup": { "@id": "https://alice.example.org/groups/friends#group" },
+        "http://www.w3.org/ns/auth/acl#accessTo": { "@id": "https://alice.example.org/photos/" },
+        "urn:solid:mode": { "@id": "http://www.w3.org/ns/auth/acl#Read" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#agentGroup"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:accessTo",
+  "@type": "rdf:Property",
+  "rdfs:label": "accessTo",
+  "rdfs:comment": "The resource that an Authorization grants access to.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#accessTo",
+  "rdfs:seeAlso": [
+    "urn:solid:Authorization",
+    "urn:solid:default",
+    "urn:solid:mode"
+  ],
+  "rdfs:domain": "urn:solid:Authorization",
+  "notToBeConfusedWith": [
+    "urn:solid:default"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Names the *specific* resource the Authorization applies to. Compare with `acl:default`, which makes the Authorization inherit-by-default to children of a Container. Most Authorizations carry both: `accessTo` for the Container itself and `default` for its descendants.",
+  "examples": [
+    {
+      "title": "Authorization scoped to a single resource",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/.acl#alice",
+        "@type": "urn:solid:Authorization",
+        "http://www.w3.org/ns/auth/acl#agent": { "@id": "https://alice.example.org/profile/card#me" },
+        "http://www.w3.org/ns/auth/acl#accessTo": { "@id": "https://alice.example.org/notes/" },
+        "urn:solid:mode": [
+          { "@id": "http://www.w3.org/ns/auth/acl#Read" },
+          { "@id": "http://www.w3.org/ns/auth/acl#Write" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#accessTo"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

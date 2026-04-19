@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Control — urn-solid</title>
+<meta name="description" content="The WAC Control access mode — meta-permission to read and modify the Authorization (`.acl`) file itself.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Control/">
+<link rel="alternate" type="application/ld+json" href="/Control/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Control",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Control",
+  "rdfs:comment": "The WAC Control access mode — meta-permission to read and modify the Authorization (`.acl`) file itself.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#Control",
+  "rdfs:seeAlso": [
+    "urn:solid:Read",
+    "urn:solid:Write",
+    "urn:solid:Append",
+    "urn:solid:mode",
+    "urn:solid:Authorization"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from Read/Write/Append on the resource itself: Control governs *who can change the access rules*. Pod owners always have Control on their root; granting it to others delegates permission management. Treat as the most sensitive ACL mode.",
+  "examples": [
+    {
+      "title": "Owner Authorization with Control",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/.acl#owner",
+        "@type": "urn:solid:Authorization",
+        "http://www.w3.org/ns/auth/acl#agent": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:mode": [
+          { "@id": "http://www.w3.org/ns/auth/acl#Read" },
+          { "@id": "http://www.w3.org/ns/auth/acl#Write" },
+          { "@id": "http://www.w3.org/ns/auth/acl#Control" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#Control"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
