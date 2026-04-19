@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:VerifiableCredential",
+  "@type": "rdfs:Class",
+  "rdfs:label": "VerifiableCredential",
+  "rdfs:comment": "A W3C Verifiable Credential — a tamper-evident, cryptographically-signed claim made by an issuer about a subject.",
+  "owl:sameAs": "https://www.w3.org/2018/credentials#VerifiableCredential",
+  "rdfs:seeAlso": [
+    "urn:solid:VerifiablePresentation",
+    "urn:solid:credentialSubject",
+    "urn:solid:issuer",
+    "urn:solid:proof"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The standard envelope for portable, signed claims (a driver's licence, a degree, a membership). Carries `issuer`, `credentialSubject`, dates, and a cryptographic `proof`. Self-contained and verifiable offline by anyone with the issuer's public key — does not require contacting the issuer at verification time.",
+  "examples": [
+    {
+      "title": "A minimal VerifiableCredential",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/credentials/3732",
+        "@type": "urn:solid:VerifiableCredential",
+        "urn:solid:issuer": { "@id": "https://example.edu/issuers/14" },
+        "urn:solid:issuanceDate": { "@value": "2026-04-19T00:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+        "urn:solid:credentialSubject": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/2018/credentials#VerifiableCredential"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

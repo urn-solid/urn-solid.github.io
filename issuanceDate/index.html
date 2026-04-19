@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:issuanceDate — urn-solid</title>
+<meta name="description" content="The date-time at which a VerifiableCredential was issued — the credential is not considered valid before this instant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/issuanceDate/">
+<link rel="alternate" type="application/ld+json" href="/issuanceDate/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:issuanceDate",
+  "@type": "rdf:Property",
+  "rdfs:label": "issuanceDate",
+  "rdfs:comment": "The date-time at which a VerifiableCredential was issued — the credential is not considered valid before this instant.",
+  "owl:sameAs": "https://www.w3.org/2018/credentials#issuanceDate",
+  "rdfs:seeAlso": [
+    "urn:solid:VerifiableCredential",
+    "urn:solid:expirationDate",
+    "urn:solid:issuer"
+  ],
+  "rdfs:domain": "urn:solid:VerifiableCredential",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "notToBeConfusedWith": [
+    "urn:solid:expirationDate"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Distinct from `dcterms:created` and `dcterms:issued` — `issuanceDate` carries the same semantics but lives in the VC namespace so verifiers and standard libraries find it where they expect. Required on every VC. Note: VC 2.0 renames this to `validFrom`; both forms are seen in the wild.",
+  "examples": [
+    {
+      "title": "Credential with an issuance date",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/credentials/3732",
+        "@type": "urn:solid:VerifiableCredential",
+        "urn:solid:issuanceDate": { "@value": "2026-04-19T10:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/2018/credentials#issuanceDate"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

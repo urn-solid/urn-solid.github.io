@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:issuer",
+  "@type": "rdf:Property",
+  "rdfs:label": "issuer",
+  "rdfs:comment": "The Actor that issued a VerifiableCredential — the party whose key signed the cryptographic proof and whose authority backs the claim.",
+  "owl:sameAs": "https://www.w3.org/2018/credentials#issuer",
+  "rdfs:seeAlso": [
+    "urn:solid:VerifiableCredential",
+    "urn:solid:credentialSubject",
+    "urn:solid:proof"
+  ],
+  "rdfs:domain": "urn:solid:VerifiableCredential",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Either a string IRI or an Object carrying additional issuer metadata (name, image, URL). The issuer's public key — discoverable from this IRI — is what the credential's `proof` is verified against. Without a resolvable issuer, a credential cannot be verified.",
+  "examples": [
+    {
+      "title": "A credential with a structured issuer",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/credentials/3732",
+        "@type": "urn:solid:VerifiableCredential",
+        "urn:solid:issuer": {
+          "@id": "https://example.edu/issuers/14",
+          "urn:solid:name": "Example University Registrar"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/2018/credentials#issuer"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

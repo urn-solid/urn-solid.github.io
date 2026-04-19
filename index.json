@@ -1091,6 +1091,20 @@
     "status": "stable",
     "path": "/VCard/"
   },
+  "urn:solid:VerifiableCredential": {
+    "label": "VerifiableCredential",
+    "description": "A W3C Verifiable Credential — a tamper-evident, cryptographically-signed claim made by an issuer about a subject.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/VerifiableCredential/"
+  },
+  "urn:solid:VerifiablePresentation": {
+    "label": "VerifiablePresentation",
+    "description": "A W3C Verifiable Presentation — a holder-signed bundle of one or more VerifiableCredentials, prepared for a specific verifier.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/VerifiablePresentation/"
+  },
   "urn:solid:Video": {
     "label": "Video",
     "description": "A video resource — used in ActivityPub for video attachments and stand-alone video posts.",
@@ -1524,6 +1538,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/creator/"
+  },
+  "urn:solid:credentialSubject": {
+    "label": "credentialSubject",
+    "description": "The entity that a VerifiableCredential makes claims about — most often an Actor identified by a DID or WebID.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/credentialSubject/"
   },
   "urn:solid:current": {
     "label": "current",
@@ -2393,12 +2414,26 @@
     "status": "stable",
     "path": "/isVersionOf/"
   },
+  "urn:solid:issuanceDate": {
+    "label": "issuanceDate",
+    "description": "The date-time at which a VerifiableCredential was issued — the credential is not considered valid before this instant.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/issuanceDate/"
+  },
   "urn:solid:issued": {
     "label": "issued",
     "description": "The date the resource was formally issued or published.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/issued/"
+  },
+  "urn:solid:issuer": {
+    "label": "issuer",
+    "description": "The Actor that issued a VerifiableCredential — the party whose key signed the cryptographic proof and whose authority backs the claim.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/issuer/"
   },
   "urn:solid:items": {
     "label": "items",

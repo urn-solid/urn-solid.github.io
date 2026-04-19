@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:VerifiablePresentation — urn-solid</title>
+<meta name="description" content="A W3C Verifiable Presentation — a holder-signed bundle of one or more VerifiableCredentials, prepared for a specific verifier.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/VerifiablePresentation/">
+<link rel="alternate" type="application/ld+json" href="/VerifiablePresentation/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:VerifiablePresentation",
+  "@type": "rdfs:Class",
+  "rdfs:label": "VerifiablePresentation",
+  "rdfs:comment": "A W3C Verifiable Presentation — a holder-signed bundle of one or more VerifiableCredentials, prepared for a specific verifier.",
+  "owl:sameAs": "https://www.w3.org/2018/credentials#VerifiablePresentation",
+  "rdfs:seeAlso": [
+    "urn:solid:VerifiableCredential",
+    "urn:solid:holder",
+    "urn:solid:proof"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Wraps Credentials so the holder can prove they currently possess them, often binding the bundle to a specific challenge (nonce + verifier identity) for replay protection. The holder's `proof` is added on top of the issuer's `proof` on each contained Credential — both must verify.",
+  "examples": [
+    {
+      "title": "A presentation containing one credential",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:VerifiablePresentation",
+        "urn:solid:holder": { "@id": "https://alice.example.org/profile/card#me" },
+        "https://www.w3.org/2018/credentials#verifiableCredential": { "@id": "https://example.org/credentials/3732" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/2018/credentials#VerifiablePresentation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
