@@ -188,6 +188,13 @@
     "status": "stable",
     "path": "/Collection/"
   },
+  "urn:solid:CollectionPage": {
+    "label": "CollectionPage",
+    "description": "A single page of an ActivityStreams Collection — a slice of the members, plus pagination links back to the parent and to neighbouring pages.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/CollectionPage/"
+  },
   "urn:solid:CollegeOrUniversity": {
     "label": "CollegeOrUniversity",
     "description": "A college, university, or other institution of higher education.",
@@ -510,6 +517,13 @@
     "status": "stable",
     "path": "/LinguisticSystem/"
   },
+  "urn:solid:Link": {
+    "label": "Link",
+    "description": "An ActivityStreams Link — a typed, qualified pointer to a resource. Distinct from a plain URL string in that a Link can carry rel, hreflang, mediaType, dimensions, and a name.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Link/"
+  },
   "urn:solid:ListItem": {
     "label": "ListItem",
     "description": "An entry in a schema.org ItemList — wraps the item with positional metadata.",
@@ -635,6 +649,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/OrderedCollection/"
+  },
+  "urn:solid:OrderedCollectionPage": {
+    "label": "OrderedCollectionPage",
+    "description": "A single page of an ActivityStreams OrderedCollection — the ordered analogue of CollectionPage, with members in `as:orderedItems` rather than `as:items`.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/OrderedCollectionPage/"
   },
   "urn:solid:Organization": {
     "label": "Organization",
@@ -1125,6 +1146,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/agentGroup/"
+  },
+  "urn:solid:alsoKnownAs": {
+    "label": "alsoKnownAs",
+    "description": "An alternate identifier for an ActivityStreams Object — typically a previous identity an Actor used before migrating servers, kept as a back-reference so old followers can find them.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/alsoKnownAs/"
   },
   "urn:solid:altLabel": {
     "label": "altLabel",
@@ -2336,6 +2364,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/maker/"
+  },
+  "urn:solid:mappingRelation": {
+    "label": "mappingRelation",
+    "description": "Superproperty of all SKOS cross-scheme mapping relations — `exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch`. Asserts that two Concepts in different schemes are related, without specifying how.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/mappingRelation/"
   },
   "urn:solid:mbox": {
     "label": "mbox",

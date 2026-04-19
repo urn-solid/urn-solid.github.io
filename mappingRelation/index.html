@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:mappingRelation — urn-solid</title>
+<meta name="description" content="Superproperty of all SKOS cross-scheme mapping relations — `exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch`. Asserts that two Concepts in different schemes are related, without specifying how.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/mappingRelation/">
+<link rel="alternate" type="application/ld+json" href="/mappingRelation/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:mappingRelation",
+  "@type": "rdf:Property",
+  "rdfs:label": "mappingRelation",
+  "rdfs:comment": "Superproperty of all SKOS cross-scheme mapping relations — `exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch`. Asserts that two Concepts in different schemes are related, without specifying how.",
+  "owl:sameAs": "http://www.w3.org/2004/02/skos/core#mappingRelation",
+  "rdfs:seeAlso": [
+    "urn:solid:Concept",
+    "urn:solid:exactMatch",
+    "urn:solid:closeMatch",
+    "urn:solid:broadMatch",
+    "urn:solid:narrowMatch",
+    "urn:solid:semanticRelation"
+  ],
+  "rdfs:domain": "urn:solid:Concept",
+  "rdfs:range": "urn:solid:Concept",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Use the most specific subproperty available — bare `mappingRelation` only when the kind of mapping is genuinely unknown. Distinct from `skos:semanticRelation` (which covers in-scheme relations like `broader`/`narrower`); mappingRelations cross scheme boundaries.",
+  "examples": [
+    {
+      "title": "A generic mapping between two concepts",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/scheme-a/mathematics",
+        "@type": "urn:solid:Concept",
+        "urn:solid:mappingRelation": { "@id": "https://example.org/scheme-b/mathematics" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2004/02/skos/core#mappingRelation"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

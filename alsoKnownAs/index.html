@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:alsoKnownAs — urn-solid</title>
+<meta name="description" content="An alternate identifier for an ActivityStreams Object — typically a previous identity an Actor used before migrating servers, kept as a back-reference so old followers can find them.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/alsoKnownAs/">
+<link rel="alternate" type="application/ld+json" href="/alsoKnownAs/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:alsoKnownAs",
+  "@type": "rdf:Property",
+  "rdfs:label": "alsoKnownAs",
+  "rdfs:comment": "An alternate identifier for an ActivityStreams Object — typically a previous identity an Actor used before migrating servers, kept as a back-reference so old followers can find them.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#alsoKnownAs",
+  "rdfs:seeAlso": [
+    "urn:solid:Actor",
+    "urn:solid:movedTo",
+    "urn:solid:Move"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Standard fediverse-account-migration pattern: when an Actor moves servers, the *new* account lists the old one in `as:alsoKnownAs`, and the *old* account points at the new with `as:movedTo`. Together they make migration lossless — followers can verify the new identity is authorised by the old one.",
+  "examples": [
+    {
+      "title": "A migrated Actor pointing back at the old identity",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://newserver.example.org/users/alice",
+        "@type": "urn:solid:Person",
+        "urn:solid:alsoKnownAs": [
+          { "@id": "https://oldserver.example.org/users/alice" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#alsoKnownAs"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

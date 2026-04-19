@@ -1,0 +1,52 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:CollectionPage",
+  "@type": "rdfs:Class",
+  "rdfs:label": "CollectionPage",
+  "rdfs:comment": "A single page of an ActivityStreams Collection — a slice of the members, plus pagination links back to the parent and to neighbouring pages.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#CollectionPage",
+  "rdfs:seeAlso": [
+    "urn:solid:Collection",
+    "urn:solid:OrderedCollectionPage",
+    "urn:solid:partOf",
+    "urn:solid:items",
+    "urn:solid:next",
+    "urn:solid:prev"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Used to chunk large unordered Collections (followers, likes, members). Each CollectionPage carries `as:partOf` (the parent Collection), `as:items` (this slice), and `as:next`/`as:prev` for navigation. For ordered collections, use `OrderedCollectionPage` instead so `orderedItems` carries semantically-meaningful order.",
+  "examples": [
+    {
+      "title": "A CollectionPage in a pagination chain",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/followers?page=2",
+        "@type": "urn:solid:CollectionPage",
+        "urn:solid:partOf": { "@id": "https://alice.example.org/followers" },
+        "urn:solid:next": { "@id": "https://alice.example.org/followers?page=3" },
+        "urn:solid:prev": { "@id": "https://alice.example.org/followers?page=1" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#CollectionPage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Link",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Link",
+  "rdfs:comment": "An ActivityStreams Link — a typed, qualified pointer to a resource. Distinct from a plain URL string in that a Link can carry rel, hreflang, mediaType, dimensions, and a name.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Link",
+  "rdfs:seeAlso": [
+    "urn:solid:Object",
+    "urn:solid:href",
+    "urn:solid:rel",
+    "urn:solid:hreflang",
+    "urn:solid:Mention",
+    "urn:solid:Hashtag"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Object"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Sibling of `as:Object`, not a subclass — the AS data model has Objects (things) and Links (references to things). Use Link when you need to attach metadata to the *reference* (e.g. \"this is the canonical alternate, in French, video/mp4\") rather than to the target. `Mention` and `Hashtag` are specialised Link subclasses.",
+  "examples": [
+    {
+      "title": "A typed Link with metadata",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Link",
+        "urn:solid:href": { "@id": "https://example.org/article/42.fr" },
+        "urn:solid:rel": "alternate",
+        "urn:solid:hreflang": "fr",
+        "urn:solid:mediaType": "text/html"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#Link"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
