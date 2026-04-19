@@ -384,6 +384,13 @@
     "status": "stable",
     "path": "/FileFormat/"
   },
+  "urn:solid:Flag": {
+    "label": "Flag",
+    "description": "An ActivityStreams Activity indicating that the actor is reporting the object as objectionable — the standard fediverse content-moderation primitive.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Flag/"
+  },
   "urn:solid:Follow": {
     "label": "Follow",
     "description": "An indication that the actor wants to follow the object — typically another Actor.",
@@ -439,6 +446,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/HowTo/"
+  },
+  "urn:solid:Ignore": {
+    "label": "Ignore",
+    "description": "An ActivityStreams Activity indicating that the actor is silently disregarding the object — a soft mute, distinct from Block.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Ignore/"
   },
   "urn:solid:Image": {
     "label": "Image",
@@ -1931,6 +1945,13 @@
     "status": "stable",
     "path": "/hasRelated/"
   },
+  "urn:solid:hasSound": {
+    "label": "hasSound",
+    "description": "A vCard's URL pointing at an audio recording — typically a pronunciation of the name or a personal voice intro.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hasSound/"
+  },
   "urn:solid:hasSource": {
     "label": "hasSource",
     "description": "A source document for the vCard's information — typically a website or directory the data came from.",
@@ -2561,6 +2582,13 @@
     "status": "stable",
     "path": "/organization-name/"
   },
+  "urn:solid:origin": {
+    "label": "origin",
+    "description": "Where an ActivityStreams Activity comes *from* — the source side of a movement, transfer, or invitation, complementing `as:target` (the destination).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/origin/"
+  },
   "urn:solid:outbox": {
     "label": "outbox",
     "description": "The OrderedCollection of Activities an ActivityPub Actor has published — POSTing to it is how the Actor sends new Activities to the network.",
@@ -3113,6 +3141,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/totalItems/"
+  },
+  "urn:solid:trustedApp": {
+    "label": "trustedApp",
+    "description": "On a Solid pod owner's profile, an application origin granted broad trust — typically permitted to read or write across the pod without per-resource ACL grants.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/trustedApp/"
   },
   "urn:solid:unitOf": {
     "label": "unitOf",

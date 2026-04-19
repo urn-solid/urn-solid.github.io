@@ -1,0 +1,53 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Flag",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Flag",
+  "rdfs:comment": "An ActivityStreams Activity indicating that the actor is reporting the object as objectionable — the standard fediverse content-moderation primitive.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Flag",
+  "rdfs:seeAlso": [
+    "urn:solid:Block",
+    "urn:solid:Ignore",
+    "urn:solid:Reject"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Block",
+    "urn:solid:Ignore"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "How users report posts/accounts to moderators. Distinct from `Block` (the actor cuts off the target for themselves) and `Ignore` (the actor mutes content without action) — `Flag` is escalation, asking someone with authority to act. Most fediverse servers route Flag activities to the moderation queue.",
+  "examples": [
+    {
+      "title": "Reporting a Note for moderation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/activities/flag-1",
+        "@type": "urn:solid:Flag",
+        "urn:solid:actor": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:object": { "@id": "https://example.org/notes/spam-123" },
+        "urn:solid:content": "Spam advertising"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#Flag"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

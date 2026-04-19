@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:origin",
+  "@type": "rdf:Property",
+  "rdfs:label": "origin",
+  "rdfs:comment": "Where an ActivityStreams Activity comes *from* — the source side of a movement, transfer, or invitation, complementing `as:target` (the destination).",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#origin",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:target",
+    "urn:solid:Move",
+    "urn:solid:Travel"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "notToBeConfusedWith": [
+    "urn:solid:target"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Used most often with `Move`, `Travel`, `Add`, and `Remove` — together with `target` it forms the source-and-destination pair. `Move` an item from `origin` to `target`; `Travel` from `origin` to `target`. Distinct from `as:actor` (who did it) and `as:object` (what was acted on).",
+  "examples": [
+    {
+      "title": "Moving a Note between collections",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/activities/move-1",
+        "@type": "urn:solid:Move",
+        "urn:solid:object": { "@id": "https://alice.example.org/notes/3" },
+        "urn:solid:origin": { "@id": "https://alice.example.org/drafts" },
+        "urn:solid:target": { "@id": "https://alice.example.org/published" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#origin"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

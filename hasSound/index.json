@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hasSound",
+  "@type": "rdf:Property",
+  "rdfs:label": "hasSound",
+  "rdfs:comment": "A vCard's URL pointing at an audio recording — typically a pronunciation of the name or a personal voice intro.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasSound",
+  "rdfs:seeAlso": [
+    "urn:solid:VCard",
+    "urn:solid:hasPhoto",
+    "urn:solid:hasName"
+  ],
+  "rdfs:domain": "urn:solid:VCard",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Carried over from RFC 6350 (vCard 4.0) — primarily used for name-pronunciation clips so callers say the name correctly. Niche today; mainstream contact apps mostly ignore it. Modern equivalent is a Profile-attached `as:Audio` Object.",
+  "examples": [
+    {
+      "title": "A VCard with a pronunciation recording",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/vcard",
+        "@type": "urn:solid:VCard",
+        "urn:solid:hasSound": { "@id": "https://alice.example.org/profile/name-pronunciation.mp3" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#hasSound"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

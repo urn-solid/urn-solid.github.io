@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Ignore — urn-solid</title>
+<meta name="description" content="An ActivityStreams Activity indicating that the actor is silently disregarding the object — a soft mute, distinct from Block.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Ignore/">
+<link rel="alternate" type="application/ld+json" href="/Ignore/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Ignore",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Ignore",
+  "rdfs:comment": "An ActivityStreams Activity indicating that the actor is silently disregarding the object — a soft mute, distinct from Block.",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Ignore",
+  "rdfs:seeAlso": [
+    "urn:solid:Block",
+    "urn:solid:Flag",
+    "urn:solid:Reject"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Block",
+    "urn:solid:Reject"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Lighter-touch than `Block`: typically not federated to the target (the target shouldn't know they were ignored), and the relationship persists. Distinct from `Reject` (which actively declines a request) — `Ignore` is one-sided, internal to the actor.",
+  "examples": [
+    {
+      "title": "Ignoring a notification",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/activities/ignore-1",
+        "@type": "urn:solid:Ignore",
+        "urn:solid:actor": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:object": { "@id": "https://example.org/notifications/47" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#Ignore"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
