@@ -1161,6 +1161,13 @@
     "status": "stable",
     "path": "/View/"
   },
+  "urn:solid:Vjournal": {
+    "label": "Vjournal",
+    "description": "An iCalendar journal entry — a dated note, log entry, or diary item, used to record what happened (rather than what's scheduled).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Vjournal/"
+  },
   "urn:solid:Vtodo": {
     "label": "Vtodo",
     "description": "An iCalendar to-do item — a task that can be in progress, completed, or cancelled, with optional due dates.",
@@ -1399,6 +1406,13 @@
     "status": "stable",
     "path": "/attachment/"
   },
+  "urn:solid:attendee": {
+    "label": "attendee",
+    "description": "An iCalendar participant in a Vevent or Vtodo — typically an Actor invited to attend or asked to act.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/attendee/"
+  },
   "urn:solid:attributedTo": {
     "label": "attributedTo",
     "description": "An entity to which the object is attributed — typically the author or creator.",
@@ -1503,6 +1517,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/cardinality/"
+  },
+  "urn:solid:categories": {
+    "label": "categories",
+    "description": "iCalendar tags or categories for a Vevent/Vtodo — comma-separated keywords classifying the calendar item (\"work\", \"personal\", \"travel\").",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/categories/"
   },
   "urn:solid:cc": {
     "label": "cc",
@@ -2911,6 +2932,13 @@
     "status": "stable",
     "path": "/organization-name/"
   },
+  "urn:solid:organizer": {
+    "label": "organizer",
+    "description": "The Actor responsible for an iCalendar Vevent or Vtodo — the owner who scheduled it and who attendees reply to.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/organizer/"
+  },
   "urn:solid:origin": {
     "label": "origin",
     "description": "Where an ActivityStreams Activity comes *from* — the source side of a movement, transfer, or invitation, complementing `as:target` (the destination).",
@@ -3232,6 +3260,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/role/"
+  },
+  "urn:solid:rrule": {
+    "label": "rrule",
+    "description": "An iCalendar recurrence rule — declares the pattern by which a Vevent or Vtodo repeats (daily, weekly, every other Tuesday, …).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/rrule/"
   },
   "urn:solid:sameAs": {
     "label": "sameAs",

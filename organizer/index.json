@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:organizer",
+  "@type": "rdf:Property",
+  "rdfs:label": "organizer",
+  "rdfs:comment": "The Actor responsible for an iCalendar Vevent or Vtodo — the owner who scheduled it and who attendees reply to.",
+  "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#organizer",
+  "rdfs:seeAlso": [
+    "urn:solid:Vevent",
+    "urn:solid:Vtodo",
+    "urn:solid:attendee"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:attendee"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Functional — exactly one organizer per event. Distinct from `attendee` (the people invited). RSVPs and changes route back to this address. Typically a `mailto:` URI in classic iCal, increasingly a WebID or DID in pod-native deployments.",
+  "examples": [
+    {
+      "title": "Event with an organizer",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/calendar/team-sync-2026-04-19",
+        "@type": "urn:solid:Vevent",
+        "urn:solid:organizer": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/12/cal/ical#organizer"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

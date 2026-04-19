@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Vjournal — urn-solid</title>
+<meta name="description" content="An iCalendar journal entry — a dated note, log entry, or diary item, used to record what happened (rather than what's scheduled).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Vjournal/">
+<link rel="alternate" type="application/ld+json" href="/Vjournal/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Vjournal",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Vjournal",
+  "rdfs:comment": "An iCalendar journal entry — a dated note, log entry, or diary item, used to record what happened (rather than what's scheduled).",
+  "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#Vjournal",
+  "rdfs:seeAlso": [
+    "urn:solid:Vevent",
+    "urn:solid:Vtodo",
+    "urn:solid:Vcalendar"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Less common than `Vevent` / `Vtodo` but standard iCal. Use for time-stamped notes that don't need scheduling: meeting minutes, daily logs, diary entries. Can be associated with an event via `RELATED-TO` (after the meeting, write the journal entry that links to it).",
+  "examples": [
+    {
+      "title": "A daily journal entry",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/journal/2026-04-19",
+        "@type": "urn:solid:Vjournal",
+        "urn:solid:dtstart": { "@value": "2026-04-19T00:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/12/cal/ical#Vjournal"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

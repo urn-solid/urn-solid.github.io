@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:attendee — urn-solid</title>
+<meta name="description" content="An iCalendar participant in a Vevent or Vtodo — typically an Actor invited to attend or asked to act.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/attendee/">
+<link rel="alternate" type="application/ld+json" href="/attendee/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:attendee",
+  "@type": "rdf:Property",
+  "rdfs:label": "attendee",
+  "rdfs:comment": "An iCalendar participant in a Vevent or Vtodo — typically an Actor invited to attend or asked to act.",
+  "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#attendee",
+  "rdfs:seeAlso": [
+    "urn:solid:Vevent",
+    "urn:solid:Vtodo",
+    "urn:solid:organizer"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:organizer"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Repeat per attendee. Each value is typically a `mailto:` URI or an Actor's WebID/DID. RFC 5545 attaches participation status, role, RSVP request, etc. via parameters — in RDF those become additional properties on a reified Attendee blank node rather than URI parameters.",
+  "examples": [
+    {
+      "title": "An event with two attendees",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/calendar/team-sync-2026-04-19",
+        "@type": "urn:solid:Vevent",
+        "urn:solid:attendee": [
+          { "@id": "https://alice.example.org/profile/card#me" },
+          { "@id": "https://bob.example.org/profile/card#me" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/12/cal/ical#attendee"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

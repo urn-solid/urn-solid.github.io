@@ -1,0 +1,51 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:categories",
+  "@type": "rdf:Property",
+  "rdfs:label": "categories",
+  "rdfs:comment": "iCalendar tags or categories for a Vevent/Vtodo — comma-separated keywords classifying the calendar item (\"work\", \"personal\", \"travel\").",
+  "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#categories",
+  "rdfs:seeAlso": [
+    "urn:solid:Vevent",
+    "urn:solid:Vtodo",
+    "urn:solid:tag",
+    "urn:solid:keyword"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:tag",
+    "urn:solid:keyword"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Free-form strings, no controlled vocabulary by default. Distinct from `as:tag` (ActivityStreams tag links) and `dcat:keyword` (dataset keyword). Use `categories` when you need iCal-format calendar interop; the other two are better for fediverse posts and dataset metadata respectively.",
+  "examples": [
+    {
+      "title": "An event tagged with categories",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Vevent",
+        "urn:solid:categories": ["work", "team-sync"]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/12/cal/ical#categories"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
