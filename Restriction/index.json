@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Restriction",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Restriction",
+  "rdfs:comment": "An anonymous OWL class defined by a constraint on one property — e.g. \"things whose `foaf:age` is at least 18\".",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#Restriction",
+  "rdfs:seeAlso": [
+    "urn:solid:Class",
+    "urn:solid:onProperty"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "A `Restriction` is a class — anything that satisfies the restriction is an instance of it. Combine with `owl:onProperty` (which property to constrain) and one of `someValuesFrom`/`allValuesFrom`/`hasValue`/`cardinality` (the actual constraint). Building block for OWL class expressions.",
+  "examples": [
+    {
+      "title": "A class of objects with at least one knows relation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Restriction",
+        "urn:solid:onProperty": { "@id": "urn:solid:knows" },
+        "http://www.w3.org/2002/07/owl#minCardinality": 1
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

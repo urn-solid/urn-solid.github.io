@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:InverseFunctionalProperty — urn-solid</title>
+<meta name="description" content="An OWL property whose value uniquely identifies the subject — if `A p X` and `B p X`, then `A owl:sameAs B`.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/InverseFunctionalProperty/">
+<link rel="alternate" type="application/ld+json" href="/InverseFunctionalProperty/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:InverseFunctionalProperty",
+  "@type": "rdfs:Class",
+  "rdfs:label": "InverseFunctionalProperty",
+  "rdfs:comment": "An OWL property whose value uniquely identifies the subject — if `A p X` and `B p X`, then `A owl:sameAs B`.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#InverseFunctionalProperty",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:FunctionalProperty",
+    "urn:solid:sameAs"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:FunctionalProperty"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Classic example: `foaf:mbox` — two agents sharing an email address are the same agent. Used heavily in entity resolution: declare the identity-bearing properties as `InverseFunctionalProperty` and reasoners merge accounts that match. Mirror of `FunctionalProperty` (which constrains the value side, not the subject).",
+  "examples": [
+    {
+      "title": "foaf:mbox as inverse-functional",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "http://xmlns.com/foaf/0.1/mbox",
+        "@type": "urn:solid:InverseFunctionalProperty"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#InverseFunctionalProperty"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:onProperty",
+  "@type": "rdf:Property",
+  "rdfs:label": "onProperty",
+  "rdfs:comment": "On an OWL Restriction, the property being constrained.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#onProperty",
+  "rdfs:seeAlso": [
+    "urn:solid:Restriction",
+    "urn:solid:Property"
+  ],
+  "rdfs:domain": "urn:solid:Restriction",
+  "rdfs:range": "urn:solid:Property",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Required on every `owl:Restriction`. Pair with the actual constraint predicate — `owl:someValuesFrom`, `owl:allValuesFrom`, `owl:hasValue`, `owl:cardinality`, `owl:minCardinality`, `owl:maxCardinality` — to express \"on property X, the constraint is Y\".",
+  "examples": [
+    {
+      "title": "A restriction on the knows property",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Restriction",
+        "urn:solid:onProperty": { "@id": "urn:solid:knows" },
+        "http://www.w3.org/2002/07/owl#allValuesFrom": { "@id": "urn:solid:Person" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#onProperty"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

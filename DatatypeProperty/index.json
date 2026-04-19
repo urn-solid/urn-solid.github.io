@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:DatatypeProperty",
+  "@type": "rdfs:Class",
+  "rdfs:label": "DatatypeProperty",
+  "rdfs:comment": "An OWL property whose values are literals — strings, numbers, dates, booleans — never IRIs or blank nodes.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:ObjectProperty",
+    "urn:solid:Datatype"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:ObjectProperty"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Examples: `foaf:name`, `as:totalItems`, `dcterms:created`. Distinct from `owl:ObjectProperty` (whose values are individuals). The split lets reasoners and serialisers handle literals (no dereferencing needed) differently from object references.",
+  "examples": [
+    {
+      "title": "Declaring foaf:name as a DatatypeProperty",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "http://xmlns.com/foaf/0.1/name",
+        "@type": "urn:solid:DatatypeProperty",
+        "urn:solid:range": { "@id": "http://www.w3.org/2001/XMLSchema#string" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

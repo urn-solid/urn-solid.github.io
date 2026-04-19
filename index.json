@@ -300,6 +300,13 @@
     "status": "stable",
     "path": "/Datatype/"
   },
+  "urn:solid:DatatypeProperty": {
+    "label": "DatatypeProperty",
+    "description": "An OWL property whose values are literals — strings, numbers, dates, booleans — never IRIs or blank nodes.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/DatatypeProperty/"
+  },
   "urn:solid:Delegation": {
     "label": "Delegation",
     "description": "A qualified PROV delegation — the role-aware form of `actedOnBehalfOf` between two Agents.",
@@ -516,6 +523,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Invalidation/"
+  },
+  "urn:solid:InverseFunctionalProperty": {
+    "label": "InverseFunctionalProperty",
+    "description": "An OWL property whose value uniquely identifies the subject — if `A p X` and `B p X`, then `A owl:sameAs B`.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/InverseFunctionalProperty/"
   },
   "urn:solid:ItemList": {
     "label": "ItemList",
@@ -901,6 +915,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Resource/"
+  },
+  "urn:solid:Restriction": {
+    "label": "Restriction",
+    "description": "An anonymous OWL class defined by a constraint on one property — e.g. \"things whose `foaf:age` is at least 18\".",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Restriction/"
   },
   "urn:solid:Review": {
     "label": "Review",
@@ -1601,6 +1622,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/description/"
+  },
+  "urn:solid:disjointWith": {
+    "label": "disjointWith",
+    "description": "Asserts that two OWL classes have no instances in common — nothing can be both at once.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/disjointWith/"
   },
   "urn:solid:domain": {
     "label": "domain",
@@ -2658,6 +2686,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/oidcIssuer/"
+  },
+  "urn:solid:onProperty": {
+    "label": "onProperty",
+    "description": "On an OWL Restriction, the property being constrained.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/onProperty/"
   },
   "urn:solid:oneOf": {
     "label": "oneOf",
