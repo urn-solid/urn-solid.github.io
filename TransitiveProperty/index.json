@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:TransitiveProperty",
+  "@type": "rdfs:Class",
+  "rdfs:label": "TransitiveProperty",
+  "rdfs:comment": "An OWL property whose closure is the property itself — if `A p B` and `B p C`, then `A p C`.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#TransitiveProperty",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:SymmetricProperty",
+    "urn:solid:FunctionalProperty",
+    "urn:solid:subClassOf"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Classic examples: `rdfs:subClassOf`, `rdfs:subPropertyOf`, `dcterms:isPartOf`, `skos:broader`. Reasoners materialise the chain — given `Person ⊏ Agent` and `Agent ⊏ Thing`, they infer `Person ⊏ Thing`. Declare a property as `TransitiveProperty` to enable this inference.",
+  "examples": [
+    {
+      "title": "Declaring subClassOf as transitive",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "urn:solid:subClassOf",
+        "@type": "urn:solid:TransitiveProperty"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

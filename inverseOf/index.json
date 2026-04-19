@@ -1,0 +1,47 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:inverseOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "inverseOf",
+  "rdfs:comment": "Asserts that two OWL properties are inverses — `A p1 B` if and only if `B p2 A`.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#inverseOf",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:equivalentProperty"
+  ],
+  "rdfs:domain": "urn:solid:Property",
+  "rdfs:range": "urn:solid:Property",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Reasoners use this to materialise the reverse direction without storing both. Classic pairs: `as:followers` / `as:following`, `dcterms:isPartOf` / `dcterms:hasPart`, `prov:wasGeneratedBy` / `prov:generated`. Symmetric properties (`owl:sameAs`, `foaf:knows`) are their own inverse.",
+  "examples": [
+    {
+      "title": "isPartOf and hasPart as inverses",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "urn:solid:isPartOf",
+        "urn:solid:inverseOf": { "@id": "urn:solid:hasPart" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#inverseOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

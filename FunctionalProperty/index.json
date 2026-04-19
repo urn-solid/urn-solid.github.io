@@ -1,0 +1,46 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:FunctionalProperty",
+  "@type": "rdfs:Class",
+  "rdfs:label": "FunctionalProperty",
+  "rdfs:comment": "An OWL property that takes at most one value per subject — if `A p B` and `A p C`, then `B owl:sameAs C`.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:InverseFunctionalProperty",
+    "urn:solid:sameAs"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Examples: `foaf:gender`, `dcterms:created`, `as:totalItems`. Different from a non-functional property like `foaf:knows` (an Actor can know many people). Reasoners use functionality to detect data errors (\"two different birth dates for one person — they must be the same date\") or to merge identifiers.",
+  "examples": [
+    {
+      "title": "Declaring as:totalItems as functional",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "urn:solid:totalItems",
+        "@type": "urn:solid:FunctionalProperty"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

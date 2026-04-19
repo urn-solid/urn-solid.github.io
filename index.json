@@ -426,6 +426,13 @@
     "status": "stable",
     "path": "/Frequency/"
   },
+  "urn:solid:FunctionalProperty": {
+    "label": "FunctionalProperty",
+    "description": "An OWL property that takes at most one value per subject — if `A p B` and `A p C`, then `B owl:sameAs C`.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/FunctionalProperty/"
+  },
   "urn:solid:Generation": {
     "label": "Generation",
     "description": "A qualified PROV generation event — the moment an Activity produced an Entity.",
@@ -663,6 +670,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Object/"
+  },
+  "urn:solid:ObjectProperty": {
+    "label": "ObjectProperty",
+    "description": "An OWL property whose values are individuals (other resources, identified by IRI or blank node) — never literal strings, numbers, or dates.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/ObjectProperty/"
   },
   "urn:solid:Offer": {
     "label": "Offer",
@@ -958,6 +972,13 @@
     "status": "stable",
     "path": "/Standard/"
   },
+  "urn:solid:SymmetricProperty": {
+    "label": "SymmetricProperty",
+    "description": "An OWL property whose inverse is itself — if `A p B`, then `B p A`.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/SymmetricProperty/"
+  },
   "urn:solid:Tel": {
     "label": "Tel",
     "description": "A vCard Tel resource — a structured telephone-number entry with type tags and value.",
@@ -992,6 +1013,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Tombstone/"
+  },
+  "urn:solid:TransitiveProperty": {
+    "label": "TransitiveProperty",
+    "description": "An OWL property whose closure is the property itself — if `A p B` and `B p C`, then `A p C`.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/TransitiveProperty/"
   },
   "urn:solid:Travel": {
     "label": "Travel",
@@ -2252,6 +2280,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/invalidatedAtTime/"
+  },
+  "urn:solid:inverseOf": {
+    "label": "inverseOf",
+    "description": "Asserts that two OWL properties are inverses — `A p1 B` if and only if `B p2 A`.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/inverseOf/"
   },
   "urn:solid:isDefinedBy": {
     "label": "isDefinedBy",
