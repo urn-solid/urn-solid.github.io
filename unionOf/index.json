@@ -1,0 +1,54 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:unionOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "unionOf",
+  "rdfs:comment": "OWL class expression: defines a class as the union of a list of other classes — instances of the new class are instances of any one of the listed classes.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#unionOf",
+  "rdfs:seeAlso": [
+    "urn:solid:Class",
+    "urn:solid:intersectionOf",
+    "urn:solid:complementOf"
+  ],
+  "rdfs:domain": "urn:solid:Class",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Logical OR across classes. Common use: declaring `rdfs:domain` or `rdfs:range` for a property that accepts multiple types — \"this property's value is a Person OR an Organization.\" Value is an `rdf:List` of class IRIs.",
+  "examples": [
+    {
+      "title": "Domain accepting either of two classes",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "urn:solid:actor",
+        "urn:solid:domain": {
+          "urn:solid:unionOf": {
+            "@list": [
+              { "@id": "urn:solid:Person" },
+              { "@id": "urn:solid:Organization" }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#unionOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

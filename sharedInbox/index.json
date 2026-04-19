@@ -1,0 +1,49 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:sharedInbox",
+  "@type": "rdf:Property",
+  "rdfs:label": "sharedInbox",
+  "rdfs:comment": "An ActivityPub Actor-server endpoint that accepts deliveries for any local recipient — used to deduplicate fan-out when one Activity targets many followers on the same server.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#sharedInbox",
+  "rdfs:seeAlso": [
+    "urn:solid:Actor",
+    "urn:solid:inbox",
+    "urn:solid:endpoints"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Lives inside an Actor's `as:endpoints` object. Federation pattern: when delivering an Activity addressed to many followers, a sender SHOULD POST once to each receiving server's `sharedInbox` rather than once per follower's per-Actor `inbox` — saves bandwidth and quadratic delivery cost on large fediverse instances.",
+  "examples": [
+    {
+      "title": "An Actor advertising a sharedInbox",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/users/alice",
+        "@type": "urn:solid:Person",
+        "urn:solid:endpoints": {
+          "urn:solid:sharedInbox": { "@id": "https://example.org/inbox" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#sharedInbox"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

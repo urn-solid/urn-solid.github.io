@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:intersectionOf — urn-solid</title>
+<meta name="description" content="OWL class expression: defines a class as the intersection of a list of other classes — instances of the new class are instances of all listed classes.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/intersectionOf/">
+<link rel="alternate" type="application/ld+json" href="/intersectionOf/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:intersectionOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "intersectionOf",
+  "rdfs:comment": "OWL class expression: defines a class as the intersection of a list of other classes — instances of the new class are instances of all listed classes.",
+  "owl:sameAs": "http://www.w3.org/2002/07/owl#intersectionOf",
+  "rdfs:seeAlso": [
+    "urn:solid:Class",
+    "urn:solid:unionOf",
+    "urn:solid:complementOf"
+  ],
+  "rdfs:domain": "urn:solid:Class",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Logical AND across classes. Use to define \"a class of things that are both X and Y\" (e.g. an Author = Person ∩ has-published-Book). Value is an `rdf:List` of class IRIs or class expressions; reasoners use it to infer membership.",
+  "examples": [
+    {
+      "title": "An anonymous class: Person who is also a Member",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Class",
+        "urn:solid:intersectionOf": {
+          "@list": [
+            { "@id": "urn:solid:Person" },
+            { "@id": "urn:solid:Member" }
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/07/owl#intersectionOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

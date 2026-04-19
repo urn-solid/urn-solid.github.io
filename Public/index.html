@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Public — urn-solid</title>
+<meta name="description" content="The ActivityPub special-purpose IRI denoting the public audience — addressing an Activity to it makes the Activity visible to anyone, anywhere on the network.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Public/">
+<link rel="alternate" type="application/ld+json" href="/Public/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Public",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Public",
+  "rdfs:comment": "The ActivityPub special-purpose IRI denoting the public audience — addressing an Activity to it makes the Activity visible to anyone, anywhere on the network.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Public",
+  "rdfs:seeAlso": [
+    "urn:solid:to",
+    "urn:solid:cc",
+    "urn:solid:Activity"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The single most-referenced IRI on the fediverse. Used as a value of `as:to` or `as:cc` to mark a post as public; absence of it means the post is non-public regardless of other audience settings. Mastodon and most ActivityPub servers also accept the synonyms `as:Public` and `Public` in compact form.",
+  "examples": [
+    {
+      "title": "A public Note",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/notes/1",
+        "@type": "urn:solid:Note",
+        "urn:solid:to": [{ "@id": "urn:solid:Public" }]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Public"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

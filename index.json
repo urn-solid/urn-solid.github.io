@@ -853,6 +853,13 @@
     "status": "stable",
     "path": "/ProvenanceStatement/"
   },
+  "urn:solid:Public": {
+    "label": "Public",
+    "description": "The ActivityPub special-purpose IRI denoting the public audience — addressing an Activity to it makes the Activity visible to anyone, anywhere on the network.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Public/"
+  },
   "urn:solid:Question": {
     "label": "Question",
     "description": "A question being asked — typically with one or more proposed answers (a poll).",
@@ -1496,6 +1503,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/closed/"
+  },
+  "urn:solid:complementOf": {
+    "label": "complementOf",
+    "description": "OWL class expression: defines a class as the negation of another — instances of the new class are everything that is *not* an instance of the named class.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/complementOf/"
   },
   "urn:solid:conformsTo": {
     "label": "conformsTo",
@@ -2379,6 +2393,13 @@
     "status": "stable",
     "path": "/interest/"
   },
+  "urn:solid:intersectionOf": {
+    "label": "intersectionOf",
+    "description": "OWL class expression: defines a class as the intersection of a list of other classes — instances of the new class are instances of all listed classes.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/intersectionOf/"
+  },
   "urn:solid:invalidated": {
     "label": "invalidated",
     "description": "An Entity that this PROV Activity destroyed, consumed, or rendered unusable — after invalidation the Entity is no longer available for further use.",
@@ -3198,6 +3219,13 @@
     "status": "stable",
     "path": "/sha1/"
   },
+  "urn:solid:sharedInbox": {
+    "label": "sharedInbox",
+    "description": "An ActivityPub Actor-server endpoint that accepts deliveries for any local recipient — used to deduplicate fan-out when one Activity targets many followers on the same server.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/sharedInbox/"
+  },
   "urn:solid:shares": {
     "label": "shares",
     "description": "A Collection of `Announce` activities (shares / boosts / reposts) directed at an Object — discoverable from the Object itself.",
@@ -3442,6 +3470,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/type/"
+  },
+  "urn:solid:unionOf": {
+    "label": "unionOf",
+    "description": "OWL class expression: defines a class as the union of a list of other classes — instances of the new class are instances of any one of the listed classes.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/unionOf/"
   },
   "urn:solid:unitOf": {
     "label": "unitOf",
