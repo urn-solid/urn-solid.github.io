@@ -923,6 +923,13 @@
     "status": "stable",
     "path": "/Tombstone/"
   },
+  "urn:solid:Travel": {
+    "label": "Travel",
+    "description": "An ActivityStreams Activity indicating that the actor is travelling between two locations — the origin is the `origin`, the destination is the `target`.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Travel/"
+  },
   "urn:solid:TypeIndex": {
     "label": "TypeIndex",
     "description": "A registry that maps RDF classes to the locations in a Solid pod where instances of those classes are stored.",
@@ -1987,6 +1994,13 @@
     "status": "stable",
     "path": "/href/"
   },
+  "urn:solid:hreflang": {
+    "label": "hreflang",
+    "description": "The language of the resource at an ActivityStreams Link's `href` — a BCP 47 language tag (`en`, `en-GB`, `pt-BR`).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/hreflang/"
+  },
   "urn:solid:icon": {
     "label": "icon",
     "description": "A small image representing the object — typically a square avatar or favicon.",
@@ -2666,6 +2680,13 @@
     "status": "stable",
     "path": "/qualifiedUsage/"
   },
+  "urn:solid:radius": {
+    "label": "radius",
+    "description": "The radius around an ActivityStreams Place's centre point that the Place covers — a circular area, in metres unless `as:units` says otherwise.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/radius/"
+  },
   "urn:solid:references": {
     "label": "references",
     "description": "A related resource that is referenced, cited, or otherwise pointed to by the described resource.",
@@ -2679,6 +2700,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/region/"
+  },
+  "urn:solid:rel": {
+    "label": "rel",
+    "description": "The link relation type of an ActivityStreams Link — semantic role of the connection (canonical, alternate, prev, next, …).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/rel/"
   },
   "urn:solid:related": {
     "label": "related",
@@ -2994,6 +3022,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/unitOf/"
+  },
+  "urn:solid:units": {
+    "label": "units",
+    "description": "The unit of measurement for the linear dimensions of an ActivityStreams Place — `radius` and `altitude` are interpreted in this unit.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/units/"
   },
   "urn:solid:updated": {
     "label": "updated",

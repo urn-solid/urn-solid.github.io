@@ -1,0 +1,48 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:rel",
+  "@type": "rdf:Property",
+  "rdfs:label": "rel",
+  "rdfs:comment": "The link relation type of an ActivityStreams Link — semantic role of the connection (canonical, alternate, prev, next, …).",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#rel",
+  "rdfs:seeAlso": [
+    "urn:solid:Link",
+    "urn:solid:href",
+    "urn:solid:hreflang"
+  ],
+  "rdfs:domain": "urn:solid:Link",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Values are IANA-registered link relation types from <https://www.iana.org/assignments/link-relations/> (`canonical`, `alternate`, `enclosure`, `self`, `next`, etc.) — same vocabulary HTML and HTTP `Link:` headers use. Repeat to express multiple relations on one Link.",
+  "examples": [
+    {
+      "title": "A Link declaring its relation",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Link",
+        "urn:solid:href": { "@id": "https://example.org/article/42" },
+        "urn:solid:rel": "canonical"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#rel"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

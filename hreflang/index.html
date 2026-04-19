@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:hreflang — urn-solid</title>
+<meta name="description" content="The language of the resource at an ActivityStreams Link's `href` — a BCP 47 language tag (`en`, `en-GB`, `pt-BR`).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/hreflang/">
+<link rel="alternate" type="application/ld+json" href="/hreflang/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:hreflang",
+  "@type": "rdf:Property",
+  "rdfs:label": "hreflang",
+  "rdfs:comment": "The language of the resource at an ActivityStreams Link's `href` — a BCP 47 language tag (`en`, `en-GB`, `pt-BR`).",
+  "owl:sameAs": "http://www.w3.org/ns/activitystreams#hreflang",
+  "rdfs:seeAlso": [
+    "urn:solid:Link",
+    "urn:solid:href",
+    "urn:solid:rel"
+  ],
+  "rdfs:domain": "urn:solid:Link",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#language",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Lets clients pick the right localisation when a Link offers translations. Pair with `as:rel: alternate` and a separate Link per language so consumers can choose. Mirrors HTML's `<a hreflang>` and Atom's `link/@hreflang`.",
+  "examples": [
+    {
+      "title": "A localisation Link",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@type": "urn:solid:Link",
+        "urn:solid:href": { "@id": "https://example.org/article/42/fr" },
+        "urn:solid:hreflang": "fr",
+        "urn:solid:rel": "alternate"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/activitystreams#hreflang"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
