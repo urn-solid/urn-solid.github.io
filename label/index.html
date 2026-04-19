@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:label — urn-solid</title>
+<meta name="description" content="A human-readable name for a resource — short, plain text, suitable for UI display.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/label/">
+<link rel="alternate" type="application/ld+json" href="/label/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:label",
+  "@type": "rdf:Property",
+  "rdfs:label": "label",
+  "rdfs:comment": "A human-readable name for a resource — short, plain text, suitable for UI display.",
+  "owl:sameAs": "http://www.w3.org/2000/01/rdf-schema#label",
+  "rdfs:seeAlso": [
+    "urn:solid:name",
+    "urn:solid:prefLabel",
+    "urn:solid:title"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:name",
+    "urn:solid:prefLabel"
+  ],
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "The most-general human-name predicate in RDF. For people prefer `foaf:name` (mapped to `urn:solid:name`); for SKOS Concepts prefer `skos:prefLabel`; for documents prefer `dcterms:title`. Use `rdfs:label` for everything else (vocabulary terms, classes, properties, opaque resources).",
+  "examples": [
+    {
+      "title": "Labelling a class",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/vocab/Athlete",
+        "@type": "urn:solid:Class",
+        "urn:solid:label": "Athlete"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2000/01/rdf-schema#label"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

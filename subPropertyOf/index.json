@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:subPropertyOf",
+  "@type": "rdf:Property",
+  "rdfs:label": "subPropertyOf",
+  "rdfs:comment": "Asserts that one property is a refinement of another — every triple using the subproperty also (logically) holds with the superproperty.",
+  "owl:sameAs": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+  "rdfs:seeAlso": [
+    "urn:solid:Property",
+    "urn:solid:subClassOf",
+    "urn:solid:domain",
+    "urn:solid:range"
+  ],
+  "rdfs:domain": "urn:solid:Property",
+  "rdfs:range": "urn:solid:Property",
+  "status": "stable",
+  "added": "2026-04-19",
+  "notes": "Transitive, like `subClassOf`. Reasoners use it to climb the property hierarchy — knowing `prov:wasRevisionOf` is a subproperty of `prov:wasDerivedFrom` lets a query for derivations also find revisions. Use to model specialised/general predicate pairs.",
+  "examples": [
+    {
+      "title": "wasRevisionOf is a subproperty of wasDerivedFrom",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "urn:solid:wasRevisionOf",
+        "@type": "urn:solid:Property",
+        "urn:solid:subPropertyOf": { "@id": "urn:solid:wasDerivedFrom" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-19T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

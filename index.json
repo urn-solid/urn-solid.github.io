@@ -181,6 +181,13 @@
     "status": "stable",
     "path": "/City/"
   },
+  "urn:solid:Class": {
+    "label": "Class",
+    "description": "The class of RDF classes — the meta-class whose instances are themselves classes (Person, Note, Activity, etc.).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Class/"
+  },
   "urn:solid:Collection": {
     "label": "Collection",
     "description": "An unordered collection of objects.",
@@ -782,6 +789,13 @@
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Project/"
+  },
+  "urn:solid:Property": {
+    "label": "Property",
+    "description": "The class of RDF properties — predicates that connect a subject to a value (`name`, `knows`, `published`, etc.).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Property/"
   },
   "urn:solid:ProvenanceStatement": {
     "label": "ProvenanceStatement",
@@ -2309,6 +2323,13 @@
     "status": "stable",
     "path": "/knowsLanguage/"
   },
+  "urn:solid:label": {
+    "label": "label",
+    "description": "A human-readable name for a resource — short, plain text, suitable for UI display.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/label/"
+  },
   "urn:solid:landingPage": {
     "label": "landingPage",
     "description": "A web page that gives access to a DCAT Dataset, its Distributions, and additional information.",
@@ -3016,12 +3037,26 @@
     "status": "stable",
     "path": "/street-address/"
   },
+  "urn:solid:subClassOf": {
+    "label": "subClassOf",
+    "description": "Asserts that one class is a subclass of another — instances of the subclass are also instances of the superclass.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/subClassOf/"
+  },
   "urn:solid:subOrganizationOf": {
     "label": "subOrganizationOf",
     "description": "The parent Organization that this OrganizationalUnit is part of — the inverse of `hasSubOrganization`.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/subOrganizationOf/"
+  },
+  "urn:solid:subPropertyOf": {
+    "label": "subPropertyOf",
+    "description": "Asserts that one property is a refinement of another — every triple using the subproperty also (logically) holds with the superproperty.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/subPropertyOf/"
   },
   "urn:solid:subject": {
     "label": "subject",
