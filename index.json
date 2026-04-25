@@ -3324,6 +3324,13 @@
     "status": "stable",
     "path": "/result/"
   },
+  "urn:solid:review": {
+    "label": "review",
+    "description": "A review of the subject — typically a Review instance with a rating and a body of text.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/review/"
+  },
   "urn:solid:rights": {
     "label": "rights",
     "description": "Information about rights held in and over the resource — copyright, IP, access restrictions.",

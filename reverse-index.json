@@ -479,6 +479,7 @@
   "https://www.w3.org/ns/activitystreams#replies": "urn:solid:replies",
   "http://purl.org/dc/terms/requires": "urn:solid:requires",
   "http://www.w3.org/ns/activitystreams#result": "urn:solid:result",
+  "https://schema.org/review": "urn:solid:review",
   "http://purl.org/dc/terms/rights": "urn:solid:rights",
   "http://purl.org/dc/terms/rightsHolder": "urn:solid:rightsHolder",
   "http://www.w3.org/2006/vcard/ns#role": "urn:solid:role",
