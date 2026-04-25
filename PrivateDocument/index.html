@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:PrivateDocument — urn-solid</title>
+<meta name="description" content="A document registered in the user's private TypeIndex — discoverable only by the pod owner.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/PrivateDocument/">
+<link rel="alternate" type="application/ld+json" href="/PrivateDocument/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:PrivateDocument",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Private document",
+  "rdfs:comment": "A document registered in the user's private TypeIndex — discoverable only by the pod owner.",
+  "owl:sameAs": "http://w3id.org/solidos#PrivateDocument",
+  "rdfs:seeAlso": [
+    "urn:solid:privateTypeIndex",
+    "urn:solid:TypeRegistration",
+    "urn:solid:PublicDocument"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:PublicDocument"
+  ],
+  "status": "stable",
+  "added": "2026-04-22",
+  "notes": "Marker type for documents that should appear in (or be reachable from) a `solid:privateTypeIndex`. Pairs with `urn:solid:PublicDocument`. Concrete instance documents typically also carry a domain-specific class.",
+  "examples": [
+    {
+      "title": "Private journal registered in the private TypeIndex",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/private/journal.jsonld",
+        "@type": "urn:solid:PrivateDocument"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://mashlib.github.io/solidos/vocab.jsonld"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-22T11:30:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

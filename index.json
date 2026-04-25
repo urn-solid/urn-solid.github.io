@@ -839,6 +839,13 @@
     "status": "stable",
     "path": "/PrimarySource/"
   },
+  "urn:solid:PrivateDocument": {
+    "label": "Private document",
+    "description": "A document registered in the user's private TypeIndex — discoverable only by the pod owner.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/PrivateDocument/"
+  },
   "urn:solid:Product": {
     "label": "Product",
     "description": "Anything that is made available for sale — a physical good, a service, or a digital item.",

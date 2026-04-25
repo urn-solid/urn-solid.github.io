@@ -119,6 +119,7 @@
   "http://www.w3.org/ns/org#Post": "urn:solid:Post",
   "https://schema.org/PostalAddress": "urn:solid:PostalAddress",
   "http://www.w3.org/ns/prov#PrimarySource": "urn:solid:PrimarySource",
+  "http://w3id.org/solidos#PrivateDocument": "urn:solid:PrivateDocument",
   "https://schema.org/Product": "urn:solid:Product",
   "http://www.w3.org/ns/activitystreams#Profile": "urn:solid:Profile",
   "http://xmlns.com/foaf/0.1/Project": "urn:solid:Project",
