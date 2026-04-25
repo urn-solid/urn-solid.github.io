@@ -1616,6 +1616,13 @@
     "status": "stable",
     "path": "/closed/"
   },
+  "urn:solid:comment": {
+    "label": "comment",
+    "description": "A comment on the subject — typically a Comment instance written by some agent in response to the subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/comment/"
+  },
   "urn:solid:complementOf": {
     "label": "complementOf",
     "description": "OWL class expression: defines a class as the negation of another — instances of the new class are everything that is *not* an instance of the named class.",

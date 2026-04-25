@@ -230,6 +230,7 @@
   "https://schema.org/children": "urn:solid:children",
   "http://www.w3.org/2004/02/skos/core#closeMatch": "urn:solid:closeMatch",
   "http://www.w3.org/ns/activitystreams#closed": "urn:solid:closed",
+  "https://schema.org/comment": "urn:solid:comment",
   "http://www.w3.org/2002/07/owl#complementOf": "urn:solid:complementOf",
   "http://purl.org/dc/terms/conformsTo": "urn:solid:conformsTo",
   "http://www.w3.org/ns/ldp#contains": "urn:solid:contains",

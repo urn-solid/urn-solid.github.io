@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:comment — urn-solid</title>
+<meta name="description" content="A comment on the subject — typically a Comment instance written by some agent in response to the subject.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/comment/">
+<link rel="alternate" type="application/ld+json" href="/comment/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:comment",
+  "@type": "rdf:Property",
+  "rdfs:label": "comment",
+  "rdfs:comment": "A comment on the subject — typically a Comment instance written by some agent in response to the subject.",
+  "owl:sameAs": "https://schema.org/comment",
+  "rdfs:seeAlso": [
+    "urn:solid:Comment",
+    "http://www.w3.org/2000/01/rdf-schema#comment",
+    "https://www.w3.org/ns/activitystreams#inReplyTo"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Comment"
+  ],
+  "status": "stable",
+  "added": "2026-04-25",
+  "notes": "Property form paired with the `urn:solid:Comment` class. Maps to `schema:comment` (a comment in response to the subject), distinct from `rdfs:comment` (a human-readable description of a vocabulary term). Use `comment` for user-generated reply content; use `rdfs:comment` (or `urn:solid:description`) for descriptive prose about a resource.",
+  "examples": [
+    {
+      "title": "Article with two comments",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/posts/hello",
+        "@type": "https://schema.org/Article",
+        "urn:solid:comment": [
+          { "@id": "https://example.org/posts/hello/comments/1" },
+          { "@id": "https://example.org/posts/hello/comments/2" }
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/comment"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-25T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term — property form completing the Comment/comment case-pair."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
