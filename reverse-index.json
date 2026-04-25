@@ -1,5 +1,6 @@
 {
   "https://www.w3.org/ns/activitystreams#Accept": "urn:solid:Accept",
+  "http://www.w3.org/ns/solid/terms#Account": "urn:solid:Account",
   "https://schema.org/Action": "urn:solid:Action",
   "https://www.w3.org/ns/activitystreams#Activity": "urn:solid:Activity",
   "https://www.w3.org/ns/activitystreams#Add": "urn:solid:Add",

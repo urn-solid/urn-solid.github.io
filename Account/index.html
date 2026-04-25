@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Account — urn-solid</title>
+<meta name="description" content="A Solid pod account — the user account on a Solid server, distinct from the WebID it issues.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Account/">
+<link rel="alternate" type="application/ld+json" href="/Account/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Account",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Account",
+  "rdfs:comment": "A Solid pod account — the user account on a Solid server, distinct from the WebID it issues.",
+  "owl:sameAs": "http://www.w3.org/ns/solid/terms#Account",
+  "rdfs:seeAlso": [
+    "urn:solid:account",
+    "urn:solid:OnlineAccount",
+    "urn:solid:Agent"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:account",
+    "urn:solid:OnlineAccount"
+  ],
+  "status": "stable",
+  "added": "2026-04-25",
+  "notes": "Solid-specific account class — represents the user record held by a Solid server (login credentials, owned pod, billing). Distinct from `urn:solid:OnlineAccount` (the FOAF generic account-on-a-service class) and from `urn:solid:account` (the FOAF property pointing at any online account). One Solid `Account` typically owns one pod and issues one WebID.",
+  "examples": [
+    {
+      "title": "Pod account on a Solid server",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://pod.example.org/admin/accounts/alice#it",
+        "@type": "urn:solid:Account",
+        "urn:solid:webid": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/solid/terms#Account"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-25T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term — Class form completing the Account/account case-pair, mapped to solid:Account (distinct from foaf:OnlineAccount, already covered by urn:solid:OnlineAccount)."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
