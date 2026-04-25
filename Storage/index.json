@@ -1,0 +1,60 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Storage",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Storage",
+  "rdfs:comment": "A storage space (Solid pod root) — the class of resources that act as the root of a personal data store.",
+  "owl:sameAs": "http://www.w3.org/ns/pim/space#Storage",
+  "rdfs:seeAlso": [
+    "urn:solid:storage",
+    "http://www.w3.org/ns/solid/terms#Account"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:storage"
+  ],
+  "status": "stable",
+  "added": "2026-04-25",
+  "notes": "Class form paired with the `urn:solid:storage` property. The pod root container is typed `urn:solid:Storage`; the WebID profile then links to it with `urn:solid:storage`. Solid clients use the storage URI as the root for follow-your-nose discovery (TypeIndex, preferences file, registries).",
+  "examples": [
+    {
+      "title": "WebID linking to its pod storage",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/profile/card#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:storage": { "@id": "https://alice.example.org/" }
+      }
+    },
+    {
+      "title": "The storage container itself, typed",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/",
+        "@type": [
+          "urn:solid:Storage",
+          "http://www.w3.org/ns/ldp#BasicContainer"
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/pim/space#Storage"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-25T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term — Class form completing the Storage/storage case-pair."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

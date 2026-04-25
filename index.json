@@ -1049,6 +1049,13 @@
     "status": "stable",
     "path": "/Standard/"
   },
+  "urn:solid:Storage": {
+    "label": "Storage",
+    "description": "A storage space (Solid pod root) — the class of resources that act as the root of a personal data store.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Storage/"
+  },
   "urn:solid:SymmetricProperty": {
     "label": "SymmetricProperty",
     "description": "An OWL property whose inverse is itself — if `A p B`, then `B p A`.",

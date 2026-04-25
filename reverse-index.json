@@ -149,6 +149,7 @@
   "http://www.w3.org/ns/prov#SoftwareAgent": "urn:solid:SoftwareAgent",
   "https://schema.org/SoftwareApplication": "urn:solid:SoftwareApplication",
   "http://purl.org/dc/terms/Standard": "urn:solid:Standard",
+  "http://www.w3.org/ns/pim/space#Storage": "urn:solid:Storage",
   "http://www.w3.org/2002/07/owl#SymmetricProperty": "urn:solid:SymmetricProperty",
   "http://www.w3.org/2006/vcard/ns#Tel": "urn:solid:Tel",
   "http://www.w3.org/ns/activitystreams#TentativeAccept": "urn:solid:TentativeAccept",
