@@ -3702,6 +3702,13 @@
     "status": "stable",
     "path": "/version/"
   },
+  "urn:solid:view": {
+    "label": "view",
+    "description": "Links a resource or RDF class to an ES module URL that renders it — the SolidOS data-browser pane convention.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/view/"
+  },
   "urn:solid:wasAssociatedWith": {
     "label": "wasAssociatedWith",
     "description": "An agent that had a role or responsibility in the activity — performed it, oversaw it, or was implicated in it.",

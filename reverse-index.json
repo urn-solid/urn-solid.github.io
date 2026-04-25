@@ -534,6 +534,7 @@
   "http://purl.org/dc/terms/valid": "urn:solid:valid",
   "https://w3id.org/security#verificationMethod": "urn:solid:verificationMethod",
   "https://schema.org/version": "urn:solid:version",
+  "http://w3id.org/solidos#view": "urn:solid:view",
   "http://www.w3.org/ns/prov#wasAssociatedWith": "urn:solid:wasAssociatedWith",
   "http://www.w3.org/ns/prov#wasAttributedTo": "urn:solid:wasAttributedTo",
   "http://www.w3.org/ns/prov#wasDerivedFrom": "urn:solid:wasDerivedFrom",
