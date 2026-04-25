@@ -2449,6 +2449,13 @@
     "status": "stable",
     "path": "/identifier/"
   },
+  "urn:solid:image": {
+    "label": "image",
+    "description": "An image of the subject — typically a representative picture (avatar, cover, depiction).",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/image/"
+  },
   "urn:solid:img": {
     "label": "img",
     "description": "An image that represents the person — typically a headshot or portrait.",

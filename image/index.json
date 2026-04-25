@@ -1,0 +1,50 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:image",
+  "@type": "rdf:Property",
+  "rdfs:label": "image",
+  "rdfs:comment": "An image of the subject — typically a representative picture (avatar, cover, depiction).",
+  "owl:sameAs": "https://schema.org/image",
+  "rdfs:seeAlso": [
+    "urn:solid:Image",
+    "http://xmlns.com/foaf/0.1/img",
+    "http://xmlns.com/foaf/0.1/depiction"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Image"
+  ],
+  "status": "stable",
+  "added": "2026-04-25",
+  "notes": "Property form paired with the `urn:solid:Image` class. Maps to `schema:image`, the most widely deployed property for representative pictures (used by Open Graph consumers, search engines, and most social platforms). For the FOAF tradition, `foaf:img` (account photo) and `foaf:depiction` (any depiction) are related; pick `image` when matching schema.org / OGP semantics, `foaf:img` for explicit FOAF profile usage.",
+  "examples": [
+    {
+      "title": "Person with an avatar image",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:image": { "@id": "https://example.org/alice/avatar.jpg" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://schema.org/image"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-25T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term — property form completing the Image/image case-pair (Image is foaf:Image; image is schema:image)."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

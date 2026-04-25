@@ -352,6 +352,7 @@
   "http://www.w3.org/ns/activitystreams#hreflang": "urn:solid:hreflang",
   "https://www.w3.org/ns/activitystreams#icon": "urn:solid:icon",
   "http://purl.org/dc/terms/identifier": "urn:solid:identifier",
+  "https://schema.org/image": "urn:solid:image",
   "http://xmlns.com/foaf/0.1/img": "urn:solid:img",
   "http://www.w3.org/ns/dcat#inDataset": "urn:solid:inDataset",
   "https://schema.org/inLanguage": "urn:solid:inLanguage",
