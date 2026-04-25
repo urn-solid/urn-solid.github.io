@@ -43,7 +43,7 @@ For each IRI in user data:
 When the user has unmapped IRIs they'd like added:
 
 1. Confirm with the user.
-2. Open an issue at https://github.com/urn-solid/urn-solid.com/issues with the IRI, a proposed label, and a one-sentence definition.
+2. Open an issue at https://github.com/urn-solid/urn-solid.github.io/issues with the IRI, a proposed label, and a one-sentence definition.
 3. For batch proposals, attach the list as JSON.
 
 ## Writing JSON-LD that uses urn-solid
@@ -78,7 +78,7 @@ Every term carries `notToBeConfusedWith`. Read it before picking between similar
 - Schema: https://urn-solid.com/schema/term.schema.json
 - Context: https://urn-solid.com/context.jsonld
 - Site: https://urn-solid.com/
-- Repo: https://github.com/urn-solid/urn-solid.com
+- Repo: https://github.com/urn-solid/urn-solid.github.io
 
 ## Related skills
 

@@ -32,6 +32,7 @@ const htmlShell = (term, jsonText) => {
   const id = term["@id"];
   const name = id.replace(/^urn:solid:/, "");
   const comment = (term["rdfs:comment"] || "").replace(/"/g, "&quot;");
+  const absUrl = `https://urn-solid.com/${name}/`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,8 +41,26 @@ const htmlShell = (term, jsonText) => {
 <meta name="description" content="${comment}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
-<link rel="canonical" href="/${name}/">
+<link rel="canonical" href="${absUrl}">
 <link rel="alternate" type="application/ld+json" href="/${name}/index.json">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="urn-solid">
+<meta property="og:title" content="${id}">
+<meta property="og:description" content="${comment}">
+<meta property="og:url" content="${absUrl}">
+<meta property="og:image" content="https://urn-solid.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${id}">
+<meta name="twitter:description" content="${comment}">
+<meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
+
 <script type="application/ld+json">
 ${escapeForScriptTag(jsonText)}
 </script>

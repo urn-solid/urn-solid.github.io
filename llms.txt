@@ -22,7 +22,7 @@ Classes use PascalCase (`Person`, `Agent`); properties use camelCase (`name`). N
 
 1. **Resolve a term**: fetch `https://urn-solid.com/<Name>/` (HTML with JSON-LD inlined) or `https://urn-solid.com/<Name>/index.json` (raw JSON-LD).
 2. **Map foreign RDF to urn:solid**: for each IRI in your data, search `corpus.jsonl` for a term whose `owl:sameAs` or `rdfs:seeAlso` matches.
-3. **Find unmapped terms**: IRIs that don't match anything in the corpus are candidates for new `urn:solid:` terms — open an issue at https://github.com/urn-solid/urn-solid.com/issues.
+3. **Find unmapped terms**: IRIs that don't match anything in the corpus are candidates for new `urn:solid:` terms — open an issue at https://github.com/urn-solid/urn-solid.github.io/issues.
 4. **Disambiguate**: each term lists `notToBeConfusedWith` — use it when choosing between similar terms.
 
 ## Shape of a term (abbreviated)
