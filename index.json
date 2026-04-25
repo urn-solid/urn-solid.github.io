@@ -881,6 +881,13 @@
     "status": "stable",
     "path": "/Public/"
   },
+  "urn:solid:PublicDocument": {
+    "label": "Public document",
+    "description": "A document registered in the user's public TypeIndex — discoverable by anyone who can read the TypeIndex.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/PublicDocument/"
+  },
   "urn:solid:Question": {
     "label": "Question",
     "description": "A question being asked — typically with one or more proposed answers (a poll).",

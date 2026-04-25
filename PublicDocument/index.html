@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:PublicDocument — urn-solid</title>
+<meta name="description" content="A document registered in the user's public TypeIndex — discoverable by anyone who can read the TypeIndex.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/PublicDocument/">
+<link rel="alternate" type="application/ld+json" href="/PublicDocument/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:PublicDocument",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Public document",
+  "rdfs:comment": "A document registered in the user's public TypeIndex — discoverable by anyone who can read the TypeIndex.",
+  "owl:sameAs": "http://w3id.org/solidos#PublicDocument",
+  "rdfs:seeAlso": [
+    "urn:solid:publicTypeIndex",
+    "urn:solid:TypeRegistration",
+    "urn:solid:PrivateDocument"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:PrivateDocument"
+  ],
+  "status": "stable",
+  "added": "2026-04-22",
+  "notes": "Marker type for documents that should appear in (or be reachable from) a `solid:publicTypeIndex`. Pairs with `urn:solid:PrivateDocument`. Concrete instance documents typically also carry a domain-specific class (`schema:Article`, `wf:Tracker`, etc.).",
+  "examples": [
+    {
+      "title": "Public profile page registered in the TypeIndex",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/about-me.jsonld",
+        "@type": [
+          "urn:solid:PublicDocument",
+          "schema:AboutPage"
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://mashlib.github.io/solidos/vocab.jsonld"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-22T11:30:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

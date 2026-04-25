@@ -125,6 +125,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property": "urn:solid:Property",
   "http://purl.org/dc/terms/ProvenanceStatement": "urn:solid:ProvenanceStatement",
   "https://www.w3.org/ns/activitystreams#Public": "urn:solid:Public",
+  "http://w3id.org/solidos#PublicDocument": "urn:solid:PublicDocument",
   "https://www.w3.org/ns/activitystreams#Question": "urn:solid:Question",
   "http://www.w3.org/ns/prov#Quotation": "urn:solid:Quotation",
   "http://www.w3.org/ns/ldp#RDFSource": "urn:solid:RDFSource",
