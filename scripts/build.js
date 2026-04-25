@@ -62,14 +62,24 @@ ${escapeForScriptTag(jsonText)}
 `;
 };
 
-const assertNoCaseCollisions = (names) => {
+// Case-sensitive filesystem assumed. RDF vocabularies routinely distinguish
+// `Type` (PascalCase class) from `predicate` (camelCase property) — both are
+// legitimate term names and we accept both. Linux and web URLs are
+// case-sensitive; macOS / Windows contributors need a case-sensitive
+// filesystem (APFS case-sensitive volume, WSL2, devcontainer, etc.).
+// See CONTRIBUTING.md.
+//
+// We still WARN on collisions so the build log surfaces them — useful for
+// spotting accidental duplicates in PR review — but no longer fail the build.
+const reportCaseCollisions = (names) => {
   const lower = new Map();
   for (const n of names) {
     const key = n.toLowerCase();
     if (lower.has(key) && lower.get(key) !== n) {
-      throw new Error(`Case collision: "${lower.get(key)}" and "${n}" differ only in case.`);
+      console.warn(`[build] case-collision warning: "${lower.get(key)}" and "${n}" differ only in case (intentional Class/property pairs are fine; check this isn't an accidental duplicate)`);
+    } else {
+      lower.set(key, n);
     }
-    lower.set(key, n);
   }
 };
 
@@ -80,7 +90,7 @@ const main = () => {
     .filter(isTermDir)
     .sort();
 
-  assertNoCaseCollisions(names);
+  reportCaseCollisions(names);
 
   const index = {};
   const reverseIndex = {};

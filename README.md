@@ -41,6 +41,8 @@ npm run validate   # JSON Schema check on every term
 npm run build      # regenerate HTML wrappers, index.json, corpus.jsonl
 ```
 
+**Filesystem note**: term directories are case-sensitive (`View/` and `view/` are distinct — the class and the property). Linux, WSL2, and CI handle this natively. macOS and Windows default to case-insensitive filesystems and will silently merge such pairs on checkout. Contributors on those platforms should use a case-sensitive APFS volume, WSL2, or a devcontainer.
+
 ## Proposing new terms
 
 Open an issue with the proposed identifier (`urn:solid:<Name>`), a one-sentence definition, and the canonical URI it maps to. LLM-driven curation batches are welcome — include provenance.
