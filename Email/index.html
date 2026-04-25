@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Email — urn-solid</title>
+<meta name="description" content="An email address — the value class for `urn:solid:hasEmail` when the email is described as a typed resource rather than a bare `mailto:` IRI.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Email/">
+<link rel="alternate" type="application/ld+json" href="/Email/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Email",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Email",
+  "rdfs:comment": "An email address — the value class for `urn:solid:hasEmail` when the email is described as a typed resource rather than a bare `mailto:` IRI.",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#Email",
+  "rdfs:seeAlso": [
+    "urn:solid:hasEmail",
+    "http://www.w3.org/2006/vcard/ns#value",
+    "http://www.w3.org/2006/vcard/ns#Home",
+    "http://www.w3.org/2006/vcard/ns#Work"
+  ],
+  "status": "stable",
+  "added": "2026-04-25",
+  "notes": "Class form pairing with the existing `hasEmail` property. vCard's two encodings: (1) `hasEmail` directly to a `mailto:` IRI for simple cases, or (2) `hasEmail` to an `Email`-typed resource with `vcard:value` (mailto IRI) plus role classes like `Home`/`Work` for typed addresses. Use this class for the typed-resource form.",
+  "examples": [
+    {
+      "title": "Person with a typed work email",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:hasEmail": {
+          "@type": [
+            "urn:solid:Email",
+            "http://www.w3.org/2006/vcard/ns#Work"
+          ],
+          "http://www.w3.org/2006/vcard/ns#value": { "@id": "mailto:alice@example.com" }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#Email"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-25T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term — Class form pairing with the existing hasEmail property."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

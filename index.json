@@ -405,6 +405,13 @@
     "status": "stable",
     "path": "/EducationalOrganization/"
   },
+  "urn:solid:Email": {
+    "label": "Email",
+    "description": "An email address — the value class for `urn:solid:hasEmail` when the email is described as a typed resource rather than a bare `mailto:` IRI.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Email/"
+  },
   "urn:solid:EmailMessage": {
     "label": "EmailMessage",
     "description": "An email message — represents a single sent or received email as RDF.",

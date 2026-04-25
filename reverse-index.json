@@ -57,6 +57,7 @@
   "http://www.w3.org/ns/dcat#Distribution": "urn:solid:Distribution",
   "http://xmlns.com/foaf/0.1/Document": "urn:solid:Document",
   "https://schema.org/EducationalOrganization": "urn:solid:EducationalOrganization",
+  "http://www.w3.org/2006/vcard/ns#Email": "urn:solid:Email",
   "https://schema.org/EmailMessage": "urn:solid:EmailMessage",
   "http://www.w3.org/ns/prov#EmptyCollection": "urn:solid:EmptyCollection",
   "http://www.w3.org/ns/prov#Entity": "urn:solid:Entity",
