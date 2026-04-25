@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:contentMap",
   "@type": "rdf:Property",
   "rdfs:label": "contentMap",
@@ -17,7 +17,7 @@
     {
       "title": "A bilingual Note",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/notes/3",
         "@type": "urn:solid:Note",
         "urn:solid:contentMap": {

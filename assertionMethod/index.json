@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:assertionMethod",
   "@type": "rdf:Property",
   "rdfs:label": "assertionMethod",
@@ -19,7 +19,7 @@
     {
       "title": "DID Document with an assertion key",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "did:example:abc",
         "@type": "urn:solid:DIDDocument",
         "urn:solid:assertionMethod": [{ "@id": "did:example:abc#key-2" }]

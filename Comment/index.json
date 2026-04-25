@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Comment",
   "@type": "rdfs:Class",
   "rdfs:label": "Comment",
@@ -19,7 +19,7 @@
     {
       "title": "Comment on an article",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello/comments/1",
         "@type": "urn:solid:Comment",
         "urn:solid:author": { "@id": "https://example.org/bob#me" },

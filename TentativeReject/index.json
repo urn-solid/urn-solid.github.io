@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:TentativeReject",
   "@type": "rdfs:Class",
   "rdfs:label": "TentativeReject",
@@ -20,7 +20,7 @@
     {
       "title": "Tentatively declining an invitation",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/activities/probably-no",
         "@type": "urn:solid:TentativeReject",
         "urn:solid:actor": { "@id": "https://alice.example.org/profile/card#me" },

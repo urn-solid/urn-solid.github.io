@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:domain",
   "@type": "rdf:Property",
   "rdfs:label": "domain",
@@ -22,7 +22,7 @@
     {
       "title": "Property declaring its subject type",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "urn:solid:agent",
         "@type": "urn:solid:Property",
         "urn:solid:domain": { "@id": "urn:solid:Authorization" }

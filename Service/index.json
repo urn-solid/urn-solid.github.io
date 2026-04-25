@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Service",
   "@type": "rdfs:Class",
   "rdfs:label": "Service",
@@ -20,7 +20,7 @@
     {
       "title": "An archive relay as a Service",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://archive.example.org/relay",
         "@type": "urn:solid:Service",
         "urn:solid:name": "Wonderland Archive Relay",

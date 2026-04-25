@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:duration",
   "@type": "rdf:Property",
   "rdfs:label": "duration",
@@ -20,7 +20,7 @@
     {
       "title": "Audio object with a duration",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/audio/podcast-42",
         "@type": "https://www.w3.org/ns/activitystreams#Audio",
         "urn:solid:duration": "PT45M"

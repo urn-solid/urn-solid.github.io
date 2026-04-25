@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:width",
   "@type": "rdf:Property",
   "rdfs:label": "width",
@@ -22,7 +22,7 @@
     {
       "title": "A Video with explicit dimensions",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/videos/clip.mp4",
         "@type": "urn:solid:Video",
         "urn:solid:width": 1280,

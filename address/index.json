@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:address",
   "@type": "rdf:Property",
   "rdfs:label": "address",
@@ -19,7 +19,7 @@
     {
       "title": "Organization with a postal address",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/acme",
         "@type": "urn:solid:Organization",
         "urn:solid:address": {

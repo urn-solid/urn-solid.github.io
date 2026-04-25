@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:VerifiableCredential",
   "@type": "rdfs:Class",
   "rdfs:label": "VerifiableCredential",
@@ -18,7 +18,7 @@
     {
       "title": "A minimal VerifiableCredential",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/credentials/3732",
         "@type": "urn:solid:VerifiableCredential",
         "urn:solid:issuer": { "@id": "https://example.edu/issuers/14" },

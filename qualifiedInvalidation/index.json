@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:qualifiedInvalidation",
   "@type": "rdf:Property",
   "rdfs:label": "qualifiedInvalidation",
@@ -19,7 +19,7 @@
     {
       "title": "Entity with a qualified Invalidation",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/records/2020-archive",
         "@type": "urn:solid:Entity",
         "urn:solid:qualifiedInvalidation": {

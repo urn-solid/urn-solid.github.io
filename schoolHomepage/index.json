@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:schoolHomepage",
   "@type": "rdf:Property",
   "rdfs:label": "schoolHomepage",
@@ -18,7 +18,7 @@
     {
       "title": "Person with a school homepage",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:schoolHomepage": { "@id": "https://www.ox.ac.uk/" }

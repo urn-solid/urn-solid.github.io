@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Bookmark",
   "@type": "rdfs:Class",
   "rdfs:label": "Bookmark",
@@ -17,7 +17,7 @@
     {
       "title": "A bookmark with tags",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/bookmarks/solid",
         "@type": "urn:solid:Bookmark",
         "http://purl.org/dc/terms/title": "Solid Project",

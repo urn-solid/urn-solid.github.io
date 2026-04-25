@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:knows",
   "@type": "rdf:Property",
   "rdfs:label": "knows",
@@ -17,7 +17,7 @@
     {
       "title": "Alice knows Bob",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:knows": { "@id": "https://example.org/bob#me" }

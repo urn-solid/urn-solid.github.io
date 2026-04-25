@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:accessTo",
   "@type": "rdf:Property",
   "rdfs:label": "accessTo",
@@ -21,7 +21,7 @@
     {
       "title": "Authorization scoped to a single resource",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/notes/.acl#alice",
         "@type": "urn:solid:Authorization",
         "http://www.w3.org/ns/auth/acl#agent": { "@id": "https://alice.example.org/profile/card#me" },

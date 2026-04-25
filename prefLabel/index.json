@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:prefLabel",
   "@type": "rdf:Property",
   "rdfs:label": "prefLabel",
@@ -22,7 +22,7 @@
     {
       "title": "Multilingual concept label",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/topics/cat-theory",
         "@type": "urn:solid:Concept",
         "urn:solid:prefLabel": [

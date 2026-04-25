@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:description",
   "@type": "rdf:Property",
   "rdfs:label": "description",
@@ -21,7 +21,7 @@
     {
       "title": "Document with description",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello",
         "@type": "urn:solid:Document",
         "urn:solid:description": "An introduction to the urn-solid registry and how to use it."

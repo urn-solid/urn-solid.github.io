@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:sha1",
   "@type": "rdf:Property",
   "rdfs:label": "sha1",
@@ -16,8 +16,8 @@
     {
       "title": "Document with content hash",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
-        "@id": "https://urn-solid.github.io/corpus.jsonl",
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://urn-solid.com/corpus.jsonl",
         "@type": "urn:solid:Document",
         "urn:solid:sha1": "abc1234567890def1234567890abcdef12345678"
       }

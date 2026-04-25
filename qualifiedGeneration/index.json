@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:qualifiedGeneration",
   "@type": "rdf:Property",
   "rdfs:label": "qualifiedGeneration",
@@ -19,7 +19,7 @@
     {
       "title": "Entity with a qualified Generation",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/dataset/v3",
         "@type": "urn:solid:Entity",
         "urn:solid:qualifiedGeneration": {

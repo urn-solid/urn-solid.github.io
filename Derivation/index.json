@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Derivation",
   "@type": "rdfs:Class",
   "rdfs:label": "Derivation",
@@ -17,7 +17,7 @@
     {
       "title": "A qualified derivation",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/derivations/translation-1",
         "@type": "urn:solid:Derivation",
         "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/posts/hello" },

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Post",
   "@type": "rdfs:Class",
   "rdfs:label": "Post",
@@ -22,7 +22,7 @@
     {
       "title": "A named position in an organization",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/acme/posts/cto",
         "@type": "urn:solid:Post",
         "urn:solid:label": "Chief Technology Officer",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:someValuesFrom",
   "@type": "rdf:Property",
   "rdfs:label": "someValuesFrom",
@@ -22,7 +22,7 @@
     {
       "title": "A class requiring at least one Person author",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
         "urn:solid:onProperty": { "@id": "urn:solid:author" },
         "urn:solid:someValuesFrom": { "@id": "urn:solid:Person" }

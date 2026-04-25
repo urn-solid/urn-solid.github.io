@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Place",
   "@type": "rdfs:Class",
   "rdfs:label": "Place",
@@ -17,7 +17,7 @@
     {
       "title": "A landmark",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/places/big-ben",
         "@type": "urn:solid:Place",
         "urn:solid:name": "Big Ben",

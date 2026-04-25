@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:extent",
   "@type": "rdf:Property",
   "rdfs:label": "extent",
@@ -15,7 +15,7 @@
     {
       "title": "Book with extent",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/books/wonderland",
         "@type": "urn:solid:Book",
         "urn:solid:extent": "192 pages"

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:updated",
   "@type": "rdf:Property",
   "rdfs:label": "updated",
@@ -21,7 +21,7 @@
     {
       "title": "Note with publication and update timestamps",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/notes/abc",
         "@type": "urn:solid:Note",
         "urn:solid:published": "2026-04-18T10:00:00Z",

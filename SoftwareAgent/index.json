@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:SoftwareAgent",
   "@type": "rdfs:Class",
   "rdfs:label": "SoftwareAgent",
@@ -21,8 +21,8 @@
     {
       "title": "A curation script as a SoftwareAgent",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
-        "@id": "https://urn-solid.github.io/agents/curate-next",
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://urn-solid.com/agents/curate-next",
         "@type": "urn:solid:SoftwareAgent",
         "urn:solid:name": "claude-curate-next"
       }

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:subject",
   "@type": "rdf:Property",
   "rdfs:label": "subject",
@@ -20,7 +20,7 @@
     {
       "title": "Article tagged with subjects",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/jsonld-intro",
         "@type": "urn:solid:Document",
         "urn:solid:subject": ["JSON-LD", "RDF", "linked data"]

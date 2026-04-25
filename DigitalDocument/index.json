@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:DigitalDocument",
   "@type": "rdfs:Class",
   "rdfs:label": "DigitalDocument",
@@ -21,7 +21,7 @@
     {
       "title": "A PDF document",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/docs/spec.pdf",
         "@type": "urn:solid:DigitalDocument",
         "urn:solid:name": "v2 spec",

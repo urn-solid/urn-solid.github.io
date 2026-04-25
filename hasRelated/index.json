@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hasRelated",
   "@type": "rdf:Property",
   "rdfs:label": "hasRelated",
@@ -21,7 +21,7 @@
     {
       "title": "vCard pointing at a related contact",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/cards/alice",
         "@type": "urn:solid:VCard",
         "urn:solid:hasRelated": { "@id": "https://example.org/cards/bob" }

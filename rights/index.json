@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:rights",
   "@type": "rdf:Property",
   "rdfs:label": "rights",
@@ -19,7 +19,7 @@
     {
       "title": "Document with a rights statement",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/photos/sunset.jpg",
         "@type": "urn:solid:Image",
         "urn:solid:rights": "Copyright 2026 Alice Liddell. All rights reserved."

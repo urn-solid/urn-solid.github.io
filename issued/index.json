@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:issued",
   "@type": "rdf:Property",
   "rdfs:label": "issued",
@@ -21,7 +21,7 @@
     {
       "title": "Specification with a publication date",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/specs/v1",
         "@type": "urn:solid:Document",
         "urn:solid:created": "2026-03-12",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:topic_interest",
   "@type": "rdf:Property",
   "rdfs:label": "topic_interest",
@@ -20,7 +20,7 @@
     {
       "title": "Person interested in a project",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:topic_interest": { "@id": "https://example.org/projects/urn-solid" }

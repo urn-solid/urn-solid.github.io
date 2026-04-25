@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:atTime",
   "@type": "rdf:Property",
   "rdfs:label": "atTime",
@@ -18,7 +18,7 @@
     {
       "title": "Qualified generation with a timestamp",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/generations/release-v2",
         "@type": "http://www.w3.org/ns/prov#Generation",
         "urn:solid:atTime": "2026-04-18T18:00:00Z"

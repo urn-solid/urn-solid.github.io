@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:postIn",
   "@type": "rdf:Property",
   "rdfs:label": "postIn",
@@ -19,7 +19,7 @@
     {
       "title": "A Post and the Organization it sits in",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/acme/posts/cto",
         "@type": "urn:solid:Post",
         "urn:solid:postIn": { "@id": "https://example.org/acme#org" }

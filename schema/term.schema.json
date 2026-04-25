@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://urn-solid.github.io/schema/term.schema.json",
+  "$id": "https://urn-solid.com/schema/term.schema.json",
   "title": "urn:solid term",
   "description": "Canonical shape of a single urn:solid term file. Source of truth lives in terms/<Name>/index.json.",
   "type": "object",
@@ -10,7 +10,7 @@
     "@context": {
       "description": "JSON-LD context. Must reference the canonical urn-solid context.",
       "type": "string",
-      "const": "https://urn-solid.github.io/context.jsonld"
+      "const": "https://urn-solid.com/context.jsonld"
     },
     "@id": {
       "description": "The urn:solid: identifier for this term.",

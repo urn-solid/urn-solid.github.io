@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:familyName",
   "@type": "rdf:Property",
   "rdfs:label": "familyName",
@@ -22,7 +22,7 @@
     {
       "title": "Person with structured name",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "http://xmlns.com/foaf/0.1/givenName": "Alice",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hadGeneration",
   "@type": "rdf:Property",
   "rdfs:label": "hadGeneration",
@@ -18,7 +18,7 @@
     {
       "title": "Qualified Usage citing the source Generation",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/usage/abc",
         "@type": "http://www.w3.org/ns/prov#Usage",
         "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/dataset/v3" },

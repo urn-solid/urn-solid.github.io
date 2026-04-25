@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:inDataset",
   "@type": "rdf:Property",
   "rdfs:label": "inDataset",
@@ -20,7 +20,7 @@
     {
       "title": "A Distribution pointing back at its Dataset",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://data.example.org/dataset/main/dist/csv",
         "@type": "urn:solid:Distribution",
         "urn:solid:inDataset": { "@id": "https://data.example.org/dataset/main" }

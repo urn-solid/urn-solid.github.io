@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:oneOf",
   "@type": "rdf:Property",
   "rdfs:label": "oneOf",
@@ -21,7 +21,7 @@
     {
       "title": "Single-choice Question",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/polls/1",
         "@type": "urn:solid:Question",
         "urn:solid:content": "Pick one:",

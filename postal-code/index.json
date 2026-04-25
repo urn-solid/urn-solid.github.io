@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:postal-code",
   "@type": "rdf:Property",
   "rdfs:label": "postal-code",
@@ -16,7 +16,7 @@
     {
       "title": "Address with postal code",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/addresses/wonderland-hq",
         "@type": "http://www.w3.org/2006/vcard/ns#Address",
         "urn:solid:locality": "London",

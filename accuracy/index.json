@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:accuracy",
   "@type": "rdf:Property",
   "rdfs:label": "accuracy",
@@ -20,7 +20,7 @@
     {
       "title": "A Place with GPS-grade accuracy",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/places/london-eye",
         "@type": "urn:solid:Place",
         "urn:solid:latitude": 51.5033,

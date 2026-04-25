@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:proof",
   "@type": "rdf:Property",
   "rdfs:label": "proof",
@@ -18,7 +18,7 @@
     {
       "title": "A credential with a proof block",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/credentials/3732",
         "@type": "urn:solid:VerifiableCredential",
         "urn:solid:proof": {

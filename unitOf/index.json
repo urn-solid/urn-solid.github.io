@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:unitOf",
   "@type": "rdf:Property",
   "rdfs:label": "unitOf",
@@ -21,7 +21,7 @@
     {
       "title": "Engineering team pointing at parent",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/orgs/acme/eng",
         "@type": "urn:solid:OrganizationalUnit",
         "urn:solid:unitOf": { "@id": "https://example.org/orgs/acme-ltd" }

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:InverseFunctionalProperty",
   "@type": "rdfs:Class",
   "rdfs:label": "InverseFunctionalProperty",
@@ -20,7 +20,7 @@
     {
       "title": "foaf:mbox as inverse-functional",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "http://xmlns.com/foaf/0.1/mbox",
         "@type": "urn:solid:InverseFunctionalProperty"
       }

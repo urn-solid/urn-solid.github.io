@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Like",
   "@type": "rdfs:Class",
   "rdfs:label": "Like",
@@ -16,7 +16,7 @@
     {
       "title": "Alice likes a note",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/likes/789",
         "@type": "urn:solid:Like",
         "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },

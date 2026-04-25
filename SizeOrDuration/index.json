@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:SizeOrDuration",
   "@type": "rdfs:Class",
   "rdfs:label": "SizeOrDuration",
@@ -16,7 +16,7 @@
     {
       "title": "A SizeOrDuration resource",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/extents/wonderland-runtime",
         "@type": "urn:solid:SizeOrDuration",
         "urn:solid:name": "1h 45min"

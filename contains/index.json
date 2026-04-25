@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:contains",
   "@type": "rdf:Property",
   "rdfs:label": "contains",
@@ -19,7 +19,7 @@
     {
       "title": "Container listing its members",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/notes/",
         "@type": "urn:solid:Container",
         "urn:solid:contains": [

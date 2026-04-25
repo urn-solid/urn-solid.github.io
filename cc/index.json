@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:cc",
   "@type": "rdf:Property",
   "rdfs:label": "cc",
@@ -19,7 +19,7 @@
     {
       "title": "Public note delivered to followers",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/notes/abc",
         "@type": "urn:solid:Note",
         "urn:solid:content": "Hello!",

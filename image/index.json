@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:image",
   "@type": "rdf:Property",
   "rdfs:label": "image",
@@ -20,7 +20,7 @@
     {
       "title": "Person with an avatar image",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:image": { "@id": "https://example.org/alice/avatar.jpg" }

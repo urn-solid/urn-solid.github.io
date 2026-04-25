@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Project",
   "@type": "rdfs:Class",
   "rdfs:label": "Project",
@@ -16,11 +16,11 @@
     {
       "title": "A project with a current participant",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/projects/urn-solid",
         "@type": "urn:solid:Project",
         "urn:solid:name": "urn-solid",
-        "urn:solid:homepage": { "@id": "https://urn-solid.github.io/" }
+        "urn:solid:homepage": { "@id": "https://urn-solid.com/" }
       }
     }
   ],

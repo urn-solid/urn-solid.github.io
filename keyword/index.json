@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:keyword",
   "@type": "rdf:Property",
   "rdfs:label": "keyword",
@@ -19,7 +19,7 @@
     {
       "title": "Dataset with keywords",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/datasets/wonderland-2026",
         "@type": "urn:solid:Dataset",
         "urn:solid:keyword": ["climate", "wonderland", "annual report"]

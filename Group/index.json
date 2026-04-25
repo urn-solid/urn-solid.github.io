@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Group",
   "@type": "rdfs:Class",
   "rdfs:label": "Group",
@@ -19,7 +19,7 @@
     {
       "title": "A simple Group",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/groups/admins",
         "@type": "urn:solid:Group",
         "urn:solid:name": "Admins",

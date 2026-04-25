@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Announce",
   "@type": "rdfs:Class",
   "rdfs:label": "Announce",
@@ -20,7 +20,7 @@
     {
       "title": "Alice boosts Bob's note",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/activities/boost-1",
         "@type": "urn:solid:Announce",
         "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },

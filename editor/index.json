@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:editor",
   "@type": "rdf:Property",
   "rdfs:label": "editor",
@@ -21,7 +21,7 @@
     {
       "title": "Anthology with author and editor",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/books/anthology-2026",
         "@type": "urn:solid:Book",
         "urn:solid:author": { "@id": "https://example.org/alice#me" },

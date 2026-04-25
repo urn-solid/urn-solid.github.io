@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:WebPage",
   "@type": "rdfs:Class",
   "rdfs:label": "WebPage",
@@ -19,7 +19,7 @@
     {
       "title": "A simple web page",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/about",
         "@type": "urn:solid:WebPage",
         "urn:solid:name": "About us",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:WebSite",
   "@type": "rdfs:Class",
   "rdfs:label": "WebSite",
@@ -19,11 +19,11 @@
     {
       "title": "A website hosting many pages",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
-        "@id": "https://urn-solid.github.io/",
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://urn-solid.com/",
         "@type": "urn:solid:WebSite",
         "urn:solid:name": "urn-solid",
-        "urn:solid:url": { "@id": "https://urn-solid.github.io/" }
+        "urn:solid:url": { "@id": "https://urn-solid.com/" }
       }
     }
   ],

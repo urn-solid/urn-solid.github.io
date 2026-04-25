@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:issuer",
   "@type": "rdf:Property",
   "rdfs:label": "issuer",
@@ -18,7 +18,7 @@
     {
       "title": "A credential with a structured issuer",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/credentials/3732",
         "@type": "urn:solid:VerifiableCredential",
         "urn:solid:issuer": {

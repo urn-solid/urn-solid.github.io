@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:subPropertyOf",
   "@type": "rdf:Property",
   "rdfs:label": "subPropertyOf",
@@ -20,7 +20,7 @@
     {
       "title": "wasRevisionOf is a subproperty of wasDerivedFrom",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "urn:solid:wasRevisionOf",
         "@type": "urn:solid:Property",
         "urn:solid:subPropertyOf": { "@id": "urn:solid:wasDerivedFrom" }

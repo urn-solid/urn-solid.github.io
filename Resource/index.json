@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Resource",
   "@type": "rdfs:Class",
   "rdfs:label": "Resource",
@@ -17,7 +17,7 @@
     {
       "title": "An LDP resource",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/photos/sunset.jpg",
         "@type": "urn:solid:Resource"
       }

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:keywords",
   "@type": "rdf:Property",
   "rdfs:label": "keywords",
@@ -20,7 +20,7 @@
     {
       "title": "Article tagged with keywords",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/jsonld-intro",
         "@type": "urn:solid:Article",
         "urn:solid:keywords": ["JSON-LD", "RDF", "linked data"]

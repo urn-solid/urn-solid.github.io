@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Attribution",
   "@type": "rdfs:Class",
   "rdfs:label": "Attribution",
@@ -17,7 +17,7 @@
     {
       "title": "Photo attributed to a photographer",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/photos/sunset-attribution",
         "@type": "urn:solid:Attribution",
         "http://www.w3.org/ns/prov#agent": { "@id": "https://example.org/alice#me" },

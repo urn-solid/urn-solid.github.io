@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:qualifiedDerivation",
   "@type": "rdf:Property",
   "rdfs:label": "qualifiedDerivation",
@@ -18,7 +18,7 @@
     {
       "title": "Qualified derivation for a translation",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello-de",
         "@type": "urn:solid:Entity",
         "urn:solid:wasDerivedFrom": { "@id": "https://example.org/posts/hello" },

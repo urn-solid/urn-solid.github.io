@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:inverseOf",
   "@type": "rdf:Property",
   "rdfs:label": "inverseOf",
@@ -18,7 +18,7 @@
     {
       "title": "isPartOf and hasPart as inverses",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "urn:solid:isPartOf",
         "urn:solid:inverseOf": { "@id": "urn:solid:hasPart" }
       }

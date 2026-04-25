@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:definition",
   "@type": "rdf:Property",
   "rdfs:label": "definition",
@@ -23,7 +23,7 @@
     {
       "title": "Concept with a definition",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/topics/cat-theory",
         "@type": "urn:solid:Concept",
         "urn:solid:prefLabel": "Category theory",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:publications",
   "@type": "rdf:Property",
   "rdfs:label": "publications",
@@ -18,7 +18,7 @@
     {
       "title": "Person pointing at their publication list",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:publications": { "@id": "https://orcid.org/0000-0000-0000-0001" }

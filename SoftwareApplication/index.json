@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:SoftwareApplication",
   "@type": "rdfs:Class",
   "rdfs:label": "SoftwareApplication",
@@ -22,7 +22,7 @@
     {
       "title": "A simple software application",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/apps/wonderland-editor",
         "@type": "urn:solid:SoftwareApplication",
         "urn:solid:name": "Wonderland Editor",

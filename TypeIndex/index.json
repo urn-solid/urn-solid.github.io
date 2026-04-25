@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:TypeIndex",
   "@type": "rdfs:Class",
   "rdfs:label": "TypeIndex",
@@ -17,7 +17,7 @@
     {
       "title": "WebID pointing at type indexes",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/card#me",
         "@type": "urn:solid:Person",
         "http://www.w3.org/ns/solid/terms#publicTypeIndex": { "@id": "https://alice.example.org/settings/publicTypeIndex.ttl" },

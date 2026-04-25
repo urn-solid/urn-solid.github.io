@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:endTime",
   "@type": "rdf:Property",
   "rdfs:label": "endTime",
@@ -21,7 +21,7 @@
     {
       "title": "Conference session with end time",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/events/keynote",
         "@type": "urn:solid:Event",
         "urn:solid:startTime": "2026-04-18T09:00:00Z",

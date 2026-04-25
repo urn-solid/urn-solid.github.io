@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Hashtag",
   "@type": "rdfs:Class",
   "rdfs:label": "Hashtag",
@@ -21,7 +21,7 @@
     {
       "title": "A Note tagged with a Hashtag",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/notes/1",
         "@type": "urn:solid:Note",
         "urn:solid:content": "Just shipped the new feature! #solid",

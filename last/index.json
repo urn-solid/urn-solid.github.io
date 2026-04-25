@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:last",
   "@type": "rdf:Property",
   "rdfs:label": "last",
@@ -19,7 +19,7 @@
     {
       "title": "Paginated outbox with first and last",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/outbox",
         "@type": "http://www.w3.org/ns/activitystreams#OrderedCollection",
         "urn:solid:totalItems": 5320,

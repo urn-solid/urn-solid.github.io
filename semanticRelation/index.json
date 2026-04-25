@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:semanticRelation",
   "@type": "rdf:Property",
   "rdfs:label": "semanticRelation",
@@ -19,7 +19,7 @@
     {
       "title": "Generic conceptual link",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/topics/cat-theory",
         "@type": "urn:solid:Concept",
         "urn:solid:semanticRelation": { "@id": "https://example.org/vocab/topics/algebra" }

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:inReplyTo",
   "@type": "rdf:Property",
   "rdfs:label": "inReplyTo",
@@ -16,7 +16,7 @@
     {
       "title": "Reply pointing at its parent note",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/notes/reply-1",
         "@type": "urn:solid:Note",
         "https://www.w3.org/ns/activitystreams#content": "Agreed!",

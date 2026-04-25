@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Organization",
   "@type": "rdfs:Class",
   "rdfs:label": "Organization",
@@ -20,7 +20,7 @@
     {
       "title": "A simple organization",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/acme",
         "@type": "urn:solid:Organization",
         "urn:solid:name": "Acme Corp",

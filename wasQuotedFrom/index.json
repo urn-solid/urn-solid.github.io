@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:wasQuotedFrom",
   "@type": "rdf:Property",
   "rdfs:label": "wasQuotedFrom",
@@ -23,7 +23,7 @@
     {
       "title": "An article quoting a tweet",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/article/123",
         "@type": "urn:solid:Entity",
         "urn:solid:wasQuotedFrom": { "@id": "https://twitter.com/example/status/456" }

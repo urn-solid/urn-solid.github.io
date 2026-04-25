@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:CreativeWork",
   "@type": "rdfs:Class",
   "rdfs:label": "CreativeWork",
@@ -19,7 +19,7 @@
     {
       "title": "A generic creative work",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/works/42",
         "@type": "urn:solid:CreativeWork",
         "urn:solid:name": "Untitled",

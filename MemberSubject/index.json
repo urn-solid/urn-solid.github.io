@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:MemberSubject",
   "@type": "rdfs:Class",
   "rdfs:label": "MemberSubject",
@@ -16,7 +16,7 @@
     {
       "title": "IndirectContainer using MemberSubject",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/abc/likes/",
         "@type": "urn:solid:IndirectContainer",
         "urn:solid:insertedContentRelation": { "@id": "http://www.w3.org/ns/ldp#MemberSubject" }

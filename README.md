@@ -4,7 +4,7 @@ The `urn:solid` namespace provides location-independent identifiers for Solid ap
 
 This repo is the canonical registry for the vocabulary-term portion of that namespace — curated, LLM-native, JSON-LD throughout.
 
-Canonical site: **https://urn-solid.github.io/** · Spec: **https://urn-solid.github.io/spec/**
+Canonical site: **https://urn-solid.com/** · Spec: **https://urn-solid.com/spec/**
 
 ## What this is
 
@@ -55,4 +55,4 @@ Projects formally aligning with `urn:solid:` are listed in [`docs/adopters/`](./
 
 See [`llms.txt`](./llms.txt) and [`SKILL.md`](./SKILL.md).
 
-The shortest possible integration: one fetch of [`/corpus.jsonl`](https://urn-solid.github.io/corpus.jsonl).
+The shortest possible integration: one fetch of [`/corpus.jsonl`](https://urn-solid.com/corpus.jsonl).

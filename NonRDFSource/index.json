@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:NonRDFSource",
   "@type": "rdfs:Class",
   "rdfs:label": "NonRDFSource",
@@ -19,7 +19,7 @@
     {
       "title": "A binary image stored in a pod",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/photos/sunset.jpg",
         "@type": "urn:solid:NonRDFSource",
         "urn:solid:format": "image/jpeg"

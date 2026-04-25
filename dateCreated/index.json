@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:dateCreated",
   "@type": "rdf:Property",
   "rdfs:label": "dateCreated",
@@ -21,7 +21,7 @@
     {
       "title": "Article with creation date",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello",
         "@type": "urn:solid:Article",
         "urn:solid:dateCreated": "2026-04-18"

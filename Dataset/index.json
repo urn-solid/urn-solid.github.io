@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Dataset",
   "@type": "rdfs:Class",
   "rdfs:label": "Dataset",
@@ -17,7 +17,7 @@
     {
       "title": "A simple dataset",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/datasets/wonderland-2026",
         "@type": "urn:solid:Dataset",
         "urn:solid:name": "Wonderland Climate Data 2026",

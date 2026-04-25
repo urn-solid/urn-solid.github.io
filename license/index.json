@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:license",
   "@type": "rdf:Property",
   "rdfs:label": "license",
@@ -17,7 +17,7 @@
     {
       "title": "Document under MIT license",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/code/lib",
         "@type": "urn:solid:Document",
         "urn:solid:license": { "@id": "https://spdx.org/licenses/MIT" }

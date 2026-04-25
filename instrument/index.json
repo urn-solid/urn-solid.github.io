@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:instrument",
   "@type": "rdf:Property",
   "rdfs:label": "instrument",
@@ -19,7 +19,7 @@
     {
       "title": "A Listen activity with an instrument",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/activities/listen-3",
         "@type": "http://www.w3.org/ns/activitystreams#Listen",
         "urn:solid:object": { "@id": "https://example.org/podcasts/episode/12" },

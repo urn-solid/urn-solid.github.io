@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:isDefinedBy",
   "@type": "rdf:Property",
   "rdfs:label": "isDefinedBy",
@@ -15,14 +15,14 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "A subproperty of `rdfs:seeAlso` with a stronger claim: the target is *the source of truth* for what the term means, not just related. Each `urn:solid:*` term in this registry could (and arguably should) point at `https://urn-solid.github.io/<Name>/` via `isDefinedBy`.",
+  "notes": "A subproperty of `rdfs:seeAlso` with a stronger claim: the target is *the source of truth* for what the term means, not just related. Each `urn:solid:*` term in this registry could (and arguably should) point at `https://urn-solid.com/<Name>/` via `isDefinedBy`.",
   "examples": [
     {
       "title": "A term pointing at its definition",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "urn:solid:Person",
-        "urn:solid:isDefinedBy": { "@id": "https://urn-solid.github.io/Person/" }
+        "urn:solid:isDefinedBy": { "@id": "https://urn-solid.com/Person/" }
       }
     }
   ],

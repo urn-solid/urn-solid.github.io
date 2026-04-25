@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:creator",
   "@type": "rdf:Property",
   "rdfs:label": "creator",
@@ -23,7 +23,7 @@
     {
       "title": "Article with a creator",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello",
         "@type": "urn:solid:Document",
         "urn:solid:creator": { "@id": "https://example.org/alice#me" }

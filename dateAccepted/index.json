@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:dateAccepted",
   "@type": "rdf:Property",
   "rdfs:label": "dateAccepted",
@@ -17,7 +17,7 @@
     {
       "title": "Paper with submit/accept/publish dates",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/papers/42",
         "@type": "urn:solid:Document",
         "http://purl.org/dc/terms/dateSubmitted": "2026-01-15",

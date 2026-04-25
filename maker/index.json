@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:maker",
   "@type": "rdf:Property",
   "rdfs:label": "maker",
@@ -18,7 +18,7 @@
     {
       "title": "Document with a maker",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello",
         "@type": "urn:solid:Document",
         "urn:solid:maker": { "@id": "https://example.org/alice#me" }

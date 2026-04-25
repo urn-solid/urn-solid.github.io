@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:modified",
   "@type": "rdf:Property",
   "rdfs:label": "modified",
@@ -19,7 +19,7 @@
     {
       "title": "Document with creation and modification dates",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello",
         "@type": "urn:solid:Document",
         "urn:solid:created": "2026-04-18T10:00:00Z",

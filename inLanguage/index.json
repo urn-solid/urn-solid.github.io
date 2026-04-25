@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:inLanguage",
   "@type": "rdf:Property",
   "rdfs:label": "inLanguage",
@@ -20,7 +20,7 @@
     {
       "title": "Article in English",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello",
         "@type": "urn:solid:Article",
         "urn:solid:inLanguage": "en"

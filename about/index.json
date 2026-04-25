@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:about",
   "@type": "rdf:Property",
   "rdfs:label": "about",
@@ -21,7 +21,7 @@
     {
       "title": "Article about a topic",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/jsonld-intro",
         "@type": "urn:solid:Article",
         "urn:solid:about": { "@id": "https://example.org/topics/json-ld" }

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Tombstone",
   "@type": "rdfs:Class",
   "rdfs:label": "Tombstone",
@@ -15,7 +15,7 @@
     {
       "title": "Deleted note as a Tombstone",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/notes/abc",
         "@type": "urn:solid:Tombstone",
         "https://www.w3.org/ns/activitystreams#formerType": { "@id": "https://www.w3.org/ns/activitystreams#Note" },

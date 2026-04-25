@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Distribution",
   "@type": "rdfs:Class",
   "rdfs:label": "Distribution",
@@ -17,7 +17,7 @@
     {
       "title": "CSV distribution of a dataset",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/datasets/wonderland-2026/csv",
         "@type": "urn:solid:Distribution",
         "urn:solid:downloadURL": { "@id": "https://example.org/datasets/wonderland-2026.csv" },

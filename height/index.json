@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:height",
   "@type": "rdf:Property",
   "rdfs:label": "height",
@@ -22,7 +22,7 @@
     {
       "title": "An Image with explicit dimensions",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/photos/sunset.jpg",
         "@type": "urn:solid:Image",
         "urn:solid:width": 1920,

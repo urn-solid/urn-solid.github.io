@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hadActivity",
   "@type": "rdf:Property",
   "rdfs:label": "hadActivity",
@@ -18,7 +18,7 @@
     {
       "title": "Derivation referencing the activity that produced it",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/derivations/translation-1",
         "@type": "urn:solid:Derivation",
         "urn:solid:hadActivity": { "@id": "https://example.org/translations/de-job-42" }

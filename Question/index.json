@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Question",
   "@type": "rdfs:Class",
   "rdfs:label": "Question",
@@ -16,7 +16,7 @@
     {
       "title": "A simple poll",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/polls/lunch",
         "@type": "urn:solid:Question",
         "urn:solid:name": "Where for lunch?",

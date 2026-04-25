@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:dtstart",
   "@type": "rdf:Property",
   "rdfs:label": "dtstart",
@@ -22,7 +22,7 @@
     {
       "title": "Event start time",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Vevent",
         "urn:solid:dtstart": { "@value": "2026-04-19T15:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
       }

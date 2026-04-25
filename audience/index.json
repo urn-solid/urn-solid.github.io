@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:audience",
   "@type": "rdf:Property",
   "rdfs:label": "audience",
@@ -16,7 +16,7 @@
     {
       "title": "Note targeted at a group",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/notes/team-update",
         "@type": "urn:solid:Note",
         "urn:solid:audience": { "@id": "https://example.org/groups/engineering" }

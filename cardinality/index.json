@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:cardinality",
   "@type": "rdf:Property",
   "rdfs:label": "cardinality",
@@ -24,7 +24,7 @@
     {
       "title": "Class requiring exactly one issuer",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
         "urn:solid:onProperty": { "@id": "urn:solid:issuer" },
         "urn:solid:cardinality": 1

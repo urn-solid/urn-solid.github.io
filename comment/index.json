@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:comment",
   "@type": "rdf:Property",
   "rdfs:label": "comment",
@@ -20,7 +20,7 @@
     {
       "title": "Article with two comments",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello",
         "@type": "https://schema.org/Article",
         "urn:solid:comment": [

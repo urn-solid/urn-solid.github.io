@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:OrganizationalUnit",
   "@type": "rdfs:Class",
   "rdfs:label": "OrganizationalUnit",
@@ -20,7 +20,7 @@
     {
       "title": "An engineering team within a company",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/orgs/acme/eng",
         "@type": "urn:solid:OrganizationalUnit",
         "urn:solid:name": "Engineering",

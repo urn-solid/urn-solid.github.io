@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:ChangeEvent",
   "@type": "rdfs:Class",
   "rdfs:label": "ChangeEvent",
@@ -18,7 +18,7 @@
     {
       "title": "A merger as a ChangeEvent",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/events/2026-merger",
         "@type": "urn:solid:ChangeEvent",
         "urn:solid:originalOrganization": [

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Standard",
   "@type": "rdfs:Class",
   "rdfs:label": "Standard",
@@ -15,8 +15,8 @@
     {
       "title": "JSON Schema declared as a Standard",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
-        "@id": "https://urn-solid.github.io/schema/term.schema.json",
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://urn-solid.com/schema/term.schema.json",
         "@type": "urn:solid:Standard",
         "urn:solid:name": "urn-solid term schema"
       }

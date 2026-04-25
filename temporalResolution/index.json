@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:temporalResolution",
   "@type": "rdf:Property",
   "rdfs:label": "temporalResolution",
@@ -18,7 +18,7 @@
     {
       "title": "A dataset with hourly temporal resolution",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://data.example.org/sensors/temperature",
         "@type": "urn:solid:Dataset",
         "urn:solid:temporalResolution": { "@value": "PT1H", "@type": "http://www.w3.org/2001/XMLSchema#duration" }

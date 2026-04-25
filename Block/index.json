@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Block",
   "@type": "rdfs:Class",
   "rdfs:label": "Block",
@@ -16,7 +16,7 @@
     {
       "title": "Alice blocks a spammer",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/activities/block-1",
         "@type": "urn:solid:Block",
         "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/alice#me" },

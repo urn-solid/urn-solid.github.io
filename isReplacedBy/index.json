@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:isReplacedBy",
   "@type": "rdf:Property",
   "rdfs:label": "isReplacedBy",
@@ -19,7 +19,7 @@
     {
       "title": "v1 spec pointing at its successor",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/specs/v1",
         "@type": "urn:solid:Document",
         "urn:solid:isReplacedBy": { "@id": "https://example.org/specs/v2" }

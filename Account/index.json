@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Account",
   "@type": "rdfs:Class",
   "rdfs:label": "Account",
@@ -21,7 +21,7 @@
     {
       "title": "Pod account on a Solid server",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://pod.example.org/admin/accounts/alice#it",
         "@type": "urn:solid:Account",
         "urn:solid:webid": { "@id": "https://alice.example.org/profile/card#me" }

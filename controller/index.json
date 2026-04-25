@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:controller",
   "@type": "rdf:Property",
   "rdfs:label": "controller",
@@ -17,7 +17,7 @@
     {
       "title": "Self-controlled DID",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "did:example:abc",
         "@type": "urn:solid:DIDDocument",
         "urn:solid:controller": { "@id": "did:example:abc" }

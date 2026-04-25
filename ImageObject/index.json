@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:ImageObject",
   "@type": "rdfs:Class",
   "rdfs:label": "ImageObject",
@@ -19,7 +19,7 @@
     {
       "title": "A photo with rich metadata",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/photos/sunset.jpg",
         "@type": "urn:solid:ImageObject",
         "https://schema.org/width": "1920",

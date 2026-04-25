@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:exactMatch",
   "@type": "rdf:Property",
   "rdfs:label": "exactMatch",
@@ -22,7 +22,7 @@
     {
       "title": "Concept matching across vocabularies",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/topics/cat-theory",
         "@type": "urn:solid:Concept",
         "urn:solid:exactMatch": { "@id": "https://other.example.org/vocab/categorical-algebra" }

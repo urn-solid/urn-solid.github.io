@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Thing",
   "@type": "rdfs:Class",
   "rdfs:label": "Thing",
@@ -16,7 +16,7 @@
     {
       "title": "Schema.org Thing as a fallback type",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/some-resource",
         "@type": "urn:solid:Thing",
         "urn:solid:name": "Generic resource"

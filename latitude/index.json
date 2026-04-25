@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:latitude",
   "@type": "rdf:Property",
   "rdfs:label": "latitude",
@@ -22,7 +22,7 @@
     {
       "title": "Coordinates with latitude",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/places/big-ben/geo",
         "@type": "urn:solid:GeoCoordinates",
         "urn:solid:latitude": "51.5007",

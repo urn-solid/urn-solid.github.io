@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:dateCopyrighted",
   "@type": "rdf:Property",
   "rdfs:label": "dateCopyrighted",
@@ -18,7 +18,7 @@
     {
       "title": "Document with copyright date",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/works/manual",
         "@type": "urn:solid:Document",
         "urn:solid:dateCopyrighted": "2026",

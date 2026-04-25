@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Tracker",
   "@type": "rdfs:Class",
   "rdfs:label": "Tracker",
@@ -19,7 +19,7 @@
     {
       "title": "A Tracker with two tasks",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/today",
         "@type": "urn:solid:Tracker",
         "urn:solid:title": "Today",

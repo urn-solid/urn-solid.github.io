@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:href",
   "@type": "rdf:Property",
   "rdfs:label": "href",
@@ -19,7 +19,7 @@
     {
       "title": "A Link with href and rel",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Link",
         "urn:solid:href": { "@id": "https://example.org/article/42" },
         "urn:solid:rel": "canonical"

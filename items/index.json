@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:items",
   "@type": "rdf:Property",
   "rdfs:label": "items",
@@ -22,7 +22,7 @@
     {
       "title": "A small Collection with inline items",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/notes/1/likes",
         "@type": "urn:solid:Collection",
         "urn:solid:totalItems": 2,

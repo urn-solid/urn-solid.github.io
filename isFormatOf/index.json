@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:isFormatOf",
   "@type": "rdf:Property",
   "rdfs:label": "isFormatOf",
@@ -19,7 +19,7 @@
     {
       "title": "PDF pointing at canonical HTML",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/papers/42.pdf",
         "@type": "urn:solid:Document",
         "urn:solid:isFormatOf": { "@id": "https://example.org/papers/42" }

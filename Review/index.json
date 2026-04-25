@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Review",
   "@type": "rdfs:Class",
   "rdfs:label": "Review",
@@ -19,7 +19,7 @@
     {
       "title": "A product review",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/reviews/widget-1",
         "@type": "urn:solid:Review",
         "https://schema.org/itemReviewed": { "@id": "https://example.org/products/widget" },

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:onProperty",
   "@type": "rdf:Property",
   "rdfs:label": "onProperty",
@@ -18,7 +18,7 @@
     {
       "title": "A restriction on the knows property",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
         "urn:solid:onProperty": { "@id": "urn:solid:knows" },
         "http://www.w3.org/2002/07/owl#allValuesFrom": { "@id": "urn:solid:Person" }

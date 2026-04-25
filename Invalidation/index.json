@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Invalidation",
   "@type": "rdfs:Class",
   "rdfs:label": "Invalidation",
@@ -17,7 +17,7 @@
     {
       "title": "Qualified invalidation of a deleted post",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/invalidations/abc-deleted",
         "@type": "urn:solid:Invalidation",
         "http://www.w3.org/ns/prov#activity": { "@id": "https://example.org/activities/delete-1" },

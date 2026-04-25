@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hasCalendarRequest",
   "@type": "rdf:Property",
   "rdfs:label": "hasCalendarRequest",
@@ -18,7 +18,7 @@
     {
       "title": "A VCard exposing a scheduling endpoint",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/vcard",
         "@type": "urn:solid:VCard",
         "urn:solid:hasCalendarRequest": { "@id": "https://alice.example.org/calendar/request" }

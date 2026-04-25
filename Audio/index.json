@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Audio",
   "@type": "rdfs:Class",
   "rdfs:label": "Audio",
@@ -18,7 +18,7 @@
     {
       "title": "Note with an audio attachment",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/notes/voice-1",
         "@type": "urn:solid:Note",
         "urn:solid:attachment": {

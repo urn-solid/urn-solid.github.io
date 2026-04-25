@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:educationLevel",
   "@type": "rdf:Property",
   "rdfs:label": "educationLevel",
@@ -16,7 +16,7 @@
     {
       "title": "Course material targeting undergraduates",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/courses/jsonld-101",
         "@type": "urn:solid:Document",
         "urn:solid:educationLevel": "undergraduate"

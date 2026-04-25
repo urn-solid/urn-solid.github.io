@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hasSubOrganization",
   "@type": "rdf:Property",
   "rdfs:label": "hasSubOrganization",
@@ -21,7 +21,7 @@
     {
       "title": "Company with engineering and sales units",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/orgs/acme-ltd",
         "@type": "urn:solid:FormalOrganization",
         "urn:solid:hasSubOrganization": [

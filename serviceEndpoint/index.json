@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:serviceEndpoint",
   "@type": "rdf:Property",
   "rdfs:label": "serviceEndpoint",
@@ -16,7 +16,7 @@
     {
       "title": "A messaging endpoint on a DID",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "did:example:abc",
         "@type": "urn:solid:DIDDocument",
         "https://www.w3.org/ns/did#service": {

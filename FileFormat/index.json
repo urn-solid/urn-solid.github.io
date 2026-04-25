@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:FileFormat",
   "@type": "rdfs:Class",
   "rdfs:label": "FileFormat",
@@ -16,7 +16,7 @@
     {
       "title": "PDF as a FileFormat resource",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://www.iana.org/assignments/media-types/application/pdf",
         "@type": "urn:solid:FileFormat",
         "urn:solid:name": "application/pdf"

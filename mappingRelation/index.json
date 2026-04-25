@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:mappingRelation",
   "@type": "rdf:Property",
   "rdfs:label": "mappingRelation",
@@ -22,7 +22,7 @@
     {
       "title": "A generic mapping between two concepts",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/scheme-a/mathematics",
         "@type": "urn:solid:Concept",
         "urn:solid:mappingRelation": { "@id": "https://example.org/scheme-b/mathematics" }

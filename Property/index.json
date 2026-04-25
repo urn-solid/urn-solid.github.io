@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Property",
   "@type": "rdfs:Class",
   "rdfs:label": "Property",
@@ -18,7 +18,7 @@
     {
       "title": "Declaring a custom property",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/sport",
         "@type": "urn:solid:Property",
         "urn:solid:domain": { "@id": "https://example.org/vocab/Athlete" },

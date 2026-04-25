@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:disjointWith",
   "@type": "rdf:Property",
   "rdfs:label": "disjointWith",
@@ -19,7 +19,7 @@
     {
       "title": "Person and Document are disjoint classes",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "urn:solid:Person",
         "urn:solid:disjointWith": { "@id": "urn:solid:Document" }
       }

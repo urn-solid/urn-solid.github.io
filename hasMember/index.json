@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hasMember",
   "@type": "rdf:Property",
   "rdfs:label": "hasMember",
@@ -21,7 +21,7 @@
     {
       "title": "vCard Group with members",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/groups/admins-vcard",
         "@type": "http://www.w3.org/2006/vcard/ns#Group",
         "urn:solid:hasMember": [

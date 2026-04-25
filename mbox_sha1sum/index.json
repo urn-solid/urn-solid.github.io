@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:mbox_sha1sum",
   "@type": "rdf:Property",
   "rdfs:label": "mbox_sha1sum",
@@ -20,7 +20,7 @@
     {
       "title": "Person identified by mbox hash",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:mbox_sha1sum": "f4dc1c9c54f24d8b2c8b5d1c4d3e8f9a0b1c2d3e"

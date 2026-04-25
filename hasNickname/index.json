@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hasNickname",
   "@type": "rdf:Property",
   "rdfs:label": "hasNickname",
@@ -19,7 +19,7 @@
     {
       "title": "vCard with a nickname",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/cards/alice",
         "@type": "urn:solid:VCard",
         "urn:solid:fn": "Alice Liddell",

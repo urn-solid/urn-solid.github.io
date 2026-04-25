@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Association",
   "@type": "rdfs:Class",
   "rdfs:label": "Association",
@@ -21,10 +21,10 @@
     {
       "title": "Build run with a software-agent association",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/associations/build-2026-04-18",
         "@type": "urn:solid:Association",
-        "http://www.w3.org/ns/prov#agent": { "@id": "https://urn-solid.github.io/agents/curate-next" },
+        "http://www.w3.org/ns/prov#agent": { "@id": "https://urn-solid.com/agents/curate-next" },
         "urn:solid:hadRole": { "@id": "https://example.org/roles/curator" }
       }
     }

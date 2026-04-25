@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:VerifiablePresentation",
   "@type": "rdfs:Class",
   "rdfs:label": "VerifiablePresentation",
@@ -17,7 +17,7 @@
     {
       "title": "A presentation containing one credential",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:VerifiablePresentation",
         "urn:solid:holder": { "@id": "https://alice.example.org/profile/card#me" },
         "https://www.w3.org/2018/credentials#verifiableCredential": { "@id": "https://example.org/credentials/3732" }

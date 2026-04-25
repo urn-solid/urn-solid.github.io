@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:EmailMessage",
   "@type": "rdfs:Class",
   "rdfs:label": "EmailMessage",
@@ -17,7 +17,7 @@
     {
       "title": "An email message",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/messages/email-42",
         "@type": "urn:solid:EmailMessage",
         "https://schema.org/sender": { "@id": "https://example.org/alice#me" },

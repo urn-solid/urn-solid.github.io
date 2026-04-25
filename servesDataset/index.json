@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:servesDataset",
   "@type": "rdf:Property",
   "rdfs:label": "servesDataset",
@@ -19,7 +19,7 @@
     {
       "title": "Service serving two datasets",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://data.example.org/services/sparql",
         "@type": "urn:solid:DataService",
         "urn:solid:servesDataset": [

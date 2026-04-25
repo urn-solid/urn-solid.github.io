@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:isPartOf",
   "@type": "rdf:Property",
   "rdfs:label": "isPartOf",
@@ -19,7 +19,7 @@
     {
       "title": "Chapter pointing at its book",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/books/wonderland/ch1",
         "@type": "urn:solid:Document",
         "urn:solid:isPartOf": { "@id": "https://example.org/books/wonderland" }

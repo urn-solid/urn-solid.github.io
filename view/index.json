@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:view",
   "@type": "rdf:Property",
   "rdfs:label": "view",
@@ -18,7 +18,7 @@
     {
       "title": "Register a renderer module for a class",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/types/Recipe",
         "urn:solid:view": { "@id": "https://solid-apps.github.io/pilot/tracker-pane.js" }
       }

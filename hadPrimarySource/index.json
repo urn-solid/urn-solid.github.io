@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hadPrimarySource",
   "@type": "rdf:Property",
   "rdfs:label": "hadPrimarySource",
@@ -22,7 +22,7 @@
     {
       "title": "News article with a primary source",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/news/leak-summary",
         "@type": "urn:solid:Entity",
         "urn:solid:hadPrimarySource": { "@id": "https://example.org/leaks/raw-document" }

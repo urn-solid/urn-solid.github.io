@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Book",
   "@type": "rdfs:Class",
   "rdfs:label": "Book",
@@ -17,7 +17,7 @@
     {
       "title": "A book with metadata",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/books/wonderland",
         "@type": "urn:solid:Book",
         "urn:solid:name": "Alice's Adventures in Wonderland",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:changeNote",
   "@type": "rdf:Property",
   "rdfs:label": "changeNote",
@@ -19,7 +19,7 @@
     {
       "title": "Concept with a change note",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/scheme/mathematics",
         "@type": "urn:solid:Concept",
         "urn:solid:changeNote": "2024-06-12: split applied mathematics into separate concept"

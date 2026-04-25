@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hasTelephone",
   "@type": "rdf:Property",
   "rdfs:label": "hasTelephone",
@@ -16,7 +16,7 @@
     {
       "title": "Person with a phone",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:hasTelephone": { "@id": "tel:+44-20-1234-5678" }

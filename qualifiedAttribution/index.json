@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:qualifiedAttribution",
   "@type": "rdf:Property",
   "rdfs:label": "qualifiedAttribution",
@@ -18,7 +18,7 @@
     {
       "title": "Qualified attribution for a photo",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/photos/sunset.jpg",
         "@type": "urn:solid:Entity",
         "urn:solid:wasAttributedTo": { "@id": "https://example.org/alice#me" },

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:shares",
   "@type": "rdf:Property",
   "rdfs:label": "shares",
@@ -19,7 +19,7 @@
     {
       "title": "A Note exposing its shares Collection",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/notes/1",
         "@type": "urn:solid:Note",
         "urn:solid:shares": { "@id": "https://alice.example.org/notes/1/shares" }

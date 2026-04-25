@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Vcalendar",
   "@type": "rdfs:Class",
   "rdfs:label": "Vcalendar",
@@ -17,7 +17,7 @@
     {
       "title": "A calendar with one event",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/calendar/",
         "@type": "urn:solid:Vcalendar"
       }

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hasTopConcept",
   "@type": "rdf:Property",
   "rdfs:label": "hasTopConcept",
@@ -22,7 +22,7 @@
     {
       "title": "Scheme with two top concepts",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/topics",
         "@type": "urn:solid:ConceptScheme",
         "urn:solid:hasTopConcept": [

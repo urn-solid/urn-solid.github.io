@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:unionOf",
   "@type": "rdf:Property",
   "rdfs:label": "unionOf",
@@ -18,7 +18,7 @@
     {
       "title": "Domain accepting either of two classes",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "urn:solid:actor",
         "urn:solid:domain": {
           "urn:solid:unionOf": {

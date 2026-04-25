@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:knowsAbout",
   "@type": "rdf:Property",
   "rdfs:label": "knowsAbout",
@@ -21,7 +21,7 @@
     {
       "title": "Person with declared expertise",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:knowsAbout": ["RDF", "linked data", "Solid"]

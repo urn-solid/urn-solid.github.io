@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:currentProject",
   "@type": "rdf:Property",
   "rdfs:label": "currentProject",
@@ -16,7 +16,7 @@
     {
       "title": "Person actively working on a project",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:currentProject": { "@id": "https://example.org/projects/urn-solid" }

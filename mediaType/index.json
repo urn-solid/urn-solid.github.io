@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:mediaType",
   "@type": "rdf:Property",
   "rdfs:label": "mediaType",
@@ -20,7 +20,7 @@
     {
       "title": "Note with explicit content media type",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/notes/markdown-1",
         "@type": "urn:solid:Note",
         "urn:solid:content": "# Hello\nplain markdown",

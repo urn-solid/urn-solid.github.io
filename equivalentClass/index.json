@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:equivalentClass",
   "@type": "rdf:Property",
   "rdfs:label": "equivalentClass",
@@ -24,7 +24,7 @@
     {
       "title": "Two upstream Person classes equated",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "http://xmlns.com/foaf/0.1/Person",
         "urn:solid:equivalentClass": { "@id": "https://schema.org/Person" }
       }

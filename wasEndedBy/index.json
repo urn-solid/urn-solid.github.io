@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:wasEndedBy",
   "@type": "rdf:Property",
   "rdfs:label": "wasEndedBy",
@@ -19,7 +19,7 @@
     {
       "title": "Build activity ended by a cancel signal",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/activity/build-42",
         "@type": "urn:solid:Activity",
         "urn:solid:wasEndedBy": { "@id": "https://example.org/signals/cancel-build-42" }

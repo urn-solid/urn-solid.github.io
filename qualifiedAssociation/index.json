@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:qualifiedAssociation",
   "@type": "rdf:Property",
   "rdfs:label": "qualifiedAssociation",
@@ -20,10 +20,10 @@
     {
       "title": "Build with qualified association",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/builds/2026-04-18-1",
         "@type": "urn:solid:Activity",
-        "urn:solid:wasAssociatedWith": { "@id": "https://urn-solid.github.io/agents/curate-next" },
+        "urn:solid:wasAssociatedWith": { "@id": "https://urn-solid.com/agents/curate-next" },
         "urn:solid:qualifiedAssociation": { "@id": "https://example.org/associations/build-2026-04-18" }
       }
     }

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:conformsTo",
   "@type": "rdf:Property",
   "rdfs:label": "conformsTo",
@@ -15,10 +15,10 @@
     {
       "title": "Term file conforming to the urn-solid schema",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
-        "@id": "https://urn-solid.github.io/Person/index.json",
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://urn-solid.com/Person/index.json",
         "@type": "urn:solid:Document",
-        "urn:solid:conformsTo": { "@id": "https://urn-solid.github.io/schema/term.schema.json" }
+        "urn:solid:conformsTo": { "@id": "https://urn-solid.com/schema/term.schema.json" }
       }
     }
   ],

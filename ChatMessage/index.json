@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:ChatMessage",
   "@type": "rdfs:Class",
   "rdfs:label": "ChatMessage",
@@ -20,7 +20,7 @@
     {
       "title": "A chat message",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/chat/msg-42",
         "@type": "urn:solid:ChatMessage",
         "https://schema.org/sender": { "@id": "https://example.org/alice#me" },

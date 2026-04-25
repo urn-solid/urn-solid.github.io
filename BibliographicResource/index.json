@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:BibliographicResource",
   "@type": "rdfs:Class",
   "rdfs:label": "BibliographicResource",
@@ -17,7 +17,7 @@
     {
       "title": "A bibliographic resource",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/papers/42",
         "@type": "urn:solid:BibliographicResource",
         "urn:solid:bibliographicCitation": "Liddell, A. (2026). On Wonderlands. Solid Journal, 1(1), 1-10."

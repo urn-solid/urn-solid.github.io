@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:MusicRecording",
   "@type": "rdfs:Class",
   "rdfs:label": "MusicRecording",
@@ -20,7 +20,7 @@
     {
       "title": "A music recording",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/music/track-42",
         "@type": "urn:solid:MusicRecording",
         "urn:solid:name": "Wonderland Theme",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:PublicDocument",
   "@type": "rdfs:Class",
   "rdfs:label": "Public document",
@@ -20,7 +20,7 @@
     {
       "title": "Public profile page registered in the TypeIndex",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/about-me.jsonld",
         "@type": [
           "urn:solid:PublicDocument",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:current",
   "@type": "rdf:Property",
   "rdfs:label": "current",
@@ -20,7 +20,7 @@
     {
       "title": "Inbox with a current page pointer",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/inbox",
         "@type": "http://www.w3.org/ns/activitystreams#OrderedCollection",
         "urn:solid:totalItems": 184,

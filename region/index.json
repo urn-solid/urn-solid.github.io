@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:region",
   "@type": "rdf:Property",
   "rdfs:label": "region",
@@ -16,7 +16,7 @@
     {
       "title": "Address with region",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/addresses/sf-office",
         "@type": "http://www.w3.org/2006/vcard/ns#Address",
         "urn:solid:locality": "San Francisco",

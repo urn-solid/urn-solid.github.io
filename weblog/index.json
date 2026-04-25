@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:weblog",
   "@type": "rdf:Property",
   "rdfs:label": "weblog",
@@ -21,7 +21,7 @@
     {
       "title": "Person with a weblog",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:weblog": { "@id": "https://alice.example.org/blog/" }

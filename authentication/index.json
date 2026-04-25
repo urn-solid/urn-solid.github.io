@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:authentication",
   "@type": "rdf:Property",
   "rdfs:label": "authentication",
@@ -19,7 +19,7 @@
     {
       "title": "DID Document declaring an authentication key",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "did:example:abc",
         "@type": "urn:solid:DIDDocument",
         "urn:solid:authentication": [{ "@id": "did:example:abc#key-1" }]

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Jurisdiction",
   "@type": "rdfs:Class",
   "rdfs:label": "Jurisdiction",
@@ -19,7 +19,7 @@
     {
       "title": "A jurisdiction",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/jurisdictions/eu",
         "@type": "urn:solid:Jurisdiction",
         "urn:solid:name": "European Union"

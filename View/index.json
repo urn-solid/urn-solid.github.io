@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:View",
   "@type": "rdfs:Class",
   "rdfs:label": "View",
@@ -18,7 +18,7 @@
     {
       "title": "Viewed an image",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/activities/view-7",
         "@type": "urn:solid:View",
         "urn:solid:actor": { "@id": "https://alice.example.org/profile/card#me" },

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:valid",
   "@type": "rdf:Property",
   "rdfs:label": "valid",
@@ -17,7 +17,7 @@
     {
       "title": "Discount coupon valid through Q2",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/coupons/spring-2026",
         "@type": "urn:solid:Document",
         "urn:solid:valid": "2026-04-01/2026-06-30"

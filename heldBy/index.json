@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:heldBy",
   "@type": "rdf:Property",
   "rdfs:label": "heldBy",
@@ -19,7 +19,7 @@
     {
       "title": "A Post and its current holder",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/acme/posts/cto",
         "@type": "urn:solid:Post",
         "urn:solid:heldBy": { "@id": "https://alice.example.org/profile/card#me" }

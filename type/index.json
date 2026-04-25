@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:type",
   "@type": "rdf:Property",
   "rdfs:label": "type",
@@ -16,7 +16,7 @@
     {
       "title": "An instance of multiple classes",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/card#me",
         "urn:solid:type": [
           { "@id": "urn:solid:Person" },

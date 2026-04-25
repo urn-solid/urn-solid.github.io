@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:qualifiedUsage",
   "@type": "rdf:Property",
   "rdfs:label": "qualifiedUsage",
@@ -19,7 +19,7 @@
     {
       "title": "Activity with a qualified Usage",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/activity/build-42",
         "@type": "urn:solid:Activity",
         "urn:solid:qualifiedUsage": {

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:spatial",
   "@type": "rdf:Property",
   "rdfs:label": "spatial",
@@ -20,7 +20,7 @@
     {
       "title": "Dataset with spatial coverage",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/datasets/london-traffic-2026",
         "@type": "urn:solid:Document",
         "urn:solid:spatial": { "@id": "https://example.org/places/london" }

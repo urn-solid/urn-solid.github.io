@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:theme",
   "@type": "rdf:Property",
   "rdfs:label": "theme",
@@ -22,7 +22,7 @@
     {
       "title": "Dataset with a theme",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/datasets/wonderland-2026",
         "@type": "urn:solid:Dataset",
         "urn:solid:theme": { "@id": "http://publications.europa.eu/resource/authority/data-theme/ENVI" }

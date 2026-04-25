@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Restriction",
   "@type": "rdfs:Class",
   "rdfs:label": "Restriction",
@@ -16,7 +16,7 @@
     {
       "title": "A class of objects with at least one knows relation",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
         "urn:solid:onProperty": { "@id": "urn:solid:knows" },
         "http://www.w3.org/2002/07/owl#minCardinality": 1

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:describes",
   "@type": "rdf:Property",
   "rdfs:label": "describes",
@@ -18,7 +18,7 @@
     {
       "title": "A Profile describing an Actor",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/about",
         "@type": "urn:solid:Profile",
         "urn:solid:describes": { "@id": "https://alice.example.org/profile/card#me" }

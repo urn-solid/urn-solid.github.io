@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:endpointURL",
   "@type": "rdf:Property",
   "rdfs:label": "endpointURL",
@@ -18,7 +18,7 @@
     {
       "title": "DataService exposing a SPARQL endpoint",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://data.example.org/services/sparql",
         "@type": "urn:solid:DataService",
         "urn:solid:endpointURL": { "@id": "https://data.example.org/sparql" },

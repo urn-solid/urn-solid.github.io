@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:url",
   "@type": "rdf:Property",
   "rdfs:label": "url",
@@ -20,7 +20,7 @@
     {
       "title": "A Note with a separate user-facing URL",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://mastodon.example/users/alice/statuses/123",
         "@type": "urn:solid:Note",
         "urn:solid:url": { "@id": "https://mastodon.example/@alice/123" }

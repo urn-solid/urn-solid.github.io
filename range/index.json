@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:range",
   "@type": "rdf:Property",
   "rdfs:label": "range",
@@ -22,7 +22,7 @@
     {
       "title": "Property declaring its value type",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "urn:solid:knows",
         "@type": "urn:solid:Property",
         "urn:solid:range": { "@id": "urn:solid:Person" }

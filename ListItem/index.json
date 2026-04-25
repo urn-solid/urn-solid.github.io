@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:ListItem",
   "@type": "rdfs:Class",
   "rdfs:label": "ListItem",
@@ -15,11 +15,11 @@
     {
       "title": "List item with position",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/lists/top-3#1",
         "@type": "urn:solid:ListItem",
         "https://schema.org/position": 1,
-        "https://schema.org/item": { "@id": "https://urn-solid.github.io/Person/" }
+        "https://schema.org/item": { "@id": "https://urn-solid.com/Person/" }
       }
     }
   ],

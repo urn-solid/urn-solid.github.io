@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Entity",
   "@type": "rdfs:Class",
   "rdfs:label": "Entity",
@@ -19,8 +19,8 @@
     {
       "title": "A versioned document as a PROV Entity",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
-        "@id": "https://urn-solid.github.io/corpus.jsonl",
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://urn-solid.com/corpus.jsonl",
         "@type": "urn:solid:Entity",
         "urn:solid:wasGeneratedBy": { "@id": "https://example.org/builds/2026-04-18-1" }
       }

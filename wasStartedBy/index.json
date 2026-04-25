@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:wasStartedBy",
   "@type": "rdf:Property",
   "rdfs:label": "wasStartedBy",
@@ -24,7 +24,7 @@
     {
       "title": "Build activity started by a webhook payload",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/activity/build-42",
         "@type": "urn:solid:Activity",
         "urn:solid:wasStartedBy": { "@id": "https://example.org/webhooks/push-abc" }

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:logoutEndpoint",
   "@type": "rdf:Property",
   "rdfs:label": "logoutEndpoint",
@@ -19,7 +19,7 @@
     {
       "title": "OIDC issuer with login and logout endpoints",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://login.example.org/",
         "urn:solid:loginEndpoint": { "@id": "https://login.example.org/login" },
         "urn:solid:logoutEndpoint": { "@id": "https://login.example.org/logout" }

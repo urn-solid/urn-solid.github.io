@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Plan",
   "@type": "rdfs:Class",
   "rdfs:label": "Plan",
@@ -16,7 +16,7 @@
     {
       "title": "A build plan",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/plans/build-v1",
         "@type": "urn:solid:Plan",
         "urn:solid:name": "v1 release build plan"

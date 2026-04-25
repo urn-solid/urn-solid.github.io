@@ -6,30 +6,30 @@ The **one-shot corpus** is the canonical artifact for any LLM or agent working w
 
 ## Canonical URLs
 
-- Corpus (all terms, JSON Lines): https://urn-solid.github.io/corpus.jsonl
-- Label index (fast lookup): https://urn-solid.github.io/index.json
-- JSON Schema (term shape): https://urn-solid.github.io/schema/term.schema.json
-- JSON-LD context: https://urn-solid.github.io/context.jsonld
-- Agent skill: https://urn-solid.github.io/SKILL.md
+- Corpus (all terms, JSON Lines): https://urn-solid.com/corpus.jsonl
+- Label index (fast lookup): https://urn-solid.com/index.json
+- JSON Schema (term shape): https://urn-solid.com/schema/term.schema.json
+- JSON-LD context: https://urn-solid.com/context.jsonld
+- Agent skill: https://urn-solid.com/SKILL.md
 
 ## URL shape
 
-Every term `urn:solid:<Name>` resolves to `https://urn-solid.github.io/<Name>/` — an HTML page with the JSON-LD inlined as a `<script type="application/ld+json">` data island. The raw JSON-LD is also available at `/<Name>/index.json`.
+Every term `urn:solid:<Name>` resolves to `https://urn-solid.com/<Name>/` — an HTML page with the JSON-LD inlined as a `<script type="application/ld+json">` data island. The raw JSON-LD is also available at `/<Name>/index.json`.
 
 Classes use PascalCase (`Person`, `Agent`); properties use camelCase (`name`). Names are case-sensitive per RFC 8141.
 
 ## How to use
 
-1. **Resolve a term**: fetch `https://urn-solid.github.io/<Name>/` (HTML with JSON-LD inlined) or `https://urn-solid.github.io/<Name>/index.json` (raw JSON-LD).
+1. **Resolve a term**: fetch `https://urn-solid.com/<Name>/` (HTML with JSON-LD inlined) or `https://urn-solid.com/<Name>/index.json` (raw JSON-LD).
 2. **Map foreign RDF to urn:solid**: for each IRI in your data, search `corpus.jsonl` for a term whose `owl:sameAs` or `rdfs:seeAlso` matches.
-3. **Find unmapped terms**: IRIs that don't match anything in the corpus are candidates for new `urn:solid:` terms — open an issue at https://github.com/urn-solid/urn-solid.github.io/issues.
+3. **Find unmapped terms**: IRIs that don't match anything in the corpus are candidates for new `urn:solid:` terms — open an issue at https://github.com/urn-solid/urn-solid.com/issues.
 4. **Disambiguate**: each term lists `notToBeConfusedWith` — use it when choosing between similar terms.
 
 ## Shape of a term (abbreviated)
 
 ```json
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Person",
   "@type": "rdfs:Class",
   "rdfs:label": "Person",
@@ -46,4 +46,4 @@ Classes use PascalCase (`Person`, `Agent`); properties use camelCase (`name`). N
 }
 ```
 
-Full schema: https://urn-solid.github.io/schema/term.schema.json
+Full schema: https://urn-solid.com/schema/term.schema.json

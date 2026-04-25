@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Vtodo",
   "@type": "rdfs:Class",
   "rdfs:label": "Vtodo",
@@ -17,7 +17,7 @@
     {
       "title": "A simple to-do item",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/todos/buy-milk",
         "@type": "urn:solid:Vtodo",
         "urn:solid:dtstart": { "@value": "2026-04-19T17:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }

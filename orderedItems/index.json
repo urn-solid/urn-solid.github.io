@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:orderedItems",
   "@type": "rdf:Property",
   "rdfs:label": "orderedItems",
@@ -22,7 +22,7 @@
     {
       "title": "An OrderedCollectionPage with three items",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/outbox?page=1",
         "@type": "http://www.w3.org/ns/activitystreams#OrderedCollectionPage",
         "urn:solid:partOf": { "@id": "https://alice.example.org/outbox" },

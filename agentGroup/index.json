@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:agentGroup",
   "@type": "rdf:Property",
   "rdfs:label": "agentGroup",
@@ -19,7 +19,7 @@
     {
       "title": "Authorization granting access to a friends group",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/photos/.acl#friends",
         "@type": "urn:solid:Authorization",
         "http://www.w3.org/ns/auth/acl#agentGroup": { "@id": "https://alice.example.org/groups/friends#group" },

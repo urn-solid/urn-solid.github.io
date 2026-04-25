@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:tableOfContents",
   "@type": "rdf:Property",
   "rdfs:label": "tableOfContents",
@@ -20,7 +20,7 @@
     {
       "title": "Book with a table of contents",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/books/wonderland",
         "@type": "urn:solid:Book",
         "urn:solid:tableOfContents": "Ch 1: Down the Rabbit-Hole; Ch 2: The Pool of Tears; Ch 3: A Caucus-Race; ..."

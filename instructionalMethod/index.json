@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:instructionalMethod",
   "@type": "rdf:Property",
   "rdfs:label": "instructionalMethod",
@@ -16,7 +16,7 @@
     {
       "title": "A workshop's instructional method",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/courses/jsonld-workshop",
         "@type": "urn:solid:Document",
         "urn:solid:instructionalMethod": "Hands-on workshop with paired exercises"

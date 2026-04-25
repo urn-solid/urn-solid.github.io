@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "license": "AGPL-3.0",
-  "description": "Build scripts and schema for the urn-solid.github.io registry.",
+  "description": "Build scripts and schema for the urn-solid.com registry.",
   "scripts": {
     "validate": "node scripts/validate.js",
     "build": "node scripts/build.js",

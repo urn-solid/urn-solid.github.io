@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:label",
   "@type": "rdf:Property",
   "rdfs:label": "label",
@@ -21,7 +21,7 @@
     {
       "title": "Labelling a class",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/Athlete",
         "@type": "urn:solid:Class",
         "urn:solid:label": "Athlete"

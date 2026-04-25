@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:PhysicalMedium",
   "@type": "rdfs:Class",
   "rdfs:label": "PhysicalMedium",
@@ -16,7 +16,7 @@
     {
       "title": "Vinyl record as a PhysicalMedium",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/media/vinyl-12in",
         "@type": "urn:solid:PhysicalMedium",
         "urn:solid:name": "12-inch vinyl record"

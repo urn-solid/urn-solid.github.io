@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:ContactPoint",
   "@type": "rdfs:Class",
   "rdfs:label": "ContactPoint",
@@ -17,7 +17,7 @@
     {
       "title": "Customer support contact point",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/acme/contact/support",
         "@type": "urn:solid:ContactPoint",
         "https://schema.org/contactType": "customer support",

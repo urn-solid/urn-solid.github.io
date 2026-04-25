@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:units",
   "@type": "rdf:Property",
   "rdfs:label": "units",
@@ -18,7 +18,7 @@
     {
       "title": "A Place in feet",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/places/skyscraper-roof",
         "@type": "urn:solid:Place",
         "urn:solid:altitude": 1450,

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:isRequiredBy",
   "@type": "rdf:Property",
   "rdfs:label": "isRequiredBy",
@@ -18,10 +18,10 @@
     {
       "title": "Library showing what depends on it",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
-        "@id": "https://urn-solid.github.io/render.js",
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://urn-solid.com/render.js",
         "@type": "urn:solid:Document",
-        "urn:solid:isRequiredBy": { "@id": "https://urn-solid.github.io/Person/index.html" }
+        "urn:solid:isRequiredBy": { "@id": "https://urn-solid.com/Person/index.html" }
       }
     }
   ],

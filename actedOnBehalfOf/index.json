@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:actedOnBehalfOf",
   "@type": "rdf:Property",
   "rdfs:label": "actedOnBehalfOf",
@@ -17,8 +17,8 @@
     {
       "title": "Curation bot acting on behalf of a person",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
-        "@id": "https://urn-solid.github.io/agents/curate-next",
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://urn-solid.com/agents/curate-next",
         "@type": "urn:solid:SoftwareAgent",
         "urn:solid:actedOnBehalfOf": { "@id": "https://melvincarvalho.com/me#me" }
       }

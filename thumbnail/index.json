@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:thumbnail",
   "@type": "rdf:Property",
   "rdfs:label": "thumbnail",
@@ -17,7 +17,7 @@
     {
       "title": "Image with a thumbnail",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/photos/sunset.jpg",
         "@type": "urn:solid:Image",
         "urn:solid:thumbnail": { "@id": "https://example.org/photos/sunset-thumb.jpg" }

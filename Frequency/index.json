@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Frequency",
   "@type": "rdfs:Class",
   "rdfs:label": "Frequency",
@@ -15,7 +15,7 @@
     {
       "title": "A frequency value",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "http://publications.europa.eu/resource/authority/frequency/MONTHLY",
         "@type": "urn:solid:Frequency",
         "urn:solid:name": "monthly"

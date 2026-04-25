@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:family-name",
   "@type": "rdf:Property",
   "rdfs:label": "family-name",
@@ -20,7 +20,7 @@
     {
       "title": "vCard with family name",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/cards/alice",
         "@type": "urn:solid:VCard",
         "urn:solid:given-name": "Alice",

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:membershipResource",
   "@type": "rdf:Property",
   "rdfs:label": "membershipResource",
@@ -17,7 +17,7 @@
     {
       "title": "DirectContainer pointing at a membership resource",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/abc/comments/",
         "@type": "urn:solid:DirectContainer",
         "urn:solid:membershipResource": { "@id": "https://example.org/posts/abc" },

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:topConceptOf",
   "@type": "rdf:Property",
   "rdfs:label": "topConceptOf",
@@ -23,7 +23,7 @@
     {
       "title": "Top concept declaring its scheme",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/topics/math",
         "@type": "urn:solid:Concept",
         "urn:solid:topConceptOf": { "@id": "https://example.org/vocab/topics" }

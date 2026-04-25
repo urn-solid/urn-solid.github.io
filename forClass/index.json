@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:forClass",
   "@type": "rdf:Property",
   "rdfs:label": "forClass",
@@ -17,7 +17,7 @@
     {
       "title": "Registration matched by forClass",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/settings/publicTypeIndex.ttl#photos",
         "@type": "urn:solid:TypeRegistration",
         "urn:solid:forClass": { "@id": "http://xmlns.com/foaf/0.1/Image" },

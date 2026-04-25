@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Communication",
   "@type": "rdfs:Class",
   "rdfs:label": "Communication",
@@ -16,7 +16,7 @@
     {
       "title": "Communication between two activities",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/communications/build-from-tests",
         "@type": "urn:solid:Communication",
         "http://www.w3.org/ns/prov#activity": { "@id": "https://example.org/test-runs/2026-04-18-1" }

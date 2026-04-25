@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:broadMatch",
   "@type": "rdf:Property",
   "rdfs:label": "broadMatch",
@@ -23,7 +23,7 @@
     {
       "title": "Cross-scheme broader mapping",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/topics/cat-theory",
         "@type": "urn:solid:Concept",
         "urn:solid:broadMatch": { "@id": "https://other.example.org/vocab/mathematics" }

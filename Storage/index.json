@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Storage",
   "@type": "rdfs:Class",
   "rdfs:label": "Storage",
@@ -19,7 +19,7 @@
     {
       "title": "WebID linking to its pod storage",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/card#me",
         "@type": "urn:solid:Person",
         "urn:solid:storage": { "@id": "https://alice.example.org/" }
@@ -28,7 +28,7 @@
     {
       "title": "The storage container itself, typed",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/",
         "@type": [
           "urn:solid:Storage",

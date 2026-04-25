@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:headline",
   "@type": "rdf:Property",
   "rdfs:label": "headline",
@@ -21,7 +21,7 @@
     {
       "title": "Article with a headline",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/news/launch",
         "@type": "urn:solid:Article",
         "urn:solid:headline": "urn-solid registry crosses 100 terms"

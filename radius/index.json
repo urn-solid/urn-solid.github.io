@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:radius",
   "@type": "rdf:Property",
   "rdfs:label": "radius",
@@ -24,7 +24,7 @@
     {
       "title": "A neighbourhood Place with radius",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/places/soho-london",
         "@type": "urn:solid:Place",
         "urn:solid:latitude": 51.5136,

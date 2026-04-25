@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:source",
   "@type": "rdf:Property",
   "rdfs:label": "source",
@@ -16,7 +16,7 @@
     {
       "title": "Translation pointing at its source",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello-de",
         "@type": "urn:solid:Document",
         "urn:solid:language": "de",

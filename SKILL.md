@@ -19,15 +19,15 @@ A curated, LLM-native registry of `urn:solid:` terms mapped to common RDF vocabu
 **One fetch gets you everything:**
 
 ```
-curl -s https://urn-solid.github.io/corpus.jsonl
+curl -s https://urn-solid.com/corpus.jsonl
 ```
 
 Each line is a self-contained JSON-LD record. Load the whole corpus once; every lookup after that is local.
 
 ## Resolving a term
 
-- URL pattern: `https://urn-solid.github.io/<Name>/` (HTML with JSON-LD data island).
-- Raw JSON-LD: `https://urn-solid.github.io/<Name>/index.json`.
+- URL pattern: `https://urn-solid.com/<Name>/` (HTML with JSON-LD data island).
+- Raw JSON-LD: `https://urn-solid.com/<Name>/index.json`.
 - Names are case-sensitive. Classes are PascalCase (`Person`), properties are camelCase (`name`).
 
 ## Mapping foreign RDF → urn:solid
@@ -43,7 +43,7 @@ For each IRI in user data:
 When the user has unmapped IRIs they'd like added:
 
 1. Confirm with the user.
-2. Open an issue at https://github.com/urn-solid/urn-solid.github.io/issues with the IRI, a proposed label, and a one-sentence definition.
+2. Open an issue at https://github.com/urn-solid/urn-solid.com/issues with the IRI, a proposed label, and a one-sentence definition.
 3. For batch proposals, attach the list as JSON.
 
 ## Writing JSON-LD that uses urn-solid
@@ -52,7 +52,7 @@ Minimal example:
 
 ```json
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "https://alice.example/profile#me",
   "@type": "urn:solid:Person",
   "urn:solid:name": "Alice"
@@ -73,12 +73,12 @@ Every term carries `notToBeConfusedWith`. Read it before picking between similar
 
 ## Reference URLs
 
-- Corpus: https://urn-solid.github.io/corpus.jsonl
-- Index (label lookup): https://urn-solid.github.io/index.json
-- Schema: https://urn-solid.github.io/schema/term.schema.json
-- Context: https://urn-solid.github.io/context.jsonld
-- Site: https://urn-solid.github.io/
-- Repo: https://github.com/urn-solid/urn-solid.github.io
+- Corpus: https://urn-solid.com/corpus.jsonl
+- Index (label lookup): https://urn-solid.com/index.json
+- Schema: https://urn-solid.com/schema/term.schema.json
+- Context: https://urn-solid.com/context.jsonld
+- Site: https://urn-solid.com/
+- Repo: https://github.com/urn-solid/urn-solid.com
 
 ## Related skills
 

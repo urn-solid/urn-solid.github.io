@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:endedAtTime",
   "@type": "rdf:Property",
   "rdfs:label": "endedAtTime",
@@ -21,7 +21,7 @@
     {
       "title": "Build with start and end timestamps",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/builds/2026-04-18-1",
         "@type": "urn:solid:Activity",
         "urn:solid:startedAtTime": "2026-04-18T18:00:00Z",

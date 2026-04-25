@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Append",
   "@type": "rdfs:Class",
   "rdfs:label": "Append",
@@ -21,7 +21,7 @@
     {
       "title": "Inbox accepting public Append",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/inbox/.acl#anyone-append",
         "@type": "urn:solid:Authorization",
         "http://www.w3.org/ns/auth/acl#agentClass": { "@id": "http://xmlns.com/foaf/0.1/Agent" },

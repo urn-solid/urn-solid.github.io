@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:organization-name",
   "@type": "rdf:Property",
   "rdfs:label": "organization-name",
@@ -17,7 +17,7 @@
     {
       "title": "vCard with an org name",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/cards/alice-work",
         "@type": "urn:solid:VCard",
         "urn:solid:fn": "Alice Liddell",

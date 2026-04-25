@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hasValue",
   "@type": "rdf:Property",
   "rdfs:label": "hasValue",
@@ -19,7 +19,7 @@
     {
       "title": "A class of resources granting public read",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
         "urn:solid:onProperty": { "@id": "urn:solid:agentClass" },
         "urn:solid:hasValue": { "@id": "http://xmlns.com/foaf/0.1/Agent" }

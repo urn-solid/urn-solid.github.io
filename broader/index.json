@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:broader",
   "@type": "rdf:Property",
   "rdfs:label": "broader",
@@ -21,7 +21,7 @@
     {
       "title": "Concept hierarchy",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/topics/cat-theory",
         "@type": "urn:solid:Concept",
         "urn:solid:broader": { "@id": "https://example.org/vocab/topics/algebra" }

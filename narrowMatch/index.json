@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:narrowMatch",
   "@type": "rdf:Property",
   "rdfs:label": "narrowMatch",
@@ -23,7 +23,7 @@
     {
       "title": "Cross-scheme narrower mapping",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/vocab/topics/algebra",
         "@type": "urn:solid:Concept",
         "urn:solid:narrowMatch": { "@id": "https://other.example.org/vocab/group-theory" }

@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:hasUID",
   "@type": "rdf:Property",
   "rdfs:label": "hasUID",
@@ -16,7 +16,7 @@
     {
       "title": "vCard with a UID",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/cards/alice",
         "@type": "urn:solid:VCard",
         "urn:solid:hasUID": { "@id": "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479" }

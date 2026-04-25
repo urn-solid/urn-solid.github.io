@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:OrderedCollectionPage",
   "@type": "rdfs:Class",
   "rdfs:label": "OrderedCollectionPage",
@@ -20,7 +20,7 @@
     {
       "title": "An outbox page with three Activities",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/outbox?page=1",
         "@type": "urn:solid:OrderedCollectionPage",
         "urn:solid:partOf": { "@id": "https://alice.example.org/outbox" },

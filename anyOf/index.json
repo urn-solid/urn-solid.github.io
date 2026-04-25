@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:anyOf",
   "@type": "rdf:Property",
   "rdfs:label": "anyOf",
@@ -21,7 +21,7 @@
     {
       "title": "Multi-select Question",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/polls/2",
         "@type": "urn:solid:Question",
         "urn:solid:content": "Which do you drink?",

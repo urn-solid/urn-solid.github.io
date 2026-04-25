@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Notification",
   "@type": "rdfs:Class",
   "rdfs:label": "Notification",
@@ -16,7 +16,7 @@
     {
       "title": "A simple notification",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/inbox/notif-1",
         "@type": "urn:solid:Notification",
         "https://www.w3.org/ns/activitystreams#actor": { "@id": "https://example.org/bob#me" },

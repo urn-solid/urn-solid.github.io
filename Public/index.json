@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Public",
   "@type": "rdfs:Class",
   "rdfs:label": "Public",
@@ -17,7 +17,7 @@
     {
       "title": "A public Note",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/notes/1",
         "@type": "urn:solid:Note",
         "urn:solid:to": [{ "@id": "urn:solid:Public" }]

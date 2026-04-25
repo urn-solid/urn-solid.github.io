@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:holds",
   "@type": "rdf:Property",
   "rdfs:label": "holds",
@@ -17,7 +17,7 @@
     {
       "title": "Person holding a position",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:holds": { "@id": "https://example.org/orgs/acme/posts/cto" }

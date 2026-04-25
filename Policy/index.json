@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:Policy",
   "@type": "rdfs:Class",
   "rdfs:label": "Policy",
@@ -19,7 +19,7 @@
     {
       "title": "A privacy policy",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/policies/privacy-v3",
         "@type": "urn:solid:Policy",
         "urn:solid:name": "Privacy Policy v3"

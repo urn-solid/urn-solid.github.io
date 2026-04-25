@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:AnnotationProperty",
   "@type": "rdfs:Class",
   "rdfs:label": "AnnotationProperty",
@@ -19,7 +19,7 @@
     {
       "title": "Declaring rdfs:label as an AnnotationProperty",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "http://www.w3.org/2000/01/rdf-schema#label",
         "@type": "urn:solid:AnnotationProperty"
       }

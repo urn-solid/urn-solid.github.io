@@ -1,5 +1,5 @@
 {
-  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@context": "https://urn-solid.com/context.jsonld",
   "@id": "urn:solid:byteSize",
   "@type": "rdf:Property",
   "rdfs:label": "byteSize",
@@ -18,7 +18,7 @@
     {
       "title": "Distribution with byte size",
       "jsonld": {
-        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/datasets/wonderland-2026/csv",
         "@type": "urn:solid:Distribution",
         "urn:solid:byteSize": 2415616
