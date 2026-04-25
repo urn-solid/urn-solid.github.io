@@ -34,6 +34,13 @@
     "status": "stable",
     "path": "/Add/"
   },
+  "urn:solid:Address": {
+    "label": "Address",
+    "description": "A postal address — the value class for `urn:solid:hasAddress` (street, locality, region, postal code, country).",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Address/"
+  },
   "urn:solid:AddressBook": {
     "label": "AddressBook",
     "description": "A collection of contacts — a personal or shared address book.",

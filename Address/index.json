@@ -1,0 +1,56 @@
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Address",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Address",
+  "rdfs:comment": "A postal address — the value class for `urn:solid:hasAddress` (street, locality, region, postal code, country).",
+  "owl:sameAs": "http://www.w3.org/2006/vcard/ns#Address",
+  "rdfs:seeAlso": [
+    "urn:solid:hasAddress",
+    "http://www.w3.org/2006/vcard/ns#street-address",
+    "http://www.w3.org/2006/vcard/ns#locality",
+    "http://www.w3.org/2006/vcard/ns#region",
+    "http://www.w3.org/2006/vcard/ns#postal-code",
+    "http://www.w3.org/2006/vcard/ns#country-name"
+  ],
+  "status": "stable",
+  "added": "2026-04-25",
+  "notes": "Class form for postal addresses. Used as the value of `urn:solid:hasAddress`. The address parts (street-address, locality, region, postal-code, country-name) are vCard-style flat literals on the Address instance, not nested.",
+  "examples": [
+    {
+      "title": "Person with a postal address",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://example.org/alice#me",
+        "@type": "urn:solid:Person",
+        "urn:solid:hasAddress": {
+          "@type": "urn:solid:Address",
+          "http://www.w3.org/2006/vcard/ns#street-address": "10 Downing Street",
+          "http://www.w3.org/2006/vcard/ns#locality": "London",
+          "http://www.w3.org/2006/vcard/ns#postal-code": "SW1A 2AA",
+          "http://www.w3.org/2006/vcard/ns#country-name": "United Kingdom"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2006/vcard/ns#Address"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-25T00:00:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term — Class form pairing with the existing hasAddress property."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
