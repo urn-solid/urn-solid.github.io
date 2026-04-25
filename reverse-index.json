@@ -172,6 +172,7 @@
   "http://www.w3.org/ns/activitystreams#View": "urn:solid:View",
   "http://www.w3.org/2002/12/cal/ical#Vjournal": "urn:solid:Vjournal",
   "http://www.w3.org/2002/12/cal/ical#Vtodo": "urn:solid:Vtodo",
+  "http://w3id.org/solidos#Wallet": "urn:solid:Wallet",
   "https://schema.org/WebPage": "urn:solid:WebPage",
   "https://schema.org/WebSite": "urn:solid:WebSite",
   "http://www.w3.org/ns/auth/acl#Write": "urn:solid:Write",

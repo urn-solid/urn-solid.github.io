@@ -1210,6 +1210,13 @@
     "status": "stable",
     "path": "/Vtodo/"
   },
+  "urn:solid:Wallet": {
+    "label": "Wallet",
+    "description": "A part of a Solid pod that holds credentials and related items — verifiable credentials, keys, attestations.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Wallet/"
+  },
   "urn:solid:WebPage": {
     "label": "WebPage",
     "description": "A web page — a single page on a website, identified by its URL.",

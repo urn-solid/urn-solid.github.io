@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:Wallet — urn-solid</title>
+<meta name="description" content="A part of a Solid pod that holds credentials and related items — verifiable credentials, keys, attestations.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="/Wallet/">
+<link rel="alternate" type="application/ld+json" href="/Wallet/index.json">
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.github.io/context.jsonld",
+  "@id": "urn:solid:Wallet",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Wallet",
+  "rdfs:comment": "A part of a Solid pod that holds credentials and related items — verifiable credentials, keys, attestations.",
+  "owl:sameAs": "http://w3id.org/solidos#Wallet",
+  "rdfs:seeAlso": [
+    "urn:solid:VerifiableCredential"
+  ],
+  "status": "stable",
+  "added": "2026-04-22",
+  "notes": "Conventional storage location on a pod for credential-class items. SolidOS / mashlib treat any container typed `urn:solid:Wallet` as a wallet pane target. Often appears as a sub-container at `<pod>/wallet/` registered via the public or private TypeIndex.",
+  "examples": [
+    {
+      "title": "Pod sub-container declared as a Wallet",
+      "jsonld": {
+        "@context": "https://urn-solid.github.io/context.jsonld",
+        "@id": "https://alice.example.org/wallet/",
+        "@type": "urn:solid:Wallet"
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://mashlib.github.io/solidos/vocab.jsonld"
+    ],
+    "curatedBy": "claude-curate-next"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-04-22T11:30:00Z",
+      "by": "claude-curate-next",
+      "note": "Initial term."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>
