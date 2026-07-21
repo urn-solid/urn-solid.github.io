@@ -1,0 +1,65 @@
+{
+  "@context": "https://urn-solid.com/context.jsonld",
+  "@id": "urn:solid:Alarm",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Alarm",
+  "rdfs:comment": "A clock alarm — a recurring wake or reminder trigger at a wall-clock time, typically modelled as a recurring iCalendar event carrying an embedded VALARM.",
+  "rdfs:seeAlso": [
+    "urn:solid:Vevent",
+    "urn:solid:Vcalendar",
+    "urn:solid:dtstart",
+    "urn:solid:rrule",
+    "http://www.w3.org/2002/12/cal/ical#Vevent",
+    "http://www.w3.org/2002/12/cal/ical#Valarm"
+  ],
+  "status": "experimental",
+  "added": "2026-07-21",
+  "notes": "Not ical:Valarm — that is the RFC 5545 alarm *subcomponent* (action + trigger) attached to an event or to-do, while urn:solid:Alarm is the standalone clock alarm itself. No upstream vocabulary has a standalone clock-alarm class (VALARM only exists inside another component), so this term names one. Intended usage is dual-typing: '@type': ['Vevent', 'urn:solid:Alarm'] on a daily-recurring event with floating-time dtstart (RFC 5545 floating time = rings at the same wall-clock time in any timezone), rrule FREQ=DAILY (or BYDAY for weekday schedules), status CONFIRMED/CANCELLED for enabled/disabled, and an embedded Valarm marking it as one that rings. First user: the solid-apps alarm app.",
+  "examples": [
+    {
+      "title": "A daily wake-up alarm (dual-typed recurring Vevent)",
+      "jsonld": {
+        "@context": {
+          "ical": "http://www.w3.org/2002/12/cal/ical#",
+          "summary": "ical:summary",
+          "dtstart": "ical:dtstart",
+          "rrule": "ical:rrule",
+          "status": "ical:status",
+          "valarm": "ical:valarm",
+          "action": "ical:action",
+          "trigger": "ical:trigger",
+          "Vevent": "ical:Vevent",
+          "Valarm": "ical:Valarm"
+        },
+        "@id": "https://alice.example.org/public/alarm/alarms.jsonld#alarm-1784609159096",
+        "@type": ["Vevent", "urn:solid:Alarm"],
+        "summary": "Wake up",
+        "dtstart": "2026-07-21T08:00",
+        "rrule": "FREQ=DAILY",
+        "status": "CONFIRMED",
+        "valarm": { "@type": "Valarm", "action": "AUDIO", "trigger": "PT0S" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/2002/12/cal/ical#Vevent",
+      "http://www.w3.org/2002/12/cal/ical#Valarm"
+    ],
+    "curatedBy": "solid-apps/alarm"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-07-21T08:00:00Z",
+      "by": "solid-apps/alarm",
+      "note": "Initial term, proposed alongside the alarm app's iCal data model (solid-apps/alarm#7)."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
