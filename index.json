@@ -55,6 +55,13 @@
     "status": "stable",
     "path": "/Agent/"
   },
+  "urn:solid:Alarm": {
+    "label": "Alarm",
+    "description": "A clock alarm — a recurring wake or reminder trigger at a wall-clock time, typically modelled as a recurring iCalendar event carrying an embedded VALARM.",
+    "type": "rdfs:Class",
+    "status": "experimental",
+    "path": "/Alarm/"
+  },
   "urn:solid:AnnotationProperty": {
     "label": "AnnotationProperty",
     "description": "An OWL property used purely for human-readable metadata — labels, comments, version notes — with no formal semantic implications.",
