@@ -3,24 +3,32 @@
   "@id": "urn:solid:contentMap",
   "@type": "rdf:Property",
   "rdfs:label": "contentMap",
-  "rdfs:comment": "Language-tagged variants of an ActivityStreams Object's `content` — keys are BCP 47 language tags, values are the localised content (often HTML).",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#contentMap",
+  "rdfs:comment": "The language-map JSON form of ActivityStreams `content` — keys are BCP 47 language tags, values are the localised content (often HTML). Not a distinct RDF property: it expands to `as:content` with language-tagged literals.",
   "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#content",
     "urn:solid:content",
     "urn:solid:nameMap",
     "urn:solid:summaryMap"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The fediverse's standard mechanism for multi-language posts. Mastodon, Misskey, and most ActivityPub servers populate this when an author tags a post's language. Clients select on locale; server-side translation features (Mastodon \"translate\") add machine-translated entries here.",
+  "notes": "In the AS2 JSON-LD context `contentMap` is an alias, `{\"@id\": \"as:content\", \"@container\": \"@language\"}` — there is no `as:contentMap` IRI in expanded data; each map entry becomes an `as:content` literal tagged with that language. To expand correctly the context must declare the `@language` container, as the example does inline. The fediverse's standard mechanism for multi-language posts. Mastodon, Misskey, and most ActivityPub servers populate this when an author tags a post's language. Clients select on locale; server-side translation features (Mastodon \"translate\") add machine-translated entries here. It carries no owl:sameAs of its own: the RDF property is `https://www.w3.org/ns/activitystreams#content`, which the registry maps via `urn:solid:content`; this term only names the JSON-LD alias.",
   "examples": [
     {
       "title": "A bilingual Note",
       "jsonld": {
-        "@context": "https://urn-solid.com/context.jsonld",
+        "@context": [
+          "https://urn-solid.com/context.jsonld",
+          {
+            "contentMap": {
+              "@id": "https://www.w3.org/ns/activitystreams#content",
+              "@container": "@language"
+            }
+          }
+        ],
         "@id": "https://alice.example.org/notes/3",
         "@type": "urn:solid:Note",
-        "urn:solid:contentMap": {
+        "contentMap": {
           "en": "Just shipped a new feature.",
           "fr": "Je viens de livrer une nouvelle fonctionnalité."
         }
@@ -29,7 +37,8 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#contentMap"
+      "https://www.w3.org/ns/activitystreams#content",
+      "https://www.w3.org/ns/activitystreams"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -39,6 +48,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "owl:sameAs now as:content; documented contentMap as a @language-container alias; example carries inline context so it expands. owl:sameAs moved to seeAlso (one registry term per upstream IRI)."
     }
   ],
   "see_also": {

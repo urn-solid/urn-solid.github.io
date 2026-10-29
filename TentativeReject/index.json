@@ -4,7 +4,7 @@
   "@type": "rdfs:Class",
   "rdfs:label": "TentativeReject",
   "rdfs:comment": "An ActivityStreams Activity indicating that the actor declines the object provisionally — a soft \"probably no\" rather than a firm refusal.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#TentativeReject",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#TentativeReject",
   "rdfs:seeAlso": [
     "urn:solid:Reject",
     "urn:solid:Accept",
@@ -30,7 +30,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#TentativeReject"
+      "https://www.w3.org/ns/activitystreams#TentativeReject"
     ],
     "curatedBy": "claude-curate-next"
   },

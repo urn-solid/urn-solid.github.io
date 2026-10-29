@@ -3,15 +3,17 @@
   "@id": "urn:solid:Notification",
   "@type": "rdfs:Class",
   "rdfs:label": "Notification",
-  "rdfs:comment": "A Linked Data Notification — a message POSTed to an inbox to inform the receiver about something.",
+  "rdfs:comment": "A notification resource — typically an RDF payload delivered to an LDN inbox (ldp:inbox). Optional type; LDN itself does not require notifications to be typed.",
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#Notification",
   "rdfs:seeAlso": [
     "urn:solid:inbox",
-    "urn:solid:Activity"
+    "urn:solid:Activity",
+    "https://www.w3.org/TR/ldn/",
+    "https://solidproject.org/TR/notifications-protocol"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "From Linked Data Notifications (LDN) and Solid notifications. POSTed to a `urn:solid:inbox` container. The payload is RDF; common shapes use ActivityStreams `as:Activity` so the same primitive carries both \"a thing happened\" and \"please notify someone\".",
+  "notes": "Defined in the Solid terms vocabulary simply as a notification resource. Typically POSTed to a `urn:solid:inbox` container per Linked Data Notifications (LDN), which defines no Notification class. The payload is RDF; common shapes use ActivityStreams `as:Activity`. Not the Solid Notifications Protocol (WebSocket/Webhook channel subscriptions).",
   "examples": [
     {
       "title": "A simple notification",
@@ -36,6 +38,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Definition: optional type for a notification resource, not required by LDN; seeAlso LDN and Solid Notifications Protocol."
     }
   ],
   "see_also": {

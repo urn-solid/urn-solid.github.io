@@ -42,9 +42,10 @@
     "urn:solid:Control"
   ],
   "rdfs:domain": "urn:solid:Authorization",
+  "rdfs:range": "http://www.w3.org/2000/01/rdf-schema#Class",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Repeat to grant multiple modes in one Authorization. Standard values are `acl:Read`, `acl:Write`, `acl:Append`, `acl:Control`. `Write` implies `Append`; `Control` is the meta-mode that lets the holder edit the .acl file itself.",
+  "notes": "Repeat to grant multiple modes in one Authorization. Standard values are `acl:Read`, `acl:Write`, `acl:Append`, `acl:Control`. `Write` implies `Append`; `Control` is the meta-mode that lets the holder edit the .acl file itself. Also used informally on NSS `acl:trustedApp` entries, outside the declared domain.",
   "examples": [
     {
       "title": "Authorization granting Read+Write",
@@ -53,6 +54,7 @@
         "@id": "https://alice.example.org/notes/.acl#alice-edit",
         "@type": "urn:solid:Authorization",
         "http://www.w3.org/ns/auth/acl#agent": { "@id": "https://alice.example.org/profile/card#me" },
+        "http://www.w3.org/ns/auth/acl#accessTo": { "@id": "https://alice.example.org/notes/" },
         "urn:solid:mode": [
           { "@id": "http://www.w3.org/ns/auth/acl#Read" },
           { "@id": "http://www.w3.org/ns/auth/acl#Write" }
@@ -72,6 +74,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range rdfs:Class; notes mention informal use on trustedApp; example now has acl:accessTo."
     }
   ],
   "see_also": {

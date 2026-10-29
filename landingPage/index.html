@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:landingPage — urn-solid</title>
-<meta name="description" content="A web page that gives access to a DCAT Dataset, its Distributions, and additional information.">
+<meta name="description" content="A web page that gives access to a DCAT Catalog, Dataset, or DataService, its distributions, and/or additional information.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/landingPage/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:landingPage">
-<meta property="og:description" content="A web page that gives access to a DCAT Dataset, its Distributions, and additional information.">
+<meta property="og:description" content="A web page that gives access to a DCAT Catalog, Dataset, or DataService, its distributions, and/or additional information.">
 <meta property="og:url" content="https://urn-solid.com/landingPage/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:landingPage">
-<meta name="twitter:description" content="A web page that gives access to a DCAT Dataset, its Distributions, and additional information.">
+<meta name="twitter:description" content="A web page that gives access to a DCAT Catalog, Dataset, or DataService, its distributions, and/or additional information.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,13 +32,12 @@
   "@id": "urn:solid:landingPage",
   "@type": "rdf:Property",
   "rdfs:label": "landingPage",
-  "rdfs:comment": "A web page that gives access to a DCAT Dataset, its Distributions, and additional information.",
+  "rdfs:comment": "A web page that gives access to a DCAT Catalog, Dataset, or DataService, its distributions, and/or additional information.",
   "owl:sameAs": "http://www.w3.org/ns/dcat#landingPage",
   "rdfs:seeAlso": [
     "urn:solid:accessURL",
     "urn:solid:homepage"
   ],
-  "rdfs:domain": "urn:solid:Dataset",
   "rdfs:range": "urn:solid:Document",
   "notToBeConfusedWith": [
     "urn:solid:accessURL",
@@ -46,7 +45,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Distinct from `urn:solid:accessURL` (a Distribution-level access link): `landingPage` is the human-facing introduction page for the whole Dataset, where browsers go for context. Distinct from FOAF `urn:solid:homepage` which is for Agent homepages.",
+  "notes": "Distinct from `urn:solid:accessURL` (a Distribution-level access link): `landingPage` is the human-facing introduction page for the whole Dataset, where browsers go for context. Distinct from `urn:solid:homepage` (foaf:homepage), which DCAT uses for a Catalog's own home page; `landingPage` is the human-facing page for a specific catalogued resource. If a dataset is reachable only via its landing page, DCAT says to repeat that URL as `accessURL` on a Distribution. Upstream declares no domain (Catalog, Dataset or DataService).",
   "examples": [
     {
       "title": "Dataset with landing page",
@@ -70,6 +69,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain Dataset (none upstream); comment covers Catalog/Dataset/DataService; corrected foaf:homepage guidance."
     }
   ],
   "see_also": {

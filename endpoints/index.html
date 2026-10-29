@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:endpoints — urn-solid</title>
-<meta name="description" content="Container for additional service endpoints exposed by an ActivityPub Actor — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.">
+<meta name="description" content="Container for additional service endpoints exposed by an ActivityPub actor (Person, Application, Group, Organization or Service) — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/endpoints/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:endpoints">
-<meta property="og:description" content="Container for additional service endpoints exposed by an ActivityPub Actor — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.">
+<meta property="og:description" content="Container for additional service endpoints exposed by an ActivityPub actor (Person, Application, Group, Organization or Service) — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.">
 <meta property="og:url" content="https://urn-solid.com/endpoints/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:endpoints">
-<meta name="twitter:description" content="Container for additional service endpoints exposed by an ActivityPub Actor — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.">
+<meta name="twitter:description" content="Container for additional service endpoints exposed by an ActivityPub actor (Person, Application, Group, Organization or Service) — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,34 +32,34 @@
   "@id": "urn:solid:endpoints",
   "@type": "rdf:Property",
   "rdfs:label": "endpoints",
-  "rdfs:comment": "Container for additional service endpoints exposed by an ActivityPub Actor — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#endpoints",
+  "rdfs:comment": "Container for additional service endpoints exposed by an ActivityPub actor (Person, Application, Group, Organization or Service) — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#endpoints",
   "rdfs:seeAlso": [
-    "urn:solid:Actor",
+    "urn:solid:sharedInbox",
     "urn:solid:inbox",
     "urn:solid:outbox"
   ],
-  "rdfs:domain": "urn:solid:Actor",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Value is an Object whose properties are well-known endpoint names. The most-used in practice is `sharedInbox` (a single inbox URL serving multiple Actors on the same server, used to deduplicate fan-out). Federated servers SHOULD prefer `endpoints.sharedInbox` over per-Actor `inbox` when delivering the same Activity to many local recipients.",
+  "notes": "Value is an Object whose properties are well-known endpoint names. The most-used in practice is `sharedInbox` (a single inbox URL serving multiple actors on the same server, used to deduplicate fan-out). Federated servers MAY deliver to `endpoints.sharedInbox` instead of each recipient's `inbox` when delivering the same Activity to many recipients on one server. Defined by ActivityPub, not the AS2 Vocabulary.",
   "examples": [
     {
-      "title": "An Actor advertising a sharedInbox",
+      "title": "A Person advertising a sharedInbox",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/card#me",
         "@type": "urn:solid:Person",
         "urn:solid:inbox": { "@id": "https://alice.example.org/inbox" },
         "urn:solid:endpoints": {
-          "http://www.w3.org/ns/activitystreams#sharedInbox": { "@id": "https://example.org/inbox" }
+          "urn:solid:sharedInbox": { "@id": "https://example.org/inbox" }
         }
       }
     }
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#endpoints"
+      "https://www.w3.org/ns/activitystreams#endpoints",
+      "https://www.w3.org/TR/activitypub/#actor-objects"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -69,6 +69,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Linked urn:solid:sharedInbox (seeAlso + example); SHOULD→MAY per AP; dropped unregistered Actor term domain/seeAlso; cited ActivityPub."
     }
   ],
   "see_also": {

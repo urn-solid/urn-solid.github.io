@@ -3,14 +3,16 @@
   "@id": "urn:solid:isVersionOf",
   "@type": "rdf:Property",
   "rdfs:label": "isVersionOf",
-  "rdfs:comment": "A related resource of which the described resource is a version, edition, or adaptation.",
+  "rdfs:comment": "A related resource of which the described resource is a version, edition, or adaptation — implying substantive content change rather than a format difference.",
   "owl:sameAs": "http://purl.org/dc/terms/isVersionOf",
   "rdfs:seeAlso": [
-    "http://purl.org/dc/terms/hasVersion",
+    "urn:solid:hasVersion",
     "urn:solid:replaces"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:replaces"
+    "urn:solid:replaces",
+    "urn:solid:hasVersion",
+    "urn:solid:isFormatOf"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -22,7 +24,9 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/specs/v2",
         "@type": "urn:solid:Document",
-        "urn:solid:isVersionOf": { "@id": "https://example.org/specs/" }
+        "urn:solid:isVersionOf": {
+          "@id": "https://example.org/specs/"
+        }
       }
     }
   ],
@@ -38,6 +42,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses urn:solid:hasVersion; added hasVersion/isFormatOf to notToBeConfusedWith; comment clarifies content vs format change."
     }
   ],
   "see_also": {

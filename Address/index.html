@@ -36,11 +36,14 @@
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#Address",
   "rdfs:seeAlso": [
     "urn:solid:hasAddress",
-    "http://www.w3.org/2006/vcard/ns#street-address",
-    "http://www.w3.org/2006/vcard/ns#locality",
-    "http://www.w3.org/2006/vcard/ns#region",
-    "http://www.w3.org/2006/vcard/ns#postal-code",
-    "http://www.w3.org/2006/vcard/ns#country-name"
+    "urn:solid:street-address",
+    "urn:solid:locality",
+    "urn:solid:region",
+    "urn:solid:postal-code",
+    "urn:solid:country-name"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:PostalAddress"
   ],
   "status": "stable",
   "added": "2026-04-25",
@@ -54,10 +57,10 @@
         "@type": "urn:solid:Person",
         "urn:solid:hasAddress": {
           "@type": "urn:solid:Address",
-          "http://www.w3.org/2006/vcard/ns#street-address": "10 Downing Street",
-          "http://www.w3.org/2006/vcard/ns#locality": "London",
-          "http://www.w3.org/2006/vcard/ns#postal-code": "SW1A 2AA",
-          "http://www.w3.org/2006/vcard/ns#country-name": "United Kingdom"
+          "urn:solid:street-address": "10 Downing Street",
+          "urn:solid:locality": "London",
+          "urn:solid:postal-code": "SW1A 2AA",
+          "urn:solid:country-name": "United Kingdom"
         }
       }
     }
@@ -74,6 +77,12 @@
       "at": "2026-04-25T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term — Class form pairing with the existing hasAddress property."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso and example use registry address-part terms; added PostalAddress to notToBeConfusedWith."
     }
   ],
   "see_also": {

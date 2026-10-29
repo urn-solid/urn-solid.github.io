@@ -39,14 +39,16 @@
     "urn:solid:hiddenLabel",
     "http://www.w3.org/2000/01/rdf-schema#label"
   ],
-  "rdfs:domain": "urn:solid:Concept",
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "rdfs:range": "http://www.w3.org/2000/01/rdf-schema#Literal",
   "notToBeConfusedWith": [
-    "urn:solid:altLabel"
+    "urn:solid:altLabel",
+    "urn:solid:hiddenLabel",
+    "urn:solid:label",
+    "urn:solid:notation"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Exactly one `prefLabel` per language tag per Concept (SKOS integrity rule). Use language-tagged literals for multilingual vocabularies. Synonyms go under `urn:solid:altLabel`; non-display strings (typos, misspellings used for search) go under `urn:solid:hiddenLabel`.",
+  "notes": "At most one `prefLabel` per language tag per resource (SKOS integrity rule). Use language-tagged literals for multilingual vocabularies. Synonyms go under `urn:solid:altLabel`; non-display strings (typos, misspellings used for search) go under `urn:solid:hiddenLabel`. Upstream SKOS declares no domain: commonly used on Concepts, ConceptSchemes and Collections.",
   "examples": [
     {
       "title": "Multilingual concept label",
@@ -55,8 +57,14 @@
         "@id": "https://example.org/vocab/topics/cat-theory",
         "@type": "urn:solid:Concept",
         "urn:solid:prefLabel": [
-          { "@value": "Category theory", "@language": "en" },
-          { "@value": "Kategorientheorie", "@language": "de" }
+          {
+            "@value": "Category theory",
+            "@language": "en"
+          },
+          {
+            "@value": "Kategorientheorie",
+            "@language": "de"
+          }
         ]
       }
     }
@@ -73,6 +81,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range xsd:string -> rdfs:Literal (allows language-tagged labels); dropped rdfs:domain (none upstream); 'exactly one' -> 'at most one' per language."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

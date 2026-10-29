@@ -6,18 +6,19 @@
   "rdfs:comment": "An ordered list of members of a SKOS OrderedCollection — preserves sequence in a way that the unordered `skos:member` cannot.",
   "owl:sameAs": "http://www.w3.org/2004/02/skos/core#memberList",
   "rdfs:seeAlso": [
-    "urn:solid:Collection",
     "urn:solid:Concept",
-    "urn:solid:inScheme"
+    "http://www.w3.org/2004/02/skos/core#OrderedCollection",
+    "http://www.w3.org/2004/02/skos/core#Collection",
+    "http://www.w3.org/2004/02/skos/core#member"
   ],
   "rdfs:domain": "http://www.w3.org/2004/02/skos/core#OrderedCollection",
   "rdfs:range": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
   "notToBeConfusedWith": [
-    "urn:solid:hasMember"
+    "urn:solid:OrderedCollection"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Functional and required on a `skos:OrderedCollection`: exactly one `rdf:List` of Concepts, encoding their canonical order (chapter sequence, taxonomic ranking, presentation order). Use plain `skos:member` for unordered groups.",
+  "notes": "Functional on a `skos:OrderedCollection` (at most one `rdf:List`): an `rdf:List` of Concepts and/or Collections, encoding their canonical order (chapter sequence, taxonomic ranking, presentation order). Use plain `skos:member` for unordered groups. `urn:solid:OrderedCollection` / `urn:solid:Collection` are ActivityStreams classes, not SKOS ones; do not use `memberList` on them.",
   "examples": [
     {
       "title": "An OrderedCollection of Concepts",
@@ -48,6 +49,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed seeAlso (SKOS Collection/OrderedCollection/member instead of AS Collection, inScheme); notToBeConfusedWith now AS OrderedCollection; corrected 'required' to functional and members to Concepts and/or Collections."
     }
   ],
   "see_also": {

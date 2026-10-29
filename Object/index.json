@@ -3,11 +3,16 @@
   "@id": "urn:solid:Object",
   "@type": "rdfs:Class",
   "rdfs:label": "Object",
-  "rdfs:comment": "The base class for all ActivityStreams objects — anything that can be the subject or target of an Activity.",
+  "rdfs:comment": "The base ActivityStreams class for any described thing (Notes, Images, actors, Activities, Collections…). Disjoint from as:Link, which describes a reference to a resource rather than the resource itself.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Object",
   "rdfs:seeAlso": [
     "http://www.w3.org/2002/07/owl#Thing",
     "https://schema.org/Thing"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Link",
+    "urn:solid:Entity",
+    "urn:solid:object"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -35,6 +40,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Reworded comment per AS2 and noted disjointness from Link; added notToBeConfusedWith Link."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

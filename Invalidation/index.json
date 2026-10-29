@@ -3,16 +3,22 @@
   "@id": "urn:solid:Invalidation",
   "@type": "rdfs:Class",
   "rdfs:label": "Invalidation",
-  "rdfs:comment": "A qualified PROV invalidation event — the moment an Entity ceased to exist.",
+  "rdfs:comment": "A qualified PROV invalidation — the start of the destruction, cessation, or expiry of an Entity by an Activity, after which the Entity is no longer available for use.",
   "owl:sameAs": "http://www.w3.org/ns/prov#Invalidation",
   "rdfs:seeAlso": [
     "urn:solid:wasInvalidatedBy",
     "urn:solid:Generation",
+    "urn:solid:Tombstone",
+    "urn:solid:invalidatedAtTime",
+    "urn:solid:qualifiedInvalidation",
+    "urn:solid:Delete"
+  ],
+  "notToBeConfusedWith": [
     "urn:solid:Tombstone"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "End-of-life counterpart to `urn:solid:Generation`. Use to qualify `prov:wasInvalidatedBy` with `urn:solid:atTime` and other context. Linked from an Entity via `prov:qualifiedInvalidation`. ActivityStreams' lighter equivalent for social data is `as:Tombstone`.",
+  "notes": "End-of-life counterpart to `urn:solid:Generation`. Use to qualify `prov:wasInvalidatedBy` with `urn:solid:atTime` and other context. Linked from an Entity via `prov:qualifiedInvalidation`. In ActivityStreams the closest analogues are `urn:solid:Delete` (the activity) and `urn:solid:Tombstone` (the placeholder left behind).",
   "examples": [
     {
       "title": "Qualified invalidation of a deleted post",
@@ -37,6 +43,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment covers expiry/cessation, not just ceasing to exist; Tombstone reframed as placeholder; seeAlso additions."
     }
   ],
   "see_also": {

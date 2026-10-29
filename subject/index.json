@@ -6,12 +6,15 @@
   "rdfs:comment": "A topic of the resource — typically expressed as keywords, key phrases, or controlled-vocabulary terms.",
   "owl:sameAs": "http://purl.org/dc/terms/subject",
   "rdfs:seeAlso": [
-    "https://schema.org/about",
+    "urn:solid:about",
     "urn:solid:topic"
   ],
   "notToBeConfusedWith": [
     "urn:solid:topic",
-    "urn:solid:primaryTopic"
+    "urn:solid:primaryTopic",
+    "urn:solid:about",
+    "urn:solid:keywords",
+    "urn:solid:tag"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -23,7 +26,11 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/jsonld-intro",
         "@type": "urn:solid:Document",
-        "urn:solid:subject": ["JSON-LD", "RDF", "linked data"]
+        "urn:solid:subject": [
+          "JSON-LD",
+          "RDF",
+          "linked data"
+        ]
       }
     }
   ],
@@ -39,6 +46,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added about/keywords/tag to notToBeConfusedWith; seeAlso uses urn:solid:about."
     }
   ],
   "see_also": {

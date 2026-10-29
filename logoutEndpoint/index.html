@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:logoutEndpoint — urn-solid</title>
-<meta name="description" content="The logout endpoint URL for a Solid OIDC provider.">
+<meta name="description" content="The URL at which a user can log out of a given Solid server (legacy server metadata, predates Solid-OIDC; OIDC providers expose end_session_endpoint instead).">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/logoutEndpoint/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:logoutEndpoint">
-<meta property="og:description" content="The logout endpoint URL for a Solid OIDC provider.">
+<meta property="og:description" content="The URL at which a user can log out of a given Solid server (legacy server metadata, predates Solid-OIDC; OIDC providers expose end_session_endpoint instead).">
 <meta property="og:url" content="https://urn-solid.com/logoutEndpoint/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:logoutEndpoint">
-<meta name="twitter:description" content="The logout endpoint URL for a Solid OIDC provider.">
+<meta name="twitter:description" content="The URL at which a user can log out of a given Solid server (legacy server metadata, predates Solid-OIDC; OIDC providers expose end_session_endpoint instead).">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:logoutEndpoint",
   "@type": "rdf:Property",
   "rdfs:label": "logoutEndpoint",
-  "rdfs:comment": "The logout endpoint URL for a Solid OIDC provider.",
+  "rdfs:comment": "The URL at which a user can log out of a given Solid server (legacy server metadata, predates Solid-OIDC; OIDC providers expose end_session_endpoint instead).",
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#logoutEndpoint",
   "rdfs:seeAlso": [
     "urn:solid:loginEndpoint",
@@ -43,10 +43,10 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Counterpart to `urn:solid:loginEndpoint`. Advertised by a Solid OIDC provider as the URL where users can sign out. Most modern Solid OIDC implementations expose this via OIDC discovery (`/.well-known/openid-configuration`'s `end_session_endpoint`) rather than via this predicate.",
+  "notes": "Counterpart to `urn:solid:loginEndpoint`. Legacy (NSS-era) server metadata, not specific to an OpenID provider. Solid-OIDC providers expose logout via OIDC discovery (`/.well-known/openid-configuration`'s `end_session_endpoint`) instead.",
   "examples": [
     {
-      "title": "OIDC issuer with login and logout endpoints",
+      "title": "Server with login and logout endpoints",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://login.example.org/",
@@ -67,6 +67,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Definition: legacy server logout URL, not OIDC-specific."
     }
   ],
   "see_also": {

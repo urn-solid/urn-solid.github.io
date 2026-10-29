@@ -3,13 +3,18 @@
   "@id": "urn:solid:storage",
   "@type": "rdf:Property",
   "rdfs:label": "storage",
-  "rdfs:comment": "The root of a personal data store (Solid pod) for the subject.",
+  "rdfs:comment": "Links an agent (typically its WebID) to the root container of a Solid storage (pod) it can use.",
   "owl:sameAs": "http://www.w3.org/ns/pim/space#storage",
   "rdfs:seeAlso": [
-    "http://www.w3.org/ns/solid/terms#account"
+    "urn:solid:Storage",
+    "urn:solid:owner",
+    "https://solidproject.org/TR/protocol#storage"
   ],
-  "rdfs:domain": "urn:solid:Person",
-  "rdfs:range": "urn:solid:Container",
+  "rdfs:domain": "urn:solid:Agent",
+  "rdfs:range": "urn:solid:Storage",
+  "notToBeConfusedWith": [
+    "urn:solid:Storage"
+  ],
   "status": "stable",
   "added": "2026-04-18",
   "notes": "From the PIM space vocabulary. The value is the root URL of the user's pod (a Container). A WebID may list multiple `pim:storage` values when the user has multiple pods. Apps use this to discover where to read/write data on behalf of the user.",
@@ -36,6 +41,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range -> Storage, domain -> Agent; seeAlso Storage/owner/protocol; notToBeConfusedWith Storage."
     }
   ],
   "see_also": {

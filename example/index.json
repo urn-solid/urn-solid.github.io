@@ -9,11 +9,9 @@
     "urn:solid:definition",
     "urn:solid:scopeNote"
   ],
-  "rdfs:domain": "urn:solid:Concept",
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Editorial property for cataloguers — provides a sample use of the concept. Repeat for multiple examples. Mirrors the per-term `examples` arrays on urn-solid term files (which are JSON-LD snippets, while `skos:example` is plain prose).",
+  "notes": "Editorial property for cataloguers — provides a sample use of the concept. Repeat for multiple examples. Mirrors the per-term `examples` arrays on urn-solid term files (which are JSON-LD snippets, while `skos:example` is plain prose). Upstream SKOS declares no domain or range: usable on any resource (Concept, ConceptScheme, Collection), with literal (plain or language-tagged) or resource values.",
   "examples": [
     {
       "title": "Concept with an example",
@@ -38,6 +36,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain/rdfs:range (xsd:string conflicted with language-tagged values; SKOS declares neither)."
     }
   ],
   "see_also": {

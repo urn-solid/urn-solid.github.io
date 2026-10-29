@@ -3,7 +3,7 @@
   "@id": "urn:solid:bday",
   "@type": "rdf:Property",
   "rdfs:label": "bday",
-  "rdfs:comment": "The full date of birth of the subject (year-month-day).",
+  "rdfs:comment": "The birth date of the subject — normally a full date (1990-03-14); RFC 6350 also permits year-only or month-day-only values.",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#bday",
   "rdfs:seeAlso": [
     "urn:solid:birthday",
@@ -11,11 +11,12 @@
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#date",
   "notToBeConfusedWith": [
-    "urn:solid:birthday"
+    "urn:solid:birthday",
+    "urn:solid:anniversary"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "vCard's full birth date — `xsd:date` with year (\"1990-03-14\"), distinct from FOAF's `urn:solid:birthday` which is just `mm-dd` (no year). Use `bday` when you need the actual year for age calculation; use `birthday` for anniversary semantics without revealing age.",
+  "notes": "vCard's full birth date — `xsd:date` with year (\"1990-03-14\"), distinct from FOAF's `urn:solid:birthday` which is just `mm-dd` (no year). Use `bday` when you need the actual year for age calculation; use `birthday` for anniversary semantics without revealing age. The registry range is xsd:date, but upstream declares a union of xsd:dateTime, xsd:dateTimeStamp and xsd:gYear.",
   "examples": [
     {
       "title": "vCard with a full birth date",
@@ -40,6 +41,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment allows RFC 6350 partial dates; notes give the upstream range."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

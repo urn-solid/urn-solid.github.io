@@ -36,13 +36,18 @@
   "owl:sameAs": "http://www.w3.org/ns/prov#wasInvalidatedBy",
   "rdfs:seeAlso": [
     "urn:solid:wasGeneratedBy",
-    "urn:solid:Tombstone"
+    "urn:solid:Tombstone",
+    "urn:solid:invalidatedAtTime",
+    "urn:solid:qualifiedInvalidation"
   ],
   "rdfs:domain": "urn:solid:Entity",
-  "rdfs:range": "urn:solid:Activity",
+  "rdfs:range": "http://www.w3.org/ns/prov#Activity",
+  "notToBeConfusedWith": [
+    "urn:solid:invalidated"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "PROV's invalidation pointer — the inverse-in-time of `prov:wasGeneratedBy`. Records that an Entity ceased to exist at a particular Activity. Pair with `prov:invalidatedAtTime` for the timestamp. ActivityStreams' lighter equivalent for social data is `as:Tombstone`.",
+  "notes": "PROV's invalidation pointer — the inverse-in-time of `prov:wasGeneratedBy`. Records that an Entity ceased to exist at a particular Activity. Pair with `prov:invalidatedAtTime` for the timestamp. In ActivityStreams, a deleted object is typically replaced by an `as:Tombstone` and the deletion recorded as an `as:Delete` activity.",
   "examples": [
     {
       "title": "Document invalidated by a deletion",
@@ -66,6 +71,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range now prov:Activity; added notToBeConfusedWith invalidated; seeAlso adds invalidatedAtTime and qualifiedInvalidation; clarified AS Tombstone note."
     }
   ],
   "see_also": {

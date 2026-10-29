@@ -3,28 +3,40 @@
   "@id": "urn:solid:summaryMap",
   "@type": "rdf:Property",
   "rdfs:label": "summaryMap",
-  "rdfs:comment": "Language-tagged variants of an ActivityStreams Object's `summary` — keys are BCP 47 language tags, values are the localised summary strings.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#summaryMap",
+  "rdfs:comment": "Language-tagged variants of an ActivityStreams Object's `summary` — keys are BCP 47 language tags, values are the localised summary strings. A JSON-LD `@language`-map alias for `as:summary`, not a separate RDF property.",
   "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#summary",
     "urn:solid:summary",
     "urn:solid:nameMap",
     "urn:solid:contentMap"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "On the fediverse, `summary` is also used as the content warning / spoiler text — `summaryMap` lets that warning be translated alongside the post body. Pair with `contentMap` so the visible warning matches the language of the content the user will reveal.",
+  "notes": "JSON-LD alias: in the AS2 context `summaryMap` is `as:summary` with `@container: @language`, so in RDF it is just language-tagged `as:summary` literals; it has no IRI of its own. On the fediverse, `summary` is also used as the content warning / spoiler text — `summaryMap` lets that warning be translated alongside the post body. Pair with `contentMap` so the visible warning matches the language of the content the user will reveal. The example carries inline context terms with `@container: @language` so the maps actually expand. It carries no owl:sameAs of its own: the RDF property is `https://www.w3.org/ns/activitystreams#summary`, which the registry maps via `urn:solid:summary`; this term only names the JSON-LD alias.",
   "examples": [
     {
       "title": "A Note with localised content warning",
       "jsonld": {
-        "@context": "https://urn-solid.com/context.jsonld",
+        "@context": [
+          "https://urn-solid.com/context.jsonld",
+          {
+            "summaryMap": {
+              "@id": "https://www.w3.org/ns/activitystreams#summary",
+              "@container": "@language"
+            },
+            "contentMap": {
+              "@id": "https://www.w3.org/ns/activitystreams#content",
+              "@container": "@language"
+            }
+          }
+        ],
         "@id": "https://alice.example.org/notes/4",
         "@type": "urn:solid:Note",
-        "urn:solid:summaryMap": {
+        "summaryMap": {
           "en": "spoilers for season 2",
           "fr": "spoilers pour la saison 2"
         },
-        "urn:solid:contentMap": {
+        "contentMap": {
           "en": "I cannot believe what just happened…",
           "fr": "Je n'arrive pas à croire ce qui vient de se passer…"
         }
@@ -33,7 +45,8 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#summaryMap"
+      "https://www.w3.org/ns/activitystreams#summary",
+      "https://www.w3.org/ns/activitystreams"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -43,6 +56,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "owl:sameAs -> as:summary (summaryMap is the AS2 context's @language-map alias); example gets inline @language context for summaryMap and contentMap. owl:sameAs moved to seeAlso (one registry term per upstream IRI)."
     }
   ],
   "see_also": {

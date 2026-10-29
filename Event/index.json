@@ -7,11 +7,14 @@
   "owl:sameAs": "https://schema.org/Event",
   "rdfs:seeAlso": [
     "https://www.w3.org/ns/activitystreams#Event",
-    "http://www.w3.org/2002/12/cal/ical#Vevent"
+    "urn:solid:Vevent"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Vevent"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use for scheduled occurrences — meetings, conferences, releases, performances. Pair with `schema:startDate`, `schema:endDate`, `schema:location`. For ActivityStreams-style social events (with attendees as actors), `as:Event` carries actor-friendly semantics.",
+  "notes": "Use for scheduled occurrences — meetings, conferences, releases, performances. Pair with `schema:startDate`, `schema:endDate`, `schema:location`. For calendar data that must round-trip with iCalendar/RFC 5545 (dtstart, rrule, valarm), use `urn:solid:Vevent`; use `urn:solid:Event` for schema.org web/SEO markup; use `as:Event` in ActivityPub.",
   "examples": [
     {
       "title": "A simple event",
@@ -37,6 +40,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Disambiguated from urn:solid:Vevent (iCalendar) and as:Event."
     }
   ],
   "see_also": {

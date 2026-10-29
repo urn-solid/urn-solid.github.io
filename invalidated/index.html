@@ -35,23 +35,26 @@
   "rdfs:comment": "An Entity that this PROV Activity destroyed, consumed, or rendered unusable — after invalidation the Entity is no longer available for further use.",
   "owl:sameAs": "http://www.w3.org/ns/prov#invalidated",
   "rdfs:seeAlso": [
-    "urn:solid:Activity",
+    "http://www.w3.org/ns/prov#Activity",
     "urn:solid:Entity",
     "urn:solid:generated",
     "urn:solid:used"
   ],
-  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:domain": "http://www.w3.org/ns/prov#Activity",
   "rdfs:range": "urn:solid:Entity",
+  "notToBeConfusedWith": [
+    "urn:solid:wasInvalidatedBy"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Models destruction or consumption explicitly: a delete operation invalidates a record, a publish step invalidates a draft. Distinct from `prov:used` (read without altering) and `prov:generated` (created). Useful in audit trails and data lifecycle tracking.",
+  "notes": "Models destruction or consumption explicitly: a delete operation invalidates a record, a publish step invalidates a draft. Distinct from `prov:used` (began using it as an input, possibly consuming it) and `prov:generated` (created). Useful in audit trails and data lifecycle tracking. Activity → Entity; `urn:solid:wasInvalidatedBy` is the Entity → Activity direction.",
   "examples": [
     {
       "title": "Deletion activity invalidating a record",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/activity/delete-old-records",
-        "@type": "urn:solid:Activity",
+        "@type": "http://www.w3.org/ns/prov#Activity",
         "urn:solid:invalidated": { "@id": "https://example.org/records/2020-archive" }
       }
     }
@@ -68,6 +71,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain and example type now prov:Activity; corrected prov:used wording; added notToBeConfusedWith wasInvalidatedBy."
     }
   ],
   "see_also": {

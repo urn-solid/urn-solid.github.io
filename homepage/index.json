@@ -3,16 +3,16 @@
   "@id": "urn:solid:homepage",
   "@type": "rdf:Property",
   "rdfs:label": "homepage",
-  "rdfs:comment": "A homepage for the subject — a top-level page about the agent.",
+  "rdfs:comment": "A homepage for some thing — the main web page about a person, organization, project or other resource. Inverse-functional: a homepage identifies at most one thing.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/homepage",
   "rdfs:seeAlso": [
     "http://www.w3.org/2006/vcard/ns#hasURL",
     "https://schema.org/url"
   ],
-  "rdfs:domain": "urn:solid:Agent",
+  "rdfs:range": "urn:solid:Document",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Inverse-functional in FOAF: a homepage uniquely identifies its agent. Use the IRI of the actual page, not a description of it. For arbitrary URLs that are not the canonical homepage, prefer `schema:url` or `vcard:hasURL`.",
+  "notes": "Inverse-functional in FOAF: a homepage uniquely identifies its subject. Use the IRI of the actual page, not a description of it. For arbitrary URLs that are not the canonical homepage, prefer `schema:url` or `vcard:hasURL`.",
   "examples": [
     {
       "title": "Person with a homepage",
@@ -36,6 +36,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped Agent domain (upstream domain is owl:Thing); added range urn:solid:Document; widened comment and notes."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -43,5 +55,11 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:hasURL",
+    "urn:solid:landingPage",
+    "urn:solid:page",
+    "urn:solid:weblog"
+  ]
 }

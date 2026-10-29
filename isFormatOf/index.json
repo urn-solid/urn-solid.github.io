@@ -3,7 +3,7 @@
   "@id": "urn:solid:isFormatOf",
   "@type": "rdf:Property",
   "rdfs:label": "isFormatOf",
-  "rdfs:comment": "A related resource that is the same intellectual content of which the described resource is a different-format rendition.",
+  "rdfs:comment": "A pre-existing related resource that is substantially the same as the described resource, but in another format.",
   "owl:sameAs": "http://purl.org/dc/terms/isFormatOf",
   "rdfs:seeAlso": [
     "urn:solid:hasFormat"
@@ -22,7 +22,9 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/papers/42.pdf",
         "@type": "urn:solid:Document",
-        "urn:solid:isFormatOf": { "@id": "https://example.org/papers/42" }
+        "urn:solid:isFormatOf": {
+          "@id": "https://example.org/papers/42"
+        }
       }
     }
   ],
@@ -38,6 +40,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment reworded to match upstream definition."
     }
   ],
   "see_also": {

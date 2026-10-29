@@ -3,7 +3,7 @@
   "@id": "urn:solid:DataService",
   "@type": "rdfs:Class",
   "rdfs:label": "DataService",
-  "rdfs:comment": "A DCAT DataService — a service that gives access to one or more Datasets via an API or query interface.",
+  "rdfs:comment": "A DCAT DataService: a collection of operations, accessible via an endpoint, that provides access to one or more Datasets or data-processing functions (e.g. a SPARQL endpoint or REST API).",
   "owl:sameAs": "http://www.w3.org/ns/dcat#DataService",
   "rdfs:seeAlso": [
     "urn:solid:Dataset",
@@ -21,10 +21,10 @@
       "title": "A SPARQL endpoint as a DataService",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://example.org/sparql",
+        "@id": "https://example.org/services/sparql",
         "@type": "urn:solid:DataService",
-        "http://www.w3.org/ns/dcat#endpointURL": { "@id": "https://example.org/sparql" },
-        "http://www.w3.org/ns/dcat#servesDataset": { "@id": "https://example.org/datasets/wonderland-2026" }
+        "urn:solid:endpointURL": { "@id": "https://example.org/sparql" },
+        "urn:solid:servesDataset": { "@id": "https://example.org/datasets/wonderland-2026" }
       }
     }
   ],
@@ -40,6 +40,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example separates the service @id from its endpointURL and uses registry terms; comment adds data-processing functions."
     }
   ],
   "see_also": {

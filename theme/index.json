@@ -10,14 +10,13 @@
     "urn:solid:Concept",
     "urn:solid:subject"
   ],
-  "rdfs:domain": "urn:solid:Dataset",
   "rdfs:range": "urn:solid:Concept",
   "notToBeConfusedWith": [
     "urn:solid:keyword"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Distinct from `urn:solid:keyword` (free-text tags): `dcat:theme` points at structured `urn:solid:Concept`s from a published theme vocabulary. The EU Data Theme vocabulary (`http://publications.europa.eu/resource/authority/data-theme/`) is the canonical example. The ConceptScheme is declared via `dcat:themeTaxonomy` on the parent Catalog.",
+  "notes": "Distinct from `urn:solid:keyword` (free-text tags): `dcat:theme` points at structured `urn:solid:Concept`s from a published theme vocabulary. The EU Data Theme vocabulary (`http://publications.europa.eu/resource/authority/data-theme/`) is the canonical example. The ConceptScheme is declared via `dcat:themeTaxonomy` on the parent Catalog. Applies to any catalogued resource (Catalog, Dataset, DataService). Subject classification only; not a UI or visual theme.",
   "examples": [
     {
       "title": "Dataset with a theme",
@@ -41,6 +40,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain Dataset (applies to any dcat:Resource); noted it is not a UI theme."
     }
   ],
   "see_also": {

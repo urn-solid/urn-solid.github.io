@@ -33,12 +33,10 @@
   "@type": "rdf:Property",
   "rdfs:label": "duration",
   "rdfs:comment": "How long the object lasts — for time-bounded objects like events, audio, or video.",
-  "owl:sameAs": [
-    "https://www.w3.org/ns/activitystreams#duration",
-    "http://www.w3.org/2002/12/cal/ical#duration"
-  ],
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#duration",
   "rdfs:seeAlso": [
-    "https://schema.org/duration"
+    "https://schema.org/duration",
+    "http://www.w3.org/2002/12/cal/ical#duration"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#duration",
   "status": "stable",
@@ -51,8 +49,8 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/audio/podcast-42",
-        "@type": "https://www.w3.org/ns/activitystreams#Audio",
-        "urn:solid:duration": "PT45M"
+        "@type": "urn:solid:Audio",
+        "urn:solid:duration": { "@value": "PT45M", "@type": "http://www.w3.org/2001/XMLSchema#duration" }
       }
     }
   ],
@@ -75,6 +73,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Added ical:duration to owl:sameAs — same xsd:duration semantics."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Moved ical:duration from owl:sameAs to seeAlso (narrower VEVENT/VTODO scope); example uses urn:solid:Audio and an xsd:duration-typed literal."
     }
   ],
   "see_also": {

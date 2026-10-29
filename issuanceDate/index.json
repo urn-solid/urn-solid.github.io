@@ -8,7 +8,8 @@
   "rdfs:seeAlso": [
     "urn:solid:VerifiableCredential",
     "urn:solid:expirationDate",
-    "urn:solid:issuer"
+    "urn:solid:issuer",
+    "https://www.w3.org/2018/credentials#validFrom"
   ],
   "rdfs:domain": "urn:solid:VerifiableCredential",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
@@ -17,7 +18,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Distinct from `dcterms:created` and `dcterms:issued` — `issuanceDate` carries the same semantics but lives in the VC namespace so verifiers and standard libraries find it where they expect. Required on every VC. Note: VC 2.0 renames this to `validFrom`; both forms are seen in the wild.",
+  "notes": "VC 1.1 term (required there). VC Data Model 2.0 replaces it with `validFrom` (https://www.w3.org/2018/credentials#validFrom), which is optional; the v2 context does not define `issuanceDate`. Use it when reading or writing VC 1.1 credentials — plenty of VC 1.1 data still exists — and prefer `validFrom` for new VC 2.0 credentials. Distinct from `dcterms:created` / `dcterms:issued`, which VC verifiers do not consult.",
   "examples": [
     {
       "title": "Credential with an issuance date",
@@ -41,6 +42,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes corrected: required only in VC 1.1; VC 2.0 uses optional validFrom; removed self-contradictory 'same semantics' claim. Added validFrom to seeAlso."
     }
   ],
   "see_also": {

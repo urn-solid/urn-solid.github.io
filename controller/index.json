@@ -3,7 +3,7 @@
   "@id": "urn:solid:controller",
   "@type": "rdf:Property",
   "rdfs:label": "controller",
-  "rdfs:comment": "The Actor authorised to make changes to a DID Document or verification method — the entity holding the private key behind the public material.",
+  "rdfs:comment": "The entity (identified by a DID or URL) authorised to make changes to a DID document, or the entity a verification method belongs to — not necessarily whoever holds a given private key.",
   "owl:sameAs": "https://w3id.org/security#controller",
   "rdfs:seeAlso": [
     "urn:solid:DIDDocument",
@@ -36,6 +36,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment corrected: controller is the entity authorised to change the DID document, not necessarily the private-key holder."
     }
   ],
   "see_also": {

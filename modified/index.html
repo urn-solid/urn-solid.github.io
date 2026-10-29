@@ -35,11 +35,15 @@
   "rdfs:comment": "The date the resource was last modified.",
   "owl:sameAs": "http://purl.org/dc/terms/modified",
   "rdfs:seeAlso": [
-    "https://schema.org/dateModified"
+    "urn:solid:dateModified",
+    "urn:solid:updated"
   ],
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "rdfs:range": "http://www.w3.org/2000/01/rdf-schema#Literal",
   "notToBeConfusedWith": [
-    "urn:solid:created"
+    "urn:solid:created",
+    "urn:solid:dateModified",
+    "urn:solid:updated",
+    "urn:solid:date"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -68,6 +72,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range rdfs:Literal (date or dateTime); added dateModified/updated to notToBeConfusedWith; seeAlso uses urn terms."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

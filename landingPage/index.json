@@ -3,13 +3,12 @@
   "@id": "urn:solid:landingPage",
   "@type": "rdf:Property",
   "rdfs:label": "landingPage",
-  "rdfs:comment": "A web page that gives access to a DCAT Dataset, its Distributions, and additional information.",
+  "rdfs:comment": "A web page that gives access to a DCAT Catalog, Dataset, or DataService, its distributions, and/or additional information.",
   "owl:sameAs": "http://www.w3.org/ns/dcat#landingPage",
   "rdfs:seeAlso": [
     "urn:solid:accessURL",
     "urn:solid:homepage"
   ],
-  "rdfs:domain": "urn:solid:Dataset",
   "rdfs:range": "urn:solid:Document",
   "notToBeConfusedWith": [
     "urn:solid:accessURL",
@@ -17,7 +16,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Distinct from `urn:solid:accessURL` (a Distribution-level access link): `landingPage` is the human-facing introduction page for the whole Dataset, where browsers go for context. Distinct from FOAF `urn:solid:homepage` which is for Agent homepages.",
+  "notes": "Distinct from `urn:solid:accessURL` (a Distribution-level access link): `landingPage` is the human-facing introduction page for the whole Dataset, where browsers go for context. Distinct from `urn:solid:homepage` (foaf:homepage), which DCAT uses for a Catalog's own home page; `landingPage` is the human-facing page for a specific catalogued resource. If a dataset is reachable only via its landing page, DCAT says to repeat that URL as `accessURL` on a Distribution. Upstream declares no domain (Catalog, Dataset or DataService).",
   "examples": [
     {
       "title": "Dataset with landing page",
@@ -41,6 +40,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain Dataset (none upstream); comment covers Catalog/Dataset/DataService; corrected foaf:homepage guidance."
     }
   ],
   "see_also": {

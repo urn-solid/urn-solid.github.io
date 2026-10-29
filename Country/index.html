@@ -39,11 +39,12 @@
     "https://schema.org/AdministrativeArea"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Place"
+    "urn:solid:Place",
+    "urn:solid:Jurisdiction"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:Place` (via `schema:AdministrativeArea`). Pair with an ISO 3166-1 country code via `schema:identifier` for machine-readability. For US states, EU countries, and other administrative regions, use `schema:City`, `schema:State`, or `schema:AdministrativeArea` accordingly.",
+  "notes": "Subclass of `urn:solid:Place` (via `schema:AdministrativeArea`). Put the ISO 3166-1 alpha-2 code in `schema:identifier` (or `dcterms:identifier` via `urn:solid:identifier`, as in the example). For sub-national regions (US states, provinces) use `schema:State` or `schema:AdministrativeArea`; for supranational bodies such as the EU, use `schema:Organization` or `schema:AdministrativeArea`.",
   "examples": [
     {
       "title": "A country with an ISO code",
@@ -68,6 +69,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected guidance on sub-national/supranational regions; notes now name the identifier property used in the example."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

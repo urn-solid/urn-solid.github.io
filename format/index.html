@@ -36,11 +36,13 @@
   "owl:sameAs": "http://purl.org/dc/terms/format",
   "rdfs:seeAlso": [
     "https://schema.org/encodingFormat",
-    "https://www.w3.org/ns/activitystreams#mediaType"
+    "urn:solid:mediaType",
+    "urn:solid:medium",
+    "urn:solid:extent"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use an IANA media type string (`text/html`, `application/ld+json`, `image/png`) for digital resources. For physical media or non-MIME formats, free-form descriptive text is acceptable. Range can also be a `dcterms:MediaType` resource for richer modelling.",
+  "notes": "Use an IANA media type string (`text/html`, `application/ld+json`, `image/png`) for digital resources. For physical media or non-MIME formats, free-form descriptive text is acceptable. Range is `urn:solid:MediaTypeOrExtent` (subclasses `urn:solid:FileFormat`, `urn:solid:PhysicalMedium`, `urn:solid:SizeOrDuration`). On ActivityStreams objects use `urn:solid:mediaType`.",
   "examples": [
     {
       "title": "JSON-LD document with a format",
@@ -64,6 +66,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes state the MediaTypeOrExtent range and its subclasses; seeAlso uses urn:solid:mediaType and adds medium/extent."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -71,7 +85,11 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:mediaType",
+    "urn:solid:medium"
+  ]
 }
 
 </script>

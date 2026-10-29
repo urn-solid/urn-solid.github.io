@@ -4,7 +4,7 @@
   "@type": "rdfs:Class",
   "rdfs:label": "Flag",
   "rdfs:comment": "An ActivityStreams Activity indicating that the actor is reporting the object as objectionable — the standard fediverse content-moderation primitive.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Flag",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Flag",
   "rdfs:seeAlso": [
     "urn:solid:Block",
     "urn:solid:Ignore",
@@ -32,7 +32,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#Flag"
+      "https://www.w3.org/ns/activitystreams#Flag"
     ],
     "curatedBy": "claude-curate-next"
   },

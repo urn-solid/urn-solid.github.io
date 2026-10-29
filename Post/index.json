@@ -8,8 +8,10 @@
   "rdfs:seeAlso": [
     "urn:solid:Organization",
     "urn:solid:Membership",
-    "urn:solid:role",
-    "urn:solid:holds"
+    "urn:solid:holds",
+    "urn:solid:heldBy",
+    "urn:solid:postIn",
+    "http://www.w3.org/ns/org#role"
   ],
   "notToBeConfusedWith": [
     "urn:solid:Membership",
@@ -17,7 +19,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "A Post is a *seat* (e.g. \"CTO of ACME\"); the Agent who fills it changes over time. Compare with `org:Membership` (a time-bound link between Agent, Organization, and Role) and `org:Role` (the abstract role itself). Use Post when the position has an identity independent of its current holder.",
+  "notes": "A Post is a *seat* (e.g. \"CTO of ACME\"); the Agent who fills it changes over time. Compare with `org:Membership` (a time-bound link between Agent, Organization, and Role) and `org:Role` (the abstract role itself). Use Post when the position has an identity independent of its current holder. Attach the role with `org:role` (http://www.w3.org/ns/org#role). Note that `urn:solid:role` is vcard:role (a job-title string), not org:role.",
   "examples": [
     {
       "title": "A named position in an organization",
@@ -27,7 +29,7 @@
         "@type": "urn:solid:Post",
         "urn:solid:label": "Chief Technology Officer",
         "urn:solid:postIn": { "@id": "https://example.org/acme#org" },
-        "urn:solid:role": { "@id": "https://example.org/roles/cto" }
+        "http://www.w3.org/ns/org#role": { "@id": "https://example.org/roles/cto" }
       }
     }
   ],
@@ -43,6 +45,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example uses org:role instead of urn:solid:role (vcard:role); seeAlso swaps role for heldBy/postIn/org:role; notes explain role vs org:role."
     }
   ],
   "see_also": {

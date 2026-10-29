@@ -3,20 +3,24 @@
   "@id": "urn:solid:startTime",
   "@type": "rdf:Property",
   "rdfs:label": "startTime",
-  "rdfs:comment": "The date and time the object begins.",
+  "rdfs:comment": "The date and time at which an ActivityStreams Object (typically an Event or time-bounded Activity) begins or began.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#startTime",
   "rdfs:seeAlso": [
     "urn:solid:endTime",
     "https://schema.org/startDate",
-    "http://www.w3.org/ns/prov#startedAtTime"
+    "urn:solid:startedAtTime",
+    "urn:solid:dtstart"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "notToBeConfusedWith": [
+    "urn:solid:startedAtTime",
+    "urn:solid:dtstart",
+    "urn:solid:published",
     "urn:solid:endTime"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "ISO 8601 datetime marking when an Event, Activity, or other time-bounded object begins. Pair with `urn:solid:endTime` (or `urn:solid:duration`). For PROV-grade activity timing, prefer `prov:startedAtTime`.",
+  "notes": "ISO 8601 datetime marking when an Event, Activity, or other time-bounded object begins. Pair with `urn:solid:endTime` (or `urn:solid:duration`). For PROV-grade activity timing, prefer `urn:solid:startedAtTime` (prov:startedAtTime).",
   "examples": [
     {
       "title": "Event with start and end times",
@@ -42,6 +46,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment expanded; seeAlso uses urn:solid:startedAtTime and adds dtstart; notToBeConfusedWith -> startedAtTime/dtstart/published."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

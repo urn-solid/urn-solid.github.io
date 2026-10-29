@@ -3,7 +3,7 @@
   "@id": "urn:solid:Public",
   "@type": "rdfs:Class",
   "rdfs:label": "Public",
-  "rdfs:comment": "The ActivityPub special-purpose IRI denoting the public audience — addressing an Activity to it makes the Activity visible to anyone, anywhere on the network.",
+  "rdfs:comment": "The special ActivityPub addressee IRI https://www.w3.org/ns/activitystreams#Public — an implicit Collection instance meaning \"everyone\", not a class. Put it in as:to / as:cc to make an object publicly visible; never use it as an @type.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Public",
   "rdfs:seeAlso": [
     "urn:solid:to",
@@ -12,7 +12,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The single most-referenced IRI on the fediverse. Used as a value of `as:to` or `as:cc` to mark a post as public; absence of it means the post is non-public regardless of other audience settings. Mastodon and most ActivityPub servers also accept the synonyms `as:Public` and `Public` in compact form.",
+  "notes": "as:Public is an individual IRI (a special collection used as an addressee), not a class; it is typed rdfs:Class here only because the registry schema admits rdfs:Class / rdf:Property. The single most-referenced IRI on the fediverse: used as a value of `as:to` or `as:cc` to mark a post as public; absence of it means the post is non-public regardless of other audience settings. On the wire always emit the full IRI `https://www.w3.org/ns/activitystreams#Public` (Mastodon and most servers also accept `as:Public` / `Public` inside an AS2 @context) — ActivityPub servers only recognise that exact IRI, never the urn:solid:Public alias.",
   "examples": [
     {
       "title": "A public Note",
@@ -20,7 +20,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/notes/1",
         "@type": "urn:solid:Note",
-        "urn:solid:to": [{ "@id": "urn:solid:Public" }]
+        "urn:solid:to": [{ "@id": "https://www.w3.org/ns/activitystreams#Public" }]
       }
     }
   ],
@@ -36,6 +36,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Clarified that as:Public is an addressee IRI, not a class; example now addresses the full AS Public IRI; notes warn the urn:solid alias is not recognised by servers."
     }
   ],
   "see_also": {

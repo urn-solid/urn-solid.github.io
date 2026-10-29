@@ -3,7 +3,7 @@
   "@id": "urn:solid:memberOf",
   "@type": "rdf:Property",
   "rdfs:label": "memberOf",
-  "rdfs:comment": "An Organization (or Group) the Agent is a member of — the inverse of `member`.",
+  "rdfs:comment": "An Organization the Agent is a member of.",
   "owl:sameAs": "http://www.w3.org/ns/org#memberOf",
   "rdfs:seeAlso": [
     "urn:solid:member",
@@ -12,11 +12,13 @@
   ],
   "rdfs:domain": "urn:solid:Agent",
   "notToBeConfusedWith": [
-    "urn:solid:member"
+    "urn:solid:member",
+    "urn:solid:hasMember",
+    "urn:solid:worksFor"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Inverse of `urn:solid:member` (the FOAF group → member relation, also re-used by ORG). Use on the Agent to enumerate the Organizations they belong to. For role-aware membership with start/end times, attach a `urn:solid:Membership` resource instead.",
+  "notes": "Inverse of `org:hasMember` (itself a subproperty of foaf:member, i.e. `urn:solid:member`). Not to be confused with `urn:solid:hasMember`, which is vcard:hasMember (vCard group membership). Use on the Agent to enumerate the Organizations they belong to. For role-aware membership with start/end times, attach a `urn:solid:Membership` resource instead.",
   "examples": [
     {
       "title": "Person belonging to multiple orgs",
@@ -43,6 +45,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment aligned with ORG range (Organization); notes say inverse of org:hasMember; added hasMember (vcard:hasMember) to notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -35,11 +35,11 @@
   "rdfs:comment": "An Entity that ended a PROV Activity — the signal, completion event, or termination input that caused the Activity to stop.",
   "owl:sameAs": "http://www.w3.org/ns/prov#wasEndedBy",
   "rdfs:seeAlso": [
-    "urn:solid:Activity",
+    "http://www.w3.org/ns/prov#Activity",
     "urn:solid:wasStartedBy",
     "urn:solid:endedAtTime"
   ],
-  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:domain": "http://www.w3.org/ns/prov#Activity",
   "rdfs:range": "urn:solid:Entity",
   "status": "stable",
   "added": "2026-04-19",
@@ -50,7 +50,7 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/activity/build-42",
-        "@type": "urn:solid:Activity",
+        "@type": "http://www.w3.org/ns/prov#Activity",
         "urn:solid:wasEndedBy": { "@id": "https://example.org/signals/cancel-build-42" }
       }
     }
@@ -67,6 +67,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain and example type now prov:Activity (not as:Activity)."
     }
   ],
   "see_also": {

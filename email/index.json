@@ -16,7 +16,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Schema.org's simple string-valued email predicate (`\"alice@example.org\"`). Distinct from `urn:solid:mbox` (FOAF, uses a `mailto:` IRI and is inverse-functional) and `urn:solid:hasEmail` (vCard, typically points at a structured vcard:Email). Use whichever matches your data source.",
+  "notes": "Schema.org's simple string-valued email predicate (`\"alice@example.org\"`). Distinct from `urn:solid:mbox` (FOAF, uses a `mailto:` IRI and is inverse-functional) and `urn:solid:hasEmail` (vCard, takes a `mailto:` IRI or a node typed vcard:Home/vcard:Work carrying vcard:value — the vcard:Email class is deprecated upstream). Use whichever matches your data source.",
   "examples": [
     {
       "title": "Person with an email string",
@@ -40,6 +40,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected hasEmail description (vcard:Email is deprecated upstream)."
     }
   ],
   "see_also": {

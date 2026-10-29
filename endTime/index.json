@@ -3,20 +3,22 @@
   "@id": "urn:solid:endTime",
   "@type": "rdf:Property",
   "rdfs:label": "endTime",
-  "rdfs:comment": "The date and time the object ends.",
+  "rdfs:comment": "The actual or expected date-time at which the object (an event, activity, or other time-bounded thing) ends.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#endTime",
   "rdfs:seeAlso": [
     "urn:solid:startTime",
     "https://schema.org/endDate",
-    "http://www.w3.org/ns/prov#endedAtTime"
+    "urn:solid:endedAtTime"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "notToBeConfusedWith": [
-    "urn:solid:startTime"
+    "urn:solid:startTime",
+    "urn:solid:dtend",
+    "urn:solid:endedAtTime"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "ISO 8601 datetime marking when an Event, Activity, or other time-bounded object ends. Pair with `urn:solid:startTime`. May be omitted for ongoing or open-ended objects. For PROV-grade activity timing, prefer `prov:endedAtTime`.",
+  "notes": "ISO 8601 datetime marking when an Event, Activity, or other time-bounded object ends. Pair with `urn:solid:startTime`. May be omitted for ongoing or open-ended objects. For PROV-grade activity timing, prefer `urn:solid:endedAtTime` (prov:endedAtTime).",
   "examples": [
     {
       "title": "Conference session with end time",
@@ -24,8 +26,14 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/events/keynote",
         "@type": "urn:solid:Event",
-        "urn:solid:startTime": "2026-04-18T09:00:00Z",
-        "urn:solid:endTime": "2026-04-18T10:00:00Z"
+        "urn:solid:startTime": {
+          "@value": "2026-04-18T09:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "urn:solid:endTime": {
+          "@value": "2026-04-18T10:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
       }
     }
   ],
@@ -41,6 +49,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment adds 'actual or expected'; example values typed xsd:dateTime; seeAlso uses urn:solid:endedAtTime."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

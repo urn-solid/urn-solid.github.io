@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:temporalResolution — urn-solid</title>
-<meta name="description" content="The minimum time between samples in a DCAT Dataset or Distribution — the granularity of the time axis.">
+<meta name="description" content="The minimum time period resolvable in a DCAT Dataset or Distribution (for a time series, the spacing between samples), as an xsd:duration.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/temporalResolution/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:temporalResolution">
-<meta property="og:description" content="The minimum time between samples in a DCAT Dataset or Distribution — the granularity of the time axis.">
+<meta property="og:description" content="The minimum time period resolvable in a DCAT Dataset or Distribution (for a time series, the spacing between samples), as an xsd:duration.">
 <meta property="og:url" content="https://urn-solid.com/temporalResolution/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:temporalResolution">
-<meta name="twitter:description" content="The minimum time between samples in a DCAT Dataset or Distribution — the granularity of the time axis.">
+<meta name="twitter:description" content="The minimum time period resolvable in a DCAT Dataset or Distribution (for a time series, the spacing between samples), as an xsd:duration.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,14 +32,14 @@
   "@id": "urn:solid:temporalResolution",
   "@type": "rdf:Property",
   "rdfs:label": "temporalResolution",
-  "rdfs:comment": "The minimum time between samples in a DCAT Dataset or Distribution — the granularity of the time axis.",
+  "rdfs:comment": "The minimum time period resolvable in a DCAT Dataset or Distribution (for a time series, the spacing between samples), as an xsd:duration.",
   "owl:sameAs": "http://www.w3.org/ns/dcat#temporalResolution",
   "rdfs:seeAlso": [
     "urn:solid:Dataset",
     "urn:solid:Distribution",
     "urn:solid:temporal"
   ],
-  "rdfs:domain": "urn:solid:Dataset",
+  "rdfs:range": "http://www.w3.org/2001/XMLSchema#duration",
   "status": "stable",
   "added": "2026-04-19",
   "notes": "Encoded as an `xsd:duration` (`PT1H` = hourly samples, `P1D` = daily, `PT15M` = 15-minute). Crucial when the same dataset is published at multiple cadences — clients pick the right Distribution based on the resolution they need, not just the format.",
@@ -66,6 +66,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain Dataset (upstream has none; applies to Dataset or Distribution); added rdfs:range xsd:duration; reworded comment."
     }
   ],
   "see_also": {

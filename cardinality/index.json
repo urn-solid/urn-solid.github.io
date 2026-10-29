@@ -19,7 +19,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Equivalent to `minCardinality` and `maxCardinality` both set to the same value. Use when the count is fixed (every Triangle has exactly 3 sides). For ranges, prefer the min/max forms — they're more flexible and the same expressivity.",
+  "notes": "Equivalent to `minCardinality` and `maxCardinality` both set to the same value. Use when the count is fixed (every Triangle has exactly 3 sides). For a range of counts, combine `minCardinality` and `maxCardinality`.",
   "examples": [
     {
       "title": "Class requiring exactly one issuer",
@@ -27,7 +27,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
         "urn:solid:onProperty": { "@id": "urn:solid:issuer" },
-        "urn:solid:cardinality": 1
+        "urn:solid:cardinality": { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
       }
     }
   ],
@@ -43,6 +43,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example value typed xsd:nonNegativeInteger; clarified notes on count ranges."
     }
   ],
   "see_also": {

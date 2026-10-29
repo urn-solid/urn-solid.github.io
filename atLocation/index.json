@@ -9,6 +9,7 @@
     "urn:solid:location",
     "urn:solid:Place"
   ],
+  "rdfs:range": "http://www.w3.org/ns/prov#Location",
   "notToBeConfusedWith": [
     "urn:solid:location"
   ],
@@ -21,7 +22,7 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/builds/2026-04-18-1",
-        "@type": "urn:solid:Activity",
+        "@type": "http://www.w3.org/ns/prov#Activity",
         "urn:solid:atLocation": { "@id": "https://example.org/places/datacenter-eu1" }
       }
     }
@@ -38,6 +39,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example type now prov:Activity IRI; declared range prov:Location."
     }
   ],
   "see_also": {

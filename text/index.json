@@ -16,7 +16,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Schema.org's general-purpose text-body predicate. Distinct from `urn:solid:articleBody` (Article-specific) and `urn:solid:content` (ActivityStreams). Use on `urn:solid:Comment`, `urn:solid:Answer`, `urn:solid:Question`, or any schema.org type that bears prose.",
+  "notes": "Schema.org's general-purpose text-body predicate. Distinct from `urn:solid:articleBody` (Article-specific) and `urn:solid:content` (ActivityStreams). Use on `urn:solid:Comment`, `urn:solid:Answer`, `https://schema.org/Question`, or any schema.org type that bears prose; for ActivityStreams objects (including `urn:solid:Question`, which is as:Question) use `urn:solid:content`.",
   "examples": [
     {
       "title": "Comment with text",
@@ -40,6 +40,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes no longer recommend text on urn:solid:Question (as:Question uses urn:solid:content)."
     }
   ],
   "see_also": {

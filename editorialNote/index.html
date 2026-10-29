@@ -40,10 +40,9 @@
     "urn:solid:historyNote",
     "urn:solid:scopeNote"
   ],
-  "rdfs:domain": "urn:solid:Concept",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The \"TODO\" of the SKOS note family — \"check whether this should subsume Y\", \"awaiting decision from working group\". Renderers SHOULD hide editorial notes from public displays, surfacing them only in editing UIs.",
+  "notes": "The \"TODO\" of the SKOS note family — \"check whether this should subsume Y\", \"awaiting decision from working group\". Renderers typically hide editorial notes from public displays, surfacing them only in editing UIs (convention, not a SKOS requirement). Upstream SKOS declares no domain: usable on any resource (Concept, ConceptScheme, Collection).",
   "examples": [
     {
       "title": "Concept with an editorial note",
@@ -67,6 +66,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain (none upstream); softened non-normative SHOULD to convention."
     }
   ],
   "see_also": {

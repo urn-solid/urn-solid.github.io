@@ -14,7 +14,7 @@
   ],
   "status": "experimental",
   "added": "2026-07-21",
-  "notes": "Not ical:Valarm — that is the RFC 5545 alarm *subcomponent* (action + trigger) attached to an event or to-do, while urn:solid:Alarm is the standalone clock alarm itself. No upstream vocabulary has a standalone clock-alarm class (VALARM only exists inside another component), so this term names one. Intended usage is dual-typing: '@type': ['Vevent', 'urn:solid:Alarm'] on a daily-recurring event with floating-time dtstart (RFC 5545 floating time = rings at the same wall-clock time in any timezone), rrule FREQ=DAILY (or BYDAY for weekday schedules), status CONFIRMED/CANCELLED for enabled/disabled, and an embedded Valarm marking it as one that rings. First user: the solid-apps alarm app.",
+  "notes": "Not ical:Valarm — that is the RFC 5545 alarm *subcomponent* (action + trigger) attached to an event or to-do, while urn:solid:Alarm is the standalone clock alarm itself. No upstream vocabulary has a standalone clock-alarm class (VALARM only exists inside another component), so this term names one. Intended usage is dual-typing: '@type': ['Vevent', 'urn:solid:Alarm'] on a daily-recurring event with floating-time dtstart (RFC 5545 floating time = rings at the same wall-clock time in any timezone), rrule FREQ=DAILY (or BYDAY for weekday schedules), status CONFIRMED/CANCELLED for enabled/disabled (an app convention — in RFC 5545 CANCELLED means the event will not occur at all), and an embedded Valarm marking it as one that rings. First user: the solid-apps alarm app.",
   "examples": [
     {
       "title": "A daily wake-up alarm (dual-typed recurring Vevent)",
@@ -34,7 +34,7 @@
         "@id": "https://alice.example.org/public/alarm/alarms.jsonld#alarm-1784609159096",
         "@type": ["Vevent", "urn:solid:Alarm"],
         "summary": "Wake up",
-        "dtstart": "2026-07-21T08:00",
+        "dtstart": "2026-07-21T08:00:00",
         "rrule": "FREQ=DAILY",
         "status": "CONFIRMED",
         "valarm": { "@type": "Valarm", "action": "AUDIO", "trigger": "PT0S" }
@@ -54,6 +54,12 @@
       "at": "2026-07-21T08:00:00Z",
       "by": "solid-apps/alarm",
       "note": "Initial term, proposed alongside the alarm app's iCal data model (solid-apps/alarm#7)."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example dtstart now a valid floating date-time with seconds; notes flag CANCELLED-as-disabled as an app convention."
     }
   ],
   "see_also": {

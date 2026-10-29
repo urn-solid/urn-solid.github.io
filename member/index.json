@@ -9,18 +9,18 @@
     "https://schema.org/member",
     "http://www.w3.org/2006/vcard/ns#hasMember"
   ],
-  "rdfs:domain": "http://xmlns.com/foaf/0.1/Group",
+  "rdfs:domain": "urn:solid:Group",
   "rdfs:range": "urn:solid:Agent",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use to enumerate the agents that belong to a group. Repeated to list multiple members. The subject should typically be a `foaf:Group`; the value can be any Agent (Person, Organization, Group, software).",
+  "notes": "Use to enumerate the agents that belong to a group. Repeated to list multiple members. The subject should typically be a `urn:solid:Group`; the value can be any Agent (Person, Organization, Group, software).",
   "examples": [
     {
       "title": "Group with two members",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/groups/admins",
-        "@type": "http://xmlns.com/foaf/0.1/Group",
+        "@type": "urn:solid:Group",
         "urn:solid:member": [
           { "@id": "https://example.org/alice#me" },
           { "@id": "https://example.org/bob#me" }
@@ -40,6 +40,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain and example @type use urn:solid:Group."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -47,5 +59,11 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:hadMember",
+    "urn:solid:hasMember",
+    "urn:solid:memberOf",
+    "urn:solid:worksFor"
+  ]
 }

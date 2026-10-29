@@ -10,11 +10,12 @@
     "urn:solid:mbox"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:mbox"
+    "urn:solid:mbox",
+    "urn:solid:email"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "vCard's general email predicate: not inverse-functional and free of FOAF's strong identity semantics. Use `urn:solid:mbox` when the email uniquely identifies the agent (FOAF tradition). Multiple `hasEmail` values are typical (work, personal, etc.).",
+  "notes": "vCard's general email predicate: not inverse-functional and free of FOAF's strong identity semantics. Use `urn:solid:mbox` when the email uniquely identifies the agent (FOAF tradition). Multiple `hasEmail` values are typical (work, personal, etc.). Upstream the range is the deprecated vcard:Email class; for typed emails use a node typed `vcard:Home`/`vcard:Work` carrying `vcard:value <mailto:...>`. Not `urn:solid:email`: schema:email takes a plain string; hasEmail takes a mailto: IRI or a typed node.",
   "examples": [
     {
       "title": "Person with email",
@@ -38,6 +39,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added urn:solid:email to notToBeConfusedWith; notes mention deprecated vcard:Email range and typed-node pattern."
     }
   ],
   "see_also": {

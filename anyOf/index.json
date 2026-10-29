@@ -4,7 +4,7 @@
   "@type": "rdf:Property",
   "rdfs:label": "anyOf",
   "rdfs:comment": "On an ActivityStreams Question, the inclusive set of answer choices — voters may pick any number.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#anyOf",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#anyOf",
   "rdfs:seeAlso": [
     "urn:solid:Question",
     "urn:solid:oneOf",
@@ -16,7 +16,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Multi-select counterpart to `oneOf`. Use exactly one of the two on a Question — never both. Each option is a Note whose `name` is the displayed choice; the per-option `replies.totalItems` gives that option's vote tally.",
+  "notes": "Multi-select counterpart to `oneOf`. A Question MUST NOT carry both anyOf and oneOf. AS2 itself only requires Object or Link values; by ActivityPub convention (Mastodon et al.), each option is a Note whose `as:name` is the choice text and whose `replies.totalItems` is its tally. Note `urn:solid:name` maps to foaf:name, so the example uses the AS name IRI.",
   "examples": [
     {
       "title": "Multi-select Question",
@@ -26,16 +26,16 @@
         "@type": "urn:solid:Question",
         "urn:solid:content": "Which do you drink?",
         "urn:solid:anyOf": [
-          { "@type": "urn:solid:Note", "urn:solid:name": "Tea" },
-          { "@type": "urn:solid:Note", "urn:solid:name": "Coffee" },
-          { "@type": "urn:solid:Note", "urn:solid:name": "Water" }
+          { "@type": "urn:solid:Note", "https://www.w3.org/ns/activitystreams#name": "Tea" },
+          { "@type": "urn:solid:Note", "https://www.w3.org/ns/activitystreams#name": "Coffee" },
+          { "@type": "urn:solid:Note", "https://www.w3.org/ns/activitystreams#name": "Water" }
         ]
       }
     }
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#anyOf"
+      "https://www.w3.org/ns/activitystreams#anyOf"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -45,6 +45,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example option labels use as:name (urn:solid:name is foaf:name); notes separate AS2 rule from Mastodon poll convention."
     }
   ],
   "see_also": {

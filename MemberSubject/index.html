@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:MemberSubject — urn-solid</title>
-<meta name="description" content="An LDP marker class for the special predicate value used by IndirectContainers when membership is computed from the inserted resource itself.">
+<meta name="description" content="An LDP constant used as the value of `ldp:insertedContentRelation`, meaning the member in each membership triple is the newly created resource itself — the default behaviour for all LDP containers.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/MemberSubject/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:MemberSubject">
-<meta property="og:description" content="An LDP marker class for the special predicate value used by IndirectContainers when membership is computed from the inserted resource itself.">
+<meta property="og:description" content="An LDP constant used as the value of `ldp:insertedContentRelation`, meaning the member in each membership triple is the newly created resource itself — the default behaviour for all LDP containers.">
 <meta property="og:url" content="https://urn-solid.com/MemberSubject/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:MemberSubject">
-<meta name="twitter:description" content="An LDP marker class for the special predicate value used by IndirectContainers when membership is computed from the inserted resource itself.">
+<meta name="twitter:description" content="An LDP constant used as the value of `ldp:insertedContentRelation`, meaning the member in each membership triple is the newly created resource itself — the default behaviour for all LDP containers.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:MemberSubject",
   "@type": "rdfs:Class",
   "rdfs:label": "MemberSubject",
-  "rdfs:comment": "An LDP marker class for the special predicate value used by IndirectContainers when membership is computed from the inserted resource itself.",
+  "rdfs:comment": "An LDP constant used as the value of `ldp:insertedContentRelation`, meaning the member in each membership triple is the newly created resource itself — the default behaviour for all LDP containers.",
   "owl:sameAs": "http://www.w3.org/ns/ldp#MemberSubject",
   "rdfs:seeAlso": [
     "urn:solid:IndirectContainer",
@@ -40,7 +40,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Used as the value of `ldp:insertedContentRelation` to indicate \"use the new resource itself as the membership target, not a property inside it\". Niche LDP escape hatch — most use cases are better served by ldp:BasicContainer or by naming a specific predicate.",
+  "notes": "Upstream `ldp:MemberSubject` is an individual (a constant value), not a class; it is typed `rdfs:Class` here only because the registry schema has no individual type. It is the implicit value of `ldp:insertedContentRelation` for every Basic and Direct container, and the typical explicit value on an IndirectContainer when the new resource itself should be the member rather than a resource it points to.",
   "examples": [
     {
       "title": "IndirectContainer using MemberSubject",
@@ -64,6 +64,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Reworded definition/notes: MemberSubject is an LDP constant and the default insertedContentRelation, not a niche marker class."
     }
   ],
   "see_also": {

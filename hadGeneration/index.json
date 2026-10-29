@@ -3,25 +3,29 @@
   "@id": "urn:solid:hadGeneration",
   "@type": "rdf:Property",
   "rdfs:label": "hadGeneration",
-  "rdfs:comment": "Links a use of an Entity to the qualified Generation event in which that Entity was created — letting consumers reason about which version was used.",
+  "rdfs:comment": "On a qualified prov:Derivation, links to the prov:Generation event in which the derived (output) entity was produced by the mediating activity.",
   "owl:sameAs": "http://www.w3.org/ns/prov#hadGeneration",
   "rdfs:seeAlso": [
-    "urn:solid:Entity",
-    "urn:solid:wasGeneratedBy",
-    "urn:solid:qualifiedUsage",
+    "urn:solid:Generation",
+    "urn:solid:Derivation",
+    "urn:solid:hadUsage",
+    "urn:solid:hadActivity",
     "urn:solid:qualifiedDerivation"
   ],
+  "rdfs:domain": "urn:solid:Derivation",
+  "rdfs:range": "urn:solid:Generation",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Used inside qualified PROV patterns — e.g. on a `prov:Usage` instance, `prov:hadGeneration` points to the `prov:Generation` of the entity that was used. Pairs naturally with `prov:hadActivity` to fully reconstruct the lineage of a specific use.",
+  "notes": "Domain `prov:Derivation`, range `prov:Generation`. Pair with `urn:solid:hadUsage` (the Usage of the input entity) and `urn:solid:hadActivity` to reconstruct exactly how one entity was derived from another through an activity. Not used on `prov:Usage` — PROV defines no Usage→Generation link.",
   "examples": [
     {
-      "title": "Qualified Usage citing the source Generation",
+      "title": "Qualified Derivation citing the Generation of the derived entity",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://example.org/usage/abc",
-        "@type": "http://www.w3.org/ns/prov#Usage",
-        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/dataset/v3" },
+        "@id": "https://example.org/derivations/d1",
+        "@type": "urn:solid:Derivation",
+        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/dataset/v2" },
+        "urn:solid:hadUsage": { "@id": "https://example.org/usage/u1" },
         "urn:solid:hadGeneration": { "@id": "https://example.org/generation/dataset-v3" }
       }
     }
@@ -38,6 +42,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed domain to Derivation (was described on Usage); added domain/range; corrected example and seeAlso."
     }
   ],
   "see_also": {

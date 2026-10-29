@@ -6,17 +6,17 @@
   "rdfs:comment": "The first name of a person.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/firstName",
   "rdfs:seeAlso": [
-    "http://xmlns.com/foaf/0.1/givenName",
+    "urn:solid:givenName",
     "https://schema.org/givenName"
   ],
   "rdfs:domain": "urn:solid:Person",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "notToBeConfusedWith": [
-    "urn:solid:familyName"
+    "urn:solid:lastName"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Older sibling of `foaf:givenName` — kept for compatibility with legacy FOAF data. New profiles should prefer `foaf:givenName` (modeled as `urn:solid:givenName` once added) and `foaf:familyName`. The semantic distinction between first/given is culture-bound; treat them as equivalent in practice.",
+  "notes": "Older sibling of `urn:solid:givenName`, kept for legacy FOAF data. New profiles should use `urn:solid:givenName` and `urn:solid:familyName`. The semantic distinction between first/given is culture-bound; treat them as equivalent in practice.",
   "examples": [
     {
       "title": "Person with a first name",
@@ -40,6 +40,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed stale givenName note; seeAlso uses urn:solid:givenName; notToBeConfusedWith now lastName."
     }
   ],
   "see_also": {

@@ -40,11 +40,12 @@
   ],
   "notToBeConfusedWith": [
     "urn:solid:language",
-    "urn:solid:knowsLanguage"
+    "urn:solid:knowsLanguage",
+    "urn:solid:hasLanguage"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Schema.org's resource-language predicate. Functionally equivalent to dcterms `urn:solid:language` — pick by namespace flavor (schema for SEO, dcterms for bibliographic). Distinct from `urn:solid:knowsLanguage` (an Agent's languages).",
+  "notes": "Schema.org's resource-language predicate. Functionally equivalent to dcterms `urn:solid:language` — pick by namespace flavor (schema for SEO, dcterms for bibliographic). Distinct from `urn:solid:knowsLanguage` (an Agent's languages); `urn:solid:hasLanguage`/`urn:solid:knowsLanguage` describe what languages an agent speaks.",
   "examples": [
     {
       "title": "Article in English",
@@ -68,6 +69,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added hasLanguage to notToBeConfusedWith (agent language, not resource language)."
     }
   ],
   "see_also": {

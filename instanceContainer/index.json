@@ -16,7 +16,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use when the user's data of a given type lives in a directory that may hold many resources (photos in `/photos/`, notes in `/notes/`). Distinct from `urn:solid:instance`, which points at a single resource. A TypeRegistration uses one or the other, not both.",
+  "notes": "Use when the user's data of a given type lives in a directory that may hold many resources (photos in `/photos/`, notes in `/notes/`). Distinct from `urn:solid:instance`, which points at a single resource. A registration may carry `solid:instance`, `solid:instanceContainer`, or both; clients must list the container (`ldp:contains`) to find individual instances.",
   "examples": [
     {
       "title": "Registration pointing at a container",
@@ -41,6 +41,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: a registration may carry instance, instanceContainer, or both; clients list the container."
     }
   ],
   "see_also": {

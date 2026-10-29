@@ -8,11 +8,11 @@
   "rdfs:seeAlso": [
     "urn:solid:CreativeWork",
     "https://schema.org/Audiobook",
-    "https://schema.org/EBook"
+    "https://schema.org/bookFormat"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:CreativeWork`. Pair with `schema:isbn`, `schema:numberOfPages`, `schema:bookEdition`, `schema:author`. For audiobook or e-book editions specifically, schema.org provides `schema:Audiobook` and `schema:EBook` subclasses.",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Pair with `schema:isbn`, `schema:numberOfPages`, `schema:bookEdition`, `schema:author`. For audiobooks use the subclass `schema:Audiobook`; for e-book editions set `schema:bookFormat` to `https://schema.org/EBook` (a `BookFormatType` value).",
   "examples": [
     {
       "title": "A book with metadata",
@@ -38,6 +38,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "EBook is a schema:bookFormat value, not a class; seeAlso now points at schema:bookFormat."
     }
   ],
   "see_also": {

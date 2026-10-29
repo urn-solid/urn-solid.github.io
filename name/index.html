@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:name — urn-solid</title>
-<meta name="description" content="A name for the subject.">
+<meta name="description" content="A name for some thing — a plain-text display name for a person, organization, document, project or any other resource.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/name/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:name">
-<meta property="og:description" content="A name for the subject.">
+<meta property="og:description" content="A name for some thing — a plain-text display name for a person, organization, document, project or any other resource.">
 <meta property="og:url" content="https://urn-solid.com/name/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:name">
-<meta name="twitter:description" content="A name for the subject.">
+<meta name="twitter:description" content="A name for some thing — a plain-text display name for a person, organization, document, project or any other resource.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,18 +32,26 @@
   "@id": "urn:solid:name",
   "@type": "rdf:Property",
   "rdfs:label": "name",
-  "rdfs:comment": "A name for the subject.",
+  "rdfs:comment": "A name for some thing — a plain-text display name for a person, organization, document, project or any other resource.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/name",
   "rdfs:seeAlso": [
     "https://schema.org/name",
     "http://www.w3.org/2006/vcard/ns#fn",
     "http://www.w3.org/2000/01/rdf-schema#label"
   ],
-  "rdfs:domain": "urn:solid:Agent",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:nick",
+    "urn:solid:label",
+    "urn:solid:preferredUsername",
+    "urn:solid:familyName",
+    "urn:solid:fn",
+    "urn:solid:headline",
+    "urn:solid:title"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "The canonical display name. For structured names (given/family), use `foaf:givenName` and `foaf:familyName` directly until urn-solid ships equivalents.",
+  "notes": "The canonical display name. For structured names use `urn:solid:givenName` and `urn:solid:familyName`.",
   "examples": [
     {
       "title": "On a Person",
@@ -67,6 +75,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "bootstrap",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped Agent domain (upstream domain is owl:Thing); widened comment; corrected stale givenName/familyName note; added notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

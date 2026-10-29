@@ -9,7 +9,7 @@
     "http://www.w3.org/ns/solid/terms#oidcIssuer"
   ],
   "rdfs:domain": "urn:solid:Agent",
-  "rdfs:range": "http://xmlns.com/foaf/0.1/Document",
+  "rdfs:range": "urn:solid:Document",
   "status": "stable",
   "added": "2026-04-18",
   "notes": "Inverse-functional in FOAF — an OpenID document uniquely identifies its Agent. Predates Solid OIDC; for modern Solid pods use `solid:oidcIssuer` instead, which points at the OpenID Connect issuer URL.",
@@ -36,6 +36,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range urn:solid:Document."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -43,5 +55,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:oidcIssuer"
+  ]
 }

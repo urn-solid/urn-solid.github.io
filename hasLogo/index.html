@@ -35,7 +35,6 @@
   "rdfs:comment": "A logo image associated with the vCard — typically the brand mark of an Organization.",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasLogo",
   "rdfs:seeAlso": [
-    "urn:solid:Logo",
     "urn:solid:hasPhoto",
     "https://schema.org/logo"
   ],
@@ -44,7 +43,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use on Organization vCards for the brand mark. Distinct from `urn:solid:hasPhoto` (typically a person's portrait). Schema.org's equivalent is `schema:logo`. Value can be a URL or a `urn:solid:Logo` resource.",
+  "notes": "Use on Organization vCards for the brand mark. Distinct from `urn:solid:hasPhoto` (typically a person's portrait). Schema.org's equivalent is `schema:logo`. Value is the logo image IRI (the deprecated `urn:solid:Logo` class has no upstream equivalent).",
   "examples": [
     {
       "title": "Organization with a logo URL",
@@ -69,6 +68,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped urn:solid:Logo (deprecated, no upstream class) from seeAlso and value guidance."
     }
   ],
   "see_also": {

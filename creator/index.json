@@ -9,16 +9,24 @@
     "https://schema.org/creator",
     "https://schema.org/author",
     "urn:solid:maker",
-    "http://www.w3.org/ns/prov#wasAttributedTo"
+    "http://www.w3.org/ns/prov#wasAttributedTo",
+    "urn:solid:author",
+    "urn:solid:attributedTo"
   ],
   "rdfs:range": "urn:solid:Agent",
   "notToBeConfusedWith": [
     "urn:solid:contributor",
-    "urn:solid:publisher"
+    "urn:solid:publisher",
+    "urn:solid:actor",
+    "urn:solid:attributedTo",
+    "urn:solid:author",
+    "urn:solid:maker",
+    "urn:solid:rightsHolder",
+    "urn:solid:wasAttributedTo"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use for the principal author or maker. Repeat to list multiple co-creators of equal weight; use `dcterms:contributor` for secondary contributors and `dcterms:publisher` for the entity that issued/distributed the resource.",
+  "notes": "Use for the principal author or maker. Repeat to list multiple co-creators of equal weight; use `urn:solid:contributor` for secondary contributors and `urn:solid:publisher` for the entity that issued/distributed the resource. Use `creator` for dcterms-style metadata, `urn:solid:author` for schema.org CreativeWork data, and `urn:solid:attributedTo` on ActivityStreams objects.",
   "examples": [
     {
       "title": "Article with a creator",
@@ -42,6 +50,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added urn:solid:author and urn:solid:attributedTo to seeAlso with guidance on when to use each."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

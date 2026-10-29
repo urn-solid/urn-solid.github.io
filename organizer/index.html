@@ -44,7 +44,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Functional — exactly one organizer per event. Distinct from `attendee` (the people invited). RSVPs and changes route back to this address. Typically a `mailto:` URI in classic iCal, increasingly a WebID or DID in pod-native deployments.",
+  "notes": "At most one per component (RFC 5545); required only for group-scheduled (invited) events/to-dos. Distinct from `attendee` (the people invited). RSVPs and changes route back to this address. Typically a `mailto:` URI in classic iCal, increasingly a WebID or DID in pod-native deployments.",
   "examples": [
     {
       "title": "Event with an organizer",
@@ -68,6 +68,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes corrected: at most one organizer per component, required only for group-scheduled items."
     }
   ],
   "see_also": {

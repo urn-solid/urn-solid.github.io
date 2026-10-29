@@ -12,7 +12,9 @@
     "urn:solid:Association",
     "urn:solid:Derivation",
     "urn:solid:Communication",
-    "urn:solid:Delegation"
+    "urn:solid:Delegation",
+    "urn:solid:Invalidation",
+    "urn:solid:wasInfluencedBy"
   ],
   "status": "stable",
   "added": "2026-04-19",
@@ -24,7 +26,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/influences/build-input",
         "@type": "urn:solid:Influence",
-        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/sources/term.schema.json" }
+        "http://www.w3.org/ns/prov#influencer": { "@id": "https://example.org/sources/term.schema.json" }
       }
     }
   ],
@@ -40,6 +42,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example uses generic prov:influencer instead of prov:entity; seeAlso Invalidation, wasInfluencedBy."
     }
   ],
   "see_also": {

@@ -36,16 +36,19 @@
   "owl:sameAs": "http://www.w3.org/2004/02/skos/core#narrower",
   "rdfs:seeAlso": [
     "urn:solid:broader",
-    "urn:solid:related"
+    "urn:solid:related",
+    "urn:solid:narrowMatch"
   ],
   "rdfs:domain": "urn:solid:Concept",
   "rdfs:range": "urn:solid:Concept",
   "notToBeConfusedWith": [
-    "urn:solid:broader"
+    "urn:solid:broader",
+    "urn:solid:narrowMatch",
+    "urn:solid:related"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Inverse of `urn:solid:broader`. Use to enumerate child concepts in a hierarchy. SKOS treats the relation as transitive only inside one ConceptScheme — for transitive descendants use `skos:narrowerTransitive`. Repeat for multiple children.",
+  "notes": "Inverse of `urn:solid:broader`. Use to enumerate child concepts in a hierarchy. `skos:narrower` is NOT transitive; for descendant chains SKOS defines `skos:narrowerTransitive` (http://www.w3.org/2004/02/skos/core#narrowerTransitive). For cross-scheme links use `urn:solid:narrowMatch`. Repeat for multiple children.",
   "examples": [
     {
       "title": "Concept with narrower children",
@@ -72,6 +75,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected transitivity claim (narrower is never transitive; see narrowerTransitive); added narrowMatch to seeAlso/notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

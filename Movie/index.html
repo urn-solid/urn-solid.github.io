@@ -44,7 +44,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:CreativeWork`. Distinct from `urn:solid:VideoObject` — `Movie` is the work (the film as art), `VideoObject` is the file (a particular encoding). One Movie can have many VideoObject encodings. Pair with `schema:director`, `schema:actor`, `urn:solid:duration`.",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Distinct from `urn:solid:VideoObject` — `Movie` is the work (the film as art), `VideoObject` is the file (a particular encoding). One Movie can have many VideoObject encodings. Pair with `schema:director`, `schema:actor`, `schema:duration`.",
   "examples": [
     {
       "title": "A movie with director and runtime",
@@ -54,7 +54,7 @@
         "@type": "urn:solid:Movie",
         "urn:solid:name": "Wonderland",
         "https://schema.org/director": { "@id": "https://example.org/people/director" },
-        "urn:solid:duration": "PT1H45M"
+        "https://schema.org/duration": "PT1H45M"
       }
     }
   ],
@@ -70,6 +70,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example and notes use schema:duration (urn:solid:duration is as:duration/ical:duration)."
     }
   ],
   "see_also": {

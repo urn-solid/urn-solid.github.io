@@ -35,12 +35,15 @@
   "rdfs:comment": "The primary recipients of the object — the wire-level \"send to\" addresses.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#to",
   "rdfs:seeAlso": [
-    "https://www.w3.org/ns/activitystreams#cc",
-    "https://www.w3.org/ns/activitystreams#bcc",
-    "urn:solid:audience"
+    "urn:solid:cc",
+    "urn:solid:bcc",
+    "urn:solid:audience",
+    "urn:solid:Public"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:audience"
+    "urn:solid:audience",
+    "urn:solid:cc",
+    "urn:solid:bto"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -53,7 +56,9 @@
         "@id": "https://example.org/notes/abc",
         "@type": "urn:solid:Note",
         "urn:solid:content": "Hello, world!",
-        "urn:solid:to": [{ "@id": "https://www.w3.org/ns/activitystreams#Public" }]
+        "urn:solid:to": [
+          { "@id": "https://www.w3.org/ns/activitystreams#Public" }
+        ]
       }
     }
   ],
@@ -69,6 +74,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses urn:solid:cc/bcc and adds Public; notToBeConfusedWith adds cc."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

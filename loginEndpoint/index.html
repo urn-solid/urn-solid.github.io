@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:loginEndpoint — urn-solid</title>
-<meta name="description" content="The login endpoint URL for a Solid OIDC provider.">
+<meta name="description" content="The URL at which a user can log in to a given Solid server (legacy server metadata, predates Solid-OIDC).">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/loginEndpoint/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:loginEndpoint">
-<meta property="og:description" content="The login endpoint URL for a Solid OIDC provider.">
+<meta property="og:description" content="The URL at which a user can log in to a given Solid server (legacy server metadata, predates Solid-OIDC).">
 <meta property="og:url" content="https://urn-solid.com/loginEndpoint/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:loginEndpoint">
-<meta name="twitter:description" content="The login endpoint URL for a Solid OIDC provider.">
+<meta name="twitter:description" content="The URL at which a user can log in to a given Solid server (legacy server metadata, predates Solid-OIDC).">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,19 +32,21 @@
   "@id": "urn:solid:loginEndpoint",
   "@type": "rdf:Property",
   "rdfs:label": "loginEndpoint",
-  "rdfs:comment": "The login endpoint URL for a Solid OIDC provider.",
+  "rdfs:comment": "The URL at which a user can log in to a given Solid server (legacy server metadata, predates Solid-OIDC).",
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#loginEndpoint",
   "rdfs:seeAlso": [
     "urn:solid:oidcIssuer",
-    "http://www.w3.org/ns/solid/terms#logoutEndpoint"
+    "urn:solid:logoutEndpoint"
   ],
-  "rdfs:range": "urn:solid:Document",
+  "notToBeConfusedWith": [
+    "urn:solid:logoutEndpoint"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Advertised by a Solid OIDC provider, points at the URL where users can initiate authentication. Most modern Solid OIDC implementations expose this via OIDC discovery (`/.well-known/openid-configuration`) rather than via this predicate, but the term remains useful for explicit declaration.",
+  "notes": "Legacy (2015, NSS-era) server metadata, not specific to an OpenID provider. Solid-OIDC clients use the issuer's `/.well-known/openid-configuration` `authorization_endpoint` instead.",
   "examples": [
     {
-      "title": "OIDC issuer with a login endpoint",
+      "title": "Server with a login endpoint",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://login.example.org/",
@@ -64,6 +66,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Definition: legacy server login URL predating Solid-OIDC; dropped range Document; notToBeConfusedWith logoutEndpoint."
     }
   ],
   "see_also": {

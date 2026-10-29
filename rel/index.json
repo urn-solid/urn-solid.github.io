@@ -4,7 +4,7 @@
   "@type": "rdf:Property",
   "rdfs:label": "rel",
   "rdfs:comment": "The link relation type of an ActivityStreams Link — semantic role of the connection (canonical, alternate, prev, next, …).",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#rel",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#rel",
   "rdfs:seeAlso": [
     "urn:solid:Link",
     "urn:solid:href",
@@ -27,7 +27,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#rel"
+      "https://www.w3.org/ns/activitystreams#rel"
     ],
     "curatedBy": "claude-curate-next"
   },

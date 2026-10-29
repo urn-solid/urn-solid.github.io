@@ -36,15 +36,21 @@
   "owl:sameAs": "https://schema.org/image",
   "rdfs:seeAlso": [
     "urn:solid:Image",
-    "http://xmlns.com/foaf/0.1/img",
-    "http://xmlns.com/foaf/0.1/depiction"
+    "urn:solid:ImageObject",
+    "urn:solid:img",
+    "urn:solid:depiction",
+    "urn:solid:hasPhoto",
+    "urn:solid:thumbnail"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Image"
+    "urn:solid:Image",
+    "urn:solid:img",
+    "urn:solid:depiction",
+    "urn:solid:icon"
   ],
   "status": "stable",
   "added": "2026-04-25",
-  "notes": "Property form paired with the `urn:solid:Image` class. Maps to `schema:image`, the most widely deployed property for representative pictures (used by Open Graph consumers, search engines, and most social platforms). For the FOAF tradition, `foaf:img` (account photo) and `foaf:depiction` (any depiction) are related; pick `image` when matching schema.org / OGP semantics, `foaf:img` for explicit FOAF profile usage.",
+  "notes": "Property form paired with the `urn:solid:Image` class. Maps to `schema:image`, the most widely deployed property for representative pictures (used by Open Graph consumers, search engines, and most social platforms). For the FOAF tradition, `urn:solid:img` (foaf:img, account photo) and `urn:solid:depiction` (foaf:depiction, any depiction) are related; pick `image` when matching schema.org / OGP semantics, `urn:solid:img` for explicit FOAF profile usage.",
   "examples": [
     {
       "title": "Person with an avatar image",
@@ -68,6 +74,18 @@
       "at": "2026-04-25T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term — property form completing the Image/image case-pair (Image is foaf:Image; image is schema:image)."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses registry terms (img, depiction) plus ImageObject/hasPhoto/thumbnail; added img/depiction confusables."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

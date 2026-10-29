@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:isFormatOf — urn-solid</title>
-<meta name="description" content="A related resource that is the same intellectual content of which the described resource is a different-format rendition.">
+<meta name="description" content="A pre-existing related resource that is substantially the same as the described resource, but in another format.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/isFormatOf/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:isFormatOf">
-<meta property="og:description" content="A related resource that is the same intellectual content of which the described resource is a different-format rendition.">
+<meta property="og:description" content="A pre-existing related resource that is substantially the same as the described resource, but in another format.">
 <meta property="og:url" content="https://urn-solid.com/isFormatOf/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:isFormatOf">
-<meta name="twitter:description" content="A related resource that is the same intellectual content of which the described resource is a different-format rendition.">
+<meta name="twitter:description" content="A pre-existing related resource that is substantially the same as the described resource, but in another format.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:isFormatOf",
   "@type": "rdf:Property",
   "rdfs:label": "isFormatOf",
-  "rdfs:comment": "A related resource that is the same intellectual content of which the described resource is a different-format rendition.",
+  "rdfs:comment": "A pre-existing related resource that is substantially the same as the described resource, but in another format.",
   "owl:sameAs": "http://purl.org/dc/terms/isFormatOf",
   "rdfs:seeAlso": [
     "urn:solid:hasFormat"
@@ -51,7 +51,9 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/papers/42.pdf",
         "@type": "urn:solid:Document",
-        "urn:solid:isFormatOf": { "@id": "https://example.org/papers/42" }
+        "urn:solid:isFormatOf": {
+          "@id": "https://example.org/papers/42"
+        }
       }
     }
   ],
@@ -67,6 +69,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment reworded to match upstream definition."
     }
   ],
   "see_also": {

@@ -39,9 +39,12 @@
   ],
   "rdfs:domain": "urn:solid:Agent",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:credentialStatus"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "FOAF's lightweight presence/status field — IM-style \"away\", \"busy\", or a free-form message (\"writing the registry\"). For ActivityPub-style profile bios, `as:summary` on the actor is more common today.",
+  "notes": "FOAF's lightweight presence/status field — IM-style \"away\", \"busy\", or a free-form message (\"writing the registry\"). For ActivityPub-style profile bios, `as:summary` on the actor is more common today. Only for an agent's self-reported presence/activity message. Not for the status of events (`ical:status` CONFIRMED/TENTATIVE/CANCELLED), tasks, or documents. Do not confuse with the registry metadata field `status` (stable/experimental). Marked unstable in the FOAF spec.",
   "examples": [
     {
       "title": "Person with a current status",
@@ -65,6 +68,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added disambiguation notes (presence only, not event/task status) and notToBeConfusedWith credentialStatus."
     }
   ],
   "see_also": {

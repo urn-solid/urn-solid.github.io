@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:insertedContentRelation — urn-solid</title>
-<meta name="description" content="On an IndirectContainer, the predicate the server uses to look up the actual member from the POSTed content.">
+<meta name="description" content="On an LDP container, the predicate the server uses to find the actual member inside the POSTed content; the default `ldp:MemberSubject` means the new resource itself is the member.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/insertedContentRelation/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:insertedContentRelation">
-<meta property="og:description" content="On an IndirectContainer, the predicate the server uses to look up the actual member from the POSTed content.">
+<meta property="og:description" content="On an LDP container, the predicate the server uses to find the actual member inside the POSTed content; the default `ldp:MemberSubject` means the new resource itself is the member.">
 <meta property="og:url" content="https://urn-solid.com/insertedContentRelation/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:insertedContentRelation">
-<meta name="twitter:description" content="On an IndirectContainer, the predicate the server uses to look up the actual member from the POSTed content.">
+<meta name="twitter:description" content="On an LDP container, the predicate the server uses to find the actual member inside the POSTed content; the default `ldp:MemberSubject` means the new resource itself is the member.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,26 +32,26 @@
   "@id": "urn:solid:insertedContentRelation",
   "@type": "rdf:Property",
   "rdfs:label": "insertedContentRelation",
-  "rdfs:comment": "On an IndirectContainer, the predicate the server uses to look up the actual member from the POSTed content.",
+  "rdfs:comment": "On an LDP container, the predicate the server uses to find the actual member inside the POSTed content; the default `ldp:MemberSubject` means the new resource itself is the member.",
   "owl:sameAs": "http://www.w3.org/ns/ldp#insertedContentRelation",
   "rdfs:seeAlso": [
     "urn:solid:IndirectContainer",
-    "urn:solid:hasMemberRelation"
+    "urn:solid:hasMemberRelation",
+    "urn:solid:MemberSubject"
   ],
-  "rdfs:domain": "urn:solid:IndirectContainer",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Used only on `urn:solid:IndirectContainer`. Tells the server: \"when a resource is POSTed, look up the value of *this* predicate inside it, and use *that* as the actual member.\" Common pattern: an IndirectContainer for likes uses `as:actor` so the membership target is the liker, not the Like activity itself.",
+  "notes": "Required on IndirectContainers; Basic/Direct containers behave as if it were ldp:MemberSubject (`urn:solid:MemberSubject`), the default meaning \"the new resource itself is the member\". On an IndirectContainer it tells the server: \"when a resource is POSTed, look up the value of *this* predicate inside it, and use *that* as the actual member.\" Example pattern: a friends container using `foaf:primaryTopic` so the member is the person a POSTed document describes, not the document itself.",
   "examples": [
     {
       "title": "IndirectContainer using insertedContentRelation",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://example.org/posts/abc/likes/",
+        "@id": "https://alice.example.org/friends/",
         "@type": "urn:solid:IndirectContainer",
-        "urn:solid:membershipResource": { "@id": "https://example.org/posts/abc" },
-        "urn:solid:hasMemberRelation": { "@id": "https://schema.org/likedBy" },
-        "urn:solid:insertedContentRelation": { "@id": "https://www.w3.org/ns/activitystreams#actor" }
+        "urn:solid:membershipResource": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:hasMemberRelation": { "@id": "http://xmlns.com/foaf/0.1/knows" },
+        "urn:solid:insertedContentRelation": { "@id": "http://xmlns.com/foaf/0.1/primaryTopic" }
       }
     }
   ],
@@ -67,6 +67,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped IndirectContainer domain; notes mention MemberSubject default; example uses foaf:knows/primaryTopic instead of nonexistent schema:likedBy."
     }
   ],
   "see_also": {

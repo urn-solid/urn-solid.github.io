@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:height — urn-solid</title>
-<meta name="description" content="The height in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.">
+<meta name="description" content="On an ActivityStreams Link, a hint for the rendering height, in device-independent (CSS) pixels, of the linked resource. Widely also used on Image, Video and Document attachments in ActivityPub.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/height/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:height">
-<meta property="og:description" content="The height in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.">
+<meta property="og:description" content="On an ActivityStreams Link, a hint for the rendering height, in device-independent (CSS) pixels, of the linked resource. Widely also used on Image, Video and Document attachments in ActivityPub.">
 <meta property="og:url" content="https://urn-solid.com/height/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:height">
-<meta name="twitter:description" content="The height in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.">
+<meta name="twitter:description" content="On an ActivityStreams Link, a hint for the rendering height, in device-independent (CSS) pixels, of the linked resource. Widely also used on Image, Video and Document attachments in ActivityPub.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,8 +32,8 @@
   "@id": "urn:solid:height",
   "@type": "rdf:Property",
   "rdfs:label": "height",
-  "rdfs:comment": "The height in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#height",
+  "rdfs:comment": "On an ActivityStreams Link, a hint for the rendering height, in device-independent (CSS) pixels, of the linked resource. Widely also used on Image, Video and Document attachments in ActivityPub.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#height",
   "rdfs:seeAlso": [
     "urn:solid:width",
     "urn:solid:Image",
@@ -41,12 +41,9 @@
     "urn:solid:Link"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-  "notToBeConfusedWith": [
-    "urn:solid:width"
-  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "In pixels, not CSS units. Pair with `as:width` so renderers can reserve layout space and avoid reflow when the image loads. For multi-resolution variants, expose each as a distinct Link with its own height/width and let clients pick.",
+  "notes": "Device-independent pixels (a rendering hint, not necessarily the intrinsic pixel size). Pair with `as:width` so renderers can reserve layout space and avoid reflow when the image loads. For multi-resolution variants, expose each as a distinct Link with its own height/width and let clients pick.",
   "examples": [
     {
       "title": "An Image with explicit dimensions",
@@ -61,7 +58,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#height"
+      "https://www.w3.org/ns/activitystreams#height"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -71,6 +68,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment reflects upstream Link domain and rendering-hint semantics; notes say device-independent pixels; removed width from notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -78,7 +87,10 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:width"
+  ]
 }
 
 </script>

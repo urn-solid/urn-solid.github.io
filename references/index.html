@@ -36,11 +36,15 @@
   "owl:sameAs": "http://purl.org/dc/terms/references",
   "rdfs:seeAlso": [
     "https://schema.org/citation",
-    "http://purl.org/dc/terms/isReferencedBy"
+    "urn:solid:isReferencedBy"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:isReferencedBy",
+    "urn:solid:bibliographicCitation"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use to record outbound citations or references. The inverse is `dcterms:isReferencedBy`. For richer bibliographic citations with structured metadata, prefer `dcterms:bibliographicCitation` (string) or attach a separate `dcterms:BibliographicResource`.",
+  "notes": "Use for outbound references as IRIs. To give a human-readable formatted citation of *this* resource, use `urn:solid:bibliographicCitation`; to describe the cited work in detail, type it `urn:solid:BibliographicResource`. Inverse: `urn:solid:isReferencedBy`.",
   "examples": [
     {
       "title": "Article citing a source",
@@ -64,6 +68,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes rewritten (bibliographicCitation is a formatted string, not richer); added isReferencedBy to notToBeConfusedWith and seeAlso."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

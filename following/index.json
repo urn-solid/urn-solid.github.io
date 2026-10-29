@@ -3,23 +3,22 @@
   "@id": "urn:solid:following",
   "@type": "rdf:Property",
   "rdfs:label": "following",
-  "rdfs:comment": "The Collection of Actors that an ActivityPub Actor follows — the source side of the social graph.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#following",
+  "rdfs:comment": "The Collection of actors that an ActivityPub actor (Person, Application, Group, Organization or Service) follows — the source side of the social graph.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#following",
   "rdfs:seeAlso": [
-    "urn:solid:Actor",
     "urn:solid:followers",
     "urn:solid:Follow"
   ],
-  "rdfs:domain": "urn:solid:Actor",
   "notToBeConfusedWith": [
-    "urn:solid:followers"
+    "urn:solid:followers",
+    "urn:solid:follower"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Mirror of `as:followers`. Each entry is an Actor whose Activities the subject has subscribed to via a `Follow` activity. May be private (just a count) for privacy-sensitive deployments.",
+  "notes": "Defined by ActivityPub (§5.4), not the AS2 Vocabulary. Mirror of `as:followers`. Each entry is an actor whose Activities the subject has subscribed to via a `Follow` activity. May be private (just a count) for privacy-sensitive deployments.",
   "examples": [
     {
-      "title": "An Actor exposing a following Collection",
+      "title": "A Person exposing a following Collection",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/card#me",
@@ -30,7 +29,8 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#following"
+      "https://www.w3.org/ns/activitystreams#following",
+      "https://www.w3.org/TR/activitypub/#following"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -40,6 +40,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped unregistered Actor term domain/seeAlso, reworded actor prose; cited ActivityPub §5.4."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -3,16 +3,15 @@
   "@id": "urn:solid:sharedInbox",
   "@type": "rdf:Property",
   "rdfs:label": "sharedInbox",
-  "rdfs:comment": "An ActivityPub Actor-server endpoint that accepts deliveries for any local recipient — used to deduplicate fan-out when one Activity targets many followers on the same server.",
+  "rdfs:comment": "An ActivityPub server endpoint, advertised in an actor's `endpoints`, that accepts deliveries for any local recipient — used to deduplicate fan-out when one Activity targets many followers on the same server.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#sharedInbox",
   "rdfs:seeAlso": [
-    "urn:solid:Actor",
     "urn:solid:inbox",
     "urn:solid:endpoints"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Lives inside an Actor's `as:endpoints` object. Federation pattern: when delivering an Activity addressed to many followers, a sender SHOULD POST once to each receiving server's `sharedInbox` rather than once per follower's per-Actor `inbox` — saves bandwidth and quadratic delivery cost on large fediverse instances.",
+  "notes": "Lives inside the `as:endpoints` object of an actor (Person, Application, Group, Organization or Service). Federation pattern: when delivering an Activity addressed to many followers, a sender SHOULD POST once to each receiving server's `sharedInbox` rather than once per follower's per-actor `inbox` — reducing delivery from one POST per recipient to one POST per receiving server. ActivityPub also allows delivering public Activities to known sharedInboxes for wider distribution.",
   "examples": [
     {
       "title": "An Actor advertising a sharedInbox",
@@ -38,6 +37,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: fixed 'quadratic' claim (per-recipient -> per-server POSTs), added public-delivery use; dropped non-existent Actor class seeAlso."
     }
   ],
   "see_also": {

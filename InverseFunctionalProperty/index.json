@@ -8,7 +8,7 @@
   "rdfs:seeAlso": [
     "urn:solid:Property",
     "urn:solid:FunctionalProperty",
-    "urn:solid:sameAs"
+    "http://www.w3.org/2002/07/owl#sameAs"
   ],
   "notToBeConfusedWith": [
     "urn:solid:FunctionalProperty"
@@ -38,6 +38,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso: replaced urn:solid:sameAs (schema:sameAs) with owl:sameAs IRI."
     }
   ],
   "see_also": {

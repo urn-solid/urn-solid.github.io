@@ -38,7 +38,13 @@
     "https://schema.org/image",
     "http://www.w3.org/2006/vcard/ns#hasPhoto"
   ],
-  "rdfs:range": "http://xmlns.com/foaf/0.1/Image",
+  "rdfs:range": "urn:solid:Image",
+  "notToBeConfusedWith": [
+    "urn:solid:img",
+    "urn:solid:image",
+    "urn:solid:hasPhoto",
+    "urn:solid:icon"
+  ],
   "status": "stable",
   "added": "2026-04-18",
   "notes": "The value is the IRI of the image itself, not a document containing it. Inverse of `foaf:depicts`. For a profile photo specifically, `vcard:hasPhoto` is often more appropriate in vCard-flavored data.",
@@ -65,6 +71,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range urn:solid:Image; added notToBeConfusedWith img/image."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

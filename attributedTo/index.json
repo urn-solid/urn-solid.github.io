@@ -6,16 +6,18 @@
   "rdfs:comment": "An entity to which the object is attributed — typically the author or creator.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#attributedTo",
   "rdfs:seeAlso": [
-    "http://www.w3.org/ns/prov#wasAttributedTo",
+    "urn:solid:wasAttributedTo",
     "urn:solid:creator"
   ],
-  "rdfs:range": "urn:solid:Object",
   "notToBeConfusedWith": [
-    "urn:solid:creator"
+    "urn:solid:creator",
+    "urn:solid:wasAttributedTo",
+    "urn:solid:Attribution",
+    "urn:solid:actor"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "ActivityStreams' general-purpose author/origin pointer — works for Notes, Articles, Activities, Images. The value is typically an Actor (Person, Application, Group, Service). For dcterms-style bibliographic authorship use `urn:solid:creator`; for PROV-grade attribution use `prov:wasAttributedTo`.",
+  "notes": "ActivityStreams' general-purpose author/origin pointer — works for Notes, Articles, Activities, Images. Upstream range: as:Object or as:Link. The value is typically an actor (Person, Application, Group, Organization or Service). For dcterms-style bibliographic authorship use `urn:solid:creator`; for PROV-grade attribution use `urn:solid:wasAttributedTo`.",
   "examples": [
     {
       "title": "Note attributed to a Person",
@@ -39,6 +41,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses urn:solid:wasAttributedTo (also in notToBeConfusedWith); dropped too-narrow rdfs:range, noted upstream Object|Link range."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

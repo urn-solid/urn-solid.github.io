@@ -6,12 +6,12 @@
   "rdfs:comment": "Anything that is made available for sale — a physical good, a service, or a digital item.",
   "owl:sameAs": "https://schema.org/Product",
   "rdfs:seeAlso": [
-    "https://schema.org/Offer",
+    "urn:solid:Offer",
     "https://schema.org/Service"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Schema.org's commerce-anchor class. Pair with `urn:solid:Offer` (the price/availability) and `urn:solid:Review` / `urn:solid:Rating`. For non-commercial creative works, `urn:solid:CreativeWork` is the better base; Product specifically implies a market context.",
+  "notes": "Schema.org's commerce-anchor class. Pair with `urn:solid:Offer` (the price/availability) and `urn:solid:Review` / `urn:solid:Rating`. For non-commercial creative works, `urn:solid:CreativeWork` is the better base; Product specifically implies a market context. For a sellable service use `schema:Service` (https://schema.org/Service), not `urn:solid:Service`, which is the ActivityStreams bot/actor type.",
   "examples": [
     {
       "title": "A simple product",
@@ -36,6 +36,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses urn:solid:Offer; notes warn schema:Service is not urn:solid:Service."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -43,5 +55,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:Offer"
+  ]
 }

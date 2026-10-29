@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Email — urn-solid</title>
-<meta name="description" content="An email address — the value class for `urn:solid:hasEmail` when the email is described as a typed resource rather than a bare `mailto:` IRI.">
+<meta name="description" content="Deprecated vCard Email class (owl:deprecated in the W3C vCard ontology) — formerly the type of an email-address node.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Email/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Email">
-<meta property="og:description" content="An email address — the value class for `urn:solid:hasEmail` when the email is described as a typed resource rather than a bare `mailto:` IRI.">
+<meta property="og:description" content="Deprecated vCard Email class (owl:deprecated in the W3C vCard ontology) — formerly the type of an email-address node.">
 <meta property="og:url" content="https://urn-solid.com/Email/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Email">
-<meta name="twitter:description" content="An email address — the value class for `urn:solid:hasEmail` when the email is described as a typed resource rather than a bare `mailto:` IRI.">
+<meta name="twitter:description" content="Deprecated vCard Email class (owl:deprecated in the W3C vCard ontology) — formerly the type of an email-address node.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:Email",
   "@type": "rdfs:Class",
   "rdfs:label": "Email",
-  "rdfs:comment": "An email address — the value class for `urn:solid:hasEmail` when the email is described as a typed resource rather than a bare `mailto:` IRI.",
+  "rdfs:comment": "Deprecated vCard Email class (owl:deprecated in the W3C vCard ontology) — formerly the type of an email-address node.",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#Email",
   "rdfs:seeAlso": [
     "urn:solid:hasEmail",
@@ -40,21 +40,19 @@
     "http://www.w3.org/2006/vcard/ns#Home",
     "http://www.w3.org/2006/vcard/ns#Work"
   ],
-  "status": "stable",
+  "status": "deprecated",
   "added": "2026-04-25",
-  "notes": "Class form pairing with the existing `hasEmail` property. vCard's two encodings: (1) `hasEmail` directly to a `mailto:` IRI for simple cases, or (2) `hasEmail` to an `Email`-typed resource with `vcard:value` (mailto IRI) plus role classes like `Home`/`Work` for typed addresses. Use this class for the typed-resource form.",
+  "supersededBy": "urn:solid:hasEmail",
+  "notes": "vcard:Email is deprecated in the W3C vCard ontology (\"Use the hasEmail object property\"). Use `urn:solid:hasEmail` directly to a `mailto:` IRI, or, for typed emails, the SolidOS pattern: `hasEmail` -> a node typed `vcard:Home`/`vcard:Work` carrying `vcard:value <mailto:...>`; the node need not be typed Email. Note that upstream `vcard:value` is declared a datatype property, though SolidOS uses it with a mailto: IRI.",
   "examples": [
     {
-      "title": "Person with a typed work email",
+      "title": "Use instead: a typed work email without the Email class",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:hasEmail": {
-          "@type": [
-            "urn:solid:Email",
-            "http://www.w3.org/2006/vcard/ns#Work"
-          ],
+          "@type": "http://www.w3.org/2006/vcard/ns#Work",
           "http://www.w3.org/2006/vcard/ns#value": { "@id": "mailto:alice@example.com" }
         }
       }
@@ -72,6 +70,12 @@
       "at": "2026-04-25T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term — Class form pairing with the existing hasEmail property."
+    },
+    {
+      "event": "deprecated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Deprecated (vcard:Email is owl:deprecated upstream); supersededBy hasEmail, notes describe the typed-node pattern, Email dropped from example @type."
     }
   ],
   "see_also": {

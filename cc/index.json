@@ -6,11 +6,14 @@
   "rdfs:comment": "Secondary public recipients of the object — visible carbon-copy addresses.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#cc",
   "rdfs:seeAlso": [
-    "https://www.w3.org/ns/activitystreams#to",
-    "https://www.w3.org/ns/activitystreams#bcc"
+    "urn:solid:to",
+    "urn:solid:bto",
+    "urn:solid:bcc",
+    "urn:solid:audience"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:to"
+    "urn:solid:to",
+    "urn:solid:bcc"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -23,8 +26,12 @@
         "@id": "https://example.org/notes/abc",
         "@type": "urn:solid:Note",
         "urn:solid:content": "Hello!",
-        "urn:solid:to": [{ "@id": "https://www.w3.org/ns/activitystreams#Public" }],
-        "urn:solid:cc": [{ "@id": "https://example.org/alice/followers" }]
+        "urn:solid:to": [
+          { "@id": "https://www.w3.org/ns/activitystreams#Public" }
+        ],
+        "urn:solid:cc": [
+          { "@id": "https://example.org/alice/followers" }
+        ]
       }
     }
   ],
@@ -40,6 +47,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses registered urn:solid:to/bcc and adds bto and audience."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

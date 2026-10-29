@@ -41,7 +41,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "DCAT's central class for data publication. Represents the abstract dataset; concrete files/APIs serving its content are `urn:solid:Distribution`s. Pair with `dcterms:title`, `dcterms:description`, `dcterms:publisher`, `urn:solid:keywords`, `dcat:theme`. Schema.org's `schema:Dataset` is the SEO-flavored equivalent.",
+  "notes": "DCAT's central class for data publication. Represents the abstract dataset; concrete files/APIs serving its content are `urn:solid:Distribution`s. Pair with `urn:solid:title`, `urn:solid:description`, `urn:solid:publisher`, `urn:solid:keyword` (dcat:keyword), `urn:solid:theme`; link Distributions via `dcat:distribution`. Schema.org's `schema:Dataset` is the SEO-flavored equivalent.",
   "examples": [
     {
       "title": "A simple dataset",
@@ -66,6 +66,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes now recommend urn:solid:keyword (dcat:keyword) instead of schema:keywords, and registry terms for title/description/publisher/theme."
     }
   ],
   "see_also": {

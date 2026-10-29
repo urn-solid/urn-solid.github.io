@@ -35,9 +35,11 @@
   "rdfs:comment": "A contact point for a person or organization — an aggregation of reachable contact channels for a specific purpose or department.",
   "owl:sameAs": "https://schema.org/ContactPoint",
   "rdfs:seeAlso": [
+    "urn:solid:email",
+    "urn:solid:telephone",
     "urn:solid:hasEmail",
     "urn:solid:hasTelephone",
-    "urn:solid:hasAddress"
+    "http://www.w3.org/2006/vcard/ns#VCard"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -67,6 +69,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso adds schema-aligned urn:solid:email/telephone and vcard:VCard."
     }
   ],
   "see_also": {

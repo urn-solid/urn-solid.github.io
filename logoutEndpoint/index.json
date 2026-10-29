@@ -3,7 +3,7 @@
   "@id": "urn:solid:logoutEndpoint",
   "@type": "rdf:Property",
   "rdfs:label": "logoutEndpoint",
-  "rdfs:comment": "The logout endpoint URL for a Solid OIDC provider.",
+  "rdfs:comment": "The URL at which a user can log out of a given Solid server (legacy server metadata, predates Solid-OIDC; OIDC providers expose end_session_endpoint instead).",
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#logoutEndpoint",
   "rdfs:seeAlso": [
     "urn:solid:loginEndpoint",
@@ -14,10 +14,10 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Counterpart to `urn:solid:loginEndpoint`. Advertised by a Solid OIDC provider as the URL where users can sign out. Most modern Solid OIDC implementations expose this via OIDC discovery (`/.well-known/openid-configuration`'s `end_session_endpoint`) rather than via this predicate.",
+  "notes": "Counterpart to `urn:solid:loginEndpoint`. Legacy (NSS-era) server metadata, not specific to an OpenID provider. Solid-OIDC providers expose logout via OIDC discovery (`/.well-known/openid-configuration`'s `end_session_endpoint`) instead.",
   "examples": [
     {
-      "title": "OIDC issuer with login and logout endpoints",
+      "title": "Server with login and logout endpoints",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://login.example.org/",
@@ -38,6 +38,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Definition: legacy server logout URL, not OIDC-specific."
     }
   ],
   "see_also": {

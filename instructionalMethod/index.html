@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:instructionalMethod — urn-solid</title>
-<meta name="description" content="A process used to engender knowledge, attitudes, or skills using the resource — pedagogy.">
+<meta name="description" content="A process used to engender knowledge, attitudes, and skills that the resource is designed to support — e.g. lecture, problem-based learning, workshop.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/instructionalMethod/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:instructionalMethod">
-<meta property="og:description" content="A process used to engender knowledge, attitudes, or skills using the resource — pedagogy.">
+<meta property="og:description" content="A process used to engender knowledge, attitudes, and skills that the resource is designed to support — e.g. lecture, problem-based learning, workshop.">
 <meta property="og:url" content="https://urn-solid.com/instructionalMethod/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:instructionalMethod">
-<meta name="twitter:description" content="A process used to engender knowledge, attitudes, or skills using the resource — pedagogy.">
+<meta name="twitter:description" content="A process used to engender knowledge, attitudes, and skills that the resource is designed to support — e.g. lecture, problem-based learning, workshop.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,15 +32,15 @@
   "@id": "urn:solid:instructionalMethod",
   "@type": "rdf:Property",
   "rdfs:label": "instructionalMethod",
-  "rdfs:comment": "A process used to engender knowledge, attitudes, or skills using the resource — pedagogy.",
+  "rdfs:comment": "A process used to engender knowledge, attitudes, and skills that the resource is designed to support — e.g. lecture, problem-based learning, workshop.",
   "owl:sameAs": "http://purl.org/dc/terms/instructionalMethod",
   "rdfs:seeAlso": [
     "urn:solid:educationLevel",
-    "urn:solid:audience"
+    "http://purl.org/dc/terms/audience"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Used in educational-resources metadata to describe the teaching method (lecture, problem-set, workshop, MOOC video). Value is typically a controlled-vocabulary term or free-form string. Pair with `urn:solid:educationLevel`.",
+  "notes": "Used in educational-resources metadata to describe the teaching method (lecture, problem-set, workshop, MOOC video). Upstream range is `dcterms:MethodOfInstruction`: an IRI from a controlled vocabulary is preferred; a free-form string is a fallback. Pair with `urn:solid:educationLevel`. For the educational audience use `dcterms:audience` (not `urn:solid:audience`, which is ActivityStreams addressing).",
   "examples": [
     {
       "title": "A workshop's instructional method",
@@ -64,6 +64,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment aligned with upstream; seeAlso dcterms:audience instead of urn:solid:audience; notes prefer controlled-vocabulary IRIs."
     }
   ],
   "see_also": {

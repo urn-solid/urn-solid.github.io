@@ -11,7 +11,7 @@
     "urn:solid:hadRole",
     "urn:solid:hadPlan"
   ],
-  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:domain": "http://www.w3.org/ns/prov#Activity",
   "rdfs:range": "urn:solid:Association",
   "status": "stable",
   "added": "2026-04-19",
@@ -22,7 +22,7 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/builds/2026-04-18-1",
-        "@type": "urn:solid:Activity",
+        "@type": "http://www.w3.org/ns/prov#Activity",
         "urn:solid:wasAssociatedWith": { "@id": "https://urn-solid.com/agents/curate-next" },
         "urn:solid:qualifiedAssociation": { "@id": "https://example.org/associations/build-2026-04-18" }
       }
@@ -40,6 +40,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain and example type now prov:Activity (not as:Activity)."
     }
   ],
   "see_also": {

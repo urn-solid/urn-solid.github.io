@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:width — urn-solid</title>
-<meta name="description" content="The width in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.">
+<meta name="description" content="The preferred display width, in device-independent (CSS) pixels, of the resource a Link points to; AS2 declares the domain as Link, though fediverse software also puts it on Image/Video/Document attachments.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/width/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:width">
-<meta property="og:description" content="The width in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.">
+<meta property="og:description" content="The preferred display width, in device-independent (CSS) pixels, of the resource a Link points to; AS2 declares the domain as Link, though fediverse software also puts it on Image/Video/Document attachments.">
 <meta property="og:url" content="https://urn-solid.com/width/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:width">
-<meta name="twitter:description" content="The width in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.">
+<meta name="twitter:description" content="The preferred display width, in device-independent (CSS) pixels, of the resource a Link points to; AS2 declares the domain as Link, though fediverse software also puts it on Image/Video/Document attachments.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,21 +32,22 @@
   "@id": "urn:solid:width",
   "@type": "rdf:Property",
   "rdfs:label": "width",
-  "rdfs:comment": "The width in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#width",
+  "rdfs:comment": "The preferred display width, in device-independent (CSS) pixels, of the resource a Link points to; AS2 declares the domain as Link, though fediverse software also puts it on Image/Video/Document attachments.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#width",
   "rdfs:seeAlso": [
     "urn:solid:height",
     "urn:solid:Image",
     "urn:solid:Video",
     "urn:solid:Link"
   ],
+  "rdfs:domain": "urn:solid:Link",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
   "notToBeConfusedWith": [
     "urn:solid:height"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "In pixels, not CSS units. Always declare alongside `as:height` — both together let renderers compute aspect ratios and pre-reserve layout space, avoiding cumulative layout shift when media loads asynchronously.",
+  "notes": "Device-independent (CSS) pixels — not necessarily the intrinsic pixel width of the media file. AS2's declared domain is Link; putting it directly on an Image/Video/Document (as in the example) is common fediverse practice outside that domain. Always declare alongside `as:height` — both together let renderers compute aspect ratios and pre-reserve layout space, avoiding cumulative layout shift when media loads asynchronously.",
   "examples": [
     {
       "title": "A Video with explicit dimensions",
@@ -61,7 +62,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#width"
+      "https://www.w3.org/ns/activitystreams#width"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -71,6 +72,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment/notes: device-independent (CSS) pixels on a Link; added rdfs:domain urn:solid:Link and noted fediverse use on attachments."
     }
   ],
   "see_also": {

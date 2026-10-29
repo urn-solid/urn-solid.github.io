@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:orderedItems — urn-solid</title>
-<meta name="description" content="The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant.">
+<meta name="description" content="The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant. A JSON-LD alias for `as:items` with an `@list` container, not a separate RDF property.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/orderedItems/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:orderedItems">
-<meta property="og:description" content="The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant.">
+<meta property="og:description" content="The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant. A JSON-LD alias for `as:items` with an `@list` container, not a separate RDF property.">
 <meta property="og:url" content="https://urn-solid.com/orderedItems/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:orderedItems">
-<meta name="twitter:description" content="The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant.">
+<meta name="twitter:description" content="The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant. A JSON-LD alias for `as:items` with an `@list` container, not a separate RDF property.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,30 +32,38 @@
   "@id": "urn:solid:orderedItems",
   "@type": "rdf:Property",
   "rdfs:label": "orderedItems",
-  "rdfs:comment": "The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#orderedItems",
+  "rdfs:comment": "The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant. A JSON-LD alias for `as:items` with an `@list` container, not a separate RDF property.",
   "rdfs:seeAlso": [
+    "https://www.w3.org/ns/activitystreams#items",
     "urn:solid:Collection",
     "urn:solid:items",
     "urn:solid:totalItems",
     "urn:solid:first"
   ],
-  "rdfs:domain": "http://www.w3.org/ns/activitystreams#OrderedCollection",
+  "rdfs:domain": "urn:solid:OrderedCollection",
   "notToBeConfusedWith": [
     "urn:solid:items"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use on `OrderedCollection`/`OrderedCollectionPage`; for unordered collections use `as:items`. The JSON array order is the canonical order — for a chronologically sorted outbox, that's typically newest-first. Servers paginate ordered collections via `first`/`next` just like unordered ones.",
+  "notes": "`orderedItems` is a JSON-LD alias in the AS2 context for `as:items` with `@container: @list`. In RDF it is `as:items` whose value is an ordered rdf:List. It has no IRI of its own. Use on `OrderedCollection`/`OrderedCollectionPage`; for unordered collections use `as:items`. The JSON array order is the canonical order — for a chronologically sorted outbox, that's typically newest-first. Servers paginate ordered collections via `first`/`next` just like unordered ones. The example carries an inline context term so the array expands as an `@list`. It carries no owl:sameAs of its own: the RDF property is `https://www.w3.org/ns/activitystreams#items`, which the registry maps via `urn:solid:items`; this term only names the JSON-LD alias.",
   "examples": [
     {
       "title": "An OrderedCollectionPage with three items",
       "jsonld": {
-        "@context": "https://urn-solid.com/context.jsonld",
+        "@context": [
+          "https://urn-solid.com/context.jsonld",
+          {
+            "orderedItems": {
+              "@id": "https://www.w3.org/ns/activitystreams#items",
+              "@container": "@list"
+            }
+          }
+        ],
         "@id": "https://alice.example.org/outbox?page=1",
-        "@type": "http://www.w3.org/ns/activitystreams#OrderedCollectionPage",
+        "@type": "https://www.w3.org/ns/activitystreams#OrderedCollectionPage",
         "urn:solid:partOf": { "@id": "https://alice.example.org/outbox" },
-        "urn:solid:orderedItems": [
+        "orderedItems": [
           { "@id": "https://alice.example.org/activities/3" },
           { "@id": "https://alice.example.org/activities/2" },
           { "@id": "https://alice.example.org/activities/1" }
@@ -65,7 +73,8 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#orderedItems"
+      "https://www.w3.org/ns/activitystreams#items",
+      "https://www.w3.org/ns/activitystreams"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -75,6 +84,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "owl:sameAs -> as:items (orderedItems is the AS2 context's @list alias, no IRI of its own); domain -> urn:solid:OrderedCollection; example gets inline @list context. owl:sameAs moved to seeAlso (one registry term per upstream IRI)."
     }
   ],
   "see_also": {

@@ -8,18 +8,18 @@
   "rdfs:seeAlso": [
     "urn:solid:Property",
     "urn:solid:SymmetricProperty",
-    "urn:solid:FunctionalProperty",
-    "urn:solid:subClassOf"
+    "urn:solid:subClassOf",
+    "urn:solid:broader"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Classic examples: `rdfs:subClassOf`, `rdfs:subPropertyOf`, `dcterms:isPartOf`, `skos:broader`. Reasoners materialise the chain — given `Person ⊏ Agent` and `Agent ⊏ Thing`, they infer `Person ⊏ Thing`. Declare a property as `TransitiveProperty` to enable this inference.",
+  "notes": "Classic examples: `skos:broaderTransitive`, `skos:narrowerTransitive`. Reasoners materialise the chain — given `A p B` and `B p C`, they infer `A p C`. Declare a property as `TransitiveProperty` to enable this inference. `rdfs:subClassOf`/`rdfs:subPropertyOf` are transitive by RDFS semantics, not by declaration (redeclaring them is illegal in OWL 2 DL). Note `skos:broader` (`urn:solid:broader`) is intentionally NOT transitive — use `skos:broaderTransitive` for the closure.",
   "examples": [
     {
-      "title": "Declaring subClassOf as transitive",
+      "title": "Declaring skos:broaderTransitive as transitive",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "urn:solid:subClassOf",
+        "@id": "http://www.w3.org/2004/02/skos/core#broaderTransitive",
         "@type": "urn:solid:TransitiveProperty"
       }
     }
@@ -36,6 +36,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed examples (skos:broader and dcterms:isPartOf are not transitive; don't redeclare rdfs:subClassOf); example now skos:broaderTransitive; seeAlso swaps FunctionalProperty for broader."
     }
   ],
   "see_also": {

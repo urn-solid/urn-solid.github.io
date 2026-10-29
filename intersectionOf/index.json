@@ -16,14 +16,18 @@
   "notes": "Logical AND across classes. Use to define \"a class of things that are both X and Y\" (e.g. an Author = Person ∩ has-published-Book). Value is an `rdf:List` of class IRIs or class expressions; reasoners use it to infer membership.",
   "examples": [
     {
-      "title": "An anonymous class: Person who is also a Member",
+      "title": "Persons who are a member of some Organization",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@type": "urn:solid:Class",
+        "@type": "http://www.w3.org/2002/07/owl#Class",
         "urn:solid:intersectionOf": {
           "@list": [
             { "@id": "urn:solid:Person" },
-            { "@id": "urn:solid:Member" }
+            {
+              "@type": "urn:solid:Restriction",
+              "urn:solid:onProperty": { "@id": "urn:solid:memberOf" },
+              "urn:solid:someValuesFrom": { "@id": "urn:solid:Organization" }
+            }
           ]
         }
       }
@@ -41,6 +45,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example no longer uses a nonexistent Member class; anonymous class typed owl:Class."
     }
   ],
   "see_also": {

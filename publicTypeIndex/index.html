@@ -36,16 +36,18 @@
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#publicTypeIndex",
   "rdfs:seeAlso": [
     "urn:solid:privateTypeIndex",
-    "urn:solid:TypeIndex"
+    "urn:solid:TypeIndex",
+    "http://www.w3.org/ns/solid/terms#ListedDocument",
+    "https://solid.github.io/type-indexes/"
   ],
-  "rdfs:domain": "urn:solid:Person",
+  "rdfs:domain": "urn:solid:Agent",
   "rdfs:range": "urn:solid:TypeIndex",
   "notToBeConfusedWith": [
     "urn:solid:privateTypeIndex"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Linked from a WebID, points at the user's publicly-readable TypeIndex. Distinct from `urn:solid:privateTypeIndex` (access-controlled, only readable by the user and their authorized apps). Public type registrations are typically for data the user intends to share (public contact info, published content).",
+  "notes": "Linked from a WebID, points at the user's publicly-readable TypeIndex. Distinct from `urn:solid:privateTypeIndex` (access-controlled, only readable by the user and their authorized apps). Public type registrations are typically for data the user intends to share (public contact info, published content). The target document is typed `solid:ListedDocument`.",
   "examples": [
     {
       "title": "WebID pointing at its public TypeIndex",
@@ -69,6 +71,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain -> Agent; notes/seeAlso mention solid:ListedDocument and the Type Indexes spec."
     }
   ],
   "see_also": {

@@ -7,12 +7,15 @@
   "owl:sameAs": "http://www.w3.org/ns/prov#wasAssociatedWith",
   "rdfs:seeAlso": [
     "urn:solid:wasAttributedTo",
-    "http://www.w3.org/ns/prov#qualifiedAssociation"
+    "urn:solid:qualifiedAssociation",
+    "urn:solid:actedOnBehalfOf",
+    "urn:solid:hadPlan"
   ],
-  "rdfs:domain": "urn:solid:Activity",
-  "rdfs:range": "urn:solid:Agent",
+  "rdfs:domain": "http://www.w3.org/ns/prov#Activity",
+  "rdfs:range": "http://www.w3.org/ns/prov#Agent",
   "notToBeConfusedWith": [
-    "urn:solid:wasAttributedTo"
+    "urn:solid:wasAttributedTo",
+    "urn:solid:wasStartedBy"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -23,7 +26,7 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/builds/2026-04-18-1",
-        "@type": "urn:solid:Activity",
+        "@type": "http://www.w3.org/ns/prov#Activity",
         "urn:solid:wasAssociatedWith": { "@id": "https://urn-solid.com/agents/curate-next" }
       }
     }
@@ -40,6 +43,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain/range now prov:Activity/prov:Agent; example type prov:Activity; seeAlso uses urn:solid:qualifiedAssociation, adds actedOnBehalfOf and hadPlan."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:ItemList — urn-solid</title>
-<meta name="description" content="An ordered list of items — schema.org's lightweight ordered collection for SEO-rich markup.">
+<meta name="description" content="A list of items, ordered or unordered (see schema:itemListOrder), given via schema:itemListElement and optionally wrapped in schema:ListItem with schema:position — schema.org's list type for carousels, top-N lists and breadcrumbs.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/ItemList/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:ItemList">
-<meta property="og:description" content="An ordered list of items — schema.org's lightweight ordered collection for SEO-rich markup.">
+<meta property="og:description" content="A list of items, ordered or unordered (see schema:itemListOrder), given via schema:itemListElement and optionally wrapped in schema:ListItem with schema:position — schema.org's list type for carousels, top-N lists and breadcrumbs.">
 <meta property="og:url" content="https://urn-solid.com/ItemList/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:ItemList">
-<meta name="twitter:description" content="An ordered list of items — schema.org's lightweight ordered collection for SEO-rich markup.">
+<meta name="twitter:description" content="A list of items, ordered or unordered (see schema:itemListOrder), given via schema:itemListElement and optionally wrapped in schema:ListItem with schema:position — schema.org's list type for carousels, top-N lists and breadcrumbs.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:ItemList",
   "@type": "rdfs:Class",
   "rdfs:label": "ItemList",
-  "rdfs:comment": "An ordered list of items — schema.org's lightweight ordered collection for SEO-rich markup.",
+  "rdfs:comment": "A list of items, ordered or unordered (see schema:itemListOrder), given via schema:itemListElement and optionally wrapped in schema:ListItem with schema:position — schema.org's list type for carousels, top-N lists and breadcrumbs.",
   "owl:sameAs": "https://schema.org/ItemList",
   "rdfs:seeAlso": [
     "urn:solid:OrderedCollection",
@@ -43,7 +43,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Schema.org's order-aware list type. Pair with `schema:itemListElement` (each item, optionally wrapped in `schema:ListItem` carrying `schema:position`). For ActivityStreams ordered collections, prefer `urn:solid:OrderedCollection`. Heavily used by SEO for top-N lists, breadcrumbs, FAQ pages.",
+  "notes": "Schema.org's list type (ordered or unordered via `schema:itemListOrder`). Pair with `schema:itemListElement` (each item, optionally wrapped in `schema:ListItem` carrying `schema:position`). For ActivityStreams ordered collections, prefer `urn:solid:OrderedCollection`. Heavily used by SEO for carousels, top-N lists and breadcrumbs.",
   "examples": [
     {
       "title": "Top-3 list",
@@ -71,6 +71,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment: lists may be ordered or unordered; removed incorrect FAQ-pages usage."
     }
   ],
   "see_also": {

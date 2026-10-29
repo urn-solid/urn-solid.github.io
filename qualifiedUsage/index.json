@@ -6,12 +6,13 @@
   "rdfs:comment": "Links an Activity to a `prov:Usage` instance that adds detail (which entity, when, in what role) to a plain `prov:used` link.",
   "owl:sameAs": "http://www.w3.org/ns/prov#qualifiedUsage",
   "rdfs:seeAlso": [
-    "urn:solid:Activity",
+    "http://www.w3.org/ns/prov#Activity",
     "urn:solid:used",
     "urn:solid:qualifiedGeneration",
     "urn:solid:qualifiedDerivation"
   ],
-  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:domain": "http://www.w3.org/ns/prov#Activity",
+  "rdfs:range": "urn:solid:Usage",
   "status": "stable",
   "added": "2026-04-19",
   "notes": "Use when the bare `prov:used` triple isn't enough — e.g. an Activity used the same Entity twice in different roles, or you need to record the time of use, or attach a `prov:Role` reified link. The Usage instance carries the extra context; the Activity points at it via `qualifiedUsage`.",
@@ -21,12 +22,12 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/activity/build-42",
-        "@type": "urn:solid:Activity",
+        "@type": "http://www.w3.org/ns/prov#Activity",
         "urn:solid:qualifiedUsage": {
           "@id": "https://example.org/usage/abc",
           "@type": "http://www.w3.org/ns/prov#Usage",
           "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/dataset/v3" },
-          "http://www.w3.org/ns/prov#hadRole": { "@id": "https://example.org/roles/input" }
+          "urn:solid:hadRole": { "@id": "https://example.org/roles/input" }
         }
       }
     }
@@ -43,6 +44,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain and example type now prov:Activity; added range urn:solid:Usage; example uses urn:solid:hadRole."
     }
   ],
   "see_also": {

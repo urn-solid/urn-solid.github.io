@@ -39,9 +39,13 @@
     "urn:solid:page"
   ],
   "rdfs:range": "urn:solid:Document",
+  "notToBeConfusedWith": [
+    "urn:solid:page",
+    "urn:solid:primaryTopic"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use on a Person (or other thing) to point at the document that primarily describes them. The canonical case is a WebID: `<#me> foaf:isPrimaryTopicOf <profile-card>`. Inverse-functional in FOAF — the document uniquely identifies the subject, and vice versa.",
+  "notes": "Use on a Person (or other thing) to point at the document that primarily describes them. The canonical case is a WebID: `<#me> foaf:isPrimaryTopicOf <profile-card>`. Inverse-functional in FOAF: a given document is the primary topic of at most one thing, so it identifies that thing. A thing may still be the primary topic of several documents.",
   "examples": [
     {
       "title": "Person pointing to their profile document",
@@ -65,6 +69,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected inverse-functional explanation (no 'vice versa'); added notToBeConfusedWith page/primaryTopic."
     }
   ],
   "see_also": {

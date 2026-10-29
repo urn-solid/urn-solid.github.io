@@ -3,13 +3,14 @@
   "@id": "urn:solid:actedOnBehalfOf",
   "@type": "rdf:Property",
   "rdfs:label": "actedOnBehalfOf",
-  "rdfs:comment": "An agent acted on behalf of another — delegation between agents.",
+  "rdfs:comment": "The subject Agent (the delegate) acted on behalf of the object Agent, which delegated authority and retains some responsibility for the outcome.",
   "owl:sameAs": "http://www.w3.org/ns/prov#actedOnBehalfOf",
   "rdfs:seeAlso": [
-    "http://www.w3.org/ns/prov#qualifiedDelegation"
+    "http://www.w3.org/ns/prov#qualifiedDelegation",
+    "urn:solid:Delegation"
   ],
-  "rdfs:domain": "urn:solid:Agent",
-  "rdfs:range": "urn:solid:Agent",
+  "rdfs:domain": "http://www.w3.org/ns/prov#Agent",
+  "rdfs:range": "http://www.w3.org/ns/prov#Agent",
   "status": "stable",
   "added": "2026-04-18",
   "notes": "PROV's delegation relation: agent A acted with the authority of agent B. Use for bots-acting-for-users, services-on-behalf-of-orgs, ghostwriters, automated curators driven by humans. For typed delegation with role and timing, qualify via `prov:qualifiedDelegation`.",
@@ -36,6 +37,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain/range now prov:Agent IRI; comment states delegate direction; seeAlso Delegation."
     }
   ],
   "see_also": {

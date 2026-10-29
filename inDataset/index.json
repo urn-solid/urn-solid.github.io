@@ -3,8 +3,7 @@
   "@id": "urn:solid:inDataset",
   "@type": "rdf:Property",
   "rdfs:label": "inDataset",
-  "rdfs:comment": "Links a DCAT Distribution to the Dataset it represents — inverse of `dcat:distribution`.",
-  "owl:sameAs": "http://www.w3.org/ns/dcat#inDataset",
+  "rdfs:comment": "Deprecated. Intended to link a DCAT Distribution to its Dataset as an inverse of `dcat:distribution`, but DCAT defines no such property.",
   "rdfs:seeAlso": [
     "urn:solid:Dataset",
     "urn:solid:Distribution",
@@ -13,23 +12,23 @@
   ],
   "rdfs:domain": "urn:solid:Distribution",
   "rdfs:range": "urn:solid:Dataset",
-  "status": "stable",
+  "status": "deprecated",
   "added": "2026-04-19",
-  "notes": "Convenient when the data flow starts at a Distribution (e.g. \"what dataset is this CSV part of?\"). Either direction is valid; use `dcat:distribution` (Dataset → Distribution) when the Dataset is the focal entity, `dcat:inDataset` (Distribution → Dataset) when the Distribution is.",
+  "notes": "Deprecated: `dcat:inDataset` does not exist in any version of DCAT (it is absent from https://www.w3.org/ns/dcat.ttl), and DCAT defines no inverse of `dcat:distribution`. Link a Dataset to its Distributions from the Dataset side with `http://www.w3.org/ns/dcat#distribution` (in JSON-LD, `{\"@reverse\": {\"http://www.w3.org/ns/dcat#distribution\": ...}}` if you must start from the Distribution).",
   "examples": [
     {
-      "title": "A Distribution pointing back at its Dataset",
+      "title": "Use dcat:distribution from the Dataset side instead",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://data.example.org/dataset/main/dist/csv",
-        "@type": "urn:solid:Distribution",
-        "urn:solid:inDataset": { "@id": "https://data.example.org/dataset/main" }
+        "@id": "https://data.example.org/dataset/main",
+        "@type": "urn:solid:Dataset",
+        "http://www.w3.org/ns/dcat#distribution": { "@id": "https://data.example.org/dataset/main/dist/csv" }
       }
     }
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/dcat#inDataset"
+      "http://www.w3.org/ns/dcat#distribution"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -39,6 +38,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "deprecated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Deprecated: dcat:inDataset does not exist in DCAT; removed owl:sameAs, pointed notes/example/provenance at dcat:distribution."
     }
   ],
   "see_also": {

@@ -1,0 +1,56 @@
+{
+  "@context": "https://urn-solid.com/context.jsonld",
+  "@id": "urn:solid:Arrive",
+  "@type": "rdfs:Class",
+  "rdfs:label": "Arrive",
+  "rdfs:comment": "An IntransitiveActivity indicating that the actor has arrived at a location (given by `location`); `origin` may say where they came from.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Arrive",
+  "rdfs:seeAlso": [
+    "urn:solid:IntransitiveActivity",
+    "urn:solid:Travel",
+    "urn:solid:location",
+    "urn:solid:origin"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Travel"
+  ],
+  "status": "stable",
+  "added": "2026-10-29",
+  "notes": "One of the three AS2 intransitive activity types (with Travel and Question) — it has no `object`. Use `Travel` for movement towards a `target`; use `Arrive` for having reached a `location`.",
+  "examples": [
+    {
+      "title": "Alice arrives at work",
+      "jsonld": {
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://example.org/activities/3",
+        "@type": "urn:solid:Arrive",
+        "urn:solid:actor": {
+          "@id": "https://alice.example.org/profile/card#me"
+        },
+        "urn:solid:location": {
+          "@id": "https://example.org/places/office"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#Arrive"
+    ],
+    "curatedBy": "urn-solid-review"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added during the registry-wide review: referenced by existing terms and examples but previously unregistered."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

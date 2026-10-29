@@ -35,15 +35,14 @@
   "rdfs:comment": "A related resource that supplants, displaces, or supersedes the described resource.",
   "owl:sameAs": "http://purl.org/dc/terms/isReplacedBy",
   "rdfs:seeAlso": [
-    "urn:solid:replaces",
-    "urn:solid:supersededBy"
+    "urn:solid:replaces"
   ],
   "notToBeConfusedWith": [
     "urn:solid:replaces"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Inverse of `urn:solid:replaces`. Use on the older resource to point at its successor — readers can follow the chain to the current version. The schema's `supersededBy` field on a urn-solid term file is the registry-internal equivalent.",
+  "notes": "Inverse of `urn:solid:replaces`. Use on the older resource to point at its successor — readers can follow the chain to the current version. Inside the registry, the term-file `supersededBy` field (schema/term.schema.json) is mapped to dcterms:isReplacedBy in context.jsonld.",
   "examples": [
     {
       "title": "v1 spec pointing at its successor",
@@ -51,7 +50,9 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/specs/v1",
         "@type": "urn:solid:Document",
-        "urn:solid:isReplacedBy": { "@id": "https://example.org/specs/v2" }
+        "urn:solid:isReplacedBy": {
+          "@id": "https://example.org/specs/v2"
+        }
       }
     }
   ],
@@ -67,6 +68,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Removed the non-existent supersededBy term ref from seeAlso; notes clarify the supersededBy schema field mapping."
     }
   ],
   "see_also": {

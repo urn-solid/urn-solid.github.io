@@ -6,22 +6,28 @@
   "rdfs:comment": "A PROV Derivation that represents a revised version of an entity — a substantive change without breaking identity continuity.",
   "owl:sameAs": "http://www.w3.org/ns/prov#Revision",
   "rdfs:seeAlso": [
-    "urn:solid:wasDerivedFrom",
-    "http://www.w3.org/ns/prov#Quotation",
-    "http://www.w3.org/ns/prov#PrimarySource"
+    "urn:solid:wasRevisionOf",
+    "urn:solid:Derivation",
+    "urn:solid:Quotation",
+    "urn:solid:PrimarySource"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Quotation",
+    "urn:solid:alternateOf",
+    "urn:solid:PrimarySource"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `prov:Derivation`. Use to type a derivation specifically as a revision — a v2 of a spec, a corrected dataset, an edited document. Distinct from `prov:Quotation` (excerpting) and `prov:PrimarySource` (original-source attribution).",
+  "notes": "Subclass of `urn:solid:Derivation`. Use to type a derivation specifically as a revision — a v2 of a spec, a corrected dataset, an edited document. The qualified node is linked from the newer entity via `urn:solid:qualifiedDerivation` (`prov:qualifiedRevision`) and its `prov:entity` is the earlier entity revised from; for the unqualified shortcut use `urn:solid:wasRevisionOf`. Distinct from `urn:solid:Quotation` (excerpting) and `urn:solid:PrimarySource` (first-hand origin).",
   "examples": [
     {
       "title": "Revised spec",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://example.org/specs/v2/derivation",
+        "@id": "https://example.org/derivations/spec-v2-from-v1",
         "@type": "urn:solid:Revision",
-        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/specs/v2" },
-        "http://www.w3.org/ns/prov#hadGeneration": { "@id": "https://example.org/builds/v2-publish" }
+        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/specs/v1" },
+        "urn:solid:hadActivity": { "@id": "https://example.org/builds/v2-publish" }
       }
     }
   ],
@@ -37,6 +43,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed example (prov:entity is the earlier version; hadActivity not hadGeneration); seeAlso/notToBeConfusedWith use urn:solid terms."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

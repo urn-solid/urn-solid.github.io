@@ -36,15 +36,16 @@
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Service",
   "rdfs:seeAlso": [
     "urn:solid:Application",
-    "http://www.w3.org/ns/prov#SoftwareAgent",
-    "https://schema.org/Service"
+    "http://www.w3.org/ns/prov#SoftwareAgent"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Application"
+    "urn:solid:Application",
+    "urn:solid:DataService",
+    "urn:solid:SoftwareAgent"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "AS actor type for non-interactive automated services (relays, search engines, archive bots) — distinct from `urn:solid:Application` which implies a user-facing client. Both subclass `as:Object` indirectly. The choice is descriptive, not enforced.",
+  "notes": "AS actor type for \"a service of any kind\" — typically non-interactive automated services (relays, search engines, archive bots); Mastodon also uses it for bot accounts. Distinct from `urn:solid:Application` (a software application, e.g. a client app). Both are direct subclasses of as:Object. The choice is descriptive, not enforced. Not schema:Service, which is a commercial offering rather than an actor. Not a sellable or offered service — for that use `https://schema.org/Service`.",
   "examples": [
     {
       "title": "An archive relay as a Service",
@@ -69,6 +70,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed 'subclass indirectly' (both are direct as:Object subclasses); dropped misleading schema:Service from seeAlso."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Disambiguated as:Service from schema:Service. Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

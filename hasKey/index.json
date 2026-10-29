@@ -6,7 +6,7 @@
   "rdfs:comment": "A cryptographic public key associated with the vCard's owner — for encryption or signature verification.",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasKey",
   "rdfs:seeAlso": [
-    "https://w3c-ccg.github.io/security-vocab/"
+    "https://w3id.org/security#"
   ],
   "rdfs:domain": "urn:solid:VCard",
   "status": "stable",
@@ -35,6 +35,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso points to the current Security Vocabulary (https://w3id.org/security#)."
     }
   ],
   "see_also": {

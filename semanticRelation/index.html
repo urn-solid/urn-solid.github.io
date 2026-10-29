@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:semanticRelation — urn-solid</title>
-<meta name="description" content="The SKOS superproperty for any conceptual relation between Concepts — `broader`, `narrower`, `related`.">
+<meta name="description" content="The SKOS superproperty of all links between Concepts: `broader`, `narrower`, `related`, their transitive variants, and the `mappingRelation` family (`exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch`).">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/semanticRelation/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:semanticRelation">
-<meta property="og:description" content="The SKOS superproperty for any conceptual relation between Concepts — `broader`, `narrower`, `related`.">
+<meta property="og:description" content="The SKOS superproperty of all links between Concepts: `broader`, `narrower`, `related`, their transitive variants, and the `mappingRelation` family (`exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch`).">
 <meta property="og:url" content="https://urn-solid.com/semanticRelation/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:semanticRelation">
-<meta name="twitter:description" content="The SKOS superproperty for any conceptual relation between Concepts — `broader`, `narrower`, `related`.">
+<meta name="twitter:description" content="The SKOS superproperty of all links between Concepts: `broader`, `narrower`, `related`, their transitive variants, and the `mappingRelation` family (`exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch`).">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,18 +32,19 @@
   "@id": "urn:solid:semanticRelation",
   "@type": "rdf:Property",
   "rdfs:label": "semanticRelation",
-  "rdfs:comment": "The SKOS superproperty for any conceptual relation between Concepts — `broader`, `narrower`, `related`.",
+  "rdfs:comment": "The SKOS superproperty of all links between Concepts: `broader`, `narrower`, `related`, their transitive variants, and the `mappingRelation` family (`exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch`).",
   "owl:sameAs": "http://www.w3.org/2004/02/skos/core#semanticRelation",
   "rdfs:seeAlso": [
     "urn:solid:broader",
     "urn:solid:narrower",
-    "urn:solid:related"
+    "urn:solid:related",
+    "urn:solid:mappingRelation"
   ],
   "rdfs:domain": "urn:solid:Concept",
   "rdfs:range": "urn:solid:Concept",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Rarely asserted directly — superproperty of `skos:broader`, `skos:narrower`, `skos:related`, and their transitive variants. Useful when reasoning generically over any conceptual link, or when you have a relation you can't classify more specifically.",
+  "notes": "Rarely asserted directly — superproperty of `skos:broader`, `skos:narrower`, `skos:related`, their transitive variants, and `skos:mappingRelation` with all its `*Match` subproperties. Useful when reasoning generically over any conceptual link, or when you have a relation you can't classify more specifically.",
   "examples": [
     {
       "title": "Generic conceptual link",
@@ -67,6 +68,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment/notes now include the mappingRelation family as subproperties; added mappingRelation to seeAlso."
     }
   ],
   "see_also": {

@@ -33,7 +33,6 @@
   "@type": "rdf:Property",
   "rdfs:label": "profileSubject",
   "rdfs:comment": "The subject (Person) that a profile document is about.",
-  "owl:sameAs": "http://www.w3.org/ns/solid/terms#profileSubject",
   "rdfs:seeAlso": [
     "urn:solid:primaryTopic",
     "urn:solid:isPrimaryTopicOf"
@@ -43,9 +42,10 @@
   "notToBeConfusedWith": [
     "urn:solid:primaryTopic"
   ],
-  "status": "stable",
+  "status": "deprecated",
   "added": "2026-04-18",
-  "notes": "Solid-specific name for the relation FOAF expresses as `foaf:primaryTopic`. Use on a profile document to point at the Person it describes. Most existing data uses `foaf:primaryTopic`; this is the modern Solid-namespaced equivalent.",
+  "supersededBy": "urn:solid:primaryTopic",
+  "notes": "Deprecated: `solid:profileSubject` does not exist in the Solid terms vocabulary (http://www.w3.org/ns/solid/terms), so this was never an upstream Solid term. Use `urn:solid:primaryTopic` (foaf:primaryTopic) on a profile document to point at the WebID it describes; that is what Solid profiles actually use (alongside `foaf:maker`).",
   "examples": [
     {
       "title": "Profile document with subject",
@@ -59,7 +59,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/solid/terms#profileSubject"
+      "http://www.w3.org/ns/solid/terms"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -69,6 +69,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "deprecated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Deprecated: solid:profileSubject does not exist upstream; removed owl:sameAs, supersededBy urn:solid:primaryTopic."
     }
   ],
   "see_also": {

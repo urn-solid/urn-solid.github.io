@@ -7,11 +7,12 @@
   "owl:sameAs": "http://www.w3.org/ns/prov#Plan",
   "rdfs:seeAlso": [
     "urn:solid:Entity",
-    "http://www.w3.org/ns/prov#hadPlan"
+    "urn:solid:hadPlan",
+    "urn:solid:Association"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "PROV subclass of `urn:solid:Entity`. A Plan is the design or recipe an Activity follows — distinct from the Activity itself (the execution). Linked to an Activity via `prov:hadPlan`, typically inside a `prov:Association`.",
+  "notes": "PROV subclass of `urn:solid:Entity`. A Plan is the design or recipe an Activity follows — distinct from the Activity itself (the execution). Attached via `urn:solid:hadPlan` on a `urn:solid:Association` (Activity --qualifiedAssociation--> Association --hadPlan--> Plan); there is no direct Activity→Plan property in PROV.",
   "examples": [
     {
       "title": "A build plan",
@@ -35,6 +36,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: hadPlan hangs off Association, not Activity; seeAlso uses urn:solid:hadPlan."
     }
   ],
   "see_also": {

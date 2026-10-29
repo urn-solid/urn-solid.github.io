@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Vevent — urn-solid</title>
-<meta name="description" content="An iCalendar event — a scheduled occurrence with a start and end time, defined in RFC 5545 and mapped to RDF by the W3C iCal vocabulary.">
+<meta name="description" content="An iCalendar (RFC 5545) event — a scheduled occurrence with a start (dtstart) and optionally an end (dtend) or duration, as mapped to RDF by the W3C RDF Calendar vocabulary.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Vevent/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Vevent">
-<meta property="og:description" content="An iCalendar event — a scheduled occurrence with a start and end time, defined in RFC 5545 and mapped to RDF by the W3C iCal vocabulary.">
+<meta property="og:description" content="An iCalendar (RFC 5545) event — a scheduled occurrence with a start (dtstart) and optionally an end (dtend) or duration, as mapped to RDF by the W3C RDF Calendar vocabulary.">
 <meta property="og:url" content="https://urn-solid.com/Vevent/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Vevent">
-<meta name="twitter:description" content="An iCalendar event — a scheduled occurrence with a start and end time, defined in RFC 5545 and mapped to RDF by the W3C iCal vocabulary.">
+<meta name="twitter:description" content="An iCalendar (RFC 5545) event — a scheduled occurrence with a start (dtstart) and optionally an end (dtend) or duration, as mapped to RDF by the W3C RDF Calendar vocabulary.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:Vevent",
   "@type": "rdfs:Class",
   "rdfs:label": "Vevent",
-  "rdfs:comment": "An iCalendar event — a scheduled occurrence with a start and end time, defined in RFC 5545 and mapped to RDF by the W3C iCal vocabulary.",
+  "rdfs:comment": "An iCalendar (RFC 5545) event — a scheduled occurrence with a start (dtstart) and optionally an end (dtend) or duration, as mapped to RDF by the W3C RDF Calendar vocabulary.",
   "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#Vevent",
   "rdfs:seeAlso": [
     "urn:solid:Event",
@@ -71,6 +71,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment: end time is optional (dtend or duration)."
     }
   ],
   "see_also": {

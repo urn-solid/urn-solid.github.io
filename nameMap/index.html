@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:nameMap — urn-solid</title>
-<meta name="description" content="Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings.">
+<meta name="description" content="Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings. A JSON-LD `@language`-map alias for `as:name`, not a separate RDF property.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/nameMap/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:nameMap">
-<meta property="og:description" content="Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings.">
+<meta property="og:description" content="Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings. A JSON-LD `@language`-map alias for `as:name`, not a separate RDF property.">
 <meta property="og:url" content="https://urn-solid.com/nameMap/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:nameMap">
-<meta name="twitter:description" content="Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings.">
+<meta name="twitter:description" content="Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings. A JSON-LD `@language`-map alias for `as:name`, not a separate RDF property.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,24 +32,31 @@
   "@id": "urn:solid:nameMap",
   "@type": "rdf:Property",
   "rdfs:label": "nameMap",
-  "rdfs:comment": "Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#nameMap",
+  "rdfs:comment": "Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings. A JSON-LD `@language`-map alias for `as:name`, not a separate RDF property.",
   "rdfs:seeAlso": [
-    "urn:solid:name",
+    "https://www.w3.org/ns/activitystreams#name",
     "urn:solid:contentMap",
     "urn:solid:summaryMap"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Provide alongside (or instead of) `as:name` when the Object has translations. Standard fediverse pattern for multilingual content. Clients SHOULD pick the best match for the user's locale; servers MAY mirror one entry into `as:name` as a fallback for non-aware consumers.",
+  "notes": "JSON-LD alias: in the AS2 context `nameMap` is `as:name` with `@container: @language`, so in RDF it is just language-tagged `as:name` literals; it has no IRI of its own. Note that `urn:solid:name` is foaf:name, not as:name. Provide alongside (or instead of) `as:name` when the Object has translations. Standard fediverse pattern for multilingual content. Clients SHOULD pick the best match for the user's locale; servers MAY mirror one entry into `as:name` as a fallback for non-aware consumers. The example carries an inline context term with `@container: @language` so the map actually expands. It carries no owl:sameAs of its own: the RDF property is `https://www.w3.org/ns/activitystreams#name`, which has no registry term (`urn:solid:name` is foaf:name); this term only names the JSON-LD alias.",
   "examples": [
     {
-      "title": "A Note with localised names",
+      "title": "An Article with localised names",
       "jsonld": {
-        "@context": "https://urn-solid.com/context.jsonld",
+        "@context": [
+          "https://urn-solid.com/context.jsonld",
+          {
+            "nameMap": {
+              "@id": "https://www.w3.org/ns/activitystreams#name",
+              "@container": "@language"
+            }
+          }
+        ],
         "@id": "https://example.org/articles/1",
         "@type": "urn:solid:Article",
-        "urn:solid:nameMap": {
+        "nameMap": {
           "en": "How it works",
           "fr": "Comment ça marche",
           "ja": "使い方"
@@ -59,7 +66,8 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#nameMap"
+      "https://www.w3.org/ns/activitystreams#name",
+      "https://www.w3.org/ns/activitystreams"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -69,6 +77,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "owl:sameAs -> as:name (nameMap is the AS2 context's @language-map alias); example gets inline @language context and corrected title; seeAlso foaf-based urn:solid:name -> as:name. owl:sameAs moved to seeAlso (one registry term per upstream IRI)."
     }
   ],
   "see_also": {

@@ -35,9 +35,11 @@
   "rdfs:comment": "A document containing the subject's private preferences.",
   "owl:sameAs": "http://www.w3.org/ns/pim/space#preferencesFile",
   "rdfs:seeAlso": [
-    "http://www.w3.org/ns/solid/terms#privateTypeIndex"
+    "urn:solid:privateTypeIndex",
+    "http://www.w3.org/ns/pim/space#ConfigurationFile",
+    "https://solid.github.io/webid-profile/"
   ],
-  "rdfs:domain": "urn:solid:Person",
+  "rdfs:domain": "urn:solid:Agent",
   "rdfs:range": "urn:solid:Document",
   "status": "stable",
   "added": "2026-04-18",
@@ -65,6 +67,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain -> Agent; seeAlso privateTypeIndex, pim:ConfigurationFile, WebID Profile spec."
     }
   ],
   "see_also": {

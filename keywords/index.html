@@ -36,15 +36,17 @@
   "owl:sameAs": "https://schema.org/keywords",
   "rdfs:seeAlso": [
     "urn:solid:tag",
-    "urn:solid:subject"
+    "urn:solid:subject",
+    "urn:solid:keyword"
   ],
   "notToBeConfusedWith": [
     "urn:solid:tag",
-    "urn:solid:subject"
+    "urn:solid:subject",
+    "urn:solid:keyword"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Schema.org accepts comma-separated text, an array of strings, or `schema:DefinedTerm` references. For ActivityStreams-style hashtag/mention attachments, use `urn:solid:tag`. For broader topical metadata, `urn:solid:subject` (dcterms).",
+  "notes": "Schema.org accepts comma-separated text, an array of strings, or `schema:DefinedTerm` references. For ActivityStreams-style hashtag/mention attachments, use `urn:solid:tag`. For broader topical metadata, `urn:solid:subject` (dcterms). For DCAT Datasets/Catalogs use `urn:solid:keyword` (dcat:keyword, one keyword per triple); schema:keywords may carry a single comma-separated string.",
   "examples": [
     {
       "title": "Article tagged with keywords",
@@ -68,6 +70,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added urn:solid:keyword (dcat:keyword) to seeAlso/notToBeConfusedWith and notes."
     }
   ],
   "see_also": {

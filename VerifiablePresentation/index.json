@@ -3,7 +3,7 @@
   "@id": "urn:solid:VerifiablePresentation",
   "@type": "rdfs:Class",
   "rdfs:label": "VerifiablePresentation",
-  "rdfs:comment": "A W3C Verifiable Presentation — a holder-signed bundle of one or more VerifiableCredentials, prepared for a specific verifier.",
+  "rdfs:comment": "A W3C Verifiable Presentation — a holder-assembled package of one or more VerifiableCredentials (or derived data), usually signed by the holder and bound to a verifier's challenge to prevent replay.",
   "owl:sameAs": "https://www.w3.org/2018/credentials#VerifiablePresentation",
   "rdfs:seeAlso": [
     "urn:solid:VerifiableCredential",
@@ -36,6 +36,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment corrected: VP proof and verifier binding are usual, not defining (optional in VC 2.0)."
     }
   ],
   "see_also": {

@@ -3,7 +3,7 @@
   "@id": "urn:solid:range",
   "@type": "rdf:Property",
   "rdfs:label": "range",
-  "rdfs:comment": "Declares the type of values an RDF property is meant to take — its object type.",
+  "rdfs:comment": "States that every value of a property is an instance of the given class or datatype — an inference rule, not a validation constraint.",
   "owl:sameAs": "http://www.w3.org/2000/01/rdf-schema#range",
   "rdfs:seeAlso": [
     "urn:solid:Property",
@@ -17,7 +17,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Object-side constraint. `foaf:knows` has range `foaf:Person`. May also point at an XSD datatype (`xsd:string`, `xsd:dateTime`) for literal-valued properties. Like `domain`, multiple range declarations mean intersection — the value must be an instance of all listed types.",
+  "notes": "Object-side inference (not validation — use SHACL to reject data). `foaf:knows` has range `foaf:Person`. May also point at an XSD datatype (`xsd:string`, `xsd:dateTime`) for literal-valued properties. Like `domain`, multiple range declarations mean intersection — the value is inferred to be an instance of all of them.",
   "examples": [
     {
       "title": "Property declaring its value type",
@@ -41,6 +41,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Reframed rdfs:range as an inference rule, not a validation constraint."
     }
   ],
   "see_also": {

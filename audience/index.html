@@ -40,7 +40,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Used to declare semantic targeting (e.g. \"this is for friends\", \"this is for the engineering team\") independently of `as:to`/`as:cc` (which are wire-level addressing). The value can be an Actor, Collection, or symbolic IRI like `as:Public`.",
+  "notes": "Used to declare semantic targeting (e.g. \"this is for friends\", \"this is for the engineering team\") independently of `as:to`/`as:cc` (which are wire-level addressing). The value can be an Actor, Collection, or symbolic IRI like `as:Public`. This is `as:audience`; it is not `dcterms:audience` (a dcterms AgentClass for whom a resource is intended), which has no registry term.",
   "examples": [
     {
       "title": "Note targeted at a group",
@@ -64,6 +64,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Disambiguated as:audience from dcterms:audience. Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -71,7 +77,10 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:to"
+  ]
 }
 
 </script>

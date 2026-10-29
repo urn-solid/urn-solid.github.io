@@ -9,9 +9,12 @@
     "https://schema.org/alternateName"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:title"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "For subtitles, abbreviations, working titles, translated titles. Repeat with language tags for translations. The primary title goes under `dcterms:title` (when title disambiguation is finalized) or `urn:solid:name`.",
+  "notes": "For subtitles, abbreviations, working titles, translated titles. Repeat with language tags for translations. The primary title goes under `urn:solid:title`.",
   "examples": [
     {
       "title": "Article with an alternative title",
@@ -19,8 +22,8 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/papers/42",
         "@type": "urn:solid:Document",
-        "urn:solid:name": "On the Origin of Species",
-        "urn:solid:alternative": "by Means of Natural Selection"
+        "urn:solid:title": "On the Origin of Species",
+        "urn:solid:alternative": "On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life"
       }
     }
   ],
@@ -36,6 +39,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Primary title now points to urn:solid:title; example uses title plus a real full alternative title; added notToBeConfusedWith title."
     }
   ],
   "see_also": {

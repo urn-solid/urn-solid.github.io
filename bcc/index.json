@@ -6,12 +6,13 @@
   "rdfs:comment": "Blind carbon-copy recipients of the object — recipients hidden from other receivers.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#bcc",
   "rdfs:seeAlso": [
-    "https://www.w3.org/ns/activitystreams#bto",
+    "urn:solid:bto",
     "urn:solid:cc",
     "urn:solid:to"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:cc"
+    "urn:solid:cc",
+    "urn:solid:bto"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -24,8 +25,12 @@
         "@id": "https://example.org/notes/quiet-mention",
         "@type": "urn:solid:Note",
         "urn:solid:content": "Heads-up.",
-        "urn:solid:to": [{ "@id": "https://example.org/alice#me" }],
-        "urn:solid:bcc": [{ "@id": "https://example.org/admin#me" }]
+        "urn:solid:to": [
+          { "@id": "https://example.org/alice#me" }
+        ],
+        "urn:solid:bcc": [
+          { "@id": "https://example.org/admin#me" }
+        ]
       }
     }
   ],
@@ -41,6 +46,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses registered urn:solid:bto."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

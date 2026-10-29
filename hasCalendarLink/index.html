@@ -35,10 +35,16 @@
   "rdfs:comment": "A URL of the subject's calendar — typically an iCalendar (.ics) feed or web calendar.",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasCalendarLink",
   "rdfs:seeAlso": [
-    "http://www.w3.org/2002/12/cal/ical#"
+    "http://www.w3.org/2002/12/cal/ical#",
+    "urn:solid:hasCalendarBusy",
+    "urn:solid:hasCalendarRequest"
   ],
   "rdfs:domain": "urn:solid:VCard",
   "rdfs:range": "urn:solid:Document",
+  "notToBeConfusedWith": [
+    "urn:solid:hasCalendarBusy",
+    "urn:solid:hasCalendarRequest"
+  ],
   "status": "stable",
   "added": "2026-04-19",
   "notes": "Use to point at a public calendar — an .ics URL, a CalDAV endpoint, or a calendar page. For subscriber-friendly links, use a `webcal:` URI; for plain HTTPS, the consumer must know how to subscribe. Distinct from `urn:solid:hasCalendarBusy` (free/busy availability only).",
@@ -65,6 +71,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added hasCalendarBusy and hasCalendarRequest to seeAlso and notToBeConfusedWith."
     }
   ],
   "see_also": {

@@ -9,7 +9,7 @@
     "urn:solid:startedAtTime",
     "urn:solid:endTime"
   ],
-  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:domain": "http://www.w3.org/ns/prov#Activity",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "notToBeConfusedWith": [
     "urn:solid:endTime"
@@ -23,7 +23,7 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/builds/2026-04-18-1",
-        "@type": "urn:solid:Activity",
+        "@type": "http://www.w3.org/ns/prov#Activity",
         "urn:solid:startedAtTime": "2026-04-18T18:00:00Z",
         "urn:solid:endedAtTime": "2026-04-18T18:03:42Z"
       }
@@ -41,6 +41,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain and example type now prov:Activity IRI (urn:solid:Activity is as:Activity)."
     }
   ],
   "see_also": {

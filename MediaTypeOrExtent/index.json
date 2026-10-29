@@ -3,7 +3,7 @@
   "@id": "urn:solid:MediaTypeOrExtent",
   "@type": "rdfs:Class",
   "rdfs:label": "MediaTypeOrExtent",
-  "rdfs:comment": "A union class for `dcterms:MediaType` and `dcterms:SizeOrDuration` — the range of `dcterms:format`.",
+  "rdfs:comment": "A media type or extent — superclass of dcterms:MediaType (incl. FileFormat, PhysicalMedium) and SizeOrDuration; the range of `urn:solid:format`.",
   "owl:sameAs": "http://purl.org/dc/terms/MediaTypeOrExtent",
   "rdfs:seeAlso": [
     "urn:solid:format",
@@ -12,14 +12,14 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Type of values for `dcterms:format`: either a media type (IANA registry, file format) or a size/duration. Rarely typed directly — usually you pick a more specific subclass (`FileFormat`, `MediaType`, `SizeOrDuration`).",
+  "notes": "Type of values for `urn:solid:format`: either a media type (IANA registry, file format) or a size/duration. Rarely typed directly — usually you pick a more specific subclass (`FileFormat`, `MediaType`, `SizeOrDuration`); the example shows a FileFormat value.",
   "examples": [
     {
-      "title": "A MediaTypeOrExtent value",
+      "title": "A FileFormat value (a MediaTypeOrExtent subclass)",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://www.iana.org/assignments/media-types/application/pdf",
-        "@type": "urn:solid:MediaTypeOrExtent",
+        "@type": "urn:solid:FileFormat",
         "urn:solid:name": "application/pdf"
       }
     }
@@ -36,6 +36,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment no longer calls it a union class; example typed with the FileFormat subclass."
     }
   ],
   "see_also": {

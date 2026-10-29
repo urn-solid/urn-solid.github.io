@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:oidcIssuer — urn-solid</title>
-<meta name="description" content="The OpenID Connect issuer that this WebID trusts to authenticate it.">
+<meta name="description" content="The OpenID Connect issuer (OP) a WebID trusts to issue ID tokens for it; Solid-OIDC resource servers check the token's iss against this value in the WebID profile.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/oidcIssuer/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:oidcIssuer">
-<meta property="og:description" content="The OpenID Connect issuer that this WebID trusts to authenticate it.">
+<meta property="og:description" content="The OpenID Connect issuer (OP) a WebID trusts to issue ID tokens for it; Solid-OIDC resource servers check the token's iss against this value in the WebID profile.">
 <meta property="og:url" content="https://urn-solid.com/oidcIssuer/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:oidcIssuer">
-<meta name="twitter:description" content="The OpenID Connect issuer that this WebID trusts to authenticate it.">
+<meta name="twitter:description" content="The OpenID Connect issuer (OP) a WebID trusts to issue ID tokens for it; Solid-OIDC resource servers check the token's iss against this value in the WebID profile.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,18 +32,19 @@
   "@id": "urn:solid:oidcIssuer",
   "@type": "rdf:Property",
   "rdfs:label": "oidcIssuer",
-  "rdfs:comment": "The OpenID Connect issuer that this WebID trusts to authenticate it.",
+  "rdfs:comment": "The OpenID Connect issuer (OP) a WebID trusts to issue ID tokens for it; Solid-OIDC resource servers check the token's iss against this value in the WebID profile.",
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#oidcIssuer",
   "rdfs:seeAlso": [
-    "urn:solid:openid"
+    "urn:solid:openid",
+    "https://solidproject.org/TR/oidc"
   ],
-  "rdfs:domain": "urn:solid:Person",
+  "rdfs:domain": "urn:solid:Agent",
   "notToBeConfusedWith": [
     "urn:solid:openid"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "The Solid OIDC trust anchor: the value is the issuer URL of the OpenID Provider whose tokens this WebID will accept. A WebID may list multiple `oidcIssuer` values for redundancy. Distinct from the older FOAF `urn:solid:openid` (a document-based pre-OIDC scheme).",
+  "notes": "The Solid-OIDC trust anchor, required by Solid-OIDC on any WebID (people, bots, services, organisations): the value is the issuer URL of the OpenID Provider whose tokens this WebID will accept. A WebID may list multiple `oidcIssuer` values for redundancy. Distinct from the older FOAF `urn:solid:openid` (an OpenID 1.x/2.0 identifier, unrelated to Solid-OIDC).",
   "examples": [
     {
       "title": "WebID with a Solid OIDC issuer",
@@ -67,6 +68,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain -> Agent; definition states iss verification; seeAlso Solid-OIDC spec; corrected foaf:openid description."
     }
   ],
   "see_also": {

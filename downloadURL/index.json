@@ -7,7 +7,8 @@
   "owl:sameAs": "http://www.w3.org/ns/dcat#downloadURL",
   "rdfs:seeAlso": [
     "urn:solid:accessURL",
-    "urn:solid:Distribution"
+    "urn:solid:Distribution",
+    "https://schema.org/downloadUrl"
   ],
   "rdfs:domain": "urn:solid:Distribution",
   "notToBeConfusedWith": [
@@ -15,7 +16,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Distinct from `urn:solid:accessURL`: `downloadURL` is a *direct* file link (returns the bytes), `accessURL` is any landing page or API entry point. A Distribution typically has one or the other.",
+  "notes": "Distinct from `urn:solid:accessURL`: `downloadURL` is a *direct* file link (returns the bytes), `accessURL` is any landing page or API entry point. A Distribution may carry both; DCAT-AP requires `accessURL`, so set `accessURL` as well (it may equal `downloadURL`).",
   "examples": [
     {
       "title": "Distribution with a download URL",
@@ -39,6 +40,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes no longer suggest accessURL and downloadURL are alternatives; both may be set."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added schema:downloadUrl to seeAlso."
     }
   ],
   "see_also": {

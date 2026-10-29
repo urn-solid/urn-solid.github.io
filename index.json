@@ -43,7 +43,7 @@
   },
   "urn:solid:AddressBook": {
     "label": "AddressBook",
-    "description": "A collection of contacts — a personal or shared address book.",
+    "description": "A Solid contacts address book — a container resource (SolidOS contacts extension to vCard, not IETF vCard) that indexes contact cards and groups.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/AddressBook/"
@@ -92,10 +92,17 @@
   },
   "urn:solid:Application": {
     "label": "Application",
-    "description": "An ActivityStreams actor representing a software application — a bot, service, or automated client.",
+    "description": "An ActivityStreams actor that is a software application — a client app or bot acting under its own identity.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Application/"
+  },
+  "urn:solid:Arrive": {
+    "label": "Arrive",
+    "description": "An IntransitiveActivity indicating that the actor has arrived at a location (given by `location`); `origin` may say where they came from.",
+    "type": "rdfs:Class",
+    "status": "stable",
+    "path": "/Arrive/"
   },
   "urn:solid:Article": {
     "label": "Article",
@@ -197,21 +204,21 @@
   },
   "urn:solid:Catalog": {
     "label": "Catalog",
-    "description": "A DCAT Catalog — a curated collection of metadata about Datasets and DataServices.",
+    "description": "A DCAT Catalog: a curated collection of metadata about Datasets, DataServices and other Catalogs (a Catalog is itself a dcat:Dataset).",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Catalog/"
   },
   "urn:solid:ChangeEvent": {
     "label": "ChangeEvent",
-    "description": "A reorganisation event in which one set of Organizations was transformed into another — a merger, split, rename, or restructuring.",
+    "description": "An event (a prov:Activity) such as a merger, split or complete restructuring, after which the resulting organization is distinct enough to need a new identity and URI.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/ChangeEvent/"
   },
   "urn:solid:ChatMessage": {
     "label": "ChatMessage",
-    "description": "A chat message — a single message exchanged in a chat conversation.",
+    "description": "A message exchanged between a sender and recipients. Maps to the general schema:Message (which also covers email); use urn:solid:EmailMessage for email specifically.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/ChatMessage/"
@@ -232,7 +239,7 @@
   },
   "urn:solid:Collection": {
     "label": "Collection",
-    "description": "An unordered collection of objects.",
+    "description": "An ActivityStreams set of Object or Link instances, enumerated via as:items or paged via as:first/as:next. Members carry no guaranteed order — use the OrderedCollection subclass when order matters.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Collection/"
@@ -330,7 +337,7 @@
   },
   "urn:solid:DataService": {
     "label": "DataService",
-    "description": "A DCAT DataService — a service that gives access to one or more Datasets via an API or query interface.",
+    "description": "A DCAT DataService: a collection of operations, accessible via an endpoint, that provides access to one or more Datasets or data-processing functions (e.g. a SPARQL endpoint or REST API).",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/DataService/"
@@ -372,7 +379,7 @@
   },
   "urn:solid:Derivation": {
     "label": "Derivation",
-    "description": "A typed PROV derivation event — a relation between a derived entity and the entity it was derived from.",
+    "description": "A qualified PROV derivation — the node that qualifies a wasDerivedFrom link between a derived entity and its source (prov:entity) with the activity, usage, generation or role involved.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Derivation/"
@@ -386,7 +393,7 @@
   },
   "urn:solid:DirectContainer": {
     "label": "DirectContainer",
-    "description": "An LDP Container that adds membership triples on a separate `membershipResource` rather than carrying them itself.",
+    "description": "An LDP Container that, on each new member, adds a membership triple linking a configurable `ldp:membershipResource` to the new resource via `ldp:hasMemberRelation` (or the inverse via `ldp:isMemberOfRelation`).",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/DirectContainer/"
@@ -414,9 +421,9 @@
   },
   "urn:solid:Email": {
     "label": "Email",
-    "description": "An email address — the value class for `urn:solid:hasEmail` when the email is described as a typed resource rather than a bare `mailto:` IRI.",
+    "description": "Deprecated vCard Email class (owl:deprecated in the W3C vCard ontology) — formerly the type of an email-address node.",
     "type": "rdfs:Class",
-    "status": "stable",
+    "status": "deprecated",
     "path": "/Email/"
   },
   "urn:solid:EmailMessage": {
@@ -435,7 +442,7 @@
   },
   "urn:solid:Entity": {
     "label": "Entity",
-    "description": "Anything in PROV that has provenance — a thing whose existence and history can be tracked.",
+    "description": "A physical, digital, conceptual or other kind of thing with some fixed aspects, whose provenance (generation, derivation, attribution) can be described — a document, dataset, software release or physical object.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Entity/"
@@ -470,7 +477,7 @@
   },
   "urn:solid:Follow": {
     "label": "Follow",
-    "description": "An indication that the actor wants to follow the object — typically another Actor.",
+    "description": "An indication that the actor wants to follow the object — typically another actor (Person, Application, Group, Organization or Service).",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Follow/"
@@ -568,14 +575,14 @@
   },
   "urn:solid:IntransitiveActivity": {
     "label": "IntransitiveActivity",
-    "description": "An ActivityStreams Activity that has no direct object — the actor performs the verb without acting upon a specific thing (Travel, Move, Arrive).",
+    "description": "An ActivityStreams Activity that has no as:object — the actor performs the verb without acting on a specific thing. AS2 subclasses: Arrive, Travel, Question.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/IntransitiveActivity/"
   },
   "urn:solid:Invalidation": {
     "label": "Invalidation",
-    "description": "A qualified PROV invalidation event — the moment an Entity ceased to exist.",
+    "description": "A qualified PROV invalidation — the start of the destruction, cessation, or expiry of an Entity by an Activity, after which the Entity is no longer available for use.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Invalidation/"
@@ -589,7 +596,7 @@
   },
   "urn:solid:ItemList": {
     "label": "ItemList",
-    "description": "An ordered list of items — schema.org's lightweight ordered collection for SEO-rich markup.",
+    "description": "A list of items, ordered or unordered (see schema:itemListOrder), given via schema:itemListElement and optionally wrapped in schema:ListItem with schema:position — schema.org's list type for carousels, top-N lists and breadcrumbs.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/ItemList/"
@@ -652,21 +659,21 @@
   },
   "urn:solid:Logo": {
     "label": "Logo",
-    "description": "A vCard Logo resource — the logo image associated with a vCard (typically for an Organization).",
+    "description": "Deprecated. Intended as a vCard Logo class, but the W3C vCard ontology defines no Logo class — only the hasLogo property.",
     "type": "rdfs:Class",
-    "status": "stable",
+    "status": "deprecated",
     "path": "/Logo/"
   },
   "urn:solid:MediaTypeOrExtent": {
     "label": "MediaTypeOrExtent",
-    "description": "A union class for `dcterms:MediaType` and `dcterms:SizeOrDuration` — the range of `dcterms:format`.",
+    "description": "A media type or extent — superclass of dcterms:MediaType (incl. FileFormat, PhysicalMedium) and SizeOrDuration; the range of `urn:solid:format`.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/MediaTypeOrExtent/"
   },
   "urn:solid:MemberSubject": {
     "label": "MemberSubject",
-    "description": "An LDP marker class for the special predicate value used by IndirectContainers when membership is computed from the inserted resource itself.",
+    "description": "An LDP constant used as the value of `ldp:insertedContentRelation`, meaning the member in each membership triple is the newly created resource itself — the default behaviour for all LDP containers.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/MemberSubject/"
@@ -680,7 +687,7 @@
   },
   "urn:solid:Mention": {
     "label": "Mention",
-    "description": "An ActivityStreams Link representing a mention of an Actor — typically authored as `@user@host` and attached to an Object so the mentioned party is notified.",
+    "description": "An ActivityStreams Link representing a mention of an actor (Person, Application, Group, Organization or Service) — typically authored as `@user@host` and attached to an Object as a tag.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Mention/"
@@ -729,14 +736,14 @@
   },
   "urn:solid:Notification": {
     "label": "Notification",
-    "description": "A Linked Data Notification — a message POSTed to an inbox to inform the receiver about something.",
+    "description": "A notification resource — typically an RDF payload delivered to an LDN inbox (ldp:inbox). Optional type; LDN itself does not require notifications to be typed.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Notification/"
   },
   "urn:solid:Object": {
     "label": "Object",
-    "description": "The base class for all ActivityStreams objects — anything that can be the subject or target of an Activity.",
+    "description": "The base ActivityStreams class for any described thing (Notes, Images, actors, Activities, Collections…). Disjoint from as:Link, which describes a reference to a resource rather than the resource itself.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Object/"
@@ -799,23 +806,23 @@
   },
   "urn:solid:Person": {
     "label": "Person",
-    "description": "A human being.",
+    "description": "A person — a human being, alive or dead, real or imaginary.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Person/"
   },
   "urn:solid:PersonalProfileDocument": {
     "label": "PersonalProfileDocument",
-    "description": "A document that describes a person — typically a FOAF or WebID profile.",
+    "description": "An RDF document that describes its own author — its maker is also its primaryTopic; the classic FOAF / WebID profile document.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/PersonalProfileDocument/"
   },
   "urn:solid:Photo": {
     "label": "Photo",
-    "description": "A vCard Photo resource — a photographic image associated with a vCard.",
+    "description": "Deprecated. Intended as a vCard Photo class, but the W3C vCard ontology defines no Photo class — only the hasPhoto property.",
     "type": "rdfs:Class",
-    "status": "stable",
+    "status": "deprecated",
     "path": "/Photo/"
   },
   "urn:solid:PhysicalMedium": {
@@ -841,7 +848,7 @@
   },
   "urn:solid:Policy": {
     "label": "Policy",
-    "description": "A statement of policy applicable to the resource — terms of use, retention rules, access guidelines.",
+    "description": "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters — e.g. a privacy, retention or collection-development policy.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Policy/"
@@ -862,14 +869,14 @@
   },
   "urn:solid:PrimarySource": {
     "label": "PrimarySource",
-    "description": "A qualified PROV derivation typing the relation as a primary-source attribution — first-hand origin.",
+    "description": "A qualified PROV Derivation stating that the source entity is a primary source for the derived one — produced by an agent with direct, first-hand experience of the topic (eyewitness account, raw measurement, original record).",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/PrimarySource/"
   },
   "urn:solid:PrivateDocument": {
     "label": "Private document",
-    "description": "A document registered in the user's private TypeIndex — discoverable only by the pod owner.",
+    "description": "A document registered in the user's private TypeIndex — intended to be discoverable only by the user and the parties/apps they authorise.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/PrivateDocument/"
@@ -883,7 +890,7 @@
   },
   "urn:solid:Profile": {
     "label": "Profile",
-    "description": "An ActivityStreams Object that describes another Object — typically supplemental information about an Actor (a richer biography, alternate display data) layered on top of the actor's primary record.",
+    "description": "An ActivityStreams Object that describes another Object — typically supplemental information about an actor (Person, Application, Group, Organization or Service) (a richer biography, alternate display data) layered on top of the actor's primary record.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Profile/"
@@ -904,14 +911,14 @@
   },
   "urn:solid:ProvenanceStatement": {
     "label": "ProvenanceStatement",
-    "description": "A statement about the provenance of a resource — its origin, custody history, transformations.",
+    "description": "A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation — the value type of `urn:solid:provenance`.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/ProvenanceStatement/"
   },
   "urn:solid:Public": {
     "label": "Public",
-    "description": "The ActivityPub special-purpose IRI denoting the public audience — addressing an Activity to it makes the Activity visible to anyone, anywhere on the network.",
+    "description": "The special ActivityPub addressee IRI https://www.w3.org/ns/activitystreams#Public — an implicit Collection instance meaning \"everyone\", not a class. Put it in as:to / as:cc to make an object publicly visible; never use it as an @type.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Public/"
@@ -932,7 +939,7 @@
   },
   "urn:solid:Quotation": {
     "label": "Quotation",
-    "description": "A PROV Derivation that represents a quoted excerpt from another entity, with attribution.",
+    "description": "A qualified PROV Derivation in which the derived entity repeats (some or all of) the source entity's content, e.g. an excerpt or citation.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Quotation/"
@@ -974,7 +981,7 @@
   },
   "urn:solid:Relationship": {
     "label": "Relationship",
-    "description": "An ActivityStreams Object representing a typed relationship between two other Objects — typically two Actors connected by a relationship type (friend, colleague, follower).",
+    "description": "An ActivityStreams Object representing a typed relationship between two other Objects — typically two actors (Person, Application, Group, Organization or Service) connected by a relationship type (friend, colleague, follower).",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Relationship/"
@@ -1086,9 +1093,9 @@
   },
   "urn:solid:Tel": {
     "label": "Tel",
-    "description": "A vCard Tel resource — a structured telephone-number entry with type tags and value.",
+    "description": "Deprecated vCard Tel class (owl:deprecated in the W3C vCard ontology) — formerly the type of a structured telephone-number node.",
     "type": "rdfs:Class",
-    "status": "stable",
+    "status": "deprecated",
     "path": "/Tel/"
   },
   "urn:solid:TentativeAccept": {
@@ -1107,7 +1114,7 @@
   },
   "urn:solid:Thing": {
     "label": "Thing",
-    "description": "The OWL top class — every other class is a subclass of `owl:Thing`. Schema.org also uses a class called `Thing` as its root; both are aligned in this term.",
+    "description": "The OWL universal class — the class of all individuals; every OWL class is a subclass of it. Not the same as schema.org's `Thing`, which is a concrete root class with its own properties.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Thing/"
@@ -1121,7 +1128,7 @@
   },
   "urn:solid:Tracker": {
     "label": "Tracker",
-    "description": "A container for tracking work items — typically a list of iCalendar Vtodos. The list-level counterpart to single-task Vtodo.",
+    "description": "A workflow (wf:) tracker — a set of issues (wf:Task subclasses, or in some apps ical:Vtodo items) plus the constraints on how they move between states; the list-level counterpart to a single task.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Tracker/"
@@ -1198,14 +1205,14 @@
   },
   "urn:solid:VerifiablePresentation": {
     "label": "VerifiablePresentation",
-    "description": "A W3C Verifiable Presentation — a holder-signed bundle of one or more VerifiableCredentials, prepared for a specific verifier.",
+    "description": "A W3C Verifiable Presentation — a holder-assembled package of one or more VerifiableCredentials (or derived data), usually signed by the holder and bound to a verifier's challenge to prevent replay.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/VerifiablePresentation/"
   },
   "urn:solid:Vevent": {
     "label": "Vevent",
-    "description": "An iCalendar event — a scheduled occurrence with a start and end time, defined in RFC 5545 and mapped to RDF by the W3C iCal vocabulary.",
+    "description": "An iCalendar (RFC 5545) event — a scheduled occurrence with a start (dtstart) and optionally an end (dtend) or duration, as mapped to RDF by the W3C RDF Calendar vocabulary.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Vevent/"
@@ -1247,7 +1254,7 @@
   },
   "urn:solid:Wallet": {
     "label": "Wallet",
-    "description": "A part of a Solid pod that holds credentials and related items — verifiable credentials, keys, attestations.",
+    "description": "A part of a Solid pod that holds credentials and related items (verifiable credentials, identity documents, keys, tickets); names the storage only — presentation and signing are the job of wallet applications.",
     "type": "rdfs:Class",
     "status": "stable",
     "path": "/Wallet/"
@@ -1345,10 +1352,17 @@
   },
   "urn:solid:actedOnBehalfOf": {
     "label": "actedOnBehalfOf",
-    "description": "An agent acted on behalf of another — delegation between agents.",
+    "description": "The subject Agent (the delegate) acted on behalf of the object Agent, which delegated authority and retains some responsibility for the outcome.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/actedOnBehalfOf/"
+  },
+  "urn:solid:actor": {
+    "label": "actor",
+    "description": "The agent that performed an Activity — the one who liked, followed, created, or sent it.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/actor/"
   },
   "urn:solid:additional-name": {
     "label": "additional-name",
@@ -1370,6 +1384,13 @@
     "type": "rdf:Property",
     "status": "stable",
     "path": "/age/"
+  },
+  "urn:solid:agent": {
+    "label": "agent",
+    "description": "In a Web Access Control Authorization, a specific agent (by WebID) that is granted the listed access modes.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/agent/"
   },
   "urn:solid:agentClass": {
     "label": "agentClass",
@@ -1394,7 +1415,7 @@
   },
   "urn:solid:alsoKnownAs": {
     "label": "alsoKnownAs",
-    "description": "An alternate identifier for an ActivityStreams Object — typically a previous identity an Actor used before migrating servers, kept as a back-reference so old followers can find them.",
+    "description": "An alternate identifier for an ActivityStreams Object — in account migration, a previous identity of an actor (Person, Application, Group, Organization or Service), listed by the new account to show it consents to the move.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/alsoKnownAs/"
@@ -1429,14 +1450,14 @@
   },
   "urn:solid:alumniOf": {
     "label": "alumniOf",
-    "description": "An organization the person previously attended or worked for.",
+    "description": "An organization the person is an alumnus/alumna of — typically a school or university they attended; loosely also a former employer.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/alumniOf/"
   },
   "urn:solid:anniversary": {
     "label": "anniversary",
-    "description": "An anniversary date associated with the subject — typically a wedding anniversary or other recurring date.",
+    "description": "The date of marriage, or equivalent, of the subject (RFC 6350 ANNIVERSARY).",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/anniversary/"
@@ -1541,7 +1562,7 @@
   },
   "urn:solid:bday": {
     "label": "bday",
-    "description": "The full date of birth of the subject (year-month-day).",
+    "description": "The birth date of the subject — normally a full date (1990-03-14); RFC 6350 also permits year-only or month-day-only values.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/bday/"
@@ -1597,7 +1618,7 @@
   },
   "urn:solid:categories": {
     "label": "categories",
-    "description": "iCalendar tags or categories for a Vevent/Vtodo — comma-separated keywords classifying the calendar item (\"work\", \"personal\", \"travel\").",
+    "description": "iCalendar categories for a Vevent/Vtodo/Vjournal — free-text keywords classifying the item (\"work\", \"travel\"); in RDF give one value per keyword rather than a comma-joined string.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/categories/"
@@ -1660,7 +1681,7 @@
   },
   "urn:solid:contains": {
     "label": "contains",
-    "description": "A resource contained by the LDP Container — i.e., a member created via HTTP POST to the container.",
+    "description": "Links an LDP container to a resource it contains (server-managed containment triple). In Solid, containment follows the slash-delimited URI hierarchy, whether the child was created by POST, PUT or PATCH.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/contains/"
@@ -1674,7 +1695,7 @@
   },
   "urn:solid:contentMap": {
     "label": "contentMap",
-    "description": "Language-tagged variants of an ActivityStreams Object's `content` — keys are BCP 47 language tags, values are the localised content (often HTML).",
+    "description": "The language-map JSON form of ActivityStreams `content` — keys are BCP 47 language tags, values are the localised content (often HTML). Not a distinct RDF property: it expands to `as:content` with language-tagged literals.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/contentMap/"
@@ -1695,7 +1716,7 @@
   },
   "urn:solid:controller": {
     "label": "controller",
-    "description": "The Actor authorised to make changes to a DID Document or verification method — the entity holding the private key behind the public material.",
+    "description": "The entity (identified by a DID or URL) authorised to make changes to a DID document, or the entity a verification method belongs to — not necessarily whoever holds a given private key.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/controller/"
@@ -1800,7 +1821,7 @@
   },
   "urn:solid:default": {
     "label": "default",
-    "description": "Marks an Authorization as the default access policy inherited by descendants of a Container.",
+    "description": "The container whose descendant resources (lacking their own ACL) inherit this Authorization; the WAC inheritance mechanism.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/default/"
@@ -1856,7 +1877,7 @@
   },
   "urn:solid:domain": {
     "label": "domain",
-    "description": "Declares which class an RDF property is meant to be applied to — its subject type.",
+    "description": "States that any resource used as the subject of a property is an instance of the given class — an inference rule, not a validation constraint.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/domain/"
@@ -1877,7 +1898,7 @@
   },
   "urn:solid:dtstart": {
     "label": "dtstart",
-    "description": "The start date-time of an iCalendar Vevent or Vtodo — when the event begins or when the task becomes actionable.",
+    "description": "The start date-time of an iCalendar Vevent, Vtodo or Vjournal — when the event begins, when the task becomes actionable, or the date a journal entry refers to.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/dtstart/"
@@ -1919,7 +1940,7 @@
   },
   "urn:solid:endTime": {
     "label": "endTime",
-    "description": "The date and time the object ends.",
+    "description": "The actual or expected date-time at which the object (an event, activity, or other time-bounded thing) ends.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/endTime/"
@@ -1947,7 +1968,7 @@
   },
   "urn:solid:endpoints": {
     "label": "endpoints",
-    "description": "Container for additional service endpoints exposed by an ActivityPub Actor — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.",
+    "description": "Container for additional service endpoints exposed by an ActivityPub actor (Person, Application, Group, Organization or Service) — most importantly `sharedInbox`, but also `proxyUrl`, OAuth endpoints, and others.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/endpoints/"
@@ -2033,19 +2054,19 @@
     "label": "follower",
     "description": "An agent that follows the subject — receiving updates from them.",
     "type": "rdf:Property",
-    "status": "stable",
+    "status": "deprecated",
     "path": "/follower/"
   },
   "urn:solid:followers": {
     "label": "followers",
-    "description": "The Collection of Actors who follow an ActivityPub Actor — used both for delivery (servers fan Activities out to followers) and for display.",
+    "description": "The Collection of actors who follow an ActivityPub actor (Person, Application, Group, Organization or Service) — used both for delivery (servers fan Activities out to followers) and for display.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/followers/"
   },
   "urn:solid:following": {
     "label": "following",
-    "description": "The Collection of Actors that an ActivityPub Actor follows — the source side of the social graph.",
+    "description": "The Collection of actors that an ActivityPub actor (Person, Application, Group, Organization or Service) follows — the source side of the social graph.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/following/"
@@ -2115,14 +2136,14 @@
   },
   "urn:solid:hadActivity": {
     "label": "hadActivity",
-    "description": "An activity that contributed to a qualified PROV relation — typically attached to a qualified usage, generation, or derivation.",
+    "description": "The optional Activity that mediated a qualified PROV influence — used on prov:Derivation (the activity that did the deriving), prov:Delegation (the activity the delegation was for), prov:Start and prov:End.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hadActivity/"
   },
   "urn:solid:hadGeneration": {
     "label": "hadGeneration",
-    "description": "Links a use of an Entity to the qualified Generation event in which that Entity was created — letting consumers reason about which version was used.",
+    "description": "On a qualified prov:Derivation, links to the prov:Generation event in which the derived (output) entity was produced by the mediating activity.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hadGeneration/"
@@ -2241,7 +2262,7 @@
   },
   "urn:solid:hasLanguage": {
     "label": "hasLanguage",
-    "description": "A language the subject communicates in — typically a BCP 47 language tag.",
+    "description": "A language the subject communicates in — a language IRI or a node carrying a BCP 47 tag.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasLanguage/"
@@ -2318,7 +2339,7 @@
   },
   "urn:solid:hasSubOrganization": {
     "label": "hasSubOrganization",
-    "description": "An OrganizationalUnit (department, team, division) that is part of the parent Organization.",
+    "description": "A sub-organization of this Organization — a subsidiary, department or other organization it contains or controls; may itself be a FormalOrganization. For internal units without legal status, use the narrower hasUnit.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasSubOrganization/"
@@ -2332,14 +2353,14 @@
   },
   "urn:solid:hasTopConcept": {
     "label": "hasTopConcept",
-    "description": "A top-level (root) Concept of the SKOS ConceptScheme — has no broader concept within the scheme.",
+    "description": "A top-level (entry-point) Concept of a SKOS ConceptScheme, by convention one with no broader concept in that scheme. Inverse of topConceptOf.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasTopConcept/"
   },
   "urn:solid:hasTopic": {
     "label": "hasTopic",
-    "description": "A topic or tag — used by Bookmarks (and other resources) for free-form classification.",
+    "description": "The Topic (folder/category node, a bookmark:Topic) under which a Bookmark is filed; topics nest via bookmark:subTopicOf.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasTopic/"
@@ -2367,28 +2388,28 @@
   },
   "urn:solid:hasValue": {
     "label": "hasValue",
-    "description": "On an OWL Restriction, asserts that the constrained property must have one specific value — the most precise form of class definition.",
+    "description": "On an OWL Restriction, requires that the constrained property has a specific individual or literal among its values (other values are still allowed) — equivalent to `someValuesFrom` a one-element class.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasValue/"
   },
   "urn:solid:hasVersion": {
     "label": "hasVersion",
-    "description": "A related resource that is a version, edition, or adaptation of the described resource.",
+    "description": "A related resource that is a version, edition, or adaptation of the described resource — implying substantive changes in content rather than just a different format.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/hasVersion/"
   },
   "urn:solid:headline": {
     "label": "headline",
-    "description": "The headline of the article — a short, attention-grabbing title line.",
+    "description": "The headline of a creative work — a short title line, typically for an article, post, or web page.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/headline/"
   },
   "urn:solid:height": {
     "label": "height",
-    "description": "The height in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.",
+    "description": "On an ActivityStreams Link, a hint for the rendering height, in device-independent (CSS) pixels, of the linked resource. Widely also used on Image, Video and Document attachments in ActivityPub.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/height/"
@@ -2430,7 +2451,7 @@
   },
   "urn:solid:homepage": {
     "label": "homepage",
-    "description": "A homepage for the subject — a top-level page about the agent.",
+    "description": "A homepage for some thing — the main web page about a person, organization, project or other resource. Inverse-functional: a homepage identifies at most one thing.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/homepage/"
@@ -2493,9 +2514,9 @@
   },
   "urn:solid:inDataset": {
     "label": "inDataset",
-    "description": "Links a DCAT Distribution to the Dataset it represents — inverse of `dcat:distribution`.",
+    "description": "Deprecated. Intended to link a DCAT Distribution to its Dataset as an inverse of `dcat:distribution`, but DCAT defines no such property.",
     "type": "rdf:Property",
-    "status": "stable",
+    "status": "deprecated",
     "path": "/inDataset/"
   },
   "urn:solid:inLanguage": {
@@ -2528,7 +2549,7 @@
   },
   "urn:solid:insertedContentRelation": {
     "label": "insertedContentRelation",
-    "description": "On an IndirectContainer, the predicate the server uses to look up the actual member from the POSTed content.",
+    "description": "On an LDP container, the predicate the server uses to find the actual member inside the POSTed content; the default `ldp:MemberSubject` means the new resource itself is the member.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/insertedContentRelation/"
@@ -2549,7 +2570,7 @@
   },
   "urn:solid:instructionalMethod": {
     "label": "instructionalMethod",
-    "description": "A process used to engender knowledge, attitudes, or skills using the resource — pedagogy.",
+    "description": "A process used to engender knowledge, attitudes, and skills that the resource is designed to support — e.g. lecture, problem-based learning, workshop.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/instructionalMethod/"
@@ -2605,7 +2626,7 @@
   },
   "urn:solid:isFormatOf": {
     "label": "isFormatOf",
-    "description": "A related resource that is the same intellectual content of which the described resource is a different-format rendition.",
+    "description": "A pre-existing related resource that is substantially the same as the described resource, but in another format.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/isFormatOf/"
@@ -2654,7 +2675,7 @@
   },
   "urn:solid:isVersionOf": {
     "label": "isVersionOf",
-    "description": "A related resource of which the described resource is a version, edition, or adaptation.",
+    "description": "A related resource of which the described resource is a version, edition, or adaptation — implying substantive content change rather than a format difference.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/isVersionOf/"
@@ -2696,7 +2717,7 @@
   },
   "urn:solid:keyword": {
     "label": "keyword",
-    "description": "A keyword or tag describing a DCAT Dataset or Catalog — repeated for multiple keywords.",
+    "description": "A free-text keyword or tag describing a DCAT catalogued resource (Dataset, DataService, or Catalog); repeat for multiple keywords.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/keyword/"
@@ -2724,7 +2745,7 @@
   },
   "urn:solid:knowsLanguage": {
     "label": "knowsLanguage",
-    "description": "A language the person speaks, writes, or otherwise communicates in.",
+    "description": "A language the agent (person or organization) speaks, writes, or otherwise communicates in.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/knowsLanguage/"
@@ -2738,7 +2759,7 @@
   },
   "urn:solid:landingPage": {
     "label": "landingPage",
-    "description": "A web page that gives access to a DCAT Dataset, its Distributions, and additional information.",
+    "description": "A web page that gives access to a DCAT Catalog, Dataset, or DataService, its distributions, and/or additional information.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/landingPage/"
@@ -2752,7 +2773,7 @@
   },
   "urn:solid:last": {
     "label": "last",
-    "description": "The final page of a paginated ActivityStreams Collection — the entry point for clients that want to start at the end (oldest activities, most recent post for chronologically reversed orderings).",
+    "description": "The final page in a paged ActivityStreams Collection's ordering — the end of the first→next chain. In reverse-chronological ActivityPub collections this is the page with the oldest items.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/last/"
@@ -2780,7 +2801,7 @@
   },
   "urn:solid:liked": {
     "label": "liked",
-    "description": "The Collection of Objects an ActivityPub Actor has liked — the Actor's history of `Like` activities, presented as a queryable list.",
+    "description": "The Collection of Objects that an actor (Person, Application, Group, Organization or Service) has liked in ActivityPub — the actor's history of `Like` activities, presented as a queryable list.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/liked/"
@@ -2801,14 +2822,14 @@
   },
   "urn:solid:loginEndpoint": {
     "label": "loginEndpoint",
-    "description": "The login endpoint URL for a Solid OIDC provider.",
+    "description": "The URL at which a user can log in to a given Solid server (legacy server metadata, predates Solid-OIDC).",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/loginEndpoint/"
   },
   "urn:solid:logoutEndpoint": {
     "label": "logoutEndpoint",
-    "description": "The logout endpoint URL for a Solid OIDC provider.",
+    "description": "The URL at which a user can log out of a given Solid server (legacy server metadata, predates Solid-OIDC; OIDC providers expose end_session_endpoint instead).",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/logoutEndpoint/"
@@ -2864,14 +2885,14 @@
   },
   "urn:solid:mediaType": {
     "label": "mediaType",
-    "description": "The MIME media type of the object — `image/png`, `text/html`, etc.",
+    "description": "The IANA MIME media type (e.g. `text/html`, `image/png`): on an Object, the type of its `content` value; on a Link, the type of the resource at `href`.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/mediaType/"
   },
   "urn:solid:mediator": {
     "label": "mediator",
-    "description": "An intermediary that mediates access to or use of the resource — typically for educational or curated content.",
+    "description": "A class of agents that mediates access to the resource on behalf of its intended audience — e.g. teachers, parents, librarians, care-givers.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/mediator/"
@@ -2899,7 +2920,7 @@
   },
   "urn:solid:memberOf": {
     "label": "memberOf",
-    "description": "An Organization (or Group) the Agent is a member of — the inverse of `member`.",
+    "description": "An Organization the Agent is a member of.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/memberOf/"
@@ -2934,21 +2955,21 @@
   },
   "urn:solid:movedTo": {
     "label": "movedTo",
-    "description": "On an ActivityStreams Actor, the new identity URI the Actor has migrated to — the forwarding address left behind on the old account.",
+    "description": "On an actor (Person, Application, Group, Organization or Service), the new identity URI it has migrated to — the forwarding address left behind on the old account.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/movedTo/"
   },
   "urn:solid:name": {
     "label": "name",
-    "description": "A name for the subject.",
+    "description": "A name for some thing — a plain-text display name for a person, organization, document, project or any other resource.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/name/"
   },
   "urn:solid:nameMap": {
     "label": "nameMap",
-    "description": "Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings.",
+    "description": "Language-tagged variants of an ActivityStreams Object's `name` — keys are BCP 47 language tags, values are the localised name strings. A JSON-LD `@language`-map alias for `as:name`, not a separate RDF property.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/nameMap/"
@@ -2983,14 +3004,21 @@
   },
   "urn:solid:notation": {
     "label": "notation",
-    "description": "A symbolic identifier for a SKOS Concept within a particular notation system (Dewey numbers, ISBN-style codes, taxonomy IDs).",
+    "description": "A string of characters, such as \"510\" or \"QA76\", that uniquely identifies a SKOS Concept within a given scheme, typed with a datatype that names the notation system (e.g. Dewey Decimal, UDC, LCC class marks).",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/notation/"
   },
+  "urn:solid:object": {
+    "label": "object",
+    "description": "The direct object of an Activity — the thing being liked, followed, created, deleted, etc. For a Relationship, the entity related to the subject.",
+    "type": "rdf:Property",
+    "status": "stable",
+    "path": "/object/"
+  },
   "urn:solid:oidcIssuer": {
     "label": "oidcIssuer",
-    "description": "The OpenID Connect issuer that this WebID trusts to authenticate it.",
+    "description": "The OpenID Connect issuer (OP) a WebID trusts to issue ID tokens for it; Solid-OIDC resource servers check the token's iss against this value in the WebID profile.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/oidcIssuer/"
@@ -3018,7 +3046,7 @@
   },
   "urn:solid:orderedItems": {
     "label": "orderedItems",
-    "description": "The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant.",
+    "description": "The ordered members of an ActivityStreams OrderedCollection or OrderedCollectionPage — sequence is significant. A JSON-LD alias for `as:items` with an `@list` container, not a separate RDF property.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/orderedItems/"
@@ -3039,21 +3067,21 @@
   },
   "urn:solid:origin": {
     "label": "origin",
-    "description": "Where an ActivityStreams Activity comes *from* — the source side of a movement, transfer, or invitation, complementing `as:target` (the destination).",
+    "description": "The indirect object from which an ActivityStreams Activity is directed — the source of a Move, Remove, or Travel, complementing `target` (the destination).",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/origin/"
   },
   "urn:solid:outbox": {
     "label": "outbox",
-    "description": "The OrderedCollection of Activities an ActivityPub Actor has published — POSTing to it is how the Actor sends new Activities to the network.",
+    "description": "The OrderedCollection of Activities that an actor (Person, Application, Group, Organization or Service) has published in ActivityPub — POSTing to it is how the actor sends new Activities to the network.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/outbox/"
   },
   "urn:solid:owner": {
     "label": "owner",
-    "description": "An agent that owns the resource — typically used to declare pod ownership.",
+    "description": "An agent (WebID) considered to have control, rights and responsibilities over a Solid storage; advertised by the server on the storage root or storage description resource.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/owner/"
@@ -3062,7 +3090,7 @@
     "label": "ownerOf",
     "description": "A pod or resource the agent owns — the inverse of `owner`.",
     "type": "rdf:Property",
-    "status": "stable",
+    "status": "deprecated",
     "path": "/ownerOf/"
   },
   "urn:solid:page": {
@@ -3130,7 +3158,7 @@
   },
   "urn:solid:preferredUsername": {
     "label": "preferredUsername",
-    "description": "An ActivityPub Actor's preferred short username — the local part used in `@user@host` mention syntax.",
+    "description": "The preferred short username of an actor (Person, Application, Group, Organization or Service) in ActivityPub — the local part used in `@user@host` mention syntax.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/preferredUsername/"
@@ -3167,7 +3195,7 @@
     "label": "profileSubject",
     "description": "The subject (Person) that a profile document is about.",
     "type": "rdf:Property",
-    "status": "stable",
+    "status": "deprecated",
     "path": "/profileSubject/"
   },
   "urn:solid:proof": {
@@ -3221,14 +3249,14 @@
   },
   "urn:solid:qualifiedAttribution": {
     "label": "qualifiedAttribution",
-    "description": "A qualified PROV Attribution linked to the entity — adds role and timing to a `wasAttributedTo` relation.",
+    "description": "Links an Entity to a prov:Attribution resource that qualifies a wasAttributedTo relation — naming the Agent (prov:agent) and the role it played (prov:hadRole).",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/qualifiedAttribution/"
   },
   "urn:solid:qualifiedDerivation": {
     "label": "qualifiedDerivation",
-    "description": "A qualified PROV Derivation linked to the entity — adds role, activity, and other context to a `wasDerivedFrom` relation.",
+    "description": "A qualified PROV Derivation linked to the entity — qualifies wasDerivedFrom with the Activity (prov:hadActivity), the Usage of the source (prov:hadUsage) and the Generation of the result (prov:hadGeneration).",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/qualifiedDerivation/"
@@ -3263,7 +3291,7 @@
   },
   "urn:solid:range": {
     "label": "range",
-    "description": "Declares the type of values an RDF property is meant to take — its object type.",
+    "description": "States that every value of a property is an instance of the given class or datatype — an inference rule, not a validation constraint.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/range/"
@@ -3368,7 +3396,7 @@
   },
   "urn:solid:role": {
     "label": "role",
-    "description": "The job role or function the person performs within an organization.",
+    "description": "The function or part the subject plays in an organization or situation (RFC 6350 ROLE), e.g. \"Project Leader\", \"Treasurer\" — not the formal job title.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/role/"
@@ -3410,7 +3438,7 @@
   },
   "urn:solid:semanticRelation": {
     "label": "semanticRelation",
-    "description": "The SKOS superproperty for any conceptual relation between Concepts — `broader`, `narrower`, `related`.",
+    "description": "The SKOS superproperty of all links between Concepts: `broader`, `narrower`, `related`, their transitive variants, and the `mappingRelation` family (`exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch`).",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/semanticRelation/"
@@ -3424,7 +3452,7 @@
   },
   "urn:solid:serviceEndpoint": {
     "label": "serviceEndpoint",
-    "description": "On a DID Document service entry, the URL where the service is reachable.",
+    "description": "On a DID document service entry (did:Service), the endpoint(s) where the service is reachable — a URI, a map, or a set of these.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/serviceEndpoint/"
@@ -3438,7 +3466,7 @@
   },
   "urn:solid:sharedInbox": {
     "label": "sharedInbox",
-    "description": "An ActivityPub Actor-server endpoint that accepts deliveries for any local recipient — used to deduplicate fan-out when one Activity targets many followers on the same server.",
+    "description": "An ActivityPub server endpoint, advertised in an actor's `endpoints`, that accepts deliveries for any local recipient — used to deduplicate fan-out when one Activity targets many followers on the same server.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/sharedInbox/"
@@ -3494,7 +3522,7 @@
   },
   "urn:solid:startTime": {
     "label": "startTime",
-    "description": "The date and time the object begins.",
+    "description": "The date and time at which an ActivityStreams Object (typically an Event or time-bounded Activity) begins or began.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/startTime/"
@@ -3515,14 +3543,14 @@
   },
   "urn:solid:storage": {
     "label": "storage",
-    "description": "The root of a personal data store (Solid pod) for the subject.",
+    "description": "Links an agent (typically its WebID) to the root container of a Solid storage (pod) it can use.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/storage/"
   },
   "urn:solid:streams": {
     "label": "streams",
-    "description": "Additional Collections an ActivityPub Actor exposes beyond the standard inbox/outbox/followers/following — extension points for application-specific feeds.",
+    "description": "Supplementary Collections that an actor (Person, Application, Group, Organization or Service) exposes in ActivityPub beyond the standard inbox/outbox/followers/following — extension points for application-specific feeds.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/streams/"
@@ -3543,7 +3571,7 @@
   },
   "urn:solid:subOrganizationOf": {
     "label": "subOrganizationOf",
-    "description": "The parent Organization that this OrganizationalUnit is part of — the inverse of `hasSubOrganization`.",
+    "description": "The parent Organization of which this Organization is a part — e.g. a subsidiary's parent company or a department's parent; inverse of hasSubOrganization. For OrganizationalUnits specifically, unitOf is the narrower form.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/subOrganizationOf/"
@@ -3571,7 +3599,7 @@
   },
   "urn:solid:summaryMap": {
     "label": "summaryMap",
-    "description": "Language-tagged variants of an ActivityStreams Object's `summary` — keys are BCP 47 language tags, values are the localised summary strings.",
+    "description": "Language-tagged variants of an ActivityStreams Object's `summary` — keys are BCP 47 language tags, values are the localised summary strings. A JSON-LD `@language`-map alias for `as:summary`, not a separate RDF property.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/summaryMap/"
@@ -3585,7 +3613,7 @@
   },
   "urn:solid:tag": {
     "label": "tag",
-    "description": "An object that is part of the private secondary audience of the subject — typically a hashtag or @mention.",
+    "description": "Objects or Links associated with the subject by reference (unlike `attachment`, by inclusion) — in ActivityPub typically `Mention` (an @-mentioned actor) or `Hashtag` entries; a tag does not address or deliver to anyone.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/tag/"
@@ -3613,7 +3641,7 @@
   },
   "urn:solid:temporalResolution": {
     "label": "temporalResolution",
-    "description": "The minimum time between samples in a DCAT Dataset or Distribution — the granularity of the time axis.",
+    "description": "The minimum time period resolvable in a DCAT Dataset or Distribution (for a time series, the spacing between samples), as an xsd:duration.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/temporalResolution/"
@@ -3634,7 +3662,7 @@
   },
   "urn:solid:thumbnail": {
     "label": "thumbnail",
-    "description": "A thumbnail rendering of the image — a smaller version for previews.",
+    "description": "A derived thumbnail image for a document — typically a smaller preview rendition of an image, or a preview picture of another document.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/thumbnail/"
@@ -3683,7 +3711,7 @@
   },
   "urn:solid:trustedApp": {
     "label": "trustedApp",
-    "description": "On a Solid pod owner's profile, an application origin granted broad trust — typically permitted to read or write across the pod without per-resource ACL grants.",
+    "description": "On a WebID profile, an app (by its acl:origin) the owner trusts, with the acl:mode values it may use. Legacy NSS mechanism: a request from that Origin succeeds only if the user is allowed by the resource's ACL AND the origin is listed with the mode — it narrows, never bypasses.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/trustedApp/"
@@ -3725,14 +3753,14 @@
   },
   "urn:solid:url": {
     "label": "url",
-    "description": "An ActivityStreams Object's primary URL — the human-facing page where the Object can be viewed in a browser, distinct from its `@id` (the AP-facing identifier).",
+    "description": "One or more links to representations of an ActivityStreams Object — e.g. the HTML permalink of a post, or the media file of an Image/Video; may be a plain IRI or a Link with mediaType/rel. Distinct from the Object's `@id`.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/url/"
   },
   "urn:solid:used": {
     "label": "used",
-    "description": "An entity used by the activity — an input or dependency that existed before the activity started.",
+    "description": "An Entity that the Activity began to make use of (consumed, read, or depended on) at some point during its execution; the inverse direction of prov:generated. The Entity must already exist at the moment of use.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/used/"
@@ -3809,7 +3837,7 @@
   },
   "urn:solid:wasInformedBy": {
     "label": "wasInformedBy",
-    "description": "An activity exchanged information with the prior activity — without naming the entity that flowed between them.",
+    "description": "The subject Activity used some Entity that was generated by the object Activity (the informant) — records information flow between two activities without naming the Entity.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/wasInformedBy/"
@@ -3823,7 +3851,7 @@
   },
   "urn:solid:wasQuotedFrom": {
     "label": "wasQuotedFrom",
-    "description": "An Entity is a quotation, excerpt, or reproduction of part of another Entity — the source remains identifiable and authoritative.",
+    "description": "An Entity that repeats (some or all of) another Entity verbatim — a quotation, excerpt, or reproduction — a specialised form of wasDerivedFrom.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/wasQuotedFrom/"
@@ -3851,7 +3879,7 @@
   },
   "urn:solid:width": {
     "label": "width",
-    "description": "The width in pixels of an ActivityStreams Object — typically an Image, Video, or Link to a visual resource.",
+    "description": "The preferred display width, in device-independent (CSS) pixels, of the resource a Link points to; AS2 declares the domain as Link, though fediverse software also puts it on Image/Video/Document attachments.",
     "type": "rdf:Property",
     "status": "stable",
     "path": "/width/"

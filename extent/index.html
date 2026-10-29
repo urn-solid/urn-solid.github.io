@@ -35,11 +35,12 @@
   "rdfs:comment": "The size or duration of the resource — pages, bytes, runtime length.",
   "owl:sameAs": "http://purl.org/dc/terms/extent",
   "rdfs:seeAlso": [
-    "urn:solid:duration"
+    "urn:solid:duration",
+    "urn:solid:SizeOrDuration"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Free-form size/duration string in dcterms tradition (\"320 pages\", \"45 minutes\", \"2.4 MB\"). For machine-readable durations specifically, prefer `urn:solid:duration` (xsd:duration). For byte counts, use `schema:contentSize` directly.",
+  "notes": "Free-form size/duration string in dcterms tradition (\"320 pages\", \"45 minutes\", \"2.4 MB\"). For machine-readable durations specifically, prefer `urn:solid:duration` (xsd:duration). For byte counts, use `schema:contentSize` directly. The formal range is `urn:solid:SizeOrDuration`.",
   "examples": [
     {
       "title": "Book with extent",
@@ -63,6 +64,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added SizeOrDuration (formal range) to seeAlso and notes."
     }
   ],
   "see_also": {

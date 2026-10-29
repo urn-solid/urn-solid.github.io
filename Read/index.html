@@ -52,6 +52,7 @@
         "@id": "https://alice.example.org/photos/.acl#public",
         "@type": "urn:solid:Authorization",
         "http://www.w3.org/ns/auth/acl#agentClass": { "@id": "http://xmlns.com/foaf/0.1/Agent" },
+        "http://www.w3.org/ns/auth/acl#accessTo": { "@id": "https://alice.example.org/photos/" },
         "urn:solid:mode": { "@id": "http://www.w3.org/ns/auth/acl#Read" }
       }
     }
@@ -68,6 +69,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example now has acl:accessTo."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -75,7 +88,10 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:View"
+  ]
 }
 
 </script>

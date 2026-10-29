@@ -17,7 +17,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Property analogue of `owl:equivalentClass`. Stronger than mutual `subPropertyOf`. Use to bridge identical predicates across vocabularies — `foaf:name` and `schema:name` are commonly equated this way for cross-vocab interop.",
+  "notes": "Property analogue of `owl:equivalentClass`. Semantically identical to mutual `subPropertyOf`, stated as a single assertion. Does not imply the two IRIs are the same property (that would be owl:sameAs). Use to bridge identical predicates across vocabularies — `foaf:name` and `schema:name` are commonly equated this way for cross-vocab interop.",
   "examples": [
     {
       "title": "Equating two upstream name predicates",
@@ -40,6 +40,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: equivalentProperty is exactly mutual subPropertyOf, not stronger."
     }
   ],
   "see_also": {

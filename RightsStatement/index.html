@@ -40,18 +40,17 @@
     "urn:solid:Policy"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:LicenseDocument",
     "urn:solid:Policy"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use as @type for documents stating rights — copyright notices, restriction declarations, public-domain dedications. Distinct from `urn:solid:LicenseDocument` (specifically a permission grant) and `urn:solid:Policy` (broader normative documents). The Rights Statements consortium (rightsstatements.org) provides a standardized set.",
+  "notes": "Superclass of `urn:solid:LicenseDocument` (a rights statement that grants permissions). Use RightsStatement for copyright notices, restriction declarations or public-domain dedications that are not licences. Not `urn:solid:Policy`, which is a plan or course of action by an authority. The Rights Statements consortium (rightsstatements.org) provides a standardized set.",
   "examples": [
     {
       "title": "A rights statement",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://rightsstatements.org/page/InC/1.0/",
+        "@id": "http://rightsstatements.org/vocab/InC/1.0/",
         "@type": "urn:solid:RightsStatement",
         "urn:solid:name": "In Copyright"
       }
@@ -69,6 +68,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Documented LicenseDocument as a subclass (removed it from notToBeConfusedWith); example now uses the canonical rightsstatements.org vocab URI."
     }
   ],
   "see_also": {

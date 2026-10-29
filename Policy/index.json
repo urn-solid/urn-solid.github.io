@@ -3,18 +3,21 @@
   "@id": "urn:solid:Policy",
   "@type": "rdfs:Class",
   "rdfs:label": "Policy",
-  "rdfs:comment": "A statement of policy applicable to the resource — terms of use, retention rules, access guidelines.",
+  "rdfs:comment": "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters — e.g. a privacy, retention or collection-development policy.",
   "owl:sameAs": "http://purl.org/dc/terms/Policy",
   "rdfs:seeAlso": [
     "urn:solid:LicenseDocument",
-    "urn:solid:rights"
+    "urn:solid:rights",
+    "http://www.w3.org/ns/solid/acp#Policy",
+    "http://www.w3.org/ns/odrl/2/Policy"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:LicenseDocument"
+    "urn:solid:LicenseDocument",
+    "urn:solid:RightsStatement"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Broader than `urn:solid:LicenseDocument` (which is specifically a legal grant of permissions): a Policy can be any normative document — privacy policy, retention policy, code of conduct. For machine-actionable access control on Solid pods, use the WAC vocabulary instead.",
+  "notes": "Not a licence (`urn:solid:LicenseDocument`) or a rights statement (`urn:solid:RightsStatement`); DCMI defines no subclass relation between them. Examples: privacy policy, retention policy, code of conduct. For machine-actionable access control on Solid pods, use the WAC vocabulary instead. Not acp:Policy (Solid Access Control Policy, http://www.w3.org/ns/solid/acp#Policy) or odrl:Policy (http://www.w3.org/ns/odrl/2/Policy). Those are machine-enforceable access or usage policies, while this is a descriptive document class.",
   "examples": [
     {
       "title": "A privacy policy",
@@ -38,6 +41,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Aligned comment with DCMI definition; removed implied 'broader than LicenseDocument' relation; disambiguated from acp:Policy and odrl:Policy."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

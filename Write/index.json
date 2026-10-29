@@ -16,7 +16,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Implies `urn:solid:Append` — anyone with Write can add. Stronger than Append: includes overwrite and delete. On a Container, Write covers creating, modifying, and deleting members.",
+  "notes": "Implies `urn:solid:Append` — anyone with Write can add. Stronger than Append: includes overwrite and delete. On a Container, Write (or Append) is needed to add members; editing or deleting a member requires Write on that member (deletion also requires Write on the parent container).",
   "examples": [
     {
       "title": "Authorization granting Write to the owner",
@@ -25,6 +25,7 @@
         "@id": "https://alice.example.org/notes/.acl#alice",
         "@type": "urn:solid:Authorization",
         "http://www.w3.org/ns/auth/acl#agent": { "@id": "https://alice.example.org/profile/card#me" },
+        "http://www.w3.org/ns/auth/acl#accessTo": { "@id": "https://alice.example.org/notes/" },
         "urn:solid:mode": [
           { "@id": "http://www.w3.org/ns/auth/acl#Read" },
           { "@id": "http://www.w3.org/ns/auth/acl#Write" }
@@ -44,6 +45,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: container Write does not authorize editing members; example now has acl:accessTo."
     }
   ],
   "see_also": {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Relationship — urn-solid</title>
-<meta name="description" content="An ActivityStreams Object representing a typed relationship between two other Objects — typically two Actors connected by a relationship type (friend, colleague, follower).">
+<meta name="description" content="An ActivityStreams Object representing a typed relationship between two other Objects — typically two actors (Person, Application, Group, Organization or Service) connected by a relationship type (friend, colleague, follower).">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Relationship/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Relationship">
-<meta property="og:description" content="An ActivityStreams Object representing a typed relationship between two other Objects — typically two Actors connected by a relationship type (friend, colleague, follower).">
+<meta property="og:description" content="An ActivityStreams Object representing a typed relationship between two other Objects — typically two actors (Person, Application, Group, Organization or Service) connected by a relationship type (friend, colleague, follower).">
 <meta property="og:url" content="https://urn-solid.com/Relationship/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Relationship">
-<meta name="twitter:description" content="An ActivityStreams Object representing a typed relationship between two other Objects — typically two Actors connected by a relationship type (friend, colleague, follower).">
+<meta name="twitter:description" content="An ActivityStreams Object representing a typed relationship between two other Objects — typically two actors (Person, Application, Group, Organization or Service) connected by a relationship type (friend, colleague, follower).">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,17 +32,17 @@
   "@id": "urn:solid:Relationship",
   "@type": "rdfs:Class",
   "rdfs:label": "Relationship",
-  "rdfs:comment": "An ActivityStreams Object representing a typed relationship between two other Objects — typically two Actors connected by a relationship type (friend, colleague, follower).",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Relationship",
+  "rdfs:comment": "An ActivityStreams Object representing a typed relationship between two other Objects — typically two actors (Person, Application, Group, Organization or Service) connected by a relationship type (friend, colleague, follower).",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Relationship",
   "rdfs:seeAlso": [
-    "urn:solid:Actor",
-    "urn:solid:subject",
+    "https://www.w3.org/ns/activitystreams#subject",
     "urn:solid:object",
-    "urn:solid:relationship"
+    "https://www.w3.org/ns/activitystreams#relationship",
+    "urn:solid:Person"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Carries `as:subject`, `as:object`, and `as:relationship` (the kind of link). Reify a connection as a first-class entity when you need to attach metadata to it (when it started, who asserted it, whether it's reciprocated) — otherwise a direct property like `foaf:knows` is simpler.",
+  "notes": "Carries `as:subject`, `as:object`, and `as:relationship` (the kind of link). Reify a connection as a first-class entity when you need to attach metadata to it (when it started, who asserted it, whether it's reciprocated) — otherwise a direct property like `urn:solid:knows` (foaf:knows) is simpler. Note `urn:solid:subject` is dcterms:subject, not as:subject — use the full AS IRI.",
   "examples": [
     {
       "title": "A reified friendship between two actors",
@@ -50,15 +50,15 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/relationships/alice-bob-friends",
         "@type": "urn:solid:Relationship",
-        "urn:solid:subject": { "@id": "https://alice.example.org/profile/card#me" },
-        "urn:solid:relationship": { "@id": "http://purl.org/vocab/relationship/friendOf" },
+        "https://www.w3.org/ns/activitystreams#subject": { "@id": "https://alice.example.org/profile/card#me" },
+        "https://www.w3.org/ns/activitystreams#relationship": { "@id": "http://purl.org/vocab/relationship/friendOf" },
         "urn:solid:object": { "@id": "https://bob.example.org/profile/card#me" }
       }
     }
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#Relationship"
+      "https://www.w3.org/ns/activitystreams#Relationship"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -68,6 +68,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped nonexistent Actor and relationship aliases; as:subject/as:relationship now full AS IRIs (urn:solid:subject is dcterms:subject); notes point at urn:solid:knows."
     }
   ],
   "see_also": {

@@ -37,12 +37,12 @@
   "rdfs:seeAlso": [
     "urn:solid:rights",
     "urn:solid:rightsHolder",
-    "urn:solid:dateCreated"
+    "urn:solid:created",
+    "urn:solid:issued"
   ],
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#date",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The copyright year, distinct from `urn:solid:dateCreated` (when the work was made) and `urn:solid:issued` (when published). Often the same year as creation but can differ for posthumous publication or transferred rights. ISO 8601 date.",
+  "notes": "The copyright year, distinct from `urn:solid:created` (when the work was made) and `urn:solid:issued` (when published). Often the same year as creation but can differ for posthumous publication or transferred rights. ISO 8601 value: an xsd:date, or (most commonly) an xsd:gYear for a copyright year. Sub-property of `urn:solid:date`.",
   "examples": [
     {
       "title": "Document with copyright date",
@@ -50,7 +50,10 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/works/manual",
         "@type": "urn:solid:Document",
-        "urn:solid:dateCopyrighted": "2026",
+        "urn:solid:dateCopyrighted": {
+          "@value": "2026",
+          "@type": "http://www.w3.org/2001/XMLSchema#gYear"
+        },
         "urn:solid:rightsHolder": { "@id": "https://example.org/acme" }
       }
     }
@@ -67,6 +70,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped xsd:date range (gYear is common); example uses a typed xsd:gYear; seeAlso/notes now reference urn:solid:created and urn:solid:issued."
     }
   ],
   "see_also": {

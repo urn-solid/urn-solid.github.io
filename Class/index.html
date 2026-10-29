@@ -37,11 +37,12 @@
   "rdfs:seeAlso": [
     "urn:solid:Property",
     "urn:solid:subClassOf",
-    "urn:solid:type"
+    "urn:solid:type",
+    "http://www.w3.org/2002/07/owl#Class"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Foundational RDFS term. Every class definition in this registry is `@type: rdfs:Class`. Use as the value of `@type` when declaring a new class; pair with `rdfs:subClassOf` to position it in the class hierarchy.",
+  "notes": "Foundational RDFS term. Every class definition in this registry is `@type: rdfs:Class`. Use as the value of `@type` when declaring a new class; pair with `rdfs:subClassOf` to position it in the class hierarchy. OWL ontologies use `owl:Class` (a subclass of rdfs:Class) for classes and class expressions; use that in OWL-DL contexts.",
   "examples": [
     {
       "title": "Declaring a custom class",
@@ -65,6 +66,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added note and seeAlso for owl:Class (used for OWL-DL classes and class expressions)."
     }
   ],
   "see_also": {

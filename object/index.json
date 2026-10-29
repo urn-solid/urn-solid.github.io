@@ -1,0 +1,60 @@
+{
+  "@context": "https://urn-solid.com/context.jsonld",
+  "@id": "urn:solid:object",
+  "@type": "rdf:Property",
+  "rdfs:label": "object",
+  "rdfs:comment": "The direct object of an Activity — the thing being liked, followed, created, deleted, etc. For a Relationship, the entity related to the subject.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#object",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:actor",
+    "urn:solid:target",
+    "urn:solid:Relationship"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:target",
+    "urn:solid:Object",
+    "urn:solid:result"
+  ],
+  "status": "stable",
+  "added": "2026-10-29",
+  "notes": "Core ActivityStreams 2.0 property. In `Add` / `Move` / `Remove` the `object` is what moves and `target` / `origin` are the collections it moves to or from. Not to be confused with `urn:solid:Object` (the AS2 base class, capital O). Intransitive activities (Arrive, Travel, Question) have no object.",
+  "examples": [
+    {
+      "title": "Bob follows Alice",
+      "jsonld": {
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://example.org/activities/2",
+        "@type": "urn:solid:Follow",
+        "urn:solid:actor": { "@id": "https://bob.example.org/profile/card#me" },
+        "urn:solid:object": { "@id": "https://alice.example.org/profile/card#me" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#object"
+    ],
+    "curatedBy": "urn-solid-review"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added during the registry-wide review: referenced by existing terms and examples but previously unregistered."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}

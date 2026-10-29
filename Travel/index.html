@@ -33,7 +33,7 @@
   "@type": "rdfs:Class",
   "rdfs:label": "Travel",
   "rdfs:comment": "An ActivityStreams Activity indicating that the actor is travelling between two locations — the origin is the `origin`, the destination is the `target`.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Travel",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Travel",
   "rdfs:seeAlso": [
     "urn:solid:Move",
     "urn:solid:Arrive",
@@ -47,7 +47,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The IntransitiveActivity for ongoing journey — distinct from `as:Move` (which moves an *object*) and `as:Arrive` (which marks completion). Use Travel for in-progress trips; pair with `Arrive` once the destination is reached.",
+  "notes": "IntransitiveActivity: the actor is the one travelling, so there is no `object`. Use `origin` for the starting point and `target` for the destination; either may be omitted. Distinct from `Move` (the actor moves an *object* from origin to target) and `Arrive` (the actor has arrived at a `location`, with no origin implied).",
   "examples": [
     {
       "title": "Actor travelling from London to Paris",
@@ -63,7 +63,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#Travel"
+      "https://www.w3.org/ns/activitystreams#Travel"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -73,6 +73,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes no longer claim Travel is only for in-progress trips; clarified origin/target and Move/Arrive distinctions."
     }
   ],
   "see_also": {

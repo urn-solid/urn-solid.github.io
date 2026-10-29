@@ -39,9 +39,16 @@
     "urn:solid:isPrimaryTopicOf"
   ],
   "rdfs:domain": "urn:solid:Document",
+  "notToBeConfusedWith": [
+    "urn:solid:topic",
+    "urn:solid:about",
+    "urn:solid:isPrimaryTopicOf",
+    "urn:solid:profileSubject",
+    "urn:solid:subject"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "A document has at most one primary topic. WebID profile documents canonically have their subject Person as `foaf:primaryTopic`. The inverse is `foaf:isPrimaryTopicOf`. For documents about multiple things at equal weight, use `foaf:topic` (no primacy) instead.",
+  "notes": "A document has at most one primary topic. WebID profile documents canonically have their subject Person as `foaf:primaryTopic`. The inverse is `foaf:isPrimaryTopicOf`. For documents about multiple things at equal weight, use `foaf:topic` (no primacy) instead. Use this instead of the deprecated `urn:solid:profileSubject`, which never existed upstream.",
   "examples": [
     {
       "title": "WebID profile document",
@@ -65,6 +72,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added notToBeConfusedWith topic/about."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Noted it replaces the deprecated profileSubject. Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

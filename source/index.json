@@ -6,12 +6,17 @@
   "rdfs:comment": "A related resource from which the described resource is derived.",
   "owl:sameAs": "http://purl.org/dc/terms/source",
   "rdfs:seeAlso": [
-    "http://www.w3.org/ns/prov#wasDerivedFrom",
+    "urn:solid:wasDerivedFrom",
     "https://schema.org/isBasedOn"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:hadPrimarySource",
+    "urn:solid:hasSource"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use to record the upstream origin of derived works (translations, adaptations, summaries, scraped data). For PROV-grade derivation chains with role and timing, prefer `prov:wasDerivedFrom`. Repeat to list multiple sources.",
+  "notes": "Use to record the upstream origin of derived works (translations, adaptations, summaries, scraped data). For PROV-grade derivation chains with role and timing, prefer `urn:solid:wasDerivedFrom`. Repeat to list multiple sources.",
   "examples": [
     {
       "title": "Translation pointing at its source",
@@ -36,6 +41,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso/notes use urn:solid:wasDerivedFrom; added wasDerivedFrom/hadPrimarySource to notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

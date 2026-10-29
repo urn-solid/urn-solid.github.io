@@ -4,7 +4,7 @@
   "@type": "rdfs:Class",
   "rdfs:label": "Listen",
   "rdfs:comment": "An ActivityStreams Activity indicating that the actor listened to the object — typically audio content (a song, podcast episode, broadcast).",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Listen",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Listen",
   "rdfs:seeAlso": [
     "urn:solid:View",
     "urn:solid:Read",
@@ -12,7 +12,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Records consumption of audio content as a first-class event — useful for scrobbling, recommendations, listening history, and reading-progress analogues. Pair with `as:instrument` to record the client/device used.",
+  "notes": "Records consumption of audio content as a first-class event — useful for scrobbling, recommendations, and listening history. For text use urn:solid:Read, for video/images urn:solid:View. Pair with `as:instrument` to record the client/device used.",
   "examples": [
     {
       "title": "Listened to a podcast episode",
@@ -27,7 +27,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#Listen"
+      "https://www.w3.org/ns/activitystreams#Listen"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -37,6 +37,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped nonsensical 'reading-progress analogues'; pointed to Read/View for other media."
     }
   ],
   "see_also": {

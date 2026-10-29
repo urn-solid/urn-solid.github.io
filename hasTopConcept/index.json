@@ -3,7 +3,7 @@
   "@id": "urn:solid:hasTopConcept",
   "@type": "rdf:Property",
   "rdfs:label": "hasTopConcept",
-  "rdfs:comment": "A top-level (root) Concept of the SKOS ConceptScheme — has no broader concept within the scheme.",
+  "rdfs:comment": "A top-level (entry-point) Concept of a SKOS ConceptScheme, by convention one with no broader concept in that scheme. Inverse of topConceptOf.",
   "owl:sameAs": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
   "rdfs:seeAlso": [
     "urn:solid:topConceptOf",
@@ -17,7 +17,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use on a ConceptScheme to enumerate its entry-point Concepts — those with no `broader` parent in the scheme. Inverse is `urn:solid:topConceptOf`. A scheme typically has a small handful of top concepts; repeat for each.",
+  "notes": "Use on a ConceptScheme to enumerate its entry-point Concepts — by convention those with no `broader` parent in the scheme (not a SKOS integrity condition). Inverse is `urn:solid:topConceptOf`. A scheme typically has a small handful of top concepts; repeat for each.",
   "examples": [
     {
       "title": "Scheme with two top concepts",
@@ -44,6 +44,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Reworded 'no broader concept in the scheme' as a convention, not a SKOS rule."
     }
   ],
   "see_also": {

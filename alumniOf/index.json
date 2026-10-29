@@ -3,11 +3,11 @@
   "@id": "urn:solid:alumniOf",
   "@type": "rdf:Property",
   "rdfs:label": "alumniOf",
-  "rdfs:comment": "An organization the person previously attended or worked for.",
+  "rdfs:comment": "An organization the person is an alumnus/alumna of — typically a school or university they attended; loosely also a former employer.",
   "owl:sameAs": "https://schema.org/alumniOf",
   "rdfs:seeAlso": [
     "urn:solid:worksFor",
-    "https://schema.org/EducationalOrganization"
+    "urn:solid:EducationalOrganization"
   ],
   "rdfs:domain": "urn:solid:Person",
   "notToBeConfusedWith": [
@@ -15,7 +15,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use for past educational and (loosely) professional affiliations. Repeat for multiple. Distinct from `urn:solid:worksFor` which implies *current* employment. Often pointed at a `schema:EducationalOrganization` (university, school) but any past Organization works.",
+  "notes": "Use for past educational and (loosely) professional affiliations. Repeat for multiple. Distinct from `urn:solid:worksFor` which implies *current* employment. Often pointed at a `urn:solid:EducationalOrganization` (university, school) but any past Organization works.",
   "examples": [
     {
       "title": "Person with alumni affiliation",
@@ -39,6 +39,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment tightened to schema.org's alumni sense; seeAlso uses urn:solid:EducationalOrganization."
     }
   ],
   "see_also": {

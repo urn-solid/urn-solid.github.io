@@ -10,13 +10,14 @@
     "urn:solid:hiddenLabel",
     "https://schema.org/alternateName"
   ],
-  "rdfs:domain": "urn:solid:Concept",
   "notToBeConfusedWith": [
-    "urn:solid:prefLabel"
+    "urn:solid:prefLabel",
+    "urn:solid:hiddenLabel",
+    "urn:solid:notation"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use for synonyms, abbreviations, common misspellings users might search for. Repeat for multiple alternates. By SKOS rule, `prefLabel`, `altLabel`, and `hiddenLabel` values for the same Concept must be pairwise disjoint within a language.",
+  "notes": "Use for synonyms, abbreviations, acronyms, and variant spellings meant to be displayed; put misspellings and other non-display search strings in `urn:solid:hiddenLabel`. Repeat for multiple alternates. By SKOS rule, `prefLabel`, `altLabel`, and `hiddenLabel` values for the same Concept must be pairwise disjoint within a language. Upstream SKOS declares no domain: usable on any resource (Concept, ConceptScheme, Collection).",
   "examples": [
     {
       "title": "Concept with synonyms",
@@ -25,7 +26,10 @@
         "@id": "https://example.org/vocab/topics/cat-theory",
         "@type": "urn:solid:Concept",
         "urn:solid:prefLabel": "Category theory",
-        "urn:solid:altLabel": ["categorical algebra", "abstract nonsense"]
+        "urn:solid:altLabel": [
+          "categorical algebra",
+          "abstract nonsense"
+        ]
       }
     }
   ],
@@ -41,6 +45,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Misspellings now directed to hiddenLabel; added hiddenLabel to notToBeConfusedWith; dropped rdfs:domain (none upstream)."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

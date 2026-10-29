@@ -3,28 +3,27 @@
   "@id": "urn:solid:AddressBook",
   "@type": "rdfs:Class",
   "rdfs:label": "AddressBook",
-  "rdfs:comment": "A collection of contacts — a personal or shared address book.",
+  "rdfs:comment": "A Solid contacts address book — a container resource (SolidOS contacts extension to vCard, not IETF vCard) that indexes contact cards and groups.",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#AddressBook",
   "rdfs:seeAlso": [
     "urn:solid:hasMember",
     "urn:solid:Person",
-    "http://xmlns.com/foaf/0.1/Group"
+    "https://github.com/solid/contacts"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The vcard AddressBook class — used by SolidOS and inrupt apps as the canonical type for an address book resource. Pair with `urn:solid:hasMember` for the entries. Each member is typically a `urn:solid:Person`.",
+  "notes": "Not part of vCard as defined by the IETF: defined by the SolidOS contacts extension (https://github.com/solid/contacts, vcard-extension-addressbook.ttl). Cards point at the book with `vcard:inAddressBook`; groups are attached with `vcard:includesGroup`; `vcard:nameEmailIndex` and `vcard:groupIndex` point to index documents. Group membership uses `urn:solid:hasMember` on a `vcard:Group`, not on the AddressBook.",
   "examples": [
     {
-      "title": "An address book with two members",
+      "title": "A SolidOS address book with its indexes and a group",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://alice.example.org/contacts/",
+        "@id": "https://alice.example.org/contacts/index.ttl#this",
         "@type": "urn:solid:AddressBook",
         "urn:solid:title": "My Contacts",
-        "urn:solid:hasMember": [
-          { "@id": "https://bob.example.org/profile/card#me" },
-          { "@id": "https://carol.example.org/#me" }
-        ]
+        "http://www.w3.org/2006/vcard/ns#nameEmailIndex": { "@id": "https://alice.example.org/contacts/people.ttl" },
+        "http://www.w3.org/2006/vcard/ns#groupIndex": { "@id": "https://alice.example.org/contacts/groups.ttl" },
+        "http://www.w3.org/2006/vcard/ns#includesGroup": { "@id": "https://alice.example.org/contacts/Group/Friends.ttl#this" }
       }
     }
   ],
@@ -40,6 +39,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Clarified as SolidOS contacts extension (not IETF vCard); notes/example use inAddressBook, includesGroup, nameEmailIndex, groupIndex instead of hasMember; replaced foaf:Group seeAlso."
     }
   ],
   "see_also": {

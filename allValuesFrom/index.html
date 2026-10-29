@@ -46,7 +46,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Reads as \"for all values on this property, the value is in this class.\" Common pattern: defining a class of `Person`s whose `knows` relations are *only* with other `Person`s. Pairs with `someValuesFrom` (existential — at least one value is in the class).",
+  "notes": "Reads as \"for all values on this property, the value is in this class.\" Common pattern: defining a class of `Person`s whose `knows` relations are *only* with other `Person`s. Pairs with `someValuesFrom` (existential — at least one value is in the class). Vacuously satisfied by a subject with no values for the property — it does not require any value to exist; combine with someValuesFrom or minCardinality for that.",
   "examples": [
     {
       "title": "A class restricting knows-targets to People",
@@ -70,6 +70,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: allValuesFrom is vacuously satisfied when there are no values."
     }
   ],
   "see_also": {

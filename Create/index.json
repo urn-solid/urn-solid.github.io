@@ -7,14 +7,16 @@
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Create",
   "rdfs:seeAlso": [
     "https://schema.org/CreateAction",
-    "http://www.w3.org/ns/prov#wasGeneratedBy"
+    "urn:solid:Generation"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Update"
+    "urn:solid:Update",
+    "urn:solid:Add",
+    "urn:solid:Announce"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:Activity`. The canonical ActivityPub side-effect for publishing a new object — when an actor posts a Note, the wire-level activity is `Create` whose `as:object` is that Note. For PROV-grade generation events with timing, prefer `prov:wasGeneratedBy`.",
+  "notes": "Subclass of `urn:solid:Activity`. The canonical ActivityPub side-effect for publishing a new object — when an actor posts a Note, the wire-level activity is `Create` whose `as:object` is that Note. Distinct from `Add` (which places an existing object into a target). For PROV-grade generation events with timing, use `urn:solid:Generation` (prov:Generation); to record which activity generated an entity, use `urn:solid:wasGeneratedBy`.",
   "examples": [
     {
       "title": "Alice creates a note",
@@ -43,6 +45,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso prov:wasGeneratedBy -> urn:solid:Generation (class for class); added Add to notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

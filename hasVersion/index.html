@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:hasVersion — urn-solid</title>
-<meta name="description" content="A related resource that is a version, edition, or adaptation of the described resource.">
+<meta name="description" content="A related resource that is a version, edition, or adaptation of the described resource — implying substantive changes in content rather than just a different format.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/hasVersion/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:hasVersion">
-<meta property="og:description" content="A related resource that is a version, edition, or adaptation of the described resource.">
+<meta property="og:description" content="A related resource that is a version, edition, or adaptation of the described resource — implying substantive changes in content rather than just a different format.">
 <meta property="og:url" content="https://urn-solid.com/hasVersion/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:hasVersion">
-<meta name="twitter:description" content="A related resource that is a version, edition, or adaptation of the described resource.">
+<meta name="twitter:description" content="A related resource that is a version, edition, or adaptation of the described resource — implying substantive changes in content rather than just a different format.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,13 +32,15 @@
   "@id": "urn:solid:hasVersion",
   "@type": "rdf:Property",
   "rdfs:label": "hasVersion",
-  "rdfs:comment": "A related resource that is a version, edition, or adaptation of the described resource.",
+  "rdfs:comment": "A related resource that is a version, edition, or adaptation of the described resource — implying substantive changes in content rather than just a different format.",
   "owl:sameAs": "http://purl.org/dc/terms/hasVersion",
   "rdfs:seeAlso": [
     "urn:solid:isVersionOf"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:isVersionOf"
+    "urn:solid:isVersionOf",
+    "urn:solid:version",
+    "urn:solid:hasFormat"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -51,8 +53,12 @@
         "@id": "https://example.org/specs/",
         "@type": "urn:solid:Document",
         "urn:solid:hasVersion": [
-          { "@id": "https://example.org/specs/v1" },
-          { "@id": "https://example.org/specs/v2" }
+          {
+            "@id": "https://example.org/specs/v1"
+          },
+          {
+            "@id": "https://example.org/specs/v2"
+          }
         ]
       }
     }
@@ -69,6 +75,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment clarifies content change vs format; added version/hasFormat to notToBeConfusedWith."
     }
   ],
   "see_also": {

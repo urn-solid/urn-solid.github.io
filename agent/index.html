@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:agent — urn-solid</title>
+<meta name="description" content="In a Web Access Control Authorization, a specific agent (by WebID) that is granted the listed access modes.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="https://urn-solid.com/agent/">
+<link rel="alternate" type="application/ld+json" href="/agent/index.json">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="urn-solid">
+<meta property="og:title" content="urn:solid:agent">
+<meta property="og:description" content="In a Web Access Control Authorization, a specific agent (by WebID) that is granted the listed access modes.">
+<meta property="og:url" content="https://urn-solid.com/agent/">
+<meta property="og:image" content="https://urn-solid.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="urn:solid:agent">
+<meta name="twitter:description" content="In a Web Access Control Authorization, a specific agent (by WebID) that is granted the listed access modes.">
+<meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.com/context.jsonld",
+  "@id": "urn:solid:agent",
+  "@type": "rdf:Property",
+  "rdfs:label": "agent",
+  "rdfs:comment": "In a Web Access Control Authorization, a specific agent (by WebID) that is granted the listed access modes.",
+  "owl:sameAs": "http://www.w3.org/ns/auth/acl#agent",
+  "rdfs:seeAlso": [
+    "urn:solid:Authorization",
+    "urn:solid:agentClass",
+    "urn:solid:agentGroup",
+    "urn:solid:accessTo"
+  ],
+  "rdfs:domain": "urn:solid:Authorization",
+  "rdfs:range": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:agentClass",
+    "urn:solid:agentGroup",
+    "urn:solid:actor"
+  ],
+  "status": "stable",
+  "added": "2026-10-29",
+  "notes": "One of the three WAC ways to say who an Authorization applies to: `agent` (an individual WebID), `agentGroup` (members of a vcard:Group), `agentClass` (a class such as foaf:Agent for everyone, or acl:AuthenticatedAgent). Not related to the PROV notion of agent.",
+  "examples": [
+    {
+      "title": "Grant Bob read access",
+      "jsonld": {
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://alice.example.org/doc.acl#bob",
+        "@type": "urn:solid:Authorization",
+        "urn:solid:agent": {
+          "@id": "https://bob.example.org/profile/card#me"
+        },
+        "urn:solid:accessTo": {
+          "@id": "https://alice.example.org/doc"
+        },
+        "urn:solid:mode": {
+          "@id": "urn:solid:Read"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "http://www.w3.org/ns/auth/acl#agent"
+    ],
+    "curatedBy": "urn-solid-review"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added during the registry-wide review: referenced by existing terms and examples but previously unregistered."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

@@ -3,19 +3,22 @@
   "@id": "urn:solid:Application",
   "@type": "rdfs:Class",
   "rdfs:label": "Application",
-  "rdfs:comment": "An ActivityStreams actor representing a software application — a bot, service, or automated client.",
+  "rdfs:comment": "An ActivityStreams actor that is a software application — a client app or bot acting under its own identity.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Application",
   "rdfs:seeAlso": [
-    "https://www.w3.org/ns/activitystreams#Service",
+    "urn:solid:Service",
     "http://www.w3.org/ns/prov#SoftwareAgent",
     "urn:solid:Agent"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Agent"
+    "urn:solid:Agent",
+    "urn:solid:Service",
+    "urn:solid:SoftwareAgent",
+    "urn:solid:SoftwareApplication"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "One of the AS actor types alongside `as:Person`, `as:Group`, `as:Organization`, `as:Service`. Use for non-human actors that are software (clients, bots, automation). For PROV-grade software-agent attribution, see `prov:SoftwareAgent`.",
+  "notes": "One of the AS actor types alongside `as:Person`, `as:Group`, `as:Organization`, `as:Service`. Use for non-human actors that are software (clients, bots, automation). For PROV-grade software-agent attribution, see `prov:SoftwareAgent`. AS2 defines Application as \"a software application\" and Service as \"a service of any kind\"; Mastodon marks bot accounts as `Service`, so choosing between the two is convention, not semantics.",
   "examples": [
     {
       "title": "A bot as an Application",
@@ -40,6 +43,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Narrowed comment to software applications; added Service to notToBeConfusedWith; seeAlso uses urn:solid:Service; noted Mastodon's Service-for-bots convention."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -35,12 +35,15 @@
   "rdfs:comment": "A project the person is currently active on.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/currentProject",
   "rdfs:seeAlso": [
-    "http://xmlns.com/foaf/0.1/pastProject"
+    "urn:solid:pastProject"
   ],
   "rdfs:domain": "urn:solid:Person",
+  "notToBeConfusedWith": [
+    "urn:solid:pastProject"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Repeat to list multiple active projects. Move to `foaf:pastProject` when the person stops being involved. The value can be any resource — typically a `urn:solid:Project` or a `urn:solid:Document` describing the project.",
+  "notes": "Repeat to list multiple active projects. Move to `urn:solid:pastProject` when the person stops being involved. The value can be any resource — typically a `urn:solid:Project` or a `urn:solid:Document` describing the project.",
   "examples": [
     {
       "title": "Person actively working on a project",
@@ -64,6 +67,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso/notes use urn:solid:pastProject; added notToBeConfusedWith pastProject."
     }
   ],
   "see_also": {

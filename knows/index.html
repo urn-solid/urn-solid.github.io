@@ -41,7 +41,7 @@
   "rdfs:range": "urn:solid:Person",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Asymmetric by default: A knows B does not imply B knows A. Use repeatedly to enumerate the social graph. The FOAF tradition treats this loosely — any acknowledged acquaintance counts.",
+  "notes": "Not declared symmetric: A knows B does not entail B knows A, so publish both directions if both hold. FOAF requires some reciprocated interaction (met, corresponded), not just knowing of someone. It does not imply friendship. Repeat to enumerate the social graph.",
   "examples": [
     {
       "title": "Alice knows Bob",
@@ -65,6 +65,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: replaced 'asymmetric' with 'not declared symmetric'; FOAF requires reciprocated interaction."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -72,7 +84,11 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:Follow",
+    "urn:solid:hasRelated"
+  ]
 }
 
 </script>

@@ -3,17 +3,18 @@
   "@id": "urn:solid:hadActivity",
   "@type": "rdf:Property",
   "rdfs:label": "hadActivity",
-  "rdfs:comment": "An activity that contributed to a qualified PROV relation — typically attached to a qualified usage, generation, or derivation.",
+  "rdfs:comment": "The optional Activity that mediated a qualified PROV influence — used on prov:Derivation (the activity that did the deriving), prov:Delegation (the activity the delegation was for), prov:Start and prov:End.",
   "owl:sameAs": "http://www.w3.org/ns/prov#hadActivity",
   "rdfs:seeAlso": [
-    "urn:solid:Activity",
+    "http://www.w3.org/ns/prov#Activity",
     "urn:solid:Derivation",
-    "http://www.w3.org/ns/prov#qualifiedDerivation"
+    "urn:solid:Delegation",
+    "urn:solid:qualifiedDerivation"
   ],
-  "rdfs:range": "urn:solid:Activity",
+  "rdfs:range": "http://www.w3.org/ns/prov#Activity",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Used inside qualified PROV relations (`prov:qualifiedDerivation`, `prov:qualifiedUsage`, `prov:qualifiedGeneration`) to name the specific Activity that mediated the relation. Lets you attach a Plan, Role, or timing to the connection.",
+  "notes": "Not used on Usage, Generation, Communication or Invalidation — those name their activity with `prov:activity`. Domain `prov:Influence`, range `prov:Activity`.",
   "examples": [
     {
       "title": "Derivation referencing the activity that produced it",
@@ -37,6 +38,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected which qualified influences use hadActivity; range now prov:Activity IRI; updated seeAlso."
     }
   ],
   "see_also": {

@@ -35,13 +35,18 @@
   "rdfs:comment": "A personal mailbox — typically a mailto: IRI.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/mbox",
   "rdfs:seeAlso": [
-    "https://schema.org/email",
-    "http://www.w3.org/2006/vcard/ns#hasEmail"
+    "urn:solid:email",
+    "urn:solid:hasEmail"
   ],
   "rdfs:domain": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:email",
+    "urn:solid:hasEmail",
+    "urn:solid:mbox_sha1sum"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Inverse-functional in FOAF: an mbox value uniquely identifies its owner, so two agents with the same mbox are the same agent. Prefer a `mailto:` IRI as the value, not a bare string. For a plain string email, see `vcard:hasEmail` or `schema:email`.",
+  "notes": "Inverse-functional in FOAF: an mbox value uniquely identifies its owner, so two agents with the same mbox are the same agent. Prefer a `mailto:` IRI as the value, not a bare string. For a plain string email use `urn:solid:email` (schema:email). For vCard-flavoured data use `urn:solid:hasEmail`.",
   "examples": [
     {
       "title": "Person with mailbox",
@@ -65,6 +70,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected plain-string email pointer to urn:solid:email; linked registry email terms; added notToBeConfusedWith."
     }
   ],
   "see_also": {

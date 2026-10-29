@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:alumniOf — urn-solid</title>
-<meta name="description" content="An organization the person previously attended or worked for.">
+<meta name="description" content="An organization the person is an alumnus/alumna of — typically a school or university they attended; loosely also a former employer.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/alumniOf/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:alumniOf">
-<meta property="og:description" content="An organization the person previously attended or worked for.">
+<meta property="og:description" content="An organization the person is an alumnus/alumna of — typically a school or university they attended; loosely also a former employer.">
 <meta property="og:url" content="https://urn-solid.com/alumniOf/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:alumniOf">
-<meta name="twitter:description" content="An organization the person previously attended or worked for.">
+<meta name="twitter:description" content="An organization the person is an alumnus/alumna of — typically a school or university they attended; loosely also a former employer.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,11 +32,11 @@
   "@id": "urn:solid:alumniOf",
   "@type": "rdf:Property",
   "rdfs:label": "alumniOf",
-  "rdfs:comment": "An organization the person previously attended or worked for.",
+  "rdfs:comment": "An organization the person is an alumnus/alumna of — typically a school or university they attended; loosely also a former employer.",
   "owl:sameAs": "https://schema.org/alumniOf",
   "rdfs:seeAlso": [
     "urn:solid:worksFor",
-    "https://schema.org/EducationalOrganization"
+    "urn:solid:EducationalOrganization"
   ],
   "rdfs:domain": "urn:solid:Person",
   "notToBeConfusedWith": [
@@ -44,7 +44,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use for past educational and (loosely) professional affiliations. Repeat for multiple. Distinct from `urn:solid:worksFor` which implies *current* employment. Often pointed at a `schema:EducationalOrganization` (university, school) but any past Organization works.",
+  "notes": "Use for past educational and (loosely) professional affiliations. Repeat for multiple. Distinct from `urn:solid:worksFor` which implies *current* employment. Often pointed at a `urn:solid:EducationalOrganization` (university, school) but any past Organization works.",
   "examples": [
     {
       "title": "Person with alumni affiliation",
@@ -68,6 +68,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment tightened to schema.org's alumni sense; seeAlso uses urn:solid:EducationalOrganization."
     }
   ],
   "see_also": {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:hasLanguage — urn-solid</title>
-<meta name="description" content="A language the subject communicates in — typically a BCP 47 language tag.">
+<meta name="description" content="A language the subject communicates in — a language IRI or a node carrying a BCP 47 tag.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/hasLanguage/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:hasLanguage">
-<meta property="og:description" content="A language the subject communicates in — typically a BCP 47 language tag.">
+<meta property="og:description" content="A language the subject communicates in — a language IRI or a node carrying a BCP 47 tag.">
 <meta property="og:url" content="https://urn-solid.com/hasLanguage/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:hasLanguage">
-<meta name="twitter:description" content="A language the subject communicates in — typically a BCP 47 language tag.">
+<meta name="twitter:description" content="A language the subject communicates in — a language IRI or a node carrying a BCP 47 tag.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:hasLanguage",
   "@type": "rdf:Property",
   "rdfs:label": "hasLanguage",
-  "rdfs:comment": "A language the subject communicates in — typically a BCP 47 language tag.",
+  "rdfs:comment": "A language the subject communicates in — a language IRI or a node carrying a BCP 47 tag.",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasLanguage",
   "rdfs:seeAlso": [
     "urn:solid:knowsLanguage",
@@ -40,11 +40,12 @@
   ],
   "notToBeConfusedWith": [
     "urn:solid:knowsLanguage",
-    "urn:solid:language"
+    "urn:solid:language",
+    "urn:solid:inLanguage"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "vCard's communicates-in-language predicate. Functionally similar to schema's `urn:solid:knowsLanguage`; pick whichever matches your data flavor. Distinct from `urn:solid:language` (the language a *resource* is in). Value is typically a BCP 47 tag.",
+  "notes": "vCard's communicates-in-language predicate. Upstream it is an object property; the BCP 47 tag goes on a node via vcard:value (or use a language IRI such as http://id.loc.gov/vocabulary/iso639-1/en). Functionally similar to schema's `urn:solid:knowsLanguage`; pick whichever matches your data flavor. Distinct from `urn:solid:language` (the language a *resource* is in).",
   "examples": [
     {
       "title": "vCard with preferred languages",
@@ -52,7 +53,10 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/cards/alice",
         "@type": "urn:solid:VCard",
-        "urn:solid:hasLanguage": ["en", "fr"]
+        "urn:solid:hasLanguage": [
+          { "@id": "http://id.loc.gov/vocabulary/iso639-1/en" },
+          { "@id": "http://id.loc.gov/vocabulary/iso639-1/fr" }
+        ]
       }
     }
   ],
@@ -68,6 +72,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes/comment reflect object-property usage; example uses language IRIs instead of bare tags."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

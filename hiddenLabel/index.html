@@ -38,14 +38,13 @@
     "urn:solid:prefLabel",
     "urn:solid:altLabel"
   ],
-  "rdfs:domain": "urn:solid:Concept",
   "notToBeConfusedWith": [
     "urn:solid:prefLabel",
     "urn:solid:altLabel"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use for misspellings, deprecated names, slang — strings users might search for that you don't want to surface in the UI. SKOS rule: `prefLabel`, `altLabel`, and `hiddenLabel` values must be pairwise disjoint within a language for the same Concept.",
+  "notes": "Use for misspellings, deprecated names, slang — strings users might search for that you don't want to surface in the UI. SKOS rule: `prefLabel`, `altLabel`, and `hiddenLabel` values must be pairwise disjoint within a language for the same Concept. Upstream SKOS declares no domain: usable on any resource (Concept, ConceptScheme, Collection).",
   "examples": [
     {
       "title": "Concept with searchable misspellings",
@@ -70,6 +69,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain (none upstream)."
     }
   ],
   "see_also": {

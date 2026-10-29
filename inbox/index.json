@@ -7,12 +7,14 @@
   "owl:sameAs": "http://www.w3.org/ns/ldp#inbox",
   "rdfs:seeAlso": [
     "https://www.w3.org/ns/activitystreams#inbox",
-    "https://www.w3.org/TR/ldn/"
+    "https://www.w3.org/TR/ldn/",
+    "urn:solid:Notification",
+    "http://www.w3.org/ns/solid/terms#inbox"
   ],
   "rdfs:range": "urn:solid:Container",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "From Linked Data Notifications (LDN). The value is a Container that accepts incoming notifications about the subject — anyone can POST to it to leave a notification (subject to access control). ActivityPub re-uses the concept under `as:inbox` (a separate but interoperable IRI).",
+  "notes": "From Linked Data Notifications (LDN). The value is a Container that accepts incoming notifications about the subject — anyone can POST to it to leave a notification (subject to access control). ActivityPub re-uses the concept under `as:inbox` (a separate but interoperable IRI). `solid:inbox` is the deprecated equivalent; consumers should accept both.",
   "examples": [
     {
       "title": "Person with an inbox",
@@ -36,6 +38,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso Notification and deprecated solid:inbox; notes say accept both."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -43,5 +57,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:outbox"
+  ]
 }

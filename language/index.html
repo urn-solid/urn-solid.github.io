@@ -35,12 +35,17 @@
   "rdfs:comment": "A language of the resource — typically a BCP 47 tag.",
   "owl:sameAs": "http://purl.org/dc/terms/language",
   "rdfs:seeAlso": [
-    "https://schema.org/inLanguage",
-    "http://www.w3.org/2006/vcard/ns#hasLanguage"
+    "urn:solid:inLanguage",
+    "urn:solid:LinguisticSystem"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:inLanguage",
+    "urn:solid:hasLanguage",
+    "urn:solid:knowsLanguage"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use BCP 47 language tags as values (`\"en\"`, `\"en-US\"`, `\"de-CH\"`). For multilingual resources, repeat. JSON-LD documents can also express language directly on string literals via `@language` — this property is for declaring the resource's overall language(s).",
+  "notes": "Use BCP 47 language tags as values (`\"en\"`, `\"en-US\"`, `\"de-CH\"`). For multilingual resources, repeat. JSON-LD documents can also express language directly on string literals via `@language` — this property is for declaring the resource's overall language(s). `urn:solid:inLanguage` is the schema.org equivalent; `urn:solid:hasLanguage`/`urn:solid:knowsLanguage` describe languages a person speaks, not a resource's language.",
   "examples": [
     {
       "title": "Document in English",
@@ -64,6 +69,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added notToBeConfusedWith inLanguage/hasLanguage/knowsLanguage; seeAlso replaces vcard:hasLanguage with urn:solid:LinguisticSystem."
     }
   ],
   "see_also": {

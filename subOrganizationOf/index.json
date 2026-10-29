@@ -3,7 +3,7 @@
   "@id": "urn:solid:subOrganizationOf",
   "@type": "rdf:Property",
   "rdfs:label": "subOrganizationOf",
-  "rdfs:comment": "The parent Organization that this OrganizationalUnit is part of — the inverse of `hasSubOrganization`.",
+  "rdfs:comment": "The parent Organization of which this Organization is a part — e.g. a subsidiary's parent company or a department's parent; inverse of hasSubOrganization. For OrganizationalUnits specifically, unitOf is the narrower form.",
   "owl:sameAs": "http://www.w3.org/ns/org#subOrganizationOf",
   "rdfs:seeAlso": [
     "urn:solid:hasSubOrganization",
@@ -12,7 +12,8 @@
   "rdfs:domain": "urn:solid:Organization",
   "rdfs:range": "urn:solid:Organization",
   "notToBeConfusedWith": [
-    "urn:solid:hasSubOrganization"
+    "urn:solid:hasSubOrganization",
+    "urn:solid:unitOf"
   ],
   "status": "stable",
   "added": "2026-04-19",
@@ -40,6 +41,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment generalised to any sub-organization (unitOf is the OrganizationalUnit-specific form); added unitOf to notToBeConfusedWith."
     }
   ],
   "see_also": {

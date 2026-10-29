@@ -41,11 +41,12 @@
   ],
   "notToBeConfusedWith": [
     "urn:solid:member",
-    "urn:solid:hasMember"
+    "urn:solid:hasMember",
+    "urn:solid:items"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "PROV's collection-membership predicate (`prov:Collection` is distinct from `as:Collection` and `ldp:Container`). Use only in PROV-flavored contexts; for FOAF Group membership use `urn:solid:member`, for vCard Group use `urn:solid:hasMember`, for LDP containers use `urn:solid:contains`.",
+  "notes": "PROV's collection-membership predicate (`prov:Collection` is distinct from `as:Collection` and `ldp:Container`). Use only in PROV-flavored contexts; for FOAF Group membership use `urn:solid:member`, for vCard Group use `urn:solid:hasMember`, for LDP containers use `urn:solid:contains`, for ActivityStreams Collections use `urn:solid:items`.",
   "examples": [
     {
       "title": "PROV Collection with members",
@@ -72,6 +73,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Disambiguated from ActivityStreams urn:solid:items."
     }
   ],
   "see_also": {

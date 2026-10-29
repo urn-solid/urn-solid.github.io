@@ -12,7 +12,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The iCal task primitive — every native to-do/reminder app on macOS, iOS, Windows, and Linux understands this. Pairs with CalDAV for sync. Already used by LOSOS: the default registry maps `ical:Vtodo` to the todo pane, so urn:solid:Vtodo is the cross-vocab canonical form for that pane.",
+  "notes": "The iCal task primitive — every native to-do/reminder app on macOS, iOS, Windows, and Linux understands this. Pairs with CalDAV for sync. `ical:due` is the key date for a to-do; `ical:status` takes NEEDS-ACTION, IN-PROCESS, COMPLETED or CANCELLED. In LOSOS the todo pane is registered on `urn:solid:Tracker` (the list); individual Vtodos render inside it.",
   "examples": [
     {
       "title": "A simple to-do item",
@@ -20,7 +20,16 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/todos/buy-milk",
         "@type": "urn:solid:Vtodo",
-        "urn:solid:dtstart": { "@value": "2026-04-19T17:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+        "http://www.w3.org/2002/12/cal/ical#summary": "Buy milk",
+        "urn:solid:dtstart": {
+          "@value": "2026-04-19T17:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "http://www.w3.org/2002/12/cal/ical#due": {
+          "@value": "2026-04-19T19:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "http://www.w3.org/2002/12/cal/ical#status": "NEEDS-ACTION"
       }
     }
   ],
@@ -36,6 +45,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes aligned with Tracker (LOSOS todo pane is on Tracker); mention ical:due and ical:status; example adds summary, due and status."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -43,5 +64,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:Tracker"
+  ]
 }

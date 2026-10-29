@@ -40,11 +40,12 @@
   ],
   "rdfs:domain": "urn:solid:Distribution",
   "notToBeConfusedWith": [
-    "urn:solid:downloadURL"
+    "urn:solid:downloadURL",
+    "urn:solid:landingPage"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Distinct from `urn:solid:downloadURL`: `accessURL` is for indirect access — a landing page that explains how to obtain the data, an API root, an OAI-PMH endpoint. A Distribution must have at least one of `accessURL` or `downloadURL` per DCAT spec.",
+  "notes": "Distinct from `urn:solid:downloadURL`: `accessURL` is for indirect access — a landing page that explains how to obtain the data, an API root, an OAI-PMH endpoint. DCAT uses `accessURL` for every access route except a plain download link (where `downloadURL` is preferred). DCAT-AP makes `accessURL` mandatory, so publishers commonly set both (`accessURL` = `downloadURL` for simple files). If data is reachable only via a landing page, repeat that page as `accessURL`.",
   "examples": [
     {
       "title": "Distribution with an API access URL",
@@ -68,6 +69,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Removed invented DCAT cardinality rule; added DCAT-AP and landing-page guidance; added landingPage to notToBeConfusedWith."
     }
   ],
   "see_also": {
