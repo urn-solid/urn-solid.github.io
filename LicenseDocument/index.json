@@ -7,11 +7,11 @@
   "owl:sameAs": "http://purl.org/dc/terms/LicenseDocument",
   "rdfs:seeAlso": [
     "urn:solid:license",
-    "http://purl.org/dc/terms/RightsStatement"
+    "urn:solid:RightsStatement"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "The class for license documents themselves — Creative Commons license pages, SPDX license texts, custom EULAs. Use as the `@type` of the resource pointed to by `urn:solid:license`. Existing well-known licenses (Creative Commons, SPDX) usually don't carry this type explicitly, but it's the formal class.",
+  "notes": "The class for license documents themselves — Creative Commons license pages, SPDX license texts, custom EULAs. Use as the `@type` of the resource pointed to by `urn:solid:license`. Existing well-known licenses (Creative Commons, SPDX) usually don't carry this type explicitly, but it's the formal class. Subclass of `urn:solid:RightsStatement` (dcterms:LicenseDocument rdfs:subClassOf dcterms:RightsStatement).",
   "examples": [
     {
       "title": "A custom license document",
@@ -35,6 +35,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Noted subclass relation to RightsStatement; seeAlso now uses urn:solid:RightsStatement."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -42,5 +54,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:Policy"
+  ]
 }

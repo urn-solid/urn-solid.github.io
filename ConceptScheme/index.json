@@ -10,9 +10,12 @@
     "urn:solid:hasTopConcept",
     "urn:solid:inScheme"
   ],
+  "notToBeConfusedWith": [
+    "urn:solid:Collection"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The container for a controlled vocabulary. Concepts join via `urn:solid:inScheme`; the entry-point Concepts (no broader concept in this scheme) are listed via `urn:solid:hasTopConcept`. The IRI of the ConceptScheme itself is the canonical reference for the vocabulary as a whole.",
+  "notes": "The container for a controlled vocabulary. Concepts join via `urn:solid:inScheme`; the entry-point Concepts (no broader concept in this scheme) are listed via `urn:solid:hasTopConcept`. The IRI of the ConceptScheme itself is the canonical reference for the vocabulary as a whole. Not `urn:solid:Collection` (an ActivityStreams collection). For grouping concepts within a scheme use skos:Collection (http://www.w3.org/2004/02/skos/core#Collection).",
   "examples": [
     {
       "title": "A topic taxonomy",
@@ -40,6 +43,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added disambiguation against the ActivityStreams urn:solid:Collection."
     }
   ],
   "see_also": {

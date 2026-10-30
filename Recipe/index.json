@@ -7,11 +7,11 @@
   "owl:sameAs": "https://schema.org/Recipe",
   "rdfs:seeAlso": [
     "urn:solid:CreativeWork",
-    "https://schema.org/HowTo"
+    "urn:solid:HowTo"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `schema:HowTo` (and indirectly of `urn:solid:CreativeWork`). Pair with `schema:recipeIngredient`, `schema:recipeInstructions`, `schema:recipeYield`, `schema:cookTime`, `schema:nutrition`. Heavily used by recipe sites for SEO rich results.",
+  "notes": "Subclass of `urn:solid:HowTo` (schema:HowTo) (and indirectly of `urn:solid:CreativeWork`). Pair with `schema:recipeIngredient`, `schema:recipeInstructions`, `schema:recipeYield`, `schema:cookTime`, `schema:nutrition`. Heavily used by recipe sites for SEO rich results.",
   "examples": [
     {
       "title": "A simple recipe",
@@ -20,7 +20,11 @@
         "@id": "https://example.org/recipes/pancakes",
         "@type": "urn:solid:Recipe",
         "urn:solid:name": "Pancakes",
-        "https://schema.org/recipeIngredient": ["1 cup flour", "1 egg", "1 cup milk"],
+        "https://schema.org/recipeIngredient": [
+          "1 cup flour",
+          "1 egg",
+          "1 cup milk"
+        ],
         "https://schema.org/recipeYield": "4 servings"
       }
     }
@@ -37,6 +41,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso and notes reference urn:solid:HowTo."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -44,5 +60,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:HowTo"
+  ]
 }

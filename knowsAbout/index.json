@@ -9,14 +9,14 @@
     "urn:solid:topic_interest",
     "urn:solid:interest"
   ],
-  "rdfs:domain": "urn:solid:Person",
+  "rdfs:domain": "urn:solid:Agent",
   "notToBeConfusedWith": [
     "urn:solid:topic_interest",
     "urn:solid:interest"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use to declare expertise (\"Alice knows about category theory\") rather than mere interest (`urn:solid:topic_interest`) or a page about an interest (`urn:solid:interest`). Value can be a string keyword or a SKOS Concept / topic resource. Repeat for multiple areas of expertise.",
+  "notes": "Use to declare expertise (\"Alice knows about category theory\") rather than mere interest (`urn:solid:topic_interest`) or a page about an interest (`urn:solid:interest`). Value can be a string keyword or a SKOS Concept / topic resource. Repeat for multiple areas of expertise. schema.org domain: Person or Organization.",
   "examples": [
     {
       "title": "Person with declared expertise",
@@ -40,6 +40,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain widened from Person to Agent (schema.org domain is Person or Organization)."
     }
   ],
   "see_also": {

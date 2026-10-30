@@ -41,11 +41,12 @@
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "notToBeConfusedWith": [
     "urn:solid:created",
-    "urn:solid:dateModified"
+    "urn:solid:dateModified",
+    "urn:solid:datePublished"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Schema.org's creation timestamp. Functionally equivalent to `dcterms:created` (`urn:solid:created`); pick by namespace flavor — schema.org for SEO-rich JSON-LD on web pages, dcterms for bibliographic/library data.",
+  "notes": "Schema.org's creation timestamp. Functionally equivalent to `dcterms:created` (`urn:solid:created`); pick by namespace flavor — schema.org for SEO-rich JSON-LD on web pages, dcterms for bibliographic/library data. schema.org range: Date or DateTime (ISO 8601); this registry declares xsd:dateTime, so prefer a full timestamp.",
   "examples": [
     {
       "title": "Article with creation date",
@@ -53,7 +54,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello",
         "@type": "urn:solid:Article",
-        "urn:solid:dateCreated": "2026-04-18"
+        "urn:solid:dateCreated": "2026-04-18T10:00:00Z"
       }
     }
   ],
@@ -69,6 +70,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example now a full xsd:dateTime; noted schema.org range is Date or DateTime."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

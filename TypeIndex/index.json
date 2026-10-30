@@ -6,22 +6,24 @@
   "rdfs:comment": "A registry that maps RDF classes to the locations in a Solid pod where instances of those classes are stored.",
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#TypeIndex",
   "rdfs:seeAlso": [
-    "http://www.w3.org/ns/solid/terms#TypeRegistration",
-    "http://www.w3.org/ns/solid/terms#publicTypeIndex",
-    "http://www.w3.org/ns/solid/terms#privateTypeIndex"
+    "urn:solid:TypeRegistration",
+    "urn:solid:publicTypeIndex",
+    "urn:solid:privateTypeIndex",
+    "http://www.w3.org/ns/solid/terms#ListedDocument",
+    "http://www.w3.org/ns/solid/terms#UnlistedDocument",
+    "https://solid.github.io/type-indexes/"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "The discovery mechanism Solid apps use to find where a user's data of a given type lives. A WebID typically links to one public TypeIndex (`solid:publicTypeIndex`) and one private TypeIndex (`solid:privateTypeIndex`). Each holds a set of `solid:TypeRegistration`s.",
+  "notes": "The discovery mechanism Solid apps use to find where a user's data of a given type lives. The WebID profile links the public index via `solid:publicTypeIndex`; the private index is linked via `solid:privateTypeIndex` from the preferences file (`pim:preferencesFile`). Index documents are additionally typed `solid:ListedDocument` (public) or `solid:UnlistedDocument` (private) and contain `solid:TypeRegistration` entries.",
   "examples": [
     {
-      "title": "WebID pointing at type indexes",
+      "title": "WebID pointing at its public type index",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/card#me",
         "@type": "urn:solid:Person",
-        "http://www.w3.org/ns/solid/terms#publicTypeIndex": { "@id": "https://alice.example.org/settings/publicTypeIndex.ttl" },
-        "http://www.w3.org/ns/solid/terms#privateTypeIndex": { "@id": "https://alice.example.org/settings/privateTypeIndex.ttl" }
+        "http://www.w3.org/ns/solid/terms#publicTypeIndex": { "@id": "https://alice.example.org/settings/publicTypeIndex.ttl" }
       }
     }
   ],
@@ -37,6 +39,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: private index is linked from the preferences file; mention Listed/UnlistedDocument; removed privateTypeIndex from profile example; seeAlso uses registry terms."
     }
   ],
   "see_also": {

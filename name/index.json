@@ -3,18 +3,26 @@
   "@id": "urn:solid:name",
   "@type": "rdf:Property",
   "rdfs:label": "name",
-  "rdfs:comment": "A name for the subject.",
+  "rdfs:comment": "A name for some thing — a plain-text display name for a person, organization, document, project or any other resource.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/name",
   "rdfs:seeAlso": [
     "https://schema.org/name",
     "http://www.w3.org/2006/vcard/ns#fn",
     "http://www.w3.org/2000/01/rdf-schema#label"
   ],
-  "rdfs:domain": "urn:solid:Agent",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:nick",
+    "urn:solid:label",
+    "urn:solid:preferredUsername",
+    "urn:solid:familyName",
+    "urn:solid:fn",
+    "urn:solid:headline",
+    "urn:solid:title"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "The canonical display name. For structured names (given/family), use `foaf:givenName` and `foaf:familyName` directly until urn-solid ships equivalents.",
+  "notes": "The canonical display name. For structured names use `urn:solid:givenName` and `urn:solid:familyName`.",
   "examples": [
     {
       "title": "On a Person",
@@ -38,6 +46,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "bootstrap",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped Agent domain (upstream domain is owl:Thing); widened comment; corrected stale givenName/familyName note; added notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

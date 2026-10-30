@@ -36,14 +36,17 @@
   "owl:sameAs": "http://purl.org/dc/terms/rights",
   "rdfs:seeAlso": [
     "urn:solid:license",
-    "https://schema.org/copyrightHolder"
+    "https://schema.org/copyrightNotice",
+    "urn:solid:RightsStatement"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:license"
+    "urn:solid:license",
+    "urn:solid:accessRights",
+    "urn:solid:rightsHolder"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Free-form rights statement (e.g. \"Copyright 2026 Acme Corp. All rights reserved.\") or a link to a `dcterms:RightsStatement` resource. For machine-actionable permissions, use `urn:solid:license` with an SPDX or Creative Commons URL.",
+  "notes": "Free-form rights statement (e.g. \"Copyright 2026 Acme Corp. All rights reserved.\") or a link to a `urn:solid:RightsStatement` resource. For machine-actionable permissions, use `urn:solid:license` with an SPDX or Creative Commons URL.",
   "examples": [
     {
       "title": "Document with a rights statement",
@@ -67,6 +70,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added accessRights/rightsHolder to notToBeConfusedWith; seeAlso schema:copyrightNotice and urn:solid:RightsStatement."
     }
   ],
   "see_also": {

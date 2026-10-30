@@ -23,7 +23,10 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
         "urn:solid:onProperty": { "@id": "urn:solid:author" },
-        "urn:solid:maxCardinality": 5
+        "urn:solid:maxCardinality": {
+          "@value": "5",
+          "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        }
       }
     }
   ],
@@ -39,6 +42,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example value typed xsd:nonNegativeInteger."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -46,5 +61,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:cardinality"
+  ]
 }

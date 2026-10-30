@@ -36,12 +36,13 @@
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasCategory",
   "rdfs:seeAlso": [
     "urn:solid:keywords",
-    "urn:solid:subject"
+    "urn:solid:subject",
+    "http://www.w3.org/2006/vcard/ns#category"
   ],
   "rdfs:domain": "urn:solid:VCard",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "vCard's category/tag predicate — typical values are \"work\", \"personal\", \"family\", \"friend\". Repeat for multiple categories. For general-purpose tagging of resources (not specifically vCards), prefer `urn:solid:keywords` or `urn:solid:subject`.",
+  "notes": "vCard's category/tag predicate. For plain string tags (\"work\", \"family\") use vcard:category (http://www.w3.org/2006/vcard/ns#category); hasCategory is the object form (category node or concept IRI). Repeat for multiple categories. For general-purpose tagging of resources (not specifically vCards), prefer `urn:solid:keywords` or `urn:solid:subject`.",
   "examples": [
     {
       "title": "vCard categorized as a work contact",
@@ -50,7 +51,10 @@
         "@id": "https://example.org/cards/alice-work",
         "@type": "urn:solid:VCard",
         "urn:solid:fn": "Alice Liddell",
-        "urn:solid:hasCategory": ["work", "engineering"]
+        "urn:solid:hasCategory": [
+          { "@id": "https://example.org/categories#work" },
+          { "@id": "https://example.org/categories#engineering" }
+        ]
       }
     }
   ],
@@ -66,6 +70,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes distinguish object property hasCategory from vcard:category; added vcard:category to seeAlso; example uses category IRIs."
     }
   ],
   "see_also": {

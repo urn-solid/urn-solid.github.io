@@ -6,12 +6,16 @@
   "rdfs:comment": "An audio file with structured metadata — duration, encoding, transcript.",
   "owl:sameAs": "https://schema.org/AudioObject",
   "rdfs:seeAlso": [
-    "https://www.w3.org/ns/activitystreams#Audio",
-    "https://schema.org/MusicRecording"
+    "urn:solid:Audio",
+    "urn:solid:MusicRecording"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Audio",
+    "urn:solid:MusicRecording"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Schema.org's audio type — podcasts, voice memos, sound effects. Carries `schema:contentUrl`, `schema:duration`, `schema:encodingFormat`, `schema:transcript`. For music tracks specifically, `schema:MusicRecording` adds artist/album fields.",
+  "notes": "Schema.org's audio type — podcasts, voice memos, sound effects. Carries `schema:contentUrl`, `schema:duration`, `schema:encodingFormat`, `schema:transcript`. For music tracks specifically, `urn:solid:MusicRecording` adds artist/album fields. Use `urn:solid:Audio` (as:Audio) in ActivityPub attachments.",
   "examples": [
     {
       "title": "A podcast episode",
@@ -20,7 +24,7 @@
         "@id": "https://example.org/podcasts/ep-42.mp3",
         "@type": "urn:solid:AudioObject",
         "https://schema.org/contentUrl": { "@id": "https://example.org/podcasts/ep-42.mp3" },
-        "urn:solid:duration": "PT45M",
+        "https://schema.org/duration": "PT45M",
         "https://schema.org/encodingFormat": "audio/mpeg"
       }
     }
@@ -37,6 +41,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example uses schema:duration; disambiguated from urn:solid:Audio and urn:solid:MusicRecording."
     }
   ],
   "see_also": {

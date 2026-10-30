@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:qualifiedDerivation — urn-solid</title>
-<meta name="description" content="A qualified PROV Derivation linked to the entity — adds role, activity, and other context to a `wasDerivedFrom` relation.">
+<meta name="description" content="A qualified PROV Derivation linked to the entity — qualifies wasDerivedFrom with the Activity (prov:hadActivity), the Usage of the source (prov:hadUsage) and the Generation of the result (prov:hadGeneration).">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/qualifiedDerivation/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:qualifiedDerivation">
-<meta property="og:description" content="A qualified PROV Derivation linked to the entity — adds role, activity, and other context to a `wasDerivedFrom` relation.">
+<meta property="og:description" content="A qualified PROV Derivation linked to the entity — qualifies wasDerivedFrom with the Activity (prov:hadActivity), the Usage of the source (prov:hadUsage) and the Generation of the result (prov:hadGeneration).">
 <meta property="og:url" content="https://urn-solid.com/qualifiedDerivation/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:qualifiedDerivation">
-<meta name="twitter:description" content="A qualified PROV Derivation linked to the entity — adds role, activity, and other context to a `wasDerivedFrom` relation.">
+<meta name="twitter:description" content="A qualified PROV Derivation linked to the entity — qualifies wasDerivedFrom with the Activity (prov:hadActivity), the Usage of the source (prov:hadUsage) and the Generation of the result (prov:hadGeneration).">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,17 +32,20 @@
   "@id": "urn:solid:qualifiedDerivation",
   "@type": "rdf:Property",
   "rdfs:label": "qualifiedDerivation",
-  "rdfs:comment": "A qualified PROV Derivation linked to the entity — adds role, activity, and other context to a `wasDerivedFrom` relation.",
+  "rdfs:comment": "A qualified PROV Derivation linked to the entity — qualifies wasDerivedFrom with the Activity (prov:hadActivity), the Usage of the source (prov:hadUsage) and the Generation of the result (prov:hadGeneration).",
   "owl:sameAs": "http://www.w3.org/ns/prov#qualifiedDerivation",
   "rdfs:seeAlso": [
     "urn:solid:Derivation",
-    "urn:solid:wasDerivedFrom"
+    "urn:solid:wasDerivedFrom",
+    "urn:solid:hadActivity",
+    "urn:solid:hadUsage",
+    "urn:solid:hadGeneration"
   ],
   "rdfs:domain": "urn:solid:Entity",
   "rdfs:range": "urn:solid:Derivation",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use to attach a `urn:solid:Derivation` resource that qualifies the basic `urn:solid:wasDerivedFrom` link with role, plan, or activity. Pattern: when you need richer derivation metadata, keep both the unqualified `wasDerivedFrom` triple (for SPARQL convenience) AND the qualified form.",
+  "notes": "Use to attach a `urn:solid:Derivation` resource that qualifies the basic `urn:solid:wasDerivedFrom` link with the Activity (`prov:hadActivity`), the Usage of the source (`prov:hadUsage`) and the Generation of the result (`prov:hadGeneration`). Pattern: when you need richer derivation metadata, keep both the unqualified `wasDerivedFrom` triple (for SPARQL convenience) AND the qualified form.",
   "examples": [
     {
       "title": "Qualified derivation for a translation",
@@ -67,6 +70,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment/notes list the real Derivation qualifiers (hadActivity, hadUsage, hadGeneration) instead of role/plan; seeAlso adds them."
     }
   ],
   "see_also": {

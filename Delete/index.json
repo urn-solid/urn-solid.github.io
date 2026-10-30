@@ -7,11 +7,15 @@
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Delete",
   "rdfs:seeAlso": [
     "https://schema.org/DeleteAction",
-    "https://www.w3.org/ns/activitystreams#Tombstone"
+    "urn:solid:Tombstone"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Remove",
+    "urn:solid:Undo"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:Activity`. The wire-level signal that an object has been removed. Receivers typically replace their cached object with an `as:Tombstone` rather than dropping the record entirely, preserving links from elsewhere.",
+  "notes": "Subclass of `urn:solid:Activity`. The wire-level signal that an object has been removed. The origin server MAY replace the object with an `as:Tombstone` so its IRI keeps resolving; receiving servers remove or hide their copy. Distinct from `Remove`, which only ends membership in a target collection.",
   "examples": [
     {
       "title": "Alice deletes a note",
@@ -36,6 +40,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected Tombstone behaviour (origin server, not receivers); added notToBeConfusedWith Remove; seeAlso uses urn:solid:Tombstone."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

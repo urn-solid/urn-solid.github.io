@@ -7,9 +7,14 @@
   "owl:sameAs": "http://purl.org/dc/terms/license",
   "rdfs:seeAlso": [
     "https://schema.org/license",
-    "http://creativecommons.org/ns#license"
+    "http://creativecommons.org/ns#license",
+    "urn:solid:LicenseDocument"
   ],
   "rdfs:range": "http://purl.org/dc/terms/LicenseDocument",
+  "notToBeConfusedWith": [
+    "urn:solid:rights",
+    "urn:solid:accessRights"
+  ],
   "status": "stable",
   "added": "2026-04-18",
   "notes": "Value should be the license document's IRI (e.g. an SPDX URL or a Creative Commons license page), not free text. For unstructured rights statements use `urn:solid:rights` instead. SPDX (`https://spdx.org/licenses/MIT`) and Creative Commons URLs are the most interoperable choices.",
@@ -20,7 +25,9 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/code/lib",
         "@type": "urn:solid:Document",
-        "urn:solid:license": { "@id": "https://spdx.org/licenses/MIT" }
+        "urn:solid:license": {
+          "@id": "https://spdx.org/licenses/MIT"
+        }
       }
     }
   ],
@@ -36,6 +43,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added notToBeConfusedWith rights/accessRights; seeAlso urn:solid:LicenseDocument."
     }
   ],
   "see_also": {

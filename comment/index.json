@@ -11,11 +11,12 @@
     "https://www.w3.org/ns/activitystreams#inReplyTo"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Comment"
+    "urn:solid:Comment",
+    "urn:solid:description"
   ],
   "status": "stable",
   "added": "2026-04-25",
-  "notes": "Property form paired with the `urn:solid:Comment` class. Maps to `schema:comment` (a comment in response to the subject), distinct from `rdfs:comment` (a human-readable description of a vocabulary term). Use `comment` for user-generated reply content; use `rdfs:comment` (or `urn:solid:description`) for descriptive prose about a resource.",
+  "notes": "Property form paired with the `urn:solid:Comment` class. Maps to `schema:comment` (a comment in response to the subject), distinct from `rdfs:comment` (a human-readable description of a vocabulary term). Use `comment` for user-generated reply content; use `rdfs:comment` (or `urn:solid:description`) for descriptive prose about a resource. Not `rdfs:comment` (http://www.w3.org/2000/01/rdf-schema#comment), the RDFS human-readable description annotation.",
   "examples": [
     {
       "title": "Article with two comments",
@@ -42,6 +43,12 @@
       "at": "2026-04-25T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term — property form completing the Comment/comment case-pair."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Disambiguated schema:comment from rdfs:comment. Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

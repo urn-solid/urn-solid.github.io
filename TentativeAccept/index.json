@@ -4,7 +4,7 @@
   "@type": "rdfs:Class",
   "rdfs:label": "TentativeAccept",
   "rdfs:comment": "An ActivityStreams Activity indicating that the actor accepts the object provisionally — a soft \"yes, probably\" rather than a firm commitment.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#TentativeAccept",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#TentativeAccept",
   "rdfs:seeAlso": [
     "urn:solid:Accept",
     "urn:solid:Reject",
@@ -30,7 +30,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#TentativeAccept"
+      "https://www.w3.org/ns/activitystreams#TentativeAccept"
     ],
     "curatedBy": "claude-curate-next"
   },

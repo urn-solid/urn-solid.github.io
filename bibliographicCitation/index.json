@@ -6,13 +6,15 @@
   "rdfs:comment": "A bibliographic reference for the resource — a formatted citation string.",
   "owl:sameAs": "http://purl.org/dc/terms/bibliographicCitation",
   "rdfs:seeAlso": [
-    "https://schema.org/citation",
     "urn:solid:references"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:references"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "A formatted citation string as you'd see in a reference list (\"Author, A. (2026). Title. Journal, vol(issue), pages.\"). For machine-actionable citations with structured metadata, prefer linking to a `dcterms:BibliographicResource` via `urn:solid:references` instead.",
+  "notes": "A formatted citation string as you'd see in a reference list (\"Author, A. (2026). Title. Journal, vol(issue), pages.\"). This is the citation for the described resource itself, not for works it cites. For outgoing citations to other works use `urn:solid:references`. For structured metadata about this resource, use properties such as `urn:solid:creator`, `urn:solid:title`, `urn:solid:issued`, `urn:solid:isPartOf` and `urn:solid:identifier` on the resource directly. Not schema:citation, which points to works the subject cites.",
   "examples": [
     {
       "title": "Article with a citation",
@@ -36,6 +38,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Clarified this is the resource's own citation, not outgoing references; removed schema:citation from seeAlso (opposite direction); added notToBeConfusedWith references."
     }
   ],
   "see_also": {

@@ -31,6 +31,15 @@ const names = fs.readdirSync(ROOT, { withFileTypes: true })
   .filter(isTermDir)
   .sort();
 
+const known = new Set(names);
+
+// Every urn:solid:<Name> mentioned anywhere in a term file must be a registered term
+// (urn:solid:vocab/ is the meta-predicate namespace, not a term).
+const danglingRefs = (term) => {
+  const refs = JSON.stringify(term).matchAll(/urn:solid:([A-Za-z][A-Za-z0-9_-]*)/g);
+  return [...new Set([...refs].map(m => m[1]))].filter(n => n !== "vocab" && !known.has(n));
+};
+
 let failed = 0;
 let ok = 0;
 
@@ -38,12 +47,14 @@ for (const name of names) {
   const p = path.join(ROOT, name, "index.json");
   const term = JSON.parse(fs.readFileSync(p, "utf8"));
 
-  if (!validate(term)) {
+  const dangling = danglingRefs(term);
+  if (!validate(term) || dangling.length) {
     failed++;
     console.error(`[validate] FAIL ${p}`);
-    for (const err of validate.errors) {
+    for (const err of validate.errors || []) {
       console.error(`  ${err.instancePath || "/"} ${err.message}`);
     }
+    for (const n of dangling) console.error(`  unknown term urn:solid:${n}`);
   } else {
     ok++;
   }

@@ -7,11 +7,11 @@
   "owl:sameAs": "http://purl.org/dc/terms/educationLevel",
   "rdfs:seeAlso": [
     "https://schema.org/educationalLevel",
-    "urn:solid:audience"
+    "http://purl.org/dc/terms/audience"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Used in educational-resources metadata to declare what level of learner the resource is suitable for. Value is typically a controlled-vocabulary term (e.g. from a `schema:DefinedTerm` set) or a free-form string when no controlled vocab applies.",
+  "notes": "Used in educational-resources metadata to declare what level of learner the resource is suitable for. Value is typically a controlled-vocabulary term (e.g. from a `schema:DefinedTerm` set) or a free-form string when no controlled vocab applies. Sub-property of dcterms:audience (range dcterms:AgentClass) — not urn:solid:audience, which is ActivityStreams addressing.",
   "examples": [
     {
       "title": "Course material targeting undergraduates",
@@ -35,6 +35,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso now points to dcterms:audience instead of AS2 audience; noted sub-property relation."
     }
   ],
   "see_also": {

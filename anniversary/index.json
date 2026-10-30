@@ -3,7 +3,7 @@
   "@id": "urn:solid:anniversary",
   "@type": "rdf:Property",
   "rdfs:label": "anniversary",
-  "rdfs:comment": "An anniversary date associated with the subject — typically a wedding anniversary or other recurring date.",
+  "rdfs:comment": "The date of marriage, or equivalent, of the subject (RFC 6350 ANNIVERSARY).",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#anniversary",
   "rdfs:seeAlso": [
     "urn:solid:bday",
@@ -16,7 +16,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "vCard's recurring-date field — distinct from `urn:solid:birthday`/`urn:solid:bday`. ISO 8601 date. Common values are wedding anniversaries, founding dates of organizations, or other yearly remembrances. May repeat for multiple anniversaries.",
+  "notes": "vCard's ANNIVERSARY field — distinct from `urn:solid:birthday`/`urn:solid:bday`. ISO 8601 date. At most one value per card; for an organization founding date use schema:foundingDate. The registry range is xsd:date, but upstream declares xsd:dateTime | xsd:gYear.",
   "examples": [
     {
       "title": "Person with an anniversary",
@@ -41,6 +41,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Narrowed to date of marriage or equivalent per RFC 6350; removed founding-date and repeat claims; noted upstream range."
     }
   ],
   "see_also": {

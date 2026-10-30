@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:alsoKnownAs — urn-solid</title>
-<meta name="description" content="An alternate identifier for an ActivityStreams Object — typically a previous identity an Actor used before migrating servers, kept as a back-reference so old followers can find them.">
+<meta name="description" content="An alternate identifier for an ActivityStreams Object — in account migration, a previous identity of an actor (Person, Application, Group, Organization or Service), listed by the new account to show it consents to the move.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/alsoKnownAs/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:alsoKnownAs">
-<meta property="og:description" content="An alternate identifier for an ActivityStreams Object — typically a previous identity an Actor used before migrating servers, kept as a back-reference so old followers can find them.">
+<meta property="og:description" content="An alternate identifier for an ActivityStreams Object — in account migration, a previous identity of an actor (Person, Application, Group, Organization or Service), listed by the new account to show it consents to the move.">
 <meta property="og:url" content="https://urn-solid.com/alsoKnownAs/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:alsoKnownAs">
-<meta name="twitter:description" content="An alternate identifier for an ActivityStreams Object — typically a previous identity an Actor used before migrating servers, kept as a back-reference so old followers can find them.">
+<meta name="twitter:description" content="An alternate identifier for an ActivityStreams Object — in account migration, a previous identity of an actor (Person, Application, Group, Organization or Service), listed by the new account to show it consents to the move.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,19 +32,20 @@
   "@id": "urn:solid:alsoKnownAs",
   "@type": "rdf:Property",
   "rdfs:label": "alsoKnownAs",
-  "rdfs:comment": "An alternate identifier for an ActivityStreams Object — typically a previous identity an Actor used before migrating servers, kept as a back-reference so old followers can find them.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#alsoKnownAs",
+  "rdfs:comment": "An alternate identifier for an ActivityStreams Object — in account migration, a previous identity of an actor (Person, Application, Group, Organization or Service), listed by the new account to show it consents to the move.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#alsoKnownAs",
   "rdfs:seeAlso": [
-    "urn:solid:Actor",
     "urn:solid:movedTo",
-    "urn:solid:Move"
+    "urn:solid:Move",
+    "https://www.w3.org/TR/did-core/#also-known-as",
+    "https://docs.joinmastodon.org/spec/activitypub/#as"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Standard fediverse-account-migration pattern: when an Actor moves servers, the *new* account lists the old one in `as:alsoKnownAs`, and the *old* account points at the new with `as:movedTo`. Together they make migration lossless — followers can verify the new identity is authorised by the old one.",
+  "notes": "Standard fediverse account-migration pattern: the *new* account lists the old one in `alsoKnownAs`, the *old* account sets `movedTo` to the new one and sends a `Move`. Receivers accept the Move only if the target's `alsoKnownAs` contains the origin, which proves the new account consented. Extension term (in the AS2 JSON-LD context, not the AS2 Vocabulary REC); DID Core reuses this same IRI for DID `alsoKnownAs`.",
   "examples": [
     {
-      "title": "A migrated Actor pointing back at the old identity",
+      "title": "A migrated Person pointing back at the old identity",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://newserver.example.org/users/alice",
@@ -57,7 +58,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#alsoKnownAs"
+      "https://www.w3.org/ns/activitystreams#alsoKnownAs"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -67,6 +68,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed migration trust direction in notes; noted extension/DID Core reuse; replaced unregistered Actor term in seeAlso with DID Core and Mastodon refs."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -74,7 +87,10 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:sameAs"
+  ]
 }
 
 </script>

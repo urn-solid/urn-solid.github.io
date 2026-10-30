@@ -3,28 +3,30 @@
   "@id": "urn:solid:Quotation",
   "@type": "rdfs:Class",
   "rdfs:label": "Quotation",
-  "rdfs:comment": "A PROV Derivation that represents a quoted excerpt from another entity, with attribution.",
+  "rdfs:comment": "A qualified PROV Derivation in which the derived entity repeats (some or all of) the source entity's content, e.g. an excerpt or citation.",
   "owl:sameAs": "http://www.w3.org/ns/prov#Quotation",
   "rdfs:seeAlso": [
-    "urn:solid:wasDerivedFrom",
+    "urn:solid:wasQuotedFrom",
+    "urn:solid:Derivation",
     "urn:solid:Revision",
-    "http://www.w3.org/ns/prov#Derivation"
+    "urn:solid:PrimarySource"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Revision"
+    "urn:solid:Revision",
+    "urn:solid:PrimarySource"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `prov:Derivation`. Use when the new entity contains content directly lifted from another (excerpts, citations, screenshots). Distinct from `urn:solid:Revision` (substantive change to the same identity) and `prov:PrimarySource` (first-hand origin attribution).",
+  "notes": "Subclass of `urn:solid:Derivation`. Use when the new entity contains content directly lifted from another (excerpts, citations, screenshots). The quoting entity links to this node via `prov:qualifiedQuotation` (and may also assert `urn:solid:wasQuotedFrom` the source); the node's `prov:entity` is the quoted source. Distinct from `urn:solid:Revision` (substantive change to the same identity) and `urn:solid:PrimarySource` (first-hand origin).",
   "examples": [
     {
       "title": "A quote in a review",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://example.org/reviews/widget-1/quote",
+        "@id": "https://example.org/quotations/review-quotes-manual",
         "@type": "urn:solid:Quotation",
-        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/reviews/widget-1" },
-        "urn:solid:wasDerivedFrom": { "@id": "https://example.org/products/widget/manual" }
+        "http://www.w3.org/ns/prov#entity": { "@id": "https://example.org/products/widget/manual" },
+        "urn:solid:hadRole": { "@id": "https://example.org/roles/excerpt" }
       }
     }
   ],
@@ -40,6 +42,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed example (prov:entity is the quoted source); comment/seeAlso now reference wasQuotedFrom."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

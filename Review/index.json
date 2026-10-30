@@ -10,7 +10,8 @@
     "urn:solid:Product"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Rating"
+    "urn:solid:Rating",
+    "urn:solid:review"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -24,7 +25,10 @@
         "@type": "urn:solid:Review",
         "https://schema.org/itemReviewed": { "@id": "https://example.org/products/widget" },
         "urn:solid:author": { "@id": "https://example.org/alice#me" },
-        "https://schema.org/reviewRating": { "@type": "urn:solid:Rating", "https://schema.org/ratingValue": "5" }
+        "https://schema.org/reviewRating": {
+          "@type": "urn:solid:Rating",
+          "https://schema.org/ratingValue": "5"
+        }
       }
     }
   ],
@@ -40,6 +44,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

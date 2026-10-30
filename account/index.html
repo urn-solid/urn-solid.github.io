@@ -38,7 +38,7 @@
     "http://www.w3.org/ns/solid/terms#account"
   ],
   "rdfs:domain": "urn:solid:Agent",
-  "rdfs:range": "http://xmlns.com/foaf/0.1/OnlineAccount",
+  "rdfs:range": "urn:solid:OnlineAccount",
   "status": "stable",
   "added": "2026-04-18",
   "notes": "The value is an `OnlineAccount` resource describing the account (the service it lives on, the account name, etc.), not the bare account URL. For a Solid pod-specific notion of account ownership, see `solid:account`.",
@@ -50,9 +50,9 @@
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:account": {
-          "@type": "http://xmlns.com/foaf/0.1/OnlineAccount",
-          "http://xmlns.com/foaf/0.1/accountName": "alice",
-          "http://xmlns.com/foaf/0.1/accountServiceHomepage": { "@id": "https://github.com/" }
+          "@type": "urn:solid:OnlineAccount",
+          "urn:solid:accountName": "alice",
+          "urn:solid:accountServiceHomepage": { "@id": "https://github.com/" }
         }
       }
     }
@@ -69,6 +69,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range urn:solid:OnlineAccount; example uses registry OnlineAccount/accountName/accountServiceHomepage terms."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -76,7 +88,10 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:Account"
+  ]
 }
 
 </script>

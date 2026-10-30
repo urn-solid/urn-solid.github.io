@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:headline — urn-solid</title>
-<meta name="description" content="The headline of the article — a short, attention-grabbing title line.">
+<meta name="description" content="The headline of a creative work — a short title line, typically for an article, post, or web page.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/headline/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:headline">
-<meta property="og:description" content="The headline of the article — a short, attention-grabbing title line.">
+<meta property="og:description" content="The headline of a creative work — a short title line, typically for an article, post, or web page.">
 <meta property="og:url" content="https://urn-solid.com/headline/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:headline">
-<meta name="twitter:description" content="The headline of the article — a short, attention-grabbing title line.">
+<meta name="twitter:description" content="The headline of a creative work — a short title line, typically for an article, post, or web page.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,20 +32,21 @@
   "@id": "urn:solid:headline",
   "@type": "rdf:Property",
   "rdfs:label": "headline",
-  "rdfs:comment": "The headline of the article — a short, attention-grabbing title line.",
+  "rdfs:comment": "The headline of a creative work — a short title line, typically for an article, post, or web page.",
   "owl:sameAs": "https://schema.org/headline",
   "rdfs:seeAlso": [
     "urn:solid:name",
     "urn:solid:alternative"
   ],
-  "rdfs:domain": "urn:solid:Article",
+  "rdfs:domain": "urn:solid:CreativeWork",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "notToBeConfusedWith": [
-    "urn:solid:name"
+    "urn:solid:name",
+    "urn:solid:title"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Distinct from `urn:solid:name` — the headline is specifically the newsroom-style top line of an article (\"Local CG Founder Ships Registry\"), while `name` is the generic title. Keep headlines concise (schema.org recommends ≤ 110 characters).",
+  "notes": "Distinct from `urn:solid:name` — the headline is specifically the newsroom-style top line of an article, post, or page (\"Local CG Founder Ships Registry\"), while `name` is the generic title. Keep headlines concise (schema.org recommends ≤ 110 characters).",
   "examples": [
     {
       "title": "Article with a headline",
@@ -69,6 +70,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain widened from Article to CreativeWork (schema:headline's domain); comment reworded."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

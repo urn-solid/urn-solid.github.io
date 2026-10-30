@@ -33,16 +33,20 @@
   "@type": "rdfs:Class",
   "rdfs:label": "View",
   "rdfs:comment": "An ActivityStreams Activity indicating that the actor viewed the object — typically visual content (an image, a video, a page).",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#View",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#View",
   "rdfs:seeAlso": [
     "urn:solid:Listen",
-    "urn:solid:Read",
+    "https://www.w3.org/ns/activitystreams#Read",
     "urn:solid:Image",
     "urn:solid:Video"
   ],
+  "notToBeConfusedWith": [
+    "urn:solid:Read",
+    "urn:solid:view"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Records consumption of visual content. Useful for read-status indicators, view-counters, recommendation signals, and analytics. Like `Listen` and `Read`, it's an *event* — repeated views generate distinct Activities, not updates to a counter.",
+  "notes": "Records consumption of visual content. Useful for read-status indicators, view-counters, recommendation signals, and analytics. Like `Listen` and `as:Read` (https://www.w3.org/ns/activitystreams#Read), it's an *event* — repeated views generate distinct Activities, not updates to a counter. Note that `urn:solid:Read` is the WAC access mode (acl:Read), not the ActivityStreams Read activity.",
   "examples": [
     {
       "title": "Viewed an image",
@@ -57,7 +61,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#View"
+      "https://www.w3.org/ns/activitystreams#View"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -67,6 +71,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso points at as:Read by full IRI instead of urn:solid:Read (acl:Read); added disambiguation note."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

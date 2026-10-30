@@ -38,9 +38,12 @@
     "urn:solid:Entity",
     "urn:solid:invalidated",
     "urn:solid:qualifiedGeneration",
-    "urn:solid:qualifiedUsage"
+    "urn:solid:qualifiedUsage",
+    "urn:solid:wasInvalidatedBy",
+    "urn:solid:Invalidation"
   ],
   "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Invalidation",
   "status": "stable",
   "added": "2026-04-19",
   "notes": "The qualified counterpart to `prov:wasInvalidatedBy`. Use when a plain triple is insufficient — to record the time of invalidation, the role the Entity played, or to attach further provenance to the invalidation event itself (deletion log, retention policy reference).",
@@ -72,6 +75,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added range urn:solid:Invalidation; seeAlso adds wasInvalidatedBy and Invalidation."
     }
   ],
   "see_also": {

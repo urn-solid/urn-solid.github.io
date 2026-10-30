@@ -3,16 +3,23 @@
   "@id": "urn:solid:owner",
   "@type": "rdf:Property",
   "rdfs:label": "owner",
-  "rdfs:comment": "An agent that owns the resource — typically used to declare pod ownership.",
+  "rdfs:comment": "An agent (WebID) considered to have control, rights and responsibilities over a Solid storage; advertised by the server on the storage root or storage description resource.",
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#owner",
   "rdfs:seeAlso": [
     "urn:solid:storage",
-    "urn:solid:Account"
+    "urn:solid:Account",
+    "urn:solid:Storage",
+    "https://solidproject.org/TR/protocol#storage",
+    "http://www.w3.org/ns/auth/acl#owner"
   ],
-  "rdfs:range": "urn:solid:Person",
+  "rdfs:range": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:ownerOf",
+    "urn:solid:rightsHolder"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Solid-specific ownership predicate — declares the WebID(s) that own a pod or resource. Pod operators can read this to determine who has full control. Distinct from `dcterms:rightsHolder` (broader copyright/IP ownership) and `urn:solid:creator` (who made it).",
+  "notes": "Solid storage-ownership predicate — declares the WebID(s) that own a storage (pod); the owner may be any agent, including an organisation. Per the Solid Protocol the server advertises it on the storage root / storage description. Distinct from `acl:owner` (a generic resource owner in the ACL vocabulary), `dcterms:rightsHolder` (broader copyright/IP ownership) and `urn:solid:creator` (who made it).",
   "examples": [
     {
       "title": "Pod root with declared owner",
@@ -36,6 +43,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Scoped definition to storage ownership; range -> Agent; seeAlso Storage, protocol, acl:owner; notToBeConfusedWith ownerOf."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -36,12 +36,15 @@
   "owl:sameAs": "https://schema.org/FAQPage",
   "rdfs:seeAlso": [
     "urn:solid:WebPage",
-    "urn:solid:Question",
+    "https://schema.org/Question",
     "urn:solid:Answer"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Question"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Subclass of `urn:solid:WebPage`. Pair with `schema:mainEntity` listing `urn:solid:Question` resources, each carrying its own `Answer`. Heavily used by Google for FAQ rich results. The page itself models multiple Q&As, distinct from a forum where each Question is a separate page.",
+  "notes": "Subclass of `urn:solid:WebPage`. Pair with `schema:mainEntity` listing `schema:Question` resources (NOT `urn:solid:Question`, which is the ActivityStreams poll), each with `schema:acceptedAnswer` → `urn:solid:Answer`. Heavily used by Google for FAQ rich results. The page itself models multiple Q&As, distinct from a forum where each Question is a separate page.",
   "examples": [
     {
       "title": "An FAQ page",
@@ -51,8 +54,8 @@
         "@type": "urn:solid:FAQPage",
         "https://schema.org/mainEntity": [
           {
-            "@type": "urn:solid:Question",
-            "urn:solid:name": "What is urn-solid?",
+            "@type": "https://schema.org/Question",
+            "https://schema.org/name": "What is urn-solid?",
             "https://schema.org/acceptedAnswer": {
               "@type": "urn:solid:Answer",
               "https://schema.org/text": "A canonical RDF term registry for Solid."
@@ -74,6 +77,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example and notes use schema:Question/schema:name (urn:solid:Question is the AS poll); added notToBeConfusedWith urn:solid:Question."
     }
   ],
   "see_also": {

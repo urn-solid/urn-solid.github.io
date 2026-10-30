@@ -39,11 +39,12 @@
     "urn:solid:Read",
     "urn:solid:Write",
     "urn:solid:Append",
-    "urn:solid:Control"
+    "urn:solid:Control",
+    "https://solidproject.org/TR/wac"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The atom of Solid pod access control. Each Authorization carries `acl:agent` / `acl:agentClass` / `acl:agentGroup` (who), `acl:accessTo` / `acl:default` (what), and one or more `acl:mode` (what kind of access). Authorizations live in `.acl` resources on a Solid pod.",
+  "notes": "The atom of Solid pod access control. Each Authorization carries `acl:agent` / `acl:agentClass` / `acl:agentGroup` (who), `acl:accessTo` / `acl:default` (what), and one or more `acl:mode` (what kind of access). Authorizations live in the resource's ACL document, discovered via the `Link: rel=\"acl\"` response header (often, but not necessarily, named `.acl`).",
   "examples": [
     {
       "title": "An ACL Authorization granting Read",
@@ -69,6 +70,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: ACL document discovered via Link rel=acl; seeAlso WAC spec."
     }
   ],
   "see_also": {

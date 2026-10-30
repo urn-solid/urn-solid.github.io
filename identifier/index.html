@@ -36,7 +36,8 @@
   "owl:sameAs": "http://purl.org/dc/terms/identifier",
   "rdfs:seeAlso": [
     "https://schema.org/identifier",
-    "http://www.w3.org/ns/prov#hadIdentifier"
+    "http://purl.org/dc/elements/1.1/identifier",
+    "http://www.w3.org/ns/adms#identifier"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -64,6 +65,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Replaced non-existent prov:hadIdentifier in seeAlso with dc:identifier and adms:identifier."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -71,7 +84,10 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:hasUID"
+  ]
 }
 
 </script>

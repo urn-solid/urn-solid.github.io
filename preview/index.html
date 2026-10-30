@@ -54,7 +54,7 @@
         "@type": "urn:solid:Video",
         "urn:solid:preview": {
           "@type": "urn:solid:Image",
-          "https://www.w3.org/ns/activitystreams#url": { "@id": "https://example.org/videos/intro-poster.jpg" }
+          "urn:solid:url": { "@id": "https://example.org/videos/intro-poster.jpg" }
         }
       }
     }
@@ -71,6 +71,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example uses urn:solid:url instead of raw as:url IRI."
     }
   ],
   "see_also": {

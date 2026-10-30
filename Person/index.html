@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Person — urn-solid</title>
-<meta name="description" content="A human being.">
+<meta name="description" content="A person — a human being, alive or dead, real or imaginary.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Person/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Person">
-<meta property="og:description" content="A human being.">
+<meta property="og:description" content="A person — a human being, alive or dead, real or imaginary.">
 <meta property="og:url" content="https://urn-solid.com/Person/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Person">
-<meta name="twitter:description" content="A human being.">
+<meta name="twitter:description" content="A person — a human being, alive or dead, real or imaginary.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,14 +32,15 @@
   "@id": "urn:solid:Person",
   "@type": "rdfs:Class",
   "rdfs:label": "Person",
-  "rdfs:comment": "A human being.",
+  "rdfs:comment": "A person — a human being, alive or dead, real or imaginary.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/Person",
   "rdfs:seeAlso": [
     "https://schema.org/Person",
     "http://www.w3.org/2006/vcard/ns#Individual"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Agent"
+    "urn:solid:Agent",
+    "urn:solid:VCard"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -51,14 +52,14 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
-        "foaf:name": "Alice"
+        "urn:solid:name": "Alice"
       }
     }
   ],
   "provenance": {
     "sources": [
       "http://xmlns.com/foaf/0.1/Person",
-      "https://www.w3.org/TR/vocab-solid/"
+      "http://www.w3.org/ns/solid/terms#"
     ],
     "curatedBy": "bootstrap"
   },
@@ -68,6 +69,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "bootstrap",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment follows FOAF (alive or dead, real or imaginary); fixed bogus vocab-solid TR source; example uses urn:solid:name."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

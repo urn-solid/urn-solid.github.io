@@ -21,7 +21,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
         "urn:solid:onProperty": { "@id": "urn:solid:knows" },
-        "http://www.w3.org/2002/07/owl#allValuesFrom": { "@id": "urn:solid:Person" }
+        "urn:solid:allValuesFrom": { "@id": "urn:solid:Person" }
       }
     }
   ],
@@ -37,6 +37,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example uses urn:solid:allValuesFrom instead of the full owl IRI."
     }
   ],
   "see_also": {

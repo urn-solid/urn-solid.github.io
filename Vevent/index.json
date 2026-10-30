@@ -3,7 +3,7 @@
   "@id": "urn:solid:Vevent",
   "@type": "rdfs:Class",
   "rdfs:label": "Vevent",
-  "rdfs:comment": "An iCalendar event — a scheduled occurrence with a start and end time, defined in RFC 5545 and mapped to RDF by the W3C iCal vocabulary.",
+  "rdfs:comment": "An iCalendar (RFC 5545) event — a scheduled occurrence with a start (dtstart) and optionally an end (dtend) or duration, as mapped to RDF by the W3C RDF Calendar vocabulary.",
   "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#Vevent",
   "rdfs:seeAlso": [
     "urn:solid:Event",
@@ -42,6 +42,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment: end time is optional (dtend or duration)."
     }
   ],
   "see_also": {

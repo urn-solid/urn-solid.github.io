@@ -6,14 +6,18 @@
   "rdfs:comment": "An agent that made the subject — the inverse of `made`.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/maker",
   "rdfs:seeAlso": [
-    "https://schema.org/creator",
-    "http://purl.org/dc/terms/creator",
-    "http://xmlns.com/foaf/0.1/made"
+    "urn:solid:creator",
+    "urn:solid:made",
+    "https://schema.org/creator"
   ],
   "rdfs:range": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:creator",
+    "urn:solid:made"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use on a document or work to point at the agent that made it. The inverse `foaf:made` goes the other direction (agent → work). For richer creator semantics with role and contribution type, prefer `dcterms:creator` or `prov:wasAttributedTo`.",
+  "notes": "Use on a document or work to point at the agent that made it. The inverse `urn:solid:made` goes the other direction (agent → work). foaf:maker is the lightweight FOAF form. dcterms:creator (`urn:solid:creator`) is the usual choice for bibliographic and document metadata; for role and contribution detail use `prov:wasAttributedTo`.",
   "examples": [
     {
       "title": "Document with a maker",
@@ -37,6 +41,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses urn:solid:creator/made; added notToBeConfusedWith creator and note on when to use dcterms:creator."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

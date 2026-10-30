@@ -36,16 +36,17 @@
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasMember",
   "rdfs:seeAlso": [
     "urn:solid:member",
-    "urn:solid:AddressBook",
     "https://schema.org/member"
   ],
   "rdfs:domain": "http://www.w3.org/2006/vcard/ns#Group",
   "notToBeConfusedWith": [
-    "urn:solid:member"
+    "urn:solid:member",
+    "urn:solid:hadMember",
+    "urn:solid:memberOf"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "vCard's group-membership predicate. Distinct from `urn:solid:member` (FOAF) only by namespace; functionally the same. Use `hasMember` in vCard-flavored data, `member` in FOAF-flavored data. Repeat for multiple members.",
+  "notes": "vCard's group-membership predicate. Upstream domain vcard:Group, range vcard:Kind (an Individual/Organization/Group card). In SolidOS groups, members are typically WebIDs or card IRIs. `urn:solid:member` (foaf:member) is the FOAF analogue (foaf:Group -> foaf:Agent). Use `hasMember` in vCard-flavored data, `member` in FOAF-flavored data. Repeat for multiple members.",
   "examples": [
     {
       "title": "vCard Group with members",
@@ -72,6 +73,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Removed AddressBook from seeAlso; notes state upstream domain/range and the foaf:member difference."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

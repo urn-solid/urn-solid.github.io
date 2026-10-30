@@ -12,7 +12,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Encodes RFC 5545's RRULE syntax — `FREQ=WEEKLY;BYDAY=TU;UNTIL=20261231T000000Z`. The base event carries `dtstart` plus `rrule`; each instance is computed at read time, not stored. Recurrence is the single most-bug-prone area of calendar interop — many libraries diverge on edge cases (DST transitions, BYDAY in monthly rules, COUNT vs UNTIL).",
+  "notes": "Encodes RFC 5545's RRULE syntax — `FREQ=WEEKLY;BYDAY=TU;UNTIL=20261231T000000Z`. The base event carries `dtstart` plus `rrule`; each instance is computed at read time, not stored. Recurrence is the single most-bug-prone area of calendar interop — many libraries diverge on edge cases (DST transitions, BYDAY in monthly rules, COUNT vs UNTIL). The W3C RDF Calendar vocabulary models RRULE as a structured node (`ical:freq`, `ical:interval`, `ical:byday`, `ical:until`, `ical:count`). Solid apps in this registry use the RFC 5545 string form as the value; consumers should accept both.",
   "examples": [
     {
       "title": "A weekly meeting on Tuesdays",
@@ -36,6 +36,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: upstream RDF Calendar models rrule as a structured node; registry apps use the RFC 5545 string; accept both."
     }
   ],
   "see_also": {

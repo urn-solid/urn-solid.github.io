@@ -6,13 +6,16 @@
   "rdfs:comment": "A thing the agent made — the inverse of `maker`.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/made",
   "rdfs:seeAlso": [
-    "http://xmlns.com/foaf/0.1/maker",
+    "urn:solid:maker",
     "http://www.w3.org/ns/prov#wasAttributedTo"
   ],
   "rdfs:domain": "urn:solid:Agent",
+  "notToBeConfusedWith": [
+    "urn:solid:maker"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use on an agent to point at things they made. The inverse `urn:solid:maker` goes the other direction (work → agent). Repeat to list multiple works. For richer attribution semantics, prefer `dcterms:creator` or `prov:wasAttributedTo`.",
+  "notes": "Use on an agent to point at things they made. The inverse `urn:solid:maker` goes the other direction (work → agent). Repeat to list multiple works. For richer attribution, state it on the work instead with `urn:solid:creator` (dcterms:creator) or `prov:wasAttributedTo` (both work → agent).",
   "examples": [
     {
       "title": "Person and the document they made",
@@ -36,6 +39,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes clarify creator/wasAttributedTo point work → agent; seeAlso uses urn:solid:maker; added notToBeConfusedWith maker."
     }
   ],
   "see_also": {

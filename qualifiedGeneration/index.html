@@ -38,9 +38,11 @@
     "urn:solid:Entity",
     "urn:solid:wasGeneratedBy",
     "urn:solid:qualifiedUsage",
-    "urn:solid:hadGeneration"
+    "urn:solid:hadGeneration",
+    "urn:solid:Generation"
   ],
   "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "urn:solid:Generation",
   "status": "stable",
   "added": "2026-04-19",
   "notes": "The qualified counterpart to `prov:wasGeneratedBy`. Use when a plain `wasGeneratedBy` triple isn't enough — to record the time of generation, the role the Entity played in the activity, or to attach further provenance to the generation event itself.",
@@ -72,6 +74,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added range urn:solid:Generation; seeAlso adds Generation."
     }
   ],
   "see_also": {

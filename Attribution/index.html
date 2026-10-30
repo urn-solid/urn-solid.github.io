@@ -39,9 +39,13 @@
     "urn:solid:Association",
     "urn:solid:hadRole"
   ],
+  "notToBeConfusedWith": [
+    "urn:solid:Association",
+    "urn:solid:attributedTo"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use to qualify `prov:wasAttributedTo` with a role and timing. Linked from an Entity via `prov:qualifiedAttribution`. Carries `prov:agent` (the responsible Agent) and `urn:solid:hadRole` (the role they took — author, photographer, contributor).",
+  "notes": "Use to qualify `prov:wasAttributedTo` with a role (`urn:solid:hadRole`) — author, photographer, contributor. Linked from an Entity via `urn:solid:qualifiedAttribution`; carries `prov:agent`. Has no timestamp — to record when, model the Activity (`wasGeneratedBy` + Association) instead.",
   "examples": [
     {
       "title": "Photo attributed to a photographer",
@@ -66,6 +70,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: removed timing (Attribution has no time); added notToBeConfusedWith Association, attributedTo."
     }
   ],
   "see_also": {

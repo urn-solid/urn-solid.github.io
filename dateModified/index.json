@@ -11,11 +11,12 @@
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "notToBeConfusedWith": [
-    "urn:solid:dateCreated"
+    "urn:solid:dateCreated",
+    "urn:solid:modified"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Schema.org's modification timestamp — equivalent to `dcterms:modified` (`urn:solid:modified`) and `as:updated` (`urn:solid:updated`). ISO 8601. Pair with `urn:solid:dateCreated` for the create-then-edit lifecycle.",
+  "notes": "Schema.org's modification timestamp — equivalent to `dcterms:modified` (`urn:solid:modified`) and `as:updated` (`urn:solid:updated`). ISO 8601; schema.org range: Date or DateTime — this registry declares xsd:dateTime, so prefer a full timestamp. Pair with `urn:solid:dateCreated` for the create-then-edit lifecycle.",
   "examples": [
     {
       "title": "Article with creation and modification dates",
@@ -40,6 +41,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Noted schema.org range is Date or DateTime."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

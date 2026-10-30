@@ -14,7 +14,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Subclass of `urn:solid:CreativeWork`. Use for any step-by-step tutorial. `urn:solid:Recipe` is the cooking-specific subclass. Pair with `schema:step` (an `ItemList` of `schema:HowToStep`s), `schema:totalTime`, `schema:estimatedCost`, `schema:tool`. Heavily used by Google for SEO rich results.",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Use for any step-by-step tutorial. `urn:solid:Recipe` is the cooking-specific subclass. Pair with `schema:step` (one or more `schema:HowToStep` or `schema:HowToSection` values), `schema:totalTime`, `schema:estimatedCost`, `schema:tool`, `schema:supply`. Heavily used by Google for SEO rich results.",
   "examples": [
     {
       "title": "A how-to guide",
@@ -39,6 +39,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected schema:step description (HowToStep/HowToSection values, not an ItemList)."
     }
   ],
   "see_also": {

@@ -35,8 +35,13 @@
   "rdfs:comment": "An object the current object is a reply to.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#inReplyTo",
   "rdfs:seeAlso": [
-    "https://schema.org/replyToUrl",
-    "https://www.w3.org/ns/activitystreams#replies"
+    "urn:solid:replies",
+    "urn:solid:context",
+    "https://schema.org/parentItem",
+    "http://rdfs.org/sioc/ns#reply_of"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:context"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -65,6 +70,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso: replaced schema:replyToUrl (wrong sense) with parentItem/sioc:reply_of, used urn:solid:replies, added context; reciprocal notToBeConfusedWith context."
     }
   ],
   "see_also": {

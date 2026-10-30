@@ -4,23 +4,26 @@
   "@type": "rdf:Property",
   "rdfs:label": "location",
   "rdfs:comment": "The location associated with the subject — typically a Place, address, or geographic coordinates.",
-  "owl:sameAs": [
-    "https://schema.org/location",
+  "owl:sameAs": "https://schema.org/location",
+  "rdfs:seeAlso": [
+    "urn:solid:basedNear",
+    "urn:solid:hasAddress",
+    "urn:solid:atLocation",
+    "urn:solid:spatial",
+    "urn:solid:hasGeo",
     "https://www.w3.org/ns/activitystreams#location",
     "http://www.w3.org/2002/12/cal/ical#location"
   ],
-  "rdfs:seeAlso": [
-    "urn:solid:basedNear",
-    "urn:solid:hasAddress"
-  ],
   "notToBeConfusedWith": [
     "urn:solid:basedNear",
-    "urn:solid:hasAddress"
+    "urn:solid:hasAddress",
+    "urn:solid:atLocation",
+    "urn:solid:spatial"
   ],
   "status": "stable",
   "added": "2026-04-18",
   "updated": "2026-04-19",
-  "notes": "Generic location predicate used on Events, Actions, Organizations. The value is typically a `urn:solid:Place`, `urn:solid:PostalAddress`, or `urn:solid:GeoCoordinates`. For a person's home region (intentionally fuzzy), use `urn:solid:basedNear` (FOAF). For structured postal addresses, `urn:solid:hasAddress` (vCard).",
+  "notes": "Generic location predicate used on Events, Actions, Organizations. The value is typically a `urn:solid:Place`, `urn:solid:PostalAddress`, or `urn:solid:GeoCoordinates`. For a person's home region (intentionally fuzzy), use `urn:solid:basedNear` (FOAF). For structured postal addresses, `urn:solid:hasAddress` (vCard). For PROV provenance use `urn:solid:atLocation`; for what place a resource is *about* (coverage) use `urn:solid:spatial`. Related but not equivalent (different ranges): ical:location expects a string; as:location expects an Object/Place.",
   "examples": [
     {
       "title": "Event at a location",
@@ -52,6 +55,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Promoted as:location and ical:location to owl:sameAs alongside schema:location — same predicate intent across all three. Note: ical:location values are conventionally strings rather than Place objects; consumers should accept either form."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Narrowed owl:sameAs to schema:location (as:location and ical:location moved to seeAlso: incompatible ranges); added atLocation/spatial confusables and hasGeo."
     }
   ],
   "see_also": {

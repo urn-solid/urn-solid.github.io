@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Wallet — urn-solid</title>
-<meta name="description" content="A part of a Solid pod that holds credentials and related items — verifiable credentials, keys, attestations.">
+<meta name="description" content="A part of a Solid pod that holds credentials and related items (verifiable credentials, identity documents, keys, tickets); names the storage only — presentation and signing are the job of wallet applications.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Wallet/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Wallet">
-<meta property="og:description" content="A part of a Solid pod that holds credentials and related items — verifiable credentials, keys, attestations.">
+<meta property="og:description" content="A part of a Solid pod that holds credentials and related items (verifiable credentials, identity documents, keys, tickets); names the storage only — presentation and signing are the job of wallet applications.">
 <meta property="og:url" content="https://urn-solid.com/Wallet/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Wallet">
-<meta name="twitter:description" content="A part of a Solid pod that holds credentials and related items — verifiable credentials, keys, attestations.">
+<meta name="twitter:description" content="A part of a Solid pod that holds credentials and related items (verifiable credentials, identity documents, keys, tickets); names the storage only — presentation and signing are the job of wallet applications.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,14 +32,14 @@
   "@id": "urn:solid:Wallet",
   "@type": "rdfs:Class",
   "rdfs:label": "Wallet",
-  "rdfs:comment": "A part of a Solid pod that holds credentials and related items — verifiable credentials, keys, attestations.",
+  "rdfs:comment": "A part of a Solid pod that holds credentials and related items (verifiable credentials, identity documents, keys, tickets); names the storage only — presentation and signing are the job of wallet applications.",
   "owl:sameAs": "http://w3id.org/solidos#Wallet",
   "rdfs:seeAlso": [
     "urn:solid:VerifiableCredential"
   ],
   "status": "stable",
   "added": "2026-04-22",
-  "notes": "Conventional storage location on a pod for credential-class items. SolidOS / mashlib treat any container typed `urn:solid:Wallet` as a wallet pane target. Often appears as a sub-container at `<pod>/wallet/` registered via the public or private TypeIndex.",
+  "notes": "Conventional storage location on a pod for credential-class items. Intended as a pane target for `solidos:Wallet` in SolidOS / mashlib-style data browsers. Often appears as a sub-container at `<pod>/wallet/` registered via the public or private TypeIndex. The upstream solidos vocabulary marks this term unstable upstream (term_status 'unstable').",
   "examples": [
     {
       "title": "Pod sub-container declared as a Wallet",
@@ -62,6 +62,12 @@
       "at": "2026-04-22T11:30:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment aligned with upstream (names storage only); removed unverified mashlib pane claim; notes flag the term as unstable upstream."
     }
   ],
   "see_also": {

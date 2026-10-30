@@ -6,11 +6,13 @@
   "rdfs:comment": "A single resource that's an instance of the class declared by the TypeRegistration.",
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#instance",
   "rdfs:seeAlso": [
-    "http://www.w3.org/ns/solid/terms#instanceContainer",
+    "urn:solid:instanceContainer",
     "urn:solid:TypeRegistration"
   ],
   "rdfs:domain": "urn:solid:TypeRegistration",
-  "notToBeConfusedWith": [],
+  "notToBeConfusedWith": [
+    "urn:solid:instanceContainer"
+  ],
   "status": "stable",
   "added": "2026-04-18",
   "notes": "Use when the user has exactly one instance — typically a settings document or singleton. For collections of instances under a directory, use `solid:instanceContainer` instead. A single TypeRegistration may carry multiple `solid:instance` values.",
@@ -38,6 +40,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "notToBeConfusedWith instanceContainer; seeAlso uses registry term."
     }
   ],
   "see_also": {

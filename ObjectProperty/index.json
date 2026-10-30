@@ -14,15 +14,15 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Examples: `foaf:knows`, `as:actor`, `dcterms:creator`. Distinct from `owl:DatatypeProperty` (whose values are literals like \"Alice\" or 42). The split helps reasoners and tooling — an ObjectProperty value is dereferenceable, a DatatypeProperty value is not.",
+  "notes": "Examples: `foaf:knows`, `as:actor`, `dcterms:creator`. Distinct from `owl:DatatypeProperty` (whose values are literals like \"Alice\" or 42). The split helps reasoners and tooling — an ObjectProperty value is a resource (IRI or blank node) that can carry its own triples; a DatatypeProperty value is a literal.",
   "examples": [
     {
-      "title": "Declaring as:actor as an ObjectProperty",
+      "title": "Declaring foaf:knows as an ObjectProperty",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "urn:solid:actor",
+        "@id": "urn:solid:knows",
         "@type": "urn:solid:ObjectProperty",
-        "urn:solid:range": { "@id": "urn:solid:Actor" }
+        "urn:solid:range": { "@id": "urn:solid:Person" }
       }
     }
   ],
@@ -38,6 +38,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example now foaf:knows (the Actor class is not registered); notes no longer claim values are dereferenceable."
     }
   ],
   "see_also": {

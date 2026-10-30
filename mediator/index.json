@@ -3,23 +3,25 @@
   "@id": "urn:solid:mediator",
   "@type": "rdf:Property",
   "rdfs:label": "mediator",
-  "rdfs:comment": "An intermediary that mediates access to or use of the resource — typically for educational or curated content.",
+  "rdfs:comment": "A class of agents that mediates access to the resource on behalf of its intended audience — e.g. teachers, parents, librarians, care-givers.",
   "owl:sameAs": "http://purl.org/dc/terms/mediator",
   "rdfs:seeAlso": [
-    "urn:solid:audience"
+    "http://purl.org/dc/terms/audience"
   ],
-  "rdfs:range": "urn:solid:Agent",
+  "rdfs:range": "http://purl.org/dc/terms/AgentClass",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "From the educational-resources tradition: a teacher who selects and uses a textbook is a `mediator`. Used to express that the resource was filtered or curated by an intermediary before reaching its `urn:solid:audience`. Niche outside library/edu contexts.",
+  "notes": "From the educational-resources tradition: the value is a class of agents (e.g. teachers), not an individual person. Used to express that the resource reaches its intended audience (`dcterms:audience` — not `urn:solid:audience`, which is the ActivityStreams addressing property) via that class of intermediaries. Niche outside library/edu contexts.",
   "examples": [
     {
-      "title": "Course material with a teacher mediator",
+      "title": "Course material mediated by teachers",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/courses/jsonld-101/materials",
         "@type": "urn:solid:Document",
-        "urn:solid:mediator": { "@id": "https://example.org/teachers/alice" }
+        "urn:solid:mediator": {
+          "@id": "https://example.org/roles/Teacher"
+        }
       }
     }
   ],
@@ -35,6 +37,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range now dcterms:AgentClass (a class of agents, not an individual); comment/example updated; seeAlso dcterms:audience instead of urn:solid:audience."
     }
   ],
   "see_also": {

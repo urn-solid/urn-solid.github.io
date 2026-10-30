@@ -6,12 +6,17 @@
   "rdfs:comment": "A video file with structured metadata — duration, resolution, encoding, thumbnail.",
   "owl:sameAs": "https://schema.org/VideoObject",
   "rdfs:seeAlso": [
-    "https://www.w3.org/ns/activitystreams#Video",
-    "urn:solid:ImageObject"
+    "urn:solid:Video",
+    "urn:solid:ImageObject",
+    "urn:solid:AudioObject"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Video",
+    "urn:solid:Movie"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Schema.org's video type, sibling to `urn:solid:ImageObject`. Carries `schema:contentUrl`, `schema:duration`, `schema:width`/`schema:height`, `schema:thumbnailUrl`, `schema:embedUrl`. For ActivityPub-style social video posts, prefer `as:Video`.",
+  "notes": "Schema.org's video type, sibling to `urn:solid:ImageObject`. Carries `schema:contentUrl`, `schema:duration`, `schema:width`/`schema:height`, `schema:thumbnailUrl`, `schema:embedUrl`. For ActivityPub-style social video posts, prefer `urn:solid:Video` (as:Video).",
   "examples": [
     {
       "title": "A short video",
@@ -20,7 +25,7 @@
         "@id": "https://example.org/videos/intro.mp4",
         "@type": "urn:solid:VideoObject",
         "https://schema.org/contentUrl": { "@id": "https://example.org/videos/intro.mp4" },
-        "urn:solid:duration": "PT2M30S",
+        "https://schema.org/duration": "PT2M30S",
         "https://schema.org/encodingFormat": "video/mp4"
       }
     }
@@ -37,6 +42,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added urn:solid:Video confusable, seeAlso uses registry terms (+AudioObject); example uses schema:duration."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

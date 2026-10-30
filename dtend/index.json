@@ -10,13 +10,12 @@
     "urn:solid:dtstart",
     "urn:solid:endTime"
   ],
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "notToBeConfusedWith": [
     "urn:solid:endTime"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Mirrors `dtstart`. RFC 5545 treats `dtend` as exclusive — an event from 15:00 to 16:00 has `dtend = 16:00` even though no event occurs at 16:00:00 itself. Distinct from `as:endTime` (ActivityStreams equivalent).",
+  "notes": "Mirrors `dtstart`. RFC 5545 treats `dtend` as exclusive — an event from 15:00 to 16:00 has `dtend = 16:00` even though no event occurs at 16:00:00 itself. Distinct from `as:endTime` (ActivityStreams equivalent). May be xsd:date for all-day events (exclusive: a one-day event on 2026-04-19 has dtend 2026-04-20), so no single rdfs:range is declared. Mutually exclusive with `ical:duration`.",
   "examples": [
     {
       "title": "Event end time",
@@ -40,6 +39,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped xsd:dateTime rdfs:range (all-day DTEND is a date); notes cover all-day exclusivity and ical:duration."
     }
   ],
   "see_also": {

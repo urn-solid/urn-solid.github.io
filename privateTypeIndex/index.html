@@ -36,19 +36,21 @@
   "owl:sameAs": "http://www.w3.org/ns/solid/terms#privateTypeIndex",
   "rdfs:seeAlso": [
     "urn:solid:publicTypeIndex",
-    "urn:solid:TypeIndex"
+    "urn:solid:TypeIndex",
+    "urn:solid:preferencesFile",
+    "http://www.w3.org/ns/solid/terms#UnlistedDocument"
   ],
-  "rdfs:domain": "urn:solid:Person",
+  "rdfs:domain": "urn:solid:Agent",
   "rdfs:range": "urn:solid:TypeIndex",
   "notToBeConfusedWith": [
     "urn:solid:publicTypeIndex"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Linked from a WebID, points at the user's access-controlled TypeIndex. Used by trusted apps (after auth) to discover where personal data is stored. Pair with `urn:solid:publicTypeIndex` for the world-readable counterpart.",
+  "notes": "Asserted in the user's private preferences file (`urn:solid:preferencesFile`), not in the public profile document, pointing at an unlisted (`solid:UnlistedDocument`) TypeIndex readable only by the user and apps they authorize. Putting it in the public profile would leak the private index location. Used by trusted apps (after auth) to discover where personal data is stored. Pair with `urn:solid:publicTypeIndex` for the world-readable counterpart.",
   "examples": [
     {
-      "title": "WebID pointing at its private TypeIndex",
+      "title": "WebID's private TypeIndex — this triple lives in the preferences file (https://alice.example.org/settings/prefs.ttl), not the profile",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/card#me",
@@ -69,6 +71,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Clarified it is asserted in the preferences file, not the public profile; domain Agent; seeAlso preferencesFile and solid:UnlistedDocument."
     }
   ],
   "see_also": {

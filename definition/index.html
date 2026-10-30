@@ -39,15 +39,13 @@
     "urn:solid:description",
     "http://www.w3.org/2000/01/rdf-schema#comment"
   ],
-  "rdfs:domain": "urn:solid:Concept",
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "notToBeConfusedWith": [
     "urn:solid:description",
     "urn:solid:scopeNote"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use a single, dictionary-style sentence per language (multilingual via `@language`). Distinct from `urn:solid:scopeNote` (guidance on how to use the concept) and `urn:solid:description` (general dcterms description).",
+  "notes": "Use a single, dictionary-style sentence per language (multilingual via `@language`). Distinct from `urn:solid:scopeNote` (guidance on how to use the concept) and `urn:solid:description` (general dcterms description). Upstream SKOS declares no domain or range: usable on any resource (Concept, ConceptScheme, Collection), with literal (plain or language-tagged) or resource values.",
   "examples": [
     {
       "title": "Concept with a definition",
@@ -72,6 +70,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain/rdfs:range (xsd:string conflicted with language-tagged values; SKOS declares neither)."
     }
   ],
   "see_also": {

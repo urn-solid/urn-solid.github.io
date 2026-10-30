@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:ProvenanceStatement — urn-solid</title>
-<meta name="description" content="A statement about the provenance of a resource — its origin, custody history, transformations.">
+<meta name="description" content="A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation — the value type of `urn:solid:provenance`.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/ProvenanceStatement/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:ProvenanceStatement">
-<meta property="og:description" content="A statement about the provenance of a resource — its origin, custody history, transformations.">
+<meta property="og:description" content="A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation — the value type of `urn:solid:provenance`.">
 <meta property="og:url" content="https://urn-solid.com/ProvenanceStatement/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:ProvenanceStatement">
-<meta name="twitter:description" content="A statement about the provenance of a resource — its origin, custody history, transformations.">
+<meta name="twitter:description" content="A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation — the value type of `urn:solid:provenance`.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,9 +32,10 @@
   "@id": "urn:solid:ProvenanceStatement",
   "@type": "rdfs:Class",
   "rdfs:label": "ProvenanceStatement",
-  "rdfs:comment": "A statement about the provenance of a resource — its origin, custody history, transformations.",
+  "rdfs:comment": "A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation — the value type of `urn:solid:provenance`.",
   "owl:sameAs": "http://purl.org/dc/terms/ProvenanceStatement",
   "rdfs:seeAlso": [
+    "urn:solid:provenance",
     "urn:solid:Entity",
     "urn:solid:Bundle"
   ],
@@ -64,6 +65,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Aligned comment with DCMI definition; added urn:solid:provenance to seeAlso."
     }
   ],
   "see_also": {

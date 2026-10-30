@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Entity — urn-solid</title>
-<meta name="description" content="Anything in PROV that has provenance — a thing whose existence and history can be tracked.">
+<meta name="description" content="A physical, digital, conceptual or other kind of thing with some fixed aspects, whose provenance (generation, derivation, attribution) can be described — a document, dataset, software release or physical object.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Entity/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Entity">
-<meta property="og:description" content="Anything in PROV that has provenance — a thing whose existence and history can be tracked.">
+<meta property="og:description" content="A physical, digital, conceptual or other kind of thing with some fixed aspects, whose provenance (generation, derivation, attribution) can be described — a document, dataset, software release or physical object.">
 <meta property="og:url" content="https://urn-solid.com/Entity/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Entity">
-<meta name="twitter:description" content="Anything in PROV that has provenance — a thing whose existence and history can be tracked.">
+<meta name="twitter:description" content="A physical, digital, conceptual or other kind of thing with some fixed aspects, whose provenance (generation, derivation, attribution) can be described — a document, dataset, software release or physical object.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,11 +32,13 @@
   "@id": "urn:solid:Entity",
   "@type": "rdfs:Class",
   "rdfs:label": "Entity",
-  "rdfs:comment": "Anything in PROV that has provenance — a thing whose existence and history can be tracked.",
+  "rdfs:comment": "A physical, digital, conceptual or other kind of thing with some fixed aspects, whose provenance (generation, derivation, attribution) can be described — a document, dataset, software release or physical object.",
   "owl:sameAs": "http://www.w3.org/ns/prov#Entity",
   "rdfs:seeAlso": [
     "urn:solid:Object",
-    "http://www.w3.org/2002/07/owl#Thing"
+    "http://www.w3.org/2002/07/owl#Thing",
+    "http://www.w3.org/ns/prov#Activity",
+    "http://www.w3.org/ns/prov#Agent"
   ],
   "notToBeConfusedWith": [
     "urn:solid:Object"
@@ -67,6 +69,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment now states PROV's fixed-aspects definition; seeAlso prov:Activity and prov:Agent."
     }
   ],
   "see_also": {

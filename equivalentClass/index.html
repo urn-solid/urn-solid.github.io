@@ -37,18 +37,17 @@
   "rdfs:seeAlso": [
     "urn:solid:Class",
     "urn:solid:subClassOf",
-    "urn:solid:sameAs",
+    "http://www.w3.org/2002/07/owl#sameAs",
     "urn:solid:equivalentProperty"
   ],
   "rdfs:domain": "urn:solid:Class",
   "rdfs:range": "urn:solid:Class",
   "notToBeConfusedWith": [
-    "urn:solid:sameAs",
     "urn:solid:subClassOf"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Stronger than mutual `subClassOf` — `equivalentClass` is two-way subclass, but as a single assertion it makes the equivalence explicit for reasoners. Distinct from `owl:sameAs`, which equates *individuals*. Use to bridge two parallel class hierarchies (e.g. `foaf:Person` and `schema:Person`).",
+  "notes": "Semantically identical to mutual `subClassOf` (A ⊑ B and B ⊑ A), stated as a single assertion. Distinct from `owl:sameAs`, which equates *individuals*. Use to bridge two parallel class hierarchies (e.g. `foaf:Person` and `schema:Person`).",
   "examples": [
     {
       "title": "Two upstream Person classes equated",
@@ -71,6 +70,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: equivalentClass is exactly mutual subClassOf (not stronger); urn:solid:sameAs replaced by owl:sameAs IRI."
     }
   ],
   "see_also": {

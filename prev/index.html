@@ -33,14 +33,15 @@
   "@type": "rdf:Property",
   "rdfs:label": "prev",
   "rdfs:comment": "The previous page in an ActivityStreams CollectionPage chain — the URL the client follows to scroll back through pagination.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#prev",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#prev",
   "rdfs:seeAlso": [
     "urn:solid:Collection",
     "urn:solid:next",
     "urn:solid:first",
-    "urn:solid:partOf"
+    "urn:solid:partOf",
+    "urn:solid:CollectionPage"
   ],
-  "rdfs:domain": "http://www.w3.org/ns/activitystreams#CollectionPage",
+  "rdfs:domain": "urn:solid:CollectionPage",
   "status": "stable",
   "added": "2026-04-19",
   "notes": "Mirror of `as:next`. Optional but recommended — without `prev`, a client that lands on a deep page can only walk forward, never back. Servers commonly omit on the first page (where it would have no value).",
@@ -50,7 +51,7 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/outbox?page=2",
-        "@type": "http://www.w3.org/ns/activitystreams#OrderedCollectionPage",
+        "@type": "https://www.w3.org/ns/activitystreams#OrderedCollectionPage",
         "urn:solid:partOf": { "@id": "https://alice.example.org/outbox" },
         "urn:solid:prev": { "@id": "https://alice.example.org/outbox?page=1" },
         "urn:solid:next": { "@id": "https://alice.example.org/outbox?page=3" }
@@ -59,7 +60,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#prev"
+      "https://www.w3.org/ns/activitystreams#prev"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -69,6 +70,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "rdfs:domain -> urn:solid:CollectionPage; added it to seeAlso."
     }
   ],
   "see_also": {

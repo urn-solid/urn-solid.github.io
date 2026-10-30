@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>urn:solid:actor — urn-solid</title>
+<meta name="description" content="The agent that performed an Activity — the one who liked, followed, created, or sent it.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="https://urn-solid.com/actor/">
+<link rel="alternate" type="application/ld+json" href="/actor/index.json">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="urn-solid">
+<meta property="og:title" content="urn:solid:actor">
+<meta property="og:description" content="The agent that performed an Activity — the one who liked, followed, created, or sent it.">
+<meta property="og:url" content="https://urn-solid.com/actor/">
+<meta property="og:image" content="https://urn-solid.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="urn:solid:actor">
+<meta name="twitter:description" content="The agent that performed an Activity — the one who liked, followed, created, or sent it.">
+<meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://urn-solid.com/context.jsonld",
+  "@id": "urn:solid:actor",
+  "@type": "rdf:Property",
+  "rdfs:label": "actor",
+  "rdfs:comment": "The agent that performed an Activity — the one who liked, followed, created, or sent it.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#actor",
+  "rdfs:seeAlso": [
+    "urn:solid:Activity",
+    "urn:solid:attributedTo",
+    "urn:solid:object"
+  ],
+  "rdfs:domain": "urn:solid:Activity",
+  "notToBeConfusedWith": [
+    "urn:solid:attributedTo",
+    "urn:solid:creator",
+    "urn:solid:agent"
+  ],
+  "status": "stable",
+  "added": "2026-10-29",
+  "notes": "Core ActivityStreams 2.0 property, present on virtually every ActivityPub activity. The value is typically a Person, Application, Group, Organization or Service (AS2 has no Actor class — \"actor\" is a role, not a type). Use `urn:solid:attributedTo` for the author of a content object (a Note, Article); use `actor` for who performed an activity.",
+  "examples": [
+    {
+      "title": "Alice likes a note",
+      "jsonld": {
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://example.org/activities/1",
+        "@type": "urn:solid:Like",
+        "urn:solid:actor": { "@id": "https://alice.example.org/profile/card#me" },
+        "urn:solid:object": { "@id": "https://bob.example.org/notes/42" }
+      }
+    }
+  ],
+  "provenance": {
+    "sources": [
+      "https://www.w3.org/ns/activitystreams#actor"
+    ],
+    "curatedBy": "urn-solid-review"
+  },
+  "history": [
+    {
+      "event": "added",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added during the registry-wide review: referenced by existing terms and examples but previously unregistered."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
+    }
+  ],
+  "see_also": {
+    "corpus": "/corpus.jsonl",
+    "schema": "/schema/term.schema.json",
+    "index": "/index.json",
+    "llms": "/llms.txt"
+  }
+}
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="site-name">urn-solid</a>
+  <nav>
+    <a href="/corpus.jsonl">corpus</a>
+    <a href="/schema/term.schema.json">schema</a>
+    <a href="/llms.txt">llms.txt</a>
+  </nav>
+</header>
+<main id="term"></main>
+<script src="/render.js"></script>
+</body>
+</html>

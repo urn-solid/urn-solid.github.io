@@ -8,11 +8,11 @@
   "rdfs:seeAlso": [
     "urn:solid:mbox",
     "urn:solid:hasEmail",
-    "https://schema.org/Message"
+    "urn:solid:ChatMessage"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Subclass of `schema:Message` and `urn:solid:CreativeWork`. Pair with `schema:sender`, `schema:recipient`, `schema:about`, `schema:dateSent`, `schema:dateReceived`. Useful for archival/threading systems that index email as RDF rather than treating each message as opaque text.",
+  "notes": "Subclass of `schema:Message` (`urn:solid:ChatMessage`) and `urn:solid:CreativeWork`. Not an email address — for addresses use `urn:solid:hasEmail` / `urn:solid:mbox` / `urn:solid:email`. Pair with `schema:sender`, `schema:recipient`, `schema:about`, `schema:dateSent`, `schema:dateReceived`. Useful for archival/threading systems that index email as RDF rather than treating each message as opaque text.",
   "examples": [
     {
       "title": "An email message",
@@ -38,6 +38,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses urn:solid:ChatMessage for schema:Message; notes clarify this is not an email address."
     }
   ],
   "see_also": {

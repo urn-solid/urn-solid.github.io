@@ -3,7 +3,7 @@
   "@id": "urn:solid:wasQuotedFrom",
   "@type": "rdf:Property",
   "rdfs:label": "wasQuotedFrom",
-  "rdfs:comment": "An Entity is a quotation, excerpt, or reproduction of part of another Entity — the source remains identifiable and authoritative.",
+  "rdfs:comment": "An Entity that repeats (some or all of) another Entity verbatim — a quotation, excerpt, or reproduction — a specialised form of wasDerivedFrom.",
   "owl:sameAs": "http://www.w3.org/ns/prov#wasQuotedFrom",
   "rdfs:seeAlso": [
     "urn:solid:Entity",
@@ -42,6 +42,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment no longer claims the source is authoritative."
     }
   ],
   "see_also": {

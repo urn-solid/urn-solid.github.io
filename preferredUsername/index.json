@@ -3,21 +3,23 @@
   "@id": "urn:solid:preferredUsername",
   "@type": "rdf:Property",
   "rdfs:label": "preferredUsername",
-  "rdfs:comment": "An ActivityPub Actor's preferred short username — the local part used in `@user@host` mention syntax.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#preferredUsername",
+  "rdfs:comment": "The preferred short username of an actor (Person, Application, Group, Organization or Service) in ActivityPub — the local part used in `@user@host` mention syntax.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#preferredUsername",
   "rdfs:seeAlso": [
-    "urn:solid:Actor",
     "urn:solid:name",
-    "urn:solid:Mention"
+    "urn:solid:Mention",
+    "urn:solid:nick",
+    "urn:solid:accountName"
   ],
-  "rdfs:domain": "urn:solid:Actor",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "notToBeConfusedWith": [
-    "urn:solid:name"
+    "urn:solid:name",
+    "urn:solid:nick",
+    "urn:solid:accountName"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The handle, not the display name: `as:preferredUsername` is `alice` (used in webfinger and `@alice@host` mentions); `as:name` is \"Alice Smith\" (the human-readable display string). Lowercase, alphanumeric, no spaces — meant for routing and addressing, not presentation.",
+  "notes": "The handle, not the display name: `as:preferredUsername` is `alice` (used in WebFinger and `@alice@host` mentions); `as:name` is \"Alice Smith\" (the human-readable display string; note `urn:solid:name` is foaf:name). No case or character-set rules are imposed by ActivityPub and uniqueness is not guaranteed; servers apply their own constraints. Typically equals the local part of the Actor's WebFinger `acct:` URI.",
   "examples": [
     {
       "title": "An Actor with a handle and display name",
@@ -32,7 +34,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#preferredUsername"
+      "https://www.w3.org/ns/activitystreams#preferredUsername"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -42,6 +44,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Removed invented lowercase/alphanumeric rule; added WebFinger note; notToBeConfusedWith nick/accountName; dropped non-existent Actor class domain/seeAlso."
     }
   ],
   "see_also": {

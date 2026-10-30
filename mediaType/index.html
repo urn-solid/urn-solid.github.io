@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:mediaType — urn-solid</title>
-<meta name="description" content="The MIME media type of the object — `image/png`, `text/html`, etc.">
+<meta name="description" content="The IANA MIME media type (e.g. `text/html`, `image/png`): on an Object, the type of its `content` value; on a Link, the type of the resource at `href`.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/mediaType/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:mediaType">
-<meta property="og:description" content="The MIME media type of the object — `image/png`, `text/html`, etc.">
+<meta property="og:description" content="The IANA MIME media type (e.g. `text/html`, `image/png`): on an Object, the type of its `content` value; on a Link, the type of the resource at `href`.">
 <meta property="og:url" content="https://urn-solid.com/mediaType/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:mediaType">
-<meta name="twitter:description" content="The MIME media type of the object — `image/png`, `text/html`, etc.">
+<meta name="twitter:description" content="The IANA MIME media type (e.g. `text/html`, `image/png`): on an Object, the type of its `content` value; on a Link, the type of the resource at `href`.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:mediaType",
   "@type": "rdf:Property",
   "rdfs:label": "mediaType",
-  "rdfs:comment": "The MIME media type of the object — `image/png`, `text/html`, etc.",
+  "rdfs:comment": "The IANA MIME media type (e.g. `text/html`, `image/png`): on an Object, the type of its `content` value; on a Link, the type of the resource at `href`.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#mediaType",
   "rdfs:seeAlso": [
     "urn:solid:format",
@@ -44,7 +44,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "ActivityStreams' content-type label — typically attached to `as:content` (to declare the format of HTML vs plain text) or to attachments. Distinct from dcterms `urn:solid:format` only by namespace; carry the same string values (IANA media types).",
+  "notes": "ActivityStreams' content-type label — typically attached to an Object to declare the format of its `as:content` (HTML vs plain text vs Markdown), or to a Link/attachment. Unlike `urn:solid:format` (dcterms:format, which may be a MediaTypeOrExtent resource or describe physical medium/dimensions), `mediaType` is a single plain-string MIME type. Not `dcat:mediaType`, which is DCAT's distribution media type and takes an IANA media-type IRI.",
   "examples": [
     {
       "title": "Note with explicit content media type",
@@ -69,6 +69,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment clarified (type of content on Object, of href target on Link); notes no longer equate it with dcterms:format."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Disambiguated from dcat:mediaType."
     }
   ],
   "see_also": {

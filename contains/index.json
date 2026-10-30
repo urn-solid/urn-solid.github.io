@@ -3,18 +3,19 @@
   "@id": "urn:solid:contains",
   "@type": "rdf:Property",
   "rdfs:label": "contains",
-  "rdfs:comment": "A resource contained by the LDP Container — i.e., a member created via HTTP POST to the container.",
+  "rdfs:comment": "Links an LDP container to a resource it contains (server-managed containment triple). In Solid, containment follows the slash-delimited URI hierarchy, whether the child was created by POST, PUT or PATCH.",
   "owl:sameAs": "http://www.w3.org/ns/ldp#contains",
   "rdfs:seeAlso": [
     "urn:solid:hasPart"
   ],
   "rdfs:domain": "urn:solid:Container",
   "notToBeConfusedWith": [
-    "urn:solid:hasPart"
+    "urn:solid:hasPart",
+    "urn:solid:hasMemberRelation"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "LDP-specific containment with HTTP semantics: POSTing to the container creates a resource that's automatically a `ldp:contains` member. Unlike `urn:solid:hasPart` (a logical part-of), `contains` reflects actual server-side parent-child storage.",
+  "notes": "LDP containment with HTTP semantics, managed by the server: creating a resource under a container (POST to it, or PUT/PATCH to a child URI, which also auto-creates intermediate containers) adds the `ldp:contains` triple. Unlike `urn:solid:hasPart` (a logical part-of), `contains` reflects actual server-side parent-child storage. Containment is not membership: in Direct/Indirect containers the membership triples defined by `urn:solid:hasMemberRelation` are separate from `ldp:contains`.",
   "examples": [
     {
       "title": "Container listing its members",
@@ -41,6 +42,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Definition: containment follows URI hierarchy (POST/PUT/PATCH); distinguished from membership triples."
     }
   ],
   "see_also": {

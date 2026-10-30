@@ -7,12 +7,12 @@
   "owl:sameAs": "https://schema.org/Place",
   "rdfs:seeAlso": [
     "https://www.w3.org/ns/activitystreams#Place",
-    "http://www.w3.org/ns/dcat#Location",
-    "http://purl.org/dc/terms/Location"
+    "http://purl.org/dc/terms/Location",
+    "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use for any geographic feature with a roughly stable footprint. Pair with `urn:solid:hasGeo` (or `schema:geo`) for coordinates and `urn:solid:hasAddress` for postal info. For dynamic event locations, use ActivityStreams `as:Place`.",
+  "notes": "Use for any geographic feature with a roughly stable footprint. Pair with `urn:solid:hasGeo` (or `schema:geo`) for coordinates and `urn:solid:hasAddress` for postal info. In ActivityStreams/ActivityPub payloads use `as:Place` (carries `as:latitude`, `as:longitude`, `as:radius`).",
   "examples": [
     {
       "title": "A landmark",
@@ -37,6 +37,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Removed non-existent dcat:Location from seeAlso (added geo:SpatialThing); corrected as:Place guidance."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -44,5 +56,9 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:City",
+    "urn:solid:Country"
+  ]
 }

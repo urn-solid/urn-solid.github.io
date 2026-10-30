@@ -37,15 +37,18 @@
   "rdfs:seeAlso": [
     "http://www.w3.org/ns/prov#Collection"
   ],
+  "notToBeConfusedWith": [
+    "urn:solid:Collection"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Useful when you need to assert \"this collection is definitively empty\" rather than \"the membership is unknown\". Often the first state of a collection in a build pipeline before items are added; subsequent versions then `prov:wasDerivedFrom` the EmptyCollection.",
+  "notes": "Useful when you need to assert \"this collection is definitively empty\" rather than \"the membership is unknown\". Often the first state of a collection in a build pipeline before items are added; subsequent versions then `prov:wasDerivedFrom` the EmptyCollection. Subclass of `prov:Collection` (not `urn:solid:Collection`, which is `as:Collection`); members via `urn:solid:hadMember`.",
   "examples": [
     {
-      "title": "Initial empty bundle",
+      "title": "Initial empty collection",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://example.org/bundles/initial",
+        "@id": "https://example.org/collections/initial",
         "@type": "urn:solid:EmptyCollection"
       }
     }
@@ -62,6 +65,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added notToBeConfusedWith Collection (as:Collection) and prov:Collection note; example @id no longer suggests Bundle."
     }
   ],
   "see_also": {

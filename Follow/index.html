@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Follow — urn-solid</title>
-<meta name="description" content="An indication that the actor wants to follow the object — typically another Actor.">
+<meta name="description" content="An indication that the actor wants to follow the object — typically another actor (Person, Application, Group, Organization or Service).">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Follow/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Follow">
-<meta property="og:description" content="An indication that the actor wants to follow the object — typically another Actor.">
+<meta property="og:description" content="An indication that the actor wants to follow the object — typically another actor (Person, Application, Group, Organization or Service).">
 <meta property="og:url" content="https://urn-solid.com/Follow/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Follow">
-<meta name="twitter:description" content="An indication that the actor wants to follow the object — typically another Actor.">
+<meta name="twitter:description" content="An indication that the actor wants to follow the object — typically another actor (Person, Application, Group, Organization or Service).">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,14 +32,15 @@
   "@id": "urn:solid:Follow",
   "@type": "rdfs:Class",
   "rdfs:label": "Follow",
-  "rdfs:comment": "An indication that the actor wants to follow the object — typically another Actor.",
+  "rdfs:comment": "An indication that the actor wants to follow the object — typically another actor (Person, Application, Group, Organization or Service).",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Follow",
   "rdfs:seeAlso": [
     "https://schema.org/FollowAction",
     "urn:solid:knows"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:knows"
+    "urn:solid:knows",
+    "urn:solid:follower"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -68,6 +69,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Reworded 'Actor' prose (AS2 has no Actor class)."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

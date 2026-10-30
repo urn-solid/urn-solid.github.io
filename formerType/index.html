@@ -33,7 +33,7 @@
   "@type": "rdf:Property",
   "rdfs:label": "formerType",
   "rdfs:comment": "On an ActivityStreams Tombstone, the type the deleted Object had before it was removed — preserves enough metadata for clients to know what they lost.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#formerType",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#formerType",
   "rdfs:seeAlso": [
     "urn:solid:Tombstone",
     "urn:solid:deleted"
@@ -49,14 +49,14 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/notes/old",
         "@type": "urn:solid:Tombstone",
-        "urn:solid:formerType": { "@id": "http://www.w3.org/ns/activitystreams#Note" },
+        "urn:solid:formerType": { "@id": "https://www.w3.org/ns/activitystreams#Note" },
         "urn:solid:deleted": { "@value": "2026-04-15T00:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
       }
     }
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#formerType"
+      "https://www.w3.org/ns/activitystreams#formerType"
     ],
     "curatedBy": "claude-curate-next"
   },

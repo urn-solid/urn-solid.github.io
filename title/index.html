@@ -33,21 +33,22 @@
   "@type": "rdf:Property",
   "rdfs:label": "title",
   "rdfs:comment": "A name given to the resource — the headline or short identifier.",
-  "owl:sameAs": [
-    "http://purl.org/dc/terms/title",
-    "https://schema.org/name"
-  ],
+  "owl:sameAs": "http://purl.org/dc/terms/title",
   "rdfs:seeAlso": [
     "urn:solid:name",
-    "http://www.w3.org/2000/01/rdf-schema#label"
+    "http://www.w3.org/2000/01/rdf-schema#label",
+    "https://schema.org/name",
+    "http://purl.org/dc/elements/1.1/title"
   ],
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "rdfs:range": "http://www.w3.org/2000/01/rdf-schema#Literal",
   "notToBeConfusedWith": [
-    "urn:solid:name"
+    "urn:solid:name",
+    "urn:solid:headline",
+    "urn:solid:alternative"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use for the headline of works (articles, bookmarks, documents, events). Both `dcterms:title` and `schema:name` map here — they are interchangeable in practice for these resource types. For people use `urn:solid:name`; for short labels in UI use `rdfs:label`.",
+  "notes": "Use for the title of works (articles, bookmarks, documents, events). schema:name is the broader schema.org equivalent for any Thing; for works prefer this term, for people/agents use `urn:solid:name`. For a news/article headline in schema.org-style data see `urn:solid:headline`; for short labels in UI use `rdfs:label`. Language-tagged values are allowed.",
   "examples": [
     {
       "title": "Bookmark with a title",
@@ -61,8 +62,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://purl.org/dc/terms/title",
-      "https://schema.org/name"
+      "http://purl.org/dc/terms/title"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -72,6 +72,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "owl:sameAs now dcterms:title only (schema:name moved to seeAlso); range rdfs:Literal; added headline to notToBeConfusedWith; notes reworded."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

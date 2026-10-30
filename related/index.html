@@ -37,18 +37,21 @@
   "rdfs:seeAlso": [
     "urn:solid:broader",
     "urn:solid:narrower",
-    "urn:solid:relation"
+    "urn:solid:relation",
+    "urn:solid:relatedMatch"
   ],
   "rdfs:domain": "urn:solid:Concept",
   "rdfs:range": "urn:solid:Concept",
   "notToBeConfusedWith": [
     "urn:solid:relation",
     "urn:solid:broader",
-    "urn:solid:narrower"
+    "urn:solid:narrower",
+    "urn:solid:relatedMatch",
+    "urn:solid:hasRelated"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use for non-hierarchical conceptual associations — \"category-theory related-to functional-programming\". Symmetric in SKOS. Distinct from `urn:solid:relation` (dcterms generic relation between resources) and from `broader`/`narrower` (hierarchical).",
+  "notes": "Use for non-hierarchical conceptual associations — \"category-theory related-to functional-programming\". Symmetric in SKOS. Distinct from `urn:solid:relation` (dcterms generic relation between resources) and from `broader`/`narrower` (hierarchical). For cross-scheme associative links use `urn:solid:relatedMatch`.",
   "examples": [
     {
       "title": "Related concepts",
@@ -72,6 +75,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added cross-scheme counterpart relatedMatch to seeAlso/notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

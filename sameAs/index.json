@@ -6,12 +6,17 @@
   "rdfs:comment": "An external reference URL that unambiguously identifies the subject — typically a profile or canonical page on another site.",
   "owl:sameAs": "https://schema.org/sameAs",
   "rdfs:seeAlso": [
-    "http://www.w3.org/2002/07/owl#sameAs"
+    "http://www.w3.org/2002/07/owl#sameAs",
+    "urn:solid:url",
+    "urn:solid:homepage"
   ],
-  "notToBeConfusedWith": [],
+  "notToBeConfusedWith": [
+    "urn:solid:alsoKnownAs",
+    "urn:solid:exactMatch"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Distinct from OWL's `owl:sameAs`: schema.org's `sameAs` is a soft \"this is also at\" reference (Wikipedia page, social profile, registry entry), without the strong identity-equivalence semantics that OWL reasoners apply. Use schema's form for everyday cross-site identity hints; use OWL's form only when you mean true identity equivalence in a reasoning sense.",
+  "notes": "Distinct from OWL's `owl:sameAs`: schema.org's `sameAs` is a soft \"this is also at\" reference (Wikipedia page, social profile, registry entry), without the strong identity-equivalence semantics that OWL reasoners apply. Use schema's form for everyday cross-site identity hints; use OWL's form only when you mean true identity equivalence in a reasoning sense. Also not the `owl:sameAs` used in this registry's own term files to map a urn:solid term to its upstream IRI. For account migration use `urn:solid:alsoKnownAs`; for SKOS concept mappings use `urn:solid:exactMatch`. Not `owl:sameAs` (http://www.w3.org/2002/07/owl#sameAs): this is schema.org's weak \"reference page\" link and asserts no identity.",
   "examples": [
     {
       "title": "Person with external profile links",
@@ -38,6 +43,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added alsoKnownAs/exactMatch confusables, url/homepage seeAlso, and note distinguishing the registry's own owl:sameAs mappings."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Disambiguated schema:sameAs from owl:sameAs."
     }
   ],
   "see_also": {

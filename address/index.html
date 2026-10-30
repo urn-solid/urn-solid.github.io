@@ -36,14 +36,15 @@
   "owl:sameAs": "https://schema.org/address",
   "rdfs:seeAlso": [
     "urn:solid:hasAddress",
-    "urn:solid:PostalAddress"
+    "urn:solid:PostalAddress",
+    "urn:solid:Address"
   ],
   "notToBeConfusedWith": [
     "urn:solid:hasAddress"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Schema.org's address predicate. The value is typically a `urn:solid:PostalAddress` resource (or a plain string for simple cases). For vCard-flavored data, use `urn:solid:hasAddress` + `vcard:Address` instead.",
+  "notes": "Schema.org's address predicate. The value is typically a `urn:solid:PostalAddress` resource (or a plain string for simple cases). For vCard-flavored data, use `urn:solid:hasAddress` + `urn:solid:Address` instead.",
   "examples": [
     {
       "title": "Organization with a postal address",
@@ -71,6 +72,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added urn:solid:Address to seeAlso; notes reference it."
     }
   ],
   "see_also": {

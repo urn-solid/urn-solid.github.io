@@ -11,13 +11,16 @@
     "https://schema.org/image"
   ],
   "rdfs:domain": "urn:solid:Person",
-  "rdfs:range": "http://xmlns.com/foaf/0.1/Image",
+  "rdfs:range": "urn:solid:Image",
   "notToBeConfusedWith": [
-    "urn:solid:depiction"
+    "urn:solid:depiction",
+    "urn:solid:image",
+    "urn:solid:hasPhoto",
+    "urn:solid:icon"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "A sub-property of `foaf:depiction` specifically for a portrait of a person. Prefer `urn:solid:depiction` when the subject is any kind of thing or the image is not a portrait. A person may have at most one primary `img` but multiple `depiction` values.",
+  "notes": "Sub-property of `urn:solid:depiction`, for an image that represents a person (e.g. a homepage portrait/avatar). Use depiction for images of any thing, or images where the person merely appears.",
   "examples": [
     {
       "title": "Person with a portrait",
@@ -41,6 +44,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Removed invented 'at most one img' cardinality; range urn:solid:Image; added image/hasPhoto to notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

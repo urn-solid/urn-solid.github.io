@@ -11,11 +11,12 @@
   ],
   "rdfs:domain": "urn:solid:VerifiableCredential",
   "notToBeConfusedWith": [
-    "urn:solid:expirationDate"
+    "urn:solid:expirationDate",
+    "urn:solid:status"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Distinct from expiration (a static date in the credential). Status is dynamic — the credential is signed once but can be revoked any time after. Common types: `RevocationList2020Status`, `StatusList2021Entry`. Verifiers fetch the referenced status document and check the credential's bit/index.",
+  "notes": "Distinct from expiration (a static date in the credential). Status is dynamic — the credential is signed once but can be revoked or suspended any time after. Current type: `BitstringStatusListEntry` (W3C Bitstring Status List v1.0, https://www.w3.org/ns/credentials/status#BitstringStatusListEntry); older: `StatusList2021Entry` (https://w3id.org/vc/status-list#StatusList2021Entry), `RevocationList2020Status`. Verifiers fetch the referenced status list and check the credential's bit/index.",
   "examples": [
     {
       "title": "Credential with a revocation entry",
@@ -25,7 +26,7 @@
         "@type": "urn:solid:VerifiableCredential",
         "urn:solid:credentialStatus": {
           "@id": "https://example.edu/status/24#94567",
-          "@type": "https://www.w3.org/2018/credentials#StatusList2021Entry"
+          "@type": "https://www.w3.org/ns/credentials/status#BitstringStatusListEntry"
         }
       }
     }
@@ -42,6 +43,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example status type corrected to BitstringStatusListEntry (non-existent cred:StatusList2021Entry removed); notes list current vs older status types."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

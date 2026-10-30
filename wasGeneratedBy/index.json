@@ -7,7 +7,16 @@
   "owl:sameAs": "http://www.w3.org/ns/prov#wasGeneratedBy",
   "rdfs:seeAlso": [
     "urn:solid:Create",
-    "urn:solid:created"
+    "urn:solid:created",
+    "urn:solid:generated",
+    "urn:solid:generatedAtTime",
+    "urn:solid:qualifiedGeneration"
+  ],
+  "rdfs:domain": "urn:solid:Entity",
+  "rdfs:range": "http://www.w3.org/ns/prov#Activity",
+  "notToBeConfusedWith": [
+    "urn:solid:generated",
+    "urn:solid:generator"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -35,6 +44,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added domain urn:solid:Entity and range prov:Activity; notToBeConfusedWith generated; seeAlso adds generated, generatedAtTime, qualifiedGeneration."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

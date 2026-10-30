@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:ChatMessage — urn-solid</title>
-<meta name="description" content="A chat message — a single message exchanged in a chat conversation.">
+<meta name="description" content="A message exchanged between a sender and recipients. Maps to the general schema:Message (which also covers email); use urn:solid:EmailMessage for email specifically.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/ChatMessage/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:ChatMessage">
-<meta property="og:description" content="A chat message — a single message exchanged in a chat conversation.">
+<meta property="og:description" content="A message exchanged between a sender and recipients. Maps to the general schema:Message (which also covers email); use urn:solid:EmailMessage for email specifically.">
 <meta property="og:url" content="https://urn-solid.com/ChatMessage/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:ChatMessage">
-<meta name="twitter:description" content="A chat message — a single message exchanged in a chat conversation.">
+<meta name="twitter:description" content="A message exchanged between a sender and recipients. Maps to the general schema:Message (which also covers email); use urn:solid:EmailMessage for email specifically.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,19 +32,18 @@
   "@id": "urn:solid:ChatMessage",
   "@type": "rdfs:Class",
   "rdfs:label": "ChatMessage",
-  "rdfs:comment": "A chat message — a single message exchanged in a chat conversation.",
+  "rdfs:comment": "A message exchanged between a sender and recipients. Maps to the general schema:Message (which also covers email); use urn:solid:EmailMessage for email specifically.",
   "owl:sameAs": "https://schema.org/Message",
   "rdfs:seeAlso": [
     "urn:solid:Note",
     "urn:solid:EmailMessage"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Note",
-    "urn:solid:EmailMessage"
+    "urn:solid:Note"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Schema.org's general `schema:Message` type — covers chat, IM, and similar real-time communication. Distinct from AS `urn:solid:Note` (microblog post) and `urn:solid:EmailMessage` (asynchronous email). Pair with `schema:sender`, `schema:recipient`, `schema:dateSent`.",
+  "notes": "Schema.org's general `schema:Message` type — covers chat, IM, and similar real-time communication. Distinct from AS `urn:solid:Note` (microblog post). `urn:solid:EmailMessage` (schema:EmailMessage) is a subclass of this term, for email specifically. Pair with `schema:sender`, `schema:recipient`, `schema:dateSent`.",
   "examples": [
     {
       "title": "A chat message",
@@ -69,6 +68,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment now states the mapping is the general schema:Message; EmailMessage is a subclass, removed from notToBeConfusedWith."
     }
   ],
   "see_also": {

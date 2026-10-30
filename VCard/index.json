@@ -7,14 +7,16 @@
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#VCard",
   "rdfs:seeAlso": [
     "https://schema.org/ContactPoint",
-    "urn:solid:Person"
+    "urn:solid:Person",
+    "http://www.w3.org/2006/vcard/ns#Kind",
+    "http://www.w3.org/2006/vcard/ns#Individual"
   ],
   "notToBeConfusedWith": [
     "urn:solid:Person"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Distinct from `urn:solid:Person`: a VCard is the *contact record* (the data), while a Person is the *human*. One Person can have many VCards (work, personal). Pair with `urn:solid:fn`, `urn:solid:hasEmail`, `urn:solid:hasTelephone`, `urn:solid:hasAddress`.",
+  "notes": "Distinct from `urn:solid:Person`: a VCard is the *contact record* (the data), while a Person is the *human*. One Person can have many VCards (work, personal). Pair with `urn:solid:fn`, `urn:solid:hasEmail`, `urn:solid:hasTelephone`, `urn:solid:hasAddress`. Upstream VCard ≡ vcard:Kind, the parent of vcard:Individual, vcard:Organization, vcard:Group and vcard:Location. Prefer the specific subclass (SolidOS contacts type person cards as vcard:Individual).",
   "examples": [
     {
       "title": "A VCard",
@@ -39,6 +41,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes explain VCard ≡ vcard:Kind and recommend specific subclasses; added Kind and Individual to seeAlso."
     }
   ],
   "see_also": {

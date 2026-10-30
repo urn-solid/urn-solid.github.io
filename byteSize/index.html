@@ -39,10 +39,10 @@
     "https://schema.org/contentSize"
   ],
   "rdfs:domain": "urn:solid:Distribution",
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+  "rdfs:range": "http://www.w3.org/2000/01/rdf-schema#Literal",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use to declare the file size of a Distribution so consumers can plan downloads. Integer bytes (no \"MB\"/\"GB\" suffix — use the raw number). Schema.org's `schema:contentSize` accepts free-form strings; `dcat:byteSize` is stricter.",
+  "notes": "Use to declare the file size of a Distribution so consumers can plan downloads. Integer bytes (no \"MB\"/\"GB\" suffix — use the raw number). DCAT 3 recommends typing the value as `xsd:decimal`; an approximate size is acceptable when the exact size is unknown. Schema.org's `schema:contentSize` accepts free-form strings.",
   "examples": [
     {
       "title": "Distribution with byte size",
@@ -50,7 +50,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/datasets/wonderland-2026/csv",
         "@type": "urn:solid:Distribution",
-        "urn:solid:byteSize": 2415616
+        "urn:solid:byteSize": { "@value": "2415616", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
       }
     }
   ],
@@ -66,6 +66,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range xsd:nonNegativeInteger -> rdfs:Literal per DCAT 3; notes/example use xsd:decimal as DCAT recommends."
     }
   ],
   "see_also": {

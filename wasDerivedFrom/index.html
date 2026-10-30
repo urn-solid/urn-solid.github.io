@@ -36,16 +36,24 @@
   "owl:sameAs": "http://www.w3.org/ns/prov#wasDerivedFrom",
   "rdfs:seeAlso": [
     "urn:solid:source",
-    "https://schema.org/isBasedOn"
+    "https://schema.org/isBasedOn",
+    "urn:solid:wasRevisionOf",
+    "urn:solid:wasQuotedFrom",
+    "urn:solid:hadPrimarySource"
   ],
   "rdfs:domain": "urn:solid:Entity",
   "rdfs:range": "urn:solid:Entity",
   "notToBeConfusedWith": [
-    "urn:solid:source"
+    "urn:solid:source",
+    "urn:solid:specializationOf",
+    "urn:solid:hadPrimarySource",
+    "urn:solid:provenance",
+    "urn:solid:wasQuotedFrom",
+    "urn:solid:wasRevisionOf"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use to record the upstream entity a derived work descends from — translations, summaries, transformed datasets. Repeat to list multiple sources. For typed derivation (revision, quotation, primary-source), pair with `prov:qualifiedDerivation` and a `prov:Derivation` resource.",
+  "notes": "Use to record the upstream entity a derived work descends from — translations, summaries, transformed datasets. Repeat to list multiple sources. For specific kinds of derivation use the subproperties `urn:solid:wasRevisionOf`, `urn:solid:wasQuotedFrom` or `urn:solid:hadPrimarySource`; use `urn:solid:qualifiedDerivation` to add the activity/usage/generation.",
   "examples": [
     {
       "title": "Translation derived from an original",
@@ -69,6 +77,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes point to subproperties wasRevisionOf/wasQuotedFrom/hadPrimarySource; seeAlso adds them; notToBeConfusedWith adds specializationOf."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

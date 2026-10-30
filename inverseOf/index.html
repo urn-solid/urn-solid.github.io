@@ -36,13 +36,14 @@
   "owl:sameAs": "http://www.w3.org/2002/07/owl#inverseOf",
   "rdfs:seeAlso": [
     "urn:solid:Property",
-    "urn:solid:equivalentProperty"
+    "urn:solid:equivalentProperty",
+    "urn:solid:SymmetricProperty"
   ],
   "rdfs:domain": "urn:solid:Property",
   "rdfs:range": "urn:solid:Property",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Reasoners use this to materialise the reverse direction without storing both. Classic pairs: `as:followers` / `as:following`, `dcterms:isPartOf` / `dcterms:hasPart`, `prov:wasGeneratedBy` / `prov:generated`. Symmetric properties (`owl:sameAs`, `foaf:knows`) are their own inverse.",
+  "notes": "Reasoners use this to materialise the reverse direction without storing both. Classic pairs: `dcterms:isPartOf` / `dcterms:hasPart`, `prov:wasGeneratedBy` / `prov:generated`, `foaf:made` / `foaf:maker`, `skos:broader` / `skos:narrower`. Symmetric properties (`owl:sameAs`, `skos:related`) are their own inverse.",
   "examples": [
     {
       "title": "isPartOf and hasPart as inverses",
@@ -65,6 +66,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Removed incorrect as:followers/as:following pair and foaf:knows-as-symmetric claim; added SymmetricProperty to seeAlso."
     }
   ],
   "see_also": {

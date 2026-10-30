@@ -35,16 +35,15 @@
   "rdfs:comment": "An answer to a Question — typically posted on Q&A sites or forums.",
   "owl:sameAs": "https://schema.org/Answer",
   "rdfs:seeAlso": [
-    "urn:solid:Question",
+    "https://schema.org/Question",
     "urn:solid:Comment"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Question",
-    "urn:solid:Comment"
+    "urn:solid:Question"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Subclass of `urn:solid:Comment`. Pair with `schema:parentItem` pointing at the `urn:solid:Question`. Distinct from a generic `Comment` (which can be on anything) and from AS `Note` (microblog post). Use schema's Q&A pair (`Question` + `Answer`) for SEO-rich Q&A markup.",
+  "notes": "Subclass of `urn:solid:Comment`. Pair with `schema:parentItem` pointing at a `schema:Question` (https://schema.org/Question). Note that `urn:solid:Question` is the ActivityStreams poll and is not the Q&A question. Distinct from a generic `Comment` (which can be on anything) and from AS `Note` (microblog post). Use schema's Q&A pair (`Question` + `Answer`) for SEO-rich Q&A markup.",
   "examples": [
     {
       "title": "An answer to a question",
@@ -70,6 +69,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Partner is schema:Question (not urn:solid:Question, the AS poll); removed superclass Comment from notToBeConfusedWith."
     }
   ],
   "see_also": {

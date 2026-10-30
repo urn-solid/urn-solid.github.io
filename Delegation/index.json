@@ -7,7 +7,10 @@
   "owl:sameAs": "http://www.w3.org/ns/prov#Delegation",
   "rdfs:seeAlso": [
     "urn:solid:actedOnBehalfOf",
-    "urn:solid:Association"
+    "urn:solid:Association",
+    "http://www.w3.org/ns/prov#qualifiedDelegation",
+    "urn:solid:hadActivity",
+    "urn:solid:hadRole"
   ],
   "status": "stable",
   "added": "2026-04-19",
@@ -36,6 +39,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso adds prov:qualifiedDelegation, hadActivity, hadRole."
     }
   ],
   "see_also": {

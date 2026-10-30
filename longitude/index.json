@@ -10,14 +10,13 @@
     "urn:solid:GeoCoordinates",
     "http://www.w3.org/2003/01/geo/wgs84_pos#long"
   ],
-  "rdfs:domain": "urn:solid:GeoCoordinates",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#decimal",
   "notToBeConfusedWith": [
     "urn:solid:latitude"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Decimal degrees, positive east of the prime meridian. Pair with `urn:solid:latitude` on a `urn:solid:GeoCoordinates` resource. For elevation as well, schema.org provides `schema:elevation`.",
+  "notes": "Decimal degrees, positive east of the prime meridian. schema.org domain: GeoCoordinates or Place (so no rdfs:domain is declared here); schema.org range: Number or Text — give the value as a JSON number. Pair with `urn:solid:latitude` on a `urn:solid:GeoCoordinates` resource. For elevation as well, schema.org provides `schema:elevation`.",
   "examples": [
     {
       "title": "Coordinates with longitude",
@@ -25,8 +24,8 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/places/big-ben/geo",
         "@type": "urn:solid:GeoCoordinates",
-        "urn:solid:latitude": "51.5007",
-        "urn:solid:longitude": "-0.1246"
+        "urn:solid:latitude": 51.5007,
+        "urn:solid:longitude": -0.1246
       }
     }
   ],
@@ -42,6 +41,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example now uses JSON numbers; removed rdfs:domain GeoCoordinates (schema.org domain is GeoCoordinates or Place) and noted it."
     }
   ],
   "see_also": {

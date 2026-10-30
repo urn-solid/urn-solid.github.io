@@ -3,12 +3,19 @@
   "@id": "urn:solid:Collection",
   "@type": "rdfs:Class",
   "rdfs:label": "Collection",
-  "rdfs:comment": "An unordered collection of objects.",
+  "rdfs:comment": "An ActivityStreams set of Object or Link instances, enumerated via as:items or paged via as:first/as:next. Members carry no guaranteed order — use the OrderedCollection subclass when order matters.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Collection",
   "rdfs:seeAlso": [
-    "https://www.w3.org/ns/activitystreams#OrderedCollection",
+    "urn:solid:OrderedCollection",
     "http://www.w3.org/ns/ldp#Container",
     "http://www.w3.org/ns/prov#Collection"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:OrderedCollection",
+    "urn:solid:Container",
+    "urn:solid:Catalog",
+    "urn:solid:ConceptScheme",
+    "urn:solid:EmptyCollection"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -40,6 +47,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected comment (Objects or Links; OrderedCollection is a subclass); added notToBeConfusedWith OrderedCollection, Container; seeAlso uses urn:solid:OrderedCollection."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:hasValue — urn-solid</title>
-<meta name="description" content="On an OWL Restriction, asserts that the constrained property must have one specific value — the most precise form of class definition.">
+<meta name="description" content="On an OWL Restriction, requires that the constrained property has a specific individual or literal among its values (other values are still allowed) — equivalent to `someValuesFrom` a one-element class.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/hasValue/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:hasValue">
-<meta property="og:description" content="On an OWL Restriction, asserts that the constrained property must have one specific value — the most precise form of class definition.">
+<meta property="og:description" content="On an OWL Restriction, requires that the constrained property has a specific individual or literal among its values (other values are still allowed) — equivalent to `someValuesFrom` a one-element class.">
 <meta property="og:url" content="https://urn-solid.com/hasValue/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:hasValue">
-<meta name="twitter:description" content="On an OWL Restriction, asserts that the constrained property must have one specific value — the most precise form of class definition.">
+<meta name="twitter:description" content="On an OWL Restriction, requires that the constrained property has a specific individual or literal among its values (other values are still allowed) — equivalent to `someValuesFrom` a one-element class.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:hasValue",
   "@type": "rdf:Property",
   "rdfs:label": "hasValue",
-  "rdfs:comment": "On an OWL Restriction, asserts that the constrained property must have one specific value — the most precise form of class definition.",
+  "rdfs:comment": "On an OWL Restriction, requires that the constrained property has a specific individual or literal among its values (other values are still allowed) — equivalent to `someValuesFrom` a one-element class.",
   "owl:sameAs": "http://www.w3.org/2002/07/owl#hasValue",
   "rdfs:seeAlso": [
     "urn:solid:Restriction",
@@ -43,10 +43,10 @@
   "rdfs:domain": "urn:solid:Restriction",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "\"On property X, the value must be exactly this.\" Use to define classes like \"Things whose `acl:mode` includes `acl:Read`.\" Value can be any individual or literal. Stronger than `someValuesFrom` (which only constrains the type, not the specific value).",
+  "notes": "\"On property X, one of the values is this.\" Use to define classes like \"Things whose `acl:mode` includes `acl:Read`.\" Value can be any individual or literal. Equivalent to `someValuesFrom` the one-element class `{v}`; it does not forbid additional values (add `maxCardinality 1` for that).",
   "examples": [
     {
-      "title": "A class of resources granting public read",
+      "title": "Authorizations that grant access to everyone (agentClass foaf:Agent)",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
@@ -67,6 +67,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected semantics: hasValue requires the value among the property's values, not exclusively; fixed example title."
     }
   ],
   "see_also": {

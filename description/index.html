@@ -35,17 +35,23 @@
   "rdfs:comment": "An account of the resource — a free-text description.",
   "owl:sameAs": [
     "http://purl.org/dc/terms/description",
-    "https://schema.org/description",
-    "http://www.w3.org/2002/12/cal/ical#description"
+    "https://schema.org/description"
   ],
   "rdfs:seeAlso": [
-    "http://www.w3.org/2000/01/rdf-schema#comment"
+    "http://www.w3.org/2000/01/rdf-schema#comment",
+    "http://www.w3.org/2002/12/cal/ical#description"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
+  "notToBeConfusedWith": [
+    "urn:solid:abstract",
+    "urn:solid:summary",
+    "urn:solid:comment",
+    "urn:solid:definition"
+  ],
   "status": "stable",
   "added": "2026-04-18",
   "updated": "2026-04-19",
-  "notes": "Multi-sentence prose describing what the resource is or contains. For a one-line summary, prefer `rdfs:comment` (which is what RDF tooling usually surfaces); for a tagline, `dcterms:abstract`. Repeat with language tags for translations.",
+  "notes": "Free-text account of the resource. For a formal abstract (papers, specs) use `urn:solid:abstract`; for a short AS2-style summary use `urn:solid:summary`. Not `urn:solid:comment` (schema:comment = a reply/comment object). Repeat with language tags for translations. ical:description is related but component-scoped (RFC 5545), so it is listed under seeAlso rather than sameAs.",
   "examples": [
     {
       "title": "Document with description",
@@ -77,6 +83,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Promoted schema:description from seeAlso to owl:sameAs and added ical:description — same free-text-description predicate across all three vocabularies."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Rewrote notes to disambiguate abstract/summary/comment; moved ical:description from owl:sameAs to rdfs:seeAlso."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

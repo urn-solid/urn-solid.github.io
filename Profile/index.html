@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Profile — urn-solid</title>
-<meta name="description" content="An ActivityStreams Object that describes another Object — typically supplemental information about an Actor (a richer biography, alternate display data) layered on top of the actor's primary record.">
+<meta name="description" content="An ActivityStreams Object that describes another Object — typically supplemental information about an actor (Person, Application, Group, Organization or Service) (a richer biography, alternate display data) layered on top of the actor's primary record.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Profile/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Profile">
-<meta property="og:description" content="An ActivityStreams Object that describes another Object — typically supplemental information about an Actor (a richer biography, alternate display data) layered on top of the actor's primary record.">
+<meta property="og:description" content="An ActivityStreams Object that describes another Object — typically supplemental information about an actor (Person, Application, Group, Organization or Service) (a richer biography, alternate display data) layered on top of the actor's primary record.">
 <meta property="og:url" content="https://urn-solid.com/Profile/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Profile">
-<meta name="twitter:description" content="An ActivityStreams Object that describes another Object — typically supplemental information about an Actor (a richer biography, alternate display data) layered on top of the actor's primary record.">
+<meta name="twitter:description" content="An ActivityStreams Object that describes another Object — typically supplemental information about an actor (Person, Application, Group, Organization or Service) (a richer biography, alternate display data) layered on top of the actor's primary record.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,20 +32,22 @@
   "@id": "urn:solid:Profile",
   "@type": "rdfs:Class",
   "rdfs:label": "Profile",
-  "rdfs:comment": "An ActivityStreams Object that describes another Object — typically supplemental information about an Actor (a richer biography, alternate display data) layered on top of the actor's primary record.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#Profile",
+  "rdfs:comment": "An ActivityStreams Object that describes another Object — typically supplemental information about an actor (Person, Application, Group, Organization or Service) (a richer biography, alternate display data) layered on top of the actor's primary record.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#Profile",
   "rdfs:seeAlso": [
     "urn:solid:Object",
-    "urn:solid:Actor",
     "urn:solid:describes",
     "urn:solid:Person"
   ],
+  "notToBeConfusedWith": [
+    "urn:solid:PersonalProfileDocument"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "A Profile uses `as:describes` to point at the Object it documents. Useful when the descriptive payload is large or evolves independently of the actor's identity record (e.g. a long bio with media attachments) — the Profile is fetched separately and may be cached, signed, or replicated apart from the Actor.",
+  "notes": "A Profile uses `as:describes` to point at the Object it documents. Useful when the descriptive payload is large or evolves independently of the actor's identity record (e.g. a long bio with media attachments) — the Profile is fetched separately and may be cached, signed, or replicated apart from the actor. This is the AS2 Profile object (a content object pointing at its subject via as:describes). It is NOT the Solid WebID profile document — for that use urn:solid:PersonalProfileDocument.",
   "examples": [
     {
-      "title": "A Profile that describes an Actor",
+      "title": "A Profile that describes an actor",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/about",
@@ -57,7 +59,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#Profile"
+      "https://www.w3.org/ns/activitystreams#Profile"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -67,6 +69,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped the nonexistent Actor alias; added notToBeConfusedWith PersonalProfileDocument with a WebID-profile disambiguation note."
     }
   ],
   "see_also": {

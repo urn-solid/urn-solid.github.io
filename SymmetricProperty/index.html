@@ -41,13 +41,13 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Classic examples: `owl:sameAs`, `foaf:knows`, `prov:alternateOf`, `dcterms:relation`. Use for two-way relations the writer should only need to assert once. Distinct from a property that simply has a separately-named inverse (`hasPart` vs `isPartOf`) — symmetric properties *are* their own inverse.",
+  "notes": "Classic examples: `owl:sameAs`, `owl:differentFrom`, `owl:disjointWith`, `prov:alternateOf`, `skos:related`. Note: `foaf:knows` is deliberately NOT symmetric — knowing someone is not necessarily reciprocated. Use for two-way relations the writer should only need to assert once. Distinct from a property that simply has a separately-named inverse (`hasPart` vs `isPartOf`) — symmetric properties *are* their own inverse.",
   "examples": [
     {
-      "title": "Declaring foaf:knows as symmetric",
+      "title": "Declaring skos:related as symmetric",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "http://xmlns.com/foaf/0.1/knows",
+        "@id": "http://www.w3.org/2004/02/skos/core#related",
         "@type": "urn:solid:SymmetricProperty"
       }
     }
@@ -64,6 +64,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Replaced foaf:knows/dcterms:relation (not symmetric) with genuinely symmetric examples; example now skos:related."
     }
   ],
   "see_also": {

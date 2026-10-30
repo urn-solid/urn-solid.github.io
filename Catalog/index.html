@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Catalog — urn-solid</title>
-<meta name="description" content="A DCAT Catalog — a curated collection of metadata about Datasets and DataServices.">
+<meta name="description" content="A DCAT Catalog: a curated collection of metadata about Datasets, DataServices and other Catalogs (a Catalog is itself a dcat:Dataset).">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Catalog/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Catalog">
-<meta property="og:description" content="A DCAT Catalog — a curated collection of metadata about Datasets and DataServices.">
+<meta property="og:description" content="A DCAT Catalog: a curated collection of metadata about Datasets, DataServices and other Catalogs (a Catalog is itself a dcat:Dataset).">
 <meta property="og:url" content="https://urn-solid.com/Catalog/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Catalog">
-<meta name="twitter:description" content="A DCAT Catalog — a curated collection of metadata about Datasets and DataServices.">
+<meta name="twitter:description" content="A DCAT Catalog: a curated collection of metadata about Datasets, DataServices and other Catalogs (a Catalog is itself a dcat:Dataset).">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,16 +32,20 @@
   "@id": "urn:solid:Catalog",
   "@type": "rdfs:Class",
   "rdfs:label": "Catalog",
-  "rdfs:comment": "A DCAT Catalog — a curated collection of metadata about Datasets and DataServices.",
+  "rdfs:comment": "A DCAT Catalog: a curated collection of metadata about Datasets, DataServices and other Catalogs (a Catalog is itself a dcat:Dataset).",
   "owl:sameAs": "http://www.w3.org/ns/dcat#Catalog",
   "rdfs:seeAlso": [
     "urn:solid:Dataset",
     "urn:solid:DataService",
     "https://schema.org/DataCatalog"
   ],
+  "notToBeConfusedWith": [
+    "urn:solid:Collection",
+    "urn:solid:Container"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The container for an open-data portal or research-data repository. Members listed via `dcat:dataset` (datasets) and `dcat:service` (services). Pair with `dcterms:publisher`, `urn:solid:license`. The W3C DCAT 3 spec is the current normative reference.",
+  "notes": "The container for an open-data portal or research-data repository. Members listed via `dcat:dataset` (datasets) and `dcat:service` (services). Pair with `urn:solid:publisher`, `urn:solid:license`. The W3C DCAT 3 spec is the current normative reference. Not an LDP `urn:solid:Container` or ActivityStreams `urn:solid:Collection`: a Catalog describes datasets, it does not store them.",
   "examples": [
     {
       "title": "A simple catalog",
@@ -68,6 +72,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment notes sub-catalogs and Catalog subclassOf Dataset; publisher via urn:solid:publisher; disambiguated from LDP Container and AS Collection."
     }
   ],
   "see_also": {

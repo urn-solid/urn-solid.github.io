@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:movedTo — urn-solid</title>
-<meta name="description" content="On an ActivityStreams Actor, the new identity URI the Actor has migrated to — the forwarding address left behind on the old account.">
+<meta name="description" content="On an actor (Person, Application, Group, Organization or Service), the new identity URI it has migrated to — the forwarding address left behind on the old account.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/movedTo/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:movedTo">
-<meta property="og:description" content="On an ActivityStreams Actor, the new identity URI the Actor has migrated to — the forwarding address left behind on the old account.">
+<meta property="og:description" content="On an actor (Person, Application, Group, Organization or Service), the new identity URI it has migrated to — the forwarding address left behind on the old account.">
 <meta property="og:url" content="https://urn-solid.com/movedTo/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:movedTo">
-<meta name="twitter:description" content="On an ActivityStreams Actor, the new identity URI the Actor has migrated to — the forwarding address left behind on the old account.">
+<meta name="twitter:description" content="On an actor (Person, Application, Group, Organization or Service), the new identity URI it has migrated to — the forwarding address left behind on the old account.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,17 +32,15 @@
   "@id": "urn:solid:movedTo",
   "@type": "rdf:Property",
   "rdfs:label": "movedTo",
-  "rdfs:comment": "On an ActivityStreams Actor, the new identity URI the Actor has migrated to — the forwarding address left behind on the old account.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#movedTo",
+  "rdfs:comment": "On an actor (Person, Application, Group, Organization or Service), the new identity URI it has migrated to — the forwarding address left behind on the old account.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#movedTo",
   "rdfs:seeAlso": [
-    "urn:solid:Actor",
     "urn:solid:alsoKnownAs",
     "urn:solid:Move"
   ],
-  "rdfs:domain": "urn:solid:Actor",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Forms the second half of the fediverse account-migration handshake. The *old* Actor sets `as:movedTo` pointing at the new identity; the *new* Actor lists the old in `as:alsoKnownAs`. Servers that see both sides confirmed automatically migrate followers; clients render the old account as redirected.",
+  "notes": "Not part of W3C ActivityStreams 2.0 / ActivityPub — a Mastodon extension (declared in Mastodon's JSON-LD context as `as:movedTo`) widely adopted across the fediverse. Forms one half of the fediverse account-migration handshake: the *old* actor sets `as:movedTo` pointing at the new identity; the *new* actor lists the old in `as:alsoKnownAs`. The old account sends a `Move` activity; receiving servers verify the new actor's `alsoKnownAs` includes the old one and move follows. Clients render the old account as redirected.",
   "examples": [
     {
       "title": "An Actor that has migrated to a new server",
@@ -56,7 +54,8 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#movedTo"
+      "https://www.w3.org/ns/activitystreams#movedTo",
+      "https://docs.joinmastodon.org/spec/activitypub/#as"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -66,6 +65,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Noted it is a Mastodon extension, not W3C AS2; corrected migration flow (Move activity + alsoKnownAs check); added Mastodon provenance; dropped non-existent Actor class."
     }
   ],
   "see_also": {

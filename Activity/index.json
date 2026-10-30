@@ -9,12 +9,9 @@
     "http://www.w3.org/ns/prov#Activity",
     "https://schema.org/Action"
   ],
-  "notToBeConfusedWith": [
-    "urn:solid:Object"
-  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:Object`. Pair with `as:actor` (the agent performing it), `as:object` (what it's done to), `as:target`, `as:published`. Rarely typed directly — pick a subclass like `urn:solid:Like`, `urn:solid:Follow`, `urn:solid:Create`. For PROV-grade activity tracking with start/end times, use `prov:Activity`.",
+  "notes": "Subclass of `urn:solid:Object`. Pair with `as:actor` (the agent performing it), `as:object` (what it's done to), `as:target`, `as:published`. Rarely typed directly — pick a subclass like `urn:solid:Like`, `urn:solid:Follow`, `urn:solid:Create`. For PROV-grade activity tracking with start/end times, use `prov:Activity`. This term is not prov:Activity (a provenance process with start/end time) nor schema:Action.",
   "examples": [
     {
       "title": "A generic activity",
@@ -39,6 +36,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Removed Object from notToBeConfusedWith (Activity is an Object subclass); noted it is not prov:Activity or schema:Action."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -46,5 +55,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:Action"
+  ]
 }

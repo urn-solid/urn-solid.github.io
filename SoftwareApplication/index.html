@@ -46,7 +46,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Subclass of `urn:solid:CreativeWork`. Distinct from AS `urn:solid:Application` (the actor type) and PROV `urn:solid:SoftwareAgent` (process-attribution): SoftwareApplication is the *product* — what's published, downloaded, reviewed. Pair with `schema:applicationCategory`, `schema:operatingSystem`, `schema:downloadUrl`.",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Distinct from AS `urn:solid:Application` (the actor type) and PROV `urn:solid:SoftwareAgent` (process-attribution): SoftwareApplication is the *product* — what's published, downloaded, reviewed. Pair with `schema:applicationCategory`, `schema:operatingSystem`, `schema:downloadUrl`. Use `https://schema.org/downloadUrl`, not `urn:solid:downloadURL` (dcat:downloadURL, for DCAT Distributions).",
   "examples": [
     {
       "title": "A simple software application",
@@ -72,6 +72,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes warn against urn:solid:downloadURL (dcat) vs schema:downloadUrl."
     }
   ],
   "see_also": {

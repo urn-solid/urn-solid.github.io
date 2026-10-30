@@ -36,17 +36,22 @@
   "owl:sameAs": "http://xmlns.com/foaf/0.1/familyName",
   "rdfs:seeAlso": [
     "https://schema.org/familyName",
-    "http://www.w3.org/2006/vcard/ns#family-name",
-    "http://xmlns.com/foaf/0.1/family_name"
+    "urn:solid:family-name",
+    "http://xmlns.com/foaf/0.1/family_name",
+    "http://xmlns.com/foaf/0.1/surname",
+    "urn:solid:lastName"
   ],
   "rdfs:domain": "urn:solid:Person",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "notToBeConfusedWith": [
-    "urn:solid:name"
+    "urn:solid:name",
+    "urn:solid:family-name",
+    "urn:solid:givenName",
+    "urn:solid:lastName"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Modern preferred form (the older `foaf:family_name` and `foaf:surname` are seen too — kept under `rdfs:seeAlso`). Pair with `foaf:givenName` for structured names. Use `urn:solid:name` for a single combined display name.",
+  "notes": "Modern preferred form (the older `foaf:family_name` and `foaf:surname` are seen too — kept under `rdfs:seeAlso`). Pair with `urn:solid:givenName` for structured names. Use `urn:solid:name` for a single combined display name. `urn:solid:family-name` is the vCard equivalent.",
   "examples": [
     {
       "title": "Person with structured name",
@@ -54,7 +59,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
-        "http://xmlns.com/foaf/0.1/givenName": "Alice",
+        "urn:solid:givenName": "Alice",
         "urn:solid:familyName": "Liddell"
       }
     }
@@ -71,6 +76,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso now lists foaf:surname, urn:solid:family-name, lastName; notes/example use urn:solid:givenName; added family-name to notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

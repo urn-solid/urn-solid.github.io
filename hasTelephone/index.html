@@ -38,9 +38,13 @@
     "https://schema.org/telephone",
     "http://xmlns.com/foaf/0.1/phone"
   ],
+  "notToBeConfusedWith": [
+    "urn:solid:telephone",
+    "urn:solid:phone"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use a `tel:` URI (e.g. `tel:+44-20-1234-5678`) for the value, not a bare string. Repeat for multiple numbers. For typed numbers (work/home/mobile), the value can be a `vcard:Tel` resource carrying `vcard:hasValue` and `rdf:type` of one of the work/home/cell sub-types.",
+  "notes": "Use a `tel:` URI (e.g. `tel:+44-20-1234-5678`) for the value, not a bare string. Repeat for multiple numbers. For typed numbers (work/home/mobile), the value can be a node typed `vcard:Cell`/`vcard:Voice`/`vcard:Fax` (+ `vcard:Home`/`vcard:Work`) carrying `vcard:value <tel:...>` (vcard:Tel is deprecated upstream). Not `urn:solid:telephone` (schema.org, plain string).",
   "examples": [
     {
       "title": "Person with a phone",
@@ -64,6 +68,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Replaced deprecated vcard:Tel guidance with TelephoneType-typed node; added urn:solid:telephone to notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -7,9 +7,12 @@
   "owl:sameAs": "http://xmlns.com/foaf/0.1/age",
   "rdfs:domain": "urn:solid:Agent",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#integer",
+  "notToBeConfusedWith": [
+    "urn:solid:birthday"
+  ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Privacy-sensitive — most modern profiles prefer `urn:solid:birthday` (which lets consumers compute current age). Value is an integer year count. For more precise temporal modelling (date of birth, life events), reach for the PROV vocabulary.",
+  "notes": "Privacy-sensitive and goes stale. To let consumers compute age, publish a full date of birth with `vcard:bday` or `schema:birthDate` (xsd:date); `urn:solid:birthday` is month-day only (mm-dd) and cannot yield an age. Value is an integer year count.",
   "examples": [
     {
       "title": "Person with an age",
@@ -33,6 +36,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected notes: birthday is mm-dd and cannot yield an age; point to vcard:bday/schema:birthDate; added notToBeConfusedWith birthday."
     }
   ],
   "see_also": {

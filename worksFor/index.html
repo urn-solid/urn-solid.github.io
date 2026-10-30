@@ -35,17 +35,21 @@
   "rdfs:comment": "An organization the person currently works for.",
   "owl:sameAs": "https://schema.org/worksFor",
   "rdfs:seeAlso": [
-    "https://schema.org/alumniOf",
-    "urn:solid:member"
+    "urn:solid:alumniOf",
+    "urn:solid:member",
+    "urn:solid:memberOf",
+    "urn:solid:workplaceHomepage"
   ],
   "rdfs:domain": "urn:solid:Person",
   "rdfs:range": "urn:solid:Organization",
   "notToBeConfusedWith": [
-    "urn:solid:member"
+    "urn:solid:member",
+    "urn:solid:memberOf",
+    "urn:solid:alumniOf"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use for current employment relationships. For past employers, use `schema:alumniOf`. For looser group affiliations (clubs, mailing lists, project contributors), `urn:solid:member` is more apt — `worksFor` implies an employment-like commitment.",
+  "notes": "Use for current employment relationships. For past employers, use `urn:solid:alumniOf`. For looser group affiliations (clubs, mailing lists, project contributors), `urn:solid:memberOf` (org:memberOf, agent → organization) is more apt — `worksFor` implies an employment-like commitment. Note `urn:solid:member` runs the other way (group → agent), so the like-for-like comparison is `memberOf`. For FOAF-style data, `urn:solid:workplaceHomepage` links to the employer's homepage instead.",
   "examples": [
     {
       "title": "Person employed by an organization",
@@ -69,6 +73,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso/notes use urn:solid:alumniOf; added memberOf/workplaceHomepage and memberOf/alumniOf confusables."
     }
   ],
   "see_also": {

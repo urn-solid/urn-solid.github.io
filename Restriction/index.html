@@ -36,7 +36,11 @@
   "owl:sameAs": "http://www.w3.org/2002/07/owl#Restriction",
   "rdfs:seeAlso": [
     "urn:solid:Class",
-    "urn:solid:onProperty"
+    "urn:solid:onProperty",
+    "urn:solid:someValuesFrom",
+    "urn:solid:allValuesFrom",
+    "urn:solid:hasValue",
+    "urn:solid:cardinality"
   ],
   "status": "stable",
   "added": "2026-04-19",
@@ -48,7 +52,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@type": "urn:solid:Restriction",
         "urn:solid:onProperty": { "@id": "urn:solid:knows" },
-        "http://www.w3.org/2002/07/owl#minCardinality": 1
+        "urn:solid:minCardinality": { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" }
       }
     }
   ],
@@ -64,6 +68,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example uses urn:solid:minCardinality typed xsd:nonNegativeInteger; seeAlso lists the constraint predicates."
     }
   ],
   "see_also": {

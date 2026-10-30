@@ -6,16 +6,15 @@
   "rdfs:comment": "Asserts that two OWL individuals are *not* the same — explicit negation, useful in worlds where the open-world assumption would otherwise leave identity ambiguous.",
   "owl:sameAs": "http://www.w3.org/2002/07/owl#differentFrom",
   "rdfs:seeAlso": [
-    "urn:solid:sameAs",
+    "http://www.w3.org/2002/07/owl#sameAs",
     "urn:solid:disjointWith"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:sameAs",
     "urn:solid:disjointWith"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Symmetric — `A differentFrom B` implies `B differentFrom A`. Distinct from `owl:disjointWith` (which separates *classes*); `differentFrom` separates *individuals*. Necessary because RDF doesn't assume Unique Name Assumption: without `differentFrom`, two distinctly-named resources might still be merged by reasoners.",
+  "notes": "Opposite of `owl:sameAs` (not `urn:solid:sameAs`, which is schema:sameAs). Symmetric — `A differentFrom B` implies `B differentFrom A`. Distinct from `owl:disjointWith` (which separates *classes*); `differentFrom` separates *individuals*. Necessary because RDF doesn't assume Unique Name Assumption: without `differentFrom`, two distinctly-named resources might still be merged by reasoners.",
   "examples": [
     {
       "title": "Two people explicitly marked as different",
@@ -38,6 +37,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Replaced urn:solid:sameAs (schema:sameAs) with owl:sameAs IRI in seeAlso, dropped it from notToBeConfusedWith; notes clarify."
     }
   ],
   "see_also": {

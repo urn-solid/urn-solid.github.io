@@ -7,14 +7,17 @@
   "owl:sameAs": "http://xmlns.com/foaf/0.1/Agent",
   "rdfs:seeAlso": [
     "http://www.w3.org/ns/prov#Agent",
-    "https://www.w3.org/ns/activitystreams#Object"
+    "http://purl.org/dc/terms/Agent",
+    "urn:solid:Service",
+    "urn:solid:Application"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Person"
+    "urn:solid:Person",
+    "urn:solid:Application"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use when the actor could be non-human (a bot, a group, a service). Prefer `urn:solid:Person` when you know the actor is specifically a human.",
+  "notes": "Use when the actor could be non-human (a bot, a group, a service). Prefer `urn:solid:Person` when you know the actor is specifically a human. For a known organization or group use `urn:solid:Organization` / `urn:solid:Group`.",
   "examples": [
     {
       "title": "Software agent",
@@ -22,7 +25,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/bots/curator",
         "@type": "urn:solid:Agent",
-        "foaf:name": "Curator Bot"
+        "urn:solid:name": "Curator Bot"
       }
     }
   ],
@@ -38,6 +41,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "bootstrap",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Replaced as:Object seeAlso with dcterms:Agent, Service, Application; notes point to Organization/Group; example uses urn:solid:name."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

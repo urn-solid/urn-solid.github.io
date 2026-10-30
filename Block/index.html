@@ -38,6 +38,10 @@
     "urn:solid:Reject",
     "urn:solid:Undo"
   ],
+  "notToBeConfusedWith": [
+    "urn:solid:Ignore",
+    "urn:solid:Flag"
+  ],
   "status": "stable",
   "added": "2026-04-18",
   "notes": "Subclass of `urn:solid:Activity`. The `as:object` is the actor being blocked. By ActivityPub convention, Block activities should NOT be delivered to the blocked actor — receivers process them locally to filter out interactions. To unblock, send an `as:Undo` of the Block.",
@@ -65,6 +69,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added notToBeConfusedWith Ignore, Flag."
     }
   ],
   "see_also": {

@@ -11,11 +11,14 @@
     "http://www.w3.org/ns/org#Organization"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Agent"
+    "urn:solid:Group",
+    "urn:solid:FormalOrganization",
+    "urn:solid:OrganizationalUnit",
+    "urn:solid:Brand"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:Agent`: every Organization is an Agent, but not every Agent is an Organization (people, software). Use `Organization` when the actor has formal/legal structure; use `Agent` when the actor's nature is unspecified or could be a person.",
+  "notes": "Subclass of `urn:solid:Agent`: every Organization is an Agent, but not every Agent is an Organization (people, software). Use `Organization` when the actor has formal/legal structure; use `Agent` when the actor's nature is unspecified or could be a person. Use `urn:solid:Group` for informal collections of agents without institutional structure.",
   "examples": [
     {
       "title": "A simple organization",
@@ -40,6 +43,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "notToBeConfusedWith now Group/FormalOrganization/OrganizationalUnit; notes point informal collections to Group."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

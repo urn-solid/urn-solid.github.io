@@ -7,12 +7,16 @@
   "owl:sameAs": "http://purl.org/dc/terms/valid",
   "rdfs:seeAlso": [
     "urn:solid:available",
-    "urn:solid:issued"
+    "urn:solid:issued",
+    "urn:solid:PeriodOfTime"
   ],
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "rdfs:range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+  "notToBeConfusedWith": [
+    "urn:solid:temporal"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use for time-bounded resources — coupons, certificates, regulations, embargoed reports. Value is typically an ISO 8601 interval. Distinct from `urn:solid:available` (when it became obtainable) and `urn:solid:issued` (when it was published).",
+  "notes": "Use for time-bounded resources — coupons, certificates, regulations, embargoed reports. Value is a date, dateTime, or ISO 8601 interval literal; for a structured period use a `urn:solid:PeriodOfTime` resource. Distinct from `urn:solid:available` (when it became obtainable) and `urn:solid:issued` (when it was published).",
   "examples": [
     {
       "title": "Discount coupon valid through Q2",
@@ -36,6 +40,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range rdfs:Literal (intervals are not xsd:dateTime); notes mention urn:solid:PeriodOfTime. Added urn:solid:temporal to notToBeConfusedWith (reciprocal)."
     }
   ],
   "see_also": {

@@ -53,7 +53,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/abc",
         "@type": "urn:solid:Entity",
-        "urn:solid:invalidatedAtTime": "2026-04-18T12:00:00Z"
+        "urn:solid:invalidatedAtTime": { "@value": "2026-04-18T12:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
       }
     }
   ],
@@ -69,6 +69,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example timestamp typed as xsd:dateTime."
     }
   ],
   "see_also": {

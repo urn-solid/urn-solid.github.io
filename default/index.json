@@ -3,7 +3,7 @@
   "@id": "urn:solid:default",
   "@type": "rdf:Property",
   "rdfs:label": "default",
-  "rdfs:comment": "Marks an Authorization as the default access policy inherited by descendants of a Container.",
+  "rdfs:comment": "The container whose descendant resources (lacking their own ACL) inherit this Authorization; the WAC inheritance mechanism.",
   "owl:sameAs": "http://www.w3.org/ns/auth/acl#default",
   "rdfs:seeAlso": [
     "urn:solid:Authorization",
@@ -43,6 +43,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Definition: object is the container whose descendants inherit the Authorization."
     }
   ],
   "see_also": {

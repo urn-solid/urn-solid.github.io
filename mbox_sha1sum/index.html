@@ -44,7 +44,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Inverse-functional like `foaf:mbox` but doesn't reveal the actual email address. Compute the SHA-1 of the lowercased `mailto:` URI (e.g. SHA-1 of `\"mailto:alice@example.org\"`). Two agents with the same `mbox_sha1sum` are the same agent. Modern profiles often skip both this and `mbox` for privacy.",
+  "notes": "Inverse-functional like `foaf:mbox` but doesn't reveal the actual email address. Compute the SHA-1 hex digest of the full `mailto:` URI string exactly as used in `foaf:mbox` (e.g. SHA-1 of `\"mailto:alice@example.org\"`); do not lowercase or otherwise normalise it. Two agents with the same `mbox_sha1sum` are the same agent. Modern profiles often skip both this and `mbox` for privacy.",
   "examples": [
     {
       "title": "Person identified by mbox hash",
@@ -52,7 +52,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
-        "urn:solid:mbox_sha1sum": "f4dc1c9c54f24d8b2c8b5d1c4d3e8f9a0b1c2d3e"
+        "urn:solid:mbox_sha1sum": "0e2c7c1362c996630c1cc1ad912cfa202d78e1bc"
       }
     }
   ],
@@ -68,6 +68,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: hash the mailto: URI exactly, no lowercasing; example uses the real SHA-1 of mailto:alice@example.org."
     }
   ],
   "see_also": {

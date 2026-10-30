@@ -13,14 +13,16 @@
   "rdfs:domain": "urn:solid:Class",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Logical OR across classes. Common use: declaring `rdfs:domain` or `rdfs:range` for a property that accepts multiple types — \"this property's value is a Person OR an Organization.\" Value is an `rdf:List` of class IRIs.",
+  "notes": "Logical OR across classes. Common use: declaring `rdfs:domain` or `rdfs:range` for a property that accepts multiple types — \"this property's value is a Person OR an Organization.\" Value is an `rdf:List` of class IRIs or class expressions.",
   "examples": [
     {
-      "title": "Domain accepting either of two classes",
+      "title": "Range accepting a Person or an Organization",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "urn:solid:actor",
-        "urn:solid:domain": {
+        "@id": "https://example.org/vocab/employer",
+        "@type": "urn:solid:ObjectProperty",
+        "urn:solid:range": {
+          "@type": "http://www.w3.org/2002/07/owl#Class",
           "urn:solid:unionOf": {
             "@list": [
               { "@id": "urn:solid:Person" },
@@ -43,6 +45,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example uses an example.org property with a typed owl:Class union range instead of redefining as:actor's domain."
     }
   ],
   "see_also": {

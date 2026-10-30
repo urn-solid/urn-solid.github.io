@@ -40,13 +40,14 @@
     "urn:solid:closeMatch",
     "urn:solid:broadMatch",
     "urn:solid:narrowMatch",
-    "urn:solid:semanticRelation"
+    "urn:solid:semanticRelation",
+    "urn:solid:relatedMatch"
   ],
   "rdfs:domain": "urn:solid:Concept",
   "rdfs:range": "urn:solid:Concept",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use the most specific subproperty available — bare `mappingRelation` only when the kind of mapping is genuinely unknown. Distinct from `skos:semanticRelation` (which covers in-scheme relations like `broader`/`narrower`); mappingRelations cross scheme boundaries.",
+  "notes": "Use the most specific subproperty available — bare `mappingRelation` only when the kind of mapping is genuinely unknown. Subproperty of `urn:solid:semanticRelation`, specialised for links between concepts in different schemes (in-scheme links use `broader`/`narrower`/`related`).",
   "examples": [
     {
       "title": "A generic mapping between two concepts",
@@ -70,6 +71,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes now state mappingRelation is a subproperty of semanticRelation; added relatedMatch to seeAlso."
     }
   ],
   "see_also": {

@@ -9,6 +9,9 @@
     "urn:solid:identifier"
   ],
   "rdfs:domain": "urn:solid:VCard",
+  "notToBeConfusedWith": [
+    "urn:solid:identifier"
+  ],
   "status": "stable",
   "added": "2026-04-18",
   "notes": "vCard's persistent identifier — the value remains stable across edits, lets clients dedupe two card revisions for the same person. Often a `urn:uuid:`. Distinct from `urn:solid:identifier` (general-purpose secondary identifier); `hasUID` is specifically the vCard tradition's stable ID.",
@@ -35,6 +38,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added identifier to notToBeConfusedWith."
     }
   ],
   "see_also": {

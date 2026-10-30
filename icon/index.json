@@ -8,15 +8,18 @@
   "rdfs:seeAlso": [
     "urn:solid:img",
     "urn:solid:depiction",
-    "https://schema.org/image"
+    "https://schema.org/image",
+    "https://www.w3.org/ns/activitystreams#image"
   ],
   "notToBeConfusedWith": [
     "urn:solid:img",
-    "urn:solid:depiction"
+    "urn:solid:depiction",
+    "urn:solid:image",
+    "urn:solid:preview"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "ActivityStreams' small-avatar slot — typically square, low-resolution, used as the visual identifier for an actor or object in lists. The value is an Image or a URL. For a full-size portrait, prefer `urn:solid:img` (FOAF) or `urn:solid:depiction`.",
+  "notes": "ActivityStreams' small-avatar slot — typically square, low-resolution, used as the visual identifier for an actor or object in lists. The value is an Image or a URL. For a full-size or banner image in ActivityStreams use `as:image` (https://www.w3.org/ns/activitystreams#image); note `urn:solid:image` maps to schema:image. Outside AS2, foaf:img (`urn:solid:img`) / foaf:depiction (`urn:solid:depiction`) serve the portrait role.",
   "examples": [
     {
       "title": "Person with an avatar icon",
@@ -40,6 +43,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes point full-size AS images at as:image; added urn:solid:image (schema:image) to notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

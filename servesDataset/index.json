@@ -8,13 +8,14 @@
   "rdfs:seeAlso": [
     "urn:solid:DataService",
     "urn:solid:Dataset",
-    "urn:solid:endpointURL"
+    "urn:solid:endpointURL",
+    "urn:solid:accessService"
   ],
   "rdfs:domain": "urn:solid:DataService",
   "rdfs:range": "urn:solid:Dataset",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Repeat once per Dataset the service exposes — a single SPARQL endpoint or API may publish many. The inverse direction (`dcat:Dataset` → service) is not standard; lookups go through the service.",
+  "notes": "Repeat once per Dataset the service exposes — a single SPARQL endpoint or API may publish many. There is no direct inverse; from the Dataset side, link via `dcat:distribution` to a Distribution whose `urn:solid:accessService` points at this DataService.",
   "examples": [
     {
       "title": "Service serving two datasets",
@@ -41,6 +42,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes describe the standard Dataset -> distribution -> accessService path; added accessService to seeAlso."
     }
   ],
   "see_also": {

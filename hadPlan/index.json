@@ -7,8 +7,10 @@
   "owl:sameAs": "http://www.w3.org/ns/prov#hadPlan",
   "rdfs:seeAlso": [
     "urn:solid:Plan",
-    "http://www.w3.org/ns/prov#qualifiedAssociation"
+    "urn:solid:qualifiedAssociation",
+    "urn:solid:Association"
   ],
+  "rdfs:domain": "urn:solid:Association",
   "rdfs:range": "urn:solid:Plan",
   "status": "stable",
   "added": "2026-04-19",
@@ -37,6 +39,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added domain urn:solid:Association; seeAlso uses urn:solid:qualifiedAssociation and adds Association."
     }
   ],
   "see_also": {

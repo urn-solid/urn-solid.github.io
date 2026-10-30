@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:anniversary — urn-solid</title>
-<meta name="description" content="An anniversary date associated with the subject — typically a wedding anniversary or other recurring date.">
+<meta name="description" content="The date of marriage, or equivalent, of the subject (RFC 6350 ANNIVERSARY).">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/anniversary/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:anniversary">
-<meta property="og:description" content="An anniversary date associated with the subject — typically a wedding anniversary or other recurring date.">
+<meta property="og:description" content="The date of marriage, or equivalent, of the subject (RFC 6350 ANNIVERSARY).">
 <meta property="og:url" content="https://urn-solid.com/anniversary/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:anniversary">
-<meta name="twitter:description" content="An anniversary date associated with the subject — typically a wedding anniversary or other recurring date.">
+<meta name="twitter:description" content="The date of marriage, or equivalent, of the subject (RFC 6350 ANNIVERSARY).">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:anniversary",
   "@type": "rdf:Property",
   "rdfs:label": "anniversary",
-  "rdfs:comment": "An anniversary date associated with the subject — typically a wedding anniversary or other recurring date.",
+  "rdfs:comment": "The date of marriage, or equivalent, of the subject (RFC 6350 ANNIVERSARY).",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#anniversary",
   "rdfs:seeAlso": [
     "urn:solid:bday",
@@ -45,7 +45,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "vCard's recurring-date field — distinct from `urn:solid:birthday`/`urn:solid:bday`. ISO 8601 date. Common values are wedding anniversaries, founding dates of organizations, or other yearly remembrances. May repeat for multiple anniversaries.",
+  "notes": "vCard's ANNIVERSARY field — distinct from `urn:solid:birthday`/`urn:solid:bday`. ISO 8601 date. At most one value per card; for an organization founding date use schema:foundingDate. The registry range is xsd:date, but upstream declares xsd:dateTime | xsd:gYear.",
   "examples": [
     {
       "title": "Person with an anniversary",
@@ -70,6 +70,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Narrowed to date of marriage or equivalent per RFC 6350; removed founding-date and repeat claims; noted upstream range."
     }
   ],
   "see_also": {

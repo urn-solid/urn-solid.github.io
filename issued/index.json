@@ -6,17 +6,20 @@
   "rdfs:comment": "The date the resource was formally issued or published.",
   "owl:sameAs": "http://purl.org/dc/terms/issued",
   "rdfs:seeAlso": [
-    "https://schema.org/datePublished",
+    "urn:solid:datePublished",
     "urn:solid:created"
   ],
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
+  "rdfs:range": "http://www.w3.org/2000/01/rdf-schema#Literal",
   "notToBeConfusedWith": [
     "urn:solid:created",
-    "urn:solid:date"
+    "urn:solid:date",
+    "urn:solid:datePublished",
+    "urn:solid:published",
+    "urn:solid:available"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Distinct from `urn:solid:created` (which is when the resource itself was made) — `issued` is when it was made publicly available. For an article drafted in private and published later, the two diverge. ISO 8601 values.",
+  "notes": "Distinct from `urn:solid:created` (which is when the resource itself was made) — `issued` is when it was made publicly available. For an article drafted in private and published later, the two diverge. Value is an xsd:date or xsd:dateTime. Same meaning as schema:datePublished (`urn:solid:datePublished`) / as:published (`urn:solid:published`); prefer the term matching the vocabulary the rest of the resource uses.",
   "examples": [
     {
       "title": "Specification with a publication date",
@@ -41,6 +44,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Range rdfs:Literal (date or dateTime); added datePublished/published to notToBeConfusedWith; seeAlso uses urn:solid:datePublished."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

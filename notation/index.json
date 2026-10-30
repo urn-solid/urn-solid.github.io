@@ -3,21 +3,20 @@
   "@id": "urn:solid:notation",
   "@type": "rdf:Property",
   "rdfs:label": "notation",
-  "rdfs:comment": "A symbolic identifier for a SKOS Concept within a particular notation system (Dewey numbers, ISBN-style codes, taxonomy IDs).",
+  "rdfs:comment": "A string of characters, such as \"510\" or \"QA76\", that uniquely identifies a SKOS Concept within a given scheme, typed with a datatype that names the notation system (e.g. Dewey Decimal, UDC, LCC class marks).",
   "owl:sameAs": "http://www.w3.org/2004/02/skos/core#notation",
   "rdfs:seeAlso": [
     "urn:solid:Concept",
     "urn:solid:prefLabel",
     "urn:solid:inScheme"
   ],
-  "rdfs:domain": "urn:solid:Concept",
   "notToBeConfusedWith": [
     "urn:solid:prefLabel",
     "urn:solid:altLabel"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Unlike `skos:prefLabel` (a human-readable string in a natural language), `skos:notation` is a typed literal whose datatype identifies the notation system — e.g. a Dewey Decimal code typed as `<http://example.org/dewey>` is distinct from a UDC code with the same digits. A Concept may carry multiple notations from different schemes.",
+  "notes": "Unlike `skos:prefLabel` (a human-readable string in a natural language), `skos:notation` is a typed literal whose datatype identifies the notation system — e.g. a Dewey Decimal code typed as `<https://example.org/dewey-code>` is distinct from a UDC code with the same digits. A Concept may carry multiple notations from different schemes. Upstream SKOS declares no domain for `notation`.",
   "examples": [
     {
       "title": "Concept with a notation",
@@ -42,6 +41,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Reworded comment (removed misleading ISBN example); aligned notes datatype IRI with example; dropped rdfs:domain (none upstream)."
     }
   ],
   "see_also": {

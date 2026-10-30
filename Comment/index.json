@@ -10,7 +10,8 @@
     "urn:solid:inReplyTo"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Note"
+    "urn:solid:Note",
+    "urn:solid:comment"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -22,6 +23,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/hello/comments/1",
         "@type": "urn:solid:Comment",
+        "https://schema.org/parentItem": { "@id": "https://example.org/posts/hello" },
         "urn:solid:author": { "@id": "https://example.org/bob#me" },
         "urn:solid:text": "Nice post!"
       }
@@ -39,6 +41,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example links to the article via schema:parentItem."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

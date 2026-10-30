@@ -3,7 +3,7 @@
   "@id": "urn:solid:serviceEndpoint",
   "@type": "rdf:Property",
   "rdfs:label": "serviceEndpoint",
-  "rdfs:comment": "On a DID Document service entry, the URL where the service is reachable.",
+  "rdfs:comment": "On a DID document service entry (did:Service), the endpoint(s) where the service is reachable — a URI, a map, or a set of these.",
   "owl:sameAs": "https://www.w3.org/ns/did#serviceEndpoint",
   "rdfs:seeAlso": [
     "urn:solid:DIDDocument",
@@ -11,16 +11,16 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "A DID Document carries `service` entries (messaging endpoints, profile servers, credential exchange endpoints); each one carries one or more `serviceEndpoint` URLs. Distinct from DCAT's `dcat:endpointURL` (data-service flavour) — same general idea, different domain vocabulary.",
+  "notes": "A DID Document carries `service` entries (messaging endpoints, profile servers, credential exchange endpoints); each one carries one or more `serviceEndpoint` URLs. Distinct from DCAT's `dcat:endpointURL` (data-service flavour) — same general idea, different domain vocabulary. Upstream `rdfs:domain` is `did:Service` (the service entry), not the DID document itself. Service `type` values such as `DIDCommMessaging` or `LinkedDomains` come from the DID Specification Registries, not the `did:` vocabulary.",
   "examples": [
     {
-      "title": "A messaging endpoint on a DID",
+      "title": "A service endpoint on a DID",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "did:example:abc",
         "@type": "urn:solid:DIDDocument",
         "https://www.w3.org/ns/did#service": {
-          "@type": "https://www.w3.org/ns/did#DIDCommMessaging",
+          "@type": "https://www.w3.org/ns/did#Service",
           "urn:solid:serviceEndpoint": { "@id": "https://example.org/didcomm" }
         }
       }
@@ -38,6 +38,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example service type changed to did:Service (DIDCommMessaging is not in the did: vocabulary); comment allows URI/map/set values; notes give upstream domain did:Service."
     }
   ],
   "see_also": {

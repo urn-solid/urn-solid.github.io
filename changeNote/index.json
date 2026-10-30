@@ -11,10 +11,9 @@
     "urn:solid:historyNote",
     "urn:solid:scopeNote"
   ],
-  "rdfs:domain": "urn:solid:Concept",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Audit trail in human-readable form: \"renamed from X on 2024-06-12\", \"narrowed scope to exclude Y\". Distinct from `historyNote` (broader narrative history of the Concept) and `editorialNote` (working notes for curators). Often appended rather than overwritten.",
+  "notes": "Audit trail in human-readable form: \"renamed from X on 2024-06-12\", \"narrowed scope to exclude Y\". Distinct from `historyNote` (broader narrative history of the Concept) and `editorialNote` (working notes for curators). Often appended rather than overwritten. Upstream SKOS declares no domain: usable on any resource (Concept, ConceptScheme, Collection).",
   "examples": [
     {
       "title": "Concept with a change note",
@@ -38,6 +37,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain (none upstream)."
     }
   ],
   "see_also": {

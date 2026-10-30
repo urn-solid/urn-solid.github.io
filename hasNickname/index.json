@@ -7,14 +7,15 @@
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasNickname",
   "rdfs:seeAlso": [
     "urn:solid:nick",
-    "https://schema.org/alternateName"
+    "https://schema.org/alternateName",
+    "http://www.w3.org/2006/vcard/ns#nickname"
   ],
   "notToBeConfusedWith": [
     "urn:solid:nick"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "vCard's nickname predicate — the structured equivalent of FOAF's `urn:solid:nick`. Pick `hasNickname` in vCard-flavored data, `nick` in FOAF-flavored data. Repeat for multiple nicknames.",
+  "notes": "vCard's nickname predicate — the structured equivalent of FOAF's `urn:solid:nick`. For a plain string use vcard:nickname (http://www.w3.org/2006/vcard/ns#nickname); hasNickname is the object form for a nickname node carrying parameters (vcard:value plus type). Pick `hasNickname` in vCard-flavored data, `nick` in FOAF-flavored data. Repeat for multiple nicknames.",
   "examples": [
     {
       "title": "vCard with a nickname",
@@ -23,7 +24,9 @@
         "@id": "https://example.org/cards/alice",
         "@type": "urn:solid:VCard",
         "urn:solid:fn": "Alice Liddell",
-        "urn:solid:hasNickname": "ali"
+        "urn:solid:hasNickname": {
+          "http://www.w3.org/2006/vcard/ns#value": "ali"
+        }
       }
     }
   ],
@@ -39,6 +42,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes distinguish object property hasNickname from vcard:nickname; added vcard:nickname to seeAlso; example uses a node with vcard:value."
     }
   ],
   "see_also": {

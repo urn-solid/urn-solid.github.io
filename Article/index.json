@@ -12,7 +12,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:Document` (and schema:CreativeWork). Use for blog posts, news articles, papers. Pair with `urn:solid:headline`, `urn:solid:articleBody`, `urn:solid:author` for full schema.org-style modelling. For ActivityPub-style social posts, see `as:Article` or `as:Note`.",
+  "notes": "Subclass of `urn:solid:CreativeWork` (schema:CreativeWork). Use for blog posts, news articles, papers. Pair with `urn:solid:headline`, `urn:solid:articleBody`, `urn:solid:author` for full schema.org-style modelling. Not `as:Article` (https://www.w3.org/ns/activitystreams#Article), the ActivityPub long-form object; use that in AP payloads (or `as:Note` for short posts).",
   "examples": [
     {
       "title": "A blog post as an Article",
@@ -20,8 +20,8 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/posts/jsonld-intro",
         "@type": "urn:solid:Article",
-        "urn:solid:name": "An Introduction to JSON-LD",
-        "urn:solid:creator": { "@id": "https://example.org/alice#me" }
+        "urn:solid:headline": "An Introduction to JSON-LD",
+        "urn:solid:author": { "@id": "https://example.org/alice#me" }
       }
     }
   ],
@@ -37,6 +37,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Superclass corrected to CreativeWork; disambiguated from as:Article; example uses author/headline."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -44,5 +56,9 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:NewsArticle",
+    "urn:solid:Note"
+  ]
 }

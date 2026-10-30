@@ -36,9 +36,16 @@
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#hasAddress",
   "rdfs:seeAlso": [
     "https://schema.org/address",
-    "https://schema.org/PostalAddress"
+    "https://schema.org/PostalAddress",
+    "urn:solid:Address",
+    "urn:solid:street-address",
+    "urn:solid:locality"
   ],
   "rdfs:range": "http://www.w3.org/2006/vcard/ns#Address",
+  "notToBeConfusedWith": [
+    "urn:solid:address",
+    "urn:solid:location"
+  ],
   "status": "stable",
   "added": "2026-04-18",
   "notes": "The value should be a `vcard:Address` (or `schema:PostalAddress`) resource carrying structured fields — `vcard:street-address`, `vcard:locality`, `vcard:postal-code`, `vcard:country-name`. For an approximate \"based near\" location, use `urn:solid:basedNear` instead.",
@@ -70,6 +77,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added Address, street-address, locality to seeAlso and urn:solid:address to notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

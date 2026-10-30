@@ -41,14 +41,17 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "An `.ics` file's outermost element. A pod's calendar resource is typically a `Vcalendar` containing many `Vevent` and `Vtodo` members — analogous to a Container in LDP terms. Carries calendar-wide metadata (timezone, product ID).",
+  "notes": "An `.ics` file's outermost element. A pod's calendar resource is typically a `Vcalendar` containing many `Vevent` and `Vtodo` members — analogous to a Container in LDP terms. Carries calendar-wide metadata (timezone, product ID). Member events and to-dos link from the calendar via `ical:component`.",
   "examples": [
     {
       "title": "A calendar with one event",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/calendar/",
-        "@type": "urn:solid:Vcalendar"
+        "@type": "urn:solid:Vcalendar",
+        "http://www.w3.org/2002/12/cal/ical#component": [
+          { "@id": "https://alice.example.org/calendar/team-sync-2026-04-19", "@type": "urn:solid:Vevent" }
+        ]
       }
     }
   ],
@@ -64,6 +67,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example now contains the event it promises (via ical:component); notes say members link via ical:component."
     }
   ],
   "see_also": {

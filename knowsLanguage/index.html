@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:knowsLanguage — urn-solid</title>
-<meta name="description" content="A language the person speaks, writes, or otherwise communicates in.">
+<meta name="description" content="A language the agent (person or organization) speaks, writes, or otherwise communicates in.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/knowsLanguage/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:knowsLanguage">
-<meta property="og:description" content="A language the person speaks, writes, or otherwise communicates in.">
+<meta property="og:description" content="A language the agent (person or organization) speaks, writes, or otherwise communicates in.">
 <meta property="og:url" content="https://urn-solid.com/knowsLanguage/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:knowsLanguage">
-<meta name="twitter:description" content="A language the person speaks, writes, or otherwise communicates in.">
+<meta name="twitter:description" content="A language the agent (person or organization) speaks, writes, or otherwise communicates in.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,19 +32,21 @@
   "@id": "urn:solid:knowsLanguage",
   "@type": "rdf:Property",
   "rdfs:label": "knowsLanguage",
-  "rdfs:comment": "A language the person speaks, writes, or otherwise communicates in.",
+  "rdfs:comment": "A language the agent (person or organization) speaks, writes, or otherwise communicates in.",
   "owl:sameAs": "https://schema.org/knowsLanguage",
   "rdfs:seeAlso": [
     "urn:solid:language",
-    "http://www.w3.org/2006/vcard/ns#hasLanguage"
+    "urn:solid:hasLanguage"
   ],
-  "rdfs:domain": "urn:solid:Person",
+  "rdfs:domain": "urn:solid:Agent",
   "notToBeConfusedWith": [
-    "urn:solid:language"
+    "urn:solid:language",
+    "urn:solid:inLanguage",
+    "urn:solid:hasLanguage"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Distinct from `urn:solid:language` (which is the language of a *resource*) — `knowsLanguage` is the languages an *agent* communicates in. Value is typically a BCP 47 tag (`\"en\"`, `\"de-CH\"`) or a `schema:Language` resource. Repeat for multiple languages.",
+  "notes": "Distinct from `urn:solid:language` (which is the language of a *resource*) — `knowsLanguage` is the languages an *agent* communicates in. Value is typically a BCP 47 tag (`\"en\"`, `\"de-CH\"`) or a `schema:Language` resource. Repeat for multiple languages. schema.org domain: Person or Organization. Not `urn:solid:inLanguage`, which is the language a CreativeWork is written in.",
   "examples": [
     {
       "title": "Person fluent in two languages",
@@ -52,7 +54,10 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
-        "urn:solid:knowsLanguage": ["en", "fr"]
+        "urn:solid:knowsLanguage": [
+          "en",
+          "fr"
+        ]
       }
     }
   ],
@@ -68,6 +73,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain widened to Agent; seeAlso uses urn:solid:hasLanguage; added inLanguage confusable."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

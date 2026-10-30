@@ -6,15 +6,18 @@
   "rdfs:comment": "A telephone number for the subject — typically as a plain string.",
   "owl:sameAs": "https://schema.org/telephone",
   "rdfs:seeAlso": [
-    "urn:solid:hasTelephone"
+    "urn:solid:hasTelephone",
+    "urn:solid:phone",
+    "urn:solid:Tel"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "notToBeConfusedWith": [
-    "urn:solid:hasTelephone"
+    "urn:solid:hasTelephone",
+    "urn:solid:phone"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Schema.org's simple string-valued phone predicate (\"+44-20-1234-5678\"). Distinct from `urn:solid:hasTelephone` (vCard, uses a `tel:` URI for stricter parsing). Use whichever matches your data flavor.",
+  "notes": "Schema.org's simple string-valued phone predicate (\"+44-20-1234-5678\"). Distinct from `urn:solid:hasTelephone` (vCard, uses a `tel:` URI for stricter parsing). foaf:phone (`urn:solid:phone`) expects a `tel:` IRI. Use whichever matches your data flavor.",
   "examples": [
     {
       "title": "Organization with a phone string",
@@ -38,6 +41,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added urn:solid:phone confusable and phone/Tel seeAlso."
     }
   ],
   "see_also": {

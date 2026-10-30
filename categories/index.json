@@ -3,7 +3,7 @@
   "@id": "urn:solid:categories",
   "@type": "rdf:Property",
   "rdfs:label": "categories",
-  "rdfs:comment": "iCalendar tags or categories for a Vevent/Vtodo — comma-separated keywords classifying the calendar item (\"work\", \"personal\", \"travel\").",
+  "rdfs:comment": "iCalendar categories for a Vevent/Vtodo/Vjournal — free-text keywords classifying the item (\"work\", \"travel\"); in RDF give one value per keyword rather than a comma-joined string.",
   "owl:sameAs": "http://www.w3.org/2002/12/cal/ical#categories",
   "rdfs:seeAlso": [
     "urn:solid:Vevent",
@@ -13,11 +13,12 @@
   ],
   "notToBeConfusedWith": [
     "urn:solid:tag",
-    "urn:solid:keyword"
+    "urn:solid:keyword",
+    "urn:solid:hasTopic"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Free-form strings, no controlled vocabulary by default. Distinct from `as:tag` (ActivityStreams tag links) and `dcat:keyword` (dataset keyword). Use `categories` when you need iCal-format calendar interop; the other two are better for fediverse posts and dataset metadata respectively.",
+  "notes": "Free-form strings, no controlled vocabulary by default. Distinct from `as:tag` (ActivityStreams tag links) and `dcat:keyword` (dataset keyword). Use `categories` when you need iCal-format calendar interop; the other two are better for fediverse posts and dataset metadata respectively. Also distinct from `urn:solid:hasTopic` (bookmark topic folders).",
   "examples": [
     {
       "title": "An event tagged with categories",
@@ -40,6 +41,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment: one value per keyword in RDF, not comma-joined; added hasTopic to notToBeConfusedWith."
     }
   ],
   "see_also": {

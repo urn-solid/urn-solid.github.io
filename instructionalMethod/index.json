@@ -3,15 +3,15 @@
   "@id": "urn:solid:instructionalMethod",
   "@type": "rdf:Property",
   "rdfs:label": "instructionalMethod",
-  "rdfs:comment": "A process used to engender knowledge, attitudes, or skills using the resource — pedagogy.",
+  "rdfs:comment": "A process used to engender knowledge, attitudes, and skills that the resource is designed to support — e.g. lecture, problem-based learning, workshop.",
   "owl:sameAs": "http://purl.org/dc/terms/instructionalMethod",
   "rdfs:seeAlso": [
     "urn:solid:educationLevel",
-    "urn:solid:audience"
+    "http://purl.org/dc/terms/audience"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Used in educational-resources metadata to describe the teaching method (lecture, problem-set, workshop, MOOC video). Value is typically a controlled-vocabulary term or free-form string. Pair with `urn:solid:educationLevel`.",
+  "notes": "Used in educational-resources metadata to describe the teaching method (lecture, problem-set, workshop, MOOC video). Upstream range is `dcterms:MethodOfInstruction`: an IRI from a controlled vocabulary is preferred; a free-form string is a fallback. Pair with `urn:solid:educationLevel`. For the educational audience use `dcterms:audience` (not `urn:solid:audience`, which is ActivityStreams addressing).",
   "examples": [
     {
       "title": "A workshop's instructional method",
@@ -35,6 +35,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment aligned with upstream; seeAlso dcterms:audience instead of urn:solid:audience; notes prefer controlled-vocabulary IRIs."
     }
   ],
   "see_also": {

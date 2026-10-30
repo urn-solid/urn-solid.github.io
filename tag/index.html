@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:tag — urn-solid</title>
-<meta name="description" content="An object that is part of the private secondary audience of the subject — typically a hashtag or @mention.">
+<meta name="description" content="Objects or Links associated with the subject by reference (unlike `attachment`, by inclusion) — in ActivityPub typically `Mention` (an @-mentioned actor) or `Hashtag` entries; a tag does not address or deliver to anyone.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/tag/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:tag">
-<meta property="og:description" content="An object that is part of the private secondary audience of the subject — typically a hashtag or @mention.">
+<meta property="og:description" content="Objects or Links associated with the subject by reference (unlike `attachment`, by inclusion) — in ActivityPub typically `Mention` (an @-mentioned actor) or `Hashtag` entries; a tag does not address or deliver to anyone.">
 <meta property="og:url" content="https://urn-solid.com/tag/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:tag">
-<meta name="twitter:description" content="An object that is part of the private secondary audience of the subject — typically a hashtag or @mention.">
+<meta name="twitter:description" content="Objects or Links associated with the subject by reference (unlike `attachment`, by inclusion) — in ActivityPub typically `Mention` (an @-mentioned actor) or `Hashtag` entries; a tag does not address or deliver to anyone.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,15 +32,24 @@
   "@id": "urn:solid:tag",
   "@type": "rdf:Property",
   "rdfs:label": "tag",
-  "rdfs:comment": "An object that is part of the private secondary audience of the subject — typically a hashtag or @mention.",
+  "rdfs:comment": "Objects or Links associated with the subject by reference (unlike `attachment`, by inclusion) — in ActivityPub typically `Mention` (an @-mentioned actor) or `Hashtag` entries; a tag does not address or deliver to anyone.",
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#tag",
   "rdfs:seeAlso": [
     "https://schema.org/keywords",
-    "urn:solid:subject"
+    "urn:solid:subject",
+    "urn:solid:Mention",
+    "urn:solid:Hashtag",
+    "urn:solid:attachment"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:attachment",
+    "urn:solid:subject",
+    "urn:solid:keywords",
+    "urn:solid:categories"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "ActivityStreams' inline-mention slot — used by ActivityPub posts to attach `as:Hashtag` or `as:Mention` references that surface in the body. Repeat to list multiple tags. Distinct from `urn:solid:subject` (broader topical metadata) and `urn:solid:audience` (intended recipients).",
+  "notes": "ActivityStreams' inline-mention slot — used by ActivityPub posts to attach `as:Hashtag` or `as:Mention` references that surface in the body. Repeat to list multiple tags. Distinct from `urn:solid:attachment` (association by inclusion), `urn:solid:subject` (broader topical metadata) and `urn:solid:audience` / `urn:solid:to` (intended recipients — tagging someone does not address them).",
   "examples": [
     {
       "title": "Note tagging another actor",
@@ -50,8 +59,8 @@
         "@type": "urn:solid:Note",
         "urn:solid:content": "<p>Hi @bob!</p>",
         "urn:solid:tag": {
-          "@type": "https://www.w3.org/ns/activitystreams#Mention",
-          "https://www.w3.org/ns/activitystreams#href": { "@id": "https://example.org/bob#me" },
+          "@type": "urn:solid:Mention",
+          "urn:solid:href": { "@id": "https://example.org/bob#me" },
           "https://www.w3.org/ns/activitystreams#name": "@bob"
         }
       }
@@ -69,6 +78,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Replaced wrong (bcc-like) comment with the AS2 tag definition; added seeAlso Mention/Hashtag/attachment and notToBeConfusedWith; example uses urn:solid:Mention/href."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

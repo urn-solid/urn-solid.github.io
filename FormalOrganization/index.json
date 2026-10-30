@@ -10,11 +10,12 @@
     "urn:solid:OrganizationalUnit"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Organization"
+    "urn:solid:Organization",
+    "urn:solid:OrganizationalUnit"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Subclass of `urn:solid:Organization`. Distinguishes legally-recognized entities from informal collectives (which stay at the `Organization` level). Use when legal status matters — contracts, regulatory filings, official records. Pair with `org:identifier` for the registration number.",
+  "notes": "Subclass of `urn:solid:Organization`. Distinguishes legally-recognized entities from informal collectives (which stay at the `Organization` level). Use when legal status matters — contracts, regulatory filings, official records. Pair with `urn:solid:identifier` (dcterms:identifier) for the registration number, as in the example; `org:identifier` is a different property (a skos:notation subproperty using a typed literal for the scheme).",
   "examples": [
     {
       "title": "A registered company",
@@ -39,6 +40,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes now match the example: urn:solid:identifier is dcterms:identifier, distinct from org:identifier."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

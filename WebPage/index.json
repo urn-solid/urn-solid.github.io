@@ -7,14 +7,14 @@
   "owl:sameAs": "https://schema.org/WebPage",
   "rdfs:seeAlso": [
     "urn:solid:Document",
-    "https://schema.org/WebSite"
+    "urn:solid:WebSite"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Document"
+    "urn:solid:WebSite"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:CreativeWork` (and effectively of `urn:solid:Document`). Use when you want web-specific semantics — pair with `schema:isPartOf` pointing at the containing `WebSite`, plus `urn:solid:headline` and `urn:solid:datePublished` for SEO-friendly markup.",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Narrower than foaf:Document (`urn:solid:Document`): use WebPage for schema.org web-page semantics — pair with `urn:solid:isPartOf` pointing at the containing `WebSite`, plus `urn:solid:headline` and `urn:solid:datePublished` for SEO-friendly markup.",
   "examples": [
     {
       "title": "A simple web page",
@@ -39,6 +39,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped contradictory Document confusable (WebSite instead); notes and example agree on urn:solid:isPartOf; seeAlso uses urn:solid:WebSite."
     }
   ],
   "see_also": {

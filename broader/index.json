@@ -7,16 +7,19 @@
   "owl:sameAs": "http://www.w3.org/2004/02/skos/core#broader",
   "rdfs:seeAlso": [
     "urn:solid:narrower",
-    "urn:solid:related"
+    "urn:solid:related",
+    "urn:solid:broadMatch"
   ],
   "rdfs:domain": "urn:solid:Concept",
   "rdfs:range": "urn:solid:Concept",
   "notToBeConfusedWith": [
-    "urn:solid:narrower"
+    "urn:solid:narrower",
+    "urn:solid:broadMatch",
+    "urn:solid:related"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The hierarchical-up relation in a SKOS taxonomy. Inverse of `urn:solid:narrower`. Note: SKOS treats `broader` as transitive only when used inside a single ConceptScheme — for transitive ancestor links, use `skos:broaderTransitive`. For non-hierarchical relatedness, use `urn:solid:related`.",
+  "notes": "The hierarchical-up relation in a SKOS taxonomy. Inverse of `urn:solid:narrower`. `skos:broader` is NOT transitive; for ancestor chains SKOS defines the transitive superproperty `skos:broaderTransitive` (http://www.w3.org/2004/02/skos/core#broaderTransitive). By convention `broader` links concepts within the same scheme; for cross-scheme links use `urn:solid:broadMatch`. For non-hierarchical relatedness, use `urn:solid:related`.",
   "examples": [
     {
       "title": "Concept hierarchy",
@@ -40,6 +43,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected transitivity claim (broader is never transitive; see broaderTransitive); added broadMatch to seeAlso/notToBeConfusedWith."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

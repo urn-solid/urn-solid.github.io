@@ -3,26 +3,27 @@
   "@id": "urn:solid:role",
   "@type": "rdf:Property",
   "rdfs:label": "role",
-  "rdfs:comment": "The job role or function the person performs within an organization.",
+  "rdfs:comment": "The function or part the subject plays in an organization or situation (RFC 6350 ROLE), e.g. \"Project Leader\", \"Treasurer\" — not the formal job title.",
   "owl:sameAs": "http://www.w3.org/2006/vcard/ns#role",
   "rdfs:seeAlso": [
+    "http://www.w3.org/2006/vcard/ns#title",
     "https://schema.org/jobTitle",
     "urn:solid:worksFor"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "vCard's role string — typically a job title or function (\"Senior Engineer\", \"Treasurer\"). For schema.org-flavored data, prefer `schema:jobTitle`. For PROV-grade role-in-Activity attribution, use `prov:hadRole`.",
+  "notes": "vCard's role string (RFC 6350 ROLE) — the function performed, not the job title. For the formal job title use vcard:title (http://www.w3.org/2006/vcard/ns#title) / schema:jobTitle. For PROV-grade role-in-Activity attribution, use `prov:hadRole`.",
   "examples": [
     {
-      "title": "vCard with a job role",
+      "title": "vCard with a role",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/cards/alice-work",
         "@type": "urn:solid:VCard",
         "urn:solid:fn": "Alice Liddell",
         "urn:solid:organization-name": "Acme Corp",
-        "urn:solid:role": "Senior Engineer"
+        "urn:solid:role": "Project Leader"
       }
     }
   ],
@@ -38,6 +39,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Distinguished ROLE from TITLE per RFC 6350; added vcard:title to seeAlso; example value now 'Project Leader'."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -45,5 +58,9 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:Post",
+    "urn:solid:hadRole"
+  ]
 }

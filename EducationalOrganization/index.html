@@ -37,11 +37,11 @@
   "rdfs:seeAlso": [
     "urn:solid:Organization",
     "urn:solid:alumniOf",
-    "https://schema.org/CollegeOrUniversity"
+    "urn:solid:CollegeOrUniversity"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Subclass of `urn:solid:Organization`. Use as the value type of `urn:solid:alumniOf` for richer educational-history data than a bare `foaf:schoolHomepage` URL. Schema.org has narrower subclasses (`School`, `CollegeOrUniversity`, `HighSchool`, `MiddleSchool`) for specific levels.",
+  "notes": "Subclass of `schema:Organization` (`urn:solid:Organization` is the FOAF equivalent). Use as the value type of `urn:solid:alumniOf` for richer educational-history data than a bare `foaf:schoolHomepage` URL. Schema.org has narrower subclasses (`School`, `CollegeOrUniversity`, `HighSchool`, `MiddleSchool`) for specific levels.",
   "examples": [
     {
       "title": "An educational organization",
@@ -66,6 +66,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Superclass is schema:Organization (urn:solid:Organization is FOAF); seeAlso uses urn:solid:CollegeOrUniversity."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -73,7 +85,10 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:CollegeOrUniversity"
+  ]
 }
 
 </script>

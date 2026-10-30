@@ -3,18 +3,20 @@
   "@id": "urn:solid:keyword",
   "@type": "rdf:Property",
   "rdfs:label": "keyword",
-  "rdfs:comment": "A keyword or tag describing a DCAT Dataset or Catalog — repeated for multiple keywords.",
+  "rdfs:comment": "A free-text keyword or tag describing a DCAT catalogued resource (Dataset, DataService, or Catalog); repeat for multiple keywords.",
   "owl:sameAs": "http://www.w3.org/ns/dcat#keyword",
   "rdfs:seeAlso": [
     "urn:solid:keywords",
     "urn:solid:subject"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:keywords"
+    "urn:solid:keywords",
+    "urn:solid:categories",
+    "urn:solid:theme"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "DCAT prefers repeated singular `dcat:keyword` literals (one per language tag) over schema.org's comma-separated `urn:solid:keywords` string. For controlled-vocabulary topical metadata, prefer `dcat:theme` with SKOS Concepts.",
+  "notes": "DCAT uses one `dcat:keyword` literal per keyword (optionally language-tagged), not a comma-separated string like `urn:solid:keywords`. For controlled-vocabulary topical metadata, prefer `dcat:theme` with SKOS Concepts.",
   "examples": [
     {
       "title": "Dataset with keywords",
@@ -22,7 +24,11 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/datasets/wonderland-2026",
         "@type": "urn:solid:Dataset",
-        "urn:solid:keyword": ["climate", "wonderland", "annual report"]
+        "urn:solid:keyword": [
+          "climate",
+          "wonderland",
+          "annual report"
+        ]
       }
     }
   ],
@@ -38,6 +44,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed 'one per language tag' to one literal per keyword; comment covers DataService too."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

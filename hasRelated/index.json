@@ -12,11 +12,12 @@
   ],
   "rdfs:domain": "urn:solid:VCard",
   "notToBeConfusedWith": [
-    "urn:solid:related"
+    "urn:solid:related",
+    "urn:solid:knows"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "vCard's general inter-contact relation. Pair with `vcard:hasRelatedType` (work-colleague, family, etc.) for typed relations. Distinct from SKOS `urn:solid:related` (between Concepts) and from FOAF `urn:solid:knows` (between Persons in a social-graph sense).",
+  "notes": "vCard's general inter-contact relation. For typed relations, make the value a node typed with a vcard:RelatedType subclass (`vcard:Spouse`, `vcard:Colleague`, `vcard:Friend`, ...) carrying `vcard:hasValue` to the related card/WebID. Distinct from SKOS `urn:solid:related` (between Concepts) and from FOAF `urn:solid:knows` (between Persons in a social-graph sense).",
   "examples": [
     {
       "title": "vCard pointing at a related contact",
@@ -40,6 +41,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Replaced non-existent vcard:hasRelatedType with RelatedType-typed node guidance; added knows to notToBeConfusedWith."
     }
   ],
   "see_also": {

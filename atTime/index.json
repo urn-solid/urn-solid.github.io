@@ -8,7 +8,10 @@
   "rdfs:seeAlso": [
     "urn:solid:generatedAtTime",
     "urn:solid:startedAtTime",
-    "urn:solid:endedAtTime"
+    "urn:solid:endedAtTime",
+    "urn:solid:invalidatedAtTime",
+    "urn:solid:Generation",
+    "urn:solid:Usage"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "status": "stable",
@@ -20,7 +23,7 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/generations/release-v2",
-        "@type": "http://www.w3.org/ns/prov#Generation",
+        "@type": "urn:solid:Generation",
         "urn:solid:atTime": "2026-04-18T18:00:00Z"
       }
     }
@@ -37,6 +40,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso adds invalidatedAtTime, Generation, Usage; example types node as urn:solid:Generation."
     }
   ],
   "see_also": {

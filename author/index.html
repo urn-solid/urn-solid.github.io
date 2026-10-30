@@ -42,11 +42,12 @@
   "rdfs:range": "urn:solid:Agent",
   "notToBeConfusedWith": [
     "urn:solid:creator",
-    "urn:solid:contributor"
+    "urn:solid:contributor",
+    "urn:solid:editor"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Schema.org's narrow authorship predicate, meant for the author of a CreativeWork. For general authorship/creation attribution use `urn:solid:creator` (dcterms); for ActivityStreams social content use `urn:solid:attributedTo`. Repeat for co-authors.",
+  "notes": "Schema.org's narrow authorship predicate, meant for the author of a CreativeWork. For general authorship/creation attribution use `urn:solid:creator` (dcterms); for ActivityStreams social content use `urn:solid:attributedTo`. Repeat for co-authors. schema.org range: Person or Organization (`urn:solid:Agent` is declared here as their superclass).",
   "examples": [
     {
       "title": "Article with an author",
@@ -70,6 +71,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Noted schema.org range is Person or Organization."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

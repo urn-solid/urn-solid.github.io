@@ -10,11 +10,13 @@
     "urn:solid:isPartOf"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:isPartOf"
+    "urn:solid:isPartOf",
+    "urn:solid:contains",
+    "urn:solid:tableOfContents"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Inverse of `urn:solid:isPartOf`. Use to enumerate the constituent parts of a compound resource (chapters of a book, articles in a journal issue, photos in an album). Repeat for multiple parts.",
+  "notes": "Inverse of `urn:solid:isPartOf`. Use to enumerate the constituent parts of a compound resource (chapters of a book, articles in a journal issue, photos in an album). Repeat for multiple parts. For Solid/LDP container membership use `urn:solid:contains`; hasPart is intellectual part-whole.",
   "examples": [
     {
       "title": "Book with chapters",
@@ -41,6 +43,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added urn:solid:contains to notToBeConfusedWith with LDP note."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -3,11 +3,12 @@
   "@id": "urn:solid:qualifiedAttribution",
   "@type": "rdf:Property",
   "rdfs:label": "qualifiedAttribution",
-  "rdfs:comment": "A qualified PROV Attribution linked to the entity — adds role and timing to a `wasAttributedTo` relation.",
+  "rdfs:comment": "Links an Entity to a prov:Attribution resource that qualifies a wasAttributedTo relation — naming the Agent (prov:agent) and the role it played (prov:hadRole).",
   "owl:sameAs": "http://www.w3.org/ns/prov#qualifiedAttribution",
   "rdfs:seeAlso": [
     "urn:solid:Attribution",
-    "urn:solid:wasAttributedTo"
+    "urn:solid:wasAttributedTo",
+    "urn:solid:hadRole"
   ],
   "rdfs:domain": "urn:solid:Entity",
   "rdfs:range": "urn:solid:Attribution",
@@ -38,6 +39,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment no longer claims Attribution carries timing; seeAlso adds hadRole."
     }
   ],
   "see_also": {

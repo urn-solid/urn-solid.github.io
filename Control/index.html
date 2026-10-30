@@ -52,6 +52,8 @@
         "@id": "https://alice.example.org/.acl#owner",
         "@type": "urn:solid:Authorization",
         "http://www.w3.org/ns/auth/acl#agent": { "@id": "https://alice.example.org/profile/card#me" },
+        "http://www.w3.org/ns/auth/acl#accessTo": { "@id": "https://alice.example.org/" },
+        "http://www.w3.org/ns/auth/acl#default": { "@id": "https://alice.example.org/" },
         "urn:solid:mode": [
           { "@id": "http://www.w3.org/ns/auth/acl#Read" },
           { "@id": "http://www.w3.org/ns/auth/acl#Write" },
@@ -72,6 +74,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example now has acl:accessTo and acl:default so it grants something."
     }
   ],
   "see_also": {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:used — urn-solid</title>
-<meta name="description" content="An entity used by the activity — an input or dependency that existed before the activity started.">
+<meta name="description" content="An Entity that the Activity began to make use of (consumed, read, or depended on) at some point during its execution; the inverse direction of prov:generated. The Entity must already exist at the moment of use.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/used/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:used">
-<meta property="og:description" content="An entity used by the activity — an input or dependency that existed before the activity started.">
+<meta property="og:description" content="An Entity that the Activity began to make use of (consumed, read, or depended on) at some point during its execution; the inverse direction of prov:generated. The Entity must already exist at the moment of use.">
 <meta property="og:url" content="https://urn-solid.com/used/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:used">
-<meta name="twitter:description" content="An entity used by the activity — an input or dependency that existed before the activity started.">
+<meta name="twitter:description" content="An Entity that the Activity began to make use of (consumed, read, or depended on) at some point during its execution; the inverse direction of prov:generated. The Entity must already exist at the moment of use.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,13 +32,13 @@
   "@id": "urn:solid:used",
   "@type": "rdf:Property",
   "rdfs:label": "used",
-  "rdfs:comment": "An entity used by the activity — an input or dependency that existed before the activity started.",
+  "rdfs:comment": "An Entity that the Activity began to make use of (consumed, read, or depended on) at some point during its execution; the inverse direction of prov:generated. The Entity must already exist at the moment of use.",
   "owl:sameAs": "http://www.w3.org/ns/prov#used",
   "rdfs:seeAlso": [
     "urn:solid:wasGeneratedBy",
     "urn:solid:wasDerivedFrom"
   ],
-  "rdfs:domain": "urn:solid:Activity",
+  "rdfs:domain": "http://www.w3.org/ns/prov#Activity",
   "rdfs:range": "urn:solid:Entity",
   "status": "stable",
   "added": "2026-04-18",
@@ -49,7 +49,7 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/builds/2026-04-18-1",
-        "@type": "urn:solid:Activity",
+        "@type": "http://www.w3.org/ns/prov#Activity",
         "urn:solid:used": { "@id": "https://example.org/sources/term.schema.json" }
       }
     }
@@ -66,6 +66,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Domain and example type now prov:Activity (not as:Activity); comment no longer requires the entity to predate the activity."
     }
   ],
   "see_also": {

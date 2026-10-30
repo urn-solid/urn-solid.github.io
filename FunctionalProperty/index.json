@@ -8,7 +8,7 @@
   "rdfs:seeAlso": [
     "urn:solid:Property",
     "urn:solid:InverseFunctionalProperty",
-    "urn:solid:sameAs"
+    "http://www.w3.org/2002/07/owl#sameAs"
   ],
   "status": "stable",
   "added": "2026-04-19",
@@ -35,6 +35,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso: replaced urn:solid:sameAs (schema:sameAs) with owl:sameAs IRI."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -42,5 +54,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:InverseFunctionalProperty"
+  ]
 }

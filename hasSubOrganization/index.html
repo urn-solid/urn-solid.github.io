@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:hasSubOrganization — urn-solid</title>
-<meta name="description" content="An OrganizationalUnit (department, team, division) that is part of the parent Organization.">
+<meta name="description" content="A sub-organization of this Organization — a subsidiary, department or other organization it contains or controls; may itself be a FormalOrganization. For internal units without legal status, use the narrower hasUnit.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/hasSubOrganization/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:hasSubOrganization">
-<meta property="og:description" content="An OrganizationalUnit (department, team, division) that is part of the parent Organization.">
+<meta property="og:description" content="A sub-organization of this Organization — a subsidiary, department or other organization it contains or controls; may itself be a FormalOrganization. For internal units without legal status, use the narrower hasUnit.">
 <meta property="og:url" content="https://urn-solid.com/hasSubOrganization/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:hasSubOrganization">
-<meta name="twitter:description" content="An OrganizationalUnit (department, team, division) that is part of the parent Organization.">
+<meta name="twitter:description" content="A sub-organization of this Organization — a subsidiary, department or other organization it contains or controls; may itself be a FormalOrganization. For internal units without legal status, use the narrower hasUnit.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:hasSubOrganization",
   "@type": "rdf:Property",
   "rdfs:label": "hasSubOrganization",
-  "rdfs:comment": "An OrganizationalUnit (department, team, division) that is part of the parent Organization.",
+  "rdfs:comment": "A sub-organization of this Organization — a subsidiary, department or other organization it contains or controls; may itself be a FormalOrganization. For internal units without legal status, use the narrower hasUnit.",
   "owl:sameAs": "http://www.w3.org/ns/org#hasSubOrganization",
   "rdfs:seeAlso": [
     "urn:solid:subOrganizationOf",
@@ -41,11 +41,12 @@
   "rdfs:domain": "urn:solid:Organization",
   "rdfs:range": "urn:solid:Organization",
   "notToBeConfusedWith": [
-    "urn:solid:subOrganizationOf"
+    "urn:solid:subOrganizationOf",
+    "urn:solid:hasUnit"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Inverse of `urn:solid:subOrganizationOf`. Use to enumerate departments/units belonging to a parent. Repeat for multiple subunits.",
+  "notes": "Inverse of `urn:solid:subOrganizationOf`. Use to enumerate subsidiaries, departments or other sub-organizations belonging to a parent. Repeat for multiple children. When the child is an internal OrganizationalUnit, `urn:solid:hasUnit` is the narrower form.",
   "examples": [
     {
       "title": "Company with engineering and sales units",
@@ -72,6 +73,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment/notes no longer restrict values to OrganizationalUnits (that is hasUnit); added hasUnit to notToBeConfusedWith."
     }
   ],
   "see_also": {

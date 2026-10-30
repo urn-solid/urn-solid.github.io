@@ -12,7 +12,7 @@
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#date",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Common in academic publishing — captures the gap between submission, acceptance, and publication. Pair with `dcterms:dateSubmitted` and `urn:solid:issued`. ISO 8601 date.",
+  "notes": "Common in academic publishing — captures the gap between submission, acceptance, and publication. Pair with `urn:solid:dateSubmitted` and `urn:solid:issued`. ISO 8601 date.",
   "examples": [
     {
       "title": "Paper with submit/accept/publish dates",
@@ -20,7 +20,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/papers/42",
         "@type": "urn:solid:Document",
-        "http://purl.org/dc/terms/dateSubmitted": "2026-01-15",
+        "urn:solid:dateSubmitted": "2026-01-15",
         "urn:solid:dateAccepted": "2026-03-04",
         "urn:solid:issued": "2026-04-18"
       }
@@ -38,6 +38,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example and notes now use urn:solid:dateSubmitted instead of the raw dcterms IRI."
     }
   ],
   "see_also": {

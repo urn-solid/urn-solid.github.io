@@ -7,15 +7,22 @@
   "owl:sameAs": "http://purl.org/dc/terms/created",
   "rdfs:seeAlso": [
     "https://schema.org/dateCreated",
-    "http://www.w3.org/ns/prov#generatedAtTime"
+    "http://www.w3.org/ns/prov#generatedAtTime",
+    "urn:solid:dateCreated"
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "notToBeConfusedWith": [
-    "urn:solid:modified"
+    "urn:solid:modified",
+    "urn:solid:date",
+    "urn:solid:dateCreated",
+    "urn:solid:generatedAtTime",
+    "urn:solid:issued",
+    "urn:solid:published",
+    "urn:solid:temporal"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use ISO 8601 (`xsd:dateTime` or `xsd:date`) values. Set once at creation and never updated — for last-edit times use `urn:solid:modified`. For provenance-grade timestamps with full PROV semantics, prefer `prov:generatedAtTime`.",
+  "notes": "Use ISO 8601 (`xsd:dateTime` or `xsd:date`) values. Set once at creation and never updated — for last-edit times use `urn:solid:modified`. For provenance-grade timestamps with full PROV semantics, prefer `prov:generatedAtTime`. Same meaning as `urn:solid:dateCreated` (schema.org); prefer `created` in dcterms-style/Solid metadata. xsd:date values are also acceptable despite the declared xsd:dateTime range.",
   "examples": [
     {
       "title": "A document with a creation date",
@@ -39,6 +46,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Cross-referenced urn:solid:dateCreated; noted xsd:date is acceptable."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

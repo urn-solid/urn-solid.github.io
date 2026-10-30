@@ -3,14 +3,15 @@
   "@id": "urn:solid:PersonalProfileDocument",
   "@type": "rdfs:Class",
   "rdfs:label": "PersonalProfileDocument",
-  "rdfs:comment": "A document that describes a person — typically a FOAF or WebID profile.",
+  "rdfs:comment": "An RDF document that describes its own author — its maker is also its primaryTopic; the classic FOAF / WebID profile document.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/PersonalProfileDocument",
   "rdfs:seeAlso": [
-    "http://www.w3.org/ns/solid/terms#preferencesFile"
+    "urn:solid:primaryTopic",
+    "https://www.w3.org/2005/Incubator/webid/spec/identity/"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:Document`. The document's `foaf:primaryTopic` is the Person it describes. WebID profile documents are typically of this type. The relationship between the document and its subject Person is asymmetric: one document, one primary topic.",
+  "notes": "Subclass of `urn:solid:Document`. The document's `foaf:primaryTopic` is the Person it describes. WebID profile documents are typically of this type. The relationship between the document and its subject Person is asymmetric: one document, one primary topic. For documents about a person written by someone else, use `urn:solid:Document` with `urn:solid:primaryTopic`.",
   "examples": [
     {
       "title": "A WebID profile document",
@@ -18,7 +19,7 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/card",
         "@type": "urn:solid:PersonalProfileDocument",
-        "http://xmlns.com/foaf/0.1/primaryTopic": { "@id": "https://alice.example.org/profile/card#me" }
+        "urn:solid:primaryTopic": { "@id": "https://alice.example.org/profile/card#me" }
       }
     }
   ],
@@ -34,6 +35,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment states the maker-is-primaryTopic constraint; replaced unrelated seeAlso; notes cover third-party bios; example uses urn:solid:primaryTopic."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -41,5 +54,8 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:Profile"
+  ]
 }

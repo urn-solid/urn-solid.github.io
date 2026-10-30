@@ -44,11 +44,12 @@
   "rdfs:range": "urn:solid:Entity",
   "notToBeConfusedWith": [
     "urn:solid:wasDerivedFrom",
-    "urn:solid:specializationOf"
+    "urn:solid:specializationOf",
+    "urn:solid:alternateOf"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "A subproperty of `prov:wasDerivedFrom` — every revision is a derivation, but a revision specifically replaces the prior version while keeping the same name/role. Use for explicit version chains (v1 → v2 → v3); use plain `wasDerivedFrom` when the new entity is a transformation rather than an update.",
+  "notes": "A subproperty of `prov:wasDerivedFrom` — every revision is a derivation, but a revision is a newer version of the original that retains substantial content from it (v1 → v2 → v3). Use plain `wasDerivedFrom` when the new entity is a transformation rather than an update.",
   "examples": [
     {
       "title": "v2 of a report",
@@ -72,6 +73,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes no longer say a revision replaces the prior version."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

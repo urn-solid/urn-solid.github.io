@@ -6,12 +6,11 @@
   "rdfs:comment": "A system of communication including written, spoken, signed, or symbolic languages.",
   "owl:sameAs": "http://purl.org/dc/terms/LinguisticSystem",
   "rdfs:seeAlso": [
-    "urn:solid:language",
-    "urn:solid:hasLanguage"
+    "urn:solid:language"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use as @type for resources representing languages — typically referenced from `urn:solid:language` when you need a structured Language resource rather than a bare BCP 47 tag. The IANA language subtag registry serves as the canonical LinguisticSystem namespace.",
+  "notes": "Use as @type for resources representing languages — typically referenced from `urn:solid:language` when you need a structured Language resource rather than a bare BCP 47 tag. Common IRI sources: id.loc.gov ISO 639-1/639-2 (http://id.loc.gov/vocabulary/iso639-2/eng), Lexvo, or the EU language authority table; for a bare BCP 47 tag use a literal on `urn:solid:language`.",
   "examples": [
     {
       "title": "A LinguisticSystem resource",
@@ -35,6 +34,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected IRI-source guidance (IANA subtag registry has no per-language URIs); removed unrelated vCard hasLanguage from seeAlso."
     }
   ],
   "see_also": {

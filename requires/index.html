@@ -35,12 +35,15 @@
   "rdfs:comment": "A related resource that is required by the described resource to support its function or coherence.",
   "owl:sameAs": "http://purl.org/dc/terms/requires",
   "rdfs:seeAlso": [
-    "http://purl.org/dc/terms/isRequiredBy",
-    "https://schema.org/requirements"
+    "urn:solid:isRequiredBy",
+    "https://schema.org/softwareRequirements"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:isRequiredBy"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use for hard dependencies — software that needs another library, a document that requires its referenced datasets, an API spec requiring an auth scheme. Repeat for multiple dependencies. The inverse is `dcterms:isRequiredBy`.",
+  "notes": "Use for hard dependencies — software that needs another library, a document that requires its referenced datasets, an API spec requiring an auth scheme. Repeat for multiple dependencies. The inverse is `urn:solid:isRequiredBy`.",
   "examples": [
     {
       "title": "Document requiring another resource",
@@ -48,7 +51,9 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://urn-solid.com/Person/index.html",
         "@type": "urn:solid:Document",
-        "urn:solid:requires": { "@id": "https://urn-solid.com/render.js" }
+        "urn:solid:requires": {
+          "@id": "https://urn-solid.com/render.js"
+        }
       }
     }
   ],
@@ -64,6 +69,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "seeAlso uses urn:solid:isRequiredBy and schema:softwareRequirements (replaces superseded schema:requirements); added inverse to notToBeConfusedWith."
     }
   ],
   "see_also": {

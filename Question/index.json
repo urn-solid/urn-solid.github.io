@@ -11,7 +11,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "AS Question is both an `as:IntransitiveActivity` and an Object — it represents a poll or survey. Pair with `as:oneOf` (single-choice options) or `as:anyOf` (multi-choice). For straight Q&A without polling semantics, schema:Question + schema:Answer is more general.",
+  "notes": "AS Question is both an `as:IntransitiveActivity` and an Object — it represents a poll or survey. Pair with `as:oneOf` (single-choice options) or `as:anyOf` (multi-choice). For straight Q&A without polling semantics, schema:Question + schema:Answer is more general. Not `schema:Question`: for FAQ / Q&A page markup use `https://schema.org/Question` with `urn:solid:Answer`. The question text goes in `urn:solid:name` or `urn:solid:content`.",
   "examples": [
     {
       "title": "A simple poll",
@@ -21,8 +21,14 @@
         "@type": "urn:solid:Question",
         "urn:solid:name": "Where for lunch?",
         "https://www.w3.org/ns/activitystreams#oneOf": [
-          { "@type": "urn:solid:Note", "urn:solid:name": "Tacos" },
-          { "@type": "urn:solid:Note", "urn:solid:name": "Pizza" }
+          {
+            "@type": "urn:solid:Note",
+            "urn:solid:name": "Tacos"
+          },
+          {
+            "@type": "urn:solid:Note",
+            "urn:solid:name": "Pizza"
+          }
         ]
       }
     }
@@ -39,6 +45,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Disambiguated as:Question (poll) from schema:Question. Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -46,5 +58,9 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:Answer",
+    "urn:solid:FAQPage"
+  ]
 }

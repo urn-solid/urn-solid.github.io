@@ -40,10 +40,9 @@
     "urn:solid:editorialNote",
     "urn:solid:scopeNote"
   ],
-  "rdfs:domain": "urn:solid:Concept",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Narrative rather than transactional: where the term came from, why it exists, how usage has changed. Distinct from `changeNote` (specific edit log) and `editorialNote` (curator working notes). Public-facing — useful in glossaries and documentation pages.",
+  "notes": "Narrative rather than transactional: where the term came from, why it exists, how usage has changed. Distinct from `changeNote` (specific edit log) and `editorialNote` (curator working notes). Public-facing — useful in glossaries and documentation pages. Upstream SKOS declares no domain: usable on any resource (Concept, ConceptScheme, Collection).",
   "examples": [
     {
       "title": "Concept with a history note",
@@ -67,6 +66,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped rdfs:domain (none upstream)."
     }
   ],
   "see_also": {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:last — urn-solid</title>
-<meta name="description" content="The final page of a paginated ActivityStreams Collection — the entry point for clients that want to start at the end (oldest activities, most recent post for chronologically reversed orderings).">
+<meta name="description" content="The final page in a paged ActivityStreams Collection's ordering — the end of the first→next chain. In reverse-chronological ActivityPub collections this is the page with the oldest items.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/last/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:last">
-<meta property="og:description" content="The final page of a paginated ActivityStreams Collection — the entry point for clients that want to start at the end (oldest activities, most recent post for chronologically reversed orderings).">
+<meta property="og:description" content="The final page in a paged ActivityStreams Collection's ordering — the end of the first→next chain. In reverse-chronological ActivityPub collections this is the page with the oldest items.">
 <meta property="og:url" content="https://urn-solid.com/last/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:last">
-<meta name="twitter:description" content="The final page of a paginated ActivityStreams Collection — the entry point for clients that want to start at the end (oldest activities, most recent post for chronologically reversed orderings).">
+<meta name="twitter:description" content="The final page in a paged ActivityStreams Collection's ordering — the end of the first→next chain. In reverse-chronological ActivityPub collections this is the page with the oldest items.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,15 +32,20 @@
   "@id": "urn:solid:last",
   "@type": "rdf:Property",
   "rdfs:label": "last",
-  "rdfs:comment": "The final page of a paginated ActivityStreams Collection — the entry point for clients that want to start at the end (oldest activities, most recent post for chronologically reversed orderings).",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#last",
+  "rdfs:comment": "The final page in a paged ActivityStreams Collection's ordering — the end of the first→next chain. In reverse-chronological ActivityPub collections this is the page with the oldest items.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#last",
   "rdfs:seeAlso": [
     "urn:solid:Collection",
     "urn:solid:first",
     "urn:solid:next",
-    "urn:solid:prev"
+    "urn:solid:prev",
+    "urn:solid:current",
+    "urn:solid:CollectionPage"
   ],
   "rdfs:domain": "urn:solid:Collection",
+  "notToBeConfusedWith": [
+    "urn:solid:current"
+  ],
   "status": "stable",
   "added": "2026-04-19",
   "notes": "Optional companion to `as:first`. Useful when the Collection has stable bounds (an outbox with finite history, an archived event log) so clients can deep-link to the end without walking the whole chain. Servers may omit it for unbounded or live-growing Collections.",
@@ -50,7 +55,7 @@
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/outbox",
-        "@type": "http://www.w3.org/ns/activitystreams#OrderedCollection",
+        "@type": "https://www.w3.org/ns/activitystreams#OrderedCollection",
         "urn:solid:totalItems": 5320,
         "urn:solid:first": { "@id": "https://alice.example.org/outbox?page=1" },
         "urn:solid:last": { "@id": "https://alice.example.org/outbox?page=266" }
@@ -59,7 +64,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#last"
+      "https://www.w3.org/ns/activitystreams#last"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -69,6 +74,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment rewritten (end of first->next chain; oldest items in reverse-chronological collections); added current/CollectionPage to seeAlso and notToBeConfusedWith current."
     }
   ],
   "see_also": {

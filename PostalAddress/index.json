@@ -6,22 +6,26 @@
   "rdfs:comment": "A structured postal address — street, locality, region, postal code, country.",
   "owl:sameAs": "https://schema.org/PostalAddress",
   "rdfs:seeAlso": [
+    "urn:solid:Address",
     "http://www.w3.org/2006/vcard/ns#Address"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Address"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use for snail-mail addresses with structured fields (`schema:streetAddress`, `schema:addressLocality`, `schema:postalCode`, `schema:addressCountry`). For vCard-flavored data, the equivalent is `vcard:Address`.",
+  "notes": "Use for snail-mail addresses with structured fields (`schema:streetAddress`, `schema:addressLocality`, `schema:postalCode`, `schema:addressCountry`). Use `schema:PostalAddress` as the value of `schema:address` (schema.org data); use `urn:solid:Address` (vcard:Address) with `urn:solid:hasAddress` for vCard/SolidOS contacts.",
   "examples": [
     {
       "title": "A postal address",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://example.org/places/wonderland-hq",
+        "@id": "https://example.org/places/wonderland-hq#address",
         "@type": "urn:solid:PostalAddress",
         "https://schema.org/streetAddress": "1 Wonderland Way",
         "https://schema.org/addressLocality": "London",
         "https://schema.org/postalCode": "SW1A 1AA",
-        "https://schema.org/addressCountry": "UK"
+        "https://schema.org/addressCountry": "GB"
       }
     }
   ],
@@ -37,6 +41,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Cross-referenced urn:solid:Address; example uses ISO country code GB and a distinct address @id."
     }
   ],
   "see_also": {

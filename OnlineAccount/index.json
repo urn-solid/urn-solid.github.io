@@ -6,11 +6,14 @@
   "rdfs:comment": "An account held by an Agent on some online service.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/OnlineAccount",
   "rdfs:seeAlso": [
-    "http://www.w3.org/ns/solid/terms#Account"
+    "urn:solid:Account"
+  ],
+  "notToBeConfusedWith": [
+    "urn:solid:Account"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use as the value type of `urn:solid:account`. Typically described with `foaf:accountName` (the username) and `foaf:accountServiceHomepage` (the service's homepage). For a Solid pod account specifically, see `solid:Account`.",
+  "notes": "Use as the value type of `urn:solid:account`. Typically described with `urn:solid:accountName` (the username) and `urn:solid:accountServiceHomepage` (the service's homepage). urn:solid:Account is the Solid server account (login/pod owner), not an arbitrary third-party service account.",
   "examples": [
     {
       "title": "An OnlineAccount on a service",
@@ -18,8 +21,8 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/alice/accounts/github",
         "@type": "urn:solid:OnlineAccount",
-        "http://xmlns.com/foaf/0.1/accountName": "alice",
-        "http://xmlns.com/foaf/0.1/accountServiceHomepage": { "@id": "https://github.com/" }
+        "urn:solid:accountName": "alice",
+        "urn:solid:accountServiceHomepage": { "@id": "https://github.com/" }
       }
     }
   ],
@@ -35,6 +38,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example/notes use urn:solid:accountName/accountServiceHomepage; seeAlso urn:solid:Account; added notToBeConfusedWith Account."
     }
   ],
   "see_also": {

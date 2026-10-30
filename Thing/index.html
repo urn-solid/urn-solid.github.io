@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:Thing — urn-solid</title>
-<meta name="description" content="The OWL top class — every other class is a subclass of `owl:Thing`. Schema.org also uses a class called `Thing` as its root; both are aligned in this term.">
+<meta name="description" content="The OWL universal class — the class of all individuals; every OWL class is a subclass of it. Not the same as schema.org's `Thing`, which is a concrete root class with its own properties.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/Thing/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:Thing">
-<meta property="og:description" content="The OWL top class — every other class is a subclass of `owl:Thing`. Schema.org also uses a class called `Thing` as its root; both are aligned in this term.">
+<meta property="og:description" content="The OWL universal class — the class of all individuals; every OWL class is a subclass of it. Not the same as schema.org's `Thing`, which is a concrete root class with its own properties.">
 <meta property="og:url" content="https://urn-solid.com/Thing/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:Thing">
-<meta name="twitter:description" content="The OWL top class — every other class is a subclass of `owl:Thing`. Schema.org also uses a class called `Thing` as its root; both are aligned in this term.">
+<meta name="twitter:description" content="The OWL universal class — the class of all individuals; every OWL class is a subclass of it. Not the same as schema.org's `Thing`, which is a concrete root class with its own properties.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
   "@id": "urn:solid:Thing",
   "@type": "rdfs:Class",
   "rdfs:label": "Thing",
-  "rdfs:comment": "The OWL top class — every other class is a subclass of `owl:Thing`. Schema.org also uses a class called `Thing` as its root; both are aligned in this term.",
+  "rdfs:comment": "The OWL universal class — the class of all individuals; every OWL class is a subclass of it. Not the same as schema.org's `Thing`, which is a concrete root class with its own properties.",
   "owl:sameAs": "http://www.w3.org/2002/07/owl#Thing",
   "rdfs:seeAlso": [
     "urn:solid:Class",
@@ -40,22 +40,20 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The universal class — every individual is implicitly a `Thing`. Rarely used as an explicit `@type`; mostly relevant in OWL reasoning and as the root of Schema.org's hierarchy. Two upstream vocabs land on this name (OWL and Schema.org) and the registry treats them as the same canonical term.",
+  "notes": "The universal class — every individual is implicitly a `Thing`. Rarely used as an explicit `@type`; mostly relevant in OWL reasoning. This term is `owl:Thing` only. `https://schema.org/Thing` (in seeAlso) is a different, concrete class — the root of Schema.org's hierarchy, carrying properties like `name`, `url` and `description`; reference its full IRI when you mean it.",
   "examples": [
     {
-      "title": "Schema.org Thing as a fallback type",
+      "title": "Every Agent is a Thing (OWL reasoning)",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://example.org/some-resource",
-        "@type": "urn:solid:Thing",
-        "urn:solid:name": "Generic resource"
+        "@id": "urn:solid:Agent",
+        "urn:solid:subClassOf": { "@id": "urn:solid:Thing" }
       }
     }
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/2002/07/owl#Thing",
-      "https://schema.org/Thing"
+      "http://www.w3.org/2002/07/owl#Thing"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -65,6 +63,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Mapped to owl:Thing only; schema:Thing kept as seeAlso only (removed from provenance); comment/notes/example rewritten for OWL reasoning."
     }
   ],
   "see_also": {

@@ -3,7 +3,7 @@
   "@id": "urn:solid:DirectContainer",
   "@type": "rdfs:Class",
   "rdfs:label": "DirectContainer",
-  "rdfs:comment": "An LDP Container that adds membership triples on a separate `membershipResource` rather than carrying them itself.",
+  "rdfs:comment": "An LDP Container that, on each new member, adds a membership triple linking a configurable `ldp:membershipResource` to the new resource via `ldp:hasMemberRelation` (or the inverse via `ldp:isMemberOfRelation`).",
   "owl:sameAs": "http://www.w3.org/ns/ldp#DirectContainer",
   "rdfs:seeAlso": [
     "urn:solid:Container",
@@ -16,7 +16,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:Container`. Use when membership of new resources should be reflected on a *different* resource — e.g. a comments container whose POSTs add triples to the parent article. Carries `ldp:membershipResource` and `ldp:hasMemberRelation` to define the relation. Most Solid pods use `urn:solid:BasicContainer` instead.",
+  "notes": "Subclass of `urn:solid:Container`. Use when membership of new resources should be reflected on a *different* resource — e.g. a comments container whose POSTs add triples to the parent article. Carries `ldp:membershipResource` and `ldp:hasMemberRelation` to define the relation. Most Solid pods use `urn:solid:BasicContainer` instead. Not required by the Solid Protocol; most Solid servers support only BasicContainer.",
   "examples": [
     {
       "title": "A direct container reflecting members on its parent",
@@ -41,6 +41,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Definition: configurable membershipResource + hasMemberRelation/isMemberOfRelation; notes: not required by Solid Protocol."
     }
   ],
   "see_also": {

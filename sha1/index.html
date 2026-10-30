@@ -37,16 +37,17 @@
   "rdfs:seeAlso": [
     "https://schema.org/sha256"
   ],
+  "rdfs:domain": "urn:solid:Document",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use to record content integrity for files, datasets, or releases. SHA-1 is cryptographically weakened — for new data, prefer SHA-256 (`schema:sha256` or a custom predicate). Value is the lowercase hex digest of the bytes.",
+  "notes": "Use to record content integrity for files, datasets, or releases. SHA-1 is cryptographically weakened — for new data, prefer SHA-256 (`schema:sha256` or a custom predicate). Value is the lowercase hex digest of the bytes. Marked unstable in the FOAF spec.",
   "examples": [
     {
       "title": "Document with content hash",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://urn-solid.com/corpus.jsonl",
+        "@id": "https://example.org/files/report.pdf",
         "@type": "urn:solid:Document",
         "urn:solid:sha1": "abc1234567890def1234567890abcdef12345678"
       }
@@ -64,6 +65,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added domain urn:solid:Document; noted unstable upstream; example no longer claims a fake hash for a real file."
     }
   ],
   "see_also": {

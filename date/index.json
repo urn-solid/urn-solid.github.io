@@ -8,16 +8,18 @@
   "rdfs:seeAlso": [
     "urn:solid:created",
     "urn:solid:modified",
-    "https://schema.org/dateCreated"
+    "urn:solid:issued",
+    "urn:solid:available"
   ],
-  "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "notToBeConfusedWith": [
     "urn:solid:created",
-    "urn:solid:modified"
+    "urn:solid:modified",
+    "urn:solid:issued",
+    "urn:solid:temporal"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Generic date property — prefer the more specific `urn:solid:created`, `urn:solid:modified`, `dcterms:issued`, `dcterms:available` when the role of the date is known. Useful for legacy data or when the date's role is unclear. ISO 8601 values.",
+  "notes": "Generic date property — prefer the more specific `urn:solid:created`, `urn:solid:modified`, `urn:solid:issued`, `urn:solid:available` when the role of the date is known. Super-property of created, modified, issued, available, dateAccepted, dateSubmitted and dateCopyrighted. Useful for legacy data or when the date's role is unclear. ISO 8601 values (date, dateTime or interval).",
   "examples": [
     {
       "title": "Resource with a generic date",
@@ -41,6 +43,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped xsd:dateTime range (value may be a period); replaced schema:dateCreated in seeAlso with issued/available; listed sub-properties in notes."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -3,17 +3,21 @@
   "@id": "urn:solid:hasTopic",
   "@type": "rdf:Property",
   "rdfs:label": "hasTopic",
-  "rdfs:comment": "A topic or tag — used by Bookmarks (and other resources) for free-form classification.",
+  "rdfs:comment": "The Topic (folder/category node, a bookmark:Topic) under which a Bookmark is filed; topics nest via bookmark:subTopicOf.",
   "owl:sameAs": "http://www.w3.org/2002/01/bookmark#hasTopic",
   "rdfs:seeAlso": [
     "urn:solid:Bookmark",
     "https://schema.org/keywords",
-    "http://www.w3.org/ns/activitystreams#tag"
+    "https://www.w3.org/ns/activitystreams#tag"
   ],
   "rdfs:domain": "urn:solid:Bookmark",
+  "notToBeConfusedWith": [
+    "urn:solid:topic",
+    "urn:solid:categories"
+  ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Originally defined for Bookmarks but reusable wherever free-form tagging is needed. Values can be plain strings (folksonomy tags) or NamedNode references to Topic/Concept resources (controlled vocabularies). For ActivityPub-style hashtag references prefer `as:tag`; for schema.org-style keywords prefer `schema:keywords`.",
+  "notes": "Upstream (W3C bookmark vocabulary) the value is a `bookmark:Topic` resource — a hierarchical folder that nests via `bookmark:subTopicOf` — and every bookmark should have at least one. Plain-string tags are a looser convention some apps use; prefer Topic IRIs. Distinct from `urn:solid:topic` (foaf:topic) and `urn:solid:categories` (iCalendar keywords). For ActivityPub-style hashtag references prefer `as:tag`; for schema.org-style keywords prefer `schema:keywords`.",
   "examples": [
     {
       "title": "Bookmark tagged with topics",
@@ -21,7 +25,10 @@
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/bookmarks/solid",
         "@type": "urn:solid:Bookmark",
-        "urn:solid:hasTopic": ["solid", "decentralization", "rdf"]
+        "urn:solid:hasTopic": [
+          { "@id": "https://alice.example.org/bookmarks/topics#solid" },
+          { "@id": "https://alice.example.org/bookmarks/topics#rdf" }
+        ]
       }
     }
   ],
@@ -37,6 +44,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment/notes: value is a bookmark:Topic folder node, not a free string; example uses Topic IRIs; added topic/categories to notToBeConfusedWith."
     }
   ],
   "see_also": {

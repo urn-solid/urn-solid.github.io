@@ -7,25 +7,34 @@
   "owl:sameAs": "https://www.w3.org/2018/credentials#expirationDate",
   "rdfs:seeAlso": [
     "urn:solid:VerifiableCredential",
-    "urn:solid:issuanceDate"
+    "urn:solid:issuanceDate",
+    "https://www.w3.org/2018/credentials#validUntil",
+    "https://www.w3.org/2018/credentials#validFrom"
   ],
   "rdfs:domain": "urn:solid:VerifiableCredential",
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#dateTime",
   "notToBeConfusedWith": [
-    "urn:solid:issuanceDate"
+    "urn:solid:issuanceDate",
+    "urn:solid:credentialStatus"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Optional — credentials without an expiration are open-ended. VC 2.0 renames this to `validUntil`; both are seen in the wild. Distinct from revocation: expiration is set at issuance and absolute; revocation is dynamic and consulted via `credentialStatus`.",
+  "notes": "Optional — credentials without an expiration are open-ended. VC 1.1 term: VC Data Model 2.0 replaces it with `validUntil` (https://www.w3.org/2018/credentials#validUntil), and the v2 context does not define `expirationDate`. Use it when reading or writing VC 1.1 credentials; prefer `validUntil` for new VC 2.0 credentials. Distinct from revocation: expiration is set at issuance and absolute; revocation is dynamic and consulted via `credentialStatus`.",
   "examples": [
     {
-      "title": "A credential valid for one year",
+      "title": "A VC 1.1 credential valid for one year",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://example.org/credentials/3732",
         "@type": "urn:solid:VerifiableCredential",
-        "urn:solid:issuanceDate": { "@value": "2026-04-19T10:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
-        "urn:solid:expirationDate": { "@value": "2027-04-19T10:00:00Z", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+        "urn:solid:issuanceDate": {
+          "@value": "2026-04-19T10:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "urn:solid:expirationDate": {
+          "@value": "2027-04-19T10:00:00Z",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
       }
     }
   ],
@@ -41,6 +50,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes clarified as VC 1.1 term replaced by validUntil in VC 2.0; added validUntil/validFrom to seeAlso; example labelled VC 1.1."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

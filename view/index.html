@@ -42,14 +42,14 @@
   ],
   "status": "stable",
   "added": "2026-04-22",
-  "notes": "Pane-discovery convention used by SolidOS / mashlib / LOSOS data browsers: a subject (resource or rdfs:Class) `view`s an ES module URL whose default export renders the subject. Lowercase property — distinct from `urn:solid:View` (the ActivityStreams 2.0 View activity class).",
+  "notes": "Pane-discovery convention used by SolidOS / mashlib / LOSOS data browsers: a subject (resource or rdfs:Class) `view`s an ES module URL whose default export renders the subject. Lowercase property — distinct from `urn:solid:View` (the ActivityStreams 2.0 View activity class). Upstream range is `xsd:anyURI` (a literal), as in the example; IRI-node objects are also seen in practice and should be accepted. The upstream solidos vocabulary marks this term unstable upstream (term_status 'unstable').",
   "examples": [
     {
       "title": "Register a renderer module for a class",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
-        "@id": "https://example.org/types/Recipe",
-        "urn:solid:view": { "@id": "https://solid-apps.github.io/pilot/tracker-pane.js" }
+        "@id": "http://www.w3.org/2005/01/wf/flow#Tracker",
+        "urn:solid:view": { "@value": "https://solid-apps.github.io/pilot/tracker-pane.js", "@type": "http://www.w3.org/2001/XMLSchema#anyURI" }
       }
     }
   ],
@@ -65,6 +65,12 @@
       "at": "2026-04-22T11:30:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example pairs tracker-pane.js with wf:Tracker and uses an xsd:anyURI literal per upstream range; notes flag the term as unstable upstream."
     }
   ],
   "see_also": {

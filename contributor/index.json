@@ -11,11 +11,13 @@
   "rdfs:range": "urn:solid:Agent",
   "notToBeConfusedWith": [
     "urn:solid:creator",
-    "urn:solid:publisher"
+    "urn:solid:publisher",
+    "urn:solid:author",
+    "urn:solid:editor"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use for editors, reviewers, translators, co-authors of secondary weight. Repeat for multiple contributors. The principal author goes under `urn:solid:creator` instead. For a richer role-aware contribution model, prefer `prov:wasAttributedTo` paired with a `prov:Role`.",
+  "notes": "Use for editors, reviewers, translators, co-authors of secondary weight. Repeat for multiple contributors. The principal author goes under `urn:solid:creator` instead. For a role-aware model, use `prov:qualifiedAttribution` → a `prov:Attribution` with `prov:agent` and `prov:hadRole`.",
   "examples": [
     {
       "title": "Document with creator and contributor",
@@ -40,6 +42,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Corrected PROV role-aware pattern to prov:qualifiedAttribution / prov:Attribution with prov:hadRole."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

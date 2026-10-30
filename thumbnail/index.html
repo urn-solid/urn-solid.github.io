@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:thumbnail — urn-solid</title>
-<meta name="description" content="A thumbnail rendering of the image — a smaller version for previews.">
+<meta name="description" content="A derived thumbnail image for a document — typically a smaller preview rendition of an image, or a preview picture of another document.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/thumbnail/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:thumbnail">
-<meta property="og:description" content="A thumbnail rendering of the image — a smaller version for previews.">
+<meta property="og:description" content="A derived thumbnail image for a document — typically a smaller preview rendition of an image, or a preview picture of another document.">
 <meta property="og:url" content="https://urn-solid.com/thumbnail/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:thumbnail">
-<meta name="twitter:description" content="A thumbnail rendering of the image — a smaller version for previews.">
+<meta name="twitter:description" content="A derived thumbnail image for a document — typically a smaller preview rendition of an image, or a preview picture of another document.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,16 +32,16 @@
   "@id": "urn:solid:thumbnail",
   "@type": "rdf:Property",
   "rdfs:label": "thumbnail",
-  "rdfs:comment": "A thumbnail rendering of the image — a smaller version for previews.",
+  "rdfs:comment": "A derived thumbnail image for a document — typically a smaller preview rendition of an image, or a preview picture of another document.",
   "owl:sameAs": "http://xmlns.com/foaf/0.1/thumbnail",
   "rdfs:seeAlso": [
     "https://schema.org/thumbnailUrl"
   ],
-  "rdfs:domain": "urn:solid:Image",
-  "rdfs:range": "urn:solid:Image",
+  "rdfs:domain": "urn:solid:Document",
+  "rdfs:range": "urn:solid:Document",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use on a full-size image to point at a smaller preview rendition. Both subject and object should be `urn:solid:Image`. For richer image-object metadata (width, height, content URL), schema:ImageObject + schema:thumbnail carry more fields.",
+  "notes": "Use on a full-size image to point at a smaller preview rendition. Upstream domain and range are `foaf:Document`, so thumbnails of non-image documents are allowed; most often both are `urn:solid:Image`. For richer image-object metadata (width, height, content URL), schema:ImageObject + schema:thumbnail carry more fields.",
   "examples": [
     {
       "title": "Image with a thumbnail",
@@ -65,6 +65,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Widened domain/range to urn:solid:Document to match upstream foaf:thumbnail; updated comment and notes."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -72,7 +84,10 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:preview"
+  ]
 }
 
 </script>

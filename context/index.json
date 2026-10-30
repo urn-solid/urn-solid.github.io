@@ -7,14 +7,15 @@
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#context",
   "rdfs:seeAlso": [
     "urn:solid:inReplyTo",
-    "urn:solid:replies"
+    "urn:solid:replies",
+    "https://codeberg.org/fediverse/fep/src/branch/main/fep/7888/fep-7888.md"
   ],
   "notToBeConfusedWith": [
     "urn:solid:inReplyTo"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "ActivityPub uses `as:context` to group all messages in one conversation under a shared identifier — every reply in a thread carries the same `context` IRI, regardless of `inReplyTo` chains. Distinct from JSON-LD's `@context` (a syntactic keyword). The value is typically the IRI of the root post or a synthetic conversation resource.",
+  "notes": "AS2 deliberately leaves `context` open-ended (a project, event, or conversation). By fediverse convention (FEP-7888), replies in one thread share the same `context` IRI, independent of `inReplyTo` chains; ActivityPub itself does not require this. Distinct from JSON-LD's `@context` (a syntactic keyword). The value is typically the IRI of the root post or a synthetic conversation resource.",
   "examples": [
     {
       "title": "Reply tagged with conversation context",
@@ -39,6 +40,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: thread grouping is a fediverse convention (FEP-7888), not an ActivityPub requirement; added FEP-7888 seeAlso."
     }
   ],
   "see_also": {

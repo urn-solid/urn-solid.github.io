@@ -43,7 +43,7 @@
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:CreativeWork`. Represents the whole site as a single resource (the value of `dcterms:isPartOf` from individual pages). Pair with `schema:potentialAction` to declare site-wide actions like search.",
+  "notes": "Subclass of `urn:solid:CreativeWork`. Represents the whole site as a single resource (the object of `urn:solid:isPartOf` from individual `urn:solid:WebPage`s). Pair with `schema:potentialAction` to declare site-wide actions like search.",
   "examples": [
     {
       "title": "A website hosting many pages",
@@ -52,7 +52,7 @@
         "@id": "https://urn-solid.com/",
         "@type": "urn:solid:WebSite",
         "urn:solid:name": "urn-solid",
-        "urn:solid:url": { "@id": "https://urn-solid.com/" }
+        "https://schema.org/url": { "@id": "https://urn-solid.com/" }
       }
     }
   ],
@@ -68,6 +68,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example uses schema:url instead of as:url; isPartOf wording aligned with WebPage."
     }
   ],
   "see_also": {

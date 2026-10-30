@@ -3,16 +3,20 @@
   "@id": "urn:solid:Derivation",
   "@type": "rdfs:Class",
   "rdfs:label": "Derivation",
-  "rdfs:comment": "A typed PROV derivation event — a relation between a derived entity and the entity it was derived from.",
+  "rdfs:comment": "A qualified PROV derivation — the node that qualifies a wasDerivedFrom link between a derived entity and its source (prov:entity) with the activity, usage, generation or role involved.",
   "owl:sameAs": "http://www.w3.org/ns/prov#Derivation",
   "rdfs:seeAlso": [
     "urn:solid:wasDerivedFrom",
     "urn:solid:Revision",
-    "urn:solid:Quotation"
+    "urn:solid:Quotation",
+    "urn:solid:PrimarySource",
+    "urn:solid:qualifiedDerivation",
+    "urn:solid:hadUsage",
+    "urn:solid:hadGeneration"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Use to qualify a `prov:wasDerivedFrom` with role, generation, usage, or activity context (via `prov:qualifiedDerivation`). Specialized subclasses include `urn:solid:Revision` (substantive change), `urn:solid:Quotation` (excerpt), and `prov:PrimarySource` (first-hand origin).",
+  "notes": "Use to qualify a `prov:wasDerivedFrom` with role, generation, usage, or activity context (via `prov:qualifiedDerivation`). Specialized subclasses include `urn:solid:Revision` (substantive change), `urn:solid:Quotation` (excerpt), and `urn:solid:PrimarySource` (first-hand origin).",
   "examples": [
     {
       "title": "A qualified derivation",
@@ -37,6 +41,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Comment no longer calls it an event; notes/seeAlso reference urn:solid:PrimarySource and qualification properties."
     }
   ],
   "see_also": {

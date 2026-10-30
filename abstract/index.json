@@ -11,11 +11,12 @@
   ],
   "rdfs:range": "http://www.w3.org/2001/XMLSchema#string",
   "notToBeConfusedWith": [
-    "urn:solid:description"
+    "urn:solid:description",
+    "urn:solid:summary"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "A short summary — typical for academic papers, articles, or specs. Prefer over `urn:solid:description` when there's a distinct \"abstract\" section in the original. Repeat with language tags for translations.",
+  "notes": "A short summary — typical for academic papers, articles, or specs. Prefer over `urn:solid:description` when there's a distinct \"abstract\" section in the original. Repeat with language tags for translations. Sub-property of `urn:solid:description`; for AS2 objects use `urn:solid:summary`.",
   "examples": [
     {
       "title": "Article with an abstract",
@@ -39,6 +40,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Noted sub-property of description; disambiguated from urn:solid:summary."
     }
   ],
   "see_also": {

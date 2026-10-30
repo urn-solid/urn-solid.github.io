@@ -39,11 +39,10 @@
     "urn:solid:hasTopConcept",
     "urn:solid:topConceptOf"
   ],
-  "rdfs:domain": "urn:solid:Concept",
   "rdfs:range": "urn:solid:ConceptScheme",
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Declares membership of a Concept in a ConceptScheme. A Concept may belong to multiple schemes — repeat for each. The transitive scope of `broader`/`narrower` is bounded by `inScheme` membership.",
+  "notes": "Declares membership of a Concept in a ConceptScheme. A Concept may belong to multiple schemes — repeat for each. `skos:topConceptOf` is a subproperty of `inScheme`, so a top concept is automatically a member of the scheme. Upstream SKOS declares no domain for `inScheme` (only range ConceptScheme).",
   "examples": [
     {
       "title": "Concept belonging to a topic taxonomy",
@@ -67,6 +66,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Removed incorrect claim tying broader/narrower transitivity to scheme membership; dropped rdfs:domain (none upstream); noted topConceptOf subproperty."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {
@@ -74,7 +85,10 @@
     "schema": "/schema/term.schema.json",
     "index": "/index.json",
     "llms": "/llms.txt"
-  }
+  },
+  "notToBeConfusedWith": [
+    "urn:solid:topConceptOf"
+  ]
 }
 
 </script>

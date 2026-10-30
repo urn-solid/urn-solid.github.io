@@ -36,10 +36,13 @@
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Reject",
   "rdfs:seeAlso": [
     "urn:solid:Accept",
+    "urn:solid:TentativeReject",
     "https://schema.org/RejectAction"
   ],
   "notToBeConfusedWith": [
-    "urn:solid:Accept"
+    "urn:solid:Accept",
+    "urn:solid:Ignore",
+    "urn:solid:TentativeReject"
   ],
   "status": "stable",
   "added": "2026-04-18",
@@ -68,6 +71,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added TentativeReject to seeAlso."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>urn:solid:IntransitiveActivity — urn-solid</title>
-<meta name="description" content="An ActivityStreams Activity that has no direct object — the actor performs the verb without acting upon a specific thing (Travel, Move, Arrive).">
+<meta name="description" content="An ActivityStreams Activity that has no as:object — the actor performs the verb without acting on a specific thing. AS2 subclasses: Arrive, Travel, Question.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://urn-solid.com/IntransitiveActivity/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="urn-solid">
 <meta property="og:title" content="urn:solid:IntransitiveActivity">
-<meta property="og:description" content="An ActivityStreams Activity that has no direct object — the actor performs the verb without acting upon a specific thing (Travel, Move, Arrive).">
+<meta property="og:description" content="An ActivityStreams Activity that has no as:object — the actor performs the verb without acting on a specific thing. AS2 subclasses: Arrive, Travel, Question.">
 <meta property="og:url" content="https://urn-solid.com/IntransitiveActivity/">
 <meta property="og:image" content="https://urn-solid.com/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="urn:solid:IntransitiveActivity">
-<meta name="twitter:description" content="An ActivityStreams Activity that has no direct object — the actor performs the verb without acting upon a specific thing (Travel, Move, Arrive).">
+<meta name="twitter:description" content="An ActivityStreams Activity that has no as:object — the actor performs the verb without acting on a specific thing. AS2 subclasses: Arrive, Travel, Question.">
 <meta name="twitter:image" content="https://urn-solid.com/assets/og.png">
 
 <script type="application/ld+json">
@@ -32,20 +32,20 @@
   "@id": "urn:solid:IntransitiveActivity",
   "@type": "rdfs:Class",
   "rdfs:label": "IntransitiveActivity",
-  "rdfs:comment": "An ActivityStreams Activity that has no direct object — the actor performs the verb without acting upon a specific thing (Travel, Move, Arrive).",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#IntransitiveActivity",
+  "rdfs:comment": "An ActivityStreams Activity that has no as:object — the actor performs the verb without acting on a specific thing. AS2 subclasses: Arrive, Travel, Question.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#IntransitiveActivity",
   "rdfs:seeAlso": [
     "urn:solid:Activity",
     "urn:solid:Travel",
-    "urn:solid:Move",
+    "urn:solid:Question",
     "urn:solid:Arrive"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The grammatical analogue of intransitive verbs in language: \"Alice walked\" doesn't take an object the way \"Alice liked X\" does. AS supplies subclasses (`Travel`, `Move`, `Arrive`); custom intransitive activities subclass this directly. `as:object` is omitted; `as:origin` and `as:target` typically substitute.",
+  "notes": "The grammatical analogue of intransitive verbs in language: \"Alice walked\" doesn't take an object the way \"Alice liked X\" does. AS supplies subclasses (`Arrive`, `Travel`, `Question`); custom intransitive activities subclass this directly. `as:object` is omitted; `as:origin` and `as:target` typically substitute.",
   "examples": [
     {
-      "title": "A simple Travel activity (no @object)",
+      "title": "A bare intransitive activity (no as:object)",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/activities/walk-1",
@@ -56,7 +56,7 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#IntransitiveActivity"
+      "https://www.w3.org/ns/activitystreams#IntransitiveActivity"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -66,6 +66,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Fixed subclass list (Arrive, Travel, Question — not Move); seeAlso Move -> Question; retitled example."
     }
   ],
   "see_also": {

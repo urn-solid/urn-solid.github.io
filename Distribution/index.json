@@ -8,11 +8,13 @@
   "rdfs:seeAlso": [
     "urn:solid:Dataset",
     "urn:solid:downloadURL",
-    "urn:solid:accessURL"
+    "urn:solid:accessURL",
+    "urn:solid:accessService",
+    "urn:solid:byteSize"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "One Dataset typically has multiple Distributions — CSV, JSON, RDF, API endpoint, archive. Pair with `urn:solid:downloadURL` (direct file URL), `urn:solid:accessURL` (general access page or API), `urn:solid:format`, `urn:solid:byteSize`. Linked from a Dataset via `dcat:distribution`.",
+  "notes": "One Dataset typically has multiple Distributions — CSV, JSON, RDF, API endpoint, archive. Pair with `urn:solid:downloadURL` (direct file URL), `urn:solid:accessURL` (general access page or API), `urn:solid:byteSize`. For IANA media types use `dcat:mediaType` (http://www.w3.org/ns/dcat#mediaType) with an IANA IRI; use `urn:solid:format` (dcterms:format) only for non-IANA formats. `urn:solid:mediaType` is the ActivityStreams string property, not `dcat:mediaType`. Linked from a Dataset via `dcat:distribution`.",
   "examples": [
     {
       "title": "CSV distribution of a dataset",
@@ -21,7 +23,7 @@
         "@id": "https://example.org/datasets/wonderland-2026/csv",
         "@type": "urn:solid:Distribution",
         "urn:solid:downloadURL": { "@id": "https://example.org/datasets/wonderland-2026.csv" },
-        "urn:solid:format": "text/csv"
+        "http://www.w3.org/ns/dcat#mediaType": { "@id": "https://www.iana.org/assignments/media-types/text/csv" }
       }
     }
   ],
@@ -37,6 +39,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example uses dcat:mediaType with an IANA IRI instead of a bare dcterms:format string; notes clarify mediaType vs format; added accessService/byteSize to seeAlso."
     }
   ],
   "see_also": {

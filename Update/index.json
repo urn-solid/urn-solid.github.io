@@ -7,14 +7,15 @@
   "owl:sameAs": "https://www.w3.org/ns/activitystreams#Update",
   "rdfs:seeAlso": [
     "https://schema.org/UpdateAction",
-    "urn:solid:Create"
+    "urn:solid:Create",
+    "urn:solid:updated"
   ],
   "notToBeConfusedWith": [
     "urn:solid:Create"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "Subclass of `urn:solid:Activity`. The wire-level signal that an actor edited an existing object — receivers should replace their cached copy with the updated payload in `as:object`. Pair with `as:published` for when the edit happened.",
+  "notes": "Subclass of `urn:solid:Activity`. The wire-level signal that an actor edited an existing object. AS2 leaves processing undefined: in ActivityPub server-to-server delivery, the `object` carries the complete new representation and receivers replace their copy; in client-to-server, Update is a partial merge. Set `as:updated` on the object to record when it changed (the activity's `published` is when the Update was issued).",
   "examples": [
     {
       "title": "Alice updates a note",
@@ -42,6 +43,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: S2S vs C2S semantics, use as:updated on the object rather than as:published; added urn:solid:updated to seeAlso."
     }
   ],
   "see_also": {

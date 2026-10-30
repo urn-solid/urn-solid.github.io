@@ -36,11 +36,13 @@
   "owl:sameAs": "http://purl.org/dc/terms/PeriodOfTime",
   "rdfs:seeAlso": [
     "urn:solid:temporal",
-    "https://www.w3.org/TR/owl-time/"
+    "http://www.w3.org/ns/dcat#startDate",
+    "http://www.w3.org/ns/dcat#endDate",
+    "http://www.w3.org/2006/time#Interval"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Use as the value type of `urn:solid:temporal` for richer time-coverage metadata than a plain ISO 8601 interval string. For full temporal logic with intervals, instants, and Allen relations, use the OWL-Time vocabulary instead.",
+  "notes": "Use as the value type of `urn:solid:temporal` for richer time-coverage metadata than a plain ISO 8601 interval string. Give its bounds with `dcat:startDate` / `dcat:endDate` (DCAT 2+), or `time:hasBeginning` / `time:hasEnd`. For full temporal logic with intervals, instants, and Allen relations, use the OWL-Time vocabulary instead.",
   "examples": [
     {
       "title": "A named period of time",
@@ -49,8 +51,8 @@
         "@id": "https://example.org/periods/q1-2026",
         "@type": "urn:solid:PeriodOfTime",
         "urn:solid:name": "Q1 2026",
-        "urn:solid:startTime": "2026-01-01T00:00:00Z",
-        "urn:solid:endTime": "2026-03-31T23:59:59Z"
+        "http://www.w3.org/ns/dcat#startDate": "2026-01-01",
+        "http://www.w3.org/ns/dcat#endDate": "2026-03-31"
       }
     }
   ],
@@ -66,6 +68,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Example now uses dcat:startDate/endDate instead of AS2 startTime/endTime; seeAlso points to dcat and the OWL-Time Interval IRI."
     }
   ],
   "see_also": {

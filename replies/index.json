@@ -12,7 +12,7 @@
   "rdfs:range": "urn:solid:Collection",
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "The inverse of `urn:solid:inReplyTo`. Lives on the parent object and points at a `urn:solid:Collection` (or `OrderedCollection`) of replies. ActivityPub servers compute this by aggregating inbound `inReplyTo` from across the network.",
+  "notes": "The inverse of `urn:solid:inReplyTo`. Lives on the parent object and points at a `urn:solid:Collection` (or `OrderedCollection`) of replies. The origin server typically populates it from replies it has received (inbound `inReplyTo`), so it may be incomplete.",
   "examples": [
     {
       "title": "Note with a replies collection",
@@ -36,6 +36,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: replies collection is populated from received replies and may be incomplete."
     }
   ],
   "see_also": {

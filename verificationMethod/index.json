@@ -13,7 +13,7 @@
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "Value is an IRI that dereferences to a verification method object — usually `<did>#<keyId>` in a DID Document. The verifier resolves the key, then uses it to validate the signature in the surrounding `proof`. Same property is reused by VC proofs and DID Document key registrations.",
+  "notes": "Two uses: on a proof, an IRI reference to the key (usually `<did>#<keyId>`) — the verifier resolves it, then uses it to validate the signature in the surrounding `proof`; on a DID document, a list of embedded verification-method objects (`id`, `type` e.g. Multikey/JsonWebKey, `controller`, `publicKeyMultibase`/`publicKeyJwk`). Upstream range is `did:VerificationMethod`.",
   "examples": [
     {
       "title": "A proof referring to a verification method",
@@ -37,6 +37,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes now cover both uses: IRI reference on a proof, embedded verification-method objects on a DID document."
     }
   ],
   "see_also": {

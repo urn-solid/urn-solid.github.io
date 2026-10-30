@@ -33,19 +33,22 @@
   "@type": "rdf:Property",
   "rdfs:label": "follower",
   "rdfs:comment": "An agent that follows the subject — receiving updates from them.",
-  "owl:sameAs": "https://schema.org/follows",
   "rdfs:seeAlso": [
     "urn:solid:Follow",
-    "https://www.w3.org/ns/activitystreams#followers"
+    "urn:solid:followers",
+    "urn:solid:following",
+    "https://schema.org/follows"
   ],
   "rdfs:domain": "urn:solid:Agent",
   "rdfs:range": "urn:solid:Agent",
   "notToBeConfusedWith": [
+    "urn:solid:followers",
+    "urn:solid:following",
     "urn:solid:Follow"
   ],
-  "status": "stable",
+  "status": "deprecated",
   "added": "2026-04-18",
-  "notes": "Schema.org's reverse follower relation (their `schema:follows` is symmetric in the spec but typically used as inverse of `schema:follows`). For ActivityPub, the typical pattern is an `as:Followers` Collection at `as:followers` on the subject; for this lightweight schema.org form, just enumerate followers directly.",
+  "notes": "Deprecated. This term was mapped to `schema:follows`, but that property runs the other way (`A schema:follows B` means A follows B) and is uni-directional, not symmetric; schema.org defines no inverse. `urn:solid:follower` (subject = the one followed, object = the follower) is therefore the *inverse* of `schema:follows`, and its label cannot sensibly carry schema:follows's direction, so the term is deprecated rather than flipped (flipping would silently invert existing data). Instead, state the relation from the follower's side with `https://schema.org/follows` (bob follows alice). For ActivityPub, use `urn:solid:followers` (a Collection of followers on the followed actor) and `urn:solid:following`. Not to be confused with `urn:solid:Follow`, the activity of following.",
   "examples": [
     {
       "title": "Person with a follower",
@@ -54,6 +57,15 @@
         "@id": "https://example.org/alice#me",
         "@type": "urn:solid:Person",
         "urn:solid:follower": { "@id": "https://example.org/bob#me" }
+      }
+    },
+    {
+      "title": "Preferred: the follower states schema:follows",
+      "jsonld": {
+        "@context": "https://urn-solid.com/context.jsonld",
+        "@id": "https://example.org/bob#me",
+        "@type": "urn:solid:Person",
+        "https://schema.org/follows": { "@id": "https://example.org/alice#me" }
       }
     }
   ],
@@ -69,6 +81,12 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "deprecated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Deprecated: owl:sameAs schema:follows ran the opposite direction (follower is its inverse); dropped sameAs, notes point to schema:follows / followers / following; added followers/following confusables."
     }
   ],
   "see_also": {

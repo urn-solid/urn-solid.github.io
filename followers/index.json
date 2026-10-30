@@ -3,24 +3,23 @@
   "@id": "urn:solid:followers",
   "@type": "rdf:Property",
   "rdfs:label": "followers",
-  "rdfs:comment": "The Collection of Actors who follow an ActivityPub Actor — used both for delivery (servers fan Activities out to followers) and for display.",
-  "owl:sameAs": "http://www.w3.org/ns/activitystreams#followers",
+  "rdfs:comment": "The Collection of actors who follow an ActivityPub actor (Person, Application, Group, Organization or Service) — used both for delivery (servers fan Activities out to followers) and for display.",
+  "owl:sameAs": "https://www.w3.org/ns/activitystreams#followers",
   "rdfs:seeAlso": [
-    "urn:solid:Actor",
     "urn:solid:following",
     "urn:solid:Follow",
     "urn:solid:inbox"
   ],
-  "rdfs:domain": "urn:solid:Actor",
   "notToBeConfusedWith": [
-    "urn:solid:following"
+    "urn:solid:following",
+    "urn:solid:follower"
   ],
   "status": "stable",
   "added": "2026-04-19",
-  "notes": "The Actor's audience — addressed as `as:to: <followers-uri>` in many activities to broadcast to the Collection without enumerating each follower. Servers may keep this Collection private (returning only `totalItems`) for privacy. Inverse direction is `as:following`.",
+  "notes": "Defined by ActivityPub (§5.3), not the AS2 Vocabulary. The actor's audience — addressed as `as:to: <followers-uri>` in many activities to broadcast to the Collection without enumerating each follower. Servers may keep this Collection private (returning only `totalItems`) for privacy. Inverse direction is `as:following`.",
   "examples": [
     {
-      "title": "An Actor exposing a followers Collection",
+      "title": "A Person exposing a followers Collection",
       "jsonld": {
         "@context": "https://urn-solid.com/context.jsonld",
         "@id": "https://alice.example.org/profile/card#me",
@@ -31,7 +30,8 @@
   ],
   "provenance": {
     "sources": [
-      "http://www.w3.org/ns/activitystreams#followers"
+      "https://www.w3.org/ns/activitystreams#followers",
+      "https://www.w3.org/TR/activitypub/#followers"
     ],
     "curatedBy": "claude-curate-next"
   },
@@ -41,6 +41,18 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Dropped unregistered Actor term domain/seeAlso, reworded actor prose; cited ActivityPub §5.3."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

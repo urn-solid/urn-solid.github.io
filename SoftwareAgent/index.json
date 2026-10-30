@@ -12,11 +12,12 @@
   ],
   "notToBeConfusedWith": [
     "urn:solid:Application",
-    "urn:solid:Service"
+    "urn:solid:Service",
+    "urn:solid:SoftwareApplication"
   ],
   "status": "stable",
   "added": "2026-04-18",
-  "notes": "PROV subclass of `urn:solid:Agent` for software actors — the right type for build pipelines, CI runs, automated curators (this loop), data-pipeline jobs. ActivityStreams equivalents are `urn:solid:Application` (interactive client) and `urn:solid:Service` (headless service); use those for ActivityPub-flavored social data.",
+  "notes": "PROV subclass of prov:Agent (`http://www.w3.org/ns/prov#Agent`) for software actors — build pipelines, CI runs, bots, automated curators, data-pipeline jobs. ActivityStreams equivalents are `urn:solid:Application` and `urn:solid:Service`; use those for ActivityPub-flavored social data.",
   "examples": [
     {
       "title": "A curation script as a SoftwareAgent",
@@ -40,6 +41,18 @@
       "at": "2026-04-18T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Notes: superclass is prov:Agent (not urn:solid:Agent/foaf:Agent); removed internal jargon."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added reciprocal notToBeConfusedWith links."
     }
   ],
   "see_also": {

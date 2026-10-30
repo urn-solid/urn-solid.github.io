@@ -6,11 +6,14 @@
   "rdfs:comment": "Inside a qualified PROV pattern, links to the `prov:Usage` event whose entity participated in this relationship — typically used on a `prov:Derivation` to record the use that supplied its input.",
   "owl:sameAs": "http://www.w3.org/ns/prov#hadUsage",
   "rdfs:seeAlso": [
-    "urn:solid:Activity",
+    "urn:solid:Usage",
+    "urn:solid:Derivation",
     "urn:solid:hadGeneration",
     "urn:solid:qualifiedUsage",
     "urn:solid:qualifiedDerivation"
   ],
+  "rdfs:domain": "urn:solid:Derivation",
+  "rdfs:range": "urn:solid:Usage",
   "status": "stable",
   "added": "2026-04-19",
   "notes": "A connector between qualified PROV events. On a `prov:Derivation`, `prov:hadUsage` points at the `prov:Usage` of the input entity by the activity, and `prov:hadGeneration` points at the `prov:Generation` of the output. Together they reconstruct the precise link between two entities through an activity.",
@@ -38,6 +41,12 @@
       "at": "2026-04-19T00:00:00Z",
       "by": "claude-curate-next",
       "note": "Initial term."
+    },
+    {
+      "event": "updated",
+      "at": "2026-10-29T00:00:00Z",
+      "by": "urn-solid-review",
+      "note": "Added domain urn:solid:Derivation and range urn:solid:Usage; seeAlso replaces as:Activity with Usage and Derivation."
     }
   ],
   "see_also": {
